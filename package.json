@@ -1,0 +1,21 @@
+{
+  "name": "shutterstock",
+  "version": "1.0.0",
+  "description": "The_Shutterstock_API_provides_access_to_Shutterstocks_library_of_media_as_well_as_information_about_customers_accounts_and_the_contributors_that_provide_the_media_",
+  "license": "Unlicense",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --recursive"
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "superagent": "3.5.2"
+  },
+  "devDependencies": {
+    "mocha": "~2.3.4",
+    "sinon": "1.17.3",
+    "expect.js": "~0.3.1"
+  }
+}
