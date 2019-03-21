@@ -7,6 +7,14 @@
 - This SDK is generated at [shutterstock/public-api-sdk-generator](https://github.com/shutterstock/public-api-sdk-generator), please make changes to SDK there. 
 - Changes to tests can be made directly here.
 
-# TODO
+# Tests
 
-- Write tests
+```
+$ yarn run test
+```
+
+# Linting
+
+```
+$ yarn run lint
+```
