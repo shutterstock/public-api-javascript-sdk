@@ -9,7 +9,11 @@
 
 # Tests
 
+To Run the tests you will need to authenticate with Shutterstock,
+and set the `SSTK_API_KEY` environment variable. See [here](https://api-reference.shutterstock.com/#oauth).
+
 ```
+$ SSTK_API_KEY="Your API Key"
 $ yarn run test
 ```
 
