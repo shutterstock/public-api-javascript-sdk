@@ -3,7 +3,7 @@ const uuidv4 = require('uuid/v4');
 
 const sstk = require('../../src');
 
-sstk.ApiClient.instance.authentications['customer_accessCode'].accessToken = process.env.SSTK_API_KEY;
+sstk.setAccessToken(process.env.SSTK_API_KEY);
 
 const imagesApi = new sstk.ImagesApi();
 
