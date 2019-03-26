@@ -578,7 +578,9 @@
     VideosApi: VideosApi
   };
 
-  exports.setAccessToken = function(token) { exports.ApiClient.instance.authentications['customer_accessCode'].accessToken = token; };
+  exports.setAccessToken = function(token) {
+    exports.ApiClient.instance.authentications['customer_accessCode'].accessToken = token;
+  };
 
   return exports;
 }));
