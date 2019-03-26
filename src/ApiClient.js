@@ -267,7 +267,7 @@
    * <code>param</code> as is if <code>collectionFormat</code> is <code>multi</code>.
    */
   exports.prototype.buildCollectionParam = function buildCollectionParam(param, collectionFormat) {
-    if (param === null || !param.map) {
+    if (param == null || !param.map) {
       return null;
     }
     switch (collectionFormat) {
