@@ -563,6 +563,11 @@
     VideosApi: VideosApi
   };
 
+  exports.setBasicAuth = function(username, password) {
+    exports.ApiClient.instance.authentications['basic'].username = username;
+    exports.ApiClient.instance.authentications['basic'].password = password;
+  };
+
   exports.setAccessToken = function(token) {
     exports.ApiClient.instance.authentications['customer_accessCode'].accessToken = token;
   };
