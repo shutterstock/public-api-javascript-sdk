@@ -1,5 +1,5 @@
 /**
- * shutterstock
+ * Shutterstock API Reference
  * The Shutterstock API provides access to Shutterstock's library of media, as well as information about customers' accounts and the contributors that provide the media.
  *
  * OpenAPI spec version: 1.0.0
@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/Collection'), require('../model/CollectionDataList'), require('../model/CollectionItemDataList'), require('../model/ContributorProfile'), require('../model/ContributorProfileDataList'));
   } else {
     // Browser globals (root is window)
-    if (!root.Shutterstock) {
-      root.Shutterstock = {};
+    if (!root.ShutterstockApiReference) {
+      root.ShutterstockApiReference = {};
     }
-    root.Shutterstock.ContributorsApi = factory(root.Shutterstock.ApiClient, root.Shutterstock.Collection, root.Shutterstock.CollectionDataList, root.Shutterstock.CollectionItemDataList, root.Shutterstock.ContributorProfile, root.Shutterstock.ContributorProfileDataList);
+    root.ShutterstockApiReference.ContributorsApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.Collection, root.ShutterstockApiReference.CollectionDataList, root.ShutterstockApiReference.CollectionItemDataList, root.ShutterstockApiReference.ContributorProfile, root.ShutterstockApiReference.ContributorProfileDataList);
   }
 }(this, function(ApiClient, Collection, CollectionDataList, CollectionItemDataList, ContributorProfile, ContributorProfileDataList) {
   'use strict';

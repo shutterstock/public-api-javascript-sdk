@@ -1,5 +1,5 @@
 /**
- * shutterstock
+ * Shutterstock API Reference
  * The Shutterstock API provides access to Shutterstock's library of media, as well as information about customers' accounts and the contributors that provide the media.
  *
  * OpenAPI spec version: 1.0.0
@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/EditorialContent'), require('../model/EditorialContentDataList'), require('../model/EditorialLivefeed'), require('../model/EditorialLivefeedList'), require('../model/EditorialSearchResults'), require('../model/LicenseEditorialContentRequest'), require('../model/LicenseEditorialContentResultDataList'));
   } else {
     // Browser globals (root is window)
-    if (!root.Shutterstock) {
-      root.Shutterstock = {};
+    if (!root.ShutterstockApiReference) {
+      root.ShutterstockApiReference = {};
     }
-    root.Shutterstock.EditorialApi = factory(root.Shutterstock.ApiClient, root.Shutterstock.EditorialContent, root.Shutterstock.EditorialContentDataList, root.Shutterstock.EditorialLivefeed, root.Shutterstock.EditorialLivefeedList, root.Shutterstock.EditorialSearchResults, root.Shutterstock.LicenseEditorialContentRequest, root.Shutterstock.LicenseEditorialContentResultDataList);
+    root.ShutterstockApiReference.EditorialApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.EditorialContent, root.ShutterstockApiReference.EditorialContentDataList, root.ShutterstockApiReference.EditorialLivefeed, root.ShutterstockApiReference.EditorialLivefeedList, root.ShutterstockApiReference.EditorialSearchResults, root.ShutterstockApiReference.LicenseEditorialContentRequest, root.ShutterstockApiReference.LicenseEditorialContentResultDataList);
   }
 }(this, function(ApiClient, EditorialContent, EditorialContentDataList, EditorialLivefeed, EditorialLivefeedList, EditorialSearchResults, LicenseEditorialContentRequest, LicenseEditorialContentResultDataList) {
   'use strict';

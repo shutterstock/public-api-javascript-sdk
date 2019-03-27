@@ -1,5 +1,5 @@
 /**
- * shutterstock
+ * Shutterstock API Reference
  * The Shutterstock API provides access to Shutterstock's library of media, as well as information about customers' accounts and the contributors that provide the media.
  *
  * OpenAPI spec version: 1.0.0
@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/AccessTokenDetails'), require('../model/SubscriptionDataList'), require('../model/UserDetails'), require('../model/UserPostRequest'), require('../model/UserPostResponse'));
   } else {
     // Browser globals (root is window)
-    if (!root.Shutterstock) {
-      root.Shutterstock = {};
+    if (!root.ShutterstockApiReference) {
+      root.ShutterstockApiReference = {};
     }
-    root.Shutterstock.UsersApi = factory(root.Shutterstock.ApiClient, root.Shutterstock.AccessTokenDetails, root.Shutterstock.SubscriptionDataList, root.Shutterstock.UserDetails, root.Shutterstock.UserPostRequest, root.Shutterstock.UserPostResponse);
+    root.ShutterstockApiReference.UsersApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.AccessTokenDetails, root.ShutterstockApiReference.SubscriptionDataList, root.ShutterstockApiReference.UserDetails, root.ShutterstockApiReference.UserPostRequest, root.ShutterstockApiReference.UserPostResponse);
   }
 }(this, function(ApiClient, AccessTokenDetails, SubscriptionDataList, UserDetails, UserPostRequest, UserPostResponse) {
   'use strict';

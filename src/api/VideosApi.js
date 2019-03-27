@@ -1,5 +1,5 @@
 /**
- * shutterstock
+ * Shutterstock API Reference
  * The Shutterstock API provides access to Shutterstock's library of media, as well as information about customers' accounts and the contributors that provide the media.
  *
  * OpenAPI spec version: 1.0.0
@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/CategoryDataList'), require('../model/Collection'), require('../model/CollectionCreateRequest'), require('../model/CollectionCreateResponse'), require('../model/CollectionDataList'), require('../model/CollectionItemDataList'), require('../model/CollectionItemRequest'), require('../model/CollectionUpdateRequest'), require('../model/DownloadHistoryDataList'), require('../model/LicenseVideoRequest'), require('../model/LicenseVideoResultDataList'), require('../model/RedownloadVideo'), require('../model/Url'), require('../model/Video'), require('../model/VideoDataList'), require('../model/VideoSearchResults'));
   } else {
     // Browser globals (root is window)
-    if (!root.Shutterstock) {
-      root.Shutterstock = {};
+    if (!root.ShutterstockApiReference) {
+      root.ShutterstockApiReference = {};
     }
-    root.Shutterstock.VideosApi = factory(root.Shutterstock.ApiClient, root.Shutterstock.CategoryDataList, root.Shutterstock.Collection, root.Shutterstock.CollectionCreateRequest, root.Shutterstock.CollectionCreateResponse, root.Shutterstock.CollectionDataList, root.Shutterstock.CollectionItemDataList, root.Shutterstock.CollectionItemRequest, root.Shutterstock.CollectionUpdateRequest, root.Shutterstock.DownloadHistoryDataList, root.Shutterstock.LicenseVideoRequest, root.Shutterstock.LicenseVideoResultDataList, root.Shutterstock.RedownloadVideo, root.Shutterstock.Url, root.Shutterstock.Video, root.Shutterstock.VideoDataList, root.Shutterstock.VideoSearchResults);
+    root.ShutterstockApiReference.VideosApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.CategoryDataList, root.ShutterstockApiReference.Collection, root.ShutterstockApiReference.CollectionCreateRequest, root.ShutterstockApiReference.CollectionCreateResponse, root.ShutterstockApiReference.CollectionDataList, root.ShutterstockApiReference.CollectionItemDataList, root.ShutterstockApiReference.CollectionItemRequest, root.ShutterstockApiReference.CollectionUpdateRequest, root.ShutterstockApiReference.DownloadHistoryDataList, root.ShutterstockApiReference.LicenseVideoRequest, root.ShutterstockApiReference.LicenseVideoResultDataList, root.ShutterstockApiReference.RedownloadVideo, root.ShutterstockApiReference.Url, root.ShutterstockApiReference.Video, root.ShutterstockApiReference.VideoDataList, root.ShutterstockApiReference.VideoSearchResults);
   }
 }(this, function(ApiClient, CategoryDataList, Collection, CollectionCreateRequest, CollectionCreateResponse, CollectionDataList, CollectionItemDataList, CollectionItemRequest, CollectionUpdateRequest, DownloadHistoryDataList, LicenseVideoRequest, LicenseVideoResultDataList, RedownloadVideo, Url, Video, VideoDataList, VideoSearchResults) {
   'use strict';

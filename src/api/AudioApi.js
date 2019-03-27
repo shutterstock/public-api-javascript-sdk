@@ -1,5 +1,5 @@
 /**
- * shutterstock
+ * Shutterstock API Reference
  * The Shutterstock API provides access to Shutterstock's library of media, as well as information about customers' accounts and the contributors that provide the media.
  *
  * OpenAPI spec version: 1.0.0
@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/Audio'), require('../model/AudioDataList'), require('../model/AudioSearchResults'), require('../model/Collection'), require('../model/CollectionCreateRequest'), require('../model/CollectionCreateResponse'), require('../model/CollectionDataList'), require('../model/CollectionItemDataList'), require('../model/CollectionItemRequest'), require('../model/CollectionUpdateRequest'), require('../model/DownloadHistoryDataList'), require('../model/LicenseAudioRequest'), require('../model/LicenseAudioResultDataList'), require('../model/Url'));
   } else {
     // Browser globals (root is window)
-    if (!root.Shutterstock) {
-      root.Shutterstock = {};
+    if (!root.ShutterstockApiReference) {
+      root.ShutterstockApiReference = {};
     }
-    root.Shutterstock.AudioApi = factory(root.Shutterstock.ApiClient, root.Shutterstock.Audio, root.Shutterstock.AudioDataList, root.Shutterstock.AudioSearchResults, root.Shutterstock.Collection, root.Shutterstock.CollectionCreateRequest, root.Shutterstock.CollectionCreateResponse, root.Shutterstock.CollectionDataList, root.Shutterstock.CollectionItemDataList, root.Shutterstock.CollectionItemRequest, root.Shutterstock.CollectionUpdateRequest, root.Shutterstock.DownloadHistoryDataList, root.Shutterstock.LicenseAudioRequest, root.Shutterstock.LicenseAudioResultDataList, root.Shutterstock.Url);
+    root.ShutterstockApiReference.AudioApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.Audio, root.ShutterstockApiReference.AudioDataList, root.ShutterstockApiReference.AudioSearchResults, root.ShutterstockApiReference.Collection, root.ShutterstockApiReference.CollectionCreateRequest, root.ShutterstockApiReference.CollectionCreateResponse, root.ShutterstockApiReference.CollectionDataList, root.ShutterstockApiReference.CollectionItemDataList, root.ShutterstockApiReference.CollectionItemRequest, root.ShutterstockApiReference.CollectionUpdateRequest, root.ShutterstockApiReference.DownloadHistoryDataList, root.ShutterstockApiReference.LicenseAudioRequest, root.ShutterstockApiReference.LicenseAudioResultDataList, root.ShutterstockApiReference.Url);
   }
 }(this, function(ApiClient, Audio, AudioDataList, AudioSearchResults, Collection, CollectionCreateRequest, CollectionCreateResponse, CollectionDataList, CollectionItemDataList, CollectionItemRequest, CollectionUpdateRequest, DownloadHistoryDataList, LicenseAudioRequest, LicenseAudioResultDataList, Url) {
   'use strict';

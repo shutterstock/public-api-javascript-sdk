@@ -1,5 +1,5 @@
 /**
- * shutterstock
+ * Shutterstock API Reference
  * The Shutterstock API provides access to Shutterstock's library of media, as well as information about customers' accounts and the contributors that provide the media.
  *
  * OpenAPI spec version: 1.0.0
@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/CategoryDataList'), require('../model/Collection'), require('../model/CollectionCreateRequest'), require('../model/CollectionCreateResponse'), require('../model/CollectionDataList'), require('../model/CollectionItemDataList'), require('../model/CollectionItemRequest'), require('../model/CollectionUpdateRequest'), require('../model/DownloadHistoryDataList'), require('../model/FeaturedCollection'), require('../model/FeaturedCollectionDataList'), require('../model/Image'), require('../model/ImageCreateRequest'), require('../model/ImageCreateResponse'), require('../model/ImageDataList'), require('../model/ImageSearchResults'), require('../model/LicenseImageRequest'), require('../model/LicenseImageResultDataList'), require('../model/RecommendationDataList'), require('../model/RedownloadImage'), require('../model/Url'));
   } else {
     // Browser globals (root is window)
-    if (!root.Shutterstock) {
-      root.Shutterstock = {};
+    if (!root.ShutterstockApiReference) {
+      root.ShutterstockApiReference = {};
     }
-    root.Shutterstock.ImagesApi = factory(root.Shutterstock.ApiClient, root.Shutterstock.CategoryDataList, root.Shutterstock.Collection, root.Shutterstock.CollectionCreateRequest, root.Shutterstock.CollectionCreateResponse, root.Shutterstock.CollectionDataList, root.Shutterstock.CollectionItemDataList, root.Shutterstock.CollectionItemRequest, root.Shutterstock.CollectionUpdateRequest, root.Shutterstock.DownloadHistoryDataList, root.Shutterstock.FeaturedCollection, root.Shutterstock.FeaturedCollectionDataList, root.Shutterstock.Image, root.Shutterstock.ImageCreateRequest, root.Shutterstock.ImageCreateResponse, root.Shutterstock.ImageDataList, root.Shutterstock.ImageSearchResults, root.Shutterstock.LicenseImageRequest, root.Shutterstock.LicenseImageResultDataList, root.Shutterstock.RecommendationDataList, root.Shutterstock.RedownloadImage, root.Shutterstock.Url);
+    root.ShutterstockApiReference.ImagesApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.CategoryDataList, root.ShutterstockApiReference.Collection, root.ShutterstockApiReference.CollectionCreateRequest, root.ShutterstockApiReference.CollectionCreateResponse, root.ShutterstockApiReference.CollectionDataList, root.ShutterstockApiReference.CollectionItemDataList, root.ShutterstockApiReference.CollectionItemRequest, root.ShutterstockApiReference.CollectionUpdateRequest, root.ShutterstockApiReference.DownloadHistoryDataList, root.ShutterstockApiReference.FeaturedCollection, root.ShutterstockApiReference.FeaturedCollectionDataList, root.ShutterstockApiReference.Image, root.ShutterstockApiReference.ImageCreateRequest, root.ShutterstockApiReference.ImageCreateResponse, root.ShutterstockApiReference.ImageDataList, root.ShutterstockApiReference.ImageSearchResults, root.ShutterstockApiReference.LicenseImageRequest, root.ShutterstockApiReference.LicenseImageResultDataList, root.ShutterstockApiReference.RecommendationDataList, root.ShutterstockApiReference.RedownloadImage, root.ShutterstockApiReference.Url);
   }
 }(this, function(ApiClient, CategoryDataList, Collection, CollectionCreateRequest, CollectionCreateResponse, CollectionDataList, CollectionItemDataList, CollectionItemRequest, CollectionUpdateRequest, DownloadHistoryDataList, FeaturedCollection, FeaturedCollectionDataList, Image, ImageCreateRequest, ImageCreateResponse, ImageDataList, ImageSearchResults, LicenseImageRequest, LicenseImageResultDataList, RecommendationDataList, RedownloadImage, Url) {
   'use strict';
@@ -1344,7 +1344,7 @@
 
     /**
      * Upload images
-     * This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format. See &lt;a href&#x3D;\&quot;#searching-for-media-reverse-image-search\&quot;&gt;Reverse image search&lt;/a&gt;.
+     * This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format.
      * @param {module:model/ImageCreateRequest} body The image data in JPEG or PNG format
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ImageCreateResponse} and HTTP response
      */
@@ -1382,7 +1382,7 @@
 
     /**
      * Upload images
-     * This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format. See &lt;a href&#x3D;\&quot;#searching-for-media-reverse-image-search\&quot;&gt;Reverse image search&lt;/a&gt;.
+     * This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format.
      * @param {module:model/ImageCreateRequest} body The image data in JPEG or PNG format
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ImageCreateResponse}
      */

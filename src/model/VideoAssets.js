@@ -1,5 +1,5 @@
 /**
- * shutterstock
+ * Shutterstock API Reference
  * The Shutterstock API provides access to Shutterstock's library of media, as well as information about customers' accounts and the contributors that provide the media.
  *
  * OpenAPI spec version: 1.0.0
@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Url'), require('./Urls'), require('./VideoSizeDetails'));
   } else {
     // Browser globals (root is window)
-    if (!root.Shutterstock) {
-      root.Shutterstock = {};
+    if (!root.ShutterstockApiReference) {
+      root.ShutterstockApiReference = {};
     }
-    root.Shutterstock.VideoAssets = factory(root.Shutterstock.ApiClient, root.Shutterstock.Url, root.Shutterstock.Urls, root.Shutterstock.VideoSizeDetails);
+    root.ShutterstockApiReference.VideoAssets = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.Url, root.ShutterstockApiReference.Urls, root.ShutterstockApiReference.VideoSizeDetails);
   }
 }(this, function(ApiClient, Url, Urls, VideoSizeDetails) {
   'use strict';
