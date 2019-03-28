@@ -514,7 +514,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Page number (default to 1)
      * @param {Number} opts.per_page Number of results per page (default to 20)
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/VideoSearchResults} and HTTP response
      */
     this.getSimilarVideosWithHttpInfo = function(id, opts) {
@@ -561,7 +561,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Page number (default to 1)
      * @param {Number} opts.per_page Number of results per page (default to 20)
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/VideoSearchResults}
      */
     this.getSimilarVideos = function(id, opts) {
@@ -577,7 +577,7 @@
      * This endpoint shows information about a video, including URLs to previews and the sizes that it is available in.
      * @param {String} id Video ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to full)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to full)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Video} and HTTP response
      */
     this.getVideoWithHttpInfo = function(id, opts) {
@@ -620,7 +620,7 @@
      * This endpoint shows information about a video, including URLs to previews and the sizes that it is available in.
      * @param {String} id Video ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to full)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to full)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Video}
      */
     this.getVideo = function(id, opts) {
@@ -744,7 +744,7 @@
      * This endpoint lists information about one or more videos, including the aspect ratio and URLs to previews.
      * @param {Array.<String>} id One or more video IDs
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/VideoDataList} and HTTP response
      */
     this.getVideoListWithHttpInfo = function(id, opts) {
@@ -790,7 +790,7 @@
      * This endpoint lists information about one or more videos, including the aspect ratio and URLs to previews.
      * @param {Array.<String>} id One or more video IDs
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/VideoDataList}
      */
     this.getVideoList = function(id, opts) {
@@ -955,7 +955,7 @@
      * @param {module:model/String} opts.resolution Show videos with the specified resolution
      * @param {Boolean} opts.safe Enable or disable safe search (default to true)
      * @param {module:model/String} opts.sort Sort by one of these categories (default to popular)
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/VideoSearchResults} and HTTP response
      */
     this.searchVideosWithHttpInfo = function(opts) {
@@ -1052,7 +1052,7 @@
      * @param {module:model/String} opts.resolution Show videos with the specified resolution
      * @param {Boolean} opts.safe Enable or disable safe search (default to true)
      * @param {module:model/String} opts.sort Sort by one of these categories (default to popular)
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/VideoSearchResults}
      */
     this.searchVideos = function(opts) {

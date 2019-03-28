@@ -556,7 +556,7 @@
      * This endpoint shows information about a track, including its genres, instruments, and other attributes.
      * @param {String} id Audio track ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to full)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to full)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Audio} and HTTP response
      */
     this.getTrackWithHttpInfo = function(id, opts) {
@@ -599,7 +599,7 @@
      * This endpoint shows information about a track, including its genres, instruments, and other attributes.
      * @param {String} id Audio track ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to full)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to full)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Audio}
      */
     this.getTrack = function(id, opts) {
@@ -615,7 +615,7 @@
      * This endpoint lists information about one or more audio tracks, including the description and publication date.
      * @param {Array.<String>} id One or more audio IDs
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AudioDataList} and HTTP response
      */
     this.getTrackListWithHttpInfo = function(id, opts) {
@@ -661,7 +661,7 @@
      * This endpoint lists information about one or more audio tracks, including the description and publication date.
      * @param {Array.<String>} id One or more audio IDs
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AudioDataList}
      */
     this.getTrackList = function(id, opts) {
@@ -814,7 +814,7 @@
      * @param {module:model/String} opts.sort Sort by
      * @param {module:model/String} opts.sort_order Sort order, asc or desc (default to desc)
      * @param {String} opts.vocal_description Show tracks with the specified vocal description (male, female)
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AudioSearchResults} and HTTP response
      */
     this.searchAudioWithHttpInfo = function(opts) {
@@ -896,7 +896,7 @@
      * @param {module:model/String} opts.sort Sort by
      * @param {module:model/String} opts.sort_order Sort order, asc or desc (default to desc)
      * @param {String} opts.vocal_description Show tracks with the specified vocal description (male, female)
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AudioSearchResults}
      */
     this.searchAudio = function(opts) {

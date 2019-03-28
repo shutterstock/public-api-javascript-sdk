@@ -524,7 +524,7 @@
      * This endpoint shows information about an image, including a URL to a preview image and the sizes that it is available in.
      * @param {String} id Image ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to full)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to full)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Image} and HTTP response
      */
     this.getImageWithHttpInfo = function(id, opts) {
@@ -567,7 +567,7 @@
      * This endpoint shows information about an image, including a URL to a preview image and the sizes that it is available in.
      * @param {String} id Image ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to full)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to full)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Image}
      */
     this.getImage = function(id, opts) {
@@ -691,7 +691,7 @@
      * This endpoint lists information about one or more images, including the available sizes. Only accounts with subscriptions can use it.
      * @param {Array.<String>} id One or more image IDs
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ImageDataList} and HTTP response
      */
     this.getImageListWithHttpInfo = function(id, opts) {
@@ -737,7 +737,7 @@
      * This endpoint lists information about one or more images, including the available sizes. Only accounts with subscriptions can use it.
      * @param {Array.<String>} id One or more image IDs
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ImageDataList}
      */
     this.getImageList = function(id, opts) {
@@ -1010,7 +1010,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Page number (default to 1)
      * @param {Number} opts.per_page Number of results per page, defaults to 20 (default to 20)
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ImageSearchResults} and HTTP response
      */
     this.getSimilarImagesWithHttpInfo = function(id, opts) {
@@ -1057,7 +1057,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.page Page number (default to 1)
      * @param {Number} opts.per_page Number of results per page, defaults to 20 (default to 20)
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ImageSearchResults}
      */
     this.getSimilarImages = function(id, opts) {
@@ -1224,7 +1224,7 @@
      * @param {Boolean} opts.safe Enable or disable safe search (default to true)
      * @param {module:model/String} opts.sort Sort by (default to popular)
      * @param {Boolean} opts.spellcheck_query Spellcheck the search query and return results on suggested spellings (default to true)
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @param {Number} opts.width (Deprecated; use width_from and width_to instead) Show images with the specified width
      * @param {Number} opts.width_from Show images with the specified width or larger, in pixels
      * @param {Number} opts.width_to Show images with the specified width or smaller, in pixels
@@ -1328,7 +1328,7 @@
      * @param {Boolean} opts.safe Enable or disable safe search (default to true)
      * @param {module:model/String} opts.sort Sort by (default to popular)
      * @param {Boolean} opts.spellcheck_query Spellcheck the search query and return results on suggested spellings (default to true)
-     * @param {module:model/String} opts.view Amount of detail to render in the response (only for accounts with subscriptions) (default to minimal)
+     * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
      * @param {Number} opts.width (Deprecated; use width_from and width_to instead) Show images with the specified width
      * @param {Number} opts.width_from Show images with the specified width or larger, in pixels
      * @param {Number} opts.width_to Show images with the specified width or smaller, in pixels
