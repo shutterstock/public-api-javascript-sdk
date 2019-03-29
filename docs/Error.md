@@ -1,4 +1,4 @@
-# ShutterstockApiReference.Error
+# shutterstock-api.Error
 
 ## Properties
 Name | Type | Description | Notes

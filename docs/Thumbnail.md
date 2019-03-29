@@ -1,4 +1,4 @@
-# ShutterstockApiReference.Thumbnail
+# shutterstock-api.Thumbnail
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ShutterstockApiReference.UserPostRequest
+# shutterstock-api.UserPostRequest
 
 ## Properties
 Name | Type | Description | Notes

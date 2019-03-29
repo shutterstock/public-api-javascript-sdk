@@ -1,4 +1,4 @@
-# ShutterstockApiReference.Cookie
+# shutterstock-api.Cookie
 
 ## Properties
 Name | Type | Description | Notes

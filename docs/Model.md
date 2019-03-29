@@ -1,4 +1,4 @@
-# ShutterstockApiReference.Model
+# shutterstock-api.Model
 
 ## Properties
 Name | Type | Description | Notes

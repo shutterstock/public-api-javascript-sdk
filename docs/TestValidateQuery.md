@@ -1,4 +1,4 @@
-# ShutterstockApiReference.TestValidateQuery
+# shutterstock-api.TestValidateQuery
 
 ## Properties
 Name | Type | Description | Notes

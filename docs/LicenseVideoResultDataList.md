@@ -1,4 +1,4 @@
-# ShutterstockApiReference.LicenseVideoResultDataList
+# shutterstock-api.LicenseVideoResultDataList
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ShutterstockApiReference.LicenseImageResultDataList
+# shutterstock-api.LicenseImageResultDataList
 
 ## Properties
 Name | Type | Description | Notes

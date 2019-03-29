@@ -1,4 +1,4 @@
-# ShutterstockApiReference.Artist
+# shutterstock-api.Artist
 
 ## Properties
 Name | Type | Description | Notes

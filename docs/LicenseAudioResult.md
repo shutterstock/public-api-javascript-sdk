@@ -1,4 +1,4 @@
-# ShutterstockApiReference.LicenseAudioResult
+# shutterstock-api.LicenseAudioResult
 
 ## Properties
 Name | Type | Description | Notes

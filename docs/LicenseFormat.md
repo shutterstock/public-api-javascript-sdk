@@ -1,4 +1,4 @@
-# ShutterstockApiReference.LicenseFormat
+# shutterstock-api.LicenseFormat
 
 ## Properties
 Name | Type | Description | Notes

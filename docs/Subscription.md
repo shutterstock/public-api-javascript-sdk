@@ -1,4 +1,4 @@
-# ShutterstockApiReference.Subscription
+# shutterstock-api.Subscription
 
 ## Properties
 Name | Type | Description | Notes

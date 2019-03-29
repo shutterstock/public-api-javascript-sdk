@@ -1,4 +1,4 @@
-# ShutterstockApiReference.Url
+# shutterstock-api.Url
 
 ## Properties
 Name | Type | Description | Notes

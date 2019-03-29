@@ -1,4 +1,4 @@
-# ShutterstockApiReference.Price
+# shutterstock-api.Price
 
 ## Properties
 Name | Type | Description | Notes

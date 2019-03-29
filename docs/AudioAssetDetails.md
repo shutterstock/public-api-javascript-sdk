@@ -1,4 +1,4 @@
-# ShutterstockApiReference.AudioAssetDetails
+# shutterstock-api.AudioAssetDetails
 
 ## Properties
 Name | Type | Description | Notes

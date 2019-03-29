@@ -1,4 +1,4 @@
-# ShutterstockApiReference.LicenseVideo
+# shutterstock-api.LicenseVideo
 
 ## Properties
 Name | Type | Description | Notes

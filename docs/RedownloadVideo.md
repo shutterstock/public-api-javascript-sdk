@@ -1,4 +1,4 @@
-# ShutterstockApiReference.RedownloadVideo
+# shutterstock-api.RedownloadVideo
 
 ## Properties
 Name | Type | Description | Notes

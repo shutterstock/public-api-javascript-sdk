@@ -1,6 +1,6 @@
-# ShutterstockApiReference.AudioApi
+# shutterstock-api.AudioApi
 
-All URIs are relative to `https://api.shutterstock.com`
+All URIs are relative to `https://api.shutterstock.com`.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -76,7 +76,7 @@ Name | Type | Description
 
 ### Return type
 
-No response body
+No response body.
 
 
 <a name="createSoundbox"></a>
@@ -193,7 +193,7 @@ No request headers required.
 
 ### Return type
 
-No response body
+No response body.
 
 
 <a name="deleteSoundboxItems"></a>
@@ -253,7 +253,7 @@ No request headers required.
 
 ### Return type
 
-No response body
+No response body.
 
 
 <a name="downloadTracks"></a>
@@ -1063,7 +1063,7 @@ Name | Type | Description
 
 ### Return type
 
-No response body
+No response body.
 
 
 <a name="searchAudio"></a>

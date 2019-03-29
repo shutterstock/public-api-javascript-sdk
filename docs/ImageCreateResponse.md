@@ -1,4 +1,4 @@
-# ShutterstockApiReference.ImageCreateResponse
+# shutterstock-api.ImageCreateResponse
 
 ## Properties
 Name | Type | Description | Notes

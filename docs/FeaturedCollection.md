@@ -1,4 +1,4 @@
-# ShutterstockApiReference.FeaturedCollection
+# shutterstock-api.FeaturedCollection
 
 ## Properties
 Name | Type | Description | Notes

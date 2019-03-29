@@ -1,6 +1,6 @@
-# ShutterstockApiReference.ImagesApi
+# shutterstock-api.ImagesApi
 
-All URIs are relative to `https://api.shutterstock.com`
+All URIs are relative to `https://api.shutterstock.com`.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -83,7 +83,7 @@ Name | Type | Description
 
 ### Return type
 
-No response body
+No response body.
 
 
 <a name="createLightbox"></a>
@@ -139,7 +139,7 @@ Name | Type | Description
 
 ### Return type
 
-No response body
+No response body.
 
 
 <a name="deleteLightbox"></a>
@@ -195,7 +195,7 @@ No request headers required.
 
 ### Return type
 
-No response body
+No response body.
 
 
 <a name="deleteLightboxItems"></a>
@@ -255,7 +255,7 @@ No request headers required.
 
 ### Return type
 
-No response body
+No response body.
 
 
 <a name="downloadImage"></a>
@@ -2177,7 +2177,7 @@ Name | Type | Description
 
 ### Return type
 
-No response body
+No response body.
 
 
 <a name="searchImages"></a>

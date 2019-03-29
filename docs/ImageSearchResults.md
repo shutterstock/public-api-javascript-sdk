@@ -1,4 +1,4 @@
-# ShutterstockApiReference.ImageSearchResults
+# shutterstock-api.ImageSearchResults
 
 ## Properties
 Name | Type | Description | Notes

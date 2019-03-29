@@ -1,4 +1,4 @@
-# ShutterstockApiReference.Album
+# shutterstock-api.Album
 
 ## Properties
 Name | Type | Description | Notes

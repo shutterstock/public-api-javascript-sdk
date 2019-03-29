@@ -1,4 +1,4 @@
-# ShutterstockApiReference.ContributorProfileSocialMedia
+# shutterstock-api.ContributorProfileSocialMedia
 
 ## Properties
 Name | Type | Description | Notes

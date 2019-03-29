@@ -1,4 +1,4 @@
-# ShutterstockApiReference.ContributorProfileDataList
+# shutterstock-api.ContributorProfileDataList
 
 ## Properties
 Name | Type | Description | Notes

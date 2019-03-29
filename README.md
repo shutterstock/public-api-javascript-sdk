@@ -215,72 +215,72 @@ All URIs are relative to *https://api.shutterstock.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ShutterstockApiReference.AudioApi* | [**addSoundboxItems**](docs/AudioApi.md#addSoundboxItems) | **POST** /v2/audio/collections/{id}/items | Add audio tracks to collections
-*ShutterstockApiReference.AudioApi* | [**createSoundbox**](docs/AudioApi.md#createSoundbox) | **POST** /v2/audio/collections | Create audio collections
-*ShutterstockApiReference.AudioApi* | [**deleteSoundbox**](docs/AudioApi.md#deleteSoundbox) | **DELETE** /v2/audio/collections/{id} | Delete audio collections
-*ShutterstockApiReference.AudioApi* | [**deleteSoundboxItems**](docs/AudioApi.md#deleteSoundboxItems) | **DELETE** /v2/audio/collections/{id}/items | Remove audio tracks from collections
-*ShutterstockApiReference.AudioApi* | [**downloadTracks**](docs/AudioApi.md#downloadTracks) | **POST** /v2/audio/licenses/{id}/downloads | Download audio tracks
-*ShutterstockApiReference.AudioApi* | [**getAudioLicenseList**](docs/AudioApi.md#getAudioLicenseList) | **GET** /v2/audio/licenses | List audio licenses
-*ShutterstockApiReference.AudioApi* | [**getSoundbox**](docs/AudioApi.md#getSoundbox) | **GET** /v2/audio/collections/{id} | Get the details of audio collections
-*ShutterstockApiReference.AudioApi* | [**getSoundboxItems**](docs/AudioApi.md#getSoundboxItems) | **GET** /v2/audio/collections/{id}/items | Get the contents of audio collections
-*ShutterstockApiReference.AudioApi* | [**getSoundboxList**](docs/AudioApi.md#getSoundboxList) | **GET** /v2/audio/collections | List audio collections
-*ShutterstockApiReference.AudioApi* | [**getTrack**](docs/AudioApi.md#getTrack) | **GET** /v2/audio/{id} | Get details about audio tracks
-*ShutterstockApiReference.AudioApi* | [**getTrackList**](docs/AudioApi.md#getTrackList) | **GET** /v2/audio | List audio tracks
-*ShutterstockApiReference.AudioApi* | [**licenseTrack**](docs/AudioApi.md#licenseTrack) | **POST** /v2/audio/licenses | License audio tracks
-*ShutterstockApiReference.AudioApi* | [**renameSoundbox**](docs/AudioApi.md#renameSoundbox) | **POST** /v2/audio/collections/{id} | Rename audio collections
-*ShutterstockApiReference.AudioApi* | [**searchAudio**](docs/AudioApi.md#searchAudio) | **GET** /v2/audio/search | Search for tracks
-*ShutterstockApiReference.ContributorsApi* | [**getContributor**](docs/ContributorsApi.md#getContributor) | **GET** /v2/contributors/{contributor_id} | Get details about a single contributor
-*ShutterstockApiReference.ContributorsApi* | [**getContributorCollectionItems**](docs/ContributorsApi.md#getContributorCollectionItems) | **GET** /v2/contributors/{contributor_id}/collections/{id}/items | Get the items in contributors&#39; collections
-*ShutterstockApiReference.ContributorsApi* | [**getContributorCollections**](docs/ContributorsApi.md#getContributorCollections) | **GET** /v2/contributors/{contributor_id}/collections/{id} | Get details about contributors&#39; collections
-*ShutterstockApiReference.ContributorsApi* | [**getContributorCollectionsList**](docs/ContributorsApi.md#getContributorCollectionsList) | **GET** /v2/contributors/{contributor_id}/collections | List contributors&#39; collections
-*ShutterstockApiReference.ContributorsApi* | [**getContributorList**](docs/ContributorsApi.md#getContributorList) | **GET** /v2/contributors | Get details about multiple contributors
-*ShutterstockApiReference.EditorialApi* | [**getEditorialImage**](docs/EditorialApi.md#getEditorialImage) | **GET** /v2/editorial/{id} | Get editorial content details
-*ShutterstockApiReference.EditorialApi* | [**getEditorialLivefeed**](docs/EditorialApi.md#getEditorialLivefeed) | **GET** /v2/editorial/livefeeds/{id} | Get editorial livefeed
-*ShutterstockApiReference.EditorialApi* | [**getEditorialLivefeedItems**](docs/EditorialApi.md#getEditorialLivefeedItems) | **GET** /v2/editorial/livefeeds/{id}/items | Get editorial livefeed items
-*ShutterstockApiReference.EditorialApi* | [**getEditorialLivefeedList**](docs/EditorialApi.md#getEditorialLivefeedList) | **GET** /v2/editorial/livefeeds | Get editorial livefeed list
-*ShutterstockApiReference.EditorialApi* | [**licenseEditorialImage**](docs/EditorialApi.md#licenseEditorialImage) | **POST** /v2/editorial/licenses | License editorial content
-*ShutterstockApiReference.EditorialApi* | [**searchEditorial**](docs/EditorialApi.md#searchEditorial) | **GET** /v2/editorial/search | Search editorial content
-*ShutterstockApiReference.ImagesApi* | [**addLightboxItems**](docs/ImagesApi.md#addLightboxItems) | **POST** /v2/images/collections/{id}/items | Add images to collections
-*ShutterstockApiReference.ImagesApi* | [**createLightbox**](docs/ImagesApi.md#createLightbox) | **POST** /v2/images/collections | Create image collections
-*ShutterstockApiReference.ImagesApi* | [**deleteLightbox**](docs/ImagesApi.md#deleteLightbox) | **DELETE** /v2/images/collections/{id} | Delete image collections
-*ShutterstockApiReference.ImagesApi* | [**deleteLightboxItems**](docs/ImagesApi.md#deleteLightboxItems) | **DELETE** /v2/images/collections/{id}/items | Remove images from collections
-*ShutterstockApiReference.ImagesApi* | [**downloadImage**](docs/ImagesApi.md#downloadImage) | **POST** /v2/images/licenses/{id}/downloads | Download images
-*ShutterstockApiReference.ImagesApi* | [**getFeaturedLightbox**](docs/ImagesApi.md#getFeaturedLightbox) | **GET** /v2/images/collections/featured/{id} | Get the details of featured image collections
-*ShutterstockApiReference.ImagesApi* | [**getFeaturedLightboxItems**](docs/ImagesApi.md#getFeaturedLightboxItems) | **GET** /v2/images/collections/featured/{id}/items | Get the contents of featured image collections
-*ShutterstockApiReference.ImagesApi* | [**getFeaturedLightboxList**](docs/ImagesApi.md#getFeaturedLightboxList) | **GET** /v2/images/collections/featured | List featured image collections
-*ShutterstockApiReference.ImagesApi* | [**getImage**](docs/ImagesApi.md#getImage) | **GET** /v2/images/{id} | Get details about images
-*ShutterstockApiReference.ImagesApi* | [**getImageCategories**](docs/ImagesApi.md#getImageCategories) | **GET** /v2/images/categories | List image categories
-*ShutterstockApiReference.ImagesApi* | [**getImageLicenseList**](docs/ImagesApi.md#getImageLicenseList) | **GET** /v2/images/licenses | List image licenses
-*ShutterstockApiReference.ImagesApi* | [**getImageList**](docs/ImagesApi.md#getImageList) | **GET** /v2/images | List images
-*ShutterstockApiReference.ImagesApi* | [**getImageRecommendations**](docs/ImagesApi.md#getImageRecommendations) | **GET** /v2/images/recommendations | List recommended images
-*ShutterstockApiReference.ImagesApi* | [**getLightbox**](docs/ImagesApi.md#getLightbox) | **GET** /v2/images/collections/{id} | Get the details of image collections
-*ShutterstockApiReference.ImagesApi* | [**getLightboxItems**](docs/ImagesApi.md#getLightboxItems) | **GET** /v2/images/collections/{id}/items | Get the contents of image collections
-*ShutterstockApiReference.ImagesApi* | [**getLightboxList**](docs/ImagesApi.md#getLightboxList) | **GET** /v2/images/collections | List image collections
-*ShutterstockApiReference.ImagesApi* | [**getSimilarImages**](docs/ImagesApi.md#getSimilarImages) | **GET** /v2/images/{id}/similar | List similar images
-*ShutterstockApiReference.ImagesApi* | [**licenseImages**](docs/ImagesApi.md#licenseImages) | **POST** /v2/images/licenses | License images
-*ShutterstockApiReference.ImagesApi* | [**renameLightbox**](docs/ImagesApi.md#renameLightbox) | **POST** /v2/images/collections/{id} | Rename image collections
-*ShutterstockApiReference.ImagesApi* | [**searchImages**](docs/ImagesApi.md#searchImages) | **GET** /v2/images/search | Search for images
-*ShutterstockApiReference.ImagesApi* | [**uploadEphemeralImage**](docs/ImagesApi.md#uploadEphemeralImage) | **POST** /v2/images | Upload images
-*ShutterstockApiReference.TestApi* | [**echo**](docs/TestApi.md#echo) | **GET** /v2/test | Echo text
-*ShutterstockApiReference.TestApi* | [**validate**](docs/TestApi.md#validate) | **GET** /v2/test/validate | Validate input
-*ShutterstockApiReference.UsersApi* | [**createUser**](docs/UsersApi.md#createUser) | **POST** /v2/user | Register user
-*ShutterstockApiReference.UsersApi* | [**getAccessToken**](docs/UsersApi.md#getAccessToken) | **GET** /v2/user/access_token | Get access token details
-*ShutterstockApiReference.UsersApi* | [**getUser**](docs/UsersApi.md#getUser) | **GET** /v2/user | Get user details
-*ShutterstockApiReference.UsersApi* | [**getUserSubsciptionList**](docs/UsersApi.md#getUserSubsciptionList) | **GET** /v2/user/subscriptions | List user subscriptions
-*ShutterstockApiReference.VideosApi* | [**addClipboxItems**](docs/VideosApi.md#addClipboxItems) | **POST** /v2/videos/collections/{id}/items | Add videos to collections
-*ShutterstockApiReference.VideosApi* | [**createClipbox**](docs/VideosApi.md#createClipbox) | **POST** /v2/videos/collections | Create video collections
-*ShutterstockApiReference.VideosApi* | [**deleteClipbox**](docs/VideosApi.md#deleteClipbox) | **DELETE** /v2/videos/collections/{id} | Delete video collections
-*ShutterstockApiReference.VideosApi* | [**deleteClipboxItems**](docs/VideosApi.md#deleteClipboxItems) | **DELETE** /v2/videos/collections/{id}/items | Remove videos from collections
-*ShutterstockApiReference.VideosApi* | [**downloadVideos**](docs/VideosApi.md#downloadVideos) | **POST** /v2/videos/licenses/{id}/downloads | Download videos
-*ShutterstockApiReference.VideosApi* | [**getClipbox**](docs/VideosApi.md#getClipbox) | **GET** /v2/videos/collections/{id} | Get the details of video collections
-*ShutterstockApiReference.VideosApi* | [**getClipboxItems**](docs/VideosApi.md#getClipboxItems) | **GET** /v2/videos/collections/{id}/items | Get the contents of video collections
-*ShutterstockApiReference.VideosApi* | [**getClipboxList**](docs/VideosApi.md#getClipboxList) | **GET** /v2/videos/collections | List video collections
-*ShutterstockApiReference.VideosApi* | [**getSimilarVideos**](docs/VideosApi.md#getSimilarVideos) | **GET** /v2/videos/{id}/similar | List similar videos
-*ShutterstockApiReference.VideosApi* | [**getVideo**](docs/VideosApi.md#getVideo) | **GET** /v2/videos/{id} | Get details about videos
-*ShutterstockApiReference.VideosApi* | [**getVideoCategories**](docs/VideosApi.md#getVideoCategories) | **GET** /v2/videos/categories | List video categories
-*ShutterstockApiReference.VideosApi* | [**getVideoLicenseList**](docs/VideosApi.md#getVideoLicenseList) | **GET** /v2/videos/licenses | List video licenses
-*ShutterstockApiReference.VideosApi* | [**getVideoList**](docs/VideosApi.md#getVideoList) | **GET** /v2/videos | List videos
-*ShutterstockApiReference.VideosApi* | [**licenseVideos**](docs/VideosApi.md#licenseVideos) | **POST** /v2/videos/licenses | License videos
-*ShutterstockApiReference.VideosApi* | [**renameClipbox**](docs/VideosApi.md#renameClipbox) | **POST** /v2/videos/collections/{id} | Rename video collections
-*ShutterstockApiReference.VideosApi* | [**searchVideos**](docs/VideosApi.md#searchVideos) | **GET** /v2/videos/search | Search for videos
+*shutterstock-api.AudioApi* | [**addSoundboxItems**](docs/AudioApi.md#addSoundboxItems) | **POST** /v2/audio/collections/{id}/items | Add audio tracks to collections
+*shutterstock-api.AudioApi* | [**createSoundbox**](docs/AudioApi.md#createSoundbox) | **POST** /v2/audio/collections | Create audio collections
+*shutterstock-api.AudioApi* | [**deleteSoundbox**](docs/AudioApi.md#deleteSoundbox) | **DELETE** /v2/audio/collections/{id} | Delete audio collections
+*shutterstock-api.AudioApi* | [**deleteSoundboxItems**](docs/AudioApi.md#deleteSoundboxItems) | **DELETE** /v2/audio/collections/{id}/items | Remove audio tracks from collections
+*shutterstock-api.AudioApi* | [**downloadTracks**](docs/AudioApi.md#downloadTracks) | **POST** /v2/audio/licenses/{id}/downloads | Download audio tracks
+*shutterstock-api.AudioApi* | [**getAudioLicenseList**](docs/AudioApi.md#getAudioLicenseList) | **GET** /v2/audio/licenses | List audio licenses
+*shutterstock-api.AudioApi* | [**getSoundbox**](docs/AudioApi.md#getSoundbox) | **GET** /v2/audio/collections/{id} | Get the details of audio collections
+*shutterstock-api.AudioApi* | [**getSoundboxItems**](docs/AudioApi.md#getSoundboxItems) | **GET** /v2/audio/collections/{id}/items | Get the contents of audio collections
+*shutterstock-api.AudioApi* | [**getSoundboxList**](docs/AudioApi.md#getSoundboxList) | **GET** /v2/audio/collections | List audio collections
+*shutterstock-api.AudioApi* | [**getTrack**](docs/AudioApi.md#getTrack) | **GET** /v2/audio/{id} | Get details about audio tracks
+*shutterstock-api.AudioApi* | [**getTrackList**](docs/AudioApi.md#getTrackList) | **GET** /v2/audio | List audio tracks
+*shutterstock-api.AudioApi* | [**licenseTrack**](docs/AudioApi.md#licenseTrack) | **POST** /v2/audio/licenses | License audio tracks
+*shutterstock-api.AudioApi* | [**renameSoundbox**](docs/AudioApi.md#renameSoundbox) | **POST** /v2/audio/collections/{id} | Rename audio collections
+*shutterstock-api.AudioApi* | [**searchAudio**](docs/AudioApi.md#searchAudio) | **GET** /v2/audio/search | Search for tracks
+*shutterstock-api.ContributorsApi* | [**getContributor**](docs/ContributorsApi.md#getContributor) | **GET** /v2/contributors/{contributor_id} | Get details about a single contributor
+*shutterstock-api.ContributorsApi* | [**getContributorCollectionItems**](docs/ContributorsApi.md#getContributorCollectionItems) | **GET** /v2/contributors/{contributor_id}/collections/{id}/items | Get the items in contributors&#39; collections
+*shutterstock-api.ContributorsApi* | [**getContributorCollections**](docs/ContributorsApi.md#getContributorCollections) | **GET** /v2/contributors/{contributor_id}/collections/{id} | Get details about contributors&#39; collections
+*shutterstock-api.ContributorsApi* | [**getContributorCollectionsList**](docs/ContributorsApi.md#getContributorCollectionsList) | **GET** /v2/contributors/{contributor_id}/collections | List contributors&#39; collections
+*shutterstock-api.ContributorsApi* | [**getContributorList**](docs/ContributorsApi.md#getContributorList) | **GET** /v2/contributors | Get details about multiple contributors
+*shutterstock-api.EditorialApi* | [**getEditorialImage**](docs/EditorialApi.md#getEditorialImage) | **GET** /v2/editorial/{id} | Get editorial content details
+*shutterstock-api.EditorialApi* | [**getEditorialLivefeed**](docs/EditorialApi.md#getEditorialLivefeed) | **GET** /v2/editorial/livefeeds/{id} | Get editorial livefeed
+*shutterstock-api.EditorialApi* | [**getEditorialLivefeedItems**](docs/EditorialApi.md#getEditorialLivefeedItems) | **GET** /v2/editorial/livefeeds/{id}/items | Get editorial livefeed items
+*shutterstock-api.EditorialApi* | [**getEditorialLivefeedList**](docs/EditorialApi.md#getEditorialLivefeedList) | **GET** /v2/editorial/livefeeds | Get editorial livefeed list
+*shutterstock-api.EditorialApi* | [**licenseEditorialImage**](docs/EditorialApi.md#licenseEditorialImage) | **POST** /v2/editorial/licenses | License editorial content
+*shutterstock-api.EditorialApi* | [**searchEditorial**](docs/EditorialApi.md#searchEditorial) | **GET** /v2/editorial/search | Search editorial content
+*shutterstock-api.ImagesApi* | [**addLightboxItems**](docs/ImagesApi.md#addLightboxItems) | **POST** /v2/images/collections/{id}/items | Add images to collections
+*shutterstock-api.ImagesApi* | [**createLightbox**](docs/ImagesApi.md#createLightbox) | **POST** /v2/images/collections | Create image collections
+*shutterstock-api.ImagesApi* | [**deleteLightbox**](docs/ImagesApi.md#deleteLightbox) | **DELETE** /v2/images/collections/{id} | Delete image collections
+*shutterstock-api.ImagesApi* | [**deleteLightboxItems**](docs/ImagesApi.md#deleteLightboxItems) | **DELETE** /v2/images/collections/{id}/items | Remove images from collections
+*shutterstock-api.ImagesApi* | [**downloadImage**](docs/ImagesApi.md#downloadImage) | **POST** /v2/images/licenses/{id}/downloads | Download images
+*shutterstock-api.ImagesApi* | [**getFeaturedLightbox**](docs/ImagesApi.md#getFeaturedLightbox) | **GET** /v2/images/collections/featured/{id} | Get the details of featured image collections
+*shutterstock-api.ImagesApi* | [**getFeaturedLightboxItems**](docs/ImagesApi.md#getFeaturedLightboxItems) | **GET** /v2/images/collections/featured/{id}/items | Get the contents of featured image collections
+*shutterstock-api.ImagesApi* | [**getFeaturedLightboxList**](docs/ImagesApi.md#getFeaturedLightboxList) | **GET** /v2/images/collections/featured | List featured image collections
+*shutterstock-api.ImagesApi* | [**getImage**](docs/ImagesApi.md#getImage) | **GET** /v2/images/{id} | Get details about images
+*shutterstock-api.ImagesApi* | [**getImageCategories**](docs/ImagesApi.md#getImageCategories) | **GET** /v2/images/categories | List image categories
+*shutterstock-api.ImagesApi* | [**getImageLicenseList**](docs/ImagesApi.md#getImageLicenseList) | **GET** /v2/images/licenses | List image licenses
+*shutterstock-api.ImagesApi* | [**getImageList**](docs/ImagesApi.md#getImageList) | **GET** /v2/images | List images
+*shutterstock-api.ImagesApi* | [**getImageRecommendations**](docs/ImagesApi.md#getImageRecommendations) | **GET** /v2/images/recommendations | List recommended images
+*shutterstock-api.ImagesApi* | [**getLightbox**](docs/ImagesApi.md#getLightbox) | **GET** /v2/images/collections/{id} | Get the details of image collections
+*shutterstock-api.ImagesApi* | [**getLightboxItems**](docs/ImagesApi.md#getLightboxItems) | **GET** /v2/images/collections/{id}/items | Get the contents of image collections
+*shutterstock-api.ImagesApi* | [**getLightboxList**](docs/ImagesApi.md#getLightboxList) | **GET** /v2/images/collections | List image collections
+*shutterstock-api.ImagesApi* | [**getSimilarImages**](docs/ImagesApi.md#getSimilarImages) | **GET** /v2/images/{id}/similar | List similar images
+*shutterstock-api.ImagesApi* | [**licenseImages**](docs/ImagesApi.md#licenseImages) | **POST** /v2/images/licenses | License images
+*shutterstock-api.ImagesApi* | [**renameLightbox**](docs/ImagesApi.md#renameLightbox) | **POST** /v2/images/collections/{id} | Rename image collections
+*shutterstock-api.ImagesApi* | [**searchImages**](docs/ImagesApi.md#searchImages) | **GET** /v2/images/search | Search for images
+*shutterstock-api.ImagesApi* | [**uploadEphemeralImage**](docs/ImagesApi.md#uploadEphemeralImage) | **POST** /v2/images | Upload images
+*shutterstock-api.TestApi* | [**echo**](docs/TestApi.md#echo) | **GET** /v2/test | Echo text
+*shutterstock-api.TestApi* | [**validate**](docs/TestApi.md#validate) | **GET** /v2/test/validate | Validate input
+*shutterstock-api.UsersApi* | [**createUser**](docs/UsersApi.md#createUser) | **POST** /v2/user | Register user
+*shutterstock-api.UsersApi* | [**getAccessToken**](docs/UsersApi.md#getAccessToken) | **GET** /v2/user/access_token | Get access token details
+*shutterstock-api.UsersApi* | [**getUser**](docs/UsersApi.md#getUser) | **GET** /v2/user | Get user details
+*shutterstock-api.UsersApi* | [**getUserSubsciptionList**](docs/UsersApi.md#getUserSubsciptionList) | **GET** /v2/user/subscriptions | List user subscriptions
+*shutterstock-api.VideosApi* | [**addClipboxItems**](docs/VideosApi.md#addClipboxItems) | **POST** /v2/videos/collections/{id}/items | Add videos to collections
+*shutterstock-api.VideosApi* | [**createClipbox**](docs/VideosApi.md#createClipbox) | **POST** /v2/videos/collections | Create video collections
+*shutterstock-api.VideosApi* | [**deleteClipbox**](docs/VideosApi.md#deleteClipbox) | **DELETE** /v2/videos/collections/{id} | Delete video collections
+*shutterstock-api.VideosApi* | [**deleteClipboxItems**](docs/VideosApi.md#deleteClipboxItems) | **DELETE** /v2/videos/collections/{id}/items | Remove videos from collections
+*shutterstock-api.VideosApi* | [**downloadVideos**](docs/VideosApi.md#downloadVideos) | **POST** /v2/videos/licenses/{id}/downloads | Download videos
+*shutterstock-api.VideosApi* | [**getClipbox**](docs/VideosApi.md#getClipbox) | **GET** /v2/videos/collections/{id} | Get the details of video collections
+*shutterstock-api.VideosApi* | [**getClipboxItems**](docs/VideosApi.md#getClipboxItems) | **GET** /v2/videos/collections/{id}/items | Get the contents of video collections
+*shutterstock-api.VideosApi* | [**getClipboxList**](docs/VideosApi.md#getClipboxList) | **GET** /v2/videos/collections | List video collections
+*shutterstock-api.VideosApi* | [**getSimilarVideos**](docs/VideosApi.md#getSimilarVideos) | **GET** /v2/videos/{id}/similar | List similar videos
+*shutterstock-api.VideosApi* | [**getVideo**](docs/VideosApi.md#getVideo) | **GET** /v2/videos/{id} | Get details about videos
+*shutterstock-api.VideosApi* | [**getVideoCategories**](docs/VideosApi.md#getVideoCategories) | **GET** /v2/videos/categories | List video categories
+*shutterstock-api.VideosApi* | [**getVideoLicenseList**](docs/VideosApi.md#getVideoLicenseList) | **GET** /v2/videos/licenses | List video licenses
+*shutterstock-api.VideosApi* | [**getVideoList**](docs/VideosApi.md#getVideoList) | **GET** /v2/videos | List videos
+*shutterstock-api.VideosApi* | [**licenseVideos**](docs/VideosApi.md#licenseVideos) | **POST** /v2/videos/licenses | License videos
+*shutterstock-api.VideosApi* | [**renameClipbox**](docs/VideosApi.md#renameClipbox) | **POST** /v2/videos/collections/{id} | Rename video collections
+*shutterstock-api.VideosApi* | [**searchVideos**](docs/VideosApi.md#searchVideos) | **GET** /v2/videos/search | Search for videos
 

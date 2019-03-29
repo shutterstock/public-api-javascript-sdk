@@ -1,4 +1,4 @@
-# ShutterstockApiReference.UpdatedMediaDataList
+# shutterstock-api.UpdatedMediaDataList
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ShutterstockApiReference.FeaturedCollectionCoverItem
+# shutterstock-api.FeaturedCollectionCoverItem
 
 ## Properties
 Name | Type | Description | Notes

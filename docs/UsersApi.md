@@ -1,6 +1,6 @@
-# ShutterstockApiReference.UsersApi
+# shutterstock-api.UsersApi
 
-All URIs are relative to `https://api.shutterstock.com`
+All URIs are relative to `https://api.shutterstock.com`.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

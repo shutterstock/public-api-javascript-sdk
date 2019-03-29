@@ -1,4 +1,4 @@
-# ShutterstockApiReference.ModelRelease
+# shutterstock-api.ModelRelease
 
 ## Properties
 Name | Type | Description | Notes

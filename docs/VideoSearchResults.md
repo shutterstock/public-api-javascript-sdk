@@ -1,4 +1,4 @@
-# ShutterstockApiReference.VideoSearchResults
+# shutterstock-api.VideoSearchResults
 
 ## Properties
 Name | Type | Description | Notes

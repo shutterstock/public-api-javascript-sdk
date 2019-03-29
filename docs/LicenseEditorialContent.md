@@ -1,4 +1,4 @@
-# ShutterstockApiReference.LicenseEditorialContent
+# shutterstock-api.LicenseEditorialContent
 
 ## Properties
 Name | Type | Description | Notes

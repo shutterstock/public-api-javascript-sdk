@@ -1,4 +1,4 @@
-# ShutterstockApiReference.ImageSizeDetails
+# shutterstock-api.ImageSizeDetails
 
 ## Properties
 Name | Type | Description | Notes

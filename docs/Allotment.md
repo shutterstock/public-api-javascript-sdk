@@ -1,4 +1,4 @@
-# ShutterstockApiReference.Allotment
+# shutterstock-api.Allotment
 
 ## Properties
 Name | Type | Description | Notes

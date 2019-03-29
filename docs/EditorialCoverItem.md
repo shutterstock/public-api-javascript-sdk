@@ -1,4 +1,4 @@
-# ShutterstockApiReference.EditorialCoverItem
+# shutterstock-api.EditorialCoverItem
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ShutterstockApiReference.EditorialLivefeed
+# shutterstock-api.EditorialLivefeed
 
 ## Properties
 Name | Type | Description | Notes

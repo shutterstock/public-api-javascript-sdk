@@ -1,4 +1,4 @@
-# ShutterstockApiReference.VideoDataList
+# shutterstock-api.VideoDataList
 
 ## Properties
 Name | Type | Description | Notes

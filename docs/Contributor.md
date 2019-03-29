@@ -1,4 +1,4 @@
-# ShutterstockApiReference.Contributor
+# shutterstock-api.Contributor
 
 ## Properties
 Name | Type | Description | Notes

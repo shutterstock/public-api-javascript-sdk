@@ -1,4 +1,4 @@
-# ShutterstockApiReference.VideoAssets
+# shutterstock-api.VideoAssets
 
 ## Properties
 Name | Type | Description | Notes

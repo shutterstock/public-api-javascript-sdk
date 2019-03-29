@@ -1,4 +1,4 @@
-# ShutterstockApiReference.CollectionItemDataList
+# shutterstock-api.CollectionItemDataList
 
 ## Properties
 Name | Type | Description | Notes

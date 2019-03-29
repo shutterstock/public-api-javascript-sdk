@@ -1,4 +1,4 @@
-# ShutterstockApiReference.DownloadHistoryUserDetails
+# shutterstock-api.DownloadHistoryUserDetails
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ShutterstockApiReference.LicenseAgreement
+# shutterstock-api.LicenseAgreement
 
 ## Properties
 Name | Type | Description | Notes

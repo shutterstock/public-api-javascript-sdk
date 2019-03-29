@@ -1,4 +1,4 @@
-# ShutterstockApiReference.Category
+# shutterstock-api.Category
 
 ## Properties
 Name | Type | Description | Notes

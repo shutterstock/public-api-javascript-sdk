@@ -1,4 +1,4 @@
-# ShutterstockApiReference.AccessTokenDetails
+# shutterstock-api.AccessTokenDetails
 
 ## Properties
 Name | Type | Description | Notes

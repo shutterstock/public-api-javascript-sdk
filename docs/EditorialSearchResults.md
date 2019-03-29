@@ -1,4 +1,4 @@
-# ShutterstockApiReference.EditorialSearchResults
+# shutterstock-api.EditorialSearchResults
 
 ## Properties
 Name | Type | Description | Notes

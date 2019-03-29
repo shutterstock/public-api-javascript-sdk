@@ -1,6 +1,6 @@
-# ShutterstockApiReference.VideosApi
+# shutterstock-api.VideosApi
 
-All URIs are relative to `https://api.shutterstock.com`
+All URIs are relative to `https://api.shutterstock.com`.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -78,7 +78,7 @@ Name | Type | Description
 
 ### Return type
 
-No response body
+No response body.
 
 
 <a name="createClipbox"></a>
@@ -195,7 +195,7 @@ No request headers required.
 
 ### Return type
 
-No response body
+No response body.
 
 
 <a name="deleteClipboxItems"></a>
@@ -255,7 +255,7 @@ No request headers required.
 
 ### Return type
 
-No response body
+No response body.
 
 
 <a name="downloadVideos"></a>
@@ -1630,7 +1630,7 @@ Name | Type | Description
 
 ### Return type
 
-No response body
+No response body.
 
 
 <a name="searchVideos"></a>

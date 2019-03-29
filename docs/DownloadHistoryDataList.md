@@ -1,4 +1,4 @@
-# ShutterstockApiReference.DownloadHistoryDataList
+# shutterstock-api.DownloadHistoryDataList
 
 ## Properties
 Name | Type | Description | Notes
