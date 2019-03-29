@@ -38,27 +38,33 @@ This endpoint adds one or more images to a collection by image IDs.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.ImagesApi();
+const imagesApi &#x3D; new sstk.ImagesApi();
 
-const id = "\"126351027\""; // String | Collection ID
+const collectionId &#x3D; &quot;&quot;; // Collection ID
 
-const body = new ShutterstockApiReference.CollectionItemRequest(); // CollectionItemRequest | Array of image IDs to add to the collection
+const body &#x3D; {
+  &quot;items&quot;: [
+    {
+      &quot;id&quot;: &quot;495863218&quot;,
+      &quot;media_type&quot;: &quot;image&quot;
+    }
+  ]
+};
 
-
-api.addLightboxItems(id, body)
+imagesApi.addLightboxItems(collectionId, body)
 .then(function() {
-  console.log('API called successfully.');
+  console.log(&quot;Success!&quot;);
 })
 .catch(function(error) {
   console.error(error);
 });
 
 ```
+
 
 ### Parameters
 
@@ -97,25 +103,26 @@ This endpoint creates one or more image collections (lightboxes). To add images 
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.ImagesApi();
+const imagesApi &#x3D; new sstk.ImagesApi();
 
-const body = new ShutterstockApiReference.CollectionCreateRequest(); // CollectionCreateRequest | The names of the new collections
+const body &#x3D; {
+  &quot;name&quot;: &quot;My collection&quot;
+};
 
-
-api.createLightbox(body)
+imagesApi.createLightbox(body)
 .then(function() {
-  console.log('API called successfully.');
+  console.log(&quot;Success!&quot;);
 })
 .catch(function(error) {
   console.error(error);
 });
 
 ```
+
 
 ### Parameters
 
@@ -153,25 +160,23 @@ This endpoint deletes an image collection.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.ImagesApi();
+const imagesApi &#x3D; new sstk.ImagesApi();
 
-const id = "\"136351027\""; // String | Collection ID
+const collectionId &#x3D; &quot;&quot;; // Collection ID
 
-
-api.deleteLightbox(id)
+imagesApi.deleteLightbox(collectionId)
 .then(function() {
-  console.log('API called successfully.');
+  console.log(&quot;Success!&quot;);
 })
 .catch(function(error) {
   console.error(error);
 });
-
 ```
+
 
 ### Parameters
 
@@ -209,28 +214,30 @@ This endpoint removes one or more images from a collection.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.ImagesApi();
+const imagesApi &#x3D; new sstk.ImagesApi();
 
-const id = "\"126351027\""; // String | Collection ID
+const collectionId &#x3D; &quot;&quot;; // Collection ID
 
-const queryParams = { 
-  'item_id': ["item_id_example"] // [String] | One or more image IDs to remove from the collection
+// Array of images to remove
+const imagesToRemove &#x3D; {
+  item_id: [
+    &quot;&quot;
+  ]
 };
 
-api.deleteLightboxItems(id, queryParams)
+imagesApi.deleteLightboxItems(collectionId, imagesToRemove)
 .then(function() {
-  console.log('API called successfully.');
+  console.log(&quot;Success!&quot;);
 })
 .catch(function(error) {
   console.error(error);
 });
-
 ```
+
 
 ### Parameters
 
@@ -269,19 +276,19 @@ This endpoint redownloads images that you have already received a license for.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.ImagesApi();
+const api &#x3D; new sstk.ImagesApi();
 
-const id = "\"i1188641347\""; // String | License ID
+const licenseId &#x3D; &#39;&#39;; // license ID, not image ID
 
-const body = new ShutterstockApiReference.RedownloadImage(); // RedownloadImage | Information about the images to redownload
+const body &#x3D; {
+  &quot;size&quot;: &quot;huge&quot;
+};
 
-
-api.downloadImage(id, body)
+api.downloadImage(licenseId, body)
 .then(function(data) {
   console.log(data);
 })
@@ -290,6 +297,7 @@ api.downloadImage(id, body)
 });
 
 ```
+
 
 ### Parameters
 
@@ -2023,11 +2031,18 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api &#x3D; new sstk.ImagesApi();
 
-const imageId &#x3D; &#39;&#39; // ID of image to license
-
-const imageToLicense &#x3D; new sstk.LicenseImage(imageId);
-
-const body &#x3D; new sstk.LicenseImageRequest([imageToLicense]);
+const body &#x3D; {
+  images: [
+    {
+      image_id: &quot;419235589&quot;,
+      format: &quot;jpg&quot;
+    },
+    {
+      image_id: &quot;1079756147&quot;,
+      format: &quot;jpg&quot;,
+    }
+  ]
+};
 
 const queryParams &#x3D; {
   subscription_id: process.env.SHUTTERSTOCK_SUBSCRIPTION_ID,
@@ -2132,27 +2147,28 @@ This endpoint sets a new name for an image collection.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.ImagesApi();
+const imagesApi &#x3D; new sstk.ImagesApi();
 
-const id = "\"126351027\""; // String | Collection ID
+const collectionId &#x3D; &quot;&quot;; // Collection ID
 
-const body = new ShutterstockApiReference.CollectionUpdateRequest(); // CollectionUpdateRequest | The new name for the collection
+const body &#x3D; {
+  &quot;name&quot;: &quot;My new collection name&quot;
+};
 
-
-api.renameLightbox(id, body)
+imagesApi.renameLightbox(collectionId, body)
 .then(function() {
-  console.log('API called successfully.');
+  console.log(&quot;Success!&quot;);
 })
 .catch(function(error) {
   console.error(error);
 });
 
 ```
+
 
 ### Parameters
 

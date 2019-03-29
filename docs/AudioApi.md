@@ -31,27 +31,35 @@ This endpoint adds one or more tracks to a collection by track IDs.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.AudioApi();
+const audioApi &#x3D; new sstk.AudioApi();
 
-const id = "\"48433115\""; // String | Collection ID
+const collectionId &#x3D; &quot;48433115&quot;;
 
-const body = new ShutterstockApiReference.CollectionItemRequest(); // CollectionItemRequest | List of items to add to collection
+const body &#x3D; {
+  &quot;items&quot;: [
+    {
+      &quot;id&quot;: &quot;442583&quot;
+    },
+    {
+      &quot;id&quot;: &quot;7491192&quot;
+    }
+  ]
+};
 
-
-api.addSoundboxItems(id, body)
+audioApi.addSoundboxItems(collectionId, body)
 .then(function() {
-  console.log('API called successfully.');
+  console.log(&quot;Success!&quot;);
 })
 .catch(function(error) {
   console.error(error);
 });
 
 ```
+
 
 ### Parameters
 
@@ -90,25 +98,25 @@ This endpoint creates one or more collections (soundboxes). To add tracks, use &
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.AudioApi();
+const audioApi &#x3D; new sstk.AudioApi();
 
-const body = new ShutterstockApiReference.CollectionCreateRequest(); // CollectionCreateRequest | Collection metadata
+const body &#x3D; {
+  &quot;name&quot;: &quot;Best rock music&quot;
+};
 
-
-api.createSoundbox(body)
-.then(function(data) {
-  console.log(data);
+audioApi.createSoundbox(body)
+.then(function() {
+  console.log(&quot;Success!&quot;);
 })
 .catch(function(error) {
   console.error(error);
 });
-
 ```
+
 
 ### Parameters
 
@@ -151,25 +159,23 @@ This endpoint deletes a collection.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.AudioApi();
+const audioApi &#x3D; new sstk.AudioApi();
 
-const id = "\"48433111\""; // String | Collection ID
+const collectionId &#x3D; &quot;48433107&quot;;
 
-
-api.deleteSoundbox(id)
+audioApi.deleteSoundbox(collectionId)
 .then(function() {
-  console.log('API called successfully.');
+  console.log(&quot;Success!&quot;);
 })
 .catch(function(error) {
   console.error(error);
 });
-
 ```
+
 
 ### Parameters
 
@@ -207,28 +213,31 @@ This endpoint removes one or more tracks from a collection.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.AudioApi();
+const audioApi &#x3D; new sstk.AudioApi();
 
-const id = "\"48433119\""; // String | Collection ID
+const collectionId &#x3D; &quot;&quot;;
 
-const queryParams = { 
-  'item_id': ["[ \"76688182\", \"40005859\" ]"] // [String] | One or more item IDs to remove from the collection
+// Array of tracks to remove
+const tracksToRemove &#x3D; {
+  item_id: [
+    &quot;76688182&quot;,
+    &quot;40005859&quot;
+  ]
 };
 
-api.deleteSoundboxItems(id, queryParams)
+audioApi.deleteSoundboxItems(collectionId, tracksToRemove)
 .then(function() {
-  console.log('API called successfully.');
+  console.log(&quot;Success!&quot;);
 })
 .catch(function(error) {
   console.error(error);
 });
-
 ```
+
 
 ### Parameters
 
@@ -267,17 +276,15 @@ This endpoint redownloads tracks that you have already received a license for.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.AudioApi();
+const audioApi &#x3D; new sstk.AudioApi();
 
-const id = "\"i1188641348\""; // String | License ID
+const licenseId &#x3D; &#39;&#39;; // license ID, not track ID
 
-
-api.downloadTracks(id)
+audioApi.downloadTracks(licenseId)
 .then(function(data) {
   console.log(data);
 })
@@ -286,6 +293,7 @@ api.downloadTracks(id)
 });
 
 ```
+
 
 ### Parameters
 
@@ -946,29 +954,33 @@ This endpoint gets licenses for one or more tracks.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.AudioApi();
+const audioApi &#x3D; new sstk.AudioApi();
 
-const body = new ShutterstockApiReference.LicenseAudioRequest(); // LicenseAudioRequest | Tracks to license
-
-const queryParams = { 
-  'license': "audio_standard", // String | License type
-  'search_id': "search_id_example" // String | The ID of the search that led to licensing this track
+const body &#x3D; {
+  &quot;audio&quot;: [
+    {
+      &quot;audio_id&quot;: &quot;446348&quot;,
+      &quot;license&quot;: &quot;premier_music_comp&quot;,
+      &quot;metadata&quot;: {
+        &quot;purchase_order&quot;: &quot;123&quot;
+      }
+    }
+  ]
 };
 
-api.licenseTrack(body, queryParams)
-.then(function(data) {
+audioApi.licenseTrack(body)
+.then(function({data}) {
   console.log(data);
 })
 .catch(function(error) {
   console.error(error);
 });
-
 ```
+
 
 ### Parameters
 
@@ -1018,27 +1030,28 @@ This endpoint sets a new name for a collection.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.AudioApi();
+const audioApi &#x3D; new sstk.AudioApi();
 
-const id = "\"48433107\""; // String | Collection ID
+const collectionId &#x3D; &quot;48433107&quot;;
 
-const body = new ShutterstockApiReference.CollectionUpdateRequest(); // CollectionUpdateRequest | Collection changes
+const body &#x3D; {
+  &quot;name&quot;: &quot;Best rock music&quot;
+};
 
-
-api.renameSoundbox(id, body)
+audioApi.renameSoundbox(collectionId, body)
 .then(function() {
-  console.log('API called successfully.');
+  console.log(&quot;Success!&quot;);
 })
 .catch(function(error) {
   console.error(error);
 });
 
 ```
+
 
 ### Parameters
 

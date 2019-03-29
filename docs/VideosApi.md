@@ -33,27 +33,34 @@ This endpoint adds one or more videos to a collection by video IDs.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.VideosApi();
+const videosApi &#x3D; new sstk.VideosApi();
 
-const id = "\"17555176\""; // String | The ID of the collection to which items should be added
+const collectionId &#x3D; &quot;&quot;; // Collection ID
 
-const body = new ShutterstockApiReference.CollectionItemRequest(); // CollectionItemRequest | Array of video IDs to add to the collection
+// Array of videos to add
+const body &#x3D; {
+  &quot;items&quot;: [
+    {
+      &quot;id&quot;: &quot;&quot;,
+      &quot;media_type&quot;: &quot;video&quot;
+    }
+  ]
+};
 
-
-api.addClipboxItems(id, body)
+videosApi.addLightboxItems(collectionId, body)
 .then(function() {
-  console.log('API called successfully.');
+  console.log(&quot;Success!&quot;);
 })
 .catch(function(error) {
   console.error(error);
 });
 
 ```
+
 
 ### Parameters
 
@@ -92,25 +99,26 @@ This endpoint creates one or more collections (clipboxes). To add videos to coll
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.VideosApi();
+const videosApi &#x3D; new sstk.VideosApi();
 
-const body = new ShutterstockApiReference.CollectionCreateRequest(); // CollectionCreateRequest | Collection metadata
+const body &#x3D; {
+  &quot;name&quot;: &quot;New collection name&quot;
+};
 
-
-api.createClipbox(body)
-.then(function(data) {
-  console.log(data);
+videosApi.createClipbox(body)
+.then(function() {
+  console.log(&quot;Success!&quot;);
 })
 .catch(function(error) {
   console.error(error);
 });
 
 ```
+
 
 ### Parameters
 
@@ -153,25 +161,9 @@ This endpoint deletes a collection.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.VideosApi();
-
-const id = "\"17555176\""; // String | The ID of the collection to delete
-
-
-api.deleteClipbox(id)
-.then(function() {
-  console.log('API called successfully.');
-})
-.catch(function(error) {
-  console.error(error);
-});
-
+{$ref&#x3D;#/paths/~1v2~1videos~1collections~1%7Bid%7D/post/x-code-samples/1/source}
 ```
+
 
 ### Parameters
 
@@ -209,28 +201,30 @@ This endpoint removes one or more videos from a collection.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.VideosApi();
+const videosApi &#x3D; new sstk.VideosApi();
 
-const id = "\"17555176\""; // String | The ID of the Collection from which items will be deleted
+const collectionId &#x3D; &quot;&quot;; // Collection ID
 
-const queryParams = { 
-  'item_id': ["item_id_example"] // [String] | One or more video IDs to remove from the collection
+// Array of videos to remove
+const videosToRemove &#x3D; {
+  item_id: [
+    &quot;&quot;
+  ]
 };
 
-api.deleteClipboxItems(id, queryParams)
+videosApi.deleteClipboxItems(collectionId, videosToRemove)
 .then(function() {
-  console.log('API called successfully.');
+  console.log(&quot;Success!&quot;);
 })
 .catch(function(error) {
   console.error(error);
 });
-
 ```
+
 
 ### Parameters
 
@@ -269,27 +263,25 @@ This endpoint redownloads videos that you have already received a license for.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.VideosApi();
+const videosApi &#x3D; new sstk.VideosApi();
 
-const id = "\"i1188641347\""; // String | The license ID of the item to (re)download
+const licenseId &#x3D; &#39;&#39;; // license ID, not video ID
 
-const body = new ShutterstockApiReference.RedownloadVideo(); // RedownloadVideo | Information about the videos to redownload
+const body &#x3D; {};
 
-
-api.downloadVideos(id, body)
+videosApi.downloadVideos(licenseId, body)
 .then(function(data) {
   console.log(data);
 })
 .catch(function(error) {
   console.error(error);
 });
-
 ```
+
 
 ### Parameters
 
@@ -1478,11 +1470,16 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api &#x3D; new sstk.VideosApi();
 
-const videoId &#x3D; &#39;&#39; // ID of video to license
-
-const videoToLicense &#x3D; new sstk.LicenseVideo(videoId);
-
-const body &#x3D; new sstk.LicenseVideoRequest([videoToLicense]);
+const body &#x3D; {
+  videos: [
+    {
+      video_id: &quot;419235589&quot;
+    },
+    {
+      video_id: &quot;1079756147&quot;
+    }
+  ]
+};
 
 const queryParams &#x3D; {
   subscription_id: SHUTTERSTOCK_SUBSCRIPTION_ID,
@@ -1585,27 +1582,23 @@ This endpoint sets a new name for a collection.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.VideosApi();
+const videosApi &#x3D; new sstk.VideosApi();
 
-const id = "\"17555176\""; // String | The ID of the collection to rename
+const collectionId &#x3D; &quot;&quot;; // Collection ID
 
-const body = new ShutterstockApiReference.CollectionUpdateRequest(); // CollectionUpdateRequest | The new name for the collection
-
-
-api.renameClipbox(id, body)
+videosApi.deleteClipbox(collectionId)
 .then(function() {
-  console.log('API called successfully.');
+  console.log(&quot;Success!&quot;);
 })
 .catch(function(error) {
   console.error(error);
 });
-
 ```
+
 
 ### Parameters
 

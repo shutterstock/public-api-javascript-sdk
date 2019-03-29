@@ -519,18 +519,24 @@ This endpoint gets licenses for one or more editorial images. You must specify t
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk &#x3D; require(&#39;shutterstock-api&#39;);
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.EditorialApi();
+const api &#x3D; new sstk.EditorialApi();
 
-const body = new ShutterstockApiReference.LicenseEditorialContentRequest(); // LicenseEditorialContentRequest | License editorial content
-
+const body &#x3D; {
+  editorial: [
+    {
+      editorial_id: &quot;8594090h&quot;,
+      license: &quot;premier_editorial_comp&quot;
+    }
+  ],
+  country: &quot;USA&quot;
+};
 
 api.licenseEditorialImage(body)
-.then(function(data) {
+.then(function({data}) {
   console.log(data);
 })
 .catch(function(error) {
@@ -538,6 +544,7 @@ api.licenseEditorialImage(body)
 });
 
 ```
+
 
 ### Parameters
 
