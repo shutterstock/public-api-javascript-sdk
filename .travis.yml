@@ -5,3 +5,9 @@ script:
   - yarn install
   - yarn run lint
   - yarn run test
+deploy:
+  provider: npm
+  email: api@shutterstock.com
+  api_key: $SSTK_NPM_TOKEN
+  on:
+    tags: true
