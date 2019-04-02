@@ -39,13 +39,13 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const videosApi &#x3D; new sstk.VideosApi();
 
-const collectionId &#x3D; &quot;&quot;; // Collection ID
+const collectionId &#x3D; &quot;17555176&quot;; // Collection ID
 
 // Array of videos to add
 const body &#x3D; {
   &quot;items&quot;: [
     {
-      &quot;id&quot;: &quot;&quot;,
+      &quot;id&quot;: &quot;10120264&quot;,
       &quot;media_type&quot;: &quot;video&quot;
     }
   ]
@@ -207,12 +207,12 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const videosApi &#x3D; new sstk.VideosApi();
 
-const collectionId &#x3D; &quot;&quot;; // Collection ID
+const collectionId &#x3D; &quot;17555176&quot;;
 
 // Array of videos to remove
 const videosToRemove &#x3D; {
   item_id: [
-    &quot;&quot;
+    &quot;10120264&quot;
   ]
 };
 
@@ -269,7 +269,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const videosApi &#x3D; new sstk.VideosApi();
 
-const licenseId &#x3D; &#39;&#39;; // license ID, not video ID
+const licenseId &#x3D; &#39;i1188641347&#39;;
 
 const body &#x3D; {};
 
@@ -1588,7 +1588,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const videosApi &#x3D; new sstk.VideosApi();
 
-const collectionId &#x3D; &quot;&quot;; // Collection ID
+const collectionId &#x3D; &quot;17555176&quot;;
 
 videosApi.deleteClipbox(collectionId)
 .then(function() {

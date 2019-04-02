@@ -44,7 +44,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const imagesApi &#x3D; new sstk.ImagesApi();
 
-const collectionId &#x3D; &quot;&quot;; // Collection ID
+const collectionId &#x3D; &quot;126351027&quot;; // Collection ID
 
 const body &#x3D; {
   &quot;items&quot;: [
@@ -166,7 +166,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const imagesApi &#x3D; new sstk.ImagesApi();
 
-const collectionId &#x3D; &quot;&quot;; // Collection ID
+const collectionId &#x3D; &quot;136351027&quot;; // Collection ID
 
 imagesApi.deleteLightbox(collectionId)
 .then(function() {
@@ -220,12 +220,12 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const imagesApi &#x3D; new sstk.ImagesApi();
 
-const collectionId &#x3D; &quot;&quot;; // Collection ID
+const collectionId &#x3D; &quot;126351027&quot;; // Collection ID
 
 // Array of images to remove
 const imagesToRemove &#x3D; {
   item_id: [
-    &quot;&quot;
+    &quot;495863218&quot;
   ]
 };
 
@@ -282,7 +282,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api &#x3D; new sstk.ImagesApi();
 
-const licenseId &#x3D; &#39;&#39;; // license ID, not image ID
+const licenseId &#x3D; &#39;i1188641347&#39;; // license ID, not image ID
 
 const body &#x3D; {
   &quot;size&quot;: &quot;huge&quot;
@@ -2044,6 +2044,7 @@ const body &#x3D; {
   ]
 };
 
+// Put your subscription ID in the SHUTTERSTOCK_SUBSCRIPTION_ID environment variable
 const queryParams &#x3D; {
   subscription_id: process.env.SHUTTERSTOCK_SUBSCRIPTION_ID,
   format: &#39;jpg&#39;,
@@ -2153,7 +2154,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const imagesApi &#x3D; new sstk.ImagesApi();
 
-const collectionId &#x3D; &quot;&quot;; // Collection ID
+const collectionId &#x3D; &quot;126351027&quot;; // Collection ID
 
 const body &#x3D; {
   &quot;name&quot;: &quot;My new collection name&quot;

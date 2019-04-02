@@ -219,7 +219,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const audioApi &#x3D; new sstk.AudioApi();
 
-const collectionId &#x3D; &quot;&quot;;
+const collectionId &#x3D; &quot;48433119&quot;;
 
 // Array of tracks to remove
 const tracksToRemove &#x3D; {
@@ -282,7 +282,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const audioApi &#x3D; new sstk.AudioApi();
 
-const licenseId &#x3D; &#39;&#39;; // license ID, not track ID
+const licenseId &#x3D; &#39;i1188641348&#39;; // license ID, not track ID
 
 audioApi.downloadTracks(licenseId)
 .then(function(data) {
