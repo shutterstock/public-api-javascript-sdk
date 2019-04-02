@@ -122,7 +122,7 @@
    */
   exports.prototype['expires_in'] = undefined;
   /**
-   * Orgranization ID that is associated with the user
+   * Organization ID that is associated with the user
    * @member {String} organization_id
    */
   exports.prototype['organization_id'] = undefined;
