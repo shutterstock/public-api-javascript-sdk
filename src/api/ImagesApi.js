@@ -688,7 +688,7 @@
 
     /**
      * List images
-     * This endpoint lists information about one or more images, including the available sizes. Only accounts with subscriptions can use it.
+     * This endpoint lists information about one or more images, including the available sizes.
      * @param {Array.<String>} id One or more image IDs
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
@@ -734,7 +734,7 @@
 
     /**
      * List images
-     * This endpoint lists information about one or more images, including the available sizes. Only accounts with subscriptions can use it.
+     * This endpoint lists information about one or more images, including the available sizes.
      * @param {Array.<String>} id One or more image IDs
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
@@ -1197,7 +1197,7 @@
 
     /**
      * Search for images
-     * This endpoint searches for images. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the &#x60;query&#x60; parameter by prefixing the term with NOT.
+     * This endpoint searches for images. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the &#x60;query&#x60; parameter by prefixing the term with NOT. Free API accounts show results only from a limited library of media, not the full Shutterstock media library. Also, the number of search fields they can use in a request is limited.
      * @param {Object} opts Optional parameters
      * @param {Date} opts.added_date Show images added on the specified date, in the format YYYY-MM-DD
      * @param {Date} opts.added_date_start Show images added on or after the specified date, in the format YYYY-MM-DD
@@ -1301,7 +1301,7 @@
 
     /**
      * Search for images
-     * This endpoint searches for images. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the &#x60;query&#x60; parameter by prefixing the term with NOT.
+     * This endpoint searches for images. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the &#x60;query&#x60; parameter by prefixing the term with NOT. Free API accounts show results only from a limited library of media, not the full Shutterstock media library. Also, the number of search fields they can use in a request is limited.
      * @param {Object} opts Optional parameters
      * @param {Date} opts.added_date Show images added on the specified date, in the format YYYY-MM-DD
      * @param {Date} opts.added_date_start Show images added on or after the specified date, in the format YYYY-MM-DD

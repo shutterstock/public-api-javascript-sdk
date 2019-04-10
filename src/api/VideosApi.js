@@ -933,7 +933,7 @@
      * @param {Date} opts.added_date_start Show videos added on or after the specified date, in the format YYYY-MM-DD
      * @param {Date} opts.added_date_end Show videos added before the specified date, in the format YYYY-MM-DD
      * @param {module:model/String} opts.aspect_ratio Show videos with the specified aspect ratio
-     * @param {String} opts.category Show images with the specified Shutterstock-defined category; specify a category name or ID
+     * @param {String} opts.category Show videos with the specified Shutterstock-defined category; specify a category name or ID
      * @param {Array.<String>} opts.contributor Show videos with the specified artist names or IDs
      * @param {Number} opts.duration (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration (seconds)
      * @param {Number} opts.duration_from Show videos with the specified duration or longer (seconds)
@@ -1030,7 +1030,7 @@
      * @param {Date} opts.added_date_start Show videos added on or after the specified date, in the format YYYY-MM-DD
      * @param {Date} opts.added_date_end Show videos added before the specified date, in the format YYYY-MM-DD
      * @param {module:model/String} opts.aspect_ratio Show videos with the specified aspect ratio
-     * @param {String} opts.category Show images with the specified Shutterstock-defined category; specify a category name or ID
+     * @param {String} opts.category Show videos with the specified Shutterstock-defined category; specify a category name or ID
      * @param {Array.<String>} opts.contributor Show videos with the specified artist names or IDs
      * @param {Number} opts.duration (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration (seconds)
      * @param {Number} opts.duration_from Show videos with the specified duration or longer (seconds)

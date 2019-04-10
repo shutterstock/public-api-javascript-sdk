@@ -56,12 +56,9 @@ const body &#x3D; {
 };
 
 imagesApi.addLightboxItems(collectionId, body)
-.then(function() {
-  console.log(&quot;Success!&quot;);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 
 ```
 
@@ -114,12 +111,9 @@ const body &#x3D; {
 };
 
 imagesApi.createLightbox(body)
-.then(function() {
-  console.log(&quot;Success!&quot;);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 
 ```
 
@@ -169,12 +163,10 @@ const imagesApi &#x3D; new sstk.ImagesApi();
 const collectionId &#x3D; &quot;136351027&quot;; // Collection ID
 
 imagesApi.deleteLightbox(collectionId)
-.then(function() {
-  console.log(&quot;Success!&quot;);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
+
 ```
 
 
@@ -230,12 +222,10 @@ const imagesToRemove &#x3D; {
 };
 
 imagesApi.deleteLightboxItems(collectionId, imagesToRemove)
-.then(function() {
-  console.log(&quot;Success!&quot;);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
+
 ```
 
 
@@ -289,12 +279,12 @@ const body &#x3D; {
 };
 
 api.downloadImage(licenseId, body)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then((data) &#x3D;&gt; {
+    console.log(data);
+  })
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 
 ```
 
@@ -1014,7 +1004,7 @@ Name | Type | Description
 
 **List images**
 
-This endpoint lists information about one or more images, including the available sizes. Only accounts with subscriptions can use it.
+This endpoint lists information about one or more images, including the available sizes.
 
 ### Example
 
@@ -2052,12 +2042,12 @@ const queryParams &#x3D; {
 };
 
 api.licenseImages(body, queryParams)
-.then(function({data}) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) &#x3D;&gt; {
+    console.log(data);
+  })
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 
 ```
 
@@ -2161,12 +2151,9 @@ const body &#x3D; {
 };
 
 imagesApi.renameLightbox(collectionId, body)
-.then(function() {
-  console.log(&quot;Success!&quot;);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 
 ```
 
@@ -2203,7 +2190,7 @@ No response body.
 
 **Search for images**
 
-This endpoint searches for images. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the &#x60;query&#x60; parameter by prefixing the term with NOT.
+This endpoint searches for images. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the &#x60;query&#x60; parameter by prefixing the term with NOT. Free API accounts show results only from a limited library of media, not the full Shutterstock media library. Also, the number of search fields they can use in a request is limited.
 
 ### Example
 
@@ -2221,12 +2208,12 @@ const queryParams &#x3D; {
 };
 
 api.searchImages(queryParams)
-.then(function({data}) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) &#x3D;&gt; {
+    console.log(data);
+  })
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 
 ```
 
@@ -2574,16 +2561,16 @@ const queryParams &#x3D; {
 };
 
 api.uploadEphemeralImage(body)
-.then(function(data) {
-  console.log(data.id);
-  api.getSimilarImages(data.id, queryParams)
-  .then(function(similarImageData) {
+  .then((data) &#x3D;&gt; {
+    console.log(data.id);
+    return api.getSimilarImages(data.id, queryParams);
+  })
+  .then((similarImageData) &#x3D;&gt; {
     console.log(similarImageData)
   })
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 
 ```
 

@@ -51,12 +51,9 @@ const body &#x3D; {
 };
 
 audioApi.addSoundboxItems(collectionId, body)
-.then(function() {
-  console.log(&quot;Success!&quot;);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 
 ```
 
@@ -109,12 +106,10 @@ const body &#x3D; {
 };
 
 audioApi.createSoundbox(body)
-.then(function() {
-  console.log(&quot;Success!&quot;);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
+
 ```
 
 
@@ -168,12 +163,10 @@ const audioApi &#x3D; new sstk.AudioApi();
 const collectionId &#x3D; &quot;48433107&quot;;
 
 audioApi.deleteSoundbox(collectionId)
-.then(function() {
-  console.log(&quot;Success!&quot;);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
+
 ```
 
 
@@ -230,12 +223,10 @@ const tracksToRemove &#x3D; {
 };
 
 audioApi.deleteSoundboxItems(collectionId, tracksToRemove)
-.then(function() {
-  console.log(&quot;Success!&quot;);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
+
 ```
 
 
@@ -285,12 +276,12 @@ const audioApi &#x3D; new sstk.AudioApi();
 const licenseId &#x3D; &#39;i1188641348&#39;; // license ID, not track ID
 
 audioApi.downloadTracks(licenseId)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then((data) &#x3D;&gt; {
+    console.log(data);
+  })
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 
 ```
 
@@ -973,12 +964,13 @@ const body &#x3D; {
 };
 
 audioApi.licenseTrack(body)
-.then(function({data}) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) &#x3D;&gt; {
+    console.log(data);
+  })
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
+
 ```
 
 
@@ -1043,12 +1035,9 @@ const body &#x3D; {
 };
 
 audioApi.renameSoundbox(collectionId, body)
-.then(function() {
-  console.log(&quot;Success!&quot;);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 
 ```
 
@@ -1103,12 +1092,12 @@ const queryParams &#x3D; {
 };
 
 api.searchAudio(queryParams)
-.then(function({data}) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) &#x3D;&gt; {
+    console.log(data);
+  })
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 
 ```
 

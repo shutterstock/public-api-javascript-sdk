@@ -52,12 +52,10 @@ const body &#x3D; {
 };
 
 videosApi.addLightboxItems(collectionId, body)
-.then(function() {
-  console.log(&quot;Success!&quot;);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
+
 
 ```
 
@@ -110,12 +108,9 @@ const body &#x3D; {
 };
 
 videosApi.createClipbox(body)
-.then(function() {
-  console.log(&quot;Success!&quot;);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 
 ```
 
@@ -217,12 +212,10 @@ const videosToRemove &#x3D; {
 };
 
 videosApi.deleteClipboxItems(collectionId, videosToRemove)
-.then(function() {
-  console.log(&quot;Success!&quot;);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
+
 ```
 
 
@@ -274,12 +267,13 @@ const licenseId &#x3D; &#39;i1188641347&#39;;
 const body &#x3D; {};
 
 videosApi.downloadVideos(licenseId, body)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then((data) &#x3D;&gt; {
+    console.log(data);
+  })
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
+
 ```
 
 
@@ -1487,12 +1481,13 @@ const queryParams &#x3D; {
 };
 
 api.searchVideos(body, queryParams)
-.then(function({data}) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) &#x3D;&gt; {
+    console.log(data);
+  })
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
+
 
 ```
 
@@ -1591,12 +1586,10 @@ const videosApi &#x3D; new sstk.VideosApi();
 const collectionId &#x3D; &quot;17555176&quot;;
 
 videosApi.deleteClipbox(collectionId)
-.then(function() {
-  console.log(&quot;Success!&quot;);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
+
 ```
 
 
@@ -1649,13 +1642,13 @@ const queryParams &#x3D; {
   sort: &#39;popular&#39;
 };
 
-api.searchVideos(queryParams).then(function({data}) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
-
+api.searchVideos(queryParams)
+  .then(({ data }) &#x3D;&gt; {
+    console.log(data);
+  })
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 ```
 
 
@@ -1668,7 +1661,7 @@ Name | Type | Description
  added_date_start | Date| Show videos added on or after the specified date, in the format YYYY-MM-DD 
  added_date_end | Date| Show videos added before the specified date, in the format YYYY-MM-DD 
  aspect_ratio | String| Show videos with the specified aspect ratio <br/><br/>Valid values: "4_3", "16_9", "nonstandard"
- category | String| Show images with the specified Shutterstock-defined category; specify a category name or ID 
+ category | String| Show videos with the specified Shutterstock-defined category; specify a category name or ID 
  contributor | [[String]](String.md)| Show videos with the specified artist names or IDs 
  duration | Number| (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration (seconds) 
  duration_from | Number| Show videos with the specified duration or longer (seconds) 

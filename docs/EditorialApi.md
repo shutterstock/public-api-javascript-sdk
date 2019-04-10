@@ -536,12 +536,12 @@ const body &#x3D; {
 };
 
 api.licenseEditorialImage(body)
-.then(function({data}) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) &#x3D;&gt; {
+    console.log(data);
+  })
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 
 ```
 
@@ -634,12 +634,12 @@ const queryParams &#x3D; {
 const country &#x3D; &#39;USA&#39;;
 
 api.searchEditorial(country, queryParams)
-.then(function({data}) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) &#x3D;&gt; {
+    console.log(data);
+  })
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
 
 ```
 
