@@ -166,12 +166,12 @@ const queryParams = {
 };
 
 api.searchImages(queryParams)
-.then(function({data}) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({data}) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 ```
 
 The next example requests a license for an image.
@@ -201,13 +201,12 @@ const queryParams = {
 };
 
 api.licenseImages(body, queryParams)
-.then(function({data}) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
-
+  .then(({data}) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 ```
 
 ## Documentation for methods

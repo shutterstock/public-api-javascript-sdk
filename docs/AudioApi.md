@@ -348,12 +348,12 @@ const queryParams = {
 };
 
 api.getAudioLicenseList(queryParams)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -488,12 +488,12 @@ const id = "\"48433107\""; // String | Collection ID
 
 
 api.getSoundbox(id)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -566,12 +566,12 @@ const queryParams = {
 };
 
 api.getSoundboxItems(id, queryParams)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -642,12 +642,12 @@ const queryParams = {
 };
 
 api.getSoundboxList(queryParams)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -740,12 +740,12 @@ const queryParams = {
 };
 
 api.getTrack(id, queryParams)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -855,12 +855,12 @@ const queryParams = {
 };
 
 api.getTrackList(id, queryParams)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 

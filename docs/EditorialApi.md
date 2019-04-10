@@ -39,12 +39,12 @@ const country = "\"USA\""; // String | Returns only if the content is available 
 
 
 api.getEditorialImage(id, country)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -163,12 +163,12 @@ const country = "\"USA\""; // String | Returns only if the livefeed is available
 
 
 api.getEditorialLivefeed(id, country)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -235,12 +235,12 @@ const country = "\"USA\""; // String | Returns only if the livefeed items are av
 
 
 api.getEditorialLivefeedItems(id, country)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -443,12 +443,12 @@ const queryParams = {
 };
 
 api.getEditorialLivefeedList(country, queryParams)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 

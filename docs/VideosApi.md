@@ -336,12 +336,12 @@ const id = "\"17555176\""; // String | The ID of the collection to return
 
 
 api.getClipbox(id)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -414,12 +414,12 @@ const queryParams = {
 };
 
 api.getClipboxItems(id, queryParams)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -490,12 +490,12 @@ const queryParams = {
 };
 
 api.getClipboxList(queryParams)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -590,12 +590,12 @@ const queryParams = {
 };
 
 api.getSimilarVideos(id, queryParams)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -840,12 +840,12 @@ const queryParams = {
 };
 
 api.getVideo(id, queryParams)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -986,12 +986,12 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.VideosApi();
 api.getVideoCategories()
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -1070,12 +1070,12 @@ const queryParams = {
 };
 
 api.getVideoLicenseList(queryParams)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -1220,12 +1220,12 @@ const queryParams = {
 };
 
 api.getVideoList(id, queryParams)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 

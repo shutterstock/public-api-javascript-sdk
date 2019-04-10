@@ -33,12 +33,12 @@ const contributor_id = "1653538"; // String | Contributor ID
 
 
 api.getContributor(contributor_id)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -116,12 +116,12 @@ const queryParams = {
 };
 
 api.getContributorCollectionItems(contributor_id, id, queryParams)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -191,12 +191,12 @@ const id = "1991678"; // String | Collection ID that belongs to the contributor
 
 
 api.getContributorCollections(contributor_id, id)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -266,12 +266,12 @@ const queryParams = {
 };
 
 api.getContributorCollectionsList(contributor_id, queryParams)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -356,12 +356,12 @@ const id = ["[ 800506, 1653538 ]"]; // [String] | One or more contributor IDs
 
 
 api.getContributorList(id)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 

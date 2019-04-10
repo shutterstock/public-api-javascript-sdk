@@ -30,12 +30,12 @@ const body = new ShutterstockApiReference.UserPostRequest(); // UserPostRequest 
 
 
 api.createUser(body)
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -83,12 +83,12 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.UsersApi();
 api.getAccessToken()
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -141,12 +141,12 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.UsersApi();
 api.getUser()
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
@@ -207,12 +207,12 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.UsersApi();
 api.getUserSubsciptionList()
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.error(error);
-});
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 ```
 
