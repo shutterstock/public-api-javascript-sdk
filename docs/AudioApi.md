@@ -31,7 +31,7 @@ This endpoint adds one or more tracks to a collection by track IDs.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -95,7 +95,7 @@ This endpoint creates one or more collections (soundboxes). To add tracks, use &
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -154,7 +154,7 @@ This endpoint deletes a collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -206,7 +206,7 @@ This endpoint removes one or more tracks from a collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -216,7 +216,7 @@ const collectionId &#x3D; &quot;48433119&quot;;
 
 // Array of tracks to remove
 const tracksToRemove &#x3D; {
-  item_id: [
+  &quot;item_id&quot;: [
     &quot;76688182&quot;,
     &quot;40005859&quot;
   ]
@@ -267,13 +267,13 @@ This endpoint redownloads tracks that you have already received a license for.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const audioApi &#x3D; new sstk.AudioApi();
 
-const licenseId &#x3D; &#39;i1188641348&#39;; // license ID, not track ID
+const licenseId &#x3D; &quot;i1188641348&quot;; // license ID, not track ID
 
 audioApi.downloadTracks(licenseId)
   .then((data) &#x3D;&gt; {
@@ -945,7 +945,7 @@ This endpoint gets licenses for one or more tracks.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -1022,7 +1022,7 @@ This endpoint sets a new name for a collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -1079,19 +1079,19 @@ This endpoint searches for tracks. If you specify more than one search parameter
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api &#x3D; new sstk.AudioApi();
+const audioApi &#x3D; new sstk.AudioApi();
 
 const queryParams &#x3D; {
-  query: &#39;bluegrass&#39;,
-  duration_from: 60,
-  moods: [&#39;uplifting&#39;]
+  &quot;query&quot;: &quot;bluegrass&quot;,
+  &quot;duration_from&quot;: 60,
+  &quot;moods&quot;: [&quot;uplifting&quot;]
 };
 
-api.searchAudio(queryParams)
+audioApi.searchAudio(queryParams)
   .then(({ data }) &#x3D;&gt; {
     console.log(data);
   })

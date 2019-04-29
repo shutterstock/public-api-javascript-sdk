@@ -38,7 +38,7 @@ This endpoint adds one or more images to a collection by image IDs.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -100,7 +100,7 @@ This endpoint creates one or more image collections (lightboxes). To add images 
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -154,7 +154,7 @@ This endpoint deletes an image collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -206,7 +206,7 @@ This endpoint removes one or more images from a collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -216,7 +216,7 @@ const collectionId &#x3D; &quot;126351027&quot;; // Collection ID
 
 // Array of images to remove
 const imagesToRemove &#x3D; {
-  item_id: [
+  &quot;item_id&quot;: [
     &quot;495863218&quot;
   ]
 };
@@ -266,19 +266,19 @@ This endpoint redownloads images that you have already received a license for.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api &#x3D; new sstk.ImagesApi();
+const imagesApi &#x3D; new sstk.ImagesApi();
 
-const licenseId &#x3D; &#39;i1188641347&#39;; // license ID, not image ID
+const licenseId &#x3D; &quot;i1188641347&quot;; // license ID, not image ID
 
 const body &#x3D; {
   &quot;size&quot;: &quot;huge&quot;
 };
 
-api.downloadImage(licenseId, body)
+imagesApi.downloadImage(licenseId, body)
   .then((data) &#x3D;&gt; {
     console.log(data);
   })
@@ -2015,33 +2015,33 @@ This endpoint gets licenses for one or more images. You must specify the image I
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api &#x3D; new sstk.ImagesApi();
+const imagesApi &#x3D; new sstk.ImagesApi();
 
 const body &#x3D; {
-  images: [
+  &quot;images&quot;: [
     {
-      image_id: &quot;419235589&quot;,
-      format: &quot;jpg&quot;
+      &quot;image_id&quot;: &quot;419235589&quot;,
+      &quot;format&quot;: &quot;jpg&quot;
     },
     {
-      image_id: &quot;1079756147&quot;,
-      format: &quot;jpg&quot;,
+      &quot;image_id&quot;: &quot;1079756147&quot;,
+      &quot;format&quot;: &quot;jpg&quot;,
     }
   ]
 };
 
 // Put your subscription ID in the SHUTTERSTOCK_SUBSCRIPTION_ID environment variable
 const queryParams &#x3D; {
-  subscription_id: process.env.SHUTTERSTOCK_SUBSCRIPTION_ID,
-  format: &#39;jpg&#39;,
-  size: &#39;huge&#39;
+  &quot;subscription_id&quot;: process.env.SHUTTERSTOCK_SUBSCRIPTION_ID,
+  &quot;format&quot;: &quot;jpg&quot;,
+  &quot;size&quot;: &quot;huge&quot;
 };
 
-api.licenseImages(body, queryParams)
+imagesApi.licenseImages(body, queryParams)
   .then(({ data }) &#x3D;&gt; {
     console.log(data);
   })
@@ -2138,7 +2138,7 @@ This endpoint sets a new name for an image collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -2195,19 +2195,19 @@ This endpoint searches for images. If you specify more than one search parameter
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api &#x3D; new sstk.ImagesApi();
+const imagesApi &#x3D; new sstk.ImagesApi();
 
 const queryParams &#x3D; {
-  query: &#39;New York&#39;,
-  sort: &#39;popular&#39;,
-  orientation: &#39;horizontal&#39;
+  &quot;query&quot;: &quot;New York&quot;,
+  &quot;sort&quot;: &quot;popular&quot;,
+  &quot;orientation&quot;: &quot;horizontal&quot;
 };
 
-api.searchImages(queryParams)
+imagesApi.searchImages(queryParams)
   .then(({ data }) &#x3D;&gt; {
     console.log(data);
   })
@@ -2543,30 +2543,30 @@ This endpoint uploads an image for reverse image search. The image must be in JP
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api &#x3D; new sstk.ImagesApi();
+const imagesApi &#x3D; new sstk.ImagesApi();
 
-const imageFile &#x3D; fs.readFileSync(&#39;./myImage.jpg&#39;);
-const base64File &#x3D; Buffer.from(imageFile).toString(&#39;base64&#39;);
+const imageFile &#x3D; fs.readFileSync(&quot;./myImage.jpg&quot;);
+const base64File &#x3D; Buffer.from(imageFile).toString(&quot;base64&quot;);
 
 const body &#x3D; new sstk.ImageCreateRequest(base64File);
 
 const queryParams &#x3D; {
-  page: 1,
-  per_page: 20,
-  view: &#39;minimal&#39;
+  &quot;page&quot;: 1,
+  &quot;per_page&quot;: 20,
+  &quot;view&quot;: &quot;minimal&quot;
 };
 
-api.uploadEphemeralImage(body)
+imagesApi.uploadEphemeralImage(body)
   .then((data) &#x3D;&gt; {
     console.log(data.id);
-    return api.getSimilarImages(data.id, queryParams);
+    return imagesApi.getSimilarImages(data.id, queryParams);
   })
   .then((similarImageData) &#x3D;&gt; {
-    console.log(similarImageData)
+    console.log(similarImageData);
   })
   .catch((error) &#x3D;&gt; {
     console.error(error);

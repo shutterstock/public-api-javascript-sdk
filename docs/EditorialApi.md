@@ -519,23 +519,23 @@ This endpoint gets licenses for one or more editorial images. You must specify t
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api &#x3D; new sstk.EditorialApi();
+const editorialApi &#x3D; new sstk.EditorialApi();
 
 const body &#x3D; {
-  editorial: [
+  &quot;editorial&quot;: [
     {
-      editorial_id: &quot;8594090h&quot;,
-      license: &quot;premier_editorial_comp&quot;
+      &quot;editorial_id&quot;: &quot;8594090h&quot;,
+      &quot;license&quot;: &quot;premier_editorial_comp&quot;
     }
   ],
-  country: &quot;USA&quot;
+  &quot;country&quot;: &quot;USA&quot;
 };
 
-api.licenseEditorialImage(body)
+editorialApi.licenseEditorialImage(body)
   .then(({ data }) &#x3D;&gt; {
     console.log(data);
   })
@@ -618,22 +618,22 @@ This endpoint searches for editorial images. If you specify more than one search
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api &#x3D; new sstk.EditorialApi();
+const editorialApi &#x3D; new sstk.EditorialApi();
 
 const queryParams &#x3D; {
-  query: &#39;football&#39;,
-  country: &#39;USA&#39;,
-  sort: &#39;newest&#39;,
-  date_start: &#39;2018-10-23&#39;
+  &quot;query&quot;: &quot;football&quot;,
+  &quot;country&quot;: &quot;USA&quot;,
+  &quot;sort&quot;: &quot;newest&quot;,
+  &quot;date_start&quot;: &quot;2018-10-23&quot;
 };
 
-const country &#x3D; &#39;USA&#39;;
+const country &#x3D; &quot;USA&quot;;
 
-api.searchEditorial(country, queryParams)
+editorialApi.searchEditorial(country, queryParams)
   .then(({ data }) &#x3D;&gt; {
     console.log(data);
   })

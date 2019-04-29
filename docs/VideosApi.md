@@ -33,7 +33,7 @@ This endpoint adds one or more videos to a collection by video IDs.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -55,7 +55,6 @@ videosApi.addLightboxItems(collectionId, body)
   .catch((error) &#x3D;&gt; {
     console.error(error);
   });
-
 
 ```
 
@@ -97,7 +96,7 @@ This endpoint creates one or more collections (clipboxes). To add videos to coll
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -156,7 +155,19 @@ This endpoint deletes a collection.
 ### Example
 
 ```javascript
-{$ref&#x3D;#/paths/~1v2~1videos~1collections~1%7Bid%7D/post/x-code-samples/1/source}
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const videosApi &#x3D; new sstk.VideosApi();
+
+const collectionId &#x3D; &quot;17555176&quot;;
+
+videosApi.deleteClipbox(collectionId)
+  .catch((error) &#x3D;&gt; {
+    console.error(error);
+  });
+
 ```
 
 
@@ -196,7 +207,7 @@ This endpoint removes one or more videos from a collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -206,7 +217,7 @@ const collectionId &#x3D; &quot;17555176&quot;;
 
 // Array of videos to remove
 const videosToRemove &#x3D; {
-  item_id: [
+  &quot;item_id&quot;: [
     &quot;10120264&quot;
   ]
 };
@@ -256,13 +267,13 @@ This endpoint redownloads videos that you have already received a license for.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const videosApi &#x3D; new sstk.VideosApi();
 
-const licenseId &#x3D; &#39;i1188641347&#39;;
+const licenseId &#x3D; &quot;i1188641347&quot;;
 
 const body &#x3D; {};
 
@@ -1458,36 +1469,35 @@ This endpoint gets licenses for one or more videos. You must specify the video I
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api &#x3D; new sstk.VideosApi();
+const videosApi &#x3D; new sstk.VideosApi();
 
 const body &#x3D; {
-  videos: [
+  &quot;videos&quot;: [
     {
-      video_id: &quot;419235589&quot;
+      &quot;video_id&quot;: &quot;419235589&quot;
     },
     {
-      video_id: &quot;1079756147&quot;
+      &quot;video_id&quot;: &quot;1079756147&quot;
     }
   ]
 };
 
 const queryParams &#x3D; {
-  subscription_id: SHUTTERSTOCK_SUBSCRIPTION_ID,
-  size: &#39;web&#39;
+  &quot;subscription_id&quot;: SHUTTERSTOCK_SUBSCRIPTION_ID,
+  &quot;size&quot;: &quot;web&quot;
 };
 
-api.searchVideos(body, queryParams)
+videosApi.searchVideos(body, queryParams)
   .then(({ data }) &#x3D;&gt; {
     console.log(data);
   })
   .catch((error) &#x3D;&gt; {
     console.error(error);
   });
-
 
 ```
 
@@ -1577,15 +1587,19 @@ This endpoint sets a new name for a collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const videosApi &#x3D; new sstk.VideosApi();
 
-const collectionId &#x3D; &quot;17555176&quot;;
+const collectionId &#x3D; &quot;186765119&quot;;
 
-videosApi.deleteClipbox(collectionId)
+const body &#x3D; {
+  &quot;name&quot;: &quot;My new collection name&quot;
+};
+
+videosApi.renameClipbox(collectionId, body)
   .catch((error) &#x3D;&gt; {
     console.error(error);
   });
@@ -1630,25 +1644,26 @@ This endpoint searches for videos. If you specify more than one search parameter
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&#39;shutterstock-api&#39;);
+const sstk &#x3D; require(&quot;shutterstock-api&quot;);
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api &#x3D; new sstk.VideosApi();
+const videosApi &#x3D; new sstk.VideosApi();
 
 const queryParams &#x3D; {
-  query: &#39;hot air balloon&#39;,
-  duration_from: 30,
-  sort: &#39;popular&#39;
+  &quot;query&quot;: &quot;hot air balloon&quot;,
+  &quot;duration_from&quot;: 30,
+  &quot;sort&quot;: &quot;popular&quot;
 };
 
-api.searchVideos(queryParams)
+videosApi.searchVideos(queryParams)
   .then(({ data }) &#x3D;&gt; {
     console.log(data);
   })
   .catch((error) &#x3D;&gt; {
     console.error(error);
   });
+
 ```
 
 
