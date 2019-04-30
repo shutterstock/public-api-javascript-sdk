@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **editorial_acknowledgement** | **Boolean** | Set to true to acknowledge the editorial agreement | [optional] 
 **format** | **String** | Image format to download | [optional] 
 **image_id** | **String** | Image ID | 
-**metadata** | **Object** | For enterprise downloads, the custom metadata | [optional] 
+**metadata** | [**LicenseRequestMetadata**](LicenseRequestMetadata.md) |  | [optional] 
 **price** | **Number** | For revenue-sharing transactions, the final cost to the end customer | [optional] 
 **search_id** | **String** | ID of the search that led to this licensing transaction | [optional] 
 **show_modal** | **Boolean** | (Deprecated) | [optional] 

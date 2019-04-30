@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **image** | [**DownloadHistoryMediaDetails**](DownloadHistoryMediaDetails.md) |  | [optional] 
 **is_downloadable** | **Boolean** | Specifies if the media is downloadable via its respective downloads endpoint | [optional] 
 **license** | **String** | The name of the license of this download | 
-**metadata** | **Object** | Any metadata that was passed in the original licensing call | [optional] 
+**metadata** | **Object** | The metadata that was passed in the original licensing request | [optional] 
 **subscription_id** | **String** | ID of the subscription used to perform this download | [optional] 
 **user** | [**DownloadHistoryUserDetails**](DownloadHistoryUserDetails.md) |  | [optional] 
 **video** | [**DownloadHistoryMediaDetails**](DownloadHistoryMediaDetails.md) |  | [optional] 

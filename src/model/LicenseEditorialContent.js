@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/LicenseRequestMetadata'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./LicenseRequestMetadata'));
   } else {
     // Browser globals (root is window)
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.LicenseEditorialContent = factory(root.ShutterstockApiReference.ApiClient);
+    root.ShutterstockApiReference.LicenseEditorialContent = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.LicenseRequestMetadata);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, LicenseRequestMetadata) {
   'use strict';
 
 
@@ -74,7 +74,7 @@
         obj['license'] = ApiClient.convertToType(data['license'], 'String');
       }
       if (data.hasOwnProperty('metadata')) {
-        obj['metadata'] = ApiClient.convertToType(data['metadata'], Object);
+        obj['metadata'] = LicenseRequestMetadata.constructFromObject(data['metadata']);
       }
       if (data.hasOwnProperty('size')) {
         obj['size'] = ApiClient.convertToType(data['size'], 'String');
@@ -94,8 +94,7 @@
    */
   exports.prototype['license'] = undefined;
   /**
-   * Optional custom metdata to attach to the license
-   * @member {Object} metadata
+   * @member {module:model/LicenseRequestMetadata} metadata
    */
   exports.prototype['metadata'] = undefined;
   /**

@@ -137,7 +137,7 @@
    */
   exports.prototype['license'] = undefined;
   /**
-   * Any metadata that was passed in the original licensing call
+   * The metadata that was passed in the original licensing request
    * @member {Object} metadata
    */
   exports.prototype['metadata'] = undefined;
