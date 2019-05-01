@@ -1,7 +1,7 @@
 {
   "name": "shutterstock-api",
-  "version": "1.0.3",
-  "description": "The Shutterstock API provides access to Shutterstock's library of media as well as information about customers accounts and the contributors that provide the media ",
+  "version": "1.0.4",
+  "description": "The Shutterstock API provides access to Shutterstock's library of media as well as information about customers accounts and the contributors that provide the media",
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
