@@ -64,7 +64,7 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;id&quot; : &quot;id&quot;
+  "id" : "id"
 }
 
 <a name="getAccessToken"></a>
@@ -114,15 +114,15 @@ This endpoint does not accept any parameters.
 ### Example response
 
 {
-  &quot;user_id&quot; : &quot;user_id&quot;,
-  &quot;organization_id&quot; : &quot;organization_id&quot;,
-  &quot;realm&quot; : &quot;customer&quot;,
-  &quot;scopes&quot; : [ &quot;scopes&quot;, &quot;scopes&quot; ],
-  &quot;customer_id&quot; : &quot;customer_id&quot;,
-  &quot;expires_in&quot; : 0,
-  &quot;client_id&quot; : &quot;client_id&quot;,
-  &quot;contributor_id&quot; : &quot;contributor_id&quot;,
-  &quot;username&quot; : &quot;username&quot;
+  "user_id" : "user_id",
+  "organization_id" : "organization_id",
+  "realm" : "customer",
+  "scopes" : [ "scopes", "scopes" ],
+  "customer_id" : "customer_id",
+  "expires_in" : 0,
+  "client_id" : "client_id",
+  "contributor_id" : "contributor_id",
+  "username" : "username"
 }
 
 <a name="getUser"></a>
@@ -174,21 +174,21 @@ This endpoint does not accept any parameters.
 ### Example response
 
 {
-  &quot;only_enhanced_license&quot; : true,
-  &quot;is_premier_parent&quot; : true,
-  &quot;is_premier&quot; : true,
-  &quot;last_name&quot; : &quot;last_name&quot;,
-  &quot;premier_permissions&quot; : [ &quot;premier_permissions&quot;, &quot;premier_permissions&quot; ],
-  &quot;language&quot; : &quot;language&quot;,
-  &quot;only_sensitive_use&quot; : true,
-  &quot;full_name&quot; : &quot;full_name&quot;,
-  &quot;organization_id&quot; : &quot;organization_id&quot;,
-  &quot;id&quot; : &quot;id&quot;,
-  &quot;customer_id&quot; : &quot;customer_id&quot;,
-  &quot;first_name&quot; : &quot;first_name&quot;,
-  &quot;email&quot; : &quot;email&quot;,
-  &quot;contributor_id&quot; : &quot;contributor_id&quot;,
-  &quot;username&quot; : &quot;username&quot;
+  "only_enhanced_license" : true,
+  "is_premier_parent" : true,
+  "is_premier" : true,
+  "last_name" : "last_name",
+  "premier_permissions" : [ "premier_permissions", "premier_permissions" ],
+  "language" : "language",
+  "only_sensitive_use" : true,
+  "full_name" : "full_name",
+  "organization_id" : "organization_id",
+  "id" : "id",
+  "customer_id" : "customer_id",
+  "first_name" : "first_name",
+  "email" : "email",
+  "contributor_id" : "contributor_id",
+  "username" : "username"
 }
 
 <a name="getUserSubsciptionList"></a>
@@ -240,81 +240,81 @@ This endpoint does not accept any parameters.
 ### Example response
 
 {
-  &quot;per_page&quot; : 5,
-  &quot;data&quot; : [ {
-    &quot;license&quot; : &quot;license&quot;,
-    &quot;metadata&quot; : { },
-    &quot;formats&quot; : [ {
-      &quot;size&quot; : &quot;size&quot;,
-      &quot;media_type&quot; : &quot;image&quot;,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;min_resolution&quot; : 1,
-      &quot;description&quot; : &quot;description&quot;
+  "per_page" : 5,
+  "data" : [ {
+    "license" : "license",
+    "metadata" : { },
+    "formats" : [ {
+      "size" : "size",
+      "media_type" : "image",
+      "format" : "format",
+      "min_resolution" : 1,
+      "description" : "description"
     }, {
-      &quot;size&quot; : &quot;size&quot;,
-      &quot;media_type&quot; : &quot;image&quot;,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;min_resolution&quot; : 1,
-      &quot;description&quot; : &quot;description&quot;
+      "size" : "size",
+      "media_type" : "image",
+      "format" : "format",
+      "min_resolution" : 1,
+      "description" : "description"
     } ],
-    &quot;expiration_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;allotment&quot; : {
-      &quot;start_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-      &quot;downloads_left&quot; : 0,
-      &quot;downloads_limit&quot; : 6,
-      &quot;end_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;
+    "expiration_time" : "2000-01-23T04:56:07.000+00:00",
+    "allotment" : {
+      "start_time" : "2000-01-23T04:56:07.000+00:00",
+      "downloads_left" : 0,
+      "downloads_limit" : 6,
+      "end_time" : "2000-01-23T04:56:07.000+00:00"
     },
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;price_per_download&quot; : {
-      &quot;local_amount&quot; : 6.02745618307040320615897144307382404804229736328125,
-      &quot;local_currency&quot; : &quot;local_currency&quot;
+    "description" : "description",
+    "id" : "id",
+    "price_per_download" : {
+      "local_amount" : 6.02745618307040320615897144307382404804229736328125,
+      "local_currency" : "local_currency"
     }
   }, {
-    &quot;license&quot; : &quot;license&quot;,
-    &quot;metadata&quot; : { },
-    &quot;formats&quot; : [ {
-      &quot;size&quot; : &quot;size&quot;,
-      &quot;media_type&quot; : &quot;image&quot;,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;min_resolution&quot; : 1,
-      &quot;description&quot; : &quot;description&quot;
+    "license" : "license",
+    "metadata" : { },
+    "formats" : [ {
+      "size" : "size",
+      "media_type" : "image",
+      "format" : "format",
+      "min_resolution" : 1,
+      "description" : "description"
     }, {
-      &quot;size&quot; : &quot;size&quot;,
-      &quot;media_type&quot; : &quot;image&quot;,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;min_resolution&quot; : 1,
-      &quot;description&quot; : &quot;description&quot;
+      "size" : "size",
+      "media_type" : "image",
+      "format" : "format",
+      "min_resolution" : 1,
+      "description" : "description"
     } ],
-    &quot;expiration_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;allotment&quot; : {
-      &quot;start_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-      &quot;downloads_left&quot; : 0,
-      &quot;downloads_limit&quot; : 6,
-      &quot;end_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;
+    "expiration_time" : "2000-01-23T04:56:07.000+00:00",
+    "allotment" : {
+      "start_time" : "2000-01-23T04:56:07.000+00:00",
+      "downloads_left" : 0,
+      "downloads_limit" : 6,
+      "end_time" : "2000-01-23T04:56:07.000+00:00"
     },
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;price_per_download&quot; : {
-      &quot;local_amount&quot; : 6.02745618307040320615897144307382404804229736328125,
-      &quot;local_currency&quot; : &quot;local_currency&quot;
+    "description" : "description",
+    "id" : "id",
+    "price_per_download" : {
+      "local_amount" : 6.02745618307040320615897144307382404804229736328125,
+      "local_currency" : "local_currency"
     }
   } ],
-  &quot;total_count&quot; : 2,
-  &quot;page&quot; : 5,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 2,
+  "page" : 5,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 

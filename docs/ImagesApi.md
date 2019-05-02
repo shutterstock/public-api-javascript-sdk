@@ -38,25 +38,25 @@ This endpoint adds one or more images to a collection by image IDs.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi &#x3D; new sstk.ImagesApi();
+const imagesApi = new sstk.ImagesApi();
 
-const collectionId &#x3D; &quot;126351027&quot;; // Collection ID
+const collectionId = "126351027"; // Collection ID
 
-const body &#x3D; {
-  &quot;items&quot;: [
+const body = {
+  "items": [
     {
-      &quot;id&quot;: &quot;495863218&quot;,
-      &quot;media_type&quot;: &quot;image&quot;
+      "id": "495863218",
+      "media_type": "image"
     }
   ]
 };
 
 imagesApi.addLightboxItems(collectionId, body)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -100,18 +100,18 @@ This endpoint creates one or more image collections (lightboxes). To add images 
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi &#x3D; new sstk.ImagesApi();
+const imagesApi = new sstk.ImagesApi();
 
-const body &#x3D; {
-  &quot;name&quot;: &quot;My collection&quot;
+const body = {
+  "name": "My collection"
 };
 
 imagesApi.createLightbox(body)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -154,16 +154,16 @@ This endpoint deletes an image collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi &#x3D; new sstk.ImagesApi();
+const imagesApi = new sstk.ImagesApi();
 
-const collectionId &#x3D; &quot;136351027&quot;; // Collection ID
+const collectionId = "136351027"; // Collection ID
 
 imagesApi.deleteLightbox(collectionId)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -206,23 +206,23 @@ This endpoint removes one or more images from a collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi &#x3D; new sstk.ImagesApi();
+const imagesApi = new sstk.ImagesApi();
 
-const collectionId &#x3D; &quot;126351027&quot;; // Collection ID
+const collectionId = "126351027"; // Collection ID
 
 // Array of images to remove
-const imagesToRemove &#x3D; {
-  &quot;item_id&quot;: [
-    &quot;495863218&quot;
+const imagesToRemove = {
+  "item_id": [
+    "495863218"
   ]
 };
 
 imagesApi.deleteLightboxItems(collectionId, imagesToRemove)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -266,23 +266,23 @@ This endpoint redownloads images that you have already received a license for.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi &#x3D; new sstk.ImagesApi();
+const imagesApi = new sstk.ImagesApi();
 
-const licenseId &#x3D; &quot;i1188641347&quot;; // license ID, not image ID
+const licenseId = "i1188641347"; // license ID, not image ID
 
-const body &#x3D; {
-  &quot;size&quot;: &quot;huge&quot;
+const body = {
+  "size": "huge"
 };
 
 imagesApi.downloadImage(licenseId, body)
-  .then((data) &#x3D;&gt; {
+  .then((data) => {
     console.log(data);
   })
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -317,7 +317,7 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;url&quot; : &quot;url&quot;
+  "url" : "url"
 }
 
 <a name="getFeaturedLightbox"></a>
@@ -382,19 +382,19 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;created_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;updated_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;share_url&quot; : &quot;share_url&quot;,
-  &quot;hero_item&quot; : {
-    &quot;url&quot; : &quot;url&quot;
+  "created_time" : "2000-01-23T04:56:07.000+00:00",
+  "updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "share_url" : "share_url",
+  "hero_item" : {
+    "url" : "url"
   },
-  &quot;items_updated_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;name&quot; : &quot;name&quot;,
-  &quot;id&quot; : &quot;id&quot;,
-  &quot;cover_item&quot; : {
-    &quot;url&quot; : &quot;url&quot;
+  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "cover_item" : {
+    "url" : "url"
   },
-  &quot;total_item_count&quot; : 0
+  "total_item_count" : 0
 }
 
 <a name="getFeaturedLightboxItems"></a>
@@ -459,17 +459,17 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;data&quot; : [ {
-    &quot;added_time&quot; : &quot;2016-08-18T18:52:59-04:00&quot;,
-    &quot;id&quot; : &quot;76688182&quot;,
-    &quot;media_type&quot; : &quot;audio&quot;
+  "data" : [ {
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "76688182",
+    "media_type" : "audio"
   }, {
-    &quot;added_time&quot; : &quot;2016-08-18T18:52:59-04:00&quot;,
-    &quot;id&quot; : &quot;40005859&quot;,
-    &quot;media_type&quot; : &quot;audio&quot;
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "40005859",
+    "media_type" : "audio"
   } ],
-  &quot;page&quot; : 1,
-  &quot;per_page&quot; : 100
+  "page" : 1,
+  "per_page" : 100
 }
 
 <a name="getFeaturedLightboxList"></a>
@@ -533,51 +533,51 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;per_page&quot; : 1,
-  &quot;data&quot; : [ {
-    &quot;created_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;updated_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;share_url&quot; : &quot;share_url&quot;,
-    &quot;hero_item&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+  "per_page" : 1,
+  "data" : [ {
+    "created_time" : "2000-01-23T04:56:07.000+00:00",
+    "updated_time" : "2000-01-23T04:56:07.000+00:00",
+    "share_url" : "share_url",
+    "hero_item" : {
+      "url" : "url"
     },
-    &quot;items_updated_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;name&quot; : &quot;name&quot;,
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;cover_item&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+    "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "id" : "id",
+    "cover_item" : {
+      "url" : "url"
     },
-    &quot;total_item_count&quot; : 0
+    "total_item_count" : 0
   }, {
-    &quot;created_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;updated_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;share_url&quot; : &quot;share_url&quot;,
-    &quot;hero_item&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+    "created_time" : "2000-01-23T04:56:07.000+00:00",
+    "updated_time" : "2000-01-23T04:56:07.000+00:00",
+    "share_url" : "share_url",
+    "hero_item" : {
+      "url" : "url"
     },
-    &quot;items_updated_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;name&quot; : &quot;name&quot;,
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;cover_item&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+    "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "id" : "id",
+    "cover_item" : {
+      "url" : "url"
     },
-    &quot;total_item_count&quot; : 0
+    "total_item_count" : 0
   } ],
-  &quot;total_count&quot; : 5,
-  &quot;page&quot; : 6,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 5,
+  "page" : 6,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 
@@ -644,131 +644,131 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;has_property_release&quot; : true,
-  &quot;model_releases&quot; : [ {
-    &quot;id&quot; : &quot;id&quot;
+  "has_property_release" : true,
+  "model_releases" : [ {
+    "id" : "id"
   }, {
-    &quot;id&quot; : &quot;id&quot;
+    "id" : "id"
   } ],
-  &quot;models&quot; : [ {
-    &quot;id&quot; : &quot;id&quot;
+  "models" : [ {
+    "id" : "id"
   }, {
-    &quot;id&quot; : &quot;id&quot;
+    "id" : "id"
   } ],
-  &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-  &quot;added_date&quot; : &quot;2000-01-23&quot;,
-  &quot;description&quot; : &quot;description&quot;,
-  &quot;affiliate_url&quot; : &quot;http://example.com/aeiou&quot;,
-  &quot;is_illustration&quot; : true,
-  &quot;url&quot; : &quot;url&quot;,
-  &quot;is_adult&quot; : true,
-  &quot;releases&quot; : [ &quot;releases&quot;, &quot;releases&quot; ],
-  &quot;assets&quot; : {
-    &quot;preview&quot; : {
-      &quot;width&quot; : 7,
-      &quot;url&quot; : &quot;url&quot;,
-      &quot;height&quot; : 2
+  "keywords" : [ "keywords", "keywords" ],
+  "added_date" : "2000-01-23",
+  "description" : "description",
+  "affiliate_url" : "http://example.com/aeiou",
+  "is_illustration" : true,
+  "url" : "url",
+  "is_adult" : true,
+  "releases" : [ "releases", "releases" ],
+  "assets" : {
+    "preview" : {
+      "width" : 7,
+      "url" : "url",
+      "height" : 2
     },
-    &quot;supersize_jpg&quot; : {
-      &quot;is_licensable&quot; : true,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;width&quot; : 5,
-      &quot;display_name&quot; : &quot;display_name&quot;,
-      &quot;dpi&quot; : 6,
-      &quot;file_size&quot; : 1,
-      &quot;height&quot; : 5
+    "supersize_jpg" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "width" : 5,
+      "display_name" : "display_name",
+      "dpi" : 6,
+      "file_size" : 1,
+      "height" : 5
     },
-    &quot;preview_1000&quot; : {
-      &quot;width&quot; : 7,
-      &quot;url&quot; : &quot;url&quot;,
-      &quot;height&quot; : 2
+    "preview_1000" : {
+      "width" : 7,
+      "url" : "url",
+      "height" : 2
     },
-    &quot;small_thumb&quot; : {
-      &quot;width&quot; : 7,
-      &quot;url&quot; : &quot;url&quot;,
-      &quot;height&quot; : 2
+    "small_thumb" : {
+      "width" : 7,
+      "url" : "url",
+      "height" : 2
     },
-    &quot;vector_eps&quot; : {
-      &quot;is_licensable&quot; : true,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;width&quot; : 5,
-      &quot;display_name&quot; : &quot;display_name&quot;,
-      &quot;dpi&quot; : 6,
-      &quot;file_size&quot; : 1,
-      &quot;height&quot; : 5
+    "vector_eps" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "width" : 5,
+      "display_name" : "display_name",
+      "dpi" : 6,
+      "file_size" : 1,
+      "height" : 5
     },
-    &quot;preview_1500&quot; : {
-      &quot;width&quot; : 7,
-      &quot;url&quot; : &quot;url&quot;,
-      &quot;height&quot; : 2
+    "preview_1500" : {
+      "width" : 7,
+      "url" : "url",
+      "height" : 2
     },
-    &quot;large_thumb&quot; : {
-      &quot;width&quot; : 7,
-      &quot;url&quot; : &quot;url&quot;,
-      &quot;height&quot; : 2
+    "large_thumb" : {
+      "width" : 7,
+      "url" : "url",
+      "height" : 2
     },
-    &quot;huge_tiff&quot; : {
-      &quot;is_licensable&quot; : true,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;width&quot; : 5,
-      &quot;display_name&quot; : &quot;display_name&quot;,
-      &quot;dpi&quot; : 6,
-      &quot;file_size&quot; : 1,
-      &quot;height&quot; : 5
+    "huge_tiff" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "width" : 5,
+      "display_name" : "display_name",
+      "dpi" : 6,
+      "file_size" : 1,
+      "height" : 5
     },
-    &quot;medium_jpg&quot; : {
-      &quot;is_licensable&quot; : true,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;width&quot; : 5,
-      &quot;display_name&quot; : &quot;display_name&quot;,
-      &quot;dpi&quot; : 6,
-      &quot;file_size&quot; : 1,
-      &quot;height&quot; : 5
+    "medium_jpg" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "width" : 5,
+      "display_name" : "display_name",
+      "dpi" : 6,
+      "file_size" : 1,
+      "height" : 5
     },
-    &quot;small_jpg&quot; : {
-      &quot;is_licensable&quot; : true,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;width&quot; : 5,
-      &quot;display_name&quot; : &quot;display_name&quot;,
-      &quot;dpi&quot; : 6,
-      &quot;file_size&quot; : 1,
-      &quot;height&quot; : 5
+    "small_jpg" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "width" : 5,
+      "display_name" : "display_name",
+      "dpi" : 6,
+      "file_size" : 1,
+      "height" : 5
     },
-    &quot;supersize_tiff&quot; : {
-      &quot;is_licensable&quot; : true,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;width&quot; : 5,
-      &quot;display_name&quot; : &quot;display_name&quot;,
-      &quot;dpi&quot; : 6,
-      &quot;file_size&quot; : 1,
-      &quot;height&quot; : 5
+    "supersize_tiff" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "width" : 5,
+      "display_name" : "display_name",
+      "dpi" : 6,
+      "file_size" : 1,
+      "height" : 5
     },
-    &quot;huge_jpg&quot; : {
-      &quot;is_licensable&quot; : true,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;width&quot; : 5,
-      &quot;display_name&quot; : &quot;display_name&quot;,
-      &quot;dpi&quot; : 6,
-      &quot;file_size&quot; : 1,
-      &quot;height&quot; : 5
+    "huge_jpg" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "width" : 5,
+      "display_name" : "display_name",
+      "dpi" : 6,
+      "file_size" : 1,
+      "height" : 5
     }
   },
-  &quot;contributor&quot; : {
-    &quot;id&quot; : &quot;id&quot;
+  "contributor" : {
+    "id" : "id"
   },
-  &quot;is_editorial&quot; : true,
-  &quot;media_type&quot; : &quot;media_type&quot;,
-  &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-  &quot;has_model_release&quot; : true,
-  &quot;categories&quot; : [ {
-    &quot;name&quot; : &quot;name&quot;,
-    &quot;id&quot; : &quot;id&quot;
+  "is_editorial" : true,
+  "media_type" : "media_type",
+  "aspect" : 0.80082819046101150206595775671303272247314453125,
+  "has_model_release" : true,
+  "categories" : [ {
+    "name" : "name",
+    "id" : "id"
   }, {
-    &quot;name&quot; : &quot;name&quot;,
-    &quot;id&quot; : &quot;id&quot;
+    "name" : "name",
+    "id" : "id"
   } ],
-  &quot;id&quot; : &quot;id&quot;,
-  &quot;image_type&quot; : &quot;image_type&quot;
+  "id" : "id",
+  "image_type" : "image_type"
 }
 
 <a name="getImageCategories"></a>
@@ -823,29 +823,29 @@ This endpoint does not accept any parameters.
 ### Example response
 
 {
-  &quot;per_page&quot; : 6,
-  &quot;data&quot; : [ {
-    &quot;name&quot; : &quot;name&quot;,
-    &quot;id&quot; : &quot;id&quot;
+  "per_page" : 6,
+  "data" : [ {
+    "name" : "name",
+    "id" : "id"
   }, {
-    &quot;name&quot; : &quot;name&quot;,
-    &quot;id&quot; : &quot;id&quot;
+    "name" : "name",
+    "id" : "id"
   } ],
-  &quot;total_count&quot; : 1,
-  &quot;page&quot; : 0,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 
@@ -916,85 +916,85 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;per_page&quot; : 6,
-  &quot;data&quot; : [ {
-    &quot;subscription_id&quot; : &quot;subscription_id&quot;,
-    &quot;image&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+  "per_page" : 6,
+  "data" : [ {
+    "subscription_id" : "subscription_id",
+    "image" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;license&quot; : &quot;license&quot;,
-    &quot;download_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;metadata&quot; : &quot;{}&quot;,
-    &quot;is_downloadable&quot; : true,
-    &quot;audio&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "license" : "license",
+    "download_time" : "2000-01-23T04:56:07.000+00:00",
+    "metadata" : "{}",
+    "is_downloadable" : true,
+    "audio" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;video&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "id" : "id",
+    "video" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;user&quot; : {
-      &quot;username&quot; : &quot;username&quot;
+    "user" : {
+      "username" : "username"
     }
   }, {
-    &quot;subscription_id&quot; : &quot;subscription_id&quot;,
-    &quot;image&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "subscription_id" : "subscription_id",
+    "image" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;license&quot; : &quot;license&quot;,
-    &quot;download_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;metadata&quot; : &quot;{}&quot;,
-    &quot;is_downloadable&quot; : true,
-    &quot;audio&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "license" : "license",
+    "download_time" : "2000-01-23T04:56:07.000+00:00",
+    "metadata" : "{}",
+    "is_downloadable" : true,
+    "audio" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;video&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "id" : "id",
+    "video" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;user&quot; : {
-      &quot;username&quot; : &quot;username&quot;
+    "user" : {
+      "username" : "username"
     }
   } ],
-  &quot;total_count&quot; : 1,
-  &quot;page&quot; : 0,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 
@@ -1061,275 +1061,275 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;per_page&quot; : 6,
-  &quot;data&quot; : [ {
-    &quot;has_property_release&quot; : true,
-    &quot;model_releases&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+  "per_page" : 6,
+  "data" : [ {
+    "has_property_release" : true,
+    "model_releases" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;models&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+    "models" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;added_date&quot; : &quot;2000-01-23&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;affiliate_url&quot; : &quot;http://example.com/aeiou&quot;,
-    &quot;is_illustration&quot; : true,
-    &quot;url&quot; : &quot;url&quot;,
-    &quot;is_adult&quot; : true,
-    &quot;releases&quot; : [ &quot;releases&quot;, &quot;releases&quot; ],
-    &quot;assets&quot; : {
-      &quot;preview&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+    "keywords" : [ "keywords", "keywords" ],
+    "added_date" : "2000-01-23",
+    "description" : "description",
+    "affiliate_url" : "http://example.com/aeiou",
+    "is_illustration" : true,
+    "url" : "url",
+    "is_adult" : true,
+    "releases" : [ "releases", "releases" ],
+    "assets" : {
+      "preview" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;supersize_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "supersize_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;preview_1000&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "preview_1000" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;small_thumb&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "small_thumb" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;vector_eps&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "vector_eps" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;preview_1500&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "preview_1500" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;large_thumb&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "large_thumb" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;huge_tiff&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "huge_tiff" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;medium_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;small_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "small_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;supersize_tiff&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "supersize_tiff" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;huge_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "huge_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       }
     },
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;id&quot;
+    "contributor" : {
+      "id" : "id"
     },
-    &quot;is_editorial&quot; : true,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;has_model_release&quot; : true,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+    "is_editorial" : true,
+    "media_type" : "media_type",
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "has_model_release" : true,
+    "categories" : [ {
+      "name" : "name",
+      "id" : "id"
     }, {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+      "name" : "name",
+      "id" : "id"
     } ],
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;image_type&quot; : &quot;image_type&quot;
+    "id" : "id",
+    "image_type" : "image_type"
   }, {
-    &quot;has_property_release&quot; : true,
-    &quot;model_releases&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+    "has_property_release" : true,
+    "model_releases" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;models&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+    "models" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;added_date&quot; : &quot;2000-01-23&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;affiliate_url&quot; : &quot;http://example.com/aeiou&quot;,
-    &quot;is_illustration&quot; : true,
-    &quot;url&quot; : &quot;url&quot;,
-    &quot;is_adult&quot; : true,
-    &quot;releases&quot; : [ &quot;releases&quot;, &quot;releases&quot; ],
-    &quot;assets&quot; : {
-      &quot;preview&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+    "keywords" : [ "keywords", "keywords" ],
+    "added_date" : "2000-01-23",
+    "description" : "description",
+    "affiliate_url" : "http://example.com/aeiou",
+    "is_illustration" : true,
+    "url" : "url",
+    "is_adult" : true,
+    "releases" : [ "releases", "releases" ],
+    "assets" : {
+      "preview" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;supersize_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "supersize_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;preview_1000&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "preview_1000" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;small_thumb&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "small_thumb" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;vector_eps&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "vector_eps" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;preview_1500&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "preview_1500" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;large_thumb&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "large_thumb" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;huge_tiff&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "huge_tiff" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;medium_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;small_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "small_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;supersize_tiff&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "supersize_tiff" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;huge_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "huge_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       }
     },
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;id&quot;
+    "contributor" : {
+      "id" : "id"
     },
-    &quot;is_editorial&quot; : true,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;has_model_release&quot; : true,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+    "is_editorial" : true,
+    "media_type" : "media_type",
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "has_model_release" : true,
+    "categories" : [ {
+      "name" : "name",
+      "id" : "id"
     }, {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+      "name" : "name",
+      "id" : "id"
     } ],
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;image_type&quot; : &quot;image_type&quot;
+    "id" : "id",
+    "image_type" : "image_type"
   } ],
-  &quot;total_count&quot; : 1,
-  &quot;page&quot; : 0,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 
@@ -1398,27 +1398,27 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;per_page&quot; : 6,
-  &quot;data&quot; : [ {
-    &quot;id&quot; : &quot;id&quot;
+  "per_page" : 6,
+  "data" : [ {
+    "id" : "id"
   }, {
-    &quot;id&quot; : &quot;id&quot;
+    "id" : "id"
   } ],
-  &quot;total_count&quot; : 1,
-  &quot;page&quot; : 0,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 
@@ -1486,19 +1486,19 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;created_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;updated_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;share_url&quot; : &quot;share_url&quot;,
-  &quot;items_updated_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;name&quot; : &quot;name&quot;,
-  &quot;id&quot; : &quot;id&quot;,
-  &quot;share_code&quot; : &quot;share_code&quot;,
-  &quot;cover_item&quot; : {
-    &quot;added_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;id&quot; : &quot;id&quot;
+  "created_time" : "2000-01-23T04:56:07.000+00:00",
+  "updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "share_url" : "share_url",
+  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "share_code" : "share_code",
+  "cover_item" : {
+    "added_time" : "2000-01-23T04:56:07.000+00:00",
+    "media_type" : "media_type",
+    "id" : "id"
   },
-  &quot;total_item_count&quot; : 0
+  "total_item_count" : 0
 }
 
 <a name="getLightboxItems"></a>
@@ -1567,17 +1567,17 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;data&quot; : [ {
-    &quot;added_time&quot; : &quot;2016-08-18T18:52:59-04:00&quot;,
-    &quot;id&quot; : &quot;76688182&quot;,
-    &quot;media_type&quot; : &quot;audio&quot;
+  "data" : [ {
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "76688182",
+    "media_type" : "audio"
   }, {
-    &quot;added_time&quot; : &quot;2016-08-18T18:52:59-04:00&quot;,
-    &quot;id&quot; : &quot;40005859&quot;,
-    &quot;media_type&quot; : &quot;audio&quot;
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "40005859",
+    "media_type" : "audio"
   } ],
-  &quot;page&quot; : 1,
-  &quot;per_page&quot; : 100
+  "page" : 1,
+  "per_page" : 100
 }
 
 <a name="getLightboxList"></a>
@@ -1643,36 +1643,36 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;data&quot; : [ {
-    &quot;created_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;,
-    &quot;id&quot; : &quot;5747953&quot;,
-    &quot;name&quot; : &quot;Test Collection cdad&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;
+  "data" : [ {
+    "created_time" : "2014-11-05T19:29:56-05:00",
+    "id" : "5747953",
+    "name" : "Test Collection cdad",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:56-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;,
-    &quot;id&quot; : &quot;5747955&quot;,
-    &quot;name&quot; : &quot;Test Collection ff5f&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;
+    "created_time" : "2014-11-05T19:29:56-05:00",
+    "id" : "5747955",
+    "name" : "Test Collection ff5f",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:56-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:29:58-05:00&quot;,
-    &quot;id&quot; : &quot;5747957&quot;,
-    &quot;name&quot; : &quot;Updated Collection ebc4&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:29:58-05:00&quot;
+    "created_time" : "2014-11-05T19:29:58-05:00",
+    "id" : "5747957",
+    "name" : "Updated Collection ebc4",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:58-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;,
-    &quot;id&quot; : &quot;5747971&quot;,
-    &quot;name&quot; : &quot;Test Collection 0072&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;
+    "created_time" : "2014-11-05T19:32:13-05:00",
+    "id" : "5747971",
+    "name" : "Test Collection 0072",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:32:13-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;,
-    &quot;id&quot; : &quot;5747973&quot;,
-    &quot;name&quot; : &quot;Test Collection d332&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;
+    "created_time" : "2014-11-05T19:32:13-05:00",
+    "id" : "5747973",
+    "name" : "Test Collection d332",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:32:13-05:00"
   } ]
 }
 
@@ -1743,265 +1743,265 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;spellcheck_info&quot; : &quot;{}&quot;,
-  &quot;per_page&quot; : 3,
-  &quot;data&quot; : [ {
-    &quot;has_property_release&quot; : true,
-    &quot;model_releases&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+  "spellcheck_info" : "{}",
+  "per_page" : 3,
+  "data" : [ {
+    "has_property_release" : true,
+    "model_releases" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;models&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+    "models" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;added_date&quot; : &quot;2000-01-23&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;affiliate_url&quot; : &quot;http://example.com/aeiou&quot;,
-    &quot;is_illustration&quot; : true,
-    &quot;url&quot; : &quot;url&quot;,
-    &quot;is_adult&quot; : true,
-    &quot;releases&quot; : [ &quot;releases&quot;, &quot;releases&quot; ],
-    &quot;assets&quot; : {
-      &quot;preview&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+    "keywords" : [ "keywords", "keywords" ],
+    "added_date" : "2000-01-23",
+    "description" : "description",
+    "affiliate_url" : "http://example.com/aeiou",
+    "is_illustration" : true,
+    "url" : "url",
+    "is_adult" : true,
+    "releases" : [ "releases", "releases" ],
+    "assets" : {
+      "preview" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;supersize_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "supersize_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;preview_1000&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "preview_1000" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;small_thumb&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "small_thumb" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;vector_eps&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "vector_eps" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;preview_1500&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "preview_1500" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;large_thumb&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "large_thumb" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;huge_tiff&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "huge_tiff" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;medium_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;small_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "small_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;supersize_tiff&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "supersize_tiff" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;huge_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "huge_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       }
     },
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;id&quot;
+    "contributor" : {
+      "id" : "id"
     },
-    &quot;is_editorial&quot; : true,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;has_model_release&quot; : true,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+    "is_editorial" : true,
+    "media_type" : "media_type",
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "has_model_release" : true,
+    "categories" : [ {
+      "name" : "name",
+      "id" : "id"
     }, {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+      "name" : "name",
+      "id" : "id"
     } ],
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;image_type&quot; : &quot;image_type&quot;
+    "id" : "id",
+    "image_type" : "image_type"
   }, {
-    &quot;has_property_release&quot; : true,
-    &quot;model_releases&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+    "has_property_release" : true,
+    "model_releases" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;models&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+    "models" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;added_date&quot; : &quot;2000-01-23&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;affiliate_url&quot; : &quot;http://example.com/aeiou&quot;,
-    &quot;is_illustration&quot; : true,
-    &quot;url&quot; : &quot;url&quot;,
-    &quot;is_adult&quot; : true,
-    &quot;releases&quot; : [ &quot;releases&quot;, &quot;releases&quot; ],
-    &quot;assets&quot; : {
-      &quot;preview&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+    "keywords" : [ "keywords", "keywords" ],
+    "added_date" : "2000-01-23",
+    "description" : "description",
+    "affiliate_url" : "http://example.com/aeiou",
+    "is_illustration" : true,
+    "url" : "url",
+    "is_adult" : true,
+    "releases" : [ "releases", "releases" ],
+    "assets" : {
+      "preview" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;supersize_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "supersize_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;preview_1000&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "preview_1000" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;small_thumb&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "small_thumb" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;vector_eps&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "vector_eps" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;preview_1500&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "preview_1500" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;large_thumb&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "large_thumb" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;huge_tiff&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "huge_tiff" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;medium_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;small_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "small_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;supersize_tiff&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "supersize_tiff" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;huge_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "huge_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       }
     },
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;id&quot;
+    "contributor" : {
+      "id" : "id"
     },
-    &quot;is_editorial&quot; : true,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;has_model_release&quot; : true,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+    "is_editorial" : true,
+    "media_type" : "media_type",
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "has_model_release" : true,
+    "categories" : [ {
+      "name" : "name",
+      "id" : "id"
     }, {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+      "name" : "name",
+      "id" : "id"
     } ],
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;image_type&quot; : &quot;image_type&quot;
+    "id" : "id",
+    "image_type" : "image_type"
   } ],
-  &quot;total_count&quot; : 2,
-  &quot;page&quot; : 9,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;search_id&quot; : &quot;search_id&quot;
+  "total_count" : 2,
+  "page" : 9,
+  "message" : "message",
+  "search_id" : "search_id"
 }
 
 <a name="licenseImages"></a>
@@ -2015,37 +2015,37 @@ This endpoint gets licenses for one or more images. You must specify the image I
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi &#x3D; new sstk.ImagesApi();
+const imagesApi = new sstk.ImagesApi();
 
-const body &#x3D; {
-  &quot;images&quot;: [
+const body = {
+  "images": [
     {
-      &quot;image_id&quot;: &quot;419235589&quot;,
-      &quot;format&quot;: &quot;jpg&quot;
+      "image_id": "419235589",
+      "format": "jpg"
     },
     {
-      &quot;image_id&quot;: &quot;1079756147&quot;,
-      &quot;format&quot;: &quot;jpg&quot;,
+      "image_id": "1079756147",
+      "format": "jpg",
     }
   ]
 };
 
 // Put your subscription ID in the SHUTTERSTOCK_SUBSCRIPTION_ID environment variable
-const queryParams &#x3D; {
-  &quot;subscription_id&quot;: process.env.SHUTTERSTOCK_SUBSCRIPTION_ID,
-  &quot;format&quot;: &quot;jpg&quot;,
-  &quot;size&quot;: &quot;huge&quot;
+const queryParams = {
+  "subscription_id": process.env.SHUTTERSTOCK_SUBSCRIPTION_ID,
+  "format": "jpg",
+  "size": "huge"
 };
 
 imagesApi.licenseImages(body, queryParams)
-  .then(({ data }) &#x3D;&gt; {
+  .then(({ data }) => {
     console.log(data);
   })
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -2085,45 +2085,45 @@ Required scopes:
 ### Example response
 
 {
-  &quot;per_page&quot; : 5,
-  &quot;data&quot; : [ {
-    &quot;download&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+  "per_page" : 5,
+  "data" : [ {
+    "download" : {
+      "url" : "url"
     },
-    &quot;price&quot; : {
-      &quot;local_amount&quot; : 6.02745618307040320615897144307382404804229736328125,
-      &quot;local_currency&quot; : &quot;local_currency&quot;
+    "price" : {
+      "local_amount" : 6.02745618307040320615897144307382404804229736328125,
+      "local_currency" : "local_currency"
     },
-    &quot;allotment_charge&quot; : 0,
-    &quot;error&quot; : &quot;error&quot;,
-    &quot;image_id&quot; : &quot;image_id&quot;
+    "allotment_charge" : 0,
+    "error" : "error",
+    "image_id" : "image_id"
   }, {
-    &quot;download&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+    "download" : {
+      "url" : "url"
     },
-    &quot;price&quot; : {
-      &quot;local_amount&quot; : 6.02745618307040320615897144307382404804229736328125,
-      &quot;local_currency&quot; : &quot;local_currency&quot;
+    "price" : {
+      "local_amount" : 6.02745618307040320615897144307382404804229736328125,
+      "local_currency" : "local_currency"
     },
-    &quot;allotment_charge&quot; : 0,
-    &quot;error&quot; : &quot;error&quot;,
-    &quot;image_id&quot; : &quot;image_id&quot;
+    "allotment_charge" : 0,
+    "error" : "error",
+    "image_id" : "image_id"
   } ],
-  &quot;total_count&quot; : 5,
-  &quot;page&quot; : 1,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 5,
+  "page" : 1,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 
@@ -2138,20 +2138,20 @@ This endpoint sets a new name for an image collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi &#x3D; new sstk.ImagesApi();
+const imagesApi = new sstk.ImagesApi();
 
-const collectionId &#x3D; &quot;126351027&quot;; // Collection ID
+const collectionId = "126351027"; // Collection ID
 
-const body &#x3D; {
-  &quot;name&quot;: &quot;My new collection name&quot;
+const body = {
+  "name": "My new collection name"
 };
 
 imagesApi.renameLightbox(collectionId, body)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -2195,23 +2195,23 @@ This endpoint searches for images. If you specify more than one search parameter
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi &#x3D; new sstk.ImagesApi();
+const imagesApi = new sstk.ImagesApi();
 
-const queryParams &#x3D; {
-  &quot;query&quot;: &quot;New York&quot;,
-  &quot;sort&quot;: &quot;popular&quot;,
-  &quot;orientation&quot;: &quot;horizontal&quot;
+const queryParams = {
+  "query": "New York",
+  "sort": "popular",
+  "orientation": "horizontal"
 };
 
 imagesApi.searchImages(queryParams)
-  .then(({ data }) &#x3D;&gt; {
+  .then(({ data }) => {
     console.log(data);
   })
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -2271,265 +2271,265 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;spellcheck_info&quot; : &quot;{}&quot;,
-  &quot;per_page&quot; : 3,
-  &quot;data&quot; : [ {
-    &quot;has_property_release&quot; : true,
-    &quot;model_releases&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+  "spellcheck_info" : "{}",
+  "per_page" : 3,
+  "data" : [ {
+    "has_property_release" : true,
+    "model_releases" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;models&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+    "models" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;added_date&quot; : &quot;2000-01-23&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;affiliate_url&quot; : &quot;http://example.com/aeiou&quot;,
-    &quot;is_illustration&quot; : true,
-    &quot;url&quot; : &quot;url&quot;,
-    &quot;is_adult&quot; : true,
-    &quot;releases&quot; : [ &quot;releases&quot;, &quot;releases&quot; ],
-    &quot;assets&quot; : {
-      &quot;preview&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+    "keywords" : [ "keywords", "keywords" ],
+    "added_date" : "2000-01-23",
+    "description" : "description",
+    "affiliate_url" : "http://example.com/aeiou",
+    "is_illustration" : true,
+    "url" : "url",
+    "is_adult" : true,
+    "releases" : [ "releases", "releases" ],
+    "assets" : {
+      "preview" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;supersize_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "supersize_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;preview_1000&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "preview_1000" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;small_thumb&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "small_thumb" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;vector_eps&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "vector_eps" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;preview_1500&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "preview_1500" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;large_thumb&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "large_thumb" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;huge_tiff&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "huge_tiff" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;medium_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;small_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "small_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;supersize_tiff&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "supersize_tiff" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;huge_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "huge_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       }
     },
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;id&quot;
+    "contributor" : {
+      "id" : "id"
     },
-    &quot;is_editorial&quot; : true,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;has_model_release&quot; : true,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+    "is_editorial" : true,
+    "media_type" : "media_type",
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "has_model_release" : true,
+    "categories" : [ {
+      "name" : "name",
+      "id" : "id"
     }, {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+      "name" : "name",
+      "id" : "id"
     } ],
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;image_type&quot; : &quot;image_type&quot;
+    "id" : "id",
+    "image_type" : "image_type"
   }, {
-    &quot;has_property_release&quot; : true,
-    &quot;model_releases&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+    "has_property_release" : true,
+    "model_releases" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;models&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+    "models" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;added_date&quot; : &quot;2000-01-23&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;affiliate_url&quot; : &quot;http://example.com/aeiou&quot;,
-    &quot;is_illustration&quot; : true,
-    &quot;url&quot; : &quot;url&quot;,
-    &quot;is_adult&quot; : true,
-    &quot;releases&quot; : [ &quot;releases&quot;, &quot;releases&quot; ],
-    &quot;assets&quot; : {
-      &quot;preview&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+    "keywords" : [ "keywords", "keywords" ],
+    "added_date" : "2000-01-23",
+    "description" : "description",
+    "affiliate_url" : "http://example.com/aeiou",
+    "is_illustration" : true,
+    "url" : "url",
+    "is_adult" : true,
+    "releases" : [ "releases", "releases" ],
+    "assets" : {
+      "preview" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;supersize_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "supersize_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;preview_1000&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "preview_1000" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;small_thumb&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "small_thumb" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;vector_eps&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "vector_eps" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;preview_1500&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "preview_1500" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;large_thumb&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "large_thumb" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;huge_tiff&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "huge_tiff" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;medium_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;small_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "small_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;supersize_tiff&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "supersize_tiff" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;huge_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "huge_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       }
     },
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;id&quot;
+    "contributor" : {
+      "id" : "id"
     },
-    &quot;is_editorial&quot; : true,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;has_model_release&quot; : true,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+    "is_editorial" : true,
+    "media_type" : "media_type",
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "has_model_release" : true,
+    "categories" : [ {
+      "name" : "name",
+      "id" : "id"
     }, {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+      "name" : "name",
+      "id" : "id"
     } ],
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;image_type&quot; : &quot;image_type&quot;
+    "id" : "id",
+    "image_type" : "image_type"
   } ],
-  &quot;total_count&quot; : 2,
-  &quot;page&quot; : 9,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;search_id&quot; : &quot;search_id&quot;
+  "total_count" : 2,
+  "page" : 9,
+  "message" : "message",
+  "search_id" : "search_id"
 }
 
 <a name="uploadEphemeralImage"></a>
@@ -2543,32 +2543,32 @@ This endpoint uploads an image for reverse image search. The image must be in JP
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi &#x3D; new sstk.ImagesApi();
+const imagesApi = new sstk.ImagesApi();
 
-const imageFile &#x3D; fs.readFileSync(&quot;./myImage.jpg&quot;);
-const base64File &#x3D; Buffer.from(imageFile).toString(&quot;base64&quot;);
+const imageFile = fs.readFileSync("./myImage.jpg");
+const base64File = Buffer.from(imageFile).toString("base64");
 
-const body &#x3D; new sstk.ImageCreateRequest(base64File);
+const body = new sstk.ImageCreateRequest(base64File);
 
-const queryParams &#x3D; {
-  &quot;page&quot;: 1,
-  &quot;per_page&quot;: 20,
-  &quot;view&quot;: &quot;minimal&quot;
+const queryParams = {
+  "page": 1,
+  "per_page": 20,
+  "view": "minimal"
 };
 
 imagesApi.uploadEphemeralImage(body)
-  .then((data) &#x3D;&gt; {
+  .then((data) => {
     console.log(data.id);
     return imagesApi.getSimilarImages(data.id, queryParams);
   })
-  .then((similarImageData) &#x3D;&gt; {
+  .then((similarImageData) => {
     console.log(similarImageData);
   })
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -2600,6 +2600,6 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;id&quot; : &quot;id&quot;
+  "id" : "id"
 }
 

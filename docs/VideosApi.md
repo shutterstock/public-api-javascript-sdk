@@ -33,26 +33,26 @@ This endpoint adds one or more videos to a collection by video IDs.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi &#x3D; new sstk.VideosApi();
+const videosApi = new sstk.VideosApi();
 
-const collectionId &#x3D; &quot;17555176&quot;; // Collection ID
+const collectionId = "17555176"; // Collection ID
 
 // Array of videos to add
-const body &#x3D; {
-  &quot;items&quot;: [
+const body = {
+  "items": [
     {
-      &quot;id&quot;: &quot;10120264&quot;,
-      &quot;media_type&quot;: &quot;video&quot;
+      "id": "10120264",
+      "media_type": "video"
     }
   ]
 };
 
 videosApi.addLightboxItems(collectionId, body)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -96,18 +96,18 @@ This endpoint creates one or more collections (clipboxes). To add videos to coll
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi &#x3D; new sstk.VideosApi();
+const videosApi = new sstk.VideosApi();
 
-const body &#x3D; {
-  &quot;name&quot;: &quot;New collection name&quot;
+const body = {
+  "name": "New collection name"
 };
 
 videosApi.createClipbox(body)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -141,7 +141,7 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;id&quot; : &quot;48433105&quot;
+  "id" : "48433105"
 }
 
 <a name="deleteClipbox"></a>
@@ -155,16 +155,16 @@ This endpoint deletes a collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi &#x3D; new sstk.VideosApi();
+const videosApi = new sstk.VideosApi();
 
-const collectionId &#x3D; &quot;17555176&quot;;
+const collectionId = "17555176";
 
 videosApi.deleteClipbox(collectionId)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -207,23 +207,23 @@ This endpoint removes one or more videos from a collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi &#x3D; new sstk.VideosApi();
+const videosApi = new sstk.VideosApi();
 
-const collectionId &#x3D; &quot;17555176&quot;;
+const collectionId = "17555176";
 
 // Array of videos to remove
-const videosToRemove &#x3D; {
-  &quot;item_id&quot;: [
-    &quot;10120264&quot;
+const videosToRemove = {
+  "item_id": [
+    "10120264"
   ]
 };
 
 videosApi.deleteClipboxItems(collectionId, videosToRemove)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -267,21 +267,21 @@ This endpoint redownloads videos that you have already received a license for.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi &#x3D; new sstk.VideosApi();
+const videosApi = new sstk.VideosApi();
 
-const licenseId &#x3D; &quot;i1188641347&quot;;
+const licenseId = "i1188641347";
 
-const body &#x3D; {};
+const body = {};
 
 videosApi.downloadVideos(licenseId, body)
-  .then((data) &#x3D;&gt; {
+  .then((data) => {
     console.log(data);
   })
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -316,7 +316,7 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;url&quot; : &quot;url&quot;
+  "url" : "url"
 }
 
 <a name="getClipbox"></a>
@@ -377,19 +377,19 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;created_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;updated_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;share_url&quot; : &quot;share_url&quot;,
-  &quot;items_updated_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;name&quot; : &quot;name&quot;,
-  &quot;id&quot; : &quot;id&quot;,
-  &quot;share_code&quot; : &quot;share_code&quot;,
-  &quot;cover_item&quot; : {
-    &quot;added_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;id&quot; : &quot;id&quot;
+  "created_time" : "2000-01-23T04:56:07.000+00:00",
+  "updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "share_url" : "share_url",
+  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "share_code" : "share_code",
+  "cover_item" : {
+    "added_time" : "2000-01-23T04:56:07.000+00:00",
+    "media_type" : "media_type",
+    "id" : "id"
   },
-  &quot;total_item_count&quot; : 0
+  "total_item_count" : 0
 }
 
 <a name="getClipboxItems"></a>
@@ -458,17 +458,17 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;data&quot; : [ {
-    &quot;added_time&quot; : &quot;2016-08-18T18:52:59-04:00&quot;,
-    &quot;id&quot; : &quot;76688182&quot;,
-    &quot;media_type&quot; : &quot;audio&quot;
+  "data" : [ {
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "76688182",
+    "media_type" : "audio"
   }, {
-    &quot;added_time&quot; : &quot;2016-08-18T18:52:59-04:00&quot;,
-    &quot;id&quot; : &quot;40005859&quot;,
-    &quot;media_type&quot; : &quot;audio&quot;
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "40005859",
+    "media_type" : "audio"
   } ],
-  &quot;page&quot; : 1,
-  &quot;per_page&quot; : 100
+  "page" : 1,
+  "per_page" : 100
 }
 
 <a name="getClipboxList"></a>
@@ -532,36 +532,36 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;data&quot; : [ {
-    &quot;created_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;,
-    &quot;id&quot; : &quot;5747953&quot;,
-    &quot;name&quot; : &quot;Test Collection cdad&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;
+  "data" : [ {
+    "created_time" : "2014-11-05T19:29:56-05:00",
+    "id" : "5747953",
+    "name" : "Test Collection cdad",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:56-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;,
-    &quot;id&quot; : &quot;5747955&quot;,
-    &quot;name&quot; : &quot;Test Collection ff5f&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;
+    "created_time" : "2014-11-05T19:29:56-05:00",
+    "id" : "5747955",
+    "name" : "Test Collection ff5f",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:56-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:29:58-05:00&quot;,
-    &quot;id&quot; : &quot;5747957&quot;,
-    &quot;name&quot; : &quot;Updated Collection ebc4&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:29:58-05:00&quot;
+    "created_time" : "2014-11-05T19:29:58-05:00",
+    "id" : "5747957",
+    "name" : "Updated Collection ebc4",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:58-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;,
-    &quot;id&quot; : &quot;5747971&quot;,
-    &quot;name&quot; : &quot;Test Collection 0072&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;
+    "created_time" : "2014-11-05T19:32:13-05:00",
+    "id" : "5747971",
+    "name" : "Test Collection 0072",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:32:13-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;,
-    &quot;id&quot; : &quot;5747973&quot;,
-    &quot;name&quot; : &quot;Test Collection d332&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;
+    "created_time" : "2014-11-05T19:32:13-05:00",
+    "id" : "5747973",
+    "name" : "Test Collection d332",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:32:13-05:00"
   } ]
 }
 
@@ -632,189 +632,189 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;per_page&quot; : 9,
-  &quot;data&quot; : [ {
-    &quot;has_property_release&quot; : true,
-    &quot;aspect_ratio&quot; : &quot;aspect_ratio&quot;,
-    &quot;models&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+  "per_page" : 9,
+  "data" : [ {
+    "has_property_release" : true,
+    "aspect_ratio" : "aspect_ratio",
+    "models" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;added_date&quot; : &quot;2000-01-23&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;affiliate_url&quot; : &quot;http://example.com/aeiou&quot;,
-    &quot;url&quot; : &quot;url&quot;,
-    &quot;is_adult&quot; : true,
-    &quot;duration&quot; : 2.3021358869347654518833223846741020679473876953125,
-    &quot;assets&quot; : {
-      &quot;thumb_webm&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+    "keywords" : [ "keywords", "keywords" ],
+    "added_date" : "2000-01-23",
+    "description" : "description",
+    "affiliate_url" : "http://example.com/aeiou",
+    "url" : "url",
+    "is_adult" : true,
+    "duration" : 2.3021358869347654518833223846741020679473876953125,
+    "assets" : {
+      "thumb_webm" : {
+        "url" : "url"
       },
-      &quot;sd&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "sd" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;preview_jpg&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_jpg" : {
+        "url" : "url"
       },
-      &quot;preview_mp4&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_mp4" : {
+        "url" : "url"
       },
-      &quot;web&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "web" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;4k&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "4k" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;thumb_jpgs&quot; : {
-        &quot;urls&quot; : [ &quot;urls&quot;, &quot;urls&quot; ]
+      "thumb_jpgs" : {
+        "urls" : [ "urls", "urls" ]
       },
-      &quot;preview_webm&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_webm" : {
+        "url" : "url"
       },
-      &quot;hd&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "hd" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;thumb_jpg&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "thumb_jpg" : {
+        "url" : "url"
       },
-      &quot;thumb_mp4&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "thumb_mp4" : {
+        "url" : "url"
       }
     },
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;id&quot;
+    "contributor" : {
+      "id" : "id"
     },
-    &quot;is_editorial&quot; : true,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;has_model_release&quot; : true,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+    "is_editorial" : true,
+    "media_type" : "media_type",
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "has_model_release" : true,
+    "categories" : [ {
+      "name" : "name",
+      "id" : "id"
     }, {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+      "name" : "name",
+      "id" : "id"
     } ],
-    &quot;id&quot; : &quot;id&quot;
+    "id" : "id"
   }, {
-    &quot;has_property_release&quot; : true,
-    &quot;aspect_ratio&quot; : &quot;aspect_ratio&quot;,
-    &quot;models&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+    "has_property_release" : true,
+    "aspect_ratio" : "aspect_ratio",
+    "models" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;added_date&quot; : &quot;2000-01-23&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;affiliate_url&quot; : &quot;http://example.com/aeiou&quot;,
-    &quot;url&quot; : &quot;url&quot;,
-    &quot;is_adult&quot; : true,
-    &quot;duration&quot; : 2.3021358869347654518833223846741020679473876953125,
-    &quot;assets&quot; : {
-      &quot;thumb_webm&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+    "keywords" : [ "keywords", "keywords" ],
+    "added_date" : "2000-01-23",
+    "description" : "description",
+    "affiliate_url" : "http://example.com/aeiou",
+    "url" : "url",
+    "is_adult" : true,
+    "duration" : 2.3021358869347654518833223846741020679473876953125,
+    "assets" : {
+      "thumb_webm" : {
+        "url" : "url"
       },
-      &quot;sd&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "sd" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;preview_jpg&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_jpg" : {
+        "url" : "url"
       },
-      &quot;preview_mp4&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_mp4" : {
+        "url" : "url"
       },
-      &quot;web&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "web" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;4k&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "4k" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;thumb_jpgs&quot; : {
-        &quot;urls&quot; : [ &quot;urls&quot;, &quot;urls&quot; ]
+      "thumb_jpgs" : {
+        "urls" : [ "urls", "urls" ]
       },
-      &quot;preview_webm&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_webm" : {
+        "url" : "url"
       },
-      &quot;hd&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "hd" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;thumb_jpg&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "thumb_jpg" : {
+        "url" : "url"
       },
-      &quot;thumb_mp4&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "thumb_mp4" : {
+        "url" : "url"
       }
     },
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;id&quot;
+    "contributor" : {
+      "id" : "id"
     },
-    &quot;is_editorial&quot; : true,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;has_model_release&quot; : true,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+    "is_editorial" : true,
+    "media_type" : "media_type",
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "has_model_release" : true,
+    "categories" : [ {
+      "name" : "name",
+      "id" : "id"
     }, {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+      "name" : "name",
+      "id" : "id"
     } ],
-    &quot;id&quot; : &quot;id&quot;
+    "id" : "id"
   } ],
-  &quot;total_count&quot; : 3,
-  &quot;page&quot; : 7,
-  &quot;message&quot; : &quot;message&quot;
+  "total_count" : 3,
+  "page" : 7,
+  "message" : "message"
 }
 
 <a name="getVideo"></a>
@@ -880,94 +880,94 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;has_property_release&quot; : true,
-  &quot;aspect_ratio&quot; : &quot;aspect_ratio&quot;,
-  &quot;models&quot; : [ {
-    &quot;id&quot; : &quot;id&quot;
+  "has_property_release" : true,
+  "aspect_ratio" : "aspect_ratio",
+  "models" : [ {
+    "id" : "id"
   }, {
-    &quot;id&quot; : &quot;id&quot;
+    "id" : "id"
   } ],
-  &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-  &quot;added_date&quot; : &quot;2000-01-23&quot;,
-  &quot;description&quot; : &quot;description&quot;,
-  &quot;affiliate_url&quot; : &quot;http://example.com/aeiou&quot;,
-  &quot;url&quot; : &quot;url&quot;,
-  &quot;is_adult&quot; : true,
-  &quot;duration&quot; : 2.3021358869347654518833223846741020679473876953125,
-  &quot;assets&quot; : {
-    &quot;thumb_webm&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+  "keywords" : [ "keywords", "keywords" ],
+  "added_date" : "2000-01-23",
+  "description" : "description",
+  "affiliate_url" : "http://example.com/aeiou",
+  "url" : "url",
+  "is_adult" : true,
+  "duration" : 2.3021358869347654518833223846741020679473876953125,
+  "assets" : {
+    "thumb_webm" : {
+      "url" : "url"
     },
-    &quot;sd&quot; : {
-      &quot;is_licensable&quot; : true,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-      &quot;width&quot; : 5,
-      &quot;display_name&quot; : &quot;display_name&quot;,
-      &quot;file_size&quot; : 6,
-      &quot;height&quot; : 5
+    "sd" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "fps" : 1.46581298050294517310021547018550336360931396484375,
+      "width" : 5,
+      "display_name" : "display_name",
+      "file_size" : 6,
+      "height" : 5
     },
-    &quot;preview_jpg&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+    "preview_jpg" : {
+      "url" : "url"
     },
-    &quot;preview_mp4&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+    "preview_mp4" : {
+      "url" : "url"
     },
-    &quot;web&quot; : {
-      &quot;is_licensable&quot; : true,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-      &quot;width&quot; : 5,
-      &quot;display_name&quot; : &quot;display_name&quot;,
-      &quot;file_size&quot; : 6,
-      &quot;height&quot; : 5
+    "web" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "fps" : 1.46581298050294517310021547018550336360931396484375,
+      "width" : 5,
+      "display_name" : "display_name",
+      "file_size" : 6,
+      "height" : 5
     },
-    &quot;4k&quot; : {
-      &quot;is_licensable&quot; : true,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-      &quot;width&quot; : 5,
-      &quot;display_name&quot; : &quot;display_name&quot;,
-      &quot;file_size&quot; : 6,
-      &quot;height&quot; : 5
+    "4k" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "fps" : 1.46581298050294517310021547018550336360931396484375,
+      "width" : 5,
+      "display_name" : "display_name",
+      "file_size" : 6,
+      "height" : 5
     },
-    &quot;thumb_jpgs&quot; : {
-      &quot;urls&quot; : [ &quot;urls&quot;, &quot;urls&quot; ]
+    "thumb_jpgs" : {
+      "urls" : [ "urls", "urls" ]
     },
-    &quot;preview_webm&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+    "preview_webm" : {
+      "url" : "url"
     },
-    &quot;hd&quot; : {
-      &quot;is_licensable&quot; : true,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-      &quot;width&quot; : 5,
-      &quot;display_name&quot; : &quot;display_name&quot;,
-      &quot;file_size&quot; : 6,
-      &quot;height&quot; : 5
+    "hd" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "fps" : 1.46581298050294517310021547018550336360931396484375,
+      "width" : 5,
+      "display_name" : "display_name",
+      "file_size" : 6,
+      "height" : 5
     },
-    &quot;thumb_jpg&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+    "thumb_jpg" : {
+      "url" : "url"
     },
-    &quot;thumb_mp4&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+    "thumb_mp4" : {
+      "url" : "url"
     }
   },
-  &quot;contributor&quot; : {
-    &quot;id&quot; : &quot;id&quot;
+  "contributor" : {
+    "id" : "id"
   },
-  &quot;is_editorial&quot; : true,
-  &quot;media_type&quot; : &quot;media_type&quot;,
-  &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-  &quot;has_model_release&quot; : true,
-  &quot;categories&quot; : [ {
-    &quot;name&quot; : &quot;name&quot;,
-    &quot;id&quot; : &quot;id&quot;
+  "is_editorial" : true,
+  "media_type" : "media_type",
+  "aspect" : 0.80082819046101150206595775671303272247314453125,
+  "has_model_release" : true,
+  "categories" : [ {
+    "name" : "name",
+    "id" : "id"
   }, {
-    &quot;name&quot; : &quot;name&quot;,
-    &quot;id&quot; : &quot;id&quot;
+    "name" : "name",
+    "id" : "id"
   } ],
-  &quot;id&quot; : &quot;id&quot;
+  "id" : "id"
 }
 
 <a name="getVideoCategories"></a>
@@ -1022,29 +1022,29 @@ This endpoint does not accept any parameters.
 ### Example response
 
 {
-  &quot;per_page&quot; : 6,
-  &quot;data&quot; : [ {
-    &quot;name&quot; : &quot;name&quot;,
-    &quot;id&quot; : &quot;id&quot;
+  "per_page" : 6,
+  "data" : [ {
+    "name" : "name",
+    "id" : "id"
   }, {
-    &quot;name&quot; : &quot;name&quot;,
-    &quot;id&quot; : &quot;id&quot;
+    "name" : "name",
+    "id" : "id"
   } ],
-  &quot;total_count&quot; : 1,
-  &quot;page&quot; : 0,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 
@@ -1115,85 +1115,85 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;per_page&quot; : 6,
-  &quot;data&quot; : [ {
-    &quot;subscription_id&quot; : &quot;subscription_id&quot;,
-    &quot;image&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+  "per_page" : 6,
+  "data" : [ {
+    "subscription_id" : "subscription_id",
+    "image" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;license&quot; : &quot;license&quot;,
-    &quot;download_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;metadata&quot; : &quot;{}&quot;,
-    &quot;is_downloadable&quot; : true,
-    &quot;audio&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "license" : "license",
+    "download_time" : "2000-01-23T04:56:07.000+00:00",
+    "metadata" : "{}",
+    "is_downloadable" : true,
+    "audio" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;video&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "id" : "id",
+    "video" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;user&quot; : {
-      &quot;username&quot; : &quot;username&quot;
+    "user" : {
+      "username" : "username"
     }
   }, {
-    &quot;subscription_id&quot; : &quot;subscription_id&quot;,
-    &quot;image&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "subscription_id" : "subscription_id",
+    "image" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;license&quot; : &quot;license&quot;,
-    &quot;download_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;metadata&quot; : &quot;{}&quot;,
-    &quot;is_downloadable&quot; : true,
-    &quot;audio&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "license" : "license",
+    "download_time" : "2000-01-23T04:56:07.000+00:00",
+    "metadata" : "{}",
+    "is_downloadable" : true,
+    "audio" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;video&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "id" : "id",
+    "video" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;user&quot; : {
-      &quot;username&quot; : &quot;username&quot;
+    "user" : {
+      "username" : "username"
     }
   } ],
-  &quot;total_count&quot; : 1,
-  &quot;page&quot; : 0,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 
@@ -1260,201 +1260,201 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;per_page&quot; : 6,
-  &quot;data&quot; : [ {
-    &quot;has_property_release&quot; : true,
-    &quot;aspect_ratio&quot; : &quot;aspect_ratio&quot;,
-    &quot;models&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+  "per_page" : 6,
+  "data" : [ {
+    "has_property_release" : true,
+    "aspect_ratio" : "aspect_ratio",
+    "models" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;added_date&quot; : &quot;2000-01-23&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;affiliate_url&quot; : &quot;http://example.com/aeiou&quot;,
-    &quot;url&quot; : &quot;url&quot;,
-    &quot;is_adult&quot; : true,
-    &quot;duration&quot; : 2.3021358869347654518833223846741020679473876953125,
-    &quot;assets&quot; : {
-      &quot;thumb_webm&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+    "keywords" : [ "keywords", "keywords" ],
+    "added_date" : "2000-01-23",
+    "description" : "description",
+    "affiliate_url" : "http://example.com/aeiou",
+    "url" : "url",
+    "is_adult" : true,
+    "duration" : 2.3021358869347654518833223846741020679473876953125,
+    "assets" : {
+      "thumb_webm" : {
+        "url" : "url"
       },
-      &quot;sd&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "sd" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;preview_jpg&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_jpg" : {
+        "url" : "url"
       },
-      &quot;preview_mp4&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_mp4" : {
+        "url" : "url"
       },
-      &quot;web&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "web" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;4k&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "4k" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;thumb_jpgs&quot; : {
-        &quot;urls&quot; : [ &quot;urls&quot;, &quot;urls&quot; ]
+      "thumb_jpgs" : {
+        "urls" : [ "urls", "urls" ]
       },
-      &quot;preview_webm&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_webm" : {
+        "url" : "url"
       },
-      &quot;hd&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "hd" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;thumb_jpg&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "thumb_jpg" : {
+        "url" : "url"
       },
-      &quot;thumb_mp4&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "thumb_mp4" : {
+        "url" : "url"
       }
     },
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;id&quot;
+    "contributor" : {
+      "id" : "id"
     },
-    &quot;is_editorial&quot; : true,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;has_model_release&quot; : true,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+    "is_editorial" : true,
+    "media_type" : "media_type",
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "has_model_release" : true,
+    "categories" : [ {
+      "name" : "name",
+      "id" : "id"
     }, {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+      "name" : "name",
+      "id" : "id"
     } ],
-    &quot;id&quot; : &quot;id&quot;
+    "id" : "id"
   }, {
-    &quot;has_property_release&quot; : true,
-    &quot;aspect_ratio&quot; : &quot;aspect_ratio&quot;,
-    &quot;models&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+    "has_property_release" : true,
+    "aspect_ratio" : "aspect_ratio",
+    "models" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;added_date&quot; : &quot;2000-01-23&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;affiliate_url&quot; : &quot;http://example.com/aeiou&quot;,
-    &quot;url&quot; : &quot;url&quot;,
-    &quot;is_adult&quot; : true,
-    &quot;duration&quot; : 2.3021358869347654518833223846741020679473876953125,
-    &quot;assets&quot; : {
-      &quot;thumb_webm&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+    "keywords" : [ "keywords", "keywords" ],
+    "added_date" : "2000-01-23",
+    "description" : "description",
+    "affiliate_url" : "http://example.com/aeiou",
+    "url" : "url",
+    "is_adult" : true,
+    "duration" : 2.3021358869347654518833223846741020679473876953125,
+    "assets" : {
+      "thumb_webm" : {
+        "url" : "url"
       },
-      &quot;sd&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "sd" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;preview_jpg&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_jpg" : {
+        "url" : "url"
       },
-      &quot;preview_mp4&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_mp4" : {
+        "url" : "url"
       },
-      &quot;web&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "web" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;4k&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "4k" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;thumb_jpgs&quot; : {
-        &quot;urls&quot; : [ &quot;urls&quot;, &quot;urls&quot; ]
+      "thumb_jpgs" : {
+        "urls" : [ "urls", "urls" ]
       },
-      &quot;preview_webm&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_webm" : {
+        "url" : "url"
       },
-      &quot;hd&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "hd" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;thumb_jpg&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "thumb_jpg" : {
+        "url" : "url"
       },
-      &quot;thumb_mp4&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "thumb_mp4" : {
+        "url" : "url"
       }
     },
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;id&quot;
+    "contributor" : {
+      "id" : "id"
     },
-    &quot;is_editorial&quot; : true,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;has_model_release&quot; : true,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+    "is_editorial" : true,
+    "media_type" : "media_type",
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "has_model_release" : true,
+    "categories" : [ {
+      "name" : "name",
+      "id" : "id"
     }, {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+      "name" : "name",
+      "id" : "id"
     } ],
-    &quot;id&quot; : &quot;id&quot;
+    "id" : "id"
   } ],
-  &quot;total_count&quot; : 1,
-  &quot;page&quot; : 0,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 
@@ -1469,33 +1469,33 @@ This endpoint gets licenses for one or more videos. You must specify the video I
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi &#x3D; new sstk.VideosApi();
+const videosApi = new sstk.VideosApi();
 
-const body &#x3D; {
-  &quot;videos&quot;: [
+const body = {
+  "videos": [
     {
-      &quot;video_id&quot;: &quot;419235589&quot;
+      "video_id": "419235589"
     },
     {
-      &quot;video_id&quot;: &quot;1079756147&quot;
+      "video_id": "1079756147"
     }
   ]
 };
 
-const queryParams &#x3D; {
-  &quot;subscription_id&quot;: SHUTTERSTOCK_SUBSCRIPTION_ID,
-  &quot;size&quot;: &quot;web&quot;
+const queryParams = {
+  "subscription_id": SHUTTERSTOCK_SUBSCRIPTION_ID,
+  "size": "web"
 };
 
 videosApi.searchVideos(body, queryParams)
-  .then(({ data }) &#x3D;&gt; {
+  .then(({ data }) => {
     console.log(data);
   })
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -1534,45 +1534,45 @@ Required scopes:
 ### Example response
 
 {
-  &quot;per_page&quot; : 1,
-  &quot;data&quot; : [ {
-    &quot;download&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+  "per_page" : 1,
+  "data" : [ {
+    "download" : {
+      "url" : "url"
     },
-    &quot;price&quot; : {
-      &quot;local_amount&quot; : 6.02745618307040320615897144307382404804229736328125,
-      &quot;local_currency&quot; : &quot;local_currency&quot;
+    "price" : {
+      "local_amount" : 6.02745618307040320615897144307382404804229736328125,
+      "local_currency" : "local_currency"
     },
-    &quot;allotment_charge&quot; : 0,
-    &quot;error&quot; : &quot;error&quot;,
-    &quot;video_id&quot; : &quot;video_id&quot;
+    "allotment_charge" : 0,
+    "error" : "error",
+    "video_id" : "video_id"
   }, {
-    &quot;download&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+    "download" : {
+      "url" : "url"
     },
-    &quot;price&quot; : {
-      &quot;local_amount&quot; : 6.02745618307040320615897144307382404804229736328125,
-      &quot;local_currency&quot; : &quot;local_currency&quot;
+    "price" : {
+      "local_amount" : 6.02745618307040320615897144307382404804229736328125,
+      "local_currency" : "local_currency"
     },
-    &quot;allotment_charge&quot; : 0,
-    &quot;error&quot; : &quot;error&quot;,
-    &quot;video_id&quot; : &quot;video_id&quot;
+    "allotment_charge" : 0,
+    "error" : "error",
+    "video_id" : "video_id"
   } ],
-  &quot;total_count&quot; : 5,
-  &quot;page&quot; : 6,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 5,
+  "page" : 6,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 
@@ -1587,20 +1587,20 @@ This endpoint sets a new name for a collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi &#x3D; new sstk.VideosApi();
+const videosApi = new sstk.VideosApi();
 
-const collectionId &#x3D; &quot;186765119&quot;;
+const collectionId = "186765119";
 
-const body &#x3D; {
-  &quot;name&quot;: &quot;My new collection name&quot;
+const body = {
+  "name": "My new collection name"
 };
 
 videosApi.renameClipbox(collectionId, body)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -1644,23 +1644,23 @@ This endpoint searches for videos. If you specify more than one search parameter
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi &#x3D; new sstk.VideosApi();
+const videosApi = new sstk.VideosApi();
 
-const queryParams &#x3D; {
-  &quot;query&quot;: &quot;hot air balloon&quot;,
-  &quot;duration_from&quot;: 30,
-  &quot;sort&quot;: &quot;popular&quot;
+const queryParams = {
+  "query": "hot air balloon",
+  "duration_from": 30,
+  "sort": "popular"
 };
 
 videosApi.searchVideos(queryParams)
-  .then(({ data }) &#x3D;&gt; {
+  .then(({ data }) => {
     console.log(data);
   })
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -1718,188 +1718,188 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;per_page&quot; : 9,
-  &quot;data&quot; : [ {
-    &quot;has_property_release&quot; : true,
-    &quot;aspect_ratio&quot; : &quot;aspect_ratio&quot;,
-    &quot;models&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+  "per_page" : 9,
+  "data" : [ {
+    "has_property_release" : true,
+    "aspect_ratio" : "aspect_ratio",
+    "models" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;added_date&quot; : &quot;2000-01-23&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;affiliate_url&quot; : &quot;http://example.com/aeiou&quot;,
-    &quot;url&quot; : &quot;url&quot;,
-    &quot;is_adult&quot; : true,
-    &quot;duration&quot; : 2.3021358869347654518833223846741020679473876953125,
-    &quot;assets&quot; : {
-      &quot;thumb_webm&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+    "keywords" : [ "keywords", "keywords" ],
+    "added_date" : "2000-01-23",
+    "description" : "description",
+    "affiliate_url" : "http://example.com/aeiou",
+    "url" : "url",
+    "is_adult" : true,
+    "duration" : 2.3021358869347654518833223846741020679473876953125,
+    "assets" : {
+      "thumb_webm" : {
+        "url" : "url"
       },
-      &quot;sd&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "sd" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;preview_jpg&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_jpg" : {
+        "url" : "url"
       },
-      &quot;preview_mp4&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_mp4" : {
+        "url" : "url"
       },
-      &quot;web&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "web" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;4k&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "4k" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;thumb_jpgs&quot; : {
-        &quot;urls&quot; : [ &quot;urls&quot;, &quot;urls&quot; ]
+      "thumb_jpgs" : {
+        "urls" : [ "urls", "urls" ]
       },
-      &quot;preview_webm&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_webm" : {
+        "url" : "url"
       },
-      &quot;hd&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "hd" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;thumb_jpg&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "thumb_jpg" : {
+        "url" : "url"
       },
-      &quot;thumb_mp4&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "thumb_mp4" : {
+        "url" : "url"
       }
     },
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;id&quot;
+    "contributor" : {
+      "id" : "id"
     },
-    &quot;is_editorial&quot; : true,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;has_model_release&quot; : true,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+    "is_editorial" : true,
+    "media_type" : "media_type",
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "has_model_release" : true,
+    "categories" : [ {
+      "name" : "name",
+      "id" : "id"
     }, {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+      "name" : "name",
+      "id" : "id"
     } ],
-    &quot;id&quot; : &quot;id&quot;
+    "id" : "id"
   }, {
-    &quot;has_property_release&quot; : true,
-    &quot;aspect_ratio&quot; : &quot;aspect_ratio&quot;,
-    &quot;models&quot; : [ {
-      &quot;id&quot; : &quot;id&quot;
+    "has_property_release" : true,
+    "aspect_ratio" : "aspect_ratio",
+    "models" : [ {
+      "id" : "id"
     }, {
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     } ],
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;added_date&quot; : &quot;2000-01-23&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;affiliate_url&quot; : &quot;http://example.com/aeiou&quot;,
-    &quot;url&quot; : &quot;url&quot;,
-    &quot;is_adult&quot; : true,
-    &quot;duration&quot; : 2.3021358869347654518833223846741020679473876953125,
-    &quot;assets&quot; : {
-      &quot;thumb_webm&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+    "keywords" : [ "keywords", "keywords" ],
+    "added_date" : "2000-01-23",
+    "description" : "description",
+    "affiliate_url" : "http://example.com/aeiou",
+    "url" : "url",
+    "is_adult" : true,
+    "duration" : 2.3021358869347654518833223846741020679473876953125,
+    "assets" : {
+      "thumb_webm" : {
+        "url" : "url"
       },
-      &quot;sd&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "sd" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;preview_jpg&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_jpg" : {
+        "url" : "url"
       },
-      &quot;preview_mp4&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_mp4" : {
+        "url" : "url"
       },
-      &quot;web&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "web" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;4k&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "4k" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;thumb_jpgs&quot; : {
-        &quot;urls&quot; : [ &quot;urls&quot;, &quot;urls&quot; ]
+      "thumb_jpgs" : {
+        "urls" : [ "urls", "urls" ]
       },
-      &quot;preview_webm&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "preview_webm" : {
+        "url" : "url"
       },
-      &quot;hd&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;fps&quot; : 1.46581298050294517310021547018550336360931396484375,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;file_size&quot; : 6,
-        &quot;height&quot; : 5
+      "hd" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "fps" : 1.46581298050294517310021547018550336360931396484375,
+        "width" : 5,
+        "display_name" : "display_name",
+        "file_size" : 6,
+        "height" : 5
       },
-      &quot;thumb_jpg&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "thumb_jpg" : {
+        "url" : "url"
       },
-      &quot;thumb_mp4&quot; : {
-        &quot;url&quot; : &quot;url&quot;
+      "thumb_mp4" : {
+        "url" : "url"
       }
     },
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;id&quot;
+    "contributor" : {
+      "id" : "id"
     },
-    &quot;is_editorial&quot; : true,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;has_model_release&quot; : true,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+    "is_editorial" : true,
+    "media_type" : "media_type",
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "has_model_release" : true,
+    "categories" : [ {
+      "name" : "name",
+      "id" : "id"
     }, {
-      &quot;name&quot; : &quot;name&quot;,
-      &quot;id&quot; : &quot;id&quot;
+      "name" : "name",
+      "id" : "id"
     } ],
-    &quot;id&quot; : &quot;id&quot;
+    "id" : "id"
   } ],
-  &quot;total_count&quot; : 3,
-  &quot;page&quot; : 7,
-  &quot;message&quot; : &quot;message&quot;
+  "total_count" : 3,
+  "page" : 7,
+  "message" : "message"
 }
 

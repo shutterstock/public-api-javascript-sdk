@@ -31,27 +31,27 @@ This endpoint adds one or more tracks to a collection by track IDs.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi &#x3D; new sstk.AudioApi();
+const audioApi = new sstk.AudioApi();
 
-const collectionId &#x3D; &quot;48433115&quot;;
+const collectionId = "48433115";
 
-const body &#x3D; {
-  &quot;items&quot;: [
+const body = {
+  "items": [
     {
-      &quot;id&quot;: &quot;442583&quot;
+      "id": "442583"
     },
     {
-      &quot;id&quot;: &quot;7491192&quot;
+      "id": "7491192"
     }
   ]
 };
 
 audioApi.addSoundboxItems(collectionId, body)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -95,18 +95,18 @@ This endpoint creates one or more collections (soundboxes). To add tracks, use &
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi &#x3D; new sstk.AudioApi();
+const audioApi = new sstk.AudioApi();
 
-const body &#x3D; {
-  &quot;name&quot;: &quot;Best rock music&quot;
+const body = {
+  "name": "Best rock music"
 };
 
 audioApi.createSoundbox(body)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -140,7 +140,7 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;id&quot; : &quot;48433105&quot;
+  "id" : "48433105"
 }
 
 <a name="deleteSoundbox"></a>
@@ -154,16 +154,16 @@ This endpoint deletes a collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi &#x3D; new sstk.AudioApi();
+const audioApi = new sstk.AudioApi();
 
-const collectionId &#x3D; &quot;48433107&quot;;
+const collectionId = "48433107";
 
 audioApi.deleteSoundbox(collectionId)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -206,24 +206,24 @@ This endpoint removes one or more tracks from a collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi &#x3D; new sstk.AudioApi();
+const audioApi = new sstk.AudioApi();
 
-const collectionId &#x3D; &quot;48433119&quot;;
+const collectionId = "48433119";
 
 // Array of tracks to remove
-const tracksToRemove &#x3D; {
-  &quot;item_id&quot;: [
-    &quot;76688182&quot;,
-    &quot;40005859&quot;
+const tracksToRemove = {
+  "item_id": [
+    "76688182",
+    "40005859"
   ]
 };
 
 audioApi.deleteSoundboxItems(collectionId, tracksToRemove)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -267,19 +267,19 @@ This endpoint redownloads tracks that you have already received a license for.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi &#x3D; new sstk.AudioApi();
+const audioApi = new sstk.AudioApi();
 
-const licenseId &#x3D; &quot;i1188641348&quot;; // license ID, not track ID
+const licenseId = "i1188641348"; // license ID, not track ID
 
 audioApi.downloadTracks(licenseId)
-  .then((data) &#x3D;&gt; {
+  .then((data) => {
     console.log(data);
   })
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -313,7 +313,7 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;url&quot; : &quot;url&quot;
+  "url" : "url"
 }
 
 <a name="getAudioLicenseList"></a>
@@ -375,85 +375,85 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;per_page&quot; : 6,
-  &quot;data&quot; : [ {
-    &quot;subscription_id&quot; : &quot;subscription_id&quot;,
-    &quot;image&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+  "per_page" : 6,
+  "data" : [ {
+    "subscription_id" : "subscription_id",
+    "image" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;license&quot; : &quot;license&quot;,
-    &quot;download_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;metadata&quot; : &quot;{}&quot;,
-    &quot;is_downloadable&quot; : true,
-    &quot;audio&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "license" : "license",
+    "download_time" : "2000-01-23T04:56:07.000+00:00",
+    "metadata" : "{}",
+    "is_downloadable" : true,
+    "audio" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;video&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "id" : "id",
+    "video" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;user&quot; : {
-      &quot;username&quot; : &quot;username&quot;
+    "user" : {
+      "username" : "username"
     }
   }, {
-    &quot;subscription_id&quot; : &quot;subscription_id&quot;,
-    &quot;image&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "subscription_id" : "subscription_id",
+    "image" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;license&quot; : &quot;license&quot;,
-    &quot;download_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;metadata&quot; : &quot;{}&quot;,
-    &quot;is_downloadable&quot; : true,
-    &quot;audio&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "license" : "license",
+    "download_time" : "2000-01-23T04:56:07.000+00:00",
+    "metadata" : "{}",
+    "is_downloadable" : true,
+    "audio" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;video&quot; : {
-      &quot;format&quot; : {
-        &quot;size&quot; : &quot;size&quot;,
-        &quot;format&quot; : &quot;format&quot;
+    "id" : "id",
+    "video" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
       },
-      &quot;id&quot; : &quot;id&quot;
+      "id" : "id"
     },
-    &quot;user&quot; : {
-      &quot;username&quot; : &quot;username&quot;
+    "user" : {
+      "username" : "username"
     }
   } ],
-  &quot;total_count&quot; : 1,
-  &quot;page&quot; : 0,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 
@@ -515,19 +515,19 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;created_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;updated_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;share_url&quot; : &quot;share_url&quot;,
-  &quot;items_updated_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;name&quot; : &quot;name&quot;,
-  &quot;id&quot; : &quot;id&quot;,
-  &quot;share_code&quot; : &quot;share_code&quot;,
-  &quot;cover_item&quot; : {
-    &quot;added_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;id&quot; : &quot;id&quot;
+  "created_time" : "2000-01-23T04:56:07.000+00:00",
+  "updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "share_url" : "share_url",
+  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "share_code" : "share_code",
+  "cover_item" : {
+    "added_time" : "2000-01-23T04:56:07.000+00:00",
+    "media_type" : "media_type",
+    "id" : "id"
   },
-  &quot;total_item_count&quot; : 0
+  "total_item_count" : 0
 }
 
 <a name="getSoundboxItems"></a>
@@ -596,17 +596,17 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;data&quot; : [ {
-    &quot;added_time&quot; : &quot;2016-08-18T18:52:59-04:00&quot;,
-    &quot;id&quot; : &quot;76688182&quot;,
-    &quot;media_type&quot; : &quot;audio&quot;
+  "data" : [ {
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "76688182",
+    "media_type" : "audio"
   }, {
-    &quot;added_time&quot; : &quot;2016-08-18T18:52:59-04:00&quot;,
-    &quot;id&quot; : &quot;40005859&quot;,
-    &quot;media_type&quot; : &quot;audio&quot;
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "40005859",
+    "media_type" : "audio"
   } ],
-  &quot;page&quot; : 1,
-  &quot;per_page&quot; : 100
+  "page" : 1,
+  "per_page" : 100
 }
 
 <a name="getSoundboxList"></a>
@@ -670,36 +670,36 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;data&quot; : [ {
-    &quot;created_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;,
-    &quot;id&quot; : &quot;5747953&quot;,
-    &quot;name&quot; : &quot;Test Collection cdad&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;
+  "data" : [ {
+    "created_time" : "2014-11-05T19:29:56-05:00",
+    "id" : "5747953",
+    "name" : "Test Collection cdad",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:56-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;,
-    &quot;id&quot; : &quot;5747955&quot;,
-    &quot;name&quot; : &quot;Test Collection ff5f&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;
+    "created_time" : "2014-11-05T19:29:56-05:00",
+    "id" : "5747955",
+    "name" : "Test Collection ff5f",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:56-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:29:58-05:00&quot;,
-    &quot;id&quot; : &quot;5747957&quot;,
-    &quot;name&quot; : &quot;Updated Collection ebc4&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:29:58-05:00&quot;
+    "created_time" : "2014-11-05T19:29:58-05:00",
+    "id" : "5747957",
+    "name" : "Updated Collection ebc4",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:58-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;,
-    &quot;id&quot; : &quot;5747971&quot;,
-    &quot;name&quot; : &quot;Test Collection 0072&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;
+    "created_time" : "2014-11-05T19:32:13-05:00",
+    "id" : "5747971",
+    "name" : "Test Collection 0072",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:32:13-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;,
-    &quot;id&quot; : &quot;5747973&quot;,
-    &quot;name&quot; : &quot;Test Collection d332&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;
+    "created_time" : "2014-11-05T19:32:13-05:00",
+    "id" : "5747973",
+    "name" : "Test Collection d332",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:32:13-05:00"
   } ]
 }
 
@@ -766,56 +766,56 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;added_date&quot; : &quot;2016-08-16&quot;,
-  &quot;album&quot; : {
-    &quot;id&quot; : &quot;&quot;,
-    &quot;title&quot; : &quot;&quot;
+  "added_date" : "2016-08-16",
+  "album" : {
+    "id" : "",
+    "title" : ""
   },
-  &quot;artists&quot; : [ {
-    &quot;name&quot; : &quot;Klimenko Music&quot;
+  "artists" : [ {
+    "name" : "Klimenko Music"
   } ],
-  &quot;assets&quot; : {
-    &quot;clean_audio&quot; : {
-      &quot;file_size&quot; : 35188408
+  "assets" : {
+    "clean_audio" : {
+      "file_size" : 35188408
     },
-    &quot;preview_mp3&quot; : {
-      &quot;file_size&quot; : 4400203,
-      &quot;url&quot; : &quot;https://ak.picdn.net/shutterstock/audio/442583/preview/preview.mp3&quot;
+    "preview_mp3" : {
+      "file_size" : 4400203,
+      "url" : "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.mp3"
     },
-    &quot;preview_ogg&quot; : {
-      &quot;file_size&quot; : 4453197,
-      &quot;url&quot; : &quot;https://ak.picdn.net/shutterstock/audio/442583/preview/preview.ogg&quot;
+    "preview_ogg" : {
+      "file_size" : 4453197,
+      "url" : "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.ogg"
     },
-    &quot;waveform&quot; : {
-      &quot;file_size&quot; : 18778,
-      &quot;url&quot; : &quot;https://ak.picdn.net/shutterstock/audio/442583/waveform/waveform.png&quot;
+    "waveform" : {
+      "file_size" : 18778,
+      "url" : "https://ak.picdn.net/shutterstock/audio/442583/waveform/waveform.png"
     }
   },
-  &quot;bpm&quot; : 110,
-  &quot;contributor&quot; : {
-    &quot;id&quot; : &quot;2847971&quot;
+  "bpm" : 110,
+  "contributor" : {
+    "id" : "2847971"
   },
-  &quot;description&quot; : &quot;Pulsing and feel-good, featuring soaring synthesizer, groovy synth bass drums and synth drums that create a euphoric, upbeat mood.&quot;,
-  &quot;duration&quot; : 183,
-  &quot;genres&quot; : [ &quot;Dance/Electronic&quot;, &quot;Electro Pop&quot;, &quot;Pop/Rock&quot; ],
-  &quot;id&quot; : &quot;442583&quot;,
-  &quot;instruments&quot; : [ &quot;Piano&quot;, &quot;Synth bass&quot;, &quot;Synth drums&quot;, &quot;Synthesizer&quot; ],
-  &quot;is_adult&quot; : false,
-  &quot;is_instrumental&quot; : true,
-  &quot;isrc&quot; : &quot;&quot;,
-  &quot;keywords&quot; : [ &quot;celebratory&quot;, &quot;chic&quot;, &quot;euphoric&quot;, &quot;good times&quot;, &quot;hip&quot;, &quot;optimistic&quot;, &quot;party&quot;, &quot;soaring&quot;, &quot;upbeat&quot; ],
-  &quot;language&quot; : &quot;en&quot;,
-  &quot;lyrics&quot; : &quot;&quot;,
-  &quot;media_type&quot; : &quot;audio&quot;,
-  &quot;moods&quot; : [ &quot;Bright&quot;, &quot;Confident&quot;, &quot;Fun&quot;, &quot;Happy&quot;, &quot;Inspiring&quot;, &quot;Optimistic&quot;, &quot;Playful&quot;, &quot;Sophisticated&quot;, &quot;Stylish&quot;, &quot;Uplifting&quot; ],
-  &quot;published_time&quot; : &quot;2016-08-16T14:30:03-04:00&quot;,
-  &quot;recording_version&quot; : &quot;&quot;,
-  &quot;releases&quot; : [ ],
-  &quot;similar_artists&quot; : [ ],
-  &quot;title&quot; : &quot;Another Tomorrow&quot;,
-  &quot;updated_time&quot; : &quot;2016-08-18T17:59:33-04:00&quot;,
-  &quot;vocal_description&quot; : &quot;&quot;,
-  &quot;url&quot; : &quot;https://www.shutterstock.com/music/track/another-tomorrow/442583&quot;
+  "description" : "Pulsing and feel-good, featuring soaring synthesizer, groovy synth bass drums and synth drums that create a euphoric, upbeat mood.",
+  "duration" : 183,
+  "genres" : [ "Dance/Electronic", "Electro Pop", "Pop/Rock" ],
+  "id" : "442583",
+  "instruments" : [ "Piano", "Synth bass", "Synth drums", "Synthesizer" ],
+  "is_adult" : false,
+  "is_instrumental" : true,
+  "isrc" : "",
+  "keywords" : [ "celebratory", "chic", "euphoric", "good times", "hip", "optimistic", "party", "soaring", "upbeat" ],
+  "language" : "en",
+  "lyrics" : "",
+  "media_type" : "audio",
+  "moods" : [ "Bright", "Confident", "Fun", "Happy", "Inspiring", "Optimistic", "Playful", "Sophisticated", "Stylish", "Uplifting" ],
+  "published_time" : "2016-08-16T14:30:03-04:00",
+  "recording_version" : "",
+  "releases" : [ ],
+  "similar_artists" : [ ],
+  "title" : "Another Tomorrow",
+  "updated_time" : "2016-08-18T17:59:33-04:00",
+  "vocal_description" : "",
+  "url" : "https://www.shutterstock.com/music/track/another-tomorrow/442583"
 }
 
 <a name="getTrackList"></a>
@@ -881,56 +881,56 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;data&quot; : [ {
-    &quot;added_date&quot; : &quot;2016-04-12&quot;,
-    &quot;album&quot; : {
-      &quot;id&quot; : &quot;&quot;,
-      &quot;title&quot; : &quot;&quot;
+  "data" : [ {
+    "added_date" : "2016-04-12",
+    "album" : {
+      "id" : "",
+      "title" : ""
     },
-    &quot;artists&quot; : [ {
-      &quot;name&quot; : &quot;Fin Productions&quot;
+    "artists" : [ {
+      "name" : "Fin Productions"
     } ],
-    &quot;assets&quot; : {
-      &quot;clean_audio&quot; : {
-        &quot;file_size&quot; : 30760372
+    "assets" : {
+      "clean_audio" : {
+        "file_size" : 30760372
       },
-      &quot;preview_mp3&quot; : {
-        &quot;file_size&quot; : 3846606,
-        &quot;url&quot; : &quot;https://ak.picdn.net/shutterstock/audio/434750/preview/preview.mp3&quot;
+      "preview_mp3" : {
+        "file_size" : 3846606,
+        "url" : "https://ak.picdn.net/shutterstock/audio/434750/preview/preview.mp3"
       },
-      &quot;preview_ogg&quot; : {
-        &quot;file_size&quot; : 4402608,
-        &quot;url&quot; : &quot;https://ak.picdn.net/shutterstock/audio/434750/preview/preview.ogg&quot;
+      "preview_ogg" : {
+        "file_size" : 4402608,
+        "url" : "https://ak.picdn.net/shutterstock/audio/434750/preview/preview.ogg"
       },
-      &quot;waveform&quot; : {
-        &quot;file_size&quot; : 19822,
-        &quot;url&quot; : &quot;https://ak.picdn.net/shutterstock/audio/434750/waveform/waveform.png&quot;
+      "waveform" : {
+        "file_size" : 19822,
+        "url" : "https://ak.picdn.net/shutterstock/audio/434750/waveform/waveform.png"
       }
     },
-    &quot;bpm&quot; : 100,
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;2847971&quot;
+    "bpm" : 100,
+    "contributor" : {
+      "id" : "2847971"
     },
-    &quot;description&quot; : &quot;Pulsing and feel-good, featuring slick electric guitar, synthesizer, bass, electronic drum pads and drums that create a positive, celebratory mood.&quot;,
-    &quot;duration&quot; : 160,
-    &quot;genres&quot; : [ &quot;Dance/Electronic&quot;, &quot;Electro Pop&quot;, &quot;Pop/Rock&quot; ],
-    &quot;id&quot; : &quot;434750&quot;,
-    &quot;instruments&quot; : [ &quot;Bass&quot;, &quot;Drums&quot;, &quot;Electric guitar&quot;, &quot;Pads&quot;, &quot;Percussion&quot;, &quot;Synthesizer&quot; ],
-    &quot;is_adult&quot; : false,
-    &quot;is_instrumental&quot; : true,
-    &quot;isrc&quot; : &quot;&quot;,
-    &quot;keywords&quot; : [ &quot;breezy&quot;, &quot;celebration&quot;, &quot;festive&quot;, &quot;good times&quot;, &quot;hopeful&quot;, &quot;optimistic&quot;, &quot;party&quot;, &quot;positive&quot;, &quot;reflective&quot; ],
-    &quot;language&quot; : &quot;en&quot;,
-    &quot;lyrics&quot; : &quot;&quot;,
-    &quot;media_type&quot; : &quot;audio&quot;,
-    &quot;moods&quot; : [ &quot;Bright&quot;, &quot;Confident&quot;, &quot;Fun&quot;, &quot;Happy&quot;, &quot;Inspiring&quot;, &quot;Optimistic&quot;, &quot;Playful&quot;, &quot;Sophisticated&quot;, &quot;Stylish&quot;, &quot;Uplifting&quot; ],
-    &quot;published_time&quot; : &quot;2016-04-12T17:45:29-04:00&quot;,
-    &quot;recording_version&quot; : &quot;&quot;,
-    &quot;releases&quot; : [ ],
-    &quot;similar_artists&quot; : [ ],
-    &quot;title&quot; : &quot;Fresh Love&quot;,
-    &quot;updated_time&quot; : &quot;2016-08-18T18:03:11-04:00&quot;,
-    &quot;vocal_description&quot; : &quot;&quot;
+    "description" : "Pulsing and feel-good, featuring slick electric guitar, synthesizer, bass, electronic drum pads and drums that create a positive, celebratory mood.",
+    "duration" : 160,
+    "genres" : [ "Dance/Electronic", "Electro Pop", "Pop/Rock" ],
+    "id" : "434750",
+    "instruments" : [ "Bass", "Drums", "Electric guitar", "Pads", "Percussion", "Synthesizer" ],
+    "is_adult" : false,
+    "is_instrumental" : true,
+    "isrc" : "",
+    "keywords" : [ "breezy", "celebration", "festive", "good times", "hopeful", "optimistic", "party", "positive", "reflective" ],
+    "language" : "en",
+    "lyrics" : "",
+    "media_type" : "audio",
+    "moods" : [ "Bright", "Confident", "Fun", "Happy", "Inspiring", "Optimistic", "Playful", "Sophisticated", "Stylish", "Uplifting" ],
+    "published_time" : "2016-04-12T17:45:29-04:00",
+    "recording_version" : "",
+    "releases" : [ ],
+    "similar_artists" : [ ],
+    "title" : "Fresh Love",
+    "updated_time" : "2016-08-18T18:03:11-04:00",
+    "vocal_description" : ""
   } ]
 }
 
@@ -945,29 +945,29 @@ This endpoint gets licenses for one or more tracks.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi &#x3D; new sstk.AudioApi();
+const audioApi = new sstk.AudioApi();
 
-const body &#x3D; {
-  &quot;audio&quot;: [
+const body = {
+  "audio": [
     {
-      &quot;audio_id&quot;: &quot;446348&quot;,
-      &quot;license&quot;: &quot;premier_music_comp&quot;,
-      &quot;metadata&quot;: {
-        &quot;purchase_order&quot;: &quot;123&quot;
+      "audio_id": "446348",
+      "license": "premier_music_comp",
+      "metadata": {
+        "purchase_order": "123"
       }
     }
   ]
 };
 
 audioApi.licenseTrack(body)
-  .then(({ data }) &#x3D;&gt; {
+  .then(({ data }) => {
     console.log(data);
   })
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -1003,10 +1003,10 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;data&quot; : [ {
-    &quot;audio_id&quot; : &quot;1&quot;,
-    &quot;download&quot; : {
-      &quot;url&quot; : &quot;http://download2.dev.shutterstock.com/gatekeeper/abc/original.wav&quot;
+  "data" : [ {
+    "audio_id" : "1",
+    "download" : {
+      "url" : "http://download2.dev.shutterstock.com/gatekeeper/abc/original.wav"
     }
   } ]
 }
@@ -1022,20 +1022,20 @@ This endpoint sets a new name for a collection.
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi &#x3D; new sstk.AudioApi();
+const audioApi = new sstk.AudioApi();
 
-const collectionId &#x3D; &quot;48433107&quot;;
+const collectionId = "48433107";
 
-const body &#x3D; {
-  &quot;name&quot;: &quot;Best rock music&quot;
+const body = {
+  "name": "Best rock music"
 };
 
 audioApi.renameSoundbox(collectionId, body)
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -1079,23 +1079,23 @@ This endpoint searches for tracks. If you specify more than one search parameter
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi &#x3D; new sstk.AudioApi();
+const audioApi = new sstk.AudioApi();
 
-const queryParams &#x3D; {
-  &quot;query&quot;: &quot;bluegrass&quot;,
-  &quot;duration_from&quot;: 60,
-  &quot;moods&quot;: [&quot;uplifting&quot;]
+const queryParams = {
+  "query": "bluegrass",
+  "duration_from": 60,
+  "moods": ["uplifting"]
 };
 
 audioApi.searchAudio(queryParams)
-  .then(({ data }) &#x3D;&gt; {
+  .then(({ data }) => {
     console.log(data);
   })
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -1144,112 +1144,112 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;per_page&quot; : 6,
-  &quot;data&quot; : [ {
-    &quot;added_date&quot; : &quot;2016-08-16&quot;,
-    &quot;album&quot; : {
-      &quot;id&quot; : &quot;&quot;,
-      &quot;title&quot; : &quot;&quot;
+  "per_page" : 6,
+  "data" : [ {
+    "added_date" : "2016-08-16",
+    "album" : {
+      "id" : "",
+      "title" : ""
     },
-    &quot;artists&quot; : [ {
-      &quot;name&quot; : &quot;Klimenko Music&quot;
+    "artists" : [ {
+      "name" : "Klimenko Music"
     } ],
-    &quot;assets&quot; : {
-      &quot;clean_audio&quot; : {
-        &quot;file_size&quot; : 35188408
+    "assets" : {
+      "clean_audio" : {
+        "file_size" : 35188408
       },
-      &quot;preview_mp3&quot; : {
-        &quot;file_size&quot; : 4400203,
-        &quot;url&quot; : &quot;https://ak.picdn.net/shutterstock/audio/442583/preview/preview.mp3&quot;
+      "preview_mp3" : {
+        "file_size" : 4400203,
+        "url" : "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.mp3"
       },
-      &quot;preview_ogg&quot; : {
-        &quot;file_size&quot; : 4453197,
-        &quot;url&quot; : &quot;https://ak.picdn.net/shutterstock/audio/442583/preview/preview.ogg&quot;
+      "preview_ogg" : {
+        "file_size" : 4453197,
+        "url" : "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.ogg"
       },
-      &quot;waveform&quot; : {
-        &quot;file_size&quot; : 18778,
-        &quot;url&quot; : &quot;https://ak.picdn.net/shutterstock/audio/442583/waveform/waveform.png&quot;
+      "waveform" : {
+        "file_size" : 18778,
+        "url" : "https://ak.picdn.net/shutterstock/audio/442583/waveform/waveform.png"
       }
     },
-    &quot;bpm&quot; : 110,
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;2847971&quot;
+    "bpm" : 110,
+    "contributor" : {
+      "id" : "2847971"
     },
-    &quot;description&quot; : &quot;Pulsing and feel-good, featuring soaring synthesizer, groovy synth bass drums and synth drums that create a euphoric, upbeat mood.&quot;,
-    &quot;duration&quot; : 183,
-    &quot;genres&quot; : [ &quot;Dance/Electronic&quot;, &quot;Electro Pop&quot;, &quot;Pop/Rock&quot; ],
-    &quot;id&quot; : &quot;442583&quot;,
-    &quot;instruments&quot; : [ &quot;Piano&quot;, &quot;Synth bass&quot;, &quot;Synth drums&quot;, &quot;Synthesizer&quot; ],
-    &quot;is_adult&quot; : false,
-    &quot;is_instrumental&quot; : true,
-    &quot;isrc&quot; : &quot;&quot;,
-    &quot;keywords&quot; : [ &quot;celebratory&quot;, &quot;chic&quot;, &quot;euphoric&quot;, &quot;good times&quot;, &quot;hip&quot;, &quot;optimistic&quot;, &quot;party&quot;, &quot;soaring&quot;, &quot;upbeat&quot; ],
-    &quot;language&quot; : &quot;en&quot;,
-    &quot;lyrics&quot; : &quot;&quot;,
-    &quot;media_type&quot; : &quot;audio&quot;,
-    &quot;moods&quot; : [ &quot;Bright&quot;, &quot;Confident&quot;, &quot;Fun&quot;, &quot;Happy&quot;, &quot;Inspiring&quot;, &quot;Optimistic&quot;, &quot;Playful&quot;, &quot;Sophisticated&quot;, &quot;Stylish&quot;, &quot;Uplifting&quot; ],
-    &quot;published_time&quot; : &quot;2016-08-16T14:30:03-04:00&quot;,
-    &quot;recording_version&quot; : &quot;&quot;,
-    &quot;releases&quot; : [ ],
-    &quot;similar_artists&quot; : [ ],
-    &quot;title&quot; : &quot;Another Tomorrow&quot;,
-    &quot;updated_time&quot; : &quot;2016-08-18T17:59:33-04:00&quot;,
-    &quot;vocal_description&quot; : &quot;&quot;,
-    &quot;url&quot; : &quot;https://www.shutterstock.com/music/track/another-tomorrow/442583&quot;
+    "description" : "Pulsing and feel-good, featuring soaring synthesizer, groovy synth bass drums and synth drums that create a euphoric, upbeat mood.",
+    "duration" : 183,
+    "genres" : [ "Dance/Electronic", "Electro Pop", "Pop/Rock" ],
+    "id" : "442583",
+    "instruments" : [ "Piano", "Synth bass", "Synth drums", "Synthesizer" ],
+    "is_adult" : false,
+    "is_instrumental" : true,
+    "isrc" : "",
+    "keywords" : [ "celebratory", "chic", "euphoric", "good times", "hip", "optimistic", "party", "soaring", "upbeat" ],
+    "language" : "en",
+    "lyrics" : "",
+    "media_type" : "audio",
+    "moods" : [ "Bright", "Confident", "Fun", "Happy", "Inspiring", "Optimistic", "Playful", "Sophisticated", "Stylish", "Uplifting" ],
+    "published_time" : "2016-08-16T14:30:03-04:00",
+    "recording_version" : "",
+    "releases" : [ ],
+    "similar_artists" : [ ],
+    "title" : "Another Tomorrow",
+    "updated_time" : "2016-08-18T17:59:33-04:00",
+    "vocal_description" : "",
+    "url" : "https://www.shutterstock.com/music/track/another-tomorrow/442583"
   }, {
-    &quot;added_date&quot; : &quot;2016-08-16&quot;,
-    &quot;album&quot; : {
-      &quot;id&quot; : &quot;&quot;,
-      &quot;title&quot; : &quot;&quot;
+    "added_date" : "2016-08-16",
+    "album" : {
+      "id" : "",
+      "title" : ""
     },
-    &quot;artists&quot; : [ {
-      &quot;name&quot; : &quot;Klimenko Music&quot;
+    "artists" : [ {
+      "name" : "Klimenko Music"
     } ],
-    &quot;assets&quot; : {
-      &quot;clean_audio&quot; : {
-        &quot;file_size&quot; : 35188408
+    "assets" : {
+      "clean_audio" : {
+        "file_size" : 35188408
       },
-      &quot;preview_mp3&quot; : {
-        &quot;file_size&quot; : 4400203,
-        &quot;url&quot; : &quot;https://ak.picdn.net/shutterstock/audio/442583/preview/preview.mp3&quot;
+      "preview_mp3" : {
+        "file_size" : 4400203,
+        "url" : "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.mp3"
       },
-      &quot;preview_ogg&quot; : {
-        &quot;file_size&quot; : 4453197,
-        &quot;url&quot; : &quot;https://ak.picdn.net/shutterstock/audio/442583/preview/preview.ogg&quot;
+      "preview_ogg" : {
+        "file_size" : 4453197,
+        "url" : "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.ogg"
       },
-      &quot;waveform&quot; : {
-        &quot;file_size&quot; : 18778,
-        &quot;url&quot; : &quot;https://ak.picdn.net/shutterstock/audio/442583/waveform/waveform.png&quot;
+      "waveform" : {
+        "file_size" : 18778,
+        "url" : "https://ak.picdn.net/shutterstock/audio/442583/waveform/waveform.png"
       }
     },
-    &quot;bpm&quot; : 110,
-    &quot;contributor&quot; : {
-      &quot;id&quot; : &quot;2847971&quot;
+    "bpm" : 110,
+    "contributor" : {
+      "id" : "2847971"
     },
-    &quot;description&quot; : &quot;Pulsing and feel-good, featuring soaring synthesizer, groovy synth bass drums and synth drums that create a euphoric, upbeat mood.&quot;,
-    &quot;duration&quot; : 183,
-    &quot;genres&quot; : [ &quot;Dance/Electronic&quot;, &quot;Electro Pop&quot;, &quot;Pop/Rock&quot; ],
-    &quot;id&quot; : &quot;442583&quot;,
-    &quot;instruments&quot; : [ &quot;Piano&quot;, &quot;Synth bass&quot;, &quot;Synth drums&quot;, &quot;Synthesizer&quot; ],
-    &quot;is_adult&quot; : false,
-    &quot;is_instrumental&quot; : true,
-    &quot;isrc&quot; : &quot;&quot;,
-    &quot;keywords&quot; : [ &quot;celebratory&quot;, &quot;chic&quot;, &quot;euphoric&quot;, &quot;good times&quot;, &quot;hip&quot;, &quot;optimistic&quot;, &quot;party&quot;, &quot;soaring&quot;, &quot;upbeat&quot; ],
-    &quot;language&quot; : &quot;en&quot;,
-    &quot;lyrics&quot; : &quot;&quot;,
-    &quot;media_type&quot; : &quot;audio&quot;,
-    &quot;moods&quot; : [ &quot;Bright&quot;, &quot;Confident&quot;, &quot;Fun&quot;, &quot;Happy&quot;, &quot;Inspiring&quot;, &quot;Optimistic&quot;, &quot;Playful&quot;, &quot;Sophisticated&quot;, &quot;Stylish&quot;, &quot;Uplifting&quot; ],
-    &quot;published_time&quot; : &quot;2016-08-16T14:30:03-04:00&quot;,
-    &quot;recording_version&quot; : &quot;&quot;,
-    &quot;releases&quot; : [ ],
-    &quot;similar_artists&quot; : [ ],
-    &quot;title&quot; : &quot;Another Tomorrow&quot;,
-    &quot;updated_time&quot; : &quot;2016-08-18T17:59:33-04:00&quot;,
-    &quot;vocal_description&quot; : &quot;&quot;,
-    &quot;url&quot; : &quot;https://www.shutterstock.com/music/track/another-tomorrow/442583&quot;
+    "description" : "Pulsing and feel-good, featuring soaring synthesizer, groovy synth bass drums and synth drums that create a euphoric, upbeat mood.",
+    "duration" : 183,
+    "genres" : [ "Dance/Electronic", "Electro Pop", "Pop/Rock" ],
+    "id" : "442583",
+    "instruments" : [ "Piano", "Synth bass", "Synth drums", "Synthesizer" ],
+    "is_adult" : false,
+    "is_instrumental" : true,
+    "isrc" : "",
+    "keywords" : [ "celebratory", "chic", "euphoric", "good times", "hip", "optimistic", "party", "soaring", "upbeat" ],
+    "language" : "en",
+    "lyrics" : "",
+    "media_type" : "audio",
+    "moods" : [ "Bright", "Confident", "Fun", "Happy", "Inspiring", "Optimistic", "Playful", "Sophisticated", "Stylish", "Uplifting" ],
+    "published_time" : "2016-08-16T14:30:03-04:00",
+    "recording_version" : "",
+    "releases" : [ ],
+    "similar_artists" : [ ],
+    "title" : "Another Tomorrow",
+    "updated_time" : "2016-08-18T17:59:33-04:00",
+    "vocal_description" : "",
+    "url" : "https://www.shutterstock.com/music/track/another-tomorrow/442583"
   } ],
-  &quot;total_count&quot; : 1,
-  &quot;page&quot; : 0,
-  &quot;message&quot; : &quot;message&quot;
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message"
 }
 

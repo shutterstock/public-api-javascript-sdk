@@ -67,23 +67,23 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;website&quot; : &quot;website&quot;,
-  &quot;contributor_type&quot; : [ &quot;contributor_type&quot;, &quot;contributor_type&quot; ],
-  &quot;subjects&quot; : [ &quot;subjects&quot;, &quot;subjects&quot; ],
-  &quot;about&quot; : &quot;about&quot;,
-  &quot;equipment&quot; : [ &quot;equipment&quot;, &quot;equipment&quot; ],
-  &quot;location&quot; : &quot;location&quot;,
-  &quot;styles&quot; : [ &quot;styles&quot;, &quot;styles&quot; ],
-  &quot;id&quot; : &quot;id&quot;,
-  &quot;display_name&quot; : &quot;display_name&quot;,
-  &quot;portfolio_url&quot; : &quot;portfolio_url&quot;,
-  &quot;social_media&quot; : {
-    &quot;twitter&quot; : &quot;twitter&quot;,
-    &quot;facebook&quot; : &quot;facebook&quot;,
-    &quot;tumblr&quot; : &quot;tumblr&quot;,
-    &quot;google_plus&quot; : &quot;google_plus&quot;,
-    &quot;pinterest&quot; : &quot;pinterest&quot;,
-    &quot;linkedin&quot; : &quot;linkedin&quot;
+  "website" : "website",
+  "contributor_type" : [ "contributor_type", "contributor_type" ],
+  "subjects" : [ "subjects", "subjects" ],
+  "about" : "about",
+  "equipment" : [ "equipment", "equipment" ],
+  "location" : "location",
+  "styles" : [ "styles", "styles" ],
+  "id" : "id",
+  "display_name" : "display_name",
+  "portfolio_url" : "portfolio_url",
+  "social_media" : {
+    "twitter" : "twitter",
+    "facebook" : "facebook",
+    "tumblr" : "tumblr",
+    "google_plus" : "google_plus",
+    "pinterest" : "pinterest",
+    "linkedin" : "linkedin"
   }
 }
 
@@ -154,17 +154,17 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;data&quot; : [ {
-    &quot;added_time&quot; : &quot;2016-08-18T18:52:59-04:00&quot;,
-    &quot;id&quot; : &quot;76688182&quot;,
-    &quot;media_type&quot; : &quot;audio&quot;
+  "data" : [ {
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "76688182",
+    "media_type" : "audio"
   }, {
-    &quot;added_time&quot; : &quot;2016-08-18T18:52:59-04:00&quot;,
-    &quot;id&quot; : &quot;40005859&quot;,
-    &quot;media_type&quot; : &quot;audio&quot;
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "40005859",
+    "media_type" : "audio"
   } ],
-  &quot;page&quot; : 1,
-  &quot;per_page&quot; : 100
+  "page" : 1,
+  "per_page" : 100
 }
 
 <a name="getContributorCollections"></a>
@@ -226,19 +226,19 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;created_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;updated_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;share_url&quot; : &quot;share_url&quot;,
-  &quot;items_updated_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;name&quot; : &quot;name&quot;,
-  &quot;id&quot; : &quot;id&quot;,
-  &quot;share_code&quot; : &quot;share_code&quot;,
-  &quot;cover_item&quot; : {
-    &quot;added_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;media_type&quot; : &quot;media_type&quot;,
-    &quot;id&quot; : &quot;id&quot;
+  "created_time" : "2000-01-23T04:56:07.000+00:00",
+  "updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "share_url" : "share_url",
+  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "share_code" : "share_code",
+  "cover_item" : {
+    "added_time" : "2000-01-23T04:56:07.000+00:00",
+    "media_type" : "media_type",
+    "id" : "id"
   },
-  &quot;total_item_count&quot; : 0
+  "total_item_count" : 0
 }
 
 <a name="getContributorCollectionsList"></a>
@@ -301,36 +301,36 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;data&quot; : [ {
-    &quot;created_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;,
-    &quot;id&quot; : &quot;5747953&quot;,
-    &quot;name&quot; : &quot;Test Collection cdad&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;
+  "data" : [ {
+    "created_time" : "2014-11-05T19:29:56-05:00",
+    "id" : "5747953",
+    "name" : "Test Collection cdad",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:56-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;,
-    &quot;id&quot; : &quot;5747955&quot;,
-    &quot;name&quot; : &quot;Test Collection ff5f&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:29:56-05:00&quot;
+    "created_time" : "2014-11-05T19:29:56-05:00",
+    "id" : "5747955",
+    "name" : "Test Collection ff5f",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:56-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:29:58-05:00&quot;,
-    &quot;id&quot; : &quot;5747957&quot;,
-    &quot;name&quot; : &quot;Updated Collection ebc4&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:29:58-05:00&quot;
+    "created_time" : "2014-11-05T19:29:58-05:00",
+    "id" : "5747957",
+    "name" : "Updated Collection ebc4",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:58-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;,
-    &quot;id&quot; : &quot;5747971&quot;,
-    &quot;name&quot; : &quot;Test Collection 0072&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;
+    "created_time" : "2014-11-05T19:32:13-05:00",
+    "id" : "5747971",
+    "name" : "Test Collection 0072",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:32:13-05:00"
   }, {
-    &quot;created_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;,
-    &quot;id&quot; : &quot;5747973&quot;,
-    &quot;name&quot; : &quot;Test Collection d332&quot;,
-    &quot;total_item_count&quot; : 0,
-    &quot;updated_time&quot; : &quot;2014-11-05T19:32:13-05:00&quot;
+    "created_time" : "2014-11-05T19:32:13-05:00",
+    "id" : "5747973",
+    "name" : "Test Collection d332",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:32:13-05:00"
   } ]
 }
 
@@ -390,61 +390,61 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;per_page&quot; : 6,
-  &quot;data&quot; : [ {
-    &quot;website&quot; : &quot;website&quot;,
-    &quot;contributor_type&quot; : [ &quot;contributor_type&quot;, &quot;contributor_type&quot; ],
-    &quot;subjects&quot; : [ &quot;subjects&quot;, &quot;subjects&quot; ],
-    &quot;about&quot; : &quot;about&quot;,
-    &quot;equipment&quot; : [ &quot;equipment&quot;, &quot;equipment&quot; ],
-    &quot;location&quot; : &quot;location&quot;,
-    &quot;styles&quot; : [ &quot;styles&quot;, &quot;styles&quot; ],
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;display_name&quot; : &quot;display_name&quot;,
-    &quot;portfolio_url&quot; : &quot;portfolio_url&quot;,
-    &quot;social_media&quot; : {
-      &quot;twitter&quot; : &quot;twitter&quot;,
-      &quot;facebook&quot; : &quot;facebook&quot;,
-      &quot;tumblr&quot; : &quot;tumblr&quot;,
-      &quot;google_plus&quot; : &quot;google_plus&quot;,
-      &quot;pinterest&quot; : &quot;pinterest&quot;,
-      &quot;linkedin&quot; : &quot;linkedin&quot;
+  "per_page" : 6,
+  "data" : [ {
+    "website" : "website",
+    "contributor_type" : [ "contributor_type", "contributor_type" ],
+    "subjects" : [ "subjects", "subjects" ],
+    "about" : "about",
+    "equipment" : [ "equipment", "equipment" ],
+    "location" : "location",
+    "styles" : [ "styles", "styles" ],
+    "id" : "id",
+    "display_name" : "display_name",
+    "portfolio_url" : "portfolio_url",
+    "social_media" : {
+      "twitter" : "twitter",
+      "facebook" : "facebook",
+      "tumblr" : "tumblr",
+      "google_plus" : "google_plus",
+      "pinterest" : "pinterest",
+      "linkedin" : "linkedin"
     }
   }, {
-    &quot;website&quot; : &quot;website&quot;,
-    &quot;contributor_type&quot; : [ &quot;contributor_type&quot;, &quot;contributor_type&quot; ],
-    &quot;subjects&quot; : [ &quot;subjects&quot;, &quot;subjects&quot; ],
-    &quot;about&quot; : &quot;about&quot;,
-    &quot;equipment&quot; : [ &quot;equipment&quot;, &quot;equipment&quot; ],
-    &quot;location&quot; : &quot;location&quot;,
-    &quot;styles&quot; : [ &quot;styles&quot;, &quot;styles&quot; ],
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;display_name&quot; : &quot;display_name&quot;,
-    &quot;portfolio_url&quot; : &quot;portfolio_url&quot;,
-    &quot;social_media&quot; : {
-      &quot;twitter&quot; : &quot;twitter&quot;,
-      &quot;facebook&quot; : &quot;facebook&quot;,
-      &quot;tumblr&quot; : &quot;tumblr&quot;,
-      &quot;google_plus&quot; : &quot;google_plus&quot;,
-      &quot;pinterest&quot; : &quot;pinterest&quot;,
-      &quot;linkedin&quot; : &quot;linkedin&quot;
+    "website" : "website",
+    "contributor_type" : [ "contributor_type", "contributor_type" ],
+    "subjects" : [ "subjects", "subjects" ],
+    "about" : "about",
+    "equipment" : [ "equipment", "equipment" ],
+    "location" : "location",
+    "styles" : [ "styles", "styles" ],
+    "id" : "id",
+    "display_name" : "display_name",
+    "portfolio_url" : "portfolio_url",
+    "social_media" : {
+      "twitter" : "twitter",
+      "facebook" : "facebook",
+      "tumblr" : "tumblr",
+      "google_plus" : "google_plus",
+      "pinterest" : "pinterest",
+      "linkedin" : "linkedin"
     }
   } ],
-  &quot;total_count&quot; : 1,
-  &quot;page&quot; : 0,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 

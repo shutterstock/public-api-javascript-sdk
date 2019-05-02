@@ -74,68 +74,68 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;assets&quot; : {
-    &quot;thumb_220&quot; : {
-      &quot;width&quot; : 7,
-      &quot;url&quot; : &quot;url&quot;,
-      &quot;height&quot; : 2
+  "assets" : {
+    "thumb_220" : {
+      "width" : 7,
+      "url" : "url",
+      "height" : 2
     },
-    &quot;original&quot; : {
-      &quot;is_licensable&quot; : true,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;width&quot; : 5,
-      &quot;display_name&quot; : &quot;display_name&quot;,
-      &quot;dpi&quot; : 6,
-      &quot;file_size&quot; : 1,
-      &quot;height&quot; : 5
+    "original" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "width" : 5,
+      "display_name" : "display_name",
+      "dpi" : 6,
+      "file_size" : 1,
+      "height" : 5
     },
-    &quot;watermark_450&quot; : {
-      &quot;width&quot; : 7,
-      &quot;url&quot; : &quot;url&quot;,
-      &quot;height&quot; : 2
+    "watermark_450" : {
+      "width" : 7,
+      "url" : "url",
+      "height" : 2
     },
-    &quot;thumb_170&quot; : {
-      &quot;width&quot; : 7,
-      &quot;url&quot; : &quot;url&quot;,
-      &quot;height&quot; : 2
+    "thumb_170" : {
+      "width" : 7,
+      "url" : "url",
+      "height" : 2
     },
-    &quot;medium_jpg&quot; : {
-      &quot;is_licensable&quot; : true,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;width&quot; : 5,
-      &quot;display_name&quot; : &quot;display_name&quot;,
-      &quot;dpi&quot; : 6,
-      &quot;file_size&quot; : 1,
-      &quot;height&quot; : 5
+    "medium_jpg" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "width" : 5,
+      "display_name" : "display_name",
+      "dpi" : 6,
+      "file_size" : 1,
+      "height" : 5
     },
-    &quot;small_jpg&quot; : {
-      &quot;is_licensable&quot; : true,
-      &quot;format&quot; : &quot;format&quot;,
-      &quot;width&quot; : 5,
-      &quot;display_name&quot; : &quot;display_name&quot;,
-      &quot;dpi&quot; : 6,
-      &quot;file_size&quot; : 1,
-      &quot;height&quot; : 5
+    "small_jpg" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "width" : 5,
+      "display_name" : "display_name",
+      "dpi" : 6,
+      "file_size" : 1,
+      "height" : 5
     },
-    &quot;watermark_1500&quot; : {
-      &quot;width&quot; : 7,
-      &quot;url&quot; : &quot;url&quot;,
-      &quot;height&quot; : 2
+    "watermark_1500" : {
+      "width" : 7,
+      "url" : "url",
+      "height" : 2
     }
   },
-  &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-  &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-  &quot;caption&quot; : &quot;caption&quot;,
-  &quot;description&quot; : &quot;description&quot;,
-  &quot;categories&quot; : [ {
-    &quot;name&quot; : &quot;name&quot;
+  "keywords" : [ "keywords", "keywords" ],
+  "aspect" : 0.80082819046101150206595775671303272247314453125,
+  "caption" : "caption",
+  "description" : "description",
+  "categories" : [ {
+    "name" : "name"
   }, {
-    &quot;name&quot; : &quot;name&quot;
+    "name" : "name"
   } ],
-  &quot;id&quot; : &quot;id&quot;,
-  &quot;title&quot; : &quot;title&quot;,
-  &quot;byline&quot; : &quot;byline&quot;,
-  &quot;date_taken&quot; : &quot;2000-01-23&quot;
+  "id" : "id",
+  "title" : "title",
+  "byline" : "byline",
+  "date_taken" : "2000-01-23"
 }
 
 <a name="getEditorialLivefeed"></a>
@@ -198,16 +198,16 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;created_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-  &quot;name&quot; : &quot;name&quot;,
-  &quot;id&quot; : &quot;id&quot;,
-  &quot;cover_item&quot; : {
-    &quot;width&quot; : 6,
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;url&quot; : &quot;url&quot;,
-    &quot;height&quot; : 0
+  "created_time" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "cover_item" : {
+    "width" : 6,
+    "id" : "id",
+    "url" : "url",
+    "height" : 0
   },
-  &quot;total_item_count&quot; : 1
+  "total_item_count" : 1
 }
 
 <a name="getEditorialLivefeedItems"></a>
@@ -270,149 +270,149 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;per_page&quot; : 6,
-  &quot;data&quot; : [ {
-    &quot;assets&quot; : {
-      &quot;thumb_220&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+  "per_page" : 6,
+  "data" : [ {
+    "assets" : {
+      "thumb_220" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;original&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "original" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;watermark_450&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "watermark_450" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;thumb_170&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "thumb_170" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;medium_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;small_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "small_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;watermark_1500&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "watermark_1500" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       }
     },
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;caption&quot; : &quot;caption&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;
+    "keywords" : [ "keywords", "keywords" ],
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "caption" : "caption",
+    "description" : "description",
+    "categories" : [ {
+      "name" : "name"
     }, {
-      &quot;name&quot; : &quot;name&quot;
+      "name" : "name"
     } ],
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;title&quot; : &quot;title&quot;,
-    &quot;byline&quot; : &quot;byline&quot;,
-    &quot;date_taken&quot; : &quot;2000-01-23&quot;
+    "id" : "id",
+    "title" : "title",
+    "byline" : "byline",
+    "date_taken" : "2000-01-23"
   }, {
-    &quot;assets&quot; : {
-      &quot;thumb_220&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+    "assets" : {
+      "thumb_220" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;original&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "original" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;watermark_450&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "watermark_450" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;thumb_170&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "thumb_170" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;medium_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;small_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "small_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;watermark_1500&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "watermark_1500" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       }
     },
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;caption&quot; : &quot;caption&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;
+    "keywords" : [ "keywords", "keywords" ],
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "caption" : "caption",
+    "description" : "description",
+    "categories" : [ {
+      "name" : "name"
     }, {
-      &quot;name&quot; : &quot;name&quot;
+      "name" : "name"
     } ],
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;title&quot; : &quot;title&quot;,
-    &quot;byline&quot; : &quot;byline&quot;,
-    &quot;date_taken&quot; : &quot;2000-01-23&quot;
+    "id" : "id",
+    "title" : "title",
+    "byline" : "byline",
+    "date_taken" : "2000-01-23"
   } ],
-  &quot;total_count&quot; : 1,
-  &quot;page&quot; : 0,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 
@@ -479,33 +479,33 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;per_page&quot; : 5,
-  &quot;data&quot; : [ {
-    &quot;created_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;name&quot; : &quot;name&quot;,
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;cover_item&quot; : {
-      &quot;width&quot; : 6,
-      &quot;id&quot; : &quot;id&quot;,
-      &quot;url&quot; : &quot;url&quot;,
-      &quot;height&quot; : 0
+  "per_page" : 5,
+  "data" : [ {
+    "created_time" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "id" : "id",
+    "cover_item" : {
+      "width" : 6,
+      "id" : "id",
+      "url" : "url",
+      "height" : 0
     },
-    &quot;total_item_count&quot; : 1
+    "total_item_count" : 1
   }, {
-    &quot;created_time&quot; : &quot;2000-01-23T04:56:07.000+00:00&quot;,
-    &quot;name&quot; : &quot;name&quot;,
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;cover_item&quot; : {
-      &quot;width&quot; : 6,
-      &quot;id&quot; : &quot;id&quot;,
-      &quot;url&quot; : &quot;url&quot;,
-      &quot;height&quot; : 0
+    "created_time" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "id" : "id",
+    "cover_item" : {
+      "width" : 6,
+      "id" : "id",
+      "url" : "url",
+      "height" : 0
     },
-    &quot;total_item_count&quot; : 1
+    "total_item_count" : 1
   } ],
-  &quot;total_count&quot; : 2,
-  &quot;page&quot; : 5,
-  &quot;message&quot; : &quot;message&quot;
+  "total_count" : 2,
+  "page" : 5,
+  "message" : "message"
 }
 
 <a name="licenseEditorialImage"></a>
@@ -519,27 +519,27 @@ This endpoint gets licenses for one or more editorial images. You must specify t
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const editorialApi &#x3D; new sstk.EditorialApi();
+const editorialApi = new sstk.EditorialApi();
 
-const body &#x3D; {
-  &quot;editorial&quot;: [
+const body = {
+  "editorial": [
     {
-      &quot;editorial_id&quot;: &quot;8594090h&quot;,
-      &quot;license&quot;: &quot;premier_editorial_comp&quot;
+      "editorial_id": "8594090h",
+      "license": "premier_editorial_comp"
     }
   ],
-  &quot;country&quot;: &quot;USA&quot;
+  "country": "USA"
 };
 
 editorialApi.licenseEditorialImage(body)
-  .then(({ data }) &#x3D;&gt; {
+  .then(({ data }) => {
     console.log(data);
   })
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -573,37 +573,37 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;per_page&quot; : 1,
-  &quot;data&quot; : [ {
-    &quot;download&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+  "per_page" : 1,
+  "data" : [ {
+    "download" : {
+      "url" : "url"
     },
-    &quot;allotment_charge&quot; : 0,
-    &quot;error&quot; : &quot;error&quot;,
-    &quot;editorial_id&quot; : &quot;editorial_id&quot;
+    "allotment_charge" : 0,
+    "error" : "error",
+    "editorial_id" : "editorial_id"
   }, {
-    &quot;download&quot; : {
-      &quot;url&quot; : &quot;url&quot;
+    "download" : {
+      "url" : "url"
     },
-    &quot;allotment_charge&quot; : 0,
-    &quot;error&quot; : &quot;error&quot;,
-    &quot;editorial_id&quot; : &quot;editorial_id&quot;
+    "allotment_charge" : 0,
+    "error" : "error",
+    "editorial_id" : "editorial_id"
   } ],
-  &quot;total_count&quot; : 5,
-  &quot;page&quot; : 6,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;errors&quot; : [ {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+  "total_count" : 5,
+  "page" : 6,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   }, {
-    &quot;path&quot; : &quot;path&quot;,
-    &quot;code&quot; : &quot;code&quot;,
-    &quot;data&quot; : &quot;data&quot;,
-    &quot;message&quot; : &quot;message&quot;,
-    &quot;items&quot; : [ &quot;{}&quot;, &quot;{}&quot; ]
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 
@@ -618,26 +618,26 @@ This endpoint searches for editorial images. If you specify more than one search
 ### Example
 
 ```javascript
-const sstk &#x3D; require(&quot;shutterstock-api&quot;);
+const sstk = require("shutterstock-api");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const editorialApi &#x3D; new sstk.EditorialApi();
+const editorialApi = new sstk.EditorialApi();
 
-const queryParams &#x3D; {
-  &quot;query&quot;: &quot;football&quot;,
-  &quot;country&quot;: &quot;USA&quot;,
-  &quot;sort&quot;: &quot;newest&quot;,
-  &quot;date_start&quot;: &quot;2018-10-23&quot;
+const queryParams = {
+  "query": "football",
+  "country": "USA",
+  "sort": "newest",
+  "date_start": "2018-10-23"
 };
 
-const country &#x3D; &quot;USA&quot;;
+const country = "USA";
 
 editorialApi.searchEditorial(country, queryParams)
-  .then(({ data }) &#x3D;&gt; {
+  .then(({ data }) => {
     console.log(data);
   })
-  .catch((error) &#x3D;&gt; {
+  .catch((error) => {
     console.error(error);
   });
 
@@ -677,139 +677,139 @@ Name | Type | Description
 ### Example response
 
 {
-  &quot;next&quot; : &quot;next&quot;,
-  &quot;per_page&quot; : 1,
-  &quot;data&quot; : [ {
-    &quot;assets&quot; : {
-      &quot;thumb_220&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+  "next" : "next",
+  "per_page" : 1,
+  "data" : [ {
+    "assets" : {
+      "thumb_220" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;original&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "original" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;watermark_450&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "watermark_450" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;thumb_170&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "thumb_170" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;medium_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;small_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "small_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;watermark_1500&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "watermark_1500" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       }
     },
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;caption&quot; : &quot;caption&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;
+    "keywords" : [ "keywords", "keywords" ],
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "caption" : "caption",
+    "description" : "description",
+    "categories" : [ {
+      "name" : "name"
     }, {
-      &quot;name&quot; : &quot;name&quot;
+      "name" : "name"
     } ],
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;title&quot; : &quot;title&quot;,
-    &quot;byline&quot; : &quot;byline&quot;,
-    &quot;date_taken&quot; : &quot;2000-01-23&quot;
+    "id" : "id",
+    "title" : "title",
+    "byline" : "byline",
+    "date_taken" : "2000-01-23"
   }, {
-    &quot;assets&quot; : {
-      &quot;thumb_220&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+    "assets" : {
+      "thumb_220" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;original&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "original" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;watermark_450&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "watermark_450" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;thumb_170&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "thumb_170" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       },
-      &quot;medium_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;small_jpg&quot; : {
-        &quot;is_licensable&quot; : true,
-        &quot;format&quot; : &quot;format&quot;,
-        &quot;width&quot; : 5,
-        &quot;display_name&quot; : &quot;display_name&quot;,
-        &quot;dpi&quot; : 6,
-        &quot;file_size&quot; : 1,
-        &quot;height&quot; : 5
+      "small_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
       },
-      &quot;watermark_1500&quot; : {
-        &quot;width&quot; : 7,
-        &quot;url&quot; : &quot;url&quot;,
-        &quot;height&quot; : 2
+      "watermark_1500" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
       }
     },
-    &quot;keywords&quot; : [ &quot;keywords&quot;, &quot;keywords&quot; ],
-    &quot;aspect&quot; : 0.80082819046101150206595775671303272247314453125,
-    &quot;caption&quot; : &quot;caption&quot;,
-    &quot;description&quot; : &quot;description&quot;,
-    &quot;categories&quot; : [ {
-      &quot;name&quot; : &quot;name&quot;
+    "keywords" : [ "keywords", "keywords" ],
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "caption" : "caption",
+    "description" : "description",
+    "categories" : [ {
+      "name" : "name"
     }, {
-      &quot;name&quot; : &quot;name&quot;
+      "name" : "name"
     } ],
-    &quot;id&quot; : &quot;id&quot;,
-    &quot;title&quot; : &quot;title&quot;,
-    &quot;byline&quot; : &quot;byline&quot;,
-    &quot;date_taken&quot; : &quot;2000-01-23&quot;
+    "id" : "id",
+    "title" : "title",
+    "byline" : "byline",
+    "date_taken" : "2000-01-23"
   } ],
-  &quot;total_count&quot; : 5,
-  &quot;prev&quot; : &quot;prev&quot;,
-  &quot;page&quot; : 6,
-  &quot;message&quot; : &quot;message&quot;,
-  &quot;search_id&quot; : &quot;search_id&quot;
+  "total_count" : 5,
+  "prev" : "prev",
+  "page" : 6,
+  "message" : "message",
+  "search_id" : "search_id"
 }
 
