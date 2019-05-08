@@ -1114,10 +1114,10 @@ Name | Type | Description
  duration | Number| Show tracks with the specified duration (seconds) 
  duration_from | Number| Show tracks with the specified duration or longer (seconds) 
  duration_to | Number| Show tracks with the specified duration or shorter (seconds) 
- genre | [[String]](String.md)| Show tracks with each of the specified genres <br/><br/>Valid values: "Blues", "Children", "Classical", "Country", "Dance/Electronic", "Hip-Hop/Rap", "Holiday", "Jazz", "New Age", "Pop/Rock", "R&B/Soul", "Reggae/Ska", "Spiritual", "World/International"
+ genre | [[String]](String.md)| Show tracks with each of the specified genres <br/><br/>Valid values: "Acoustic", "Ambient", "Audio Logo", "Blues", "Chill Out", "Classical", "Corporate", "Country", "Dance/Techno", "Dubstep", "Easy Listening", "Electro Pop", "Electronic", "Folk", "Games", "Hip Hop", "Holiday", "Independent", "Indie Pop", "Jazz", "Kids/Children", "Latin", "Masterworks", "Motown", "New Age", "News", "Piano / Solo Instrumental", "Pop", "Production / Film Scores", "R&B", "Reggae", "Rock", "Trailer", "Vocals", "World"
  is_instrumental | Boolean| Show instrumental music only 
  instruments | [[String]](String.md)| Show tracks with each of the specified instruments 
- moods | [[String]](String.md)| Show tracks with each of the specified moods 
+ moods | [[String]](String.md)| Show tracks with each of the specified moods <br/><br/>Valid values: "Action/Sports", "Adventure/Discovery", "Aerobics/Workout", "Aggressive", "Comedy/Funny", "Crime/Thriller/Spy", "Dark/Somber", "Epic/Orchestral", "Fashion/Lifestyle", "Feel Good", "Gentle/Light", "Happy/Cheerful", "Horror/Scary", "Magical/Mystical", "Military/Patriotic", "Relaxation/Meditation", "Religious/Christian", "Romantic/Sentimental", "Sad/Nostalgic", "Sci-Fi/Future", "Sexy/Sensual", "Strange/Bizarre", "Suspense/Drama", "Underscores", "Uplifting", "Wedding"
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  query | String| One or more search terms separated by spaces 

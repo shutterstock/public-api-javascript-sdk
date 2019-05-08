@@ -807,7 +807,7 @@
      * @param {Array.<module:model/String>} opts.genre Show tracks with each of the specified genres
      * @param {Boolean} opts.is_instrumental Show instrumental music only
      * @param {Array.<String>} opts.instruments Show tracks with each of the specified instruments
-     * @param {Array.<String>} opts.moods Show tracks with each of the specified moods
+     * @param {Array.<module:model/String>} opts.moods Show tracks with each of the specified moods
      * @param {Number} opts.page Page number (default to 1)
      * @param {Number} opts.per_page Number of results per page (default to 20)
      * @param {String} opts.query One or more search terms separated by spaces
@@ -889,7 +889,7 @@
      * @param {Array.<module:model/String>} opts.genre Show tracks with each of the specified genres
      * @param {Boolean} opts.is_instrumental Show instrumental music only
      * @param {Array.<String>} opts.instruments Show tracks with each of the specified instruments
-     * @param {Array.<String>} opts.moods Show tracks with each of the specified moods
+     * @param {Array.<module:model/String>} opts.moods Show tracks with each of the specified moods
      * @param {Number} opts.page Page number (default to 1)
      * @param {Number} opts.per_page Number of results per page (default to 20)
      * @param {String} opts.query One or more search terms separated by spaces
