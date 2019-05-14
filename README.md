@@ -3,7 +3,7 @@
 The Shutterstock public API provides access to Shutterstock's library of media, as well as information about customers' accounts and the contributors that provide the media.
 This SDK provides classes for JavaScript and Node.js that you can use to access the API from your applications.
 These classes call the API in the same way that direct REST calls do.
-You can use this SDK to search for media, get information about media and about collections, and (with full API access) license and download media.
+You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
 - API version: 1.0.4
@@ -36,30 +36,21 @@ $ yarn run test
 $ yarn run lint
 ```
 
+## Subscriptions
+
+To access the API and license media with the SDK, you need an API subscription or a free API account.
+
+API subscriptions are separate from the subscriptions that are available on shutterstock.com.
+You can use an API subscription to license and download media only with the API; API subscriptions don't work on shutterstock.com.
+To buy an API subscription or set up a free account, see the [pricing page](https://www.shutterstock.com/api/pricing).
+If you have a subscription from shutterstock.com and want to use it with the API, [contact us](https://developers.shutterstock.com/contact-us).
+
 ## Applications
 
 The REST API uses an access token or secret key that is tied to your account and to an application.
 This application represents the application, program, or computer commands that are accessing the API.
 To use the API, you must create an application at [https://developers.shutterstock.com/applications](https://developers.shutterstock.com/applications) and note the client ID and client secret.
 You use this client ID and client secret either to use the API directly with basic authentication or to request a token for OAuth authentication.
-
-## Accounts and limitations
-
-By default, applications ("free API accounts") have limited access to the API:
-- They have access only to a limited media library, not the complete Shutterstock library.
-Therefore, all requests have access only to this limited library, including all search and details requests.
-- Media results, such as search results, are limited to the first 100 results, regardless of how many are shown on a page.
-- When searching, requests can provide no more than two search fields per search request, in addition to the `query`, `page`, `per_page`, and `view` fields.
-- Responses are limited to minimal results, not full results.
-- They can't use the `GET /v2/images/{id}/similar` (List similar images), `POST /v2/images` (upload images for reverse image search), and `GET /v2/images` (list images) endpoints.
-- They are limited in the number of requests per hour.
-- They do not have access to editorial media.
-- They can't license media.
-
-Applications with a full API account have full access to the API, without these limitations.
-To tell which type of account you are using, open [your applications](https://developers.shutterstock.com/user/me/apps), expand your application, and go to its **Products** tab.
-The **API Product** field shows `Free` for limited API applications or the name of another API product that provides access.
-If you have the free API product and need full access to the API, [Contact us](https://developers.shutterstock.com/contact-us).
 
 ## Installation
 
