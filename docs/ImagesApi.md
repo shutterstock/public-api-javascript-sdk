@@ -2025,18 +2025,15 @@ const body = {
   "images": [
     {
       "image_id": "419235589",
-      "format": "jpg"
-    },
-    {
-      "image_id": "1079756147",
-      "format": "jpg",
+      "price": 12.50,
+      "metadata": {
+        "customer_id": "12345"
+      }
     }
   ]
 };
 
-// Put your subscription ID in the SHUTTERSTOCK_SUBSCRIPTION_ID environment variable
 const queryParams = {
-  "subscription_id": process.env.SHUTTERSTOCK_SUBSCRIPTION_ID,
   "format": "jpg",
   "size": "huge"
 };
