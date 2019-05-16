@@ -115,22 +115,11 @@ You can see the scopes that each method requires in the reference information fo
 
 The following list shows the available scopes.
 
+- licenses.create: Grant the ability to download and license media on behalf of the user.
+- purchases.view: Grant read-only access to a user&#39;s purchase history.
+- licenses.view: Grant read-only access to a user&#39;s licenses.
 - collections.edit: Grant the ability to create new collections, edit a collection, and modify the contents of a collection
 - collections.view: Grant read-only access to a collection and its contents.
-- earnings.view: Grant the ability to view a user&#39;s current earnings and payouts.
-- licenses.create: Grant the ability to download and license media on behalf of the user.
-- licenses.view: Grant read-only access to a user&#39;s licenses.
-- media.edit: Grant the ability to make changes to a user&#39;s existing approved media.
-- media.submit: Grant the ability to submit a user&#39;s uploaded media for review and check their approval states.
-- media.upload: Grant the ability to upload media to a user&#39;s account.
-- organization.address: Grants read-only access to an organization&#39;s physical address.
-- organization.view: Grants read-only access to an organization&#39;s basic information.
-- purchases.view: Grant read-only access to a user&#39;s purchase history.
-- reseller.purchase: Grant the ability for a reseller to purchase products for a user.
-- reseller.view: Grant the ability for a reseller to view the products they can sell.
-- user.address: Grants read-only access to a user&#39;s physical address.
-- user.edit: Grants read and write access to all user account information.
-- user.email: Grants read-only access to a user&#39;s email address.
 - user.view: Grants read-only access to a user&#39;s basic account information (includes username, id, first and last name). If email is the same as username, it also implies user.email
 
 
