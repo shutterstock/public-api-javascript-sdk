@@ -98,7 +98,7 @@ api.validate(id, queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | Number| Integer ID 
- tag | [[String]](String.md)| List of tags 
+ tag | [String]| List of tags 
  user_agent | String| User agent 
 
 ### Accepted authentication

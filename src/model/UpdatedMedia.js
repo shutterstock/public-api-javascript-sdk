@@ -45,8 +45,8 @@
    * @alias module:model/UpdatedMedia
    * @class
    * @param id {String} ID of the media
-   * @param updated_time {Date} Date the media was updated
-   * @param updates {Array.<String>} List of updates
+   * @param updated_time {Date} Date that the media was updated
+   * @param updates {Array.<String>} Types of updates that were made to the piece of media
    */
   var exports = function(id, updated_time, updates) {
     var _this = this;
@@ -86,12 +86,12 @@
    */
   exports.prototype['id'] = undefined;
   /**
-   * Date the media was updated
+   * Date that the media was updated
    * @member {Date} updated_time
    */
   exports.prototype['updated_time'] = undefined;
   /**
-   * List of updates
+   * Types of updates that were made to the piece of media
    * @member {Array.<String>} updates
    */
   exports.prototype['updates'] = undefined;

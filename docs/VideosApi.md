@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [`getClipboxItems`](VideosApi.md#getClipboxItems) | `GET /v2/videos/collections/{id}/items` | Get the contents of video collections
 [`getClipboxList`](VideosApi.md#getClipboxList) | `GET /v2/videos/collections` | List video collections
 [`getSimilarVideos`](VideosApi.md#getSimilarVideos) | `GET /v2/videos/{id}/similar` | List similar videos
+[`getUpdatedVideos`](VideosApi.md#getUpdatedVideos) | `GET /v2/videos/updated` | List updated videos
 [`getVideo`](VideosApi.md#getVideo) | `GET /v2/videos/{id}` | Get details about videos
 [`getVideoCategories`](VideosApi.md#getVideoCategories) | `GET /v2/videos/categories` | List video categories
 [`getVideoLicenseList`](VideosApi.md#getVideoLicenseList) | `GET /v2/videos/licenses` | List video licenses
@@ -236,7 +237,7 @@ videosApi.deleteClipboxItems(collectionId, videosToRemove)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| The ID of the Collection from which items will be deleted 
- item_id | [[String]](String.md)| One or more video IDs to remove from the collection 
+ item_id | [String]| One or more video IDs to remove from the collection 
 
 ### Accepted authentication
 
@@ -817,6 +818,95 @@ Name | Type | Description
   "message" : "message"
 }
 
+<a name="getUpdatedVideos"></a>
+# VideosApi.getUpdatedVideos
+> `UpdatedMediaDataList VideosApi.getUpdatedVideos(queryParams)`
+
+**List updated videos**
+
+This endpoint lists videos that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the &#x60;interval&#x60; parameter to show videos that were updated recently, but you can also use the &#x60;start_date&#x60; and &#x60;end_date&#x60; parameters to specify a range of no more than three days. Do not use the &#x60;interval&#x60; parameter with either &#x60;start_date&#x60; or &#x60;end_date&#x60;.
+
+### Example
+
+```javascript
+const sstk = require("shutterstock-api");
+
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const videosApi = new sstk.VideosApi();
+
+const queryParams = {
+  "interval": "30 MINUTE"
+};
+
+videosApi.getUpdatedVideos(queryParams)
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ start_date | Date| Show videos updated on or after the specified date, in the format YYYY-MM-DD 
+ end_date | Date| Show videos updated before the specified date, in the format YYYY-MM-DD 
+ interval | String| Show videos updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows videos that were updated in the hour preceding the request, defaults to 1 HOUR 
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 100 
+ sort | String| Sort by oldest or newest videos first, defaults to newest <br/><br/>Valid values: "newest", "oldest"
+
+### Accepted authentication
+
+No authentication required.
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[UpdatedMediaDataList](UpdatedMediaDataList.md)
+
+### Example response
+
+{
+  "per_page" : 6,
+  "data" : [ {
+    "updated_time" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "updates" : [ "updates", "updates" ]
+  }, {
+    "updated_time" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "updates" : [ "updates", "updates" ]
+  } ],
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  }, {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  } ]
+}
+
 <a name="getVideo"></a>
 # VideosApi.getVideo
 > `Video VideosApi.getVideo(id, queryParams)`
@@ -1239,7 +1329,7 @@ api.getVideoList(id, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | [[String]](String.md)| One or more video IDs 
+ id (required) | [String]| One or more video IDs 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication
@@ -1677,7 +1767,7 @@ Name | Type | Description
  added_date_end | Date| Show videos added before the specified date, in the format YYYY-MM-DD 
  aspect_ratio | String| Show videos with the specified aspect ratio <br/><br/>Valid values: "4_3", "16_9", "nonstandard"
  category | String| Show videos with the specified Shutterstock-defined category; specify a category name or ID 
- contributor | [[String]](String.md)| Show videos with the specified artist names or IDs 
+ contributor | [String]| Show videos with the specified artist names or IDs 
  duration | Number| (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration (seconds) 
  duration_from | Number| Show videos with the specified duration or longer (seconds) 
  duration_to | Number| Show videos with the specified duration or shorter (seconds) 
@@ -1685,8 +1775,8 @@ Name | Type | Description
  fps_from | Number| Show videos with the specified frames per second or more 
  fps_to | Number| Show videos with the specified frames per second or fewer 
  language | String| Set query and result language (uses Accept-Language header if not set) <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh"
- license | [[String]](String.md)| Show only videos with the specified license or licenses <br/><br/>Valid values: "commercial", "editorial"
- model | [[String]](String.md)| Show videos with each of the specified models 
+ license | [String]| Show only videos with the specified license or licenses <br/><br/>Valid values: "commercial", "editorial"
+ model | [String]| Show videos with each of the specified models 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  people_age | String| Show videos that feature people of the specified age range <br/><br/>Valid values: "infants", "children", "teenagers", "20s", "30s", "40s", "50s", "60s", "older"

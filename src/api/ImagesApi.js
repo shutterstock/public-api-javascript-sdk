@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CategoryDataList', 'model/Collection', 'model/CollectionCreateRequest', 'model/CollectionCreateResponse', 'model/CollectionDataList', 'model/CollectionItemDataList', 'model/CollectionItemRequest', 'model/CollectionUpdateRequest', 'model/DownloadHistoryDataList', 'model/FeaturedCollection', 'model/FeaturedCollectionDataList', 'model/Image', 'model/ImageCreateRequest', 'model/ImageCreateResponse', 'model/ImageDataList', 'model/ImageSearchResults', 'model/LicenseImageRequest', 'model/LicenseImageResultDataList', 'model/RecommendationDataList', 'model/RedownloadImage', 'model/Url'], factory);
+    define(['ApiClient', 'model/CategoryDataList', 'model/Collection', 'model/CollectionCreateRequest', 'model/CollectionCreateResponse', 'model/CollectionDataList', 'model/CollectionItemDataList', 'model/CollectionItemRequest', 'model/CollectionUpdateRequest', 'model/DownloadHistoryDataList', 'model/FeaturedCollection', 'model/FeaturedCollectionDataList', 'model/Image', 'model/ImageCreateRequest', 'model/ImageCreateResponse', 'model/ImageDataList', 'model/ImageSearchResults', 'model/LicenseImageRequest', 'model/LicenseImageResultDataList', 'model/RecommendationDataList', 'model/RedownloadImage', 'model/UpdatedMediaDataList', 'model/Url'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CategoryDataList'), require('../model/Collection'), require('../model/CollectionCreateRequest'), require('../model/CollectionCreateResponse'), require('../model/CollectionDataList'), require('../model/CollectionItemDataList'), require('../model/CollectionItemRequest'), require('../model/CollectionUpdateRequest'), require('../model/DownloadHistoryDataList'), require('../model/FeaturedCollection'), require('../model/FeaturedCollectionDataList'), require('../model/Image'), require('../model/ImageCreateRequest'), require('../model/ImageCreateResponse'), require('../model/ImageDataList'), require('../model/ImageSearchResults'), require('../model/LicenseImageRequest'), require('../model/LicenseImageResultDataList'), require('../model/RecommendationDataList'), require('../model/RedownloadImage'), require('../model/Url'));
+    module.exports = factory(require('../ApiClient'), require('../model/CategoryDataList'), require('../model/Collection'), require('../model/CollectionCreateRequest'), require('../model/CollectionCreateResponse'), require('../model/CollectionDataList'), require('../model/CollectionItemDataList'), require('../model/CollectionItemRequest'), require('../model/CollectionUpdateRequest'), require('../model/DownloadHistoryDataList'), require('../model/FeaturedCollection'), require('../model/FeaturedCollectionDataList'), require('../model/Image'), require('../model/ImageCreateRequest'), require('../model/ImageCreateResponse'), require('../model/ImageDataList'), require('../model/ImageSearchResults'), require('../model/LicenseImageRequest'), require('../model/LicenseImageResultDataList'), require('../model/RecommendationDataList'), require('../model/RedownloadImage'), require('../model/UpdatedMediaDataList'), require('../model/Url'));
   } else {
     // Browser globals (root is window)
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.ImagesApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.CategoryDataList, root.ShutterstockApiReference.Collection, root.ShutterstockApiReference.CollectionCreateRequest, root.ShutterstockApiReference.CollectionCreateResponse, root.ShutterstockApiReference.CollectionDataList, root.ShutterstockApiReference.CollectionItemDataList, root.ShutterstockApiReference.CollectionItemRequest, root.ShutterstockApiReference.CollectionUpdateRequest, root.ShutterstockApiReference.DownloadHistoryDataList, root.ShutterstockApiReference.FeaturedCollection, root.ShutterstockApiReference.FeaturedCollectionDataList, root.ShutterstockApiReference.Image, root.ShutterstockApiReference.ImageCreateRequest, root.ShutterstockApiReference.ImageCreateResponse, root.ShutterstockApiReference.ImageDataList, root.ShutterstockApiReference.ImageSearchResults, root.ShutterstockApiReference.LicenseImageRequest, root.ShutterstockApiReference.LicenseImageResultDataList, root.ShutterstockApiReference.RecommendationDataList, root.ShutterstockApiReference.RedownloadImage, root.ShutterstockApiReference.Url);
+    root.ShutterstockApiReference.ImagesApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.CategoryDataList, root.ShutterstockApiReference.Collection, root.ShutterstockApiReference.CollectionCreateRequest, root.ShutterstockApiReference.CollectionCreateResponse, root.ShutterstockApiReference.CollectionDataList, root.ShutterstockApiReference.CollectionItemDataList, root.ShutterstockApiReference.CollectionItemRequest, root.ShutterstockApiReference.CollectionUpdateRequest, root.ShutterstockApiReference.DownloadHistoryDataList, root.ShutterstockApiReference.FeaturedCollection, root.ShutterstockApiReference.FeaturedCollectionDataList, root.ShutterstockApiReference.Image, root.ShutterstockApiReference.ImageCreateRequest, root.ShutterstockApiReference.ImageCreateResponse, root.ShutterstockApiReference.ImageDataList, root.ShutterstockApiReference.ImageSearchResults, root.ShutterstockApiReference.LicenseImageRequest, root.ShutterstockApiReference.LicenseImageResultDataList, root.ShutterstockApiReference.RecommendationDataList, root.ShutterstockApiReference.RedownloadImage, root.ShutterstockApiReference.UpdatedMediaDataList, root.ShutterstockApiReference.Url);
   }
-}(this, function(ApiClient, CategoryDataList, Collection, CollectionCreateRequest, CollectionCreateResponse, CollectionDataList, CollectionItemDataList, CollectionItemRequest, CollectionUpdateRequest, DownloadHistoryDataList, FeaturedCollection, FeaturedCollectionDataList, Image, ImageCreateRequest, ImageCreateResponse, ImageDataList, ImageSearchResults, LicenseImageRequest, LicenseImageResultDataList, RecommendationDataList, RedownloadImage, Url) {
+}(this, function(ApiClient, CategoryDataList, Collection, CollectionCreateRequest, CollectionCreateResponse, CollectionDataList, CollectionItemDataList, CollectionItemRequest, CollectionUpdateRequest, DownloadHistoryDataList, FeaturedCollection, FeaturedCollectionDataList, Image, ImageCreateRequest, ImageCreateResponse, ImageDataList, ImageSearchResults, LicenseImageRequest, LicenseImageResultDataList, RecommendationDataList, RedownloadImage, UpdatedMediaDataList, Url) {
   'use strict';
 
   /**
@@ -1062,6 +1062,78 @@
      */
     this.getSimilarImages = function(id, opts) {
       return this.getSimilarImagesWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * List updated images
+     * This endpoint lists images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the &#x60;interval&#x60; parameter to show images that were updated recently, but you can also use the &#x60;start_date&#x60; and &#x60;end_date&#x60; parameters to specify a range of no more than three days. Do not use the &#x60;interval&#x60; parameter with either &#x60;start_date&#x60; or &#x60;end_date&#x60;.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.type Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways
+     * @param {Date} opts.start_date Show images updated on or after the specified date, in the format YYYY-MM-DD
+     * @param {Date} opts.end_date Show images updated before the specified date, in the format YYYY-MM-DD
+     * @param {String} opts.interval Show images updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows images that were updated in the hour preceding the request (default to 1 HOUR)
+     * @param {Number} opts.page Page number (default to 1)
+     * @param {Number} opts.per_page Number of results per page, defaults to 100 (default to 100)
+     * @param {module:model/String} opts.sort Sort order (default to newest)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdatedMediaDataList} and HTTP response
+     */
+    this.getUpdatedImagesWithHttpInfo = function(opts) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'start_date': opts['start_date'],
+        'end_date': opts['end_date'],
+        'interval': opts['interval'],
+        'page': opts['page'],
+        'per_page': opts['per_page'],
+        'sort': opts['sort'],
+      };
+      var collectionQueryParams = {
+        'type': {
+          value: opts['type'],
+          collectionFormat: 'multi'
+        },
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = UpdatedMediaDataList;
+
+      return this.apiClient.callApi(
+        '/v2/images/updated', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * List updated images
+     * This endpoint lists images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the &#x60;interval&#x60; parameter to show images that were updated recently, but you can also use the &#x60;start_date&#x60; and &#x60;end_date&#x60; parameters to specify a range of no more than three days. Do not use the &#x60;interval&#x60; parameter with either &#x60;start_date&#x60; or &#x60;end_date&#x60;.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.type Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways
+     * @param {Date} opts.start_date Show images updated on or after the specified date, in the format YYYY-MM-DD
+     * @param {Date} opts.end_date Show images updated before the specified date, in the format YYYY-MM-DD
+     * @param {String} opts.interval Show images updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows images that were updated in the hour preceding the request (default to 1 HOUR)
+     * @param {Number} opts.page Page number (default to 1)
+     * @param {Number} opts.per_page Number of results per page, defaults to 100 (default to 100)
+     * @param {module:model/String} opts.sort Sort order (default to newest)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdatedMediaDataList}
+     */
+    this.getUpdatedImages = function(opts) {
+      return this.getUpdatedImagesWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CategoryDataList', 'model/Collection', 'model/CollectionCreateRequest', 'model/CollectionCreateResponse', 'model/CollectionDataList', 'model/CollectionItemDataList', 'model/CollectionItemRequest', 'model/CollectionUpdateRequest', 'model/DownloadHistoryDataList', 'model/LicenseVideoRequest', 'model/LicenseVideoResultDataList', 'model/RedownloadVideo', 'model/Url', 'model/Video', 'model/VideoDataList', 'model/VideoSearchResults'], factory);
+    define(['ApiClient', 'model/CategoryDataList', 'model/Collection', 'model/CollectionCreateRequest', 'model/CollectionCreateResponse', 'model/CollectionDataList', 'model/CollectionItemDataList', 'model/CollectionItemRequest', 'model/CollectionUpdateRequest', 'model/DownloadHistoryDataList', 'model/LicenseVideoRequest', 'model/LicenseVideoResultDataList', 'model/RedownloadVideo', 'model/UpdatedMediaDataList', 'model/Url', 'model/Video', 'model/VideoDataList', 'model/VideoSearchResults'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CategoryDataList'), require('../model/Collection'), require('../model/CollectionCreateRequest'), require('../model/CollectionCreateResponse'), require('../model/CollectionDataList'), require('../model/CollectionItemDataList'), require('../model/CollectionItemRequest'), require('../model/CollectionUpdateRequest'), require('../model/DownloadHistoryDataList'), require('../model/LicenseVideoRequest'), require('../model/LicenseVideoResultDataList'), require('../model/RedownloadVideo'), require('../model/Url'), require('../model/Video'), require('../model/VideoDataList'), require('../model/VideoSearchResults'));
+    module.exports = factory(require('../ApiClient'), require('../model/CategoryDataList'), require('../model/Collection'), require('../model/CollectionCreateRequest'), require('../model/CollectionCreateResponse'), require('../model/CollectionDataList'), require('../model/CollectionItemDataList'), require('../model/CollectionItemRequest'), require('../model/CollectionUpdateRequest'), require('../model/DownloadHistoryDataList'), require('../model/LicenseVideoRequest'), require('../model/LicenseVideoResultDataList'), require('../model/RedownloadVideo'), require('../model/UpdatedMediaDataList'), require('../model/Url'), require('../model/Video'), require('../model/VideoDataList'), require('../model/VideoSearchResults'));
   } else {
     // Browser globals (root is window)
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.VideosApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.CategoryDataList, root.ShutterstockApiReference.Collection, root.ShutterstockApiReference.CollectionCreateRequest, root.ShutterstockApiReference.CollectionCreateResponse, root.ShutterstockApiReference.CollectionDataList, root.ShutterstockApiReference.CollectionItemDataList, root.ShutterstockApiReference.CollectionItemRequest, root.ShutterstockApiReference.CollectionUpdateRequest, root.ShutterstockApiReference.DownloadHistoryDataList, root.ShutterstockApiReference.LicenseVideoRequest, root.ShutterstockApiReference.LicenseVideoResultDataList, root.ShutterstockApiReference.RedownloadVideo, root.ShutterstockApiReference.Url, root.ShutterstockApiReference.Video, root.ShutterstockApiReference.VideoDataList, root.ShutterstockApiReference.VideoSearchResults);
+    root.ShutterstockApiReference.VideosApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.CategoryDataList, root.ShutterstockApiReference.Collection, root.ShutterstockApiReference.CollectionCreateRequest, root.ShutterstockApiReference.CollectionCreateResponse, root.ShutterstockApiReference.CollectionDataList, root.ShutterstockApiReference.CollectionItemDataList, root.ShutterstockApiReference.CollectionItemRequest, root.ShutterstockApiReference.CollectionUpdateRequest, root.ShutterstockApiReference.DownloadHistoryDataList, root.ShutterstockApiReference.LicenseVideoRequest, root.ShutterstockApiReference.LicenseVideoResultDataList, root.ShutterstockApiReference.RedownloadVideo, root.ShutterstockApiReference.UpdatedMediaDataList, root.ShutterstockApiReference.Url, root.ShutterstockApiReference.Video, root.ShutterstockApiReference.VideoDataList, root.ShutterstockApiReference.VideoSearchResults);
   }
-}(this, function(ApiClient, CategoryDataList, Collection, CollectionCreateRequest, CollectionCreateResponse, CollectionDataList, CollectionItemDataList, CollectionItemRequest, CollectionUpdateRequest, DownloadHistoryDataList, LicenseVideoRequest, LicenseVideoResultDataList, RedownloadVideo, Url, Video, VideoDataList, VideoSearchResults) {
+}(this, function(ApiClient, CategoryDataList, Collection, CollectionCreateRequest, CollectionCreateResponse, CollectionDataList, CollectionItemDataList, CollectionItemRequest, CollectionUpdateRequest, DownloadHistoryDataList, LicenseVideoRequest, LicenseVideoResultDataList, RedownloadVideo, UpdatedMediaDataList, Url, Video, VideoDataList, VideoSearchResults) {
   'use strict';
 
   /**
@@ -566,6 +566,72 @@
      */
     this.getSimilarVideos = function(id, opts) {
       return this.getSimilarVideosWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * List updated videos
+     * This endpoint lists videos that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the &#x60;interval&#x60; parameter to show videos that were updated recently, but you can also use the &#x60;start_date&#x60; and &#x60;end_date&#x60; parameters to specify a range of no more than three days. Do not use the &#x60;interval&#x60; parameter with either &#x60;start_date&#x60; or &#x60;end_date&#x60;.
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.start_date Show videos updated on or after the specified date, in the format YYYY-MM-DD
+     * @param {Date} opts.end_date Show videos updated before the specified date, in the format YYYY-MM-DD
+     * @param {String} opts.interval Show videos updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows videos that were updated in the hour preceding the request (default to 1 HOUR)
+     * @param {Number} opts.page Page number (default to 1)
+     * @param {Number} opts.per_page Number of results per page (default to 100)
+     * @param {module:model/String} opts.sort Sort by oldest or newest videos first (default to newest)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdatedMediaDataList} and HTTP response
+     */
+    this.getUpdatedVideosWithHttpInfo = function(opts) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'start_date': opts['start_date'],
+        'end_date': opts['end_date'],
+        'interval': opts['interval'],
+        'page': opts['page'],
+        'per_page': opts['per_page'],
+        'sort': opts['sort'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = UpdatedMediaDataList;
+
+      return this.apiClient.callApi(
+        '/v2/videos/updated', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * List updated videos
+     * This endpoint lists videos that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the &#x60;interval&#x60; parameter to show videos that were updated recently, but you can also use the &#x60;start_date&#x60; and &#x60;end_date&#x60; parameters to specify a range of no more than three days. Do not use the &#x60;interval&#x60; parameter with either &#x60;start_date&#x60; or &#x60;end_date&#x60;.
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.start_date Show videos updated on or after the specified date, in the format YYYY-MM-DD
+     * @param {Date} opts.end_date Show videos updated before the specified date, in the format YYYY-MM-DD
+     * @param {String} opts.interval Show videos updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows videos that were updated in the hour preceding the request (default to 1 HOUR)
+     * @param {Number} opts.page Page number (default to 1)
+     * @param {Number} opts.per_page Number of results per page (default to 100)
+     * @param {module:model/String} opts.sort Sort by oldest or newest videos first (default to newest)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdatedMediaDataList}
+     */
+    this.getUpdatedVideos = function(opts) {
+      return this.getUpdatedVideosWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

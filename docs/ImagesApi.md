@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [`getLightboxItems`](ImagesApi.md#getLightboxItems) | `GET /v2/images/collections/{id}/items` | Get the contents of image collections
 [`getLightboxList`](ImagesApi.md#getLightboxList) | `GET /v2/images/collections` | List image collections
 [`getSimilarImages`](ImagesApi.md#getSimilarImages) | `GET /v2/images/{id}/similar` | List similar images
+[`getUpdatedImages`](ImagesApi.md#getUpdatedImages) | `GET /v2/images/updated` | List updated images
 [`licenseImages`](ImagesApi.md#licenseImages) | `POST /v2/images/licenses` | License images
 [`renameLightbox`](ImagesApi.md#renameLightbox) | `POST /v2/images/collections/{id}` | Rename image collections
 [`searchImages`](ImagesApi.md#searchImages) | `GET /v2/images/search` | Search for images
@@ -235,7 +236,7 @@ imagesApi.deleteLightboxItems(collectionId, imagesToRemove)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
- item_id | [[String]](String.md)| One or more image IDs to remove from the collection 
+ item_id | [String]| One or more image IDs to remove from the collection 
 
 ### Accepted authentication
 
@@ -512,7 +513,7 @@ api.getFeaturedLightboxList(queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  embed | String| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_url"
- type | [[String]](String.md)| The types of collections to return <br/><br/>Valid values: "photo", "editorial", "vector"
+ type | [String]| The types of collections to return <br/><br/>Valid values: "photo", "editorial", "vector"
  asset_hint | String| Cover image size, defaults to 1x, defaults to 1x <br/><br/>Valid values: "1x", "2x"
 
 ### Accepted authentication
@@ -1040,7 +1041,7 @@ api.getImageList(id, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | [[String]](String.md)| One or more image IDs 
+ id (required) | [String]| One or more image IDs 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication
@@ -1376,7 +1377,7 @@ api.getImageRecommendations(id, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | [[String]](String.md)| Image IDs 
+ id (required) | [String]| Image IDs 
  max_items | Number| Maximum number of results returned in the response, defaults to 20 
  safe | Boolean| Restrict results to safe images, defaults to true 
 
@@ -1463,7 +1464,7 @@ api.getLightbox(id, queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
- embed | [[String]](String.md)| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
+ embed | [String]| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
  share_code | String| Code to retrieve a shared collection 
 
 ### Accepted authentication
@@ -1619,7 +1620,7 @@ api.getLightboxList(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- embed | [[String]](String.md)| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
+ embed | [String]| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 100, defaults to 100 
 
@@ -2004,6 +2005,96 @@ Name | Type | Description
   "search_id" : "search_id"
 }
 
+<a name="getUpdatedImages"></a>
+# ImagesApi.getUpdatedImages
+> `UpdatedMediaDataList ImagesApi.getUpdatedImages(queryParams)`
+
+**List updated images**
+
+This endpoint lists images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the &#x60;interval&#x60; parameter to show images that were updated recently, but you can also use the &#x60;start_date&#x60; and &#x60;end_date&#x60; parameters to specify a range of no more than three days. Do not use the &#x60;interval&#x60; parameter with either &#x60;start_date&#x60; or &#x60;end_date&#x60;.
+
+### Example
+
+```javascript
+const sstk = require("shutterstock-api");
+
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const imagesApi = new sstk.ImagesApi();
+
+const queryParams = {
+  "interval": "30 MINUTE"
+};
+
+imagesApi.getUpdatedImages(queryParams)
+  .then(({ data }) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ type | [String]| Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways 
+ start_date | Date| Show images updated on or after the specified date, in the format YYYY-MM-DD 
+ end_date | Date| Show images updated before the specified date, in the format YYYY-MM-DD 
+ interval | String| Show images updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows images that were updated in the hour preceding the request, defaults to 1 HOUR 
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 100, defaults to 100 
+ sort | String| Sort order, defaults to newest <br/><br/>Valid values: "newest", "oldest"
+
+### Accepted authentication
+
+No authentication required.
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[UpdatedMediaDataList](UpdatedMediaDataList.md)
+
+### Example response
+
+{
+  "per_page" : 6,
+  "data" : [ {
+    "updated_time" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "updates" : [ "updates", "updates" ]
+  }, {
+    "updated_time" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "updates" : [ "updates", "updates" ]
+  } ],
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  }, {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  } ]
+}
+
 <a name="licenseImages"></a>
 # ImagesApi.licenseImages
 > `LicenseImageResultDataList ImagesApi.licenseImages(body, queryParams)`
@@ -2225,14 +2316,14 @@ Name | Type | Description
  added_date_end | Date| Show images added before the specified date, in the format YYYY-MM-DD 
  category | String| Show images with the specified Shutterstock-defined category; specify a category name or ID 
  color | String| Specify a hexadecimal color in the format &#39;#4F21EA&#39;; the API groups it into one of 15 color categories and returns images that primarily use that color category 
- contributor | [[String]](String.md)| Show images with the specified contributor names or IDs, allows multiple 
+ contributor | [String]| Show images with the specified contributor names or IDs, allows multiple 
  height | Number| (Deprecated; use height_from and height_to instead) Show images with the specified height 
  height_from | Number| Show images with the specified height or larger, in pixels 
  height_to | Number| Show images with the specified height or smaller, in pixels 
- image_type | [[String]](String.md)| Show images of the specified type <br/><br/>Valid values: "photo", "illustration", "vector"
+ image_type | [String]| Show images of the specified type <br/><br/>Valid values: "photo", "illustration", "vector"
  language | String| Set query and result language (uses Accept-Language header if not set) <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh"
- license | [[String]](String.md)| Show only images with the specified license <br/><br/>Valid values: "commercial", "editorial", "enhanced", "sensitive", "NOT enhanced", "NOT sensitive"
- model | [[String]](String.md)| Show image results with the specified model IDs 
+ license | [String]| Show only images with the specified license <br/><br/>Valid values: "commercial", "editorial", "enhanced", "sensitive", "NOT enhanced", "NOT sensitive"
+ model | [String]| Show image results with the specified model IDs 
  orientation | String| Show image results with horizontal or vertical orientation <br/><br/>Valid values: "horizontal", "vertical"
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20, defaults to 20 

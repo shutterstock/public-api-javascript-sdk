@@ -237,6 +237,7 @@ Class | Method | HTTP request | Description
 *shutterstock-api.ImagesApi* | [**getLightboxItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getLightboxItems) | **GET** /v2/images/collections/{id}/items | Get the contents of image collections
 *shutterstock-api.ImagesApi* | [**getLightboxList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getLightboxList) | **GET** /v2/images/collections | List image collections
 *shutterstock-api.ImagesApi* | [**getSimilarImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getSimilarImages) | **GET** /v2/images/{id}/similar | List similar images
+*shutterstock-api.ImagesApi* | [**getUpdatedImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getUpdatedImages) | **GET** /v2/images/updated | List updated images
 *shutterstock-api.ImagesApi* | [**licenseImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#licenseImages) | **POST** /v2/images/licenses | License images
 *shutterstock-api.ImagesApi* | [**renameLightbox**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#renameLightbox) | **POST** /v2/images/collections/{id} | Rename image collections
 *shutterstock-api.ImagesApi* | [**searchImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#searchImages) | **GET** /v2/images/search | Search for images
@@ -256,6 +257,7 @@ Class | Method | HTTP request | Description
 *shutterstock-api.VideosApi* | [**getClipboxItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getClipboxItems) | **GET** /v2/videos/collections/{id}/items | Get the contents of video collections
 *shutterstock-api.VideosApi* | [**getClipboxList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getClipboxList) | **GET** /v2/videos/collections | List video collections
 *shutterstock-api.VideosApi* | [**getSimilarVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getSimilarVideos) | **GET** /v2/videos/{id}/similar | List similar videos
+*shutterstock-api.VideosApi* | [**getUpdatedVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getUpdatedVideos) | **GET** /v2/videos/updated | List updated videos
 *shutterstock-api.VideosApi* | [**getVideo**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getVideo) | **GET** /v2/videos/{id} | Get details about videos
 *shutterstock-api.VideosApi* | [**getVideoCategories**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getVideoCategories) | **GET** /v2/videos/categories | List video categories
 *shutterstock-api.VideosApi* | [**getVideoLicenseList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getVideoLicenseList) | **GET** /v2/videos/licenses | List video licenses
