@@ -63,9 +63,11 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "id" : "id"
 }
+```
 
 <a name="getAccessToken"></a>
 # UsersApi.getAccessToken
@@ -113,6 +115,7 @@ This endpoint does not accept any parameters.
 
 ### Example response
 
+```
 {
   "user_id" : "user_id",
   "organization_id" : "organization_id",
@@ -124,6 +127,7 @@ This endpoint does not accept any parameters.
   "contributor_id" : "contributor_id",
   "username" : "username"
 }
+```
 
 <a name="getUser"></a>
 # UsersApi.getUser
@@ -173,6 +177,7 @@ This endpoint does not accept any parameters.
 
 ### Example response
 
+```
 {
   "only_enhanced_license" : true,
   "is_premier_parent" : true,
@@ -190,6 +195,7 @@ This endpoint does not accept any parameters.
   "contributor_id" : "contributor_id",
   "username" : "username"
 }
+```
 
 <a name="getUserSubsciptionList"></a>
 # UsersApi.getUserSubsciptionList
@@ -239,6 +245,7 @@ This endpoint does not accept any parameters.
 
 ### Example response
 
+```
 {
   "per_page" : 5,
   "data" : [ {
@@ -317,4 +324,5 @@ This endpoint does not accept any parameters.
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 

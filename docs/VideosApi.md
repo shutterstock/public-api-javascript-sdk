@@ -141,9 +141,11 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "id" : "48433105"
 }
+```
 
 <a name="deleteClipbox"></a>
 # VideosApi.deleteClipbox
@@ -316,9 +318,11 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "url" : "url"
 }
+```
 
 <a name="getClipbox"></a>
 # VideosApi.getClipbox
@@ -377,6 +381,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "created_time" : "2000-01-23T04:56:07.000+00:00",
   "updated_time" : "2000-01-23T04:56:07.000+00:00",
@@ -392,6 +397,7 @@ Name | Type | Description
   },
   "total_item_count" : 0
 }
+```
 
 <a name="getClipboxItems"></a>
 # VideosApi.getClipboxItems
@@ -458,6 +464,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "data" : [ {
     "added_time" : "2016-08-18T18:52:59-04:00",
@@ -471,6 +478,7 @@ Name | Type | Description
   "page" : 1,
   "per_page" : 100
 }
+```
 
 <a name="getClipboxList"></a>
 # VideosApi.getClipboxList
@@ -532,6 +540,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "data" : [ {
     "created_time" : "2014-11-05T19:29:56-05:00",
@@ -565,6 +574,7 @@ Name | Type | Description
     "updated_time" : "2014-11-05T19:32:13-05:00"
   } ]
 }
+```
 
 <a name="getSimilarVideos"></a>
 # VideosApi.getSimilarVideos
@@ -632,6 +642,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 9,
   "data" : [ {
@@ -817,6 +828,7 @@ Name | Type | Description
   "page" : 7,
   "message" : "message"
 }
+```
 
 <a name="getUpdatedVideos"></a>
 # VideosApi.getUpdatedVideos
@@ -878,6 +890,7 @@ No authentication required.
 
 ### Example response
 
+```
 {
   "per_page" : 6,
   "data" : [ {
@@ -906,6 +919,7 @@ No authentication required.
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="getVideo"></a>
 # VideosApi.getVideo
@@ -969,6 +983,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "has_property_release" : true,
   "aspect_ratio" : "aspect_ratio",
@@ -1059,6 +1074,7 @@ Name | Type | Description
   } ],
   "id" : "id"
 }
+```
 
 <a name="getVideoCategories"></a>
 # VideosApi.getVideoCategories
@@ -1111,6 +1127,7 @@ This endpoint does not accept any parameters.
 
 ### Example response
 
+```
 {
   "per_page" : 6,
   "data" : [ {
@@ -1137,6 +1154,7 @@ This endpoint does not accept any parameters.
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="getVideoLicenseList"></a>
 # VideosApi.getVideoLicenseList
@@ -1204,6 +1222,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 6,
   "data" : [ {
@@ -1286,6 +1305,7 @@ Name | Type | Description
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="getVideoList"></a>
 # VideosApi.getVideoList
@@ -1349,6 +1369,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 6,
   "data" : [ {
@@ -1547,6 +1568,7 @@ Name | Type | Description
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="licenseVideos"></a>
 # VideosApi.licenseVideos
@@ -1623,6 +1645,7 @@ Required scopes:
 
 ### Example response
 
+```
 {
   "per_page" : 1,
   "data" : [ {
@@ -1665,6 +1688,7 @@ Required scopes:
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="renameClipbox"></a>
 # VideosApi.renameClipbox
@@ -1807,6 +1831,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 9,
   "data" : [ {
@@ -1992,4 +2017,5 @@ Name | Type | Description
   "page" : 7,
   "message" : "message"
 }
+```
 

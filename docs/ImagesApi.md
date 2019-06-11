@@ -317,9 +317,11 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "url" : "url"
 }
+```
 
 <a name="getFeaturedLightbox"></a>
 # ImagesApi.getFeaturedLightbox
@@ -382,6 +384,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "created_time" : "2000-01-23T04:56:07.000+00:00",
   "updated_time" : "2000-01-23T04:56:07.000+00:00",
@@ -397,6 +400,7 @@ Name | Type | Description
   },
   "total_item_count" : 0
 }
+```
 
 <a name="getFeaturedLightboxItems"></a>
 # ImagesApi.getFeaturedLightboxItems
@@ -459,6 +463,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "data" : [ {
     "added_time" : "2016-08-18T18:52:59-04:00",
@@ -472,6 +477,7 @@ Name | Type | Description
   "page" : 1,
   "per_page" : 100
 }
+```
 
 <a name="getFeaturedLightboxList"></a>
 # ImagesApi.getFeaturedLightboxList
@@ -533,6 +539,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 1,
   "data" : [ {
@@ -581,6 +588,7 @@ Name | Type | Description
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="getImage"></a>
 # ImagesApi.getImage
@@ -644,6 +652,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "has_property_release" : true,
   "model_releases" : [ {
@@ -771,6 +780,7 @@ Name | Type | Description
   "id" : "id",
   "image_type" : "image_type"
 }
+```
 
 <a name="getImageCategories"></a>
 # ImagesApi.getImageCategories
@@ -823,6 +833,7 @@ This endpoint does not accept any parameters.
 
 ### Example response
 
+```
 {
   "per_page" : 6,
   "data" : [ {
@@ -849,6 +860,7 @@ This endpoint does not accept any parameters.
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="getImageLicenseList"></a>
 # ImagesApi.getImageLicenseList
@@ -916,6 +928,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 6,
   "data" : [ {
@@ -998,6 +1011,7 @@ Name | Type | Description
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="getImageList"></a>
 # ImagesApi.getImageList
@@ -1061,6 +1075,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 6,
   "data" : [ {
@@ -1333,6 +1348,7 @@ Name | Type | Description
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="getImageRecommendations"></a>
 # ImagesApi.getImageRecommendations
@@ -1398,6 +1414,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 6,
   "data" : [ {
@@ -1422,6 +1439,7 @@ Name | Type | Description
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="getLightbox"></a>
 # ImagesApi.getLightbox
@@ -1486,6 +1504,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "created_time" : "2000-01-23T04:56:07.000+00:00",
   "updated_time" : "2000-01-23T04:56:07.000+00:00",
@@ -1501,6 +1520,7 @@ Name | Type | Description
   },
   "total_item_count" : 0
 }
+```
 
 <a name="getLightboxItems"></a>
 # ImagesApi.getLightboxItems
@@ -1567,6 +1587,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "data" : [ {
     "added_time" : "2016-08-18T18:52:59-04:00",
@@ -1580,6 +1601,7 @@ Name | Type | Description
   "page" : 1,
   "per_page" : 100
 }
+```
 
 <a name="getLightboxList"></a>
 # ImagesApi.getLightboxList
@@ -1643,6 +1665,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "data" : [ {
     "created_time" : "2014-11-05T19:29:56-05:00",
@@ -1676,6 +1699,7 @@ Name | Type | Description
     "updated_time" : "2014-11-05T19:32:13-05:00"
   } ]
 }
+```
 
 <a name="getSimilarImages"></a>
 # ImagesApi.getSimilarImages
@@ -1743,6 +1767,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "spellcheck_info" : "{}",
   "per_page" : 3,
@@ -2004,6 +2029,7 @@ Name | Type | Description
   "message" : "message",
   "search_id" : "search_id"
 }
+```
 
 <a name="getUpdatedImages"></a>
 # ImagesApi.getUpdatedImages
@@ -2067,6 +2093,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 6,
   "data" : [ {
@@ -2095,6 +2122,7 @@ Name | Type | Description
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="licenseImages"></a>
 # ImagesApi.licenseImages
@@ -2173,6 +2201,7 @@ Required scopes:
 
 ### Example response
 
+```
 {
   "per_page" : 5,
   "data" : [ {
@@ -2215,6 +2244,7 @@ Required scopes:
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="renameLightbox"></a>
 # ImagesApi.renameLightbox
@@ -2359,6 +2389,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "spellcheck_info" : "{}",
   "per_page" : 3,
@@ -2620,6 +2651,7 @@ Name | Type | Description
   "message" : "message",
   "search_id" : "search_id"
 }
+```
 
 <a name="uploadEphemeralImage"></a>
 # ImagesApi.uploadEphemeralImage
@@ -2688,7 +2720,9 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "id" : "id"
 }
+```
 

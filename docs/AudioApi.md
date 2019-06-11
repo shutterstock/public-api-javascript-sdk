@@ -139,9 +139,11 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "id" : "48433105"
 }
+```
 
 <a name="deleteSoundbox"></a>
 # AudioApi.deleteSoundbox
@@ -312,9 +314,11 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "url" : "url"
 }
+```
 
 <a name="getAudioLicenseList"></a>
 # AudioApi.getAudioLicenseList
@@ -374,6 +378,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 6,
   "data" : [ {
@@ -456,6 +461,7 @@ Name | Type | Description
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="getSoundbox"></a>
 # AudioApi.getSoundbox
@@ -514,6 +520,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "created_time" : "2000-01-23T04:56:07.000+00:00",
   "updated_time" : "2000-01-23T04:56:07.000+00:00",
@@ -529,6 +536,7 @@ Name | Type | Description
   },
   "total_item_count" : 0
 }
+```
 
 <a name="getSoundboxItems"></a>
 # AudioApi.getSoundboxItems
@@ -595,6 +603,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "data" : [ {
     "added_time" : "2016-08-18T18:52:59-04:00",
@@ -608,6 +617,7 @@ Name | Type | Description
   "page" : 1,
   "per_page" : 100
 }
+```
 
 <a name="getSoundboxList"></a>
 # AudioApi.getSoundboxList
@@ -669,6 +679,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "data" : [ {
     "created_time" : "2014-11-05T19:29:56-05:00",
@@ -702,6 +713,7 @@ Name | Type | Description
     "updated_time" : "2014-11-05T19:32:13-05:00"
   } ]
 }
+```
 
 <a name="getTrack"></a>
 # AudioApi.getTrack
@@ -765,6 +777,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "added_date" : "2016-08-16",
   "album" : {
@@ -817,6 +830,7 @@ Name | Type | Description
   "vocal_description" : "",
   "url" : "https://www.shutterstock.com/music/track/another-tomorrow/442583"
 }
+```
 
 <a name="getTrackList"></a>
 # AudioApi.getTrackList
@@ -880,6 +894,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "data" : [ {
     "added_date" : "2016-04-12",
@@ -933,6 +948,7 @@ Name | Type | Description
     "vocal_description" : ""
   } ]
 }
+```
 
 <a name="licenseTrack"></a>
 # AudioApi.licenseTrack
@@ -1002,6 +1018,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "data" : [ {
     "audio_id" : "1",
@@ -1010,6 +1027,7 @@ Name | Type | Description
     }
   } ]
 }
+```
 
 <a name="renameSoundbox"></a>
 # AudioApi.renameSoundbox
@@ -1143,6 +1161,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 6,
   "data" : [ {
@@ -1252,4 +1271,5 @@ Name | Type | Description
   "page" : 0,
   "message" : "message"
 }
+```
 

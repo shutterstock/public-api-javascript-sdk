@@ -66,6 +66,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "website" : "website",
   "contributor_type" : [ "contributor_type", "contributor_type" ],
@@ -86,6 +87,7 @@ Name | Type | Description
     "linkedin" : "linkedin"
   }
 }
+```
 
 <a name="getContributorCollectionItems"></a>
 # ContributorsApi.getContributorCollectionItems
@@ -153,6 +155,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "data" : [ {
     "added_time" : "2016-08-18T18:52:59-04:00",
@@ -166,6 +169,7 @@ Name | Type | Description
   "page" : 1,
   "per_page" : 100
 }
+```
 
 <a name="getContributorCollections"></a>
 # ContributorsApi.getContributorCollections
@@ -225,6 +229,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "created_time" : "2000-01-23T04:56:07.000+00:00",
   "updated_time" : "2000-01-23T04:56:07.000+00:00",
@@ -240,6 +245,7 @@ Name | Type | Description
   },
   "total_item_count" : 0
 }
+```
 
 <a name="getContributorCollectionsList"></a>
 # ContributorsApi.getContributorCollectionsList
@@ -300,6 +306,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "data" : [ {
     "created_time" : "2014-11-05T19:29:56-05:00",
@@ -333,6 +340,7 @@ Name | Type | Description
     "updated_time" : "2014-11-05T19:32:13-05:00"
   } ]
 }
+```
 
 <a name="getContributorList"></a>
 # ContributorsApi.getContributorList
@@ -389,6 +397,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 6,
   "data" : [ {
@@ -447,4 +456,5 @@ Name | Type | Description
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 

@@ -73,6 +73,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "assets" : {
     "thumb_220" : {
@@ -137,6 +138,7 @@ Name | Type | Description
   "byline" : "byline",
   "date_taken" : "2000-01-23"
 }
+```
 
 <a name="getEditorialLivefeed"></a>
 # EditorialApi.getEditorialLivefeed
@@ -197,6 +199,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "created_time" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
@@ -209,6 +212,7 @@ Name | Type | Description
   },
   "total_item_count" : 1
 }
+```
 
 <a name="getEditorialLivefeedItems"></a>
 # EditorialApi.getEditorialLivefeedItems
@@ -269,6 +273,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 6,
   "data" : [ {
@@ -415,6 +420,7 @@ Name | Type | Description
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="getEditorialLivefeedList"></a>
 # EditorialApi.getEditorialLivefeedList
@@ -478,6 +484,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 5,
   "data" : [ {
@@ -507,6 +514,7 @@ Name | Type | Description
   "page" : 5,
   "message" : "message"
 }
+```
 
 <a name="licenseEditorialImage"></a>
 # EditorialApi.licenseEditorialImage
@@ -572,6 +580,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "per_page" : 1,
   "data" : [ {
@@ -606,6 +615,7 @@ Name | Type | Description
     "items" : [ "{}", "{}" ]
   } ]
 }
+```
 
 <a name="searchEditorial"></a>
 # EditorialApi.searchEditorial
@@ -676,6 +686,7 @@ Name | Type | Description
 
 ### Example response
 
+```
 {
   "next" : "next",
   "per_page" : 1,
@@ -812,4 +823,5 @@ Name | Type | Description
   "message" : "message",
   "search_id" : "search_id"
 }
+```
 
