@@ -876,7 +876,8 @@ Name | Type | Description
 
 ### Accepted authentication
 
-No authentication required.
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
 
 ### HTTP request headers
 
