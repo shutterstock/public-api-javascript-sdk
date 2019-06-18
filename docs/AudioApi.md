@@ -973,7 +973,7 @@ const body = {
       "audio_id": "446348",
       "license": "premier_music_comp",
       "metadata": {
-        "purchase_order": "123"
+        "customer_id": "12345"
       }
     }
   ]
@@ -1143,6 +1143,9 @@ Name | Type | Description
  sort_order | String| Sort order, asc or desc, defaults to desc <br/><br/>Valid values: "asc", "desc"
  vocal_description | String| Show tracks with the specified vocal description (male, female) 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
+ fields | String| Fields to display in response 
+ library | String| Which library to search, defaults to premier <br/><br/>Valid values: "shutterstock", "premier"
+ language | String| Which language to search in 
 
 ### Accepted authentication
 

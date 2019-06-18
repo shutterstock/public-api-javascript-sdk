@@ -815,6 +815,9 @@
      * @param {module:model/String} opts.sort_order Sort order, asc or desc (default to desc)
      * @param {String} opts.vocal_description Show tracks with the specified vocal description (male, female)
      * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
+     * @param {String} opts.fields Fields to display in response
+     * @param {module:model/String} opts.library Which library to search (default to premier)
+     * @param {String} opts.language Which language to search in
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AudioSearchResults} and HTTP response
      */
     this.searchAudioWithHttpInfo = function(opts) {
@@ -839,6 +842,9 @@
         'sort_order': opts['sort_order'],
         'vocal_description': opts['vocal_description'],
         'view': opts['view'],
+        'fields': opts['fields'],
+        'library': opts['library'],
+        'language': opts['language'],
       };
       var collectionQueryParams = {
         'artists': {
@@ -897,6 +903,9 @@
      * @param {module:model/String} opts.sort_order Sort order, asc or desc (default to desc)
      * @param {String} opts.vocal_description Show tracks with the specified vocal description (male, female)
      * @param {module:model/String} opts.view Amount of detail to render in the response (default to minimal)
+     * @param {String} opts.fields Fields to display in response
+     * @param {module:model/String} opts.library Which library to search (default to premier)
+     * @param {String} opts.language Which language to search in
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AudioSearchResults}
      */
     this.searchAudio = function(opts) {

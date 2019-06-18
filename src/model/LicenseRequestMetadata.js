@@ -68,14 +68,14 @@
       if (data.hasOwnProperty('customer_id')) {
         obj['customer_id'] = ApiClient.convertToType(data['customer_id'], 'String');
       }
-      if (data.hasOwnProperty('purchase_order')) {
-        obj['purchase_order'] = ApiClient.convertToType(data['purchase_order'], 'String');
+      if (data.hasOwnProperty('geo_location')) {
+        obj['geo_location'] = ApiClient.convertToType(data['geo_location'], 'String');
       }
-      if (data.hasOwnProperty('job')) {
-        obj['job'] = ApiClient.convertToType(data['job'], 'String');
+      if (data.hasOwnProperty('number_viewed')) {
+        obj['number_viewed'] = ApiClient.convertToType(data['number_viewed'], 'String');
       }
-      if (data.hasOwnProperty('client')) {
-        obj['client'] = ApiClient.convertToType(data['client'], 'String');
+      if (data.hasOwnProperty('search_term')) {
+        obj['search_term'] = ApiClient.convertToType(data['search_term'], 'String');
       }
     }
     return obj;
@@ -87,20 +87,20 @@
    */
   exports.prototype['customer_id'] = undefined;
   /**
-   * The customer's purchase order ID for the transaction
-   * @member {String} purchase_order
+   * The customer's location
+   * @member {String} geo_location
    */
-  exports.prototype['purchase_order'] = undefined;
+  exports.prototype['geo_location'] = undefined;
   /**
-   * Information about the job for which the media is licensed
-   * @member {String} job
+   * How many pieces of media the customer viewed
+   * @member {String} number_viewed
    */
-  exports.prototype['job'] = undefined;
+  exports.prototype['number_viewed'] = undefined;
   /**
-   * The name of the client for which the media is licensed
-   * @member {String} client
+   * The search term that the customer used
+   * @member {String} search_term
    */
-  exports.prototype['client'] = undefined;
+  exports.prototype['search_term'] = undefined;
 
 
 
