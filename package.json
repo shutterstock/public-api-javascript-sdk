@@ -17,7 +17,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "eslint": "^5.15.3",
-    "mocha": "~2.3.4",
+    "mocha": "^6.1.4",
     "sinon": "1.17.3",
     "uuid": "^3.3.2"
   }
