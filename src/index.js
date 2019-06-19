@@ -572,5 +572,9 @@
     exports.ApiClient.instance.authentications['customer_accessCode'].accessToken = token;
   };
 
+  exports.ApiClient.instance.defaultHeaders = {
+    'User-Agent': 'public-api-sdk-generator/{{projectVersion}}'
+  };
+
   return exports;
 }));
