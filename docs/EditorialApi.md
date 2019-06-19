@@ -644,7 +644,7 @@ const queryParams = {
 const country = "USA";
 
 editorialApi.searchEditorial(country, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {

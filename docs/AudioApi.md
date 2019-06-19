@@ -1110,7 +1110,7 @@ const queryParams = {
 };
 
 audioApi.searchAudio(queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {

@@ -2327,7 +2327,7 @@ const queryParams = {
 };
 
 imagesApi.searchImages(queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {

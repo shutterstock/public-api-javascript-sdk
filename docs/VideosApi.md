@@ -1772,7 +1772,7 @@ const queryParams = {
 };
 
 videosApi.searchVideos(queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
