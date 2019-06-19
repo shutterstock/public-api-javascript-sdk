@@ -16,26 +16,6 @@ This is the official SDK provided by Shutterstock for its API.
 - For the status of the API, see [API status](https://status.developers.shutterstock.com/).
 - For the source code, see https://github.com/shutterstock/public-api-javascript-sdk.
 
-## Contributing
-
-- This SDK is generated at [shutterstock/public-api-sdk-generator](https://github.com/shutterstock/public-api-sdk-generator), please make changes to SDK there.
-- Changes to tests can be made directly here.
-
-## Tests
-
-To run the tests, you must authenticate with the Shutterstock API, get a token, and put the token in the `SHUTTERSTOCK_API_TOKEN` environment variable. See [Authentication](https://api-reference.shutterstock.com/#authentication).
-
-```
-$ SHUTTERSTOCK_API_TOKEN="Your API Key"
-$ yarn run test
-```
-
-## Linting
-
-```
-$ yarn run lint
-```
-
 ## Subscriptions
 
 To access the API and license media with the SDK, you need an API subscription or a free API account.
@@ -187,6 +167,26 @@ api.licenseImages(body, queryParams)
   .catch((error) => {
     console.error(error);
   });
+```
+
+## Contributing
+
+- This SDK is generated at [shutterstock/public-api-sdk-generator](https://github.com/shutterstock/public-api-sdk-generator), please make changes to SDK there.
+- Changes to tests can be made directly here.
+
+## Tests
+
+To run the tests, you must authenticate with the Shutterstock API, get a token, and put the token in the `SHUTTERSTOCK_API_TOKEN` environment variable. See [Authentication](https://api-reference.shutterstock.com/#authentication).
+
+```
+$ SHUTTERSTOCK_API_TOKEN="Your API Key"
+$ yarn run test
+```
+
+## Linting
+
+```
+$ yarn run lint
 ```
 
 ## Documentation for methods
