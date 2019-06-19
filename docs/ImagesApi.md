@@ -349,7 +349,7 @@ const queryParams = {
 };
 
 api.getFeaturedLightbox(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -428,7 +428,7 @@ const queryParams = {
 };
 
 api.getFeaturedLightboxItems(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -504,7 +504,7 @@ const queryParams = {
 };
 
 api.getFeaturedLightboxList(queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -618,7 +618,7 @@ const queryParams = {
 };
 
 api.getImage(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -803,7 +803,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 api.getImageCategories()
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -889,7 +889,7 @@ const queryParams = {
 };
 
 api.getImageLicenseList(queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -1041,7 +1041,7 @@ const queryParams = {
 };
 
 api.getImageList(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -1379,7 +1379,7 @@ const queryParams = {
 };
 
 api.getImageRecommendations(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -1467,7 +1467,7 @@ const queryParams = {
 };
 
 api.getLightbox(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -1549,7 +1549,7 @@ const queryParams = {
 };
 
 api.getLightboxItems(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -1628,7 +1628,7 @@ const queryParams = {
 };
 
 api.getLightboxList(queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -1731,7 +1731,7 @@ const queryParams = {
 };
 
 api.getSimilarImages(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {

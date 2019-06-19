@@ -343,7 +343,7 @@ const queryParams = {
 };
 
 api.getAudioLicenseList(queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -485,7 +485,7 @@ const id = "\"48433107\""; // String | Collection ID
 
 
 api.getSoundbox(id)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -565,7 +565,7 @@ const queryParams = {
 };
 
 api.getSoundboxItems(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -643,7 +643,7 @@ const queryParams = {
 };
 
 api.getSoundboxList(queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -743,7 +743,7 @@ const queryParams = {
 };
 
 api.getTrack(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -860,7 +860,7 @@ const queryParams = {
 };
 
 api.getTrackList(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {

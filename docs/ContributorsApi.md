@@ -33,7 +33,7 @@ const contributor_id = "1653538"; // String | Contributor ID
 
 
 api.getContributor(contributor_id)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -118,7 +118,7 @@ const queryParams = {
 };
 
 api.getContributorCollectionItems(contributor_id, id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -195,7 +195,7 @@ const id = "1991678"; // String | Collection ID that belongs to the contributor
 
 
 api.getContributorCollections(contributor_id, id)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -272,7 +272,7 @@ const queryParams = {
 };
 
 api.getContributorCollectionsList(contributor_id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -364,7 +364,7 @@ const id = ["[ 800506, 1653538 ]"]; // [String] | One or more contributor IDs
 
 
 api.getContributorList(id)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {

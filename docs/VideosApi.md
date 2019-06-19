@@ -346,7 +346,7 @@ const id = "\"17555176\""; // String | The ID of the collection to return
 
 
 api.getClipbox(id)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -426,7 +426,7 @@ const queryParams = {
 };
 
 api.getClipboxItems(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -504,7 +504,7 @@ const queryParams = {
 };
 
 api.getClipboxList(queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -606,7 +606,7 @@ const queryParams = {
 };
 
 api.getSimilarVideos(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -950,7 +950,7 @@ const queryParams = {
 };
 
 api.getVideo(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -1098,7 +1098,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.VideosApi();
 api.getVideoCategories()
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -1184,7 +1184,7 @@ const queryParams = {
 };
 
 api.getVideoLicenseList(queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -1336,7 +1336,7 @@ const queryParams = {
 };
 
 api.getVideoList(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {

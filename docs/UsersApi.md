@@ -30,7 +30,7 @@ const body = new ShutterstockApiReference.UserPostRequest(); // UserPostRequest 
 
 
 api.createUser(body)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -85,7 +85,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.UsersApi();
 api.getAccessToken()
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -145,7 +145,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.UsersApi();
 api.getUser()
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -213,7 +213,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.UsersApi();
 api.getUserSubsciptionList()
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {

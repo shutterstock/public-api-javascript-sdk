@@ -39,7 +39,7 @@ const country = "\"USA\""; // String | Returns only if the content is available 
 
 
 api.getEditorialImage(id, country)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -165,7 +165,7 @@ const country = "\"USA\""; // String | Returns only if the livefeed is available
 
 
 api.getEditorialLivefeed(id, country)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -239,7 +239,7 @@ const country = "\"USA\""; // String | Returns only if the livefeed items are av
 
 
 api.getEditorialLivefeedItems(id, country)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -449,7 +449,7 @@ const queryParams = {
 };
 
 api.getEditorialLivefeedList(country, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {

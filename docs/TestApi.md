@@ -26,7 +26,7 @@ const queryParams = {
 };
 
 api.echo(queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -85,7 +85,7 @@ const queryParams = {
 };
 
 api.validate(id, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
