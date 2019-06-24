@@ -92,7 +92,7 @@ No response body.
 
 **Create video collections**
 
-This endpoint creates one or more collections (clipboxes). To add videos to collections, use &#x60;POST /videos/collections/{id}/items&#x60;.
+This endpoint creates one or more collections (clipboxes). To add videos to collections, use &#x60;POST /v2/videos/collections/{id}/items&#x60;.
 
 ### Example
 
@@ -330,7 +330,7 @@ Name | Type | Description
 
 **Get the details of video collections**
 
-This endpoint gets more detailed information about a collection, including the timestamp for its creation and the number of videos in it. To get the videos in collections, use GET /videos/collections/{id}/items.
+This endpoint gets more detailed information about a collection, including the timestamp for its creation and the number of videos in it. To get the videos in collections, use GET /v2/videos/collections/{id}/items.
 
 ### Example
 

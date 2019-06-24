@@ -96,7 +96,7 @@ No response body.
 
 **Create image collections**
 
-This endpoint creates one or more image collections (lightboxes). To add images to the collections, use &#x60;POST /images/collections/{id}/items&#x60;.
+This endpoint creates one or more image collections (lightboxes). To add images to the collections, use &#x60;POST /v2/images/collections/{id}/items&#x60;.
 
 ### Example
 
@@ -329,7 +329,7 @@ Name | Type | Description
 
 **Get the details of featured image collections**
 
-This endpoint gets more detailed information about a featured collection, including its cover image and timestamps for its creation and most recent update. To get the images, use &#x60;GET /images/collections/featured/{id}/items&#x60;.
+This endpoint gets more detailed information about a featured collection, including its cover image and timestamps for its creation and most recent update. To get the images, use &#x60;GET /v2/images/collections/featured/{id}/items&#x60;.
 
 ### Example
 
@@ -1447,7 +1447,7 @@ Name | Type | Description
 
 **Get the details of image collections**
 
-This endpoint gets more detailed information about a collection, including its cover image and timestamps for its creation and most recent update. To get the images in collections, use &#x60;GET /images/collections/{id}/items&#x60;.
+This endpoint gets more detailed information about a collection, including its cover image and timestamps for its creation and most recent update. To get the images in collections, use &#x60;GET /v2/images/collections/{id}/items&#x60;.
 
 ### Example
 

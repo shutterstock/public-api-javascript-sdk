@@ -176,7 +176,7 @@
 
     /**
      * Get details about contributors&#39; collections
-     * This endpoint gets more detailed information about a contributor&#39;s collection, including its cover image, timestamps for its creation, and most recent update. To get the items in collections, use GET /contributors/{contributor_id}/collections/{id}/items.
+     * This endpoint gets more detailed information about a contributor&#39;s collection, including its cover image, timestamps for its creation, and most recent update. To get the items in collections, use GET /v2/contributors/{contributor_id}/collections/{id}/items.
      * @param {String} contributor_id Contributor ID
      * @param {String} id Collection ID that belongs to the contributor
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Collection} and HTTP response
@@ -222,7 +222,7 @@
 
     /**
      * Get details about contributors&#39; collections
-     * This endpoint gets more detailed information about a contributor&#39;s collection, including its cover image, timestamps for its creation, and most recent update. To get the items in collections, use GET /contributors/{contributor_id}/collections/{id}/items.
+     * This endpoint gets more detailed information about a contributor&#39;s collection, including its cover image, timestamps for its creation, and most recent update. To get the items in collections, use GET /v2/contributors/{contributor_id}/collections/{id}/items.
      * @param {String} contributor_id Contributor ID
      * @param {String} id Collection ID that belongs to the contributor
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Collection}

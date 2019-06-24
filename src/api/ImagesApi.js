@@ -110,7 +110,7 @@
 
     /**
      * Create image collections
-     * This endpoint creates one or more image collections (lightboxes). To add images to the collections, use &#x60;POST /images/collections/{id}/items&#x60;.
+     * This endpoint creates one or more image collections (lightboxes). To add images to the collections, use &#x60;POST /v2/images/collections/{id}/items&#x60;.
      * @param {module:model/CollectionCreateRequest} body The names of the new collections
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -148,7 +148,7 @@
 
     /**
      * Create image collections
-     * This endpoint creates one or more image collections (lightboxes). To add images to the collections, use &#x60;POST /images/collections/{id}/items&#x60;.
+     * This endpoint creates one or more image collections (lightboxes). To add images to the collections, use &#x60;POST /v2/images/collections/{id}/items&#x60;.
      * @param {module:model/CollectionCreateRequest} body The names of the new collections
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -337,7 +337,7 @@
 
     /**
      * Get the details of featured image collections
-     * This endpoint gets more detailed information about a featured collection, including its cover image and timestamps for its creation and most recent update. To get the images, use &#x60;GET /images/collections/featured/{id}/items&#x60;.
+     * This endpoint gets more detailed information about a featured collection, including its cover image and timestamps for its creation and most recent update. To get the images, use &#x60;GET /v2/images/collections/featured/{id}/items&#x60;.
      * @param {String} id Collection ID
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.embed Which sharing information to include in the response, such as a URL to the collection
@@ -382,7 +382,7 @@
 
     /**
      * Get the details of featured image collections
-     * This endpoint gets more detailed information about a featured collection, including its cover image and timestamps for its creation and most recent update. To get the images, use &#x60;GET /images/collections/featured/{id}/items&#x60;.
+     * This endpoint gets more detailed information about a featured collection, including its cover image and timestamps for its creation and most recent update. To get the images, use &#x60;GET /v2/images/collections/featured/{id}/items&#x60;.
      * @param {String} id Collection ID
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.embed Which sharing information to include in the response, such as a URL to the collection
@@ -815,7 +815,7 @@
 
     /**
      * Get the details of image collections
-     * This endpoint gets more detailed information about a collection, including its cover image and timestamps for its creation and most recent update. To get the images in collections, use &#x60;GET /images/collections/{id}/items&#x60;.
+     * This endpoint gets more detailed information about a collection, including its cover image and timestamps for its creation and most recent update. To get the images in collections, use &#x60;GET /v2/images/collections/{id}/items&#x60;.
      * @param {String} id Collection ID
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/String>} opts.embed Which sharing information to include in the response, such as a URL to the collection
@@ -863,7 +863,7 @@
 
     /**
      * Get the details of image collections
-     * This endpoint gets more detailed information about a collection, including its cover image and timestamps for its creation and most recent update. To get the images in collections, use &#x60;GET /images/collections/{id}/items&#x60;.
+     * This endpoint gets more detailed information about a collection, including its cover image and timestamps for its creation and most recent update. To get the images in collections, use &#x60;GET /v2/images/collections/{id}/items&#x60;.
      * @param {String} id Collection ID
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/String>} opts.embed Which sharing information to include in the response, such as a URL to the collection

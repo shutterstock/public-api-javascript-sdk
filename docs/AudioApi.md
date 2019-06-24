@@ -90,7 +90,7 @@ No response body.
 
 **Create audio collections**
 
-This endpoint creates one or more collections (soundboxes). To add tracks, use &#x60;POST /audio/collections/{id}/items&#x60;.
+This endpoint creates one or more collections (soundboxes). To add tracks, use &#x60;POST /v2/audio/collections/{id}/items&#x60;.
 
 ### Example
 
@@ -469,7 +469,7 @@ Name | Type | Description
 
 **Get the details of audio collections**
 
-This endpoint gets more detailed information about a collection, including the number of items in it and when it was last updated. To get the tracks in collections, use &#x60;GET /audio/collections/{id}/items&#x60;.
+This endpoint gets more detailed information about a collection, including the number of items in it and when it was last updated. To get the tracks in collections, use &#x60;GET /v2/audio/collections/{id}/items&#x60;.
 
 ### Example
 

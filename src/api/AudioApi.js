@@ -110,7 +110,7 @@
 
     /**
      * Create audio collections
-     * This endpoint creates one or more collections (soundboxes). To add tracks, use &#x60;POST /audio/collections/{id}/items&#x60;.
+     * This endpoint creates one or more collections (soundboxes). To add tracks, use &#x60;POST /v2/audio/collections/{id}/items&#x60;.
      * @param {module:model/CollectionCreateRequest} body Collection metadata
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CollectionCreateResponse} and HTTP response
      */
@@ -148,7 +148,7 @@
 
     /**
      * Create audio collections
-     * This endpoint creates one or more collections (soundboxes). To add tracks, use &#x60;POST /audio/collections/{id}/items&#x60;.
+     * This endpoint creates one or more collections (soundboxes). To add tracks, use &#x60;POST /v2/audio/collections/{id}/items&#x60;.
      * @param {module:model/CollectionCreateRequest} body Collection metadata
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CollectionCreateResponse}
      */
@@ -381,7 +381,7 @@
 
     /**
      * Get the details of audio collections
-     * This endpoint gets more detailed information about a collection, including the number of items in it and when it was last updated. To get the tracks in collections, use &#x60;GET /audio/collections/{id}/items&#x60;.
+     * This endpoint gets more detailed information about a collection, including the number of items in it and when it was last updated. To get the tracks in collections, use &#x60;GET /v2/audio/collections/{id}/items&#x60;.
      * @param {String} id Collection ID
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Collection} and HTTP response
      */
@@ -420,7 +420,7 @@
 
     /**
      * Get the details of audio collections
-     * This endpoint gets more detailed information about a collection, including the number of items in it and when it was last updated. To get the tracks in collections, use &#x60;GET /audio/collections/{id}/items&#x60;.
+     * This endpoint gets more detailed information about a collection, including the number of items in it and when it was last updated. To get the tracks in collections, use &#x60;GET /v2/audio/collections/{id}/items&#x60;.
      * @param {String} id Collection ID
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Collection}
      */
