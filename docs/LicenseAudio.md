@@ -12,11 +12,19 @@ Name | Type | Description | Notes
 ## Enum: LicenseEnum
 
 
-* `standard` (value: `"audio_standard"`)
+* `audio_standard` (value: `"audio_standard"`)
 
-* `enhanced` (value: `"audio_enhanced"`)
+* `audio_enhanced` (value: `"audio_enhanced"`)
 
-* `platform` (value: `"audio_platform"`)
+* `audio_platform` (value: `"audio_platform"`)
+
+* `premier_music_basic` (value: `"premier_music_basic"`)
+
+* `premier_music_extended` (value: `"premier_music_extended"`)
+
+* `premier_music_pro` (value: `"premier_music_pro"`)
+
+* `premier_music_comp` (value: `"premier_music_comp"`)
 
 
 
