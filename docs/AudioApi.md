@@ -10,6 +10,9 @@ Method | HTTP request | Description
 [`deleteSoundboxItems`](AudioApi.md#deleteSoundboxItems) | `DELETE /v2/audio/collections/{id}/items` | Remove audio tracks from collections
 [`downloadTracks`](AudioApi.md#downloadTracks) | `POST /v2/audio/licenses/{id}/downloads` | Download audio tracks
 [`getAudioLicenseList`](AudioApi.md#getAudioLicenseList) | `GET /v2/audio/licenses` | List audio licenses
+[`getGenres`](AudioApi.md#getGenres) | `GET /v2/audio/genres` | List audio genres
+[`getInstruments`](AudioApi.md#getInstruments) | `GET /v2/audio/instruments` | List audio instruments
+[`getMoods`](AudioApi.md#getMoods) | `GET /v2/audio/moods` | List audio moods
 [`getSoundbox`](AudioApi.md#getSoundbox) | `GET /v2/audio/collections/{id}` | Get the details of audio collections
 [`getSoundboxItems`](AudioApi.md#getSoundboxItems) | `GET /v2/audio/collections/{id}/items` | Get the contents of audio collections
 [`getSoundboxList`](AudioApi.md#getSoundboxList) | `GET /v2/audio/collections` | List audio collections
@@ -460,6 +463,177 @@ Name | Type | Description
     "message" : "message",
     "items" : [ "{}", "{}" ]
   } ]
+}
+```
+
+<a name="getGenres"></a>
+# AudioApi.getGenres
+> `GenreList AudioApi.getGenres()`
+
+**List audio genres**
+
+This endpoint returns a list of all audio genres.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.AudioApi();
+api.getGenres()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+This endpoint does not accept any parameters.
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[GenreList](GenreList.md)
+
+### Example response
+
+```
+{
+  "data" : [ "Rock" ]
+}
+```
+
+<a name="getInstruments"></a>
+# AudioApi.getInstruments
+> `InstrumentList AudioApi.getInstruments()`
+
+**List audio instruments**
+
+This endpoint returns a list of all audio instruments.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.AudioApi();
+api.getInstruments()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+This endpoint does not accept any parameters.
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[InstrumentList](InstrumentList.md)
+
+### Example response
+
+```
+{
+  "data" : [ "Electric Guitar" ]
+}
+```
+
+<a name="getMoods"></a>
+# AudioApi.getMoods
+> `MoodList AudioApi.getMoods()`
+
+**List audio moods**
+
+This endpoint returns a list of all audio moods.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.AudioApi();
+api.getMoods()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+This endpoint does not accept any parameters.
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[MoodList](MoodList.md)
+
+### Example response
+
+```
+{
+  "data" : [ "Aggressive" ]
 }
 ```
 
@@ -1132,10 +1306,10 @@ Name | Type | Description
  duration | Number| Show tracks with the specified duration (seconds) 
  duration_from | Number| Show tracks with the specified duration or longer (seconds) 
  duration_to | Number| Show tracks with the specified duration or shorter (seconds) 
- genre | [String]| Show tracks with each of the specified genres <br/><br/>Valid values: "Acoustic", "Ambient", "Audio Logo", "Blues", "Chill Out", "Classical", "Corporate", "Country", "Dance / Techno", "Dubstep", "Easy Listening", "Electro Pop", "Electronic", "Folk", "Games", "Hip Hop", "Holiday", "Independent", "Indie Pop", "Jazz", "Kids / Children", "Latin", "Masterworks", "Motown", "New Age", "News", "Piano / Solo Instrumental", "Pop", "Production / Film Scores", "R&B", "Reggae", "Rock", "Trailer", "Vocals", "World"
+ genre | [String]| Show tracks with each of the specified genres; to get the list of genres, use &#x60;GET /v2/audio/genres&#x60; 
  is_instrumental | Boolean| Show instrumental music only 
- instruments | [String]| Show tracks with each of the specified instruments 
- moods | [String]| Show tracks with each of the specified moods <br/><br/>Valid values: "Action / Sports", "Adventure / Discovery", "Aerobics / Workout", "Aggressive", "Comedy / Funny", "Crime / Thriller / Spy", "Dark / Somber", "Epic / Orchestral", "Fashion / Lifestyle", "Feel Good", "Gentle / Light", "Happy / Cheerful", "Horror / Scary", "Magical / Mystical", "Military / Patriotic", "Relaxation / Meditation", "Religious / Christian", "Romantic/Sentimental", "Sad / Nostalgic", "Sci-Fi / Future", "Sexy / Sensual", "Strange / Bizarre", "Suspense / Drama", "Underscores", "Uplifting", "Wedding"
+ instruments | [String]| Show tracks with each of the specified instruments; to get the list of instruments, use &#x60;GET /v2/audio/instruments&#x60; 
+ moods | [String]| Show tracks with each of the specified moods; to get the list of moods, use &#x60;GET /v2/audio/moods&#x60; 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  query | String| One or more search terms separated by spaces 

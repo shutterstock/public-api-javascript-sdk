@@ -25,7 +25,7 @@
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.DownloadHistoryFormatDetails = factory(root.ShutterstockApiReference.ApiClient);
+    root.ShutterstockApiReference.InstrumentList = factory(root.ShutterstockApiReference.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,55 +34,46 @@
 
 
   /**
-   * The DownloadHistoryFormatDetails model module.
-   * @module model/DownloadHistoryFormatDetails
+   * The InstrumentList model module.
+   * @module model/InstrumentList
    * @version 1.0.10
    */
 
   /**
-   * Constructs a new <code>DownloadHistoryFormatDetails</code>.
-   * Information about the format of the download
-   * @alias module:model/DownloadHistoryFormatDetails
+   * Constructs a new <code>InstrumentList</code>.
+   * List of instruments
+   * @alias module:model/InstrumentList
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
-
   };
 
   /**
-   * Constructs a <code>DownloadHistoryFormatDetails</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>InstrumentList</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/DownloadHistoryFormatDetails} obj Optional instance to populate.
-   * @return {module:model/DownloadHistoryFormatDetails} The populated <code>DownloadHistoryFormatDetails</code> instance.
+   * @param {module:model/InstrumentList} obj Optional instance to populate.
+   * @return {module:model/InstrumentList} The populated <code>InstrumentList</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('format')) {
-        obj['format'] = ApiClient.convertToType(data['format'], 'String');
-      }
-      if (data.hasOwnProperty('size')) {
-        obj['size'] = ApiClient.convertToType(data['size'], 'String');
+      if (data.hasOwnProperty('data')) {
+        obj['data'] = ApiClient.convertToType(data['data'], ['String']);
       }
     }
     return obj;
   }
 
   /**
-   * The format of the downloaded media
-   * @member {String} format
+   * List of instruments
+   * @member {Array.<String>} data
    */
-  exports.prototype['format'] = undefined;
-  /**
-   * The size of the downloaded media
-   * @member {String} size
-   */
-  exports.prototype['size'] = undefined;
+  exports.prototype['data'] = undefined;
 
 
 

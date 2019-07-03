@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.0.9
+- API version: 1.0.10
 
 ## References
 
@@ -201,6 +201,9 @@ Class | Method | HTTP request | Description
 *shutterstock-api.AudioApi* | [**deleteSoundboxItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#deleteSoundboxItems) | **DELETE** /v2/audio/collections/{id}/items | Remove audio tracks from collections
 *shutterstock-api.AudioApi* | [**downloadTracks**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#downloadTracks) | **POST** /v2/audio/licenses/{id}/downloads | Download audio tracks
 *shutterstock-api.AudioApi* | [**getAudioLicenseList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#getAudioLicenseList) | **GET** /v2/audio/licenses | List audio licenses
+*shutterstock-api.AudioApi* | [**getGenres**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#getGenres) | **GET** /v2/audio/genres | List audio genres
+*shutterstock-api.AudioApi* | [**getInstruments**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#getInstruments) | **GET** /v2/audio/instruments | List audio instruments
+*shutterstock-api.AudioApi* | [**getMoods**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#getMoods) | **GET** /v2/audio/moods | List audio moods
 *shutterstock-api.AudioApi* | [**getSoundbox**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#getSoundbox) | **GET** /v2/audio/collections/{id} | Get the details of audio collections
 *shutterstock-api.AudioApi* | [**getSoundboxItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#getSoundboxItems) | **GET** /v2/audio/collections/{id}/items | Get the contents of audio collections
 *shutterstock-api.AudioApi* | [**getSoundboxList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#getSoundboxList) | **GET** /v2/audio/collections | List audio collections
