@@ -103,6 +103,27 @@ The following list shows the available scopes.
 - user.view: Grants read-only access to a user&#39;s basic account information (includes username, id, first and last name). If email is the same as username, it also implies user.email
 
 
+## Licensing sandbox
+
+To use the licensing sandbox API instead of the main API, use the `setSandbox` method.
+For more information on the sandbox API, see [Licensing sandbox](https://api-reference.shutterstock.com/#licensing-and-downloading-licensing-sandbox) in the API reference.
+
+```javascript
+const sstk = require('shutterstock-api');
+
+sstk.setSandbox(true);
+
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.ImagesApi();
+```
+
+To go back to the main API, call the `setSandbox` method again and pass `false`.
+
+```javascript
+sstk.setSandbox(false);
+```
+
 ## Examples
 
 Follow the [installation](#installation) instructions and use the SDK in your JavaScript code as in these examples.

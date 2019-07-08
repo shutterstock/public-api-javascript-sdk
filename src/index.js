@@ -591,5 +591,11 @@
     'User-Agent': 'public-api-sdk-generator/{{projectVersion}}'
   };
 
+  exports.setSandbox = function(isSandbox) {
+    exports.ApiClient.instance.basePath = isSandbox ?
+      'https://api-sandbox.shutterstock.com' :
+      'https://api.shutterstock.com';
+  };
+
   return exports;
 }));
