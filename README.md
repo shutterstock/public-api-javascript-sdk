@@ -176,7 +176,7 @@ const imageToLicense = new sstk.LicenseImage(imageId);
 const body = new sstk.LicenseImageRequest([imageToLicense]);
 
 const queryParams = {
-  subscriptionId: process.env.SHUTTERSTOCK_SUBSCRIPTION_ID,
+  subscription_id: process.env.SUBSCRIPTION_ID,
   format: 'jpg',
   size: 'huge'
 };
