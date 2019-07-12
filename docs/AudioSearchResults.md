@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **page** | **Number** | Current page that is returned | [optional] 
 **per_page** | **Number** | Number of results per page | [optional] 
 **total_count** | **Number** | Total count of all results across all pages | 
+**search_id** | **String** | ID of the search | 
 
 

@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | **[String]** | List of moods | [optional] 
+**data** | **[String]** | List of moods | 
 
 
