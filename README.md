@@ -157,7 +157,7 @@ api.searchImages(queryParams)
 
 The next example requests a license for an image.
 
-For POST requests like this one, you must create an object of the appropriate class to pass as the request body.
+For POST requests like this one, you create an object of the appropriate class to pass as the request body.
 In this case, the `shutterstock-api.ImagesApi.licenseImages` method accepts a body parameter of the class `shutterstock-api.LicenseImageRequest`.
 This parameter is an array of objects of the class `shutterstock-api.LicenseImage`, each of which has the ID of an image to license.
 The reference information for each method shows the class for the body parameter.
@@ -183,6 +183,44 @@ const queryParams = {
 
 api.licenseImages(body, queryParams)
   .then(({data}) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
+
+Instead of using objects for the body, you can also pass a JavaScript object literal that has the data that the API expects in the body.
+For information about the body format, see the [API reference](https://api-reference.shutterstock.com) for the related API endpoint.
+For example, this licensing request passes information about the images to license in a JavaScript object literal:
+
+```javascript
+const sstk = require('shutterstock-api');
+
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const imagesApi = new sstk.ImagesApi();
+
+const body = {
+  images: [
+    {
+      image_id: '419235589',
+      price: 12.50,
+      metadata: {
+        customer_id: '12345'
+      }
+    }
+  ]
+};
+
+const queryParams = {
+  format: 'jpg',
+  size: 'huge',
+  subscription_id: process.env.SUBSCRIPTION_ID
+};
+
+imagesApi.licenseImages(body, queryParams)
+  .then(({ data }) => {
     console.log(data);
   })
   .catch((error) => {
