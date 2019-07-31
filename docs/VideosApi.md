@@ -600,6 +600,7 @@ const api = new sstk.VideosApi();
 const id = "\"2140697\""; // String | The ID of a video for which similar videos should be returned
 
 const queryParams = { 
+  'language': "\"es\"", // String | Language for the keywords and categories in the response
   'page': 1, // Number | Page number
   'per_page': 20, // Number | Number of results per page
   'view': "minimal" // String | Amount of detail to render in the response
@@ -621,6 +622,7 @@ api.getSimilarVideos(id, queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| The ID of a video for which similar videos should be returned 
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh"
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
@@ -946,6 +948,7 @@ const api = new sstk.VideosApi();
 const id = "\"30867073\""; // String | Video ID
 
 const queryParams = { 
+  'language': "\"es\"", // String | Language for the keywords and categories in the response
   'view': "full" // String | Amount of detail to render in the response
 };
 
@@ -965,6 +968,7 @@ api.getVideo(id, queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Video ID 
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh"
  view | String| Amount of detail to render in the response, defaults to full <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication
@@ -1079,7 +1083,7 @@ Name | Type | Description
 
 <a name="getVideoCategories"></a>
 # VideosApi.getVideoCategories
-> `CategoryDataList VideosApi.getVideoCategories()`
+> `CategoryDataList VideosApi.getVideoCategories(queryParams)`
 
 **List video categories**
 
@@ -1097,7 +1101,12 @@ sstk.setBasicAuth(client_id, client_secret);
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.VideosApi();
-api.getVideoCategories()
+
+const queryParams = { 
+  'language': "\"es\"" // String | Language for the keywords and categories in the response
+};
+
+api.getVideoCategories(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1109,7 +1118,10 @@ api.getVideoCategories()
 
 ### Parameters
 
-This endpoint does not accept any parameters.
+
+Name | Type | Description
+------------- | ------------- | -------------
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh"
 
 ### Accepted authentication
 

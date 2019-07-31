@@ -614,6 +614,7 @@ const api = new sstk.ImagesApi();
 const id = "\"465011609\""; // String | Image ID
 
 const queryParams = { 
+  'language': "\"es\"", // String | Language for the keywords and categories in the response
   'view': "full" // String | Amount of detail to render in the response
 };
 
@@ -633,6 +634,7 @@ api.getImage(id, queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Image ID 
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh"
  view | String| Amount of detail to render in the response, defaults to full <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication
@@ -784,7 +786,7 @@ Name | Type | Description
 
 <a name="getImageCategories"></a>
 # ImagesApi.getImageCategories
-> `CategoryDataList ImagesApi.getImageCategories()`
+> `CategoryDataList ImagesApi.getImageCategories(queryParams)`
 
 **List image categories**
 
@@ -802,7 +804,12 @@ sstk.setBasicAuth(client_id, client_secret);
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
-api.getImageCategories()
+
+const queryParams = { 
+  'language': "\"es\"" // String | Language for the keywords and categories in the response
+};
+
+api.getImageCategories(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -814,7 +821,10 @@ api.getImageCategories()
 
 ### Parameters
 
-This endpoint does not accept any parameters.
+
+Name | Type | Description
+------------- | ------------- | -------------
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh"
 
 ### Accepted authentication
 
@@ -1725,6 +1735,7 @@ const api = new sstk.ImagesApi();
 const id = "\"465011609\""; // String | Image ID
 
 const queryParams = { 
+  'language': "\"es\"", // String | Language for the keywords and categories in the response
   'page': 1, // Number | Page number
   'per_page': 20, // Number | Number of results per page, defaults to 20
   'view': "minimal" // String | Amount of detail to render in the response
@@ -1746,6 +1757,7 @@ api.getSimilarImages(id, queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Image ID 
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh"
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20, defaults to 20 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
@@ -2155,7 +2167,8 @@ const body = {
 
 const queryParams = {
   "format": "jpg",
-  "size": "huge"
+  "size": "huge",
+  "subscription_id": process.env.SUBSCRIPTION_ID
 };
 
 imagesApi.licenseImages(body, queryParams)
