@@ -103,6 +103,14 @@ The following list shows the available scopes.
 - user.view: Grants read-only access to a user&#39;s basic account information (includes username, id, first and last name). If email is the same as username, it also implies user.email
 
 
+## Languages
+
+You can provide search keywords in languages other than English by specifying the two-character language code in the `language` query parameter.
+If you set this parameter or header, you can also pass category names in that language.
+The response includes categories and keywords in that language.
+
+For the list of languages that the API accepts, see the [Language](https://api-reference.shutterstock.com/#schema-language) schema.
+
 ## Licensing sandbox
 
 To use the licensing sandbox API instead of the main API, use the `setSandbox` method.
