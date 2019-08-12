@@ -33,9 +33,9 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.EditorialApi();
 
-const id = "\"9926131a\""; // String | Editorial ID
+const id = "9926131a"; // String | Editorial ID
 
-const country = "\"USA\""; // String | Returns only if the content is available for distribution in a certain country; specify with 3-letter country code
+const country = "USA"; // String | Returns only if the content is available for distribution in a certain country; specify with 3-letter country code
 
 
 api.getEditorialImage(id, country)
@@ -159,9 +159,9 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.EditorialApi();
 
-const id = "\"2018%2F10%2F15%2FWomen%20of%20the%20Year%20Lunch%20%26%20Awards%2C%20London\""; // String | Editorial livefeed ID; must be an URI encoded string
+const id = "2018%2F10%2F15%2FWomen%20of%20the%20Year%20Lunch%20%26%20Awards%2C%20London"; // String | Editorial livefeed ID; must be an URI encoded string
 
-const country = "\"USA\""; // String | Returns only if the livefeed is available for distribution in a certain country; specify with 3-letter country code
+const country = "USA"; // String | Returns only if the livefeed is available for distribution in a certain country; specify with 3-letter country code
 
 
 api.getEditorialLivefeed(id, country)
@@ -233,9 +233,9 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.EditorialApi();
 
-const id = "\"2018%2F10%2F15%2FWomen%20of%20the%20Year%20Lunch%20%26%20Awards%2C%20London\""; // String | Editorial livefeed ID; must be an URI encoded string
+const id = "2018%2F10%2F15%2FWomen%20of%20the%20Year%20Lunch%20%26%20Awards%2C%20London"; // String | Editorial livefeed ID; must be an URI encoded string
 
-const country = "\"USA\""; // String | Returns only if the livefeed items are available for distribution in a certain country; specify with 3-letter country code
+const country = "USA"; // String | Returns only if the livefeed items are available for distribution in a certain country; specify with 3-letter country code
 
 
 api.getEditorialLivefeedItems(id, country)
@@ -441,7 +441,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.EditorialApi();
 
-const country = "\"USA\""; // String | Returns only livefeeds that are available for distribution in a certain country; specify with 3-letter country code
+const country = "USA"; // String | Returns only livefeeds that are available for distribution in a certain country; specify with 3-letter country code
 
 const queryParams = { 
   'page': 1, // Number | Page number

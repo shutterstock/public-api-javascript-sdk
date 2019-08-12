@@ -342,7 +342,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 const api = new sstk.AudioApi();
 
 const queryParams = { 
-  'audio_id': "\"1\"" // String | Show licenses for the specified track ID
+  'audio_id': "1" // String | Show licenses for the specified track ID
 };
 
 api.getAudioLicenseList(queryParams)
@@ -655,7 +655,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.AudioApi();
 
-const id = "\"48433107\""; // String | Collection ID
+const id = "48433107"; // String | Collection ID
 
 
 api.getSoundbox(id)
@@ -730,7 +730,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.AudioApi();
 
-const id = "\"48433113\""; // String | Collection ID
+const id = "48433113"; // String | Collection ID
 
 const queryParams = { 
   'page': 1, // Number | Page number
@@ -910,7 +910,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.AudioApi();
 
-const id = "\"442583\""; // String | Audio track ID
+const id = "442583"; // String | Audio track ID
 
 const queryParams = { 
   'view': "full" // String | Amount of detail to render in the response
@@ -1027,7 +1027,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.AudioApi();
 
-const id = ["[ \"442583\", \"434750\" ]"]; // [String] | One or more audio IDs
+const id = ["[ 442583, 434750 ]"]; // [String] | One or more audio IDs
 
 const queryParams = { 
   'view': "minimal" // String | Amount of detail to render in the response

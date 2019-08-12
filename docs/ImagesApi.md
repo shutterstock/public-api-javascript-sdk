@@ -341,7 +341,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 
-const id = "\"136351027\""; // String | Collection ID
+const id = "136351027"; // String | Collection ID
 
 const queryParams = { 
   'embed': "embed_example", // String | Which sharing information to include in the response, such as a URL to the collection
@@ -420,7 +420,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 
-const id = "\"136351027\""; // String | Collection ID
+const id = "136351027"; // String | Collection ID
 
 const queryParams = { 
   'page': 1, // Number | Page number
@@ -498,8 +498,8 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 const api = new sstk.ImagesApi();
 
 const queryParams = { 
-  'embed': "\"share_url\"", // String | Which sharing information to include in the response, such as a URL to the collection
-  'type': ["\"photo\""], // [String] | The types of collections to return
+  'embed': "share_url", // String | Which sharing information to include in the response, such as a URL to the collection
+  'type': ["photo"], // [String] | The types of collections to return
   'asset_hint': "1x" // String | Cover image size, defaults to 1x
 };
 
@@ -611,10 +611,10 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 
-const id = "\"465011609\""; // String | Image ID
+const id = "465011609"; // String | Image ID
 
 const queryParams = { 
-  'language': "\"es\"", // String | Language for the keywords and categories in the response
+  'language': "es", // String | Language for the keywords and categories in the response
   'view': "full" // String | Amount of detail to render in the response
 };
 
@@ -806,7 +806,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 const api = new sstk.ImagesApi();
 
 const queryParams = { 
-  'language': "\"es\"" // String | Language for the keywords and categories in the response
+  'language': "es" // String | Language for the keywords and categories in the response
 };
 
 api.getImageCategories(queryParams)
@@ -1044,7 +1044,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 
-const id = ["[ \"1110335168\", \"465011609\" ]"]; // [String] | One or more image IDs
+const id = ["[ 1110335168, 465011609 ]"]; // [String] | One or more image IDs
 
 const queryParams = { 
   'view': "minimal" // String | Amount of detail to render in the response
@@ -1469,7 +1469,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 
-const id = "\"126351027\""; // String | Collection ID
+const id = "126351027"; // String | Collection ID
 
 const queryParams = { 
   'embed': ["embed_example"], // [String] | Which sharing information to include in the response, such as a URL to the collection
@@ -1550,7 +1550,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 
-const id = "\"126351027\""; // String | Collection ID
+const id = "126351027"; // String | Collection ID
 
 const queryParams = { 
   'share_code': "share_code_example", // String | Code to retrieve the contents of a shared collection
@@ -1632,7 +1632,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 const api = new sstk.ImagesApi();
 
 const queryParams = { 
-  'embed': ["\"share_code\""], // [String] | Which sharing information to include in the response, such as a URL to the collection
+  'embed': ["share_code"], // [String] | Which sharing information to include in the response, such as a URL to the collection
   'page': 1, // Number | Page number
   'per_page': 100 // Number | Number of results per page, defaults to 100
 };
@@ -1732,10 +1732,10 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 
-const id = "\"465011609\""; // String | Image ID
+const id = "465011609"; // String | Image ID
 
 const queryParams = { 
-  'language': "\"es\"", // String | Language for the keywords and categories in the response
+  'language': "es", // String | Language for the keywords and categories in the response
   'page': 1, // Number | Page number
   'per_page': 20, // Number | Number of results per page, defaults to 20
   'view': "minimal" // String | Amount of detail to render in the response

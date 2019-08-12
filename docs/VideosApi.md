@@ -342,7 +342,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.VideosApi();
 
-const id = "\"17555176\""; // String | The ID of the collection to return
+const id = "17555176"; // String | The ID of the collection to return
 
 
 api.getClipbox(id)
@@ -417,7 +417,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.VideosApi();
 
-const id = "\"17555176\""; // String | The ID of the Collection whose items are to be returned
+const id = "17555176"; // String | The ID of the Collection whose items are to be returned
 
 const queryParams = { 
   'page': 1, // Number | Page number
@@ -597,10 +597,10 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.VideosApi();
 
-const id = "\"2140697\""; // String | The ID of a video for which similar videos should be returned
+const id = "2140697"; // String | The ID of a video for which similar videos should be returned
 
 const queryParams = { 
-  'language': "\"es\"", // String | Language for the keywords and categories in the response
+  'language': "es", // String | Language for the keywords and categories in the response
   'page': 1, // Number | Page number
   'per_page': 20, // Number | Number of results per page
   'view': "minimal" // String | Amount of detail to render in the response
@@ -945,10 +945,10 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.VideosApi();
 
-const id = "\"30867073\""; // String | Video ID
+const id = "30867073"; // String | Video ID
 
 const queryParams = { 
-  'language': "\"es\"", // String | Language for the keywords and categories in the response
+  'language': "es", // String | Language for the keywords and categories in the response
   'view': "full" // String | Amount of detail to render in the response
 };
 
@@ -1103,7 +1103,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 const api = new sstk.VideosApi();
 
 const queryParams = { 
-  'language': "\"es\"" // String | Language for the keywords and categories in the response
+  'language': "es" // String | Language for the keywords and categories in the response
 };
 
 api.getVideoCategories(queryParams)
@@ -1341,7 +1341,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.VideosApi();
 
-const id = ["[ \"639703\", \"993721\" ]"]; // [String] | One or more video IDs
+const id = ["[ 639703, 993721 ]"]; // [String] | One or more video IDs
 
 const queryParams = { 
   'view': "minimal" // String | Amount of detail to render in the response
