@@ -236,6 +236,11 @@ imagesApi.licenseImages(body, queryParams)
   });
 ```
 
+## Errors
+
+The SDK returns the same errors as the API.
+For information about errors, see [Errors](https://api-reference.shutterstock.com/#overview-errors) in the API reference.
+
 ## Contributing
 
 - This SDK is generated at [shutterstock/public-api-sdk-generator](https://github.com/shutterstock/public-api-sdk-generator), please make changes to SDK there.
