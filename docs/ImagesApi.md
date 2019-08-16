@@ -336,6 +336,9 @@ This endpoint gets more detailed information about a featured collection, includ
 ```javascript
 const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
 // To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -369,7 +372,7 @@ Name | Type | Description
 
 ### Accepted authentication
 
-
+- [Basic](../README.md#Basic_authentication)
 - [OAuth](../README.md#OAuth_authentication) (No scope required.)
 
 ### HTTP request headers
@@ -415,6 +418,9 @@ This endpoint lists the IDs of images in a featured collection and the date that
 ```javascript
 const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
 // To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -448,7 +454,7 @@ Name | Type | Description
 
 ### Accepted authentication
 
-
+- [Basic](../README.md#Basic_authentication)
 - [OAuth](../README.md#OAuth_authentication) (No scope required.)
 
 ### HTTP request headers
@@ -492,6 +498,9 @@ This endpoint lists featured collections of specific types and a name and cover 
 ```javascript
 const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
 // To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -524,7 +533,7 @@ Name | Type | Description
 
 ### Accepted authentication
 
-
+- [Basic](../README.md#Basic_authentication)
 - [OAuth](../README.md#OAuth_authentication) (No scope required.)
 
 ### HTTP request headers
@@ -2361,6 +2370,7 @@ Name | Type | Description
  category | String| Show images with the specified Shutterstock-defined category; specify a category name or ID 
  color | String| Specify a hexadecimal color in the format &#39;#4F21EA&#39;; the API groups it into one of 15 color categories and returns images that primarily use that color category 
  contributor | [String]| Show images with the specified contributor names or IDs, allows multiple 
+ contributor_country | [String]| Show images from contributors in one or more specified countries, by 2-letter country code 
  height | Number| (Deprecated; use height_from and height_to instead) Show images with the specified height 
  height_from | Number| Show images with the specified height or larger, in pixels 
  height_to | Number| Show images with the specified height or smaller, in pixels 
@@ -2672,7 +2682,7 @@ Name | Type | Description
 
 **Upload images**
 
-This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format.
+This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format. To get the search results, pass the ID that this endpoint returns to the &#x60;GET /v2/images/{id}/similar&#x60; endpoint.
 
 ### Example
 

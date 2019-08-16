@@ -1805,6 +1805,7 @@ Name | Type | Description
  aspect_ratio | String| Show videos with the specified aspect ratio <br/><br/>Valid values: "4_3", "16_9", "nonstandard"
  category | String| Show videos with the specified Shutterstock-defined category; specify a category name or ID 
  contributor | [String]| Show videos with the specified artist names or IDs 
+ contributor_country | [String]| Show videos from contributors in one or more specified countries, by 2-letter country code 
  duration | Number| (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration (seconds) 
  duration_from | Number| Show videos with the specified duration or longer (seconds) 
  duration_to | Number| Show videos with the specified duration or shorter (seconds) 
