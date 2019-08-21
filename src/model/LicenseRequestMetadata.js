@@ -48,10 +48,6 @@
   var exports = function() {
     var _this = this;
 
-
-
-
-
   };
 
   /**
@@ -65,42 +61,10 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('customer_id')) {
-        obj['customer_id'] = ApiClient.convertToType(data['customer_id'], 'String');
-      }
-      if (data.hasOwnProperty('geo_location')) {
-        obj['geo_location'] = ApiClient.convertToType(data['geo_location'], 'String');
-      }
-      if (data.hasOwnProperty('number_viewed')) {
-        obj['number_viewed'] = ApiClient.convertToType(data['number_viewed'], 'String');
-      }
-      if (data.hasOwnProperty('search_term')) {
-        obj['search_term'] = ApiClient.convertToType(data['search_term'], 'String');
-      }
     }
     return obj;
   }
 
-  /**
-   * The ID of a revenue-sharing partner's customer
-   * @member {String} customer_id
-   */
-  exports.prototype['customer_id'] = undefined;
-  /**
-   * The customer's location
-   * @member {String} geo_location
-   */
-  exports.prototype['geo_location'] = undefined;
-  /**
-   * How many pieces of media the customer viewed
-   * @member {String} number_viewed
-   */
-  exports.prototype['number_viewed'] = undefined;
-  /**
-   * The search term that the customer used
-   * @member {String} search_term
-   */
-  exports.prototype['search_term'] = undefined;
 
 
 
