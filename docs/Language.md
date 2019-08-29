@@ -43,4 +43,6 @@
 
 * `zh` (value: `"zh"`)
 
+* `zh-Hant` (value: `"zh-Hant"`)
+
 

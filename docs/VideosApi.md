@@ -622,7 +622,7 @@ api.getSimilarVideos(id, queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| The ID of a video for which similar videos should be returned 
- language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh"
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
@@ -968,7 +968,7 @@ api.getVideo(id, queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Video ID 
- language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh"
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
  view | String| Amount of detail to render in the response, defaults to full <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication
@@ -1121,7 +1121,7 @@ api.getVideoCategories(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh"
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
 
 ### Accepted authentication
 
@@ -1812,7 +1812,7 @@ Name | Type | Description
  fps | Number| (Deprecated; use fps_from and fps_to instead) Show videos with the specified frames per second 
  fps_from | Number| Show videos with the specified frames per second or more 
  fps_to | Number| Show videos with the specified frames per second or fewer 
- language | String| Set query and result language (uses Accept-Language header if not set) <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh"
+ language | String| Set query and result language (uses Accept-Language header if not set) <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
  license | [String]| Show only videos with the specified license or licenses <br/><br/>Valid values: "commercial", "editorial"
  model | [String]| Show videos with each of the specified models 
  page | Number| Page number, defaults to 1 
