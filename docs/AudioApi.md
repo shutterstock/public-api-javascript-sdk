@@ -93,7 +93,7 @@ No response body.
 
 **Create audio collections**
 
-This endpoint creates one or more collections (soundboxes). To add tracks, use &#x60;POST /v2/audio/collections/{id}/items&#x60;.
+This endpoint creates one or more collections (soundboxes). To add tracks, use `POST /v2/audio/collections/{id}/items`.
 
 ### Example
 
@@ -643,7 +643,7 @@ This endpoint does not accept any parameters.
 
 **Get the details of audio collections**
 
-This endpoint gets more detailed information about a collection, including the number of items in it and when it was last updated. To get the tracks in collections, use &#x60;GET /v2/audio/collections/{id}/items&#x60;.
+This endpoint gets more detailed information about a collection, including the number of items in it and when it was last updated. To get the tracks in collections, use `GET /v2/audio/collections/{id}/items`.
 
 ### Example
 
@@ -1027,7 +1027,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.AudioApi();
 
-const id = ["[ 442583, 434750 ]"]; // [String] | One or more audio IDs
+const id = ["[442583, 434750]"]; // [String] | One or more audio IDs
 
 const queryParams = { 
   'view': "minimal" // String | Amount of detail to render in the response
@@ -1306,10 +1306,10 @@ Name | Type | Description
  duration | Number| Show tracks with the specified duration (seconds) 
  duration_from | Number| Show tracks with the specified duration or longer (seconds) 
  duration_to | Number| Show tracks with the specified duration or shorter (seconds) 
- genre | [String]| Show tracks with each of the specified genres; to get the list of genres, use &#x60;GET /v2/audio/genres&#x60; 
+ genre | [String]| Show tracks with each of the specified genres; to get the list of genres, use `GET /v2/audio/genres` 
  is_instrumental | Boolean| Show instrumental music only 
- instruments | [String]| Show tracks with each of the specified instruments; to get the list of instruments, use &#x60;GET /v2/audio/instruments&#x60; 
- moods | [String]| Show tracks with each of the specified moods; to get the list of moods, use &#x60;GET /v2/audio/moods&#x60; 
+ instruments | [String]| Show tracks with each of the specified instruments; to get the list of instruments, use `GET /v2/audio/instruments` 
+ moods | [String]| Show tracks with each of the specified moods; to get the list of moods, use `GET /v2/audio/moods` 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  query | String| One or more search terms separated by spaces 

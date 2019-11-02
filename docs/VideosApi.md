@@ -92,7 +92,7 @@ No response body.
 
 **Create video collections**
 
-This endpoint creates one or more collections (clipboxes). To add videos to collections, use &#x60;POST /v2/videos/collections/{id}/items&#x60;.
+This endpoint creates one or more collections (clipboxes). To add videos to collections, use `POST /v2/videos/collections/{id}/items`.
 
 ### Example
 
@@ -838,7 +838,7 @@ Name | Type | Description
 
 **List updated videos**
 
-This endpoint lists videos that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the &#x60;interval&#x60; parameter to show videos that were updated recently, but you can also use the &#x60;start_date&#x60; and &#x60;end_date&#x60; parameters to specify a range of no more than three days. Do not use the &#x60;interval&#x60; parameter with either &#x60;start_date&#x60; or &#x60;end_date&#x60;.
+This endpoint lists videos that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the `interval` parameter to show videos that were updated recently, but you can also use the `start_date` and `end_date` parameters to specify a range of no more than three days. Do not use the `interval` parameter with either `start_date` or `end_date`.
 
 ### Example
 
@@ -1211,7 +1211,7 @@ api.getVideoLicenseList(queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  video_id | String| Show licenses for the specified video ID 
- license | String| Show videos that are available with the specified license, such as &#x60;standard&#x60; or &#x60;enhanced&#x60;; prepending a &#x60;-&#x60; sign excludes results from that license 
+ license | String| Show videos that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  sort | String| Sort by oldest or newest videos first, defaults to newest <br/><br/>Valid values: "newest", "oldest"
@@ -1341,7 +1341,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.VideosApi();
 
-const id = ["[ 639703, 993721 ]"]; // [String] | One or more video IDs
+const id = ["[639703, 993721]"]; // [String] | One or more video IDs
 
 const queryParams = { 
   'view': "minimal" // String | Amount of detail to render in the response
@@ -1766,7 +1766,7 @@ No response body.
 
 **Search for videos**
 
-This endpoint searches for videos. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the &#x60;query&#x60; parameter by prefixing the term with NOT.
+This endpoint searches for videos. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
 
 ### Example
 
@@ -1805,7 +1805,7 @@ Name | Type | Description
  aspect_ratio | String| Show videos with the specified aspect ratio <br/><br/>Valid values: "4_3", "16_9", "nonstandard"
  category | String| Show videos with the specified Shutterstock-defined category; specify a category name or ID 
  contributor | [String]| Show videos with the specified artist names or IDs 
- contributor_country | [String]| Show videos from contributors in one or more specified countries, by 2-letter country code 
+ contributor_country | [String]| Show videos from contributors in one or more specified countries by 2-letter ISO 3166-1 alpha-2 country code, such as DE or US 
  duration | Number| (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration (seconds) 
  duration_from | Number| Show videos with the specified duration or longer (seconds) 
  duration_to | Number| Show videos with the specified duration or shorter (seconds) 

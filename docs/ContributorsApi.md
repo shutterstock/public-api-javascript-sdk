@@ -5,9 +5,9 @@ All URIs are relative to `https://api.shutterstock.com`.
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [`getContributor`](ContributorsApi.md#getContributor) | `GET /v2/contributors/{contributor_id}` | Get details about a single contributor
-[`getContributorCollectionItems`](ContributorsApi.md#getContributorCollectionItems) | `GET /v2/contributors/{contributor_id}/collections/{id}/items` | Get the items in contributors&#39; collections
-[`getContributorCollections`](ContributorsApi.md#getContributorCollections) | `GET /v2/contributors/{contributor_id}/collections/{id}` | Get details about contributors&#39; collections
-[`getContributorCollectionsList`](ContributorsApi.md#getContributorCollectionsList) | `GET /v2/contributors/{contributor_id}/collections` | List contributors&#39; collections
+[`getContributorCollectionItems`](ContributorsApi.md#getContributorCollectionItems) | `GET /v2/contributors/{contributor_id}/collections/{id}/items` | Get the items in contributors' collections
+[`getContributorCollections`](ContributorsApi.md#getContributorCollections) | `GET /v2/contributors/{contributor_id}/collections/{id}` | Get details about contributors' collections
+[`getContributorCollectionsList`](ContributorsApi.md#getContributorCollectionsList) | `GET /v2/contributors/{contributor_id}/collections` | List contributors' collections
 [`getContributorList`](ContributorsApi.md#getContributorList) | `GET /v2/contributors` | Get details about multiple contributors
 
 
@@ -93,9 +93,9 @@ Name | Type | Description
 # ContributorsApi.getContributorCollectionItems
 > `CollectionItemDataList ContributorsApi.getContributorCollectionItems(contributor_id, id, queryParams)`
 
-**Get the items in contributors&#39; collections**
+**Get the items in contributors' collections**
 
-This endpoint lists the IDs of items in a contributor&#39;s collection and the date that each was added.
+This endpoint lists the IDs of items in a contributor's collection and the date that each was added.
 
 ### Example
 
@@ -175,9 +175,9 @@ Name | Type | Description
 # ContributorsApi.getContributorCollections
 > `Collection ContributorsApi.getContributorCollections(contributor_id, id)`
 
-**Get details about contributors&#39; collections**
+**Get details about contributors' collections**
 
-This endpoint gets more detailed information about a contributor&#39;s collection, including its cover image, timestamps for its creation, and most recent update. To get the items in collections, use GET /v2/contributors/{contributor_id}/collections/{id}/items.
+This endpoint gets more detailed information about a contributor's collection, including its cover image, timestamps for its creation, and most recent update. To get the items in collections, use GET /v2/contributors/{contributor_id}/collections/{id}/items.
 
 ### Example
 
@@ -251,7 +251,7 @@ Name | Type | Description
 # ContributorsApi.getContributorCollectionsList
 > `CollectionDataList ContributorsApi.getContributorCollectionsList(contributor_id, queryParams)`
 
-**List contributors&#39; collections**
+**List contributors' collections**
 
 This endpoint lists collections based on contributor ID.
 
@@ -360,7 +360,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ContributorsApi();
 
-const id = ["[ 800506, 1653538 ]"]; // [String] | One or more contributor IDs
+const id = ["[800506, 1653538]"]; // [String] | One or more contributor IDs
 
 
 api.getContributorList(id)

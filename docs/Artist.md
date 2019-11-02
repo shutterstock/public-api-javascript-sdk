@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** | The artist&#39;s name | 
+**name** | **String** | The artist's name | 
 
 

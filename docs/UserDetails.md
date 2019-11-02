@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **last_name** | **String** | Last name of the user | [optional] 
 **only_enhanced_license** | **Boolean** | True if the user has an enterprise license, false otherwise | [optional] 
 **only_sensitive_use** | **Boolean** | True if the user has access to sensitive use only, false otherwise | [optional] 
-**organization_id** | **String** | Unique internal identifier for the user&#39;s organization, specific to Premier users | [optional] 
+**organization_id** | **String** | Unique internal identifier for the user's organization, specific to Premier users | [optional] 
 **premier_permissions** | **[String]** | List of permissions allowed through the Premier client | [optional] 
 **username** | **String** | User name associated to the user | [optional] 
 

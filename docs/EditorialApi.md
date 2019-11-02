@@ -35,7 +35,7 @@ const api = new sstk.EditorialApi();
 
 const id = "9926131a"; // String | Editorial ID
 
-const country = "USA"; // String | Returns only if the content is available for distribution in a certain country; specify with 3-letter country code
+const country = "USA"; // String | Returns only if the content is available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU
 
 
 api.getEditorialImage(id, country)
@@ -54,7 +54,7 @@ api.getEditorialImage(id, country)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Editorial ID 
- country (required) | String| Returns only if the content is available for distribution in a certain country; specify with 3-letter country code 
+ country (required) | String| Returns only if the content is available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU 
 
 ### Accepted authentication
 
@@ -161,7 +161,7 @@ const api = new sstk.EditorialApi();
 
 const id = "2018%2F10%2F15%2FWomen%20of%20the%20Year%20Lunch%20%26%20Awards%2C%20London"; // String | Editorial livefeed ID; must be an URI encoded string
 
-const country = "USA"; // String | Returns only if the livefeed is available for distribution in a certain country; specify with 3-letter country code
+const country = "USA"; // String | Returns only if the livefeed is available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU
 
 
 api.getEditorialLivefeed(id, country)
@@ -180,7 +180,7 @@ api.getEditorialLivefeed(id, country)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Editorial livefeed ID; must be an URI encoded string 
- country (required) | String| Returns only if the livefeed is available for distribution in a certain country; specify with 3-letter country code 
+ country (required) | String| Returns only if the livefeed is available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU 
 
 ### Accepted authentication
 
@@ -235,7 +235,7 @@ const api = new sstk.EditorialApi();
 
 const id = "2018%2F10%2F15%2FWomen%20of%20the%20Year%20Lunch%20%26%20Awards%2C%20London"; // String | Editorial livefeed ID; must be an URI encoded string
 
-const country = "USA"; // String | Returns only if the livefeed items are available for distribution in a certain country; specify with 3-letter country code
+const country = "USA"; // String | Returns only if the livefeed items are available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU
 
 
 api.getEditorialLivefeedItems(id, country)
@@ -254,7 +254,7 @@ api.getEditorialLivefeedItems(id, country)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Editorial livefeed ID; must be an URI encoded string 
- country (required) | String| Returns only if the livefeed items are available for distribution in a certain country; specify with 3-letter country code 
+ country (required) | String| Returns only if the livefeed items are available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU 
 
 ### Accepted authentication
 
@@ -441,7 +441,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.EditorialApi();
 
-const country = "USA"; // String | Returns only livefeeds that are available for distribution in a certain country; specify with 3-letter country code
+const country = "USA"; // String | Returns only livefeeds that are available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU
 
 const queryParams = { 
   'page': 1, // Number | Page number
@@ -463,7 +463,7 @@ api.getEditorialLivefeedList(country, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- country (required) | String| Returns only livefeeds that are available for distribution in a certain country; specify with 3-letter country code 
+ country (required) | String| Returns only livefeeds that are available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20, defaults to 20 
 
@@ -623,7 +623,7 @@ Name | Type | Description
 
 **Search editorial content**
 
-This endpoint searches for editorial images. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the &#x60;query&#x60; parameter by prefixing the term with NOT.
+This endpoint searches for editorial images. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
 
 ### Example
 
@@ -659,7 +659,7 @@ editorialApi.searchEditorial(country, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- country (required) | String| Show only editorial content that is available for distribution in a certain country; specify with 3-letter country code 
+ country (required) | String| Show only editorial content that is available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU 
  query | String| One or more search terms separated by spaces 
  sort | String| Sort by, defaults to relevant <br/><br/>Valid values: "relevant", "newest", "oldest"
  category | String| Show editorial content within a certain editorial category; specify by category name 

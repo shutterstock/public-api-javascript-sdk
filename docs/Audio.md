@@ -20,9 +20,9 @@ Name | Type | Description | Notes
 **is_instrumental** | **Boolean** | Whether or not this track is purely instrumental (lacking lyrics) | [optional] 
 **isrc** | **String** |  | [optional] 
 **keywords** | **[String]** | List of all keywords for this track | [optional] 
-**language** | **String** | Language of this track&#39;s lyrics | [optional] 
+**language** | **String** | Language of this track's lyrics | [optional] 
 **lyrics** | **String** | Lyrics of this track | [optional] 
-**media_type** | **String** | Media type of this track; should always be \&quot;audio\&quot; | 
+**media_type** | **String** | Media type of this track; should always be \"audio\" | 
 **model_releases** | [**[ModelRelease]**](ModelRelease.md) | List of all model releases for this track | [optional] 
 **moods** | **[String]** | List of all moods of this track | [optional] 
 **published_time** | **Date** | Time this track was published, in the format YYYY-MM-DDThh:mm:ssZ | [optional] 

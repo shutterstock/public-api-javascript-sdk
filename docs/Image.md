@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **is_editorial** | **Boolean** | Whether or not this image is editorial content | [optional] 
 **is_illustration** | **Boolean** | Whether or not this image is an illustration | [optional] 
 **keywords** | **[String]** | Keywords associated with the content of this image | [optional] 
-**media_type** | **String** | Media type of this image, should always be \&quot;image\&quot; | 
+**media_type** | **String** | Media type of this image, should always be \"image\" | 
 **model_releases** | [**[ModelRelease]**](ModelRelease.md) | List of model releases | [optional] 
 **models** | [**[Model]**](Model.md) | List of models | [optional] 
 **releases** | **[String]** | List of all releases of this image | [optional] 

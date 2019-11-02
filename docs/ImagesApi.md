@@ -96,7 +96,7 @@ No response body.
 
 **Create image collections**
 
-This endpoint creates one or more image collections (lightboxes). To add images to the collections, use &#x60;POST /v2/images/collections/{id}/items&#x60;.
+This endpoint creates one or more image collections (lightboxes). To add images to the collections, use `POST /v2/images/collections/{id}/items`.
 
 ### Example
 
@@ -329,7 +329,7 @@ Name | Type | Description
 
 **Get the details of featured image collections**
 
-This endpoint gets more detailed information about a featured collection, including its cover image and timestamps for its creation and most recent update. To get the images, use &#x60;GET /v2/images/collections/featured/{id}/items&#x60;.
+This endpoint gets more detailed information about a featured collection, including its cover image and timestamps for its creation and most recent update. To get the images, use `GET /v2/images/collections/featured/{id}/items`.
 
 ### Example
 
@@ -923,7 +923,7 @@ api.getImageLicenseList(queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  image_id | String| Show licenses for the specified image ID 
- license | String| Show images that are available with the specified license, such as &#x60;standard&#x60; or &#x60;enhanced&#x60;; prepending a &#x60;-&#x60; sign excludes results from that license 
+ license | String| Show images that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20, defaults to 20 
  sort | String| Sort order, defaults to newest <br/><br/>Valid values: "newest", "oldest"
@@ -1053,7 +1053,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 
-const id = ["[ 1110335168, 465011609 ]"]; // [String] | One or more image IDs
+const id = ["[1110335168, 465011609]"]; // [String] | One or more image IDs
 
 const queryParams = { 
   'view': "minimal" // String | Amount of detail to render in the response
@@ -1390,7 +1390,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 
-const id = ["[ 465011609 ]"]; // [String] | Image IDs
+const id = ["[465011609]"]; // [String] | Image IDs
 
 const queryParams = { 
   'max_items': 20, // Number | Maximum number of results returned in the response
@@ -1466,7 +1466,7 @@ Name | Type | Description
 
 **Get the details of image collections**
 
-This endpoint gets more detailed information about a collection, including its cover image and timestamps for its creation and most recent update. To get the images in collections, use &#x60;GET /v2/images/collections/{id}/items&#x60;.
+This endpoint gets more detailed information about a collection, including its cover image and timestamps for its creation and most recent update. To get the images in collections, use `GET /v2/images/collections/{id}/items`.
 
 ### Example
 
@@ -2058,7 +2058,7 @@ Name | Type | Description
 
 **List updated images**
 
-This endpoint lists images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the &#x60;interval&#x60; parameter to show images that were updated recently, but you can also use the &#x60;start_date&#x60; and &#x60;end_date&#x60; parameters to specify a range of no more than three days. Do not use the &#x60;interval&#x60; parameter with either &#x60;start_date&#x60; or &#x60;end_date&#x60;.
+This endpoint lists images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the `interval` parameter to show images that were updated recently, but you can also use the `start_date` and `end_date` parameters to specify a range of no more than three days. Do not use the `interval` parameter with either `start_date` or `end_date`.
 
 ### Example
 
@@ -2331,7 +2331,7 @@ No response body.
 
 **Search for images**
 
-This endpoint searches for images. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the &#x60;query&#x60; parameter by prefixing the term with NOT. Free API accounts show results only from a limited library of media, not the full Shutterstock media library. Also, the number of search fields they can use in a request is limited.
+This endpoint searches for images. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the `query` parameter by prefixing the term with NOT. Free API accounts show results only from a limited library of media, not the full Shutterstock media library. Also, the number of search fields they can use in a request is limited.
 
 ### Example
 
@@ -2368,9 +2368,9 @@ Name | Type | Description
  added_date_start | Date| Show images added on or after the specified date, in the format YYYY-MM-DD 
  added_date_end | Date| Show images added before the specified date, in the format YYYY-MM-DD 
  category | String| Show images with the specified Shutterstock-defined category; specify a category name or ID 
- color | String| Specify a hexadecimal color in the format &#39;4F21EA&#39;; the API groups it into one of 15 color categories and returns images that primarily use that color category 
+ color | String| Specify a hexadecimal color in the format '4F21EA'; the API groups it into one of 15 color categories and returns images that primarily use that color category 
  contributor | [String]| Show images with the specified contributor names or IDs, allows multiple 
- contributor_country | [String]| Show images from contributors in one or more specified countries, by 2-letter country code 
+ contributor_country | [String]| Show images from contributors in one or more specified countries by 2-letter ISO 3166-1 alpha-2 country code, such as DE or US 
  height | Number| (Deprecated; use height_from and height_to instead) Show images with the specified height 
  height_from | Number| Show images with the specified height or larger, in pixels 
  height_to | Number| Show images with the specified height or smaller, in pixels 
@@ -2682,7 +2682,7 @@ Name | Type | Description
 
 **Upload images**
 
-This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format. To get the search results, pass the ID that this endpoint returns to the &#x60;GET /v2/images/{id}/similar&#x60; endpoint.
+This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format. To get the search results, pass the ID that this endpoint returns to the `GET /v2/images/{id}/similar` endpoint.
 
 ### Example
 

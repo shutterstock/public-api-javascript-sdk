@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 
 * `hd` (value: `"hd"`)
 
-* `4k` (value: `"4k"`)
+* `_4k` (value: `"4k"`)
 
 
 

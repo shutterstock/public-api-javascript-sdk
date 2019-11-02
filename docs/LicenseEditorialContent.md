@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **editorial_id** | **String** | Editorial ID | 
 **license** | **String** | License agreement to use for licensing | 
 **metadata** | [**LicenseRequestMetadata**](LicenseRequestMetadata.md) |  | [optional] 
-**size** | **String** | Asset size to download, default is original | [optional] [default to &#39;original&#39;]
+**size** | **String** | Asset size to download, default is original | [optional] [default to 'original']
 
 
 <a name="SizeEnum"></a>

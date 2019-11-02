@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **is_adult** | **Boolean** | Whether or not this video contains adult content | [optional] 
 **is_editorial** | **Boolean** | Whether or not this video is editorial content | [optional] 
 **keywords** | **[String]** | Keywords associated with the content of this video | [optional] 
-**media_type** | **String** | Media type of this video, should always be \&quot;video\&quot; | 
+**media_type** | **String** | Media type of this video, should always be \"video\" | 
 **models** | [**[Model]**](Model.md) | List of models in this video | [optional] 
 **url** | **String** | Link to video information page; included only for certain accounts | [optional] 
 

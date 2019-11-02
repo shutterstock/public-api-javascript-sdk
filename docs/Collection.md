@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **cover_item** | [**CollectionItem**](CollectionItem.md) |  | [optional] 
 **created_time** | **Date** | When the collection was created | [optional] 
 **id** | **String** | The collection ID | 
-**items_updated_time** | **Date** | The last time this collection&#39;s items were updated | [optional] 
+**items_updated_time** | **Date** | The last time this collection's items were updated | [optional] 
 **name** | **String** | The name of the collection | 
 **share_code** | **String** | A code that can be used to share the collection (optional) | [optional] 
 **share_url** | **String** | The browser URL that can be used to share the collection (optional) | [optional] 
