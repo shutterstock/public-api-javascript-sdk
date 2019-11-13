@@ -25,7 +25,6 @@ Method | HTTP request | Description
 [`licenseImages`](ImagesApi.md#licenseImages) | `POST /v2/images/licenses` | License images
 [`renameLightbox`](ImagesApi.md#renameLightbox) | `POST /v2/images/collections/{id}` | Rename image collections
 [`searchImages`](ImagesApi.md#searchImages) | `GET /v2/images/search` | Search for images
-[`uploadEphemeralImage`](ImagesApi.md#uploadEphemeralImage) | `POST /v2/images` | Upload images
 
 
 <a name="addLightboxItems"></a>
@@ -2673,79 +2672,6 @@ Name | Type | Description
   "page" : 9,
   "message" : "message",
   "search_id" : "search_id"
-}
-```
-
-<a name="uploadEphemeralImage"></a>
-# ImagesApi.uploadEphemeralImage
-> `ImageCreateResponse ImagesApi.uploadEphemeralImage(body)`
-
-**Upload images**
-
-This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format. To get the search results, pass the ID that this endpoint returns to the `GET /v2/images/{id}/similar` endpoint.
-
-### Example
-
-```javascript
-const sstk = require("shutterstock-api");
-
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const imagesApi = new sstk.ImagesApi();
-
-const imageFile = fs.readFileSync("./myImage.jpg");
-const base64File = Buffer.from(imageFile).toString("base64");
-
-const body = new sstk.ImageCreateRequest(base64File);
-
-const queryParams = {
-  "page": 1,
-  "per_page": 20,
-  "view": "minimal"
-};
-
-imagesApi.uploadEphemeralImage(body)
-  .then((data) => {
-    console.log(data.id);
-    return imagesApi.getSimilarImages(data.id, queryParams);
-  })
-  .then((similarImageData) => {
-    console.log(similarImageData);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- body (required) | [ImageCreateRequest](ImageCreateRequest.md)| The image data in JPEG or PNG format 
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-- Content-Type: application/json
-- Accept: application/json
-
-### Return type
-
-[ImageCreateResponse](ImageCreateResponse.md)
-
-### Example response
-
-```
-{
-  "id" : "id"
 }
 ```
 

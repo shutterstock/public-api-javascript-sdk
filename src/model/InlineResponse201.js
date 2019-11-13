@@ -25,7 +25,7 @@
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.Cookie = factory(root.ShutterstockApiReference.ApiClient);
+    root.ShutterstockApiReference.InlineResponse201 = factory(root.ShutterstockApiReference.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,57 +34,46 @@
 
 
   /**
-   * The Cookie model module.
-   * @module model/Cookie
+   * The InlineResponse201 model module.
+   * @module model/InlineResponse201
    * @version 1.0.16
    */
 
   /**
-   * Constructs a new <code>Cookie</code>.
-   * Cookie object
-   * @alias module:model/Cookie
+   * Constructs a new <code>InlineResponse201</code>.
+   * Computer vision image upload information
+   * @alias module:model/InlineResponse201
    * @class
-   * @param name {String} The name of the cookie
-   * @param value {String} The value of the cookie
+   * @param upload_id {String} 
    */
-  var exports = function(name, value) {
+  var exports = function(upload_id) {
     var _this = this;
 
-    _this['name'] = name;
-    _this['value'] = value;
+    _this['upload_id'] = upload_id;
   };
 
   /**
-   * Constructs a <code>Cookie</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>InlineResponse201</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/Cookie} obj Optional instance to populate.
-   * @return {module:model/Cookie} The populated <code>Cookie</code> instance.
+   * @param {module:model/InlineResponse201} obj Optional instance to populate.
+   * @return {module:model/InlineResponse201} The populated <code>InlineResponse201</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
-      if (data.hasOwnProperty('value')) {
-        obj['value'] = ApiClient.convertToType(data['value'], 'String');
+      if (data.hasOwnProperty('upload_id')) {
+        obj['upload_id'] = ApiClient.convertToType(data['upload_id'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * The name of the cookie
-   * @member {String} name
+   * @member {String} upload_id
    */
-  exports.prototype['name'] = undefined;
-  /**
-   * The value of the cookie
-   * @member {String} value
-   */
-  exports.prototype['value'] = undefined;
+  exports.prototype['upload_id'] = undefined;
 
 
 

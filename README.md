@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.0.15
+- API version: 1.0.16
 
 ## References
 
@@ -284,6 +284,10 @@ Class | Method | HTTP request | Description
 *shutterstock-api.AudioApi* | [**licenseTrack**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#licenseTrack) | **POST** /v2/audio/licenses | License audio tracks
 *shutterstock-api.AudioApi* | [**renameSoundbox**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#renameSoundbox) | **POST** /v2/audio/collections/{id} | Rename audio collections
 *shutterstock-api.AudioApi* | [**searchAudio**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#searchAudio) | **GET** /v2/audio/search | Search for tracks
+*shutterstock-api.ComputerVisionApi* | [**getSimilarImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#getSimilarImages) | **GET** /v2/cv/similar/images | List similar images
+*shutterstock-api.ComputerVisionApi* | [**getSimilarVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#getSimilarVideos) | **GET** /v2/cv/similar/videos | List similar videos
+*shutterstock-api.ComputerVisionApi* | [**uploadEphemeralImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#uploadEphemeralImage) | **POST** /v2/images | Upload images
+*shutterstock-api.ComputerVisionApi* | [**uploadImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#uploadImage) | **POST** /v2/cv/images | Upload images
 *shutterstock-api.ContributorsApi* | [**getContributor**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributor) | **GET** /v2/contributors/{contributor_id} | Get details about a single contributor
 *shutterstock-api.ContributorsApi* | [**getContributorCollectionItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorCollectionItems) | **GET** /v2/contributors/{contributor_id}/collections/{id}/items | Get the items in contributors' collections
 *shutterstock-api.ContributorsApi* | [**getContributorCollections**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorCollections) | **GET** /v2/contributors/{contributor_id}/collections/{id} | Get details about contributors' collections
@@ -316,7 +320,6 @@ Class | Method | HTTP request | Description
 *shutterstock-api.ImagesApi* | [**licenseImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#licenseImages) | **POST** /v2/images/licenses | License images
 *shutterstock-api.ImagesApi* | [**renameLightbox**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#renameLightbox) | **POST** /v2/images/collections/{id} | Rename image collections
 *shutterstock-api.ImagesApi* | [**searchImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#searchImages) | **GET** /v2/images/search | Search for images
-*shutterstock-api.ImagesApi* | [**uploadEphemeralImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#uploadEphemeralImage) | **POST** /v2/images | Upload images
 *shutterstock-api.TestApi* | [**echo**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/TestApi.md#echo) | **GET** /v2/test | Echo text
 *shutterstock-api.TestApi* | [**validate**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/TestApi.md#validate) | **GET** /v2/test/validate | Validate input
 *shutterstock-api.UsersApi* | [**createUser**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/UsersApi.md#createUser) | **POST** /v2/user | Register user
