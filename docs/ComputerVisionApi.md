@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [`getSimilarImages`](ComputerVisionApi.md#getSimilarImages) | `GET /v2/cv/similar/images` | List similar images
 [`getSimilarVideos`](ComputerVisionApi.md#getSimilarVideos) | `GET /v2/cv/similar/videos` | List similar videos
-[`uploadEphemeralImage`](ComputerVisionApi.md#uploadEphemeralImage) | `POST /v2/images` | Upload images
+[`uploadEphemeralImage`](ComputerVisionApi.md#uploadEphemeralImage) | `POST /v2/images` | Upload ephemeral images
 [`uploadImage`](ComputerVisionApi.md#uploadImage) | `POST /v2/cv/images` | Upload images
 
 
@@ -602,7 +602,7 @@ Name | Type | Description
 # ComputerVisionApi.uploadEphemeralImage
 > `ImageCreateResponse ComputerVisionApi.uploadEphemeralImage(body)`
 
-**Upload images**
+**Upload ephemeral images**
 
 Deprecated; use `POST /v2/cv/images` instead. This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format. To get the search results, pass the ID that this endpoint returns to the `GET /v2/images/{id}/similar` endpoint.
 

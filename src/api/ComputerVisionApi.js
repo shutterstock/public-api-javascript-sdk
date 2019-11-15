@@ -185,7 +185,7 @@
 
 
     /**
-     * Upload images
+     * Upload ephemeral images
      * Deprecated; use `POST /v2/cv/images` instead. This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format. To get the search results, pass the ID that this endpoint returns to the `GET /v2/images/{id}/similar` endpoint.
      * @param {module:model/ImageCreateRequest} body The image data in JPEG or PNG format
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ImageCreateResponse} and HTTP response
@@ -223,7 +223,7 @@
     }
 
     /**
-     * Upload images
+     * Upload ephemeral images
      * Deprecated; use `POST /v2/cv/images` instead. This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format. To get the search results, pass the ID that this endpoint returns to the `GET /v2/images/{id}/similar` endpoint.
      * @param {module:model/ImageCreateRequest} body The image data in JPEG or PNG format
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ImageCreateResponse}
