@@ -29,8 +29,8 @@ If you have a subscription from shutterstock.com and want to use it with the API
 
 The REST API uses an access token or secret key that is tied to your account and to an application.
 This application represents the application, program, or computer commands that are accessing the API.
-To use the API, you must create an application at [https://developers.shutterstock.com/applications](https://developers.shutterstock.com/applications) and note the client ID and client secret.
-You use this client ID and client secret either to use the API directly with basic authentication or to request a token for OAuth authentication.
+To use the API, you must create an application at [https://developers.shutterstock.com/applications](https://developers.shutterstock.com/applications) and note the consumer key and consumer secret.
+You use this consumer key and consumer secret either to use the API directly with basic authentication or to request a token for OAuth authentication.
 
 ## Installation
 
@@ -61,9 +61,9 @@ For more information about authenticating to the API, see [Authentication](https
 
 ### Basic authentication
 
-In HTTP basic authentication (also known as _basic authentication_), you pass your application's client ID and secret key to the SDK along with the request.
-To get the client ID and secret key for your application, go to https://developers.shutterstock.com/user/me/apps and open the information for your application.
-The following example uses the variables `applicationClientId` and `applicationClientSecret` for the application's client ID and secret.
+In HTTP basic authentication (also known as _basic authentication_), you pass your application's consumer key and secret key to the SDK along with the request.
+To get the consumer key and secret key for your application, go to https://developers.shutterstock.com/user/me/apps and open the information for your application.
+The following example uses the variables `applicationClientId` and `applicationClientSecret` for the application's consumer key and secret.
 
 ```javascript
 const sstk = require('shutterstock-api');
