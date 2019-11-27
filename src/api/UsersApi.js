@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AccessTokenDetails', 'model/SubscriptionDataList', 'model/UserDetails', 'model/UserPostRequest', 'model/UserPostResponse'], factory);
+    define(['ApiClient', 'model/AccessTokenDetails', 'model/SubscriptionDataList', 'model/UserDetails'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AccessTokenDetails'), require('../model/SubscriptionDataList'), require('../model/UserDetails'), require('../model/UserPostRequest'), require('../model/UserPostResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/AccessTokenDetails'), require('../model/SubscriptionDataList'), require('../model/UserDetails'));
   } else {
     // Browser globals (root is window)
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.UsersApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.AccessTokenDetails, root.ShutterstockApiReference.SubscriptionDataList, root.ShutterstockApiReference.UserDetails, root.ShutterstockApiReference.UserPostRequest, root.ShutterstockApiReference.UserPostResponse);
+    root.ShutterstockApiReference.UsersApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.AccessTokenDetails, root.ShutterstockApiReference.SubscriptionDataList, root.ShutterstockApiReference.UserDetails);
   }
-}(this, function(ApiClient, AccessTokenDetails, SubscriptionDataList, UserDetails, UserPostRequest, UserPostResponse) {
+}(this, function(ApiClient, AccessTokenDetails, SubscriptionDataList, UserDetails) {
   'use strict';
 
   /**
@@ -46,56 +46,6 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
-
-
-    /**
-     * Register user
-     * @param {module:model/UserPostRequest} body User details
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserPostResponse} and HTTP response
-     */
-    this.createUserWithHttpInfo = function(body) {
-      var postBody = body;
-
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling createUser");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['customer_accessCode'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = UserPostResponse;
-
-      return this.apiClient.callApi(
-        '/v2/user', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Register user
-     * @param {module:model/UserPostRequest} body User details
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserPostResponse}
-     */
-    this.createUser = function(body) {
-      return this.createUserWithHttpInfo(body)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
 
 
     /**

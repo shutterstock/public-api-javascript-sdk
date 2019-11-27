@@ -335,7 +335,6 @@ Class | Method | HTTP request | Description
 *shutterstock-api.ImagesApi* | [**searchImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#searchImages) | **GET** /v2/images/search | Search for images
 *shutterstock-api.TestApi* | [**echo**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/TestApi.md#echo) | **GET** /v2/test | Echo text
 *shutterstock-api.TestApi* | [**validate**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/TestApi.md#validate) | **GET** /v2/test/validate | Validate input
-*shutterstock-api.UsersApi* | [**createUser**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/UsersApi.md#createUser) | **POST** /v2/user | Register user
 *shutterstock-api.UsersApi* | [**getAccessToken**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/UsersApi.md#getAccessToken) | **GET** /v2/user/access_token | Get access token details
 *shutterstock-api.UsersApi* | [**getUser**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/UsersApi.md#getUser) | **GET** /v2/user | Get user details
 *shutterstock-api.UsersApi* | [**getUserSubsciptionList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/UsersApi.md#getUserSubsciptionList) | **GET** /v2/user/subscriptions | List user subscriptions

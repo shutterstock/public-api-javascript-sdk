@@ -4,70 +4,10 @@ All URIs are relative to `https://api.shutterstock.com`.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[`createUser`](UsersApi.md#createUser) | `POST /v2/user` | Register user
 [`getAccessToken`](UsersApi.md#getAccessToken) | `GET /v2/user/access_token` | Get access token details
 [`getUser`](UsersApi.md#getUser) | `GET /v2/user` | Get user details
 [`getUserSubsciptionList`](UsersApi.md#getUserSubsciptionList) | `GET /v2/user/subscriptions` | List user subscriptions
 
-
-<a name="createUser"></a>
-# UsersApi.createUser
-> `UserPostResponse UsersApi.createUser(body)`
-
-**Register user**
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.UsersApi();
-
-const body = new ShutterstockApiReference.UserPostRequest(); // UserPostRequest | User details
-
-
-api.createUser(body)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- body (required) | [UserPostRequest](UserPostRequest.md)| User details 
-
-### Accepted authentication
-
-
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-- Content-Type: application/json
-- Accept: application/json
-
-### Return type
-
-[UserPostResponse](UserPostResponse.md)
-
-### Example response
-
-```
-{
-  "id" : "id"
-}
-```
 
 <a name="getAccessToken"></a>
 # UsersApi.getAccessToken
