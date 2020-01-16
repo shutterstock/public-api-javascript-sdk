@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.0.16
+- API version: 1.0.17
 
 ## References
 
@@ -297,6 +297,7 @@ Class | Method | HTTP request | Description
 *shutterstock-api.AudioApi* | [**licenseTrack**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#licenseTrack) | **POST** /v2/audio/licenses | License audio tracks
 *shutterstock-api.AudioApi* | [**renameSoundbox**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#renameSoundbox) | **POST** /v2/audio/collections/{id} | Rename audio collections
 *shutterstock-api.AudioApi* | [**searchAudio**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#searchAudio) | **GET** /v2/audio/search | Search for tracks
+*shutterstock-api.ComputerVisionApi* | [**getKeywords**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#getKeywords) | **GET** /v2/cv/keywords | List suggested keywords
 *shutterstock-api.ComputerVisionApi* | [**getSimilarImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#getSimilarImages) | **GET** /v2/cv/similar/images | List similar images
 *shutterstock-api.ComputerVisionApi* | [**getSimilarVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#getSimilarVideos) | **GET** /v2/cv/similar/videos | List similar videos
 *shutterstock-api.ComputerVisionApi* | [**uploadEphemeralImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#uploadEphemeralImage) | **POST** /v2/images | Upload ephemeral images

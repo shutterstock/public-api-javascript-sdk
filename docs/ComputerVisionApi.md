@@ -4,11 +4,90 @@ All URIs are relative to `https://api.shutterstock.com`.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[`getKeywords`](ComputerVisionApi.md#getKeywords) | `GET /v2/cv/keywords` | List suggested keywords
 [`getSimilarImages`](ComputerVisionApi.md#getSimilarImages) | `GET /v2/cv/similar/images` | List similar images
 [`getSimilarVideos`](ComputerVisionApi.md#getSimilarVideos) | `GET /v2/cv/similar/videos` | List similar videos
 [`uploadEphemeralImage`](ComputerVisionApi.md#uploadEphemeralImage) | `POST /v2/images` | Upload ephemeral images
 [`uploadImage`](ComputerVisionApi.md#uploadImage) | `POST /v2/cv/images` | Upload images
 
+
+<a name="getKeywords"></a>
+# ComputerVisionApi.getKeywords
+> `KeywordDataList ComputerVisionApi.getKeywords(asset_id)`
+
+**List suggested keywords**
+
+This endpoint returns a list of suggested keywords for a media item that you specify or upload.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.ComputerVisionApi();
+
+const asset_id = "U6ba16262e3bc2db470b8e3cfa8aaab25"; // Object | The asset ID or upload ID to suggest keywords for
+
+
+api.getKeywords(asset_id)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ asset_id (required) | [Object](.md)| The asset ID or upload ID to suggest keywords for 
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[KeywordDataList](KeywordDataList.md)
+
+### Example response
+
+```
+{
+  "data" : [ "data", "data" ],
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  }, {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  } ]
+}
+```
 
 <a name="getSimilarImages"></a>
 # ComputerVisionApi.getSimilarImages
@@ -31,7 +110,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ComputerVisionApi();
 
-const asset_id = "U123456"; // String | The asset ID or upload ID to find similar videos for
+const asset_id = "U6ba16262e3bc2db470b8e3cfa8aaab25"; // String | The asset ID or upload ID to find similar videos for
 
 const queryParams = { 
   'language': "es", // String | Language for the keywords and categories in the response
@@ -363,7 +442,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ComputerVisionApi();
 
-const asset_id = "U123456"; // String | The asset ID or upload ID to find similar videos for
+const asset_id = "U6ba16262e3bc2db470b8e3cfa8aaab25"; // String | The asset ID or upload ID to find similar videos for
 
 const queryParams = { 
   'language': "es", // String | Language for the keywords and categories in the response

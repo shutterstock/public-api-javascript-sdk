@@ -16,33 +16,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Error', 'model/FeaturedCollection'], factory);
+    define(['ApiClient', 'model/Error'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Error'), require('./FeaturedCollection'));
+    module.exports = factory(require('../ApiClient'), require('./Error'));
   } else {
     // Browser globals (root is window)
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.FeaturedCollectionDataList = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.Error, root.ShutterstockApiReference.FeaturedCollection);
+    root.ShutterstockApiReference.KeywordDataList = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.Error);
   }
-}(this, function(ApiClient, Error, FeaturedCollection) {
+}(this, function(ApiClient, Error) {
   'use strict';
 
 
 
 
   /**
-   * The FeaturedCollectionDataList model module.
-   * @module model/FeaturedCollectionDataList
+   * The KeywordDataList model module.
+   * @module model/KeywordDataList
    * @version 1.0.17
    */
 
   /**
-   * Constructs a new <code>FeaturedCollectionDataList</code>.
-   * List of featured collections
-   * @alias module:model/FeaturedCollectionDataList
+   * Constructs a new <code>KeywordDataList</code>.
+   * List of keywords
+   * @alias module:model/KeywordDataList
    * @class
    */
   var exports = function() {
@@ -51,24 +51,21 @@
 
 
 
-
-
-
   };
 
   /**
-   * Constructs a <code>FeaturedCollectionDataList</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>KeywordDataList</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/FeaturedCollectionDataList} obj Optional instance to populate.
-   * @return {module:model/FeaturedCollectionDataList} The populated <code>FeaturedCollectionDataList</code> instance.
+   * @param {module:model/KeywordDataList} obj Optional instance to populate.
+   * @return {module:model/KeywordDataList} The populated <code>KeywordDataList</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
       if (data.hasOwnProperty('data')) {
-        obj['data'] = ApiClient.convertToType(data['data'], [FeaturedCollection]);
+        obj['data'] = ApiClient.convertToType(data['data'], ['String']);
       }
       if (data.hasOwnProperty('errors')) {
         obj['errors'] = ApiClient.convertToType(data['errors'], [Error]);
@@ -76,22 +73,13 @@
       if (data.hasOwnProperty('message')) {
         obj['message'] = ApiClient.convertToType(data['message'], 'String');
       }
-      if (data.hasOwnProperty('page')) {
-        obj['page'] = ApiClient.convertToType(data['page'], 'Number');
-      }
-      if (data.hasOwnProperty('per_page')) {
-        obj['per_page'] = ApiClient.convertToType(data['per_page'], 'Number');
-      }
-      if (data.hasOwnProperty('total_count')) {
-        obj['total_count'] = ApiClient.convertToType(data['total_count'], 'Number');
-      }
     }
     return obj;
   }
 
   /**
-   * Featured collections
-   * @member {Array.<module:model/FeaturedCollection>} data
+   * Keywords
+   * @member {Array.<String>} data
    */
   exports.prototype['data'] = undefined;
   /**
@@ -104,21 +92,6 @@
    * @member {String} message
    */
   exports.prototype['message'] = undefined;
-  /**
-   * Current page that is returned
-   * @member {Number} page
-   */
-  exports.prototype['page'] = undefined;
-  /**
-   * Number of results per page
-   * @member {Number} per_page
-   */
-  exports.prototype['per_page'] = undefined;
-  /**
-   * Total count of all results across all pages
-   * @member {Number} total_count
-   */
-  exports.prototype['total_count'] = undefined;
 
 
 
