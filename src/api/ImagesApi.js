@@ -1287,7 +1287,7 @@
      * @param {Date} opts.added_date_start Show images added on or after the specified date, in the format YYYY-MM-DD
      * @param {Date} opts.added_date_end Show images added before the specified date, in the format YYYY-MM-DD
      * @param {String} opts.category Show images with the specified Shutterstock-defined category; specify a category name or ID
-     * @param {String} opts.color Specify a hexadecimal color in the format '4F21EA'; the API groups it into one of 15 color categories and returns images that primarily use that color category
+     * @param {String} opts.color Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API groups it into one of 15 color categories and returns images that primarily use that color category
      * @param {Array.<String>} opts.contributor Show images with the specified contributor names or IDs, allows multiple
      * @param {Array.<String>} opts.contributor_country Show images from contributors in one or more specified countries by 2-letter ISO 3166-1 alpha-2 country code, such as DE or US
      * @param {Number} opts.height (Deprecated; use height_from and height_to instead) Show images with the specified height
@@ -1396,7 +1396,7 @@
      * @param {Date} opts.added_date_start Show images added on or after the specified date, in the format YYYY-MM-DD
      * @param {Date} opts.added_date_end Show images added before the specified date, in the format YYYY-MM-DD
      * @param {String} opts.category Show images with the specified Shutterstock-defined category; specify a category name or ID
-     * @param {String} opts.color Specify a hexadecimal color in the format '4F21EA'; the API groups it into one of 15 color categories and returns images that primarily use that color category
+     * @param {String} opts.color Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API groups it into one of 15 color categories and returns images that primarily use that color category
      * @param {Array.<String>} opts.contributor Show images with the specified contributor names or IDs, allows multiple
      * @param {Array.<String>} opts.contributor_country Show images from contributors in one or more specified countries by 2-letter ISO 3166-1 alpha-2 country code, such as DE or US
      * @param {Number} opts.height (Deprecated; use height_from and height_to instead) Show images with the specified height

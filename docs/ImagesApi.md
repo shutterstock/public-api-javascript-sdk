@@ -2367,7 +2367,7 @@ Name | Type | Description
  added_date_start | Date| Show images added on or after the specified date, in the format YYYY-MM-DD 
  added_date_end | Date| Show images added before the specified date, in the format YYYY-MM-DD 
  category | String| Show images with the specified Shutterstock-defined category; specify a category name or ID 
- color | String| Specify a hexadecimal color in the format '4F21EA'; the API groups it into one of 15 color categories and returns images that primarily use that color category 
+ color | String| Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API groups it into one of 15 color categories and returns images that primarily use that color category 
  contributor | [String]| Show images with the specified contributor names or IDs, allows multiple 
  contributor_country | [String]| Show images from contributors in one or more specified countries by 2-letter ISO 3166-1 alpha-2 country code, such as DE or US 
  height | Number| (Deprecated; use height_from and height_to instead) Show images with the specified height 
