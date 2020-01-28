@@ -78,7 +78,7 @@ const api = new sstk.ImagesApi();
 In this type of authentication, you use an application and an individual user's login credentials to obtain a token.
 For instructions on how to get a token, see [OAuth authentication](https://developers.shutterstock.com/documentation/authentication#oauth-authentication) on the Shutterstock developer portal.
 
-When you have the token, use it to configure the API client as in the following example, using the token as the value of the `myAccessToken` variable:
+When you have the token, use it to configure the API client as in the following example, which assumes that your token is in the environment variable `SHUTTERSTOCK_API_TOKEN`:
 
 ```javascript
 const sstk = require('shutterstock-api');
