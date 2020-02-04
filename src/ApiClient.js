@@ -56,7 +56,6 @@
      */
     this.authentications = {
       'basic': {type: 'basic'},
-      'contributor_accessCode': {type: 'oauth2'},
       'customer_accessCode': {type: 'oauth2'}
     };
     /**
