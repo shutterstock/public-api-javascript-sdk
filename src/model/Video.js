@@ -16,7 +16,7 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Category', 'model/Contributor', 'model/Model', 'model/VideoAssets'], factory);
+    define(['../ApiClient', '../model/Category', '../model/Contributor', '../model/Model', '../model/VideoAssets'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'), require('./Category'), require('./Contributor'), require('./Model'), require('./VideoAssets'));

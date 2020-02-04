@@ -16,7 +16,7 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/EditorialContent', 'model/EditorialContentDataList', 'model/EditorialLivefeed', 'model/EditorialLivefeedList', 'model/EditorialSearchResults', 'model/LicenseEditorialContentRequest', 'model/LicenseEditorialContentResultDataList'], factory);
+    define(['../ApiClient', '../model/EditorialContent', '../model/EditorialContentDataList', '../model/EditorialLivefeed', '../model/EditorialLivefeedList', '../model/EditorialSearchResults', '../model/LicenseEditorialContentRequest', '../model/LicenseEditorialContentResultDataList'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'), require('../model/EditorialContent'), require('../model/EditorialContentDataList'), require('../model/EditorialLivefeed'), require('../model/EditorialLivefeedList'), require('../model/EditorialSearchResults'), require('../model/LicenseEditorialContentRequest'), require('../model/LicenseEditorialContentResultDataList'));

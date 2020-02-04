@@ -16,7 +16,7 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ImageCreateRequest', 'model/ImageCreateResponse', 'model/ImageSearchResults', 'model/InlineResponse201', 'model/KeywordDataList', 'model/VideoSearchResults'], factory);
+    define(['../ApiClient', '../model/ImageCreateRequest', '../model/ImageCreateResponse', '../model/ImageSearchResults', '../model/InlineResponse201', '../model/KeywordDataList', '../model/VideoSearchResults'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'), require('../model/ImageCreateRequest'), require('../model/ImageCreateResponse'), require('../model/ImageSearchResults'), require('../model/InlineResponse201'), require('../model/KeywordDataList'), require('../model/VideoSearchResults'));
