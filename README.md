@@ -100,7 +100,6 @@ The following list shows the available scopes.
 - licenses.view: Grant read-only access to a user's licenses.
 - collections.edit: Grant the ability to create new collections, edit a collection, and modify the contents of a collection
 - collections.view: Grant read-only access to a collection and its contents.
-- user.view: Grants read-only access to a user's basic account information (includes username, id, first and last name). If email is the same as username, it also implies user.email
 
 
 ## Languages

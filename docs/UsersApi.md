@@ -101,9 +101,7 @@ This endpoint does not accept any parameters.
 ### Accepted authentication
 
 
-- [OAuth](../README.md#OAuth_authentication) Required scopes:
-  - user.view
-
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
 
 ### HTTP request headers
 

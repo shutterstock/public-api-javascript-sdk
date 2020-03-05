@@ -2088,7 +2088,7 @@ imagesApi.getUpdatedImages(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- type | [String]| Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways 
+ type | [String]| Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways <br/><br/>Valid values: "addition", "deletion", "edit"
  start_date | Date| Show images updated on or after the specified date, in the format YYYY-MM-DD 
  end_date | Date| Show images updated before the specified date, in the format YYYY-MM-DD 
  interval | String| Show images updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows images that were updated in the hour preceding the request, defaults to 1 HOUR 

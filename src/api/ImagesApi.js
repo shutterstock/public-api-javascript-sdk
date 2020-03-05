@@ -1084,7 +1084,7 @@
      * List updated images
      * This endpoint lists images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the `interval` parameter to show images that were updated recently, but you can also use the `start_date` and `end_date` parameters to specify a range of no more than three days. Do not use the `interval` parameter with either `start_date` or `end_date`.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.type Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways
+     * @param {Array.<module:model/String>} opts.type Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways
      * @param {Date} opts.start_date Show images updated on or after the specified date, in the format YYYY-MM-DD
      * @param {Date} opts.end_date Show images updated before the specified date, in the format YYYY-MM-DD
      * @param {String} opts.interval Show images updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows images that were updated in the hour preceding the request (default to 1 HOUR)
@@ -1135,7 +1135,7 @@
      * List updated images
      * This endpoint lists images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the `interval` parameter to show images that were updated recently, but you can also use the `start_date` and `end_date` parameters to specify a range of no more than three days. Do not use the `interval` parameter with either `start_date` or `end_date`.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.type Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways
+     * @param {Array.<module:model/String>} opts.type Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways
      * @param {Date} opts.start_date Show images updated on or after the specified date, in the format YYYY-MM-DD
      * @param {Date} opts.end_date Show images updated before the specified date, in the format YYYY-MM-DD
      * @param {String} opts.interval Show images updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows images that were updated in the hour preceding the request (default to 1 HOUR)
