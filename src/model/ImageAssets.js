@@ -60,6 +60,7 @@
 
 
 
+
   };
 
   /**
@@ -75,6 +76,9 @@
 
       if (data.hasOwnProperty('huge_jpg')) {
         obj['huge_jpg'] = ImageSizeDetails.constructFromObject(data['huge_jpg']);
+      }
+      if (data.hasOwnProperty('huge_thumb')) {
+        obj['huge_thumb'] = Thumbnail.constructFromObject(data['huge_thumb']);
       }
       if (data.hasOwnProperty('huge_tiff')) {
         obj['huge_tiff'] = ImageSizeDetails.constructFromObject(data['huge_tiff']);
@@ -117,6 +121,10 @@
    * @member {module:model/ImageSizeDetails} huge_jpg
    */
   exports.prototype['huge_jpg'] = undefined;
+  /**
+   * @member {module:model/Thumbnail} huge_thumb
+   */
+  exports.prototype['huge_thumb'] = undefined;
   /**
    * @member {module:model/ImageSizeDetails} huge_tiff
    */
