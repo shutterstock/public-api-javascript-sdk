@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/ImageCreateRequest', '../model/ImageCreateResponse', '../model/ImageSearchResults', '../model/InlineResponse201', '../model/KeywordDataList', '../model/VideoSearchResults'], factory);
+    define(['../ApiClient', '../model/ComputerVisionImageCreateResponse', '../model/ImageCreateRequest', '../model/ImageCreateResponse', '../model/ImageSearchResults', '../model/KeywordDataList', '../model/VideoSearchResults'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ImageCreateRequest'), require('../model/ImageCreateResponse'), require('../model/ImageSearchResults'), require('../model/InlineResponse201'), require('../model/KeywordDataList'), require('../model/VideoSearchResults'));
+    module.exports = factory(require('../ApiClient'), require('../model/ComputerVisionImageCreateResponse'), require('../model/ImageCreateRequest'), require('../model/ImageCreateResponse'), require('../model/ImageSearchResults'), require('../model/KeywordDataList'), require('../model/VideoSearchResults'));
   } else {
     // Browser globals (root is window)
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.ComputerVisionApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.ImageCreateRequest, root.ShutterstockApiReference.ImageCreateResponse, root.ShutterstockApiReference.ImageSearchResults, root.ShutterstockApiReference.InlineResponse201, root.ShutterstockApiReference.KeywordDataList, root.ShutterstockApiReference.VideoSearchResults);
+    root.ShutterstockApiReference.ComputerVisionApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.ComputerVisionImageCreateResponse, root.ShutterstockApiReference.ImageCreateRequest, root.ShutterstockApiReference.ImageCreateResponse, root.ShutterstockApiReference.ImageSearchResults, root.ShutterstockApiReference.KeywordDataList, root.ShutterstockApiReference.VideoSearchResults);
   }
-}(this, function(ApiClient, ImageCreateRequest, ImageCreateResponse, ImageSearchResults, InlineResponse201, KeywordDataList, VideoSearchResults) {
+}(this, function(ApiClient, ComputerVisionImageCreateResponse, ImageCreateRequest, ImageCreateResponse, ImageSearchResults, KeywordDataList, VideoSearchResults) {
   'use strict';
 
   /**
@@ -293,7 +293,7 @@
      * Upload images
      * This endpoint uploads an image for reverse image or video search. Images must be in JPEG or PNG format. To get the search results, pass the upload ID that this endpoint returns to the GET /v2/cv/similar/images or GET /v2/cv/similar/videos endpoints. Contact us for access to this endpoint.
      * @param {module:model/ImageCreateRequest} body The image data as a base64 string
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse201} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ComputerVisionImageCreateResponse} and HTTP response
      */
     this.uploadImageWithHttpInfo = function(body) {
       var postBody = body;
@@ -318,7 +318,7 @@
       var authNames = ['basic', 'customer_accessCode'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse201;
+      var returnType = ComputerVisionImageCreateResponse;
 
       return this.apiClient.callApi(
         '/v2/cv/images', 'POST',
@@ -331,7 +331,7 @@
      * Upload images
      * This endpoint uploads an image for reverse image or video search. Images must be in JPEG or PNG format. To get the search results, pass the upload ID that this endpoint returns to the GET /v2/cv/similar/images or GET /v2/cv/similar/videos endpoints. Contact us for access to this endpoint.
      * @param {module:model/ImageCreateRequest} body The image data as a base64 string
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse201}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ComputerVisionImageCreateResponse}
      */
     this.uploadImage = function(body) {
       return this.uploadImageWithHttpInfo(body)

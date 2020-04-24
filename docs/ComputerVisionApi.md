@@ -760,7 +760,7 @@ Name | Type | Description
 
 <a name="uploadImage"></a>
 # ComputerVisionApi.uploadImage
-> `InlineResponse201 ComputerVisionApi.uploadImage(body)`
+> `ComputerVisionImageCreateResponse ComputerVisionApi.uploadImage(body)`
 
 **Upload images**
 
@@ -808,7 +808,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse201](InlineResponse201.md)
+[ComputerVisionImageCreateResponse](ComputerVisionImageCreateResponse.md)
 
 ### Example response
 
