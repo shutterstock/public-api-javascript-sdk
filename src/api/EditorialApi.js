@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/EditorialContent', '../model/EditorialContentDataList', '../model/EditorialLivefeed', '../model/EditorialLivefeedList', '../model/EditorialSearchResults', '../model/LicenseEditorialContentRequest', '../model/LicenseEditorialContentResultDataList'], factory);
+    define(['../ApiClient', '../model/EditorialContent', '../model/EditorialContentDataList', '../model/EditorialLivefeed', '../model/EditorialLivefeedList', '../model/EditorialSearchResults', '../model/EditorialUpdatedResults', '../model/LicenseEditorialContentRequest', '../model/LicenseEditorialContentResultDataList'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/EditorialContent'), require('../model/EditorialContentDataList'), require('../model/EditorialLivefeed'), require('../model/EditorialLivefeedList'), require('../model/EditorialSearchResults'), require('../model/LicenseEditorialContentRequest'), require('../model/LicenseEditorialContentResultDataList'));
+    module.exports = factory(require('../ApiClient'), require('../model/EditorialContent'), require('../model/EditorialContentDataList'), require('../model/EditorialLivefeed'), require('../model/EditorialLivefeedList'), require('../model/EditorialSearchResults'), require('../model/EditorialUpdatedResults'), require('../model/LicenseEditorialContentRequest'), require('../model/LicenseEditorialContentResultDataList'));
   } else {
     // Browser globals (root is window)
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.EditorialApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.EditorialContent, root.ShutterstockApiReference.EditorialContentDataList, root.ShutterstockApiReference.EditorialLivefeed, root.ShutterstockApiReference.EditorialLivefeedList, root.ShutterstockApiReference.EditorialSearchResults, root.ShutterstockApiReference.LicenseEditorialContentRequest, root.ShutterstockApiReference.LicenseEditorialContentResultDataList);
+    root.ShutterstockApiReference.EditorialApi = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.EditorialContent, root.ShutterstockApiReference.EditorialContentDataList, root.ShutterstockApiReference.EditorialLivefeed, root.ShutterstockApiReference.EditorialLivefeedList, root.ShutterstockApiReference.EditorialSearchResults, root.ShutterstockApiReference.EditorialUpdatedResults, root.ShutterstockApiReference.LicenseEditorialContentRequest, root.ShutterstockApiReference.LicenseEditorialContentResultDataList);
   }
-}(this, function(ApiClient, EditorialContent, EditorialContentDataList, EditorialLivefeed, EditorialLivefeedList, EditorialSearchResults, LicenseEditorialContentRequest, LicenseEditorialContentResultDataList) {
+}(this, function(ApiClient, EditorialContent, EditorialContentDataList, EditorialLivefeed, EditorialLivefeedList, EditorialSearchResults, EditorialUpdatedResults, LicenseEditorialContentRequest, LicenseEditorialContentResultDataList) {
   'use strict';
 
   /**
@@ -281,6 +281,107 @@
      */
     this.getEditorialLivefeedList = function(country, opts) {
       return this.getEditorialLivefeedListWithHttpInfo(country, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * List updated content
+     * This endpoint lists editorial images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the date_updated_start and date_updated_end parameters to specify a range updates based on when the updates happened. You can also use the date_taken_start and date_taken_end parameters to specify a range of updates based on when the image was taken.
+     * @param {module:model/String} type Specify `addition` to return only images that were added or `edit` to return only images that were edited or deleted
+     * @param {Date} date_updated_start Show images images added, edited, or deleted after the specified date, in RFC 3339 section 5.6 format, such as 2020-04-10T10:00:00Z
+     * @param {Date} date_updated_end Show images images added, edited, or deleted before the specified date, in RFC 3339 section 5.6 format, such as 2020-04-10T10:00:00Z
+     * @param {String} country Show only editorial content that is available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.date_taken_start Show images that were taken on or after the specified date, in the format YYYY-MM-DD; use this parameter if you want recently created images from the collection instead of updated older assets
+     * @param {String} opts.date_taken_end Show images that were taken before the specified date, in the format YYYY-MM-DD
+     * @param {String} opts.cursor The cursor of the page with which to start fetching results; this cursor is returned from previous requests
+     * @param {module:model/String} opts.sort Sort by (default to newest)
+     * @param {Array.<String>} opts.supplier_code Show only editorial content from certain suppliers
+     * @param {Number} opts.per_page Number of results per page, defaults to 500 (default to 500)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EditorialUpdatedResults} and HTTP response
+     */
+    this.getUpdatedImagesWithHttpInfo = function(type, date_updated_start, date_updated_end, country, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'type' is set
+      if (type === undefined || type === null) {
+        throw new Error("Missing the required parameter 'type' when calling getUpdatedImages");
+      }
+
+      // verify the required parameter 'date_updated_start' is set
+      if (date_updated_start === undefined || date_updated_start === null) {
+        throw new Error("Missing the required parameter 'date_updated_start' when calling getUpdatedImages");
+      }
+
+      // verify the required parameter 'date_updated_end' is set
+      if (date_updated_end === undefined || date_updated_end === null) {
+        throw new Error("Missing the required parameter 'date_updated_end' when calling getUpdatedImages");
+      }
+
+      // verify the required parameter 'country' is set
+      if (country === undefined || country === null) {
+        throw new Error("Missing the required parameter 'country' when calling getUpdatedImages");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'type': type,
+        'date_updated_start': date_updated_start,
+        'date_updated_end': date_updated_end,
+        'date_taken_start': opts['date_taken_start'],
+        'date_taken_end': opts['date_taken_end'],
+        'cursor': opts['cursor'],
+        'sort': opts['sort'],
+        'country': country,
+        'per_page': opts['per_page'],
+      };
+      var collectionQueryParams = {
+        'supplier_code': {
+          value: opts['supplier_code'],
+          collectionFormat: 'multi'
+        },
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['basic', 'customer_accessCode'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = EditorialUpdatedResults;
+
+      return this.apiClient.callApi(
+        '/v2/editorial/updated', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * List updated content
+     * This endpoint lists editorial images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the date_updated_start and date_updated_end parameters to specify a range updates based on when the updates happened. You can also use the date_taken_start and date_taken_end parameters to specify a range of updates based on when the image was taken.
+     * @param {module:model/String} type Specify `addition` to return only images that were added or `edit` to return only images that were edited or deleted
+     * @param {Date} date_updated_start Show images images added, edited, or deleted after the specified date, in RFC 3339 section 5.6 format, such as 2020-04-10T10:00:00Z
+     * @param {Date} date_updated_end Show images images added, edited, or deleted before the specified date, in RFC 3339 section 5.6 format, such as 2020-04-10T10:00:00Z
+     * @param {String} country Show only editorial content that is available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.date_taken_start Show images that were taken on or after the specified date, in the format YYYY-MM-DD; use this parameter if you want recently created images from the collection instead of updated older assets
+     * @param {String} opts.date_taken_end Show images that were taken before the specified date, in the format YYYY-MM-DD
+     * @param {String} opts.cursor The cursor of the page with which to start fetching results; this cursor is returned from previous requests
+     * @param {module:model/String} opts.sort Sort by (default to newest)
+     * @param {Array.<String>} opts.supplier_code Show only editorial content from certain suppliers
+     * @param {Number} opts.per_page Number of results per page, defaults to 500 (default to 500)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EditorialUpdatedResults}
+     */
+    this.getUpdatedImages = function(type, date_updated_start, date_updated_end, country, opts) {
+      return this.getUpdatedImagesWithHttpInfo(type, date_updated_start, date_updated_end, country, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
