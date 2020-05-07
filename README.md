@@ -27,10 +27,50 @@ If you have a subscription from shutterstock.com and want to use it with the API
 
 ## Applications
 
-The REST API uses an access token or secret key that is tied to your account and to an application.
-This application represents the application, program, or computer commands that are accessing the API.
-To use the API, you must create an application at [https://developers.shutterstock.com/applications](https://developers.shutterstock.com/applications) and note the consumer key and consumer secret.
-You use this consumer key and consumer secret either to use the API directly with basic authentication or to request a token for OAuth authentication.
+To access the REST API you need an _application_, which represents the application, program, or computer commands that are accessing the API.
+To use the API, you need the application's consumer key and consumer secret, which are shown on the [https://www.shutterstock.com/account/developers/apps](https://www.shutterstock.com/account/developers/apps) page.
+
+When you have the application's consumer key and consumer secret, you can use them to access the API directly or to request a token that you can use to access the API.
+For more information on these methods of authentication, see [Authentication](#authentication).
+
+To create an application:
+1. Log in at [shutterstock.com](https://shutterstock.com/), go to your account page, and  and click **Developers**.
+1. On the Developers page, click **Create new app**.
+1. On the Create New App popup, fill in these fields:
+   - **App name**: Specify any name that describes your application.
+   - **Callback URL**: Specify a comma-separated list of the host names (not full URLs) where your application is running.
+   If you’ve got an application running on a server, use the host name of the server.
+   Otherwise, leave the default host name `localhost` for testing purposes.
+   - **Referrer**: If you are using referrer authentication, specify a comma-separated list of valid referrer domains.
+   Each item in the list must match one of the callback host names.
+   The API accepts only requests that have an HTTP Referrer header from this list.
+   Otherwise, leave this field blank.
+   - **Included products**: This list shows the API products that the application has access to.
+   To get access to other products, contact your Shutterstock representative, visit the [Pricing page](https://www.shutterstock.com/api/pricing) or [contact us](//developers.shutterstock.com/contact-us).
+   - **Company name**: The name of your company.
+   - **Website**: Your company's web site.
+   - **Intended use**: Select an option that describes how you will use the API.
+   - **Description**: Describe in detail how the application will use the API.
+   - **Terms of service**: Read an accept the Terms of Service.
+1. Click **Save**.
+
+The new application appears on the [My apps](https://www.shutterstock.com/account/developers/apps) page.
+Each application has a consumer key and a consumer secret.
+You use this consumer key and consumer secret either to use the API directly with basic authentication or to request a token for OAuth authentication; see [Authentication](#authentication).
+Do not share your key and secret, because they can be used to access your account through the API.
+
+## Products
+
+Each application has access to one or more API products.
+These products control the level of access that the application has to the API and the Shutterstock media library.
+These products are separate from the subscriptions that control how many assets you can license and download.
+
+If you create an application without buying an API subscription first, the application uses the free API product, which is labeled as the "Self Serve" product.
+Applications that use this free API product can search and view media but not license or download media.
+If you have a paid API subscription, your applications use an API product with additional access to license and download media, within the limitations of the subscription.
+Other products include access to computer vision and editorial endpoints.
+
+To tell which API products your application is using, open [your applications](https://www.shutterstock.com/account/developers/apps), expand your application, and go to its **Details** tab.
 
 ## Installation
 
