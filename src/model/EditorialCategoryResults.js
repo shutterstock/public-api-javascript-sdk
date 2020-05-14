@@ -16,73 +16,63 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient'], factory);
+    define(['../ApiClient', '../model/EditorialCategory'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./EditorialCategory'));
   } else {
     // Browser globals (root is window)
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.DownloadHistoryFormatDetails = factory(root.ShutterstockApiReference.ApiClient);
+    root.ShutterstockApiReference.EditorialCategoryResults = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.EditorialCategory);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, EditorialCategory) {
   'use strict';
 
 
 
 
   /**
-   * The DownloadHistoryFormatDetails model module.
-   * @module model/DownloadHistoryFormatDetails
+   * The EditorialCategoryResults model module.
+   * @module model/EditorialCategoryResults
    * @version 1.0.22
    */
 
   /**
-   * Constructs a new <code>DownloadHistoryFormatDetails</code>.
-   * Information about the format of a download
-   * @alias module:model/DownloadHistoryFormatDetails
+   * Constructs a new <code>EditorialCategoryResults</code>.
+   * List of editorial categories
+   * @alias module:model/EditorialCategoryResults
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
-
   };
 
   /**
-   * Constructs a <code>DownloadHistoryFormatDetails</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>EditorialCategoryResults</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/DownloadHistoryFormatDetails} obj Optional instance to populate.
-   * @return {module:model/DownloadHistoryFormatDetails} The populated <code>DownloadHistoryFormatDetails</code> instance.
+   * @param {module:model/EditorialCategoryResults} obj Optional instance to populate.
+   * @return {module:model/EditorialCategoryResults} The populated <code>EditorialCategoryResults</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('format')) {
-        obj['format'] = ApiClient.convertToType(data['format'], 'String');
-      }
-      if (data.hasOwnProperty('size')) {
-        obj['size'] = ApiClient.convertToType(data['size'], 'String');
+      if (data.hasOwnProperty('data')) {
+        obj['data'] = ApiClient.convertToType(data['data'], [EditorialCategory]);
       }
     }
     return obj;
   }
 
   /**
-   * The format of the downloaded media
-   * @member {String} format
+   * @member {Array.<module:model/EditorialCategory>} data
    */
-  exports.prototype['format'] = undefined;
-  /**
-   * The size of the downloaded media
-   * @member {String} size
-   */
-  exports.prototype['size'] = undefined;
+  exports.prototype['data'] = undefined;
 
 
 

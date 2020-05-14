@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**[CollectionItem]**](CollectionItem.md) | Collections | [optional] 
+**data** | [**[CollectionItem]**](CollectionItem.md) | Assets in the collection | [optional] 
 **errors** | [**[Error]**](Error.md) | Error list; appears only if there was an error | [optional] 
 **message** | **String** | Server-generated message, if any | [optional] 
 **page** | **Number** | The current page of results | [optional] 

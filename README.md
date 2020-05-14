@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.0.21
+- API version: 1.0.22
 
 ## References
 
@@ -333,6 +333,7 @@ Class | Method | HTTP request | Description
 *shutterstock-api.ContributorsApi* | [**getContributorCollections**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorCollections) | **GET** /v2/contributors/{contributor_id}/collections/{id} | Get details about contributors' collections
 *shutterstock-api.ContributorsApi* | [**getContributorCollectionsList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorCollectionsList) | **GET** /v2/contributors/{contributor_id}/collections | List contributors' collections
 *shutterstock-api.ContributorsApi* | [**getContributorList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorList) | **GET** /v2/contributors | Get details about multiple contributors
+*shutterstock-api.EditorialApi* | [**getEditorialCategories**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialApi.md#getEditorialCategories) | **GET** /v2/editorial/categories | List editorial categories
 *shutterstock-api.EditorialApi* | [**getEditorialImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialApi.md#getEditorialImage) | **GET** /v2/editorial/{id} | Get editorial content details
 *shutterstock-api.EditorialApi* | [**getEditorialLivefeed**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialApi.md#getEditorialLivefeed) | **GET** /v2/editorial/livefeeds/{id} | Get editorial livefeed
 *shutterstock-api.EditorialApi* | [**getEditorialLivefeedItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialApi.md#getEditorialLivefeedItems) | **GET** /v2/editorial/livefeeds/{id}/items | Get editorial livefeed items

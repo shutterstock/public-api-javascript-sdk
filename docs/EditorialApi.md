@@ -4,6 +4,7 @@ All URIs are relative to `https://api.shutterstock.com`.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[`getEditorialCategories`](EditorialApi.md#getEditorialCategories) | `GET /v2/editorial/categories` | List editorial categories
 [`getEditorialImage`](EditorialApi.md#getEditorialImage) | `GET /v2/editorial/{id}` | Get editorial content details
 [`getEditorialLivefeed`](EditorialApi.md#getEditorialLivefeed) | `GET /v2/editorial/livefeeds/{id}` | Get editorial livefeed
 [`getEditorialLivefeedItems`](EditorialApi.md#getEditorialLivefeedItems) | `GET /v2/editorial/livefeeds/{id}/items` | Get editorial livefeed items
@@ -12,6 +13,67 @@ Method | HTTP request | Description
 [`licenseEditorialImage`](EditorialApi.md#licenseEditorialImage) | `POST /v2/editorial/licenses` | License editorial content
 [`searchEditorial`](EditorialApi.md#searchEditorial) | `GET /v2/editorial/search` | Search editorial content
 
+
+<a name="getEditorialCategories"></a>
+# EditorialApi.getEditorialCategories
+> `EditorialCategoryResults EditorialApi.getEditorialCategories()`
+
+**List editorial categories**
+
+This endpoint lists the categories that editorial images can belong to, which are separate from the categories that other types of assets can belong to.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.EditorialApi();
+api.getEditorialCategories()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+This endpoint does not accept any parameters.
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[EditorialCategoryResults](EditorialCategoryResults.md)
+
+### Example response
+
+```
+{
+  "data" : [ {
+    "name" : "name"
+  }, {
+    "name" : "name"
+  } ]
+}
+```
 
 <a name="getEditorialImage"></a>
 # EditorialApi.getEditorialImage

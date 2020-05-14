@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**urls** | **[String]** | List of URLs | 
+**urls** | **[String]** | URLs | 
 
 
