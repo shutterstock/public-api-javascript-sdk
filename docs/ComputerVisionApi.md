@@ -140,7 +140,7 @@ Name | Type | Description
  safe | Boolean| Enable or disable safe search, defaults to true 
  language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
  page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 20, defaults to 20 
+ per_page | Number| Number of results per page, defaults to 20 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication
@@ -481,7 +481,7 @@ Name | Type | Description
  safe | Boolean| Enable or disable safe search, defaults to true 
  language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
  page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 20, defaults to 20 
+ per_page | Number| Number of results per page, defaults to 20 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication
@@ -797,7 +797,7 @@ computerVisionApi.uploadImage(body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [ImageCreateRequest](ImageCreateRequest.md)| The image data as a base64 string 
+ body (required) | [ImageCreateRequest](ImageCreateRequest.md)| A Base 64 encoded jpeg or png; images can be no larger than 10mb and can be no larger than 10,000 pixels in width or height 
 
 ### Accepted authentication
 

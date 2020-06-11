@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **audio** | [**DownloadHistoryMediaDetails**](DownloadHistoryMediaDetails.md) |  | [optional] 
-**download_time** | **Date** | Date the media was downloaded the first time, in the format YYYY-MM-DDThh:mm:ssZ | 
+**download_time** | **Date** | Date the media was downloaded the first time | 
 **id** | **String** | ID of the download | 
 **image** | [**DownloadHistoryMediaDetails**](DownloadHistoryMediaDetails.md) |  | [optional] 
 **is_downloadable** | **Boolean** | Specifies if the media is downloadable via its respective downloads endpoint | [optional] 

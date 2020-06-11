@@ -869,8 +869,8 @@ videosApi.getUpdatedVideos(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- start_date | Date| Show videos updated on or after the specified date, in the format YYYY-MM-DD 
- end_date | Date| Show videos updated before the specified date, in the format YYYY-MM-DD 
+ start_date | Date| Show videos updated on or after the specified date 
+ end_date | Date| Show videos updated before the specified date 
  interval | String| Show videos updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows videos that were updated in the hour preceding the request, defaults to 1 HOUR 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 100 
@@ -1799,16 +1799,16 @@ videosApi.searchVideos(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- added_date | Date| Show videos added on the specified date, in the format YYYY-MM-DD 
- added_date_start | Date| Show videos added on or after the specified date, in the format YYYY-MM-DD 
- added_date_end | Date| Show videos added before the specified date, in the format YYYY-MM-DD 
+ added_date | Date| Show videos added on the specified date 
+ added_date_start | Date| Show videos added on or after the specified date 
+ added_date_end | Date| Show videos added before the specified date 
  aspect_ratio | String| Show videos with the specified aspect ratio <br/><br/>Valid values: "4_3", "16_9", "nonstandard"
  category | String| Show videos with the specified Shutterstock-defined category; specify a category name or ID 
  contributor | [String]| Show videos with the specified artist names or IDs 
- contributor_country | [String]| Show videos from contributors in one or more specified countries by 2-letter ISO 3166-1 alpha-2 country code, such as DE or US 
- duration | Number| (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration (seconds) 
- duration_from | Number| Show videos with the specified duration or longer (seconds) 
- duration_to | Number| Show videos with the specified duration or shorter (seconds) 
+ contributor_country | [String]| Show videos from contributors in one or more specified countries 
+ duration | Number| (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration in seconds 
+ duration_from | Number| Show videos with the specified duration or longer in seconds 
+ duration_to | Number| Show videos with the specified duration or shorter in seconds 
  fps | Number| (Deprecated; use fps_from and fps_to instead) Show videos with the specified frames per second 
  fps_from | Number| Show videos with the specified frames per second or more 
  fps_to | Number| Show videos with the specified frames per second or fewer 

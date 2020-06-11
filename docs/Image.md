@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**added_date** | **Date** | Date that the image was added by the contributor, in the format YYYY-MM-DD | [optional] 
+**added_date** | **Date** | Date that the image was added by the contributor | [optional] 
 **affiliate_url** | **String** | Affiliate referral link; appears only for registered affiliate partners | [optional] 
 **aspect** | **Number** | Aspect ratio of the image | [optional] 
 **assets** | [**ImageAssets**](ImageAssets.md) | Image asset information | [optional] 

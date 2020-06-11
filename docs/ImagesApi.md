@@ -347,7 +347,7 @@ const id = "136351027"; // String | Collection ID
 
 const queryParams = { 
   'embed': "embed_example", // String | Which sharing information to include in the response, such as a URL to the collection
-  'asset_hint': "1x" // String | Cover image size, defaults to 1x
+  'asset_hint': "1x" // String | Cover image size
 };
 
 api.getFeaturedLightbox(id, queryParams)
@@ -367,7 +367,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
  embed | String| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_url"
- asset_hint | String| Cover image size, defaults to 1x, defaults to 1x <br/><br/>Valid values: "1x", "2x"
+ asset_hint | String| Cover image size, defaults to 1x <br/><br/>Valid values: "1x", "2x"
 
 ### Accepted authentication
 
@@ -429,7 +429,7 @@ const id = "136351027"; // String | Collection ID
 
 const queryParams = { 
   'page': 1, // Number | Page number
-  'per_page': 100 // Number | Number of results per page, defaults to 100
+  'per_page': 100 // Number | Number of results per page
 };
 
 api.getFeaturedLightboxItems(id, queryParams)
@@ -449,7 +449,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
  page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 100, defaults to 100 
+ per_page | Number| Number of results per page, defaults to 100 
 
 ### Accepted authentication
 
@@ -508,7 +508,7 @@ const api = new sstk.ImagesApi();
 const queryParams = { 
   'embed': "share_url", // String | Which sharing information to include in the response, such as a URL to the collection
   'type': ["photo"], // [String] | The types of collections to return
-  'asset_hint': "1x" // String | Cover image size, defaults to 1x
+  'asset_hint': "1x" // String | Cover image size
 };
 
 api.getFeaturedLightboxList(queryParams)
@@ -528,7 +528,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  embed | String| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_url"
  type | [String]| The types of collections to return <br/><br/>Valid values: "photo", "editorial", "vector"
- asset_hint | String| Cover image size, defaults to 1x, defaults to 1x <br/><br/>Valid values: "1x", "2x"
+ asset_hint | String| Cover image size, defaults to 1x <br/><br/>Valid values: "1x", "2x"
 
 ### Accepted authentication
 
@@ -907,7 +907,7 @@ const queryParams = {
   'image_id': "image_id_example", // String | Show licenses for the specified image ID
   'license': "license_example", // String | Show images that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license
   'page': 1, // Number | Page number
-  'per_page': 20, // Number | Number of results per page, defaults to 20
+  'per_page': 20, // Number | Number of results per page
   'sort': "newest" // String | Sort order
 };
 
@@ -929,7 +929,7 @@ Name | Type | Description
  image_id | String| Show licenses for the specified image ID 
  license | String| Show images that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license 
  page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 20, defaults to 20 
+ per_page | Number| Number of results per page, defaults to 20 
  sort | String| Sort order, defaults to newest <br/><br/>Valid values: "newest", "oldest"
 
 ### Accepted authentication
@@ -1578,7 +1578,7 @@ const id = "126351027"; // String | Collection ID
 const queryParams = { 
   'share_code': "share_code_example", // String | Code to retrieve the contents of a shared collection
   'page': 1, // Number | Page number
-  'per_page': 100 // Number | Number of results per page, defaults to 100
+  'per_page': 100 // Number | Number of results per page
 };
 
 api.getLightboxItems(id, queryParams)
@@ -1599,7 +1599,7 @@ Name | Type | Description
  id (required) | String| Collection ID 
  share_code | String| Code to retrieve the contents of a shared collection 
  page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 100, defaults to 100 
+ per_page | Number| Number of results per page, defaults to 100 
 
 ### Accepted authentication
 
@@ -1657,7 +1657,7 @@ const api = new sstk.ImagesApi();
 const queryParams = { 
   'embed': ["share_code"], // [String] | Which sharing information to include in the response, such as a URL to the collection
   'page': 1, // Number | Page number
-  'per_page': 100 // Number | Number of results per page, defaults to 100
+  'per_page': 100 // Number | Number of results per page
 };
 
 api.getLightboxList(queryParams)
@@ -1677,7 +1677,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  embed | [String]| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
  page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 100, defaults to 100 
+ per_page | Number| Number of results per page, defaults to 100 
 
 ### Accepted authentication
 
@@ -1760,7 +1760,7 @@ const id = "465011609"; // String | Image ID
 const queryParams = { 
   'language': "es", // String | Language for the keywords and categories in the response
   'page': 1, // Number | Page number
-  'per_page': 20, // Number | Number of results per page, defaults to 20
+  'per_page': 20, // Number | Number of results per page
   'view': "minimal" // String | Amount of detail to render in the response
 };
 
@@ -1782,7 +1782,7 @@ Name | Type | Description
  id (required) | String| Image ID 
  language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
  page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 20, defaults to 20 
+ per_page | Number| Number of results per page, defaults to 20 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication
@@ -2114,11 +2114,11 @@ imagesApi.getUpdatedImages(queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  type | [String]| Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways <br/><br/>Valid values: "addition", "deletion", "edit"
- start_date | Date| Show images updated on or after the specified date, in the format YYYY-MM-DD 
- end_date | Date| Show images updated before the specified date, in the format YYYY-MM-DD 
+ start_date | Date| Show images updated on or after the specified date 
+ end_date | Date| Show images updated before the specified date 
  interval | String| Show images updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows images that were updated in the hour preceding the request, defaults to 1 HOUR 
  page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 100, defaults to 100 
+ per_page | Number| Number of results per page, defaults to 100 
  sort | String| Sort order, defaults to newest <br/><br/>Valid values: "newest", "oldest"
 
 ### Accepted authentication
@@ -2222,7 +2222,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  body (required) | [LicenseImageRequest](LicenseImageRequest.md)| List of images to request licenses for and information about each license transaction; these values override the defaults in the query parameters 
  subscription_id | String| Subscription ID to use to license the image 
- format | String| Image format, defaults to jpg, defaults to jpg <br/><br/>Valid values: "eps", "jpg"
+ format | String| Image format, defaults to jpg <br/><br/>Valid values: "eps", "jpg"
  size | String| Image size, defaults to huge <br/><br/>Valid values: "small", "medium", "huge", "vector"
  search_id | String| Search ID that was provided in the results of an image search 
 
@@ -2388,13 +2388,17 @@ imagesApi.searchImages(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- added_date | Date| Show images added on the specified date, in the format YYYY-MM-DD 
- added_date_start | Date| Show images added on or after the specified date, in the format YYYY-MM-DD 
- added_date_end | Date| Show images added before the specified date, in the format YYYY-MM-DD 
+ added_date | Date| Show images added on the specified date 
+ added_date_start | Date| Show images added on or after the specified date 
+ aspect_ratio_min | Number| Show images with the specified aspect ratio or higher, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
+ aspect_ratio_max | Number| Show images with the specified aspect ratio or lower, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
+ aspect_ratio | Number| Show images with the specified aspect ratio, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
+ added_date_end | Date| Show images added before the specified date 
  category | String| Show images with the specified Shutterstock-defined category; specify a category name or ID 
  color | String| Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API groups it into one of 15 color categories and returns images that primarily use that color category 
  contributor | [String]| Show images with the specified contributor names or IDs, allows multiple 
- contributor_country | [String]| Show images from contributors in one or more specified countries by 2-letter ISO 3166-1 alpha-2 country code, such as DE or US 
+ contributor_country | [String]| Show images from contributors in one or more specified countries 
+ fields | String| Fields to display in the response; see the documentation for the fields parameter in the overview section 
  height | Number| (Deprecated; use height_from and height_to instead) Show images with the specified height 
  height_from | Number| Show images with the specified height or larger, in pixels 
  height_to | Number| Show images with the specified height or smaller, in pixels 
@@ -2404,13 +2408,14 @@ Name | Type | Description
  model | [String]| Show image results with the specified model IDs 
  orientation | String| Show image results with horizontal or vertical orientation <br/><br/>Valid values: "horizontal", "vertical"
  page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 20, defaults to 20 
+ per_page | Number| Number of results per page, defaults to 20 
  people_model_released | Boolean| Show images of people with a signed model release 
  people_age | String| Show images that feature people of the specified age category <br/><br/>Valid values: "infants", "children", "teenagers", "20s", "30s", "40s", "50s", "60s", "older"
  people_ethnicity | String| Show images with people of the specified ethnicity <br/><br/>Valid values: "african", "african_american", "black", "brazilian", "chinese", "caucasian", "east_asian", "hispanic", "japanese", "middle_eastern", "native_american", "pacific_islander", "south_asian", "southeast_asian", "other"
  people_gender | String| Show images with people of the specified gender <br/><br/>Valid values: "male", "female", "both"
  people_number | Number| Show images with the specified number of people 
  query | String| One or more search terms separated by spaces; you can use NOT to filter out images that match a term 
+ region | [Object](.md)| Raise or lower search result rankings based on the result's relevance to a specified region; you can provide a country code or an IP address from which the API infers a country 
  safe | Boolean| Enable or disable safe search, defaults to true 
  sort | String| Sort by, defaults to popular <br/><br/>Valid values: "newest", "popular", "relevance", "random"
  spellcheck_query | Boolean| Spellcheck the search query and return results on suggested spellings, defaults to true 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**added_date** | **Date** | Date this track was added to the Shutterstock library, in the format: YYYY-MM-DD | [optional] 
+**added_date** | **Date** | Date this track was added to the Shutterstock library | [optional] 
 **affiliate_url** | **String** | Affiliate referral link; appears only for registered affiliate partners | [optional] 
 **album** | [**Album**](Album.md) |  | [optional] 
 **artists** | [**[Artist]**](Artist.md) | List of artists | [optional] 
@@ -25,13 +25,13 @@ Name | Type | Description | Notes
 **media_type** | **String** | Media type of this track; should always be \"audio\" | 
 **model_releases** | [**[ModelRelease]**](ModelRelease.md) | List of all model releases for this track | [optional] 
 **moods** | **[String]** | List of all moods of this track | [optional] 
-**published_time** | **Date** | Time this track was published, in the format YYYY-MM-DDThh:mm:ssZ | [optional] 
+**published_time** | **Date** | Time this track was published | [optional] 
 **recording_version** | **String** | Recording version of this track | [optional] 
 **releases** | **[String]** | List of all releases of this track | [optional] 
 **similar_artists** | [**[Artist]**](Artist.md) | List of all similar artists of this track | [optional] 
-**submitted_time** | **Date** | Time this track was submitted, in the format YYYY-MM-DDThh:mm:ssZ | [optional] 
+**submitted_time** | **Date** | Time this track was submitted | [optional] 
 **title** | **String** | Title of this track | [optional] 
-**updated_time** | **Date** | Time this track was last updated, in the format YYYY-MM-DDThh:mm:ssZ | [optional] 
+**updated_time** | **Date** | Time this track was last updated | [optional] 
 **vocal_description** | **String** | Vocal description of this track | [optional] 
 **url** | **String** | Link to track information page; included only for certain accounts | [optional] 
 

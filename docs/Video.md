@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**added_date** | **Date** | Date this video was added to the Shutterstock library, in the format YYYY-MM-DD | [optional] 
+**added_date** | **Date** | Date this video was added to the Shutterstock library | [optional] 
 **affiliate_url** | **String** | Affiliate referral link; appears only for registered affiliate partners | [optional] 
 **aspect** | **Number** | Aspect ratio of this video in decimal format | [optional] 
 **aspect_ratio** | **String** | Aspect ratio of the video | [optional] 

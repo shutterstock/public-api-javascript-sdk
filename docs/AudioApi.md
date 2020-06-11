@@ -1303,9 +1303,9 @@ Name | Type | Description
  bpm | Number| (Deprecated; use bpm_from and bpm_to instead) Show tracks with the specified beats per minute 
  bpm_from | Number| Show tracks with the specified beats per minute or faster 
  bpm_to | Number| Show tracks with the specified beats per minute or slower 
- duration | Number| Show tracks with the specified duration (seconds) 
- duration_from | Number| Show tracks with the specified duration or longer (seconds) 
- duration_to | Number| Show tracks with the specified duration or shorter (seconds) 
+ duration | Number| Show tracks with the specified duration in seconds 
+ duration_from | Number| Show tracks with the specified duration or longer in seconds 
+ duration_to | Number| Show tracks with the specified duration or shorter in seconds 
  genre | [String]| Show tracks with each of the specified genres; to get the list of genres, use `GET /v2/audio/genres` 
  is_instrumental | Boolean| Show instrumental music only 
  instruments | [String]| Show tracks with each of the specified instruments; to get the list of instruments, use `GET /v2/audio/instruments` 
@@ -1314,7 +1314,7 @@ Name | Type | Description
  per_page | Number| Number of results per page, defaults to 20 
  query | String| One or more search terms separated by spaces 
  sort | String| Sort by <br/><br/>Valid values: "score", "ranking_all", "artist", "title", "bpm", "freshness", "duration"
- sort_order | String| Sort order, asc or desc, defaults to desc <br/><br/>Valid values: "asc", "desc"
+ sort_order | String| Sort order, defaults to desc <br/><br/>Valid values: "asc", "desc"
  vocal_description | String| Show tracks with the specified vocal description (male, female) 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
  fields | String| Fields to display in the response; see the documentation for the fields parameter in the overview section 

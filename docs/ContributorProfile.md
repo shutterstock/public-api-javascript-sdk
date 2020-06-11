@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **display_name** | **String** | Preferred name to be displayed for the contributor | [optional] 
 **equipment** | **[String]** | List of equipment used by the contributor (Canon EOS 5D Mark II, etc) | [optional] 
 **id** | **String** | Contributor ID | 
-**location** | **String** | 2-letter ISO 3166-1 alpha-2 country code representing the contributors' locale, such as DE or US | [optional] 
+**location** | **String** | Country code representing the contributor's locale | [optional] 
 **portfolio_url** | **String** | Web URL for the contributors' profile | [optional] 
 **social_media** | [**ContributorProfileSocialMedia**](ContributorProfileSocialMedia.md) |  | [optional] 
 **styles** | **[String]** | List of styles that the contributor specializes in (lifestyle, mixed media, etc) | [optional] 

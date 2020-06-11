@@ -98,7 +98,7 @@ const api = new sstk.EditorialApi();
 
 const id = "9926131a"; // String | Editorial ID
 
-const country = "USA"; // String | Returns only if the content is available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU
+const country = "USA"; // String | Returns only if the content is available for distribution in a certain country
 
 
 api.getEditorialImage(id, country)
@@ -117,7 +117,7 @@ api.getEditorialImage(id, country)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Editorial ID 
- country (required) | String| Returns only if the content is available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU 
+ country (required) | String| Returns only if the content is available for distribution in a certain country 
 
 ### Accepted authentication
 
@@ -224,7 +224,7 @@ const api = new sstk.EditorialApi();
 
 const id = "2018%2F10%2F15%2FWomen%20of%20the%20Year%20Lunch%20%26%20Awards%2C%20London"; // String | Editorial livefeed ID; must be an URI encoded string
 
-const country = "USA"; // String | Returns only if the livefeed is available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU
+const country = "USA"; // String | Returns only if the livefeed is available for distribution in a certain country
 
 
 api.getEditorialLivefeed(id, country)
@@ -243,7 +243,7 @@ api.getEditorialLivefeed(id, country)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Editorial livefeed ID; must be an URI encoded string 
- country (required) | String| Returns only if the livefeed is available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU 
+ country (required) | String| Returns only if the livefeed is available for distribution in a certain country 
 
 ### Accepted authentication
 
@@ -298,7 +298,7 @@ const api = new sstk.EditorialApi();
 
 const id = "2018%2F10%2F15%2FWomen%20of%20the%20Year%20Lunch%20%26%20Awards%2C%20London"; // String | Editorial livefeed ID; must be an URI encoded string
 
-const country = "USA"; // String | Returns only if the livefeed items are available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU
+const country = "USA"; // String | Returns only if the livefeed items are available for distribution in a certain country
 
 
 api.getEditorialLivefeedItems(id, country)
@@ -317,7 +317,7 @@ api.getEditorialLivefeedItems(id, country)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Editorial livefeed ID; must be an URI encoded string 
- country (required) | String| Returns only if the livefeed items are available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU 
+ country (required) | String| Returns only if the livefeed items are available for distribution in a certain country 
 
 ### Accepted authentication
 
@@ -504,11 +504,11 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.EditorialApi();
 
-const country = "USA"; // String | Returns only livefeeds that are available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU
+const country = "USA"; // String | Returns only livefeeds that are available for distribution in a certain country
 
 const queryParams = { 
   'page': 1, // Number | Page number
-  'per_page': 20 // Number | Number of results per page, defaults to 20
+  'per_page': 20 // Number | Number of results per page
 };
 
 api.getEditorialLivefeedList(country, queryParams)
@@ -526,9 +526,9 @@ api.getEditorialLivefeedList(country, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- country (required) | String| Returns only livefeeds that are available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU 
+ country (required) | String| Returns only livefeeds that are available for distribution in a certain country 
  page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 20, defaults to 20 
+ per_page | Number| Number of results per page, defaults to 20 
 
 ### Accepted authentication
 
@@ -618,15 +618,15 @@ editorialApi.getUpdatedImages(type, dateUpdatedStart, dateUpdatedEnd, country)
 Name | Type | Description
 ------------- | ------------- | -------------
  type (required) | String| Specify `addition` to return only images that were added or `edit` to return only images that were edited or deleted <br/><br/>Valid values: "edit", "addition"
- date_updated_start (required) | Date| Show images images added, edited, or deleted after the specified date, in RFC 3339 section 5.6 format, such as 2020-04-10T10:00:00Z 
- date_updated_end (required) | Date| Show images images added, edited, or deleted before the specified date, in RFC 3339 section 5.6 format, such as 2020-04-10T10:00:00Z 
- country (required) | String| Show only editorial content that is available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU 
- date_taken_start | String| Show images that were taken on or after the specified date, in the format YYYY-MM-DD; use this parameter if you want recently created images from the collection instead of updated older assets 
- date_taken_end | String| Show images that were taken before the specified date, in the format YYYY-MM-DD 
+ date_updated_start (required) | Date| Show images images added, edited, or deleted after the specified date 
+ date_updated_end (required) | Date| Show images images added, edited, or deleted before the specified date 
+ country (required) | String| Show only editorial content that is available for distribution in a certain country 
+ date_taken_start | String| Show images that were taken on or after the specified date; use this parameter if you want recently created images from the collection instead of updated older assets 
+ date_taken_end | String| Show images that were taken before the specified date 
  cursor | String| The cursor of the page with which to start fetching results; this cursor is returned from previous requests 
  sort | String| Sort by, defaults to newest <br/><br/>Valid values: "newest", "oldest"
  supplier_code | [String]| Show only editorial content from certain suppliers 
- per_page | Number| Number of results per page, defaults to 500, defaults to 500 
+ per_page | Number| Number of results per page, defaults to 500 
 
 ### Accepted authentication
 
@@ -946,14 +946,14 @@ editorialApi.searchEditorial(country, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- country (required) | String| Show only editorial content that is available for distribution in a certain country; specify with 3-letter ISO 3166-1 alpha-3 country code such as USA or DEU 
+ country (required) | String| Show only editorial content that is available for distribution in a certain country 
  query | String| One or more search terms separated by spaces 
  sort | String| Sort by, defaults to relevant <br/><br/>Valid values: "relevant", "newest", "oldest"
  category | String| Show editorial content within a certain editorial category; specify by category name 
  supplier_code | [String]| Show only editorial content from certain suppliers 
- date_start | Date| Show only editorial content generated on or after a specific date, in the format of YYYY-MM-DD 
- date_end | Date| Show only editorial content generated on or before a specific date, in the format of YYYY-MM-DD 
- per_page | Number| Number of results per page, defaults to 20, defaults to 20 
+ date_start | Date| Show only editorial content generated on or after a specific date 
+ date_end | Date| Show only editorial content generated on or before a specific date 
+ per_page | Number| Number of results per page, defaults to 20 
  cursor | String| The cursor of the page with which to start fetching results; this cursor is returned from previous requests 
 
 ### Accepted authentication
