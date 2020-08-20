@@ -280,6 +280,29 @@ imagesApi.licenseImages(body, queryParams)
 The SDK returns the same errors as the API.
 For information about errors, see [Errors](https://api-reference.shutterstock.com/#overview-errors) in the API reference.
 
+Handle errors in the `catch()` method following the SDK method.
+Each error includes a `response` object that includes an HTTP `status` field and a `text` field that has the description of the error.
+
+For example, this example requests an image ID that does not exist.
+The API returns the HTTP status code 404:
+
+```javascript
+const sstk = require("shutterstock-api");
+
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const imagesApi = new sstk.ImagesApi();
+
+imagesApi.getImage("123456789")
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error.response.status, error.response.text);
+    // 404 '{"message":"Not Found"}'
+  });
+```
+
 ## Contributing
 
 - This SDK is generated at [shutterstock/public-api-sdk-generator](https://github.com/shutterstock/public-api-sdk-generator), please make changes to SDK there.
