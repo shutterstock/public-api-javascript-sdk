@@ -618,8 +618,8 @@ editorialApi.getUpdatedImages(type, dateUpdatedStart, dateUpdatedEnd, country)
 Name | Type | Description
 ------------- | ------------- | -------------
  type (required) | String| Specify `addition` to return only images that were added or `edit` to return only images that were edited or deleted <br/><br/>Valid values: "edit", "addition"
- date_updated_start (required) | Date| Show images images added, edited, or deleted after the specified date 
- date_updated_end (required) | Date| Show images images added, edited, or deleted before the specified date 
+ date_updated_start (required) | Date| Show images images added, edited, or deleted after the specified date. Acceptable range is 1970-01-01T00:00:01 to 2038-01-19T00:00:00. 
+ date_updated_end (required) | Date| Show images images added, edited, or deleted before the specified date. Acceptable range is 1970-01-01T00:00:01 to 2038-01-19T00:00:00. 
  country (required) | String| Show only editorial content that is available for distribution in a certain country 
  date_taken_start | String| Show images that were taken on or after the specified date; use this parameter if you want recently created images from the collection instead of updated older assets 
  date_taken_end | String| Show images that were taken before the specified date 

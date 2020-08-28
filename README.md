@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.0.24
+- API version: 1.0.25
 
 ## References
 
@@ -377,6 +377,7 @@ Class | Method | HTTP request | Description
 *shutterstock-api.ImagesApi* | [**getImageLicenseList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getImageLicenseList) | **GET** /v2/images/licenses | List image licenses
 *shutterstock-api.ImagesApi* | [**getImageList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getImageList) | **GET** /v2/images | List images
 *shutterstock-api.ImagesApi* | [**getImageRecommendations**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getImageRecommendations) | **GET** /v2/images/recommendations | List recommended images
+*shutterstock-api.ImagesApi* | [**getImageSuggestions**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getImageSuggestions) | **GET** /v2/images/search/suggestions | Get suggestions for a search term
 *shutterstock-api.ImagesApi* | [**getLightbox**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getLightbox) | **GET** /v2/images/collections/{id} | Get the details of image collections
 *shutterstock-api.ImagesApi* | [**getLightboxItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getLightboxItems) | **GET** /v2/images/collections/{id}/items | Get the contents of image collections
 *shutterstock-api.ImagesApi* | [**getLightboxList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getLightboxList) | **GET** /v2/images/collections | List image collections
@@ -404,6 +405,7 @@ Class | Method | HTTP request | Description
 *shutterstock-api.VideosApi* | [**getVideoCategories**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getVideoCategories) | **GET** /v2/videos/categories | List video categories
 *shutterstock-api.VideosApi* | [**getVideoLicenseList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getVideoLicenseList) | **GET** /v2/videos/licenses | List video licenses
 *shutterstock-api.VideosApi* | [**getVideoList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getVideoList) | **GET** /v2/videos | List videos
+*shutterstock-api.VideosApi* | [**getVideoSuggestions**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getVideoSuggestions) | **GET** /v2/videos/search/suggestions | Get suggestions for a search term
 *shutterstock-api.VideosApi* | [**licenseVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#licenseVideos) | **POST** /v2/videos/licenses | License videos
 *shutterstock-api.VideosApi* | [**renameClipbox**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#renameClipbox) | **POST** /v2/videos/collections/{id} | Rename video collections
 *shutterstock-api.VideosApi* | [**searchVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#searchVideos) | **GET** /v2/videos/search | Search for videos

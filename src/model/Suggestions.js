@@ -25,7 +25,7 @@
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.MoodList = factory(root.ShutterstockApiReference.ApiClient);
+    root.ShutterstockApiReference.Suggestions = factory(root.ShutterstockApiReference.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,30 +34,29 @@
 
 
   /**
-   * The MoodList model module.
-   * @module model/MoodList
+   * The Suggestions model module.
+   * @module model/Suggestions
    * @version 1.0.25
    */
 
   /**
-   * Constructs a new <code>MoodList</code>.
-   * List of audio moods
-   * @alias module:model/MoodList
+   * Constructs a new <code>Suggestions</code>.
+   * List of search suggestions
+   * @alias module:model/Suggestions
    * @class
-   * @param data {Array.<String>} List of audio moods
    */
-  var exports = function(data) {
+  var exports = function() {
     var _this = this;
 
-    _this['data'] = data;
+
   };
 
   /**
-   * Constructs a <code>MoodList</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Suggestions</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/MoodList} obj Optional instance to populate.
-   * @return {module:model/MoodList} The populated <code>MoodList</code> instance.
+   * @param {module:model/Suggestions} obj Optional instance to populate.
+   * @return {module:model/Suggestions} The populated <code>Suggestions</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -71,7 +70,7 @@
   }
 
   /**
-   * List of audio moods
+   * Search suggestions
    * @member {Array.<String>} data
    */
   exports.prototype['data'] = undefined;

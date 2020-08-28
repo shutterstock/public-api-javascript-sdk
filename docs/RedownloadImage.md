@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 
 * `supersize` (value: `"supersize"`)
 
+* `vector` (value: `"vector"`)
+
 
 
 

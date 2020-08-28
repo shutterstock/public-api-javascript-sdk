@@ -24,6 +24,9 @@ This endpoint shows information about a single contributor, including contributo
 ```javascript
 const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
 // To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -51,7 +54,7 @@ Name | Type | Description
 
 ### Accepted authentication
 
-
+- [Basic](../README.md#Basic_authentication)
 - [OAuth](../README.md#OAuth_authentication) (No scope required.)
 
 ### HTTP request headers
@@ -102,6 +105,9 @@ This endpoint lists the IDs of items in a contributor's collection and the date 
 ```javascript
 const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
 // To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -140,7 +146,7 @@ Name | Type | Description
 
 ### Accepted authentication
 
-
+- [Basic](../README.md#Basic_authentication)
 - [OAuth](../README.md#OAuth_authentication) (No scope required.)
 
 ### HTTP request headers
@@ -184,6 +190,9 @@ This endpoint gets more detailed information about a contributor's collection, i
 ```javascript
 const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
 // To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -214,7 +223,7 @@ Name | Type | Description
 
 ### Accepted authentication
 
-
+- [Basic](../README.md#Basic_authentication)
 - [OAuth](../README.md#OAuth_authentication) (No scope required.)
 
 ### HTTP request headers
@@ -260,6 +269,9 @@ This endpoint lists collections based on contributor ID.
 ```javascript
 const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
 // To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -291,7 +303,7 @@ Name | Type | Description
 
 ### Accepted authentication
 
-
+- [Basic](../README.md#Basic_authentication)
 - [OAuth](../README.md#OAuth_authentication) (No scope required.)
 
 ### HTTP request headers
@@ -355,6 +367,9 @@ This endpoint lists information about one or more contributors, including contri
 ```javascript
 const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
 // To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -382,7 +397,7 @@ Name | Type | Description
 
 ### Accepted authentication
 
-
+- [Basic](../README.md#Basic_authentication)
 - [OAuth](../README.md#OAuth_authentication) (No scope required.)
 
 ### HTTP request headers

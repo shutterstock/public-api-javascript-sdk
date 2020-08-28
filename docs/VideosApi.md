@@ -18,6 +18,7 @@ Method | HTTP request | Description
 [`getVideoCategories`](VideosApi.md#getVideoCategories) | `GET /v2/videos/categories` | List video categories
 [`getVideoLicenseList`](VideosApi.md#getVideoLicenseList) | `GET /v2/videos/licenses` | List video licenses
 [`getVideoList`](VideosApi.md#getVideoList) | `GET /v2/videos` | List videos
+[`getVideoSuggestions`](VideosApi.md#getVideoSuggestions) | `GET /v2/videos/search/suggestions` | Get suggestions for a search term
 [`licenseVideos`](VideosApi.md#licenseVideos) | `POST /v2/videos/licenses` | License videos
 [`renameClipbox`](VideosApi.md#renameClipbox) | `POST /v2/videos/collections/{id}` | Rename video collections
 [`searchVideos`](VideosApi.md#searchVideos) | `GET /v2/videos/search` | Search for videos
@@ -1583,6 +1584,74 @@ Name | Type | Description
 }
 ```
 
+<a name="getVideoSuggestions"></a>
+# VideosApi.getVideoSuggestions
+> `Suggestions VideosApi.getVideoSuggestions(query, queryParams)`
+
+**Get suggestions for a search term**
+
+This endpoint provides autocomplete suggestions for partial search terms.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.VideosApi();
+
+const query = "cats"; // String | Search term for which you want keyword suggestions
+
+const queryParams = { 
+  'limit': 10 // Number | Limit the number of the suggestions
+};
+
+api.getVideoSuggestions(query, queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ query (required) | String| Search term for which you want keyword suggestions 
+ limit | Number| Limit the number of the suggestions, defaults to 10 
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[Suggestions](Suggestions.md)
+
+### Example response
+
+```
+{
+  "data" : [ "data", "data" ]
+}
+```
+
 <a name="licenseVideos"></a>
 # VideosApi.licenseVideos
 > `LicenseVideoResultDataList VideosApi.licenseVideos(body, queryParams)`
@@ -1818,7 +1887,7 @@ Name | Type | Description
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  people_age | String| Show videos that feature people of the specified age range <br/><br/>Valid values: "infants", "children", "teenagers", "20s", "30s", "40s", "50s", "60s", "older"
- people_ethnicity | String| Show videos with people of the specified ethnicity <br/><br/>Valid values: "african", "african_american", "black", "brazilian", "chinese", "caucasian", "east_asian", "hispanic", "japanese", "middle_eastern", "native_american", "pacific_islander", "south_asian", "southeast_asian", "other"
+ people_ethnicity | [String]| Show videos with people of the specified ethnicities <br/><br/>Valid values: "african", "african_american", "black", "brazilian", "chinese", "caucasian", "east_asian", "hispanic", "japanese", "middle_eastern", "native_american", "pacific_islander", "south_asian", "southeast_asian", "other"
  people_gender | String| Show videos with people with the specified gender <br/><br/>Valid values: "male", "female", "both"
  people_number | Number| Show videos with the specified number of people 
  people_model_released | Boolean| Show only videos of people with a signed model release 
