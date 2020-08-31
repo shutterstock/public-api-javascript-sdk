@@ -12,10 +12,6 @@ Name | Type | Description | Notes
 ## Enum: LicenseEnum
 
 
-* `audio_standard` (value: `"audio_standard"`)
-
-* `audio_enhanced` (value: `"audio_enhanced"`)
-
 * `audio_platform` (value: `"audio_platform"`)
 
 * `premier_music_basic` (value: `"premier_music_basic"`)

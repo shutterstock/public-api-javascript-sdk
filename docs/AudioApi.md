@@ -1145,7 +1145,7 @@ const body = {
   "audio": [
     {
       "audio_id": "446348",
-      "license": "premier_music_comp",
+      "license": "audio_platform",
       "metadata": {
         "customer_id": "12345"
       }
@@ -1170,7 +1170,7 @@ audioApi.licenseTrack(body)
 Name | Type | Description
 ------------- | ------------- | -------------
  body (required) | [LicenseAudioRequest](LicenseAudioRequest.md)| Tracks to license 
- license | String| License type, defaults to audio_standard <br/><br/>Valid values: "audio_standard", "audio_enhanced", "audio_platform", "premier_music_basic", "premier_music_extended", "premier_music_pro", "premier_music_comp"
+ license | String| License type <br/><br/>Valid values: "audio_platform", "premier_music_basic", "premier_music_extended", "premier_music_pro", "premier_music_comp"
  search_id | String| The ID of the search that led to licensing this track 
 
 ### Accepted authentication
