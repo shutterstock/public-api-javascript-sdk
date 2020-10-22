@@ -25,7 +25,7 @@
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.ComputerVisionImageCreateResponse = factory(root.ShutterstockApiReference.ApiClient);
+    root.ShutterstockApiReference.CustomSizeDimensions = factory(root.ShutterstockApiReference.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,46 +34,55 @@
 
 
   /**
-   * The ComputerVisionImageCreateResponse model module.
-   * @module model/ComputerVisionImageCreateResponse
+   * The CustomSizeDimensions model module.
+   * @module model/CustomSizeDimensions
    * @version 1.0.27
    */
 
   /**
-   * Constructs a new <code>ComputerVisionImageCreateResponse</code>.
-   * Asset upload information
-   * @alias module:model/ComputerVisionImageCreateResponse
+   * Constructs a new <code>CustomSizeDimensions</code>.
+   * A custom height or a custom width to resize the image to, but not both (experimental)
+   * @alias module:model/CustomSizeDimensions
    * @class
-   * @param upload_id {String} 
    */
-  var exports = function(upload_id) {
+  var exports = function() {
     var _this = this;
 
-    _this['upload_id'] = upload_id;
+
+
   };
 
   /**
-   * Constructs a <code>ComputerVisionImageCreateResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>CustomSizeDimensions</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ComputerVisionImageCreateResponse} obj Optional instance to populate.
-   * @return {module:model/ComputerVisionImageCreateResponse} The populated <code>ComputerVisionImageCreateResponse</code> instance.
+   * @param {module:model/CustomSizeDimensions} obj Optional instance to populate.
+   * @return {module:model/CustomSizeDimensions} The populated <code>CustomSizeDimensions</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('upload_id')) {
-        obj['upload_id'] = ApiClient.convertToType(data['upload_id'], 'String');
+      if (data.hasOwnProperty('height')) {
+        obj['height'] = ApiClient.convertToType(data['height'], 'Number');
+      }
+      if (data.hasOwnProperty('width')) {
+        obj['width'] = ApiClient.convertToType(data['width'], 'Number');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} upload_id
+   * Custom height to resize the image to
+   * @member {Number} height
    */
-  exports.prototype['upload_id'] = undefined;
+  exports.prototype['height'] = undefined;
+  /**
+   * Custom width to resize the image to
+   * @member {Number} width
+   */
+  exports.prototype['width'] = undefined;
 
 
 

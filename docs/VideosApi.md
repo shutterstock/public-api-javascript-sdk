@@ -1176,7 +1176,7 @@ Name | Type | Description
 
 **List video licenses**
 
-This endpoint lists existing licenses. You can filter the results according to the type of license or the video ID.
+This endpoint lists existing licenses.
 
 ### Example
 
@@ -1193,7 +1193,10 @@ const queryParams = {
   'license': "license_example", // String | Show videos that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license
   'page': 1, // Number | Page number
   'per_page': 20, // Number | Number of results per page
-  'sort': "newest" // String | Sort by oldest or newest videos first
+  'sort': "newest", // String | Sort by oldest or newest videos first
+  'username': "username_example", // String | Filter licenses by username of licensee
+  'start_date': new Date("2020-02-02T13:00-05:00"), // Date | Show licenses created on or after the specified date
+  'end_date': new Date("2020-02-02T13:00-05:00") // Date | Show licenses created before the specified date
 };
 
 api.getVideoLicenseList(queryParams)
@@ -1216,6 +1219,9 @@ Name | Type | Description
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  sort | String| Sort by oldest or newest videos first, defaults to newest <br/><br/>Valid values: "newest", "oldest"
+ username | String| Filter licenses by username of licensee 
+ start_date | Date| Show licenses created on or after the specified date 
+ end_date | Date| Show licenses created before the specified date 
 
 ### Accepted authentication
 

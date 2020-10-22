@@ -892,7 +892,7 @@ Name | Type | Description
 
 **List image licenses**
 
-This endpoint lists existing licenses. You can filter the results according to the type of license or the image ID.
+This endpoint lists existing licenses.
 
 ### Example
 
@@ -909,7 +909,10 @@ const queryParams = {
   'license': "license_example", // String | Show images that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license
   'page': 1, // Number | Page number
   'per_page': 20, // Number | Number of results per page
-  'sort': "newest" // String | Sort order
+  'sort': "newest", // String | Sort order
+  'username': "username_example", // String | Filter licenses by username of licensee
+  'start_date': new Date("2020-02-02T13:00-05:00"), // Date | Show licenses created on or after the specified date
+  'end_date': new Date("2020-02-02T13:00-05:00") // Date | Show licenses created before the specified date
 };
 
 api.getImageLicenseList(queryParams)
@@ -932,6 +935,9 @@ Name | Type | Description
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  sort | String| Sort order, defaults to newest <br/><br/>Valid values: "newest", "oldest"
+ username | String| Filter licenses by username of licensee 
+ start_date | Date| Show licenses created on or after the specified date 
+ end_date | Date| Show licenses created before the specified date 
 
 ### Accepted authentication
 
@@ -2292,7 +2298,7 @@ Name | Type | Description
  body (required) | [LicenseImageRequest](LicenseImageRequest.md)| List of images to request licenses for and information about each license transaction; these values override the defaults in the query parameters 
  subscription_id | String| Subscription ID to use to license the image 
  format | String| Image format, defaults to jpg <br/><br/>Valid values: "eps", "jpg"
- size | String| Image size, defaults to huge <br/><br/>Valid values: "small", "medium", "huge", "vector"
+ size | String| Image size, defaults to huge <br/><br/>Valid values: "small", "medium", "huge", "vector", "custom"
  search_id | String| Search ID that was provided in the results of an image search 
 
 ### Accepted authentication
