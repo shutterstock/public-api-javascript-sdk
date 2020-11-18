@@ -278,7 +278,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const audioApi = new sstk.AudioApi();
 
-const licenseId = "i1188641348"; // license ID, not track ID
+const licenseId = "e123"; // license ID, not track ID
 
 audioApi.downloadTracks(licenseId)
   .then((data) => {
@@ -1002,7 +1002,7 @@ Name | Type | Description
   "title" : "Another Tomorrow",
   "updated_time" : "2016-08-18T17:59:33-04:00",
   "vocal_description" : "",
-  "url" : "https://www.shutterstock.com/music/track/another-tomorrow/442583"
+  "url" : ""
 }
 ```
 
@@ -1391,7 +1391,7 @@ Name | Type | Description
     "title" : "Another Tomorrow",
     "updated_time" : "2016-08-18T17:59:33-04:00",
     "vocal_description" : "",
-    "url" : "https://www.shutterstock.com/music/track/another-tomorrow/442583"
+    "url" : ""
   }, {
     "added_date" : "2016-08-16",
     "album" : {
@@ -1442,7 +1442,7 @@ Name | Type | Description
     "title" : "Another Tomorrow",
     "updated_time" : "2016-08-18T17:59:33-04:00",
     "vocal_description" : "",
-    "url" : "https://www.shutterstock.com/music/track/another-tomorrow/442583"
+    "url" : ""
   } ],
   "total_count" : 1,
   "page" : 0,

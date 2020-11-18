@@ -5,7 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **huge_jpg** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
 **huge_thumb** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
-**huge_tiff** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
 **large_thumb** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
 **medium_jpg** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
 **preview** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
@@ -14,7 +13,6 @@ Name | Type | Description | Notes
 **small_jpg** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
 **small_thumb** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
 **supersize_jpg** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
-**supersize_tiff** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
 **vector_eps** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
 
 

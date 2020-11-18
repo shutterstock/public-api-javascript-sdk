@@ -273,7 +273,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const imagesApi = new sstk.ImagesApi();
 
-const licenseId = "i1188641347"; // license ID, not image ID
+const licenseId = "e123"; // license ID, not image ID
 
 const body = {
   "size": "huge"
@@ -690,38 +690,6 @@ Name | Type | Description
       "url" : "url",
       "height" : 2
     },
-    "small_thumb" : {
-      "width" : 7,
-      "url" : "url",
-      "height" : 2
-    },
-    "huge_tiff" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "width" : 5,
-      "display_name" : "display_name",
-      "dpi" : 6,
-      "file_size" : 1,
-      "height" : 5
-    },
-    "medium_jpg" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "width" : 5,
-      "display_name" : "display_name",
-      "dpi" : 6,
-      "file_size" : 1,
-      "height" : 5
-    },
-    "small_jpg" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "width" : 5,
-      "display_name" : "display_name",
-      "dpi" : 6,
-      "file_size" : 1,
-      "height" : 5
-    },
     "supersize_jpg" : {
       "is_licensable" : true,
       "format" : "format",
@@ -732,6 +700,11 @@ Name | Type | Description
       "height" : 5
     },
     "preview_1000" : {
+      "width" : 7,
+      "url" : "url",
+      "height" : 2
+    },
+    "small_thumb" : {
       "width" : 7,
       "url" : "url",
       "height" : 2
@@ -760,7 +733,16 @@ Name | Type | Description
       "url" : "url",
       "height" : 2
     },
-    "supersize_tiff" : {
+    "medium_jpg" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "width" : 5,
+      "display_name" : "display_name",
+      "dpi" : 6,
+      "file_size" : 1,
+      "height" : 5
+    },
+    "small_jpg" : {
       "is_licensable" : true,
       "format" : "format",
       "width" : 5,
@@ -1134,38 +1116,6 @@ Name | Type | Description
         "url" : "url",
         "height" : 2
       },
-      "small_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "huge_tiff" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "medium_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "small_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
       "supersize_jpg" : {
         "is_licensable" : true,
         "format" : "format",
@@ -1176,6 +1126,11 @@ Name | Type | Description
         "height" : 5
       },
       "preview_1000" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
+      },
+      "small_thumb" : {
         "width" : 7,
         "url" : "url",
         "height" : 2
@@ -1204,7 +1159,16 @@ Name | Type | Description
         "url" : "url",
         "height" : 2
       },
-      "supersize_tiff" : {
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
+      },
+      "small_jpg" : {
         "is_licensable" : true,
         "format" : "format",
         "width" : 5,
@@ -1265,38 +1229,6 @@ Name | Type | Description
         "url" : "url",
         "height" : 2
       },
-      "small_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "huge_tiff" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "medium_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "small_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
       "supersize_jpg" : {
         "is_licensable" : true,
         "format" : "format",
@@ -1307,6 +1239,11 @@ Name | Type | Description
         "height" : 5
       },
       "preview_1000" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
+      },
+      "small_thumb" : {
         "width" : 7,
         "url" : "url",
         "height" : 2
@@ -1335,7 +1272,16 @@ Name | Type | Description
         "url" : "url",
         "height" : 2
       },
-      "supersize_tiff" : {
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
+      },
+      "small_jpg" : {
         "is_licensable" : true,
         "format" : "format",
         "width" : 5,
@@ -1907,38 +1853,6 @@ Name | Type | Description
         "url" : "url",
         "height" : 2
       },
-      "small_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "huge_tiff" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "medium_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "small_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
       "supersize_jpg" : {
         "is_licensable" : true,
         "format" : "format",
@@ -1949,6 +1863,11 @@ Name | Type | Description
         "height" : 5
       },
       "preview_1000" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
+      },
+      "small_thumb" : {
         "width" : 7,
         "url" : "url",
         "height" : 2
@@ -1977,7 +1896,16 @@ Name | Type | Description
         "url" : "url",
         "height" : 2
       },
-      "supersize_tiff" : {
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
+      },
+      "small_jpg" : {
         "is_licensable" : true,
         "format" : "format",
         "width" : 5,
@@ -2038,38 +1966,6 @@ Name | Type | Description
         "url" : "url",
         "height" : 2
       },
-      "small_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "huge_tiff" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "medium_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "small_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
       "supersize_jpg" : {
         "is_licensable" : true,
         "format" : "format",
@@ -2080,6 +1976,11 @@ Name | Type | Description
         "height" : 5
       },
       "preview_1000" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
+      },
+      "small_thumb" : {
         "width" : 7,
         "url" : "url",
         "height" : 2
@@ -2108,7 +2009,16 @@ Name | Type | Description
         "url" : "url",
         "height" : 2
       },
-      "supersize_tiff" : {
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
+      },
+      "small_jpg" : {
         "is_licensable" : true,
         "format" : "format",
         "width" : 5,
@@ -2478,6 +2388,7 @@ Name | Type | Description
  height_from | Number| Show images with the specified height or larger, in pixels 
  height_to | Number| Show images with the specified height or smaller, in pixels 
  image_type | [String]| Show images of the specified type <br/><br/>Valid values: "photo", "illustration", "vector"
+ keyword_safe_search | Boolean| Hide results with potentially unsafe keywords, defaults to true 
  language | String| Set query and result language (uses Accept-Language header if not set) <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
  license | [String]| Show only images with the specified license <br/><br/>Valid values: "commercial", "editorial", "enhanced", "sensitive", "NOT enhanced", "NOT sensitive"
  model | [String]| Show image results with the specified model IDs 
@@ -2546,38 +2457,6 @@ Name | Type | Description
         "url" : "url",
         "height" : 2
       },
-      "small_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "huge_tiff" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "medium_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "small_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
       "supersize_jpg" : {
         "is_licensable" : true,
         "format" : "format",
@@ -2588,6 +2467,11 @@ Name | Type | Description
         "height" : 5
       },
       "preview_1000" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
+      },
+      "small_thumb" : {
         "width" : 7,
         "url" : "url",
         "height" : 2
@@ -2616,7 +2500,16 @@ Name | Type | Description
         "url" : "url",
         "height" : 2
       },
-      "supersize_tiff" : {
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
+      },
+      "small_jpg" : {
         "is_licensable" : true,
         "format" : "format",
         "width" : 5,
@@ -2677,38 +2570,6 @@ Name | Type | Description
         "url" : "url",
         "height" : 2
       },
-      "small_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "huge_tiff" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "medium_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "small_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
       "supersize_jpg" : {
         "is_licensable" : true,
         "format" : "format",
@@ -2719,6 +2580,11 @@ Name | Type | Description
         "height" : 5
       },
       "preview_1000" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
+      },
+      "small_thumb" : {
         "width" : 7,
         "url" : "url",
         "height" : 2
@@ -2747,7 +2613,16 @@ Name | Type | Description
         "url" : "url",
         "height" : 2
       },
-      "supersize_tiff" : {
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
+      },
+      "small_jpg" : {
         "is_licensable" : true,
         "format" : "format",
         "width" : 5,
