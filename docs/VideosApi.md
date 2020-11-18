@@ -277,7 +277,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const videosApi = new sstk.VideosApi();
 
-const licenseId = "e123";
+const licenseId = "i1188641347";
 
 const body = {};
 
@@ -1887,7 +1887,6 @@ Name | Type | Description
  fps | Number| (Deprecated; use fps_from and fps_to instead) Show videos with the specified frames per second 
  fps_from | Number| Show videos with the specified frames per second or more 
  fps_to | Number| Show videos with the specified frames per second or fewer 
- keyword_safe_search | Boolean| Hide results with potentially unsafe keywords, defaults to true 
  language | String| Set query and result language (uses Accept-Language header if not set) <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
  license | [String]| Show only videos with the specified license or licenses <br/><br/>Valid values: "commercial", "editorial"
  model | [String]| Show videos with each of the specified models 

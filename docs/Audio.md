@@ -33,6 +33,6 @@ Name | Type | Description | Notes
 **title** | **String** | Title of this track | [optional] 
 **updated_time** | **Date** | Time this track was last updated | [optional] 
 **vocal_description** | **String** | Vocal description of this track | [optional] 
-**url** | **String** |  | [optional] 
+**url** | **String** | Link to track information page; included only for certain accounts | [optional] 
 
 
