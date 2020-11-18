@@ -203,6 +203,7 @@ This endpoint does not accept any parameters.
       "description" : "description"
     } ],
     "expiration_time" : "2000-01-23T04:56:07.000+00:00",
+    "asset_type" : "asset_type",
     "allotment" : {
       "start_time" : "2000-01-23T04:56:07.000+00:00",
       "downloads_left" : 0,
@@ -232,6 +233,7 @@ This endpoint does not accept any parameters.
       "description" : "description"
     } ],
     "expiration_time" : "2000-01-23T04:56:07.000+00:00",
+    "asset_type" : "asset_type",
     "allotment" : {
       "start_time" : "2000-01-23T04:56:07.000+00:00",
       "downloads_left" : 0,

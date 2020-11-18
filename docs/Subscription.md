@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **formats** | [**[LicenseFormat]**](LicenseFormat.md) | List of formats that are licensable for the subscription | [optional] 
 **id** | **String** | Unique internal identifier for the subscription | 
 **license** | **String** | Internal identifier for the type of subscription | [optional] 
+**asset_type** | **String** | Identifier for the type of assets associated with this subscription (images, videos, audio, editorial) | [optional] 
 **metadata** | [**SubscriptionMetadata**](SubscriptionMetadata.md) |  | [optional] 
 **price_per_download** | [**Price**](Price.md) |  | [optional] 
 
