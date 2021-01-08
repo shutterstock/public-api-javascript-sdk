@@ -910,7 +910,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.AudioApi();
 
-const id = "442583"; // String | Audio track ID
+const id = 442583; // Number | Audio track ID
 
 const queryParams = { 
   'view': "full" // String | Amount of detail to render in the response
@@ -931,7 +931,7 @@ api.getTrack(id, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | String| Audio track ID 
+ id (required) | Number| Audio track ID 
  view | String| Amount of detail to render in the response, defaults to full <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication

@@ -136,7 +136,7 @@ computerVisionApi.uploadImage(body)
 Name | Type | Description
 ------------- | ------------- | -------------
  asset_id (required) | String| The asset ID or upload ID to find similar images for 
- license | [String]| Show only images with the specified license <br/><br/>Valid values: "commercial", "editorial", "enhanced", "sensitive", "NOT enhanced", "NOT sensitive"
+ license | [String]| Show only images with the specified license <br/><br/>Valid values: "commercial", "editorial"
  safe | Boolean| Enable or disable safe search, defaults to true 
  language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
  page | Number| Page number, defaults to 1 
@@ -441,7 +441,7 @@ computerVisionApi.uploadImage(body)
 Name | Type | Description
 ------------- | ------------- | -------------
  asset_id (required) | String| The asset ID or upload ID to find similar videos for 
- license | [String]| Show only videos with the specified license <br/><br/>Valid values: "commercial", "editorial", "enhanced", "sensitive", "NOT enhanced", "NOT sensitive"
+ license | [String]| Show only videos with the specified license <br/><br/>Valid values: "commercial", "editorial"
  safe | Boolean| Enable or disable safe search, defaults to true 
  language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
  page | Number| Page number, defaults to 1 
@@ -649,7 +649,8 @@ Name | Type | Description
   } ],
   "total_count" : 3,
   "page" : 7,
-  "message" : "message"
+  "message" : "message",
+  "search_id" : "search_id"
 }
 ```
 

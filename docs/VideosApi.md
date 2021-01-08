@@ -829,7 +829,8 @@ Name | Type | Description
   } ],
   "total_count" : 3,
   "page" : 7,
-  "message" : "message"
+  "message" : "message",
+  "search_id" : "search_id"
 }
 ```
 
@@ -2105,7 +2106,8 @@ Name | Type | Description
   } ],
   "total_count" : 3,
   "page" : 7,
-  "message" : "message"
+  "message" : "message",
+  "search_id" : "search_id"
 }
 ```
 

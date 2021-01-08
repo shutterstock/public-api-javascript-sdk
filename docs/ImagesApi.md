@@ -24,6 +24,7 @@ Method | HTTP request | Description
 [`getSimilarImages`](ImagesApi.md#getSimilarImages) | `GET /v2/images/{id}/similar` | List similar images
 [`getUpdatedImages`](ImagesApi.md#getUpdatedImages) | `GET /v2/images/updated` | List updated images
 [`licenseImages`](ImagesApi.md#licenseImages) | `POST /v2/images/licenses` | License images
+[`postImageEntities`](ImagesApi.md#postImageEntities) | `POST /v2/images/search/suggestions` | Get keywords from text
 [`renameLightbox`](ImagesApi.md#renameLightbox) | `POST /v2/images/collections/{id}` | Rename image collections
 [`searchImages`](ImagesApi.md#searchImages) | `GET /v2/images/search` | Search for images
 
@@ -2277,6 +2278,68 @@ Required scopes:
 }
 ```
 
+<a name="postImageEntities"></a>
+# ImagesApi.postImageEntities
+> `SearchEntitiesResponse ImagesApi.postImageEntities(body)`
+
+**Get keywords from text**
+
+This endpoint returns up to 10 important keywords from a block of plain text.
+
+### Example
+
+```javascript
+const sstk = require("shutterstock-api");
+
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const imagesApi = new sstk.ImagesApi();
+
+const body = {
+  "text": "The beach is a wonderful place to visit. It has beautiful sand and ocean waves."
+};
+
+imagesApi.postImageEntities(body)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ body (required) | [SearchEntitiesRequest](SearchEntitiesRequest.md)| Plain text to extract keywords from 
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+- Content-Type: application/json
+- Accept: application/json
+
+### Return type
+
+[SearchEntitiesResponse](SearchEntitiesResponse.md)
+
+### Example response
+
+```
+{
+  "keywords" : [ "beach", "place", "sand", "ocean" ]
+}
+```
+
 <a name="renameLightbox"></a>
 # ImagesApi.renameLightbox
 > `ImagesApi.renameLightbox(id, body)`
@@ -2390,7 +2453,7 @@ Name | Type | Description
  image_type | [String]| Show images of the specified type <br/><br/>Valid values: "photo", "illustration", "vector"
  keyword_safe_search | Boolean| Hide results with potentially unsafe keywords, defaults to true 
  language | String| Set query and result language (uses Accept-Language header if not set) <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
- license | [String]| Show only images with the specified license <br/><br/>Valid values: "commercial", "editorial", "enhanced", "sensitive", "NOT enhanced", "NOT sensitive"
+ license | [String]| Show only images with the specified license <br/><br/>Valid values: "commercial", "editorial", "enhanced"
  model | [String]| Show image results with the specified model IDs 
  orientation | String| Show image results with horizontal or vertical orientation <br/><br/>Valid values: "horizontal", "vertical"
  page | Number| Page number, defaults to 1 
