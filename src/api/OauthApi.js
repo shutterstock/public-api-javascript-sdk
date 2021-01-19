@@ -50,6 +50,7 @@
 
     /**
      * Authorize applications
+<<<<<<< HEAD
      * This endpoint returns a redirect URI (in the &#39;Location&#39; header) that the customer uses to authorize your application and, together with POST /v2/oauth/access_token, generate an access token that represents that authorization.
      * @param {String} client_id Client ID (Consumer Key) of your application
      * @param {String} redirect_uri The callback URI to send the request to after authorization; must use a host name that is registered with your application
@@ -61,6 +62,19 @@
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     this.authorizeWithHttpInfo = function() {
+=======
+     * This endpoint returns a redirect URI (in the 'Location' header) that the customer uses to authorize your application and, together with POST /v2/oauth/access_token, generate an access token that represents that authorization.
+     * @param {String} client_id Client ID (Consumer Key) of your application
+     * @param {String} redirect_uri The callback URI to send the request to after authorization; must use a host name that is registered with your application
+     * @param {module:model/String} response_type Type of temporary authorization code that will be used to generate an access code; the only valid value is 'code'
+     * @param {String} state Unique value used by the calling app to verify the request
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.realm User type to be authorized (usually 'customer') (default to customer)
+     * @param {String} opts.scope Space-separated list of scopes to be authorized (default to user.view)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    this.authorizeWithHttpInfo = function(client_id, redirect_uri, response_type, state, opts) {
+>>>>>>> 290f8911b8002fc0f72ec08e0a21c3610890ae9d
       opts = opts || {};
       var postBody = null;
 
@@ -116,6 +130,7 @@
 
     /**
      * Authorize applications
+<<<<<<< HEAD
      * This endpoint returns a redirect URI (in the &#39;Location&#39; header) that the customer uses to authorize your application and, together with POST /v2/oauth/access_token, generate an access token that represents that authorization.
      * @param {String} client_id Client ID (Consumer Key) of your application
      * @param {String} redirect_uri The callback URI to send the request to after authorization; must use a host name that is registered with your application
@@ -128,6 +143,20 @@
      */
     this.authorize = function() {
       return this.authorizeWithHttpInfo()
+=======
+     * This endpoint returns a redirect URI (in the 'Location' header) that the customer uses to authorize your application and, together with POST /v2/oauth/access_token, generate an access token that represents that authorization.
+     * @param {String} client_id Client ID (Consumer Key) of your application
+     * @param {String} redirect_uri The callback URI to send the request to after authorization; must use a host name that is registered with your application
+     * @param {module:model/String} response_type Type of temporary authorization code that will be used to generate an access code; the only valid value is 'code'
+     * @param {String} state Unique value used by the calling app to verify the request
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.realm User type to be authorized (usually 'customer') (default to customer)
+     * @param {String} opts.scope Space-separated list of scopes to be authorized (default to user.view)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    this.authorize = function(client_id, redirect_uri, response_type, state, opts) {
+      return this.authorizeWithHttpInfo(client_id, redirect_uri, response_type, state, opts)
+>>>>>>> 290f8911b8002fc0f72ec08e0a21c3610890ae9d
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -140,9 +169,15 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.client_id Client ID (Consumer Key) of your application
      * @param {String} opts.client_secret Client Secret (Consumer Secret) of your application
+<<<<<<< HEAD
      * @param {String} opts.code Response code from the /oauth/authorize flow; required if grant_type&#x3D;authorization_code
      * @param {module:model/String} opts.grant_type Grant type: authorization_code generates user tokens, client_credentials generates short-lived client grants
      * @param {module:model/String} opts.realm User type to be authorized (usually &#39;customer&#39;) (default to customer)
+=======
+     * @param {String} opts.code Response code from the /oauth/authorize flow; required if grant_type=authorization_code
+     * @param {module:model/String} opts.grant_type Grant type: authorization_code generates user tokens, client_credentials generates short-lived client grants
+     * @param {module:model/String} opts.realm User type to be authorized (usually 'customer') (default to customer)
+>>>>>>> 290f8911b8002fc0f72ec08e0a21c3610890ae9d
      * @param {module:model/String} opts.expires Whether or not the token expires, expiring tokens come with a refresh_token to renew the access_token (default to false)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OauthAccessTokenResponse} and HTTP response
      */
@@ -186,9 +221,15 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.client_id Client ID (Consumer Key) of your application
      * @param {String} opts.client_secret Client Secret (Consumer Secret) of your application
+<<<<<<< HEAD
      * @param {String} opts.code Response code from the /oauth/authorize flow; required if grant_type&#x3D;authorization_code
      * @param {module:model/String} opts.grant_type Grant type: authorization_code generates user tokens, client_credentials generates short-lived client grants
      * @param {module:model/String} opts.realm User type to be authorized (usually &#39;customer&#39;) (default to customer)
+=======
+     * @param {String} opts.code Response code from the /oauth/authorize flow; required if grant_type=authorization_code
+     * @param {module:model/String} opts.grant_type Grant type: authorization_code generates user tokens, client_credentials generates short-lived client grants
+     * @param {module:model/String} opts.realm User type to be authorized (usually 'customer') (default to customer)
+>>>>>>> 290f8911b8002fc0f72ec08e0a21c3610890ae9d
      * @param {module:model/String} opts.expires Whether or not the token expires, expiring tokens come with a refresh_token to renew the access_token (default to false)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OauthAccessTokenResponse}
      */
