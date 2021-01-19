@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.0.30
+- API version: 1.0.31
 
 ## References
 
@@ -136,8 +136,8 @@ You can see the scopes that each method requires in the reference information fo
 The following list shows the available scopes.
 
 - licenses.create: Grant the ability to download and license media on behalf of the user.
-- purchases.view: Grant read-only access to a user's purchase history.
-- licenses.view: Grant read-only access to a user's licenses.
+- purchases.view: Grant read-only access to a user&#39;s purchase history.
+- licenses.view: Grant read-only access to a user&#39;s licenses.
 - collections.edit: Grant the ability to create new collections, edit a collection, and modify the contents of a collection
 - collections.view: Grant read-only access to a collection and its contents.
 
@@ -352,9 +352,9 @@ Class | Method | HTTP request | Description
 *shutterstock-api.ComputerVisionApi* | [**uploadEphemeralImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#uploadEphemeralImage) | **POST** /v2/images | Upload ephemeral images
 *shutterstock-api.ComputerVisionApi* | [**uploadImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#uploadImage) | **POST** /v2/cv/images | Upload images
 *shutterstock-api.ContributorsApi* | [**getContributor**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributor) | **GET** /v2/contributors/{contributor_id} | Get details about a single contributor
-*shutterstock-api.ContributorsApi* | [**getContributorCollectionItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorCollectionItems) | **GET** /v2/contributors/{contributor_id}/collections/{id}/items | Get the items in contributors' collections
-*shutterstock-api.ContributorsApi* | [**getContributorCollections**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorCollections) | **GET** /v2/contributors/{contributor_id}/collections/{id} | Get details about contributors' collections
-*shutterstock-api.ContributorsApi* | [**getContributorCollectionsList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorCollectionsList) | **GET** /v2/contributors/{contributor_id}/collections | List contributors' collections
+*shutterstock-api.ContributorsApi* | [**getContributorCollectionItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorCollectionItems) | **GET** /v2/contributors/{contributor_id}/collections/{id}/items | Get the items in contributors&#39; collections
+*shutterstock-api.ContributorsApi* | [**getContributorCollections**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorCollections) | **GET** /v2/contributors/{contributor_id}/collections/{id} | Get details about contributors&#39; collections
+*shutterstock-api.ContributorsApi* | [**getContributorCollectionsList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorCollectionsList) | **GET** /v2/contributors/{contributor_id}/collections | List contributors&#39; collections
 *shutterstock-api.ContributorsApi* | [**getContributorList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorList) | **GET** /v2/contributors | Get details about multiple contributors
 *shutterstock-api.EditorialImagesApi* | [**getEditorialCategories**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#getEditorialCategories) | **GET** /v2/editorial/categories | (Deprecated) List editorial categories
 *shutterstock-api.EditorialImagesApi* | [**getEditorialImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#getEditorialImage) | **GET** /v2/editorial/{id} | (Deprecated) Get editorial content details
@@ -399,6 +399,8 @@ Class | Method | HTTP request | Description
 *shutterstock-api.ImagesApi* | [**postImageEntities**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#postImageEntities) | **POST** /v2/images/search/suggestions | Get keywords from text
 *shutterstock-api.ImagesApi* | [**renameLightbox**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#renameLightbox) | **POST** /v2/images/collections/{id} | Rename image collections
 *shutterstock-api.ImagesApi* | [**searchImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#searchImages) | **GET** /v2/images/search | Search for images
+*shutterstock-api.OauthApi* | [**authorize**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/OauthApi.md#authorize) | **GET** /v2/oauth/authorize | Authorize applications
+*shutterstock-api.OauthApi* | [**createAccessToken**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/OauthApi.md#createAccessToken) | **POST** /v2/oauth/access_token | Get access tokens
 *shutterstock-api.TestApi* | [**echo**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/TestApi.md#echo) | **GET** /v2/test | Echo text
 *shutterstock-api.TestApi* | [**validate**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/TestApi.md#validate) | **GET** /v2/test/validate | Validate input
 *shutterstock-api.UsersApi* | [**getAccessToken**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/UsersApi.md#getAccessToken) | **GET** /v2/user/access_token | Get access token details
