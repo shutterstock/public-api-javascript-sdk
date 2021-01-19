@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.0.30
+- API version: 1.0.31
 
 ## References
 
@@ -399,6 +399,8 @@ Class | Method | HTTP request | Description
 *shutterstock-api.ImagesApi* | [**postImageEntities**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#postImageEntities) | **POST** /v2/images/search/suggestions | Get keywords from text
 *shutterstock-api.ImagesApi* | [**renameLightbox**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#renameLightbox) | **POST** /v2/images/collections/{id} | Rename image collections
 *shutterstock-api.ImagesApi* | [**searchImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#searchImages) | **GET** /v2/images/search | Search for images
+*shutterstock-api.OauthApi* | [**authorize**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/OauthApi.md#authorize) | **GET** /v2/oauth/authorize | Authorize applications
+*shutterstock-api.OauthApi* | [**createAccessToken**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/OauthApi.md#createAccessToken) | **POST** /v2/oauth/access_token | Get access tokens
 *shutterstock-api.TestApi* | [**echo**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/TestApi.md#echo) | **GET** /v2/test | Echo text
 *shutterstock-api.TestApi* | [**validate**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/TestApi.md#validate) | **GET** /v2/test/validate | Validate input
 *shutterstock-api.UsersApi* | [**getAccessToken**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/UsersApi.md#getAccessToken) | **GET** /v2/user/access_token | Get access token details
