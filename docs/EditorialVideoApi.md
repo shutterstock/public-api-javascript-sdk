@@ -155,7 +155,7 @@ Name | Type | Description
  query | String| One or more search terms separated by spaces 
  sort | String| Sort by, defaults to relevant <br/><br/>Valid values: "relevant", "newest", "oldest"
  category | String| Show editorial video content within a certain editorial category; specify by category name 
- supplier_code | [String]| Show only editorial video content from certain suppliers 
+ supplier_code | [[String]](String.md)| Show only editorial video content from certain suppliers 
  date_start | Date| Show only editorial video content generated on or after a specific date 
  date_end | Date| Show only editorial video content generated on or before a specific date 
  resolution | String| Show only editorial video content with specific resolution <br/><br/>Valid values: "4k", "high_definition", "standard_definition"

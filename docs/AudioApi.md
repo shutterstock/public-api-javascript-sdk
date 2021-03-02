@@ -241,7 +241,7 @@ audioApi.deleteSoundboxItems(collectionId, tracksToRemove)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
- item_id | [String]| One or more item IDs to remove from the collection 
+ item_id | [[String]](String.md)| One or more item IDs to remove from the collection 
 
 ### Accepted authentication
 
@@ -1048,7 +1048,7 @@ api.getTrackList(id, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | [String]| One or more audio IDs 
+ id (required) | [[String]](String.md)| One or more audio IDs 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication
@@ -1299,17 +1299,17 @@ audioApi.searchAudio(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- artists | [String]| Show tracks with one of the specified artist names or IDs 
+ artists | [[String]](String.md)| Show tracks with one of the specified artist names or IDs 
  bpm | Number| (Deprecated; use bpm_from and bpm_to instead) Show tracks with the specified beats per minute 
  bpm_from | Number| Show tracks with the specified beats per minute or faster 
  bpm_to | Number| Show tracks with the specified beats per minute or slower 
  duration | Number| Show tracks with the specified duration in seconds 
  duration_from | Number| Show tracks with the specified duration or longer in seconds 
  duration_to | Number| Show tracks with the specified duration or shorter in seconds 
- genre | [String]| Show tracks with each of the specified genres; to get the list of genres, use `GET /v2/audio/genres` 
+ genre | [[String]](String.md)| Show tracks with each of the specified genres; to get the list of genres, use `GET /v2/audio/genres` 
  is_instrumental | Boolean| Show instrumental music only 
- instruments | [String]| Show tracks with each of the specified instruments; to get the list of instruments, use `GET /v2/audio/instruments` 
- moods | [String]| Show tracks with each of the specified moods; to get the list of moods, use `GET /v2/audio/moods` 
+ instruments | [[String]](String.md)| Show tracks with each of the specified instruments; to get the list of instruments, use `GET /v2/audio/instruments` 
+ moods | [[String]](String.md)| Show tracks with each of the specified moods; to get the list of moods, use `GET /v2/audio/moods` 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  query | String| One or more search terms separated by spaces 

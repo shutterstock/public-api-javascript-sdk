@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **added_date** | **Date** | Date that the image was added by the contributor | [optional] 
 **affiliate_url** | **String** | Affiliate referral link; appears only for registered affiliate partners | [optional] 
-**aspect** | **Number** | Aspect ratio of the image | [optional] 
+**aspect** | **Number** | Aspect ratio of the image in decimal format, such as 0.6667 | [optional] 
 **assets** | [**ImageAssets**](ImageAssets.md) | Image asset information | [optional] 
 **categories** | [**[Category]**](Category.md) | Categories that this image is a part of | [optional] 
 **contributor** | [**Contributor**](Contributor.md) |  | 

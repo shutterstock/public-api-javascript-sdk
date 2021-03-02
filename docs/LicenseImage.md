@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **format** | **String** | Image format to download | [optional] 
 **image_id** | **String** | Image ID | 
 **metadata** | [**LicenseRequestMetadata**](LicenseRequestMetadata.md) |  | [optional] 
-**price** | **Number** | For revenue-sharing transactions, the final cost to the end customer | [optional] 
+**price** | **Number** | For revenue-sharing transactions, the final cost to the end customer as a floating-point number in the transaction currency, such as 12.34 | [optional] 
 **search_id** | **String** | ID of the search that led to this licensing transaction | [optional] 
 **show_modal** | **Boolean** | (Deprecated) | [optional] 
 **size** | **String** | Image size to download | [optional] 

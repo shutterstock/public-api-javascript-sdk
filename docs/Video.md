@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **added_date** | **Date** | Date this video was added to the Shutterstock library | [optional] 
 **affiliate_url** | **String** | Affiliate referral link; appears only for registered affiliate partners | [optional] 
-**aspect** | **Number** | Aspect ratio of this video in decimal format | [optional] 
-**aspect_ratio** | **String** | Aspect ratio of the video | [optional] 
+**aspect** | **Number** | Aspect ratio of this video in decimal format, such as 0.6667 | [optional] 
+**aspect_ratio** | **String** | Aspect ratio of the video as a ratio, such as 16:9 | [optional] 
 **assets** | [**VideoAssets**](VideoAssets.md) |  | [optional] 
 **categories** | [**[Category]**](Category.md) | List of categories | [optional] 
 **contributor** | [**Contributor**](Contributor.md) |  | 

@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [`getEditorialLivefeedImagesList`](EditorialImagesApi.md#getEditorialLivefeedImagesList) | `GET /v2/editorial/images/livefeeds` | Get editorial livefeed list
 [`getEditorialLivefeedItems`](EditorialImagesApi.md#getEditorialLivefeedItems) | `GET /v2/editorial/livefeeds/{id}/items` | (Deprecated) Get editorial livefeed items
 [`getEditorialLivefeedList`](EditorialImagesApi.md#getEditorialLivefeedList) | `GET /v2/editorial/livefeeds` | (Deprecated) Get editorial livefeed list
+[`getUpdatedEditorialImages`](EditorialImagesApi.md#getUpdatedEditorialImages) | `GET /v2/editorial/images/updated` | List updated content
 [`getUpdatedImages`](EditorialImagesApi.md#getUpdatedImages) | `GET /v2/editorial/updated` | (Deprecated) List updated content
 [`licenseEditorialImage`](EditorialImagesApi.md#licenseEditorialImage) | `POST /v2/editorial/licenses` | (Deprecated) License editorial content
 [`licenseEditorialImages`](EditorialImagesApi.md#licenseEditorialImages) | `POST /v2/editorial/images/licenses` | License editorial content
@@ -1315,6 +1316,230 @@ Name | Type | Description
 }
 ```
 
+<a name="getUpdatedEditorialImages"></a>
+# EditorialImagesApi.getUpdatedEditorialImages
+> `EditorialUpdatedResults EditorialImagesApi.getUpdatedEditorialImages(type, date_updated_start, date_updated_end, country, queryParams)`
+
+**List updated content**
+
+This endpoint lists editorial images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the date_updated_start and date_updated_end parameters to specify a range updates based on when the updates happened. You can also use the date_taken_start and date_taken_end parameters to specify a range of updates based on when the image was taken.
+
+### Example
+
+```javascript
+const sstk = require("shutterstock-api");
+
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const editorialApi = new sstk.EditorialApi();
+
+const type = "edit";
+const dateUpdatedStart = "2020-02-02T13:00:00Z";
+const dateUpdatedEnd = "2020-02-02T15:00:00Z";
+const country = "USA";
+
+editorialApi.getUpdatedImages(type, dateUpdatedStart, dateUpdatedEnd, country)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ type (required) | String| Specify `addition` to return only images that were added or `edit` to return only images that were edited or deleted <br/><br/>Valid values: "edit", "addition"
+ date_updated_start (required) | Date| Show images images added, edited, or deleted after the specified date. Acceptable range is 1970-01-01T00:00:01 to 2038-01-19T00:00:00. 
+ date_updated_end (required) | Date| Show images images added, edited, or deleted before the specified date. Acceptable range is 1970-01-01T00:00:01 to 2038-01-19T00:00:00. 
+ country (required) | String| Show only editorial content that is available for distribution in a certain country 
+ date_taken_start | String| Show images that were taken on or after the specified date; use this parameter if you want recently created images from the collection instead of updated older assets 
+ date_taken_end | String| Show images that were taken before the specified date 
+ cursor | String| The cursor of the page with which to start fetching results; this cursor is returned from previous requests 
+ sort | String| Sort by, defaults to newest <br/><br/>Valid values: "newest", "oldest"
+ supplier_code | [[String]](String.md)| Show only editorial content from certain suppliers 
+ per_page | Number| Number of results per page, defaults to 500 
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[EditorialUpdatedResults](EditorialUpdatedResults.md)
+
+### Example response
+
+```
+{
+  "next" : "next",
+  "per_page" : 6,
+  "data" : [ {
+    "updated_time" : "2000-01-23T04:56:07.000+00:00",
+    "created_time" : "2000-01-23T04:56:07.000+00:00",
+    "keywords" : [ "keywords", "keywords" ],
+    "caption" : "caption",
+    "description" : "description",
+    "title" : "title",
+    "updates" : [ "updates", "updates" ],
+    "assets" : {
+      "thumb_220" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
+      },
+      "original" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
+      },
+      "watermark_450" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
+      },
+      "thumb_170" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
+      },
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
+      },
+      "small_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
+      },
+      "watermark_1500" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
+      }
+    },
+    "commercial_status" : {
+      "reason" : "reason",
+      "status" : "status"
+    },
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "rights" : {
+      "countries" : "countries"
+    },
+    "categories" : [ {
+      "name" : "name"
+    }, {
+      "name" : "name"
+    } ],
+    "id" : "id",
+    "byline" : "byline",
+    "supplier_code" : "supplier_code",
+    "date_taken" : "2000-01-23"
+  }, {
+    "updated_time" : "2000-01-23T04:56:07.000+00:00",
+    "created_time" : "2000-01-23T04:56:07.000+00:00",
+    "keywords" : [ "keywords", "keywords" ],
+    "caption" : "caption",
+    "description" : "description",
+    "title" : "title",
+    "updates" : [ "updates", "updates" ],
+    "assets" : {
+      "thumb_220" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
+      },
+      "original" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
+      },
+      "watermark_450" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
+      },
+      "thumb_170" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
+      },
+      "medium_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
+      },
+      "small_jpg" : {
+        "is_licensable" : true,
+        "format" : "format",
+        "width" : 5,
+        "display_name" : "display_name",
+        "dpi" : 6,
+        "file_size" : 1,
+        "height" : 5
+      },
+      "watermark_1500" : {
+        "width" : 7,
+        "url" : "url",
+        "height" : 2
+      }
+    },
+    "commercial_status" : {
+      "reason" : "reason",
+      "status" : "status"
+    },
+    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "rights" : {
+      "countries" : "countries"
+    },
+    "categories" : [ {
+      "name" : "name"
+    }, {
+      "name" : "name"
+    } ],
+    "id" : "id",
+    "byline" : "byline",
+    "supplier_code" : "supplier_code",
+    "date_taken" : "2000-01-23"
+  } ],
+  "prev" : "prev",
+  "message" : "message"
+}
+```
+
 <a name="getUpdatedImages"></a>
 # EditorialImagesApi.getUpdatedImages
 > `EditorialUpdatedResults EditorialImagesApi.getUpdatedImages(type, date_updated_start, date_updated_end, country, queryParams)`
@@ -1361,7 +1586,7 @@ Name | Type | Description
  date_taken_end | String| Show images that were taken before the specified date 
  cursor | String| The cursor of the page with which to start fetching results; this cursor is returned from previous requests 
  sort | String| Sort by, defaults to newest <br/><br/>Valid values: "newest", "oldest"
- supplier_code | [String]| Show only editorial content from certain suppliers 
+ supplier_code | [[String]](String.md)| Show only editorial content from certain suppliers 
  per_page | Number| Number of results per page, defaults to 500 
 
 ### Accepted authentication
@@ -1789,7 +2014,7 @@ Name | Type | Description
  query | String| One or more search terms separated by spaces 
  sort | String| Sort by, defaults to relevant <br/><br/>Valid values: "relevant", "newest", "oldest"
  category | String| Show editorial content within a certain editorial category; specify by category name 
- supplier_code | [String]| Show only editorial content from certain suppliers 
+ supplier_code | [[String]](String.md)| Show only editorial content from certain suppliers 
  date_start | Date| Show only editorial content generated on or after a specific date 
  date_end | Date| Show only editorial content generated on or before a specific date 
  per_page | Number| Number of results per page, defaults to 20 
@@ -1997,7 +2222,7 @@ Name | Type | Description
  query | String| One or more search terms separated by spaces 
  sort | String| Sort by, defaults to relevant <br/><br/>Valid values: "relevant", "newest", "oldest"
  category | String| Show editorial content within a certain editorial category; specify by category name 
- supplier_code | [String]| Show only editorial content from certain suppliers 
+ supplier_code | [[String]](String.md)| Show only editorial content from certain suppliers 
  date_start | Date| Show only editorial content generated on or after a specific date 
  date_end | Date| Show only editorial content generated on or before a specific date 
  per_page | Number| Number of results per page, defaults to 20 
