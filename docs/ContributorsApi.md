@@ -393,7 +393,7 @@ api.getContributorList(id)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | [[String]](String.md)| One or more contributor IDs 
+ id (required) | [String]| One or more contributor IDs
 
 ### Accepted authentication
 
