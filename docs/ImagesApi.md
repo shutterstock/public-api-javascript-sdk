@@ -237,7 +237,7 @@ imagesApi.deleteLightboxItems(collectionId, imagesToRemove)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
- item_id | [[String]](String.md)| One or more image IDs to remove from the collection 
+ item_id | [String]| One or more image IDs to remove from the collection
 
 ### Accepted authentication
 
@@ -529,7 +529,7 @@ api.getFeaturedLightboxList(queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  embed | String| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_url"
- type | [[String]](String.md)| The types of collections to return <br/><br/>Valid values: "photo", "editorial", "vector"
+ type | [String]| The types of collections to return <br/><br/>Valid values: "photo", "editorial", "vector"
  asset_hint | String| Cover image size, defaults to 1x <br/><br/>Valid values: "1x", "2x"
 
 ### Accepted authentication
@@ -1068,7 +1068,7 @@ api.getImageList(id, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | [[String]](String.md)| One or more image IDs 
+ id (required) | [String]| One or more image IDs
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication
@@ -1380,7 +1380,7 @@ api.getImageRecommendations(id, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | [[String]](String.md)| Image IDs 
+ id (required) | [String]| Image IDs
  max_items | Number| Maximum number of results returned in the response, defaults to 20 
  safe | Boolean| Restrict results to safe images, defaults to true 
 
@@ -1537,7 +1537,7 @@ api.getLightbox(id, queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
- embed | [[String]](String.md)| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
+ embed | [String]| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
  share_code | String| Code to retrieve a shared collection 
 
 ### Accepted authentication
@@ -1697,7 +1697,7 @@ api.getLightboxList(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- embed | [[String]](String.md)| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
+ embed | [String]| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 100 
 
@@ -2099,7 +2099,7 @@ imagesApi.getUpdatedImages(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- type | [[String]](String.md)| Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways <br/><br/>Valid values: "addition", "deletion", "edit"
+ type | [String]| Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways <br/><br/>Valid values: "addition", "deletion", "edit"
  start_date | Date| Show images updated on or after the specified date 
  end_date | Date| Show images updated before the specified date 
  interval | String| Show images updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows images that were updated in the hour preceding the request, defaults to 1 HOUR 
@@ -2444,23 +2444,23 @@ Name | Type | Description
  added_date_end | Date| Show images added before the specified date 
  category | String| Show images with the specified Shutterstock-defined category; specify a category name or ID 
  color | String| Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API groups it into one of 15 color categories and returns images that primarily use that color category 
- contributor | [[String]](String.md)| Show images with the specified contributor names or IDs, allows multiple 
+ contributor | [String]| Show images with the specified contributor names or IDs, allows multiple
  contributor_country | [Object](.md)| Show images from contributors in one or more specified countries, or start with NOT to exclude a country from the search 
  fields | String| Fields to display in the response; see the documentation for the fields parameter in the overview section 
  height | Number| (Deprecated; use height_from and height_to instead) Show images with the specified height 
  height_from | Number| Show images with the specified height or larger, in pixels 
  height_to | Number| Show images with the specified height or smaller, in pixels 
- image_type | [[String]](String.md)| Show images of the specified type <br/><br/>Valid values: "photo", "illustration", "vector"
+ image_type | [String]| Show images of the specified type <br/><br/>Valid values: "photo", "illustration", "vector"
  keyword_safe_search | Boolean| Hide results with potentially unsafe keywords, defaults to true 
  language | String| Set query and result language (uses Accept-Language header if not set) <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
- license | [[String]](String.md)| Show only images with the specified license <br/><br/>Valid values: "commercial", "editorial", "enhanced"
- model | [[String]](String.md)| Show image results with the specified model IDs 
+ license | [String]| Show only images with the specified license <br/><br/>Valid values: "commercial", "editorial", "enhanced"
+ model | [String]| Show image results with the specified model IDs
  orientation | String| Show image results with horizontal or vertical orientation <br/><br/>Valid values: "horizontal", "vertical"
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  people_model_released | Boolean| Show images of people with a signed model release 
  people_age | String| Show images that feature people of the specified age category <br/><br/>Valid values: "infants", "children", "teenagers", "20s", "30s", "40s", "50s", "60s", "older"
- people_ethnicity | [[String]](String.md)| Show images with people of the specified ethnicities <br/><br/>Valid values: "african", "african_american", "black", "brazilian", "chinese", "caucasian", "east_asian", "hispanic", "japanese", "middle_eastern", "native_american", "pacific_islander", "south_asian", "southeast_asian", "other"
+ people_ethnicity | [String]| Show images with people of the specified ethnicities <br/><br/>Valid values: "african", "african_american", "black", "brazilian", "chinese", "caucasian", "east_asian", "hispanic", "japanese", "middle_eastern", "native_american", "pacific_islander", "south_asian", "southeast_asian", "other"
  people_gender | String| Show images with people of the specified gender <br/><br/>Valid values: "male", "female", "both"
  people_number | Number| Show images with the specified number of people 
  query | String| One or more search terms separated by spaces; you can use NOT to filter out images that match a term 

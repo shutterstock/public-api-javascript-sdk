@@ -1362,7 +1362,7 @@ Name | Type | Description
  date_taken_end | String| Show images that were taken before the specified date 
  cursor | String| The cursor of the page with which to start fetching results; this cursor is returned from previous requests 
  sort | String| Sort by, defaults to newest <br/><br/>Valid values: "newest", "oldest"
- supplier_code | [[String]](String.md)| Show only editorial content from certain suppliers 
+ supplier_code | [String]| Show only editorial content from certain suppliers
  per_page | Number| Number of results per page, defaults to 500 
 
 ### Accepted authentication
@@ -1586,7 +1586,7 @@ Name | Type | Description
  date_taken_end | String| Show images that were taken before the specified date 
  cursor | String| The cursor of the page with which to start fetching results; this cursor is returned from previous requests 
  sort | String| Sort by, defaults to newest <br/><br/>Valid values: "newest", "oldest"
- supplier_code | [[String]](String.md)| Show only editorial content from certain suppliers 
+ supplier_code | [String]| Show only editorial content from certain suppliers
  per_page | Number| Number of results per page, defaults to 500 
 
 ### Accepted authentication
@@ -2014,7 +2014,7 @@ Name | Type | Description
  query | String| One or more search terms separated by spaces 
  sort | String| Sort by, defaults to relevant <br/><br/>Valid values: "relevant", "newest", "oldest"
  category | String| Show editorial content within a certain editorial category; specify by category name 
- supplier_code | [[String]](String.md)| Show only editorial content from certain suppliers 
+ supplier_code | [String]| Show only editorial content from certain suppliers
  date_start | Date| Show only editorial content generated on or after a specific date 
  date_end | Date| Show only editorial content generated on or before a specific date 
  per_page | Number| Number of results per page, defaults to 20 
@@ -2222,7 +2222,7 @@ Name | Type | Description
  query | String| One or more search terms separated by spaces 
  sort | String| Sort by, defaults to relevant <br/><br/>Valid values: "relevant", "newest", "oldest"
  category | String| Show editorial content within a certain editorial category; specify by category name 
- supplier_code | [[String]](String.md)| Show only editorial content from certain suppliers 
+ supplier_code | [String]| Show only editorial content from certain suppliers
  date_start | Date| Show only editorial content generated on or after a specific date 
  date_end | Date| Show only editorial content generated on or before a specific date 
  per_page | Number| Number of results per page, defaults to 20 

@@ -418,7 +418,7 @@ customMusicApi.fetchRenders(renders)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | [[String]](String.md)| One or more render IDs 
+ id (required) | [String]| One or more render IDs
 
 ### Accepted authentication
 
@@ -791,7 +791,7 @@ Name | Type | Description
  band_name | String| Show descriptors with the specified band name (case-sensitive) 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
- id | [[String]](String.md)| Show descriptors with the specified IDs (case-sensitive) 
+ id | [String]| Show descriptors with the specified IDs (case-sensitive)
  instrument_name | String| Show descriptors with the specified instrument name (case-sensitive) 
  instrument_id | String| Show descriptors with the specified instrument ID (case-sensitive) 
  tempo_to | Number| Show descriptors with a tempo that is less than or equal to the specified number 
@@ -918,7 +918,7 @@ customMusicApi.listInstruments(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id | [[String]](String.md)| Show instruments with the specified ID 
+ id | [String]| Show instruments with the specified ID
  per_page | Number| Number of results per page, defaults to 20 
  page | Number| Page number, defaults to 1 
  name | String| Show instruments with the specified name (case-sensitive) 
