@@ -240,7 +240,7 @@ videosApi.deleteClipboxItems(collectionId, videosToRemove)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| The ID of the Collection from which items will be deleted 
- item_id | [String]| One or more video IDs to remove from the collection
+ item_id | [String]| One or more video IDs to remove from the collection 
 
 ### Accepted authentication
 
@@ -1370,7 +1370,7 @@ api.getVideoList(id, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | [String]| One or more video IDs
+ id (required) | [String]| One or more video IDs 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication
@@ -1880,8 +1880,8 @@ Name | Type | Description
  added_date_end | Date| Show videos added before the specified date 
  aspect_ratio | String| Show videos with the specified aspect ratio <br/><br/>Valid values: "4_3", "16_9", "nonstandard"
  category | String| Show videos with the specified Shutterstock-defined category; specify a category name or ID 
- contributor | [String]| Show videos with the specified artist names or IDs
- contributor_country | [String]| Show videos from contributors in one or more specified countries
+ contributor | [String]| Show videos with the specified artist names or IDs 
+ contributor_country | [String]| Show videos from contributors in one or more specified countries 
  duration | Number| (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration in seconds 
  duration_from | Number| Show videos with the specified duration or longer in seconds 
  duration_to | Number| Show videos with the specified duration or shorter in seconds 
@@ -1891,7 +1891,7 @@ Name | Type | Description
  keyword_safe_search | Boolean| Hide results with potentially unsafe keywords, defaults to true 
  language | String| Set query and result language (uses Accept-Language header if not set) <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
  license | [String]| Show only videos with the specified license or licenses <br/><br/>Valid values: "commercial", "editorial"
- model | [String]| Show videos with each of the specified models
+ model | [String]| Show videos with each of the specified models 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  people_age | String| Show videos that feature people of the specified age range <br/><br/>Valid values: "infants", "children", "teenagers", "20s", "30s", "40s", "50s", "60s", "older"

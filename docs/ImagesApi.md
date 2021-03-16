@@ -237,7 +237,7 @@ imagesApi.deleteLightboxItems(collectionId, imagesToRemove)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
- item_id | [String]| One or more image IDs to remove from the collection
+ item_id | [String]| One or more image IDs to remove from the collection 
 
 ### Accepted authentication
 
@@ -1068,7 +1068,7 @@ api.getImageList(id, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | [String]| One or more image IDs
+ id (required) | [String]| One or more image IDs 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication
@@ -1380,7 +1380,7 @@ api.getImageRecommendations(id, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | [String]| Image IDs
+ id (required) | [String]| Image IDs 
  max_items | Number| Maximum number of results returned in the response, defaults to 20 
  safe | Boolean| Restrict results to safe images, defaults to true 
 
@@ -2444,7 +2444,7 @@ Name | Type | Description
  added_date_end | Date| Show images added before the specified date 
  category | String| Show images with the specified Shutterstock-defined category; specify a category name or ID 
  color | String| Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API groups it into one of 15 color categories and returns images that primarily use that color category 
- contributor | [String]| Show images with the specified contributor names or IDs, allows multiple
+ contributor | [String]| Show images with the specified contributor names or IDs, allows multiple 
  contributor_country | [Object](.md)| Show images from contributors in one or more specified countries, or start with NOT to exclude a country from the search 
  fields | String| Fields to display in the response; see the documentation for the fields parameter in the overview section 
  height | Number| (Deprecated; use height_from and height_to instead) Show images with the specified height 
@@ -2454,7 +2454,7 @@ Name | Type | Description
  keyword_safe_search | Boolean| Hide results with potentially unsafe keywords, defaults to true 
  language | String| Set query and result language (uses Accept-Language header if not set) <br/><br/>Valid values: "cs", "da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ru", "sv", "th", "tr", "zh", "zh-Hant"
  license | [String]| Show only images with the specified license <br/><br/>Valid values: "commercial", "editorial", "enhanced"
- model | [String]| Show image results with the specified model IDs
+ model | [String]| Show image results with the specified model IDs 
  orientation | String| Show image results with horizontal or vertical orientation <br/><br/>Valid values: "horizontal", "vertical"
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 

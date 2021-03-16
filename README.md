@@ -6,11 +6,11 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.0.33
+- API version: 1.0.34
 
 ## References
 
-- For more information about the Shutterstock public API, see https://developers.shutterstock.com/documentation.
+- For more information about the Shutterstock public API, see https://www.shutterstock.com/developers/documentation.
 - For reference information about the endpoints that this SDK calls, see the [API reference](http://api-reference.shutterstock.com).
 - To provide feedback or bug reports about the API and this SDK, see https://api-feedback.shutterstock.com.
 - For the status of the API, see [API status](https://status.developers.shutterstock.com/).
@@ -23,7 +23,7 @@ To access the API and license media with the SDK, you need an API subscription o
 API subscriptions are separate from the subscriptions that are available on shutterstock.com.
 You can use an API subscription to license and download media only with the API; API subscriptions don't work on shutterstock.com.
 To buy an API subscription or set up a free account, see the [pricing page](https://www.shutterstock.com/api/pricing).
-If you have a subscription from shutterstock.com and want to use it with the API, [contact us](https://developers.shutterstock.com/contact-us).
+If you have a subscription from shutterstock.com and want to use it with the API, [contact us](https://www.shutterstock.com/developers/contact-us).
 
 ## Applications
 
@@ -46,7 +46,7 @@ To create an application:
    The API accepts only requests that have an HTTP Referrer header from this list.
    Otherwise, leave this field blank.
    - **Included products**: This list shows the API products that the application has access to.
-   To get access to other products, contact your Shutterstock representative, visit the [Pricing page](https://www.shutterstock.com/api/pricing) or [contact us](//developers.shutterstock.com/contact-us).
+   To get access to other products, contact your Shutterstock representative, visit the [Pricing page](https://www.shutterstock.com/api/pricing) or [contact us](https://www.shutterstock.com/developers/contact-us).
    - **Company name**: The name of your company.
    - **Website**: Your company's web site.
    - **Intended use**: Select an option that describes how you will use the API.
@@ -102,7 +102,7 @@ For more information about authenticating to the API, see [Authentication](https
 ### Basic authentication
 
 In HTTP basic authentication (also known as _basic authentication_), you pass your application's consumer key and secret key to the SDK along with the request.
-To get the consumer key and secret key for your application, go to https://developers.shutterstock.com/user/me/apps and open the information for your application.
+To get the consumer key and secret key for your application, go to https://www.shutterstock.com/account/developers/apps and open the information for your application.
 The following example uses the variables `applicationClientId` and `applicationClientSecret` for the application's consumer key and secret.
 
 ```javascript
@@ -116,7 +116,7 @@ const api = new sstk.ImagesApi();
 ### OAuth authentication
 
 In this type of authentication, you use an application and an individual user's login credentials to obtain a token.
-For instructions on how to get a token, see [OAuth authentication](https://developers.shutterstock.com/documentation/authentication#oauth-authentication) on the Shutterstock developer portal.
+For instructions on how to get a token, see [OAuth authentication](https://www.shutterstock.com/developers/documentation/authentication#oauth-authentication) on the Shutterstock developer portal.
 
 When you have the token, use it to configure the API client as in the following example, which assumes that your token is in the environment variable `SHUTTERSTOCK_API_TOKEN`:
 

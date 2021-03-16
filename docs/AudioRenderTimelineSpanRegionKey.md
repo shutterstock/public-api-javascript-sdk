@@ -46,3 +46,32 @@ Name | Type | Description | Notes
 
 
 
+<a name="TonicQualityEnum"></a>
+## Enum: TonicQualityEnum
+
+
+* `major` (value: `"major"`)
+
+* `natural_minor` (value: `"natural_minor"`)
+
+* `harmonic_minor` (value: `"harmonic_minor"`)
+
+* `melodic_minor` (value: `"melodic_minor"`)
+
+* `ionian` (value: `"ionian"`)
+
+* `dorian` (value: `"dorian"`)
+
+* `phrygian` (value: `"phrygian"`)
+
+* `lydian` (value: `"lydian"`)
+
+* `mixolydian` (value: `"mixolydian"`)
+
+* `aeolian` (value: `"aeolian"`)
+
+* `locrian` (value: `"locrian"`)
+
+
+
+

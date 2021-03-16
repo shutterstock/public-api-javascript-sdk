@@ -21,28 +21,133 @@ This endpoint creates rendered audio from timeline data. It returns a render ID 
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk = require("shutterstock-api");
 
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.CustomMusicApi();
+const customMusicApi = new sstk.CustomMusicApi();
 
-const body = new ShutterstockApiReference.CreateAudioRendersRequest(); // CreateAudioRendersRequest | Parameters for the audio, including the timeline and information about the output file
+const body = {
+  "audio_renders": [
+    {
+      "preset": "MASTER_MP3",
+      "filename": "My_audio_ai.mp3",
+      "timeline": {
+        "spans": [
+          {
+            "id": 111,
+            "span_type": "metered",
+            "time": 0,
+            "tempo": 80,
+            "regions": [
+              {
+                "id": 222,
+                "descriptor": "documentary_underscore_heartfelt",
+                "beat": 0,
+                "end_type": {
+                  "beat": 17,
+                  "event": "ending",
+                  "type": "ringout"
+                },
+                "region": "music"
+              }
+            ],
+            "instrument_groups": [
+              {
+                "instrument_group": "full_aw_nylon_acoustic_lead_guitar",
+                "statuses": [
+                  {
+                    "beat": 0,
+                    "status": "active"
+                  }
+                ]
+              },
+              {
+                "instrument_group": "nice_scoring_viola_ensemble",
+                "statuses": [
+                  {
+                    "beat": 0,
+                    "status": "active"
+                  }
+                ]
+              },
+              {
+                "instrument_group": "warm_devonshire_upright_acoustic_piano",
+                "statuses": [
+                  {
+                    "beat": 0,
+                    "status": "active"
+                  }
+                ]
+              },
+              {
+                "instrument_group": "nice_scoring_first_violin_ensemble",
+                "statuses": [
+                  {
+                    "beat": 0,
+                    "status": "active"
+                  }
+                ]
+              },
+              {
+                "instrument_group": "nice_scoring_second_violin_ensemble",
+                "statuses": [
+                  {
+                    "beat": 0,
+                    "status": "active"
+                  }
+                ]
+              },
+              {
+                "instrument_group": "warm_kawai_grand_acoustic_piano_dreamy",
+                "statuses": [
+                  {
+                    "beat": 0,
+                    "status": "active"
+                  }
+                ]
+              },
+              {
+                "instrument_group": "sweet_kawai_grand_acoustic_piano",
+                "statuses": [
+                  {
+                    "beat": 0,
+                    "status": "active"
+                  }
+                ]
+              },
+              {
+                "instrument_group": "nice_scoring_cello_ensemble",
+                "statuses": [
+                  {
+                    "beat": 0,
+                    "status": "active"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "span_type": "unmetered",
+            "time": 15
+          }
+        ]
+      }
+    }
+  ]
+};
 
-
-api.createAudioRenders(body)
-  .then((data) => {
-    console.log(data);
+customMusicApi.createAudioRenders(body)
+  .then(async ({ data }) => {
+    const { id } = data.audio_renders[0];
+    console.log(id);
   })
   .catch((error) => {
     console.error(error);
   });
 
 ```
+
 
 ### Parameters
 
@@ -74,6 +179,13 @@ Name | Type | Description
     "progress_percent" : 2,
     "timeline" : {
       "spans" : [ {
+        "tempo_changes" : [ {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        }, {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        } ],
         "regions" : [ {
           "end_type" : {
             "beat" : 2.3021358869347654518833223846741020679473876953125,
@@ -127,15 +239,15 @@ Name | Type | Description
         "tempo" : 1,
         "id" : 0.80082819046101150206595775671303272247314453125,
         "span_type" : "metered",
-        "time" : 6,
-        "tempo_change" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ]
+        "time" : 6
       }, {
+        "tempo_changes" : [ {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        }, {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        } ],
         "regions" : [ {
           "end_type" : {
             "beat" : 2.3021358869347654518833223846741020679473876953125,
@@ -189,14 +301,7 @@ Name | Type | Description
         "tempo" : 1,
         "id" : 0.80082819046101150206595775671303272247314453125,
         "span_type" : "metered",
-        "time" : 6,
-        "tempo_change" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ]
+        "time" : 6
       } ]
     },
     "files" : [ {
@@ -227,6 +332,13 @@ Name | Type | Description
     "progress_percent" : 2,
     "timeline" : {
       "spans" : [ {
+        "tempo_changes" : [ {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        }, {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        } ],
         "regions" : [ {
           "end_type" : {
             "beat" : 2.3021358869347654518833223846741020679473876953125,
@@ -280,15 +392,15 @@ Name | Type | Description
         "tempo" : 1,
         "id" : 0.80082819046101150206595775671303272247314453125,
         "span_type" : "metered",
-        "time" : 6,
-        "tempo_change" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ]
+        "time" : 6
       }, {
+        "tempo_changes" : [ {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        }, {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        } ],
         "regions" : [ {
           "end_type" : {
             "beat" : 2.3021358869347654518833223846741020679473876953125,
@@ -342,14 +454,7 @@ Name | Type | Description
         "tempo" : 1,
         "id" : 0.80082819046101150206595775671303272247314453125,
         "span_type" : "metered",
-        "time" : 6,
-        "tempo_change" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ]
+        "time" : 6
       } ]
     },
     "files" : [ {
@@ -418,7 +523,7 @@ customMusicApi.fetchRenders(renders)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | [String]| One or more render IDs
+ id (required) | [String]| One or more render IDs 
 
 ### Accepted authentication
 
@@ -443,6 +548,13 @@ Name | Type | Description
     "progress_percent" : 2,
     "timeline" : {
       "spans" : [ {
+        "tempo_changes" : [ {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        }, {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        } ],
         "regions" : [ {
           "end_type" : {
             "beat" : 2.3021358869347654518833223846741020679473876953125,
@@ -496,15 +608,15 @@ Name | Type | Description
         "tempo" : 1,
         "id" : 0.80082819046101150206595775671303272247314453125,
         "span_type" : "metered",
-        "time" : 6,
-        "tempo_change" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ]
+        "time" : 6
       }, {
+        "tempo_changes" : [ {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        }, {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        } ],
         "regions" : [ {
           "end_type" : {
             "beat" : 2.3021358869347654518833223846741020679473876953125,
@@ -558,14 +670,7 @@ Name | Type | Description
         "tempo" : 1,
         "id" : 0.80082819046101150206595775671303272247314453125,
         "span_type" : "metered",
-        "time" : 6,
-        "tempo_change" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ]
+        "time" : 6
       } ]
     },
     "files" : [ {
@@ -596,6 +701,13 @@ Name | Type | Description
     "progress_percent" : 2,
     "timeline" : {
       "spans" : [ {
+        "tempo_changes" : [ {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        }, {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        } ],
         "regions" : [ {
           "end_type" : {
             "beat" : 2.3021358869347654518833223846741020679473876953125,
@@ -649,15 +761,15 @@ Name | Type | Description
         "tempo" : 1,
         "id" : 0.80082819046101150206595775671303272247314453125,
         "span_type" : "metered",
-        "time" : 6,
-        "tempo_change" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ]
+        "time" : 6
       }, {
+        "tempo_changes" : [ {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        }, {
+          "tempo" : 3.61607674925191080461672754609026014804840087890625,
+          "time" : 9.301444243932575517419536481611430644989013671875
+        } ],
         "regions" : [ {
           "end_type" : {
             "beat" : 2.3021358869347654518833223846741020679473876953125,
@@ -711,14 +823,7 @@ Name | Type | Description
         "tempo" : 1,
         "id" : 0.80082819046101150206595775671303272247314453125,
         "span_type" : "metered",
-        "time" : 6,
-        "tempo_change" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ]
+        "time" : 6
       } ]
     },
     "files" : [ {
@@ -791,7 +896,7 @@ Name | Type | Description
  band_name | String| Show descriptors with the specified band name (case-sensitive) 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
- id | [String]| Show descriptors with the specified IDs (case-sensitive)
+ id | [String]| Show descriptors with the specified IDs (case-sensitive) 
  instrument_name | String| Show descriptors with the specified instrument name (case-sensitive) 
  instrument_id | String| Show descriptors with the specified instrument ID (case-sensitive) 
  tempo_to | Number| Show descriptors with a tempo that is less than or equal to the specified number 
@@ -918,7 +1023,7 @@ customMusicApi.listInstruments(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id | [String]| Show instruments with the specified ID
+ id | [String]| Show instruments with the specified ID 
  per_page | Number| Number of results per page, defaults to 20 
  page | Number| Page number, defaults to 1 
  name | String| Show instruments with the specified name (case-sensitive) 

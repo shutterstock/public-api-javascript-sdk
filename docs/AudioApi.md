@@ -241,7 +241,7 @@ audioApi.deleteSoundboxItems(collectionId, tracksToRemove)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
- item_id | [String]| One or more item IDs to remove from the collection
+ item_id | [String]| One or more item IDs to remove from the collection 
 
 ### Accepted authentication
 
@@ -342,7 +342,14 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 const api = new sstk.AudioApi();
 
 const queryParams = { 
-  'audio_id': "1" // String | Show licenses for the specified track ID
+  'audio_id': "1", // String | Show licenses for the specified track ID
+  'license': "48433107", // String | Restrict results by license. Prepending a `-` sign will exclude results by license
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'sort': "newest", // String | Sort order
+  'username': "username_example", // String | Filter licenses by username of licensee
+  'start_date': new Date("2020-02-02T13:00-05:00"), // Date | Show licenses created on or after the specified date
+  'end_date': new Date("2020-02-02T13:00-05:00") // Date | Show licenses created before the specified date
 };
 
 api.getAudioLicenseList(queryParams)
@@ -361,6 +368,13 @@ api.getAudioLicenseList(queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  audio_id | String| Show licenses for the specified track ID 
+ license | String| Restrict results by license. Prepending a `-` sign will exclude results by license 
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 20 
+ sort | String| Sort order, defaults to newest <br/><br/>Valid values: "newest", "oldest"
+ username | String| Filter licenses by username of licensee 
+ start_date | Date| Show licenses created on or after the specified date 
+ end_date | Date| Show licenses created before the specified date 
 
 ### Accepted authentication
 
@@ -1048,7 +1062,7 @@ api.getTrackList(id, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | [String]| One or more audio IDs
+ id (required) | [String]| One or more audio IDs 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication
@@ -1299,17 +1313,17 @@ audioApi.searchAudio(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- artists | [String]| Show tracks with one of the specified artist names or IDs
+ artists | [String]| Show tracks with one of the specified artist names or IDs 
  bpm | Number| (Deprecated; use bpm_from and bpm_to instead) Show tracks with the specified beats per minute 
  bpm_from | Number| Show tracks with the specified beats per minute or faster 
  bpm_to | Number| Show tracks with the specified beats per minute or slower 
  duration | Number| Show tracks with the specified duration in seconds 
  duration_from | Number| Show tracks with the specified duration or longer in seconds 
  duration_to | Number| Show tracks with the specified duration or shorter in seconds 
- genre | [String]| Show tracks with each of the specified genres; to get the list of genres, use `GET /v2/audio/genres`
+ genre | [String]| Show tracks with each of the specified genres; to get the list of genres, use `GET /v2/audio/genres` 
  is_instrumental | Boolean| Show instrumental music only 
- instruments | [String]| Show tracks with each of the specified instruments; to get the list of instruments, use `GET /v2/audio/instruments`
- moods | [String]| Show tracks with each of the specified moods; to get the list of moods, use `GET /v2/audio/moods`
+ instruments | [String]| Show tracks with each of the specified instruments; to get the list of instruments, use `GET /v2/audio/instruments` 
+ moods | [String]| Show tracks with each of the specified moods; to get the list of moods, use `GET /v2/audio/moods` 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  query | String| One or more search terms separated by spaces 
