@@ -9,6 +9,8 @@
 
 * `de` (value: `"de"`)
 
+* `el` (value: `"el"`)
+
 * `en` (value: `"en"`)
 
 * `es` (value: `"es"`)
@@ -18,6 +20,8 @@
 * `fr` (value: `"fr"`)
 
 * `hu` (value: `"hu"`)
+
+* `id` (value: `"id"`)
 
 * `it` (value: `"it"`)
 
@@ -33,6 +37,8 @@
 
 * `pt` (value: `"pt"`)
 
+* `ro` (value: `"ro"`)
+
 * `ru` (value: `"ru"`)
 
 * `sv` (value: `"sv"`)
@@ -40,6 +46,8 @@
 * `th` (value: `"th"`)
 
 * `tr` (value: `"tr"`)
+
+* `vi` (value: `"vi"`)
 
 * `zh` (value: `"zh"`)
 
