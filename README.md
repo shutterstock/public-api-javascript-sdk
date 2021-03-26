@@ -303,11 +303,6 @@ imagesApi.getImage("123456789")
   });
 ```
 
-## Contributing
-
-- This SDK is generated at [shutterstock/public-api-sdk-generator](https://github.com/shutterstock/public-api-sdk-generator), please make changes to SDK there.
-- Changes to tests can be made directly here.
-
 ## Tests
 
 To run the tests, you must authenticate with the Shutterstock API, get a token, and put the token in the `SHUTTERSTOCK_API_TOKEN` environment variable. See [Authentication](https://api-reference.shutterstock.com/#authentication).
