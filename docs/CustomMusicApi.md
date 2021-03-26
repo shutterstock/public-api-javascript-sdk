@@ -138,7 +138,7 @@ const body = {
 };
 
 customMusicApi.createAudioRenders(body)
-  .then(async ({ data }) => {
+  .then(async (data) => {
     const { id } = data.audio_renders[0];
     console.log(id);
   })
