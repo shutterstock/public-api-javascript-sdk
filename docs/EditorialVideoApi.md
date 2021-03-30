@@ -350,7 +350,7 @@ const body = {
 };
 
 editorialApi.licenseEditorialVideo(body)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {

@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.0.35
+- API version: 1.0.36
 
 ## References
 
@@ -302,6 +302,11 @@ imagesApi.getImage("123456789")
     // 404 '{"message":"Not Found"}'
   });
 ```
+
+## Contributing
+
+- This SDK is generated at [shutterstock/public-api-sdk-generator](https://github.com/shutterstock/public-api-sdk-generator), please make changes to SDK there.
+- Changes to tests can be made directly here.
 
 ## Tests
 

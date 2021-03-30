@@ -1792,7 +1792,7 @@ const body = {
 };
 
 editorialApi.licenseEditorialImage(body)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -1893,7 +1893,7 @@ const body = {
 };
 
 editorialApi.licenseEditorialImage(body)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {

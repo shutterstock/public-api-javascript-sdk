@@ -2084,7 +2084,7 @@ const queryParams = {
 };
 
 imagesApi.getUpdatedImages(queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -2191,7 +2191,7 @@ const queryParams = {
 };
 
 imagesApi.licenseImages(body, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {

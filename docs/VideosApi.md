@@ -856,7 +856,7 @@ const queryParams = {
 };
 
 videosApi.getUpdatedVideos(queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
@@ -1693,7 +1693,7 @@ const queryParams = {
 };
 
 videosApi.searchVideos(body, queryParams)
-  .then(({ data }) => {
+  .then((data) => {
     console.log(data);
   })
   .catch((error) => {
