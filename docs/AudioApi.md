@@ -348,8 +348,8 @@ const queryParams = {
   'per_page': 20, // Number | Number of results per page
   'sort': "newest", // String | Sort order
   'username': "username_example", // String | Filter licenses by username of licensee
-  'start_date': new Date("2020-02-02T13:00-05:00"), // Date | Show licenses created on or after the specified date
-  'end_date': new Date("2020-02-02T13:00-05:00") // Date | Show licenses created before the specified date
+  'start_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created on or after the specified date
+  'end_date': new Date("2021-03-29T13:25:13.521Z") // Date | Show licenses created before the specified date
 };
 
 api.getAudioLicenseList(queryParams)

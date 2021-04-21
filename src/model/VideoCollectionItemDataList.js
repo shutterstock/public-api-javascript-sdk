@@ -16,33 +16,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/Error', '../model/LicenseVideoResult'], factory);
+    define(['../ApiClient', '../model/CollectionItem', '../model/Error'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Error'), require('./LicenseVideoResult'));
+    module.exports = factory(require('../ApiClient'), require('./CollectionItem'), require('./Error'));
   } else {
     // Browser globals (root is window)
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.LicenseVideoResultDataList = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.Error, root.ShutterstockApiReference.LicenseVideoResult);
+    root.ShutterstockApiReference.VideoCollectionItemDataList = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.CollectionItem, root.ShutterstockApiReference.Error);
   }
-}(this, function(ApiClient, Error, LicenseVideoResult) {
+}(this, function(ApiClient, CollectionItem, Error) {
   'use strict';
 
 
 
 
   /**
-   * The LicenseVideoResultDataList model module.
-   * @module model/LicenseVideoResultDataList
+   * The VideoCollectionItemDataList model module.
+   * @module model/VideoCollectionItemDataList
    * @version 1.0.37
    */
 
   /**
-   * Constructs a new <code>LicenseVideoResultDataList</code>.
-   * List of video license results
-   * @alias module:model/LicenseVideoResultDataList
+   * Constructs a new <code>VideoCollectionItemDataList</code>.
+   * List of items in a collection
+   * @alias module:model/VideoCollectionItemDataList
    * @class
    */
   var exports = function() {
@@ -57,18 +57,18 @@
   };
 
   /**
-   * Constructs a <code>LicenseVideoResultDataList</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>VideoCollectionItemDataList</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/LicenseVideoResultDataList} obj Optional instance to populate.
-   * @return {module:model/LicenseVideoResultDataList} The populated <code>LicenseVideoResultDataList</code> instance.
+   * @param {module:model/VideoCollectionItemDataList} obj Optional instance to populate.
+   * @return {module:model/VideoCollectionItemDataList} The populated <code>VideoCollectionItemDataList</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
       if (data.hasOwnProperty('data')) {
-        obj['data'] = ApiClient.convertToType(data['data'], [LicenseVideoResult]);
+        obj['data'] = ApiClient.convertToType(data['data'], [CollectionItem]);
       }
       if (data.hasOwnProperty('errors')) {
         obj['errors'] = ApiClient.convertToType(data['errors'], [Error]);
@@ -90,8 +90,8 @@
   }
 
   /**
-   * License results
-   * @member {Array.<module:model/LicenseVideoResult>} data
+   * Assets in the collection
+   * @member {Array.<module:model/CollectionItem>} data
    */
   exports.prototype['data'] = undefined;
   /**
@@ -105,17 +105,17 @@
    */
   exports.prototype['message'] = undefined;
   /**
-   * Current page that is returned
+   * The current page of results
    * @member {Number} page
    */
   exports.prototype['page'] = undefined;
   /**
-   * Number of results per page
+   * The number of results per page
    * @member {Number} per_page
    */
   exports.prototype['per_page'] = undefined;
   /**
-   * Total count of all results across all pages
+   * The total number of results across all pages
    * @member {Number} total_count
    */
   exports.prototype['total_count'] = undefined;

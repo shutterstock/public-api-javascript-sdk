@@ -12,6 +12,9 @@ Method | HTTP request | Description
 [`getClipbox`](VideosApi.md#getClipbox) | `GET /v2/videos/collections/{id}` | Get the details of video collections
 [`getClipboxItems`](VideosApi.md#getClipboxItems) | `GET /v2/videos/collections/{id}/items` | Get the contents of video collections
 [`getClipboxList`](VideosApi.md#getClipboxList) | `GET /v2/videos/collections` | List video collections
+[`getFeaturedVideoCollection`](VideosApi.md#getFeaturedVideoCollection) | `GET /v2/videos/collections/featured/{id}` | Get the details of featured video collections
+[`getFeaturedVideoCollectionItems`](VideosApi.md#getFeaturedVideoCollectionItems) | `GET /v2/videos/collections/featured/{id}/items` | Get the contents of featured video collections
+[`getFeaturedVideoCollectionList`](VideosApi.md#getFeaturedVideoCollectionList) | `GET /v2/videos/collections/featured` | List featured video collections
 [`getSimilarVideos`](VideosApi.md#getSimilarVideos) | `GET /v2/videos/{id}/similar` | List similar videos
 [`getUpdatedVideos`](VideosApi.md#getUpdatedVideos) | `GET /v2/videos/updated` | List updated videos
 [`getVideo`](VideosApi.md#getVideo) | `GET /v2/videos/{id}` | Get details about videos
@@ -573,6 +576,276 @@ Name | Type | Description
     "name" : "Test Collection d332",
     "total_item_count" : 0,
     "updated_time" : "2014-11-05T19:32:13-05:00"
+  } ]
+}
+```
+
+<a name="getFeaturedVideoCollection"></a>
+# VideosApi.getFeaturedVideoCollection
+> `FeaturedCollection VideosApi.getFeaturedVideoCollection(id, queryParams)`
+
+**Get the details of featured video collections**
+
+This endpoint gets more detailed information about a featured video collection, including its cover video and timestamps for its creation and most recent update. To get the videos, use `GET /v2/videos/collections/featured/{id}/items`.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.VideosApi();
+
+const id = "136351027"; // String | Collection ID
+
+const queryParams = { 
+  'embed': "embed_example" // String | What information to include in the response, such as a URL to the collection
+};
+
+api.getFeaturedVideoCollection(id, queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ id (required) | String| Collection ID 
+ embed | String| What information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_url"
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[FeaturedCollection](FeaturedCollection.md)
+
+### Example response
+
+```
+{
+  "created_time" : "2000-01-23T04:56:07.000+00:00",
+  "updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "share_url" : "share_url",
+  "hero_item" : {
+    "url" : "url"
+  },
+  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "cover_item" : {
+    "url" : "url"
+  },
+  "total_item_count" : 0
+}
+```
+
+<a name="getFeaturedVideoCollectionItems"></a>
+# VideosApi.getFeaturedVideoCollectionItems
+> `VideoCollectionItemDataList VideosApi.getFeaturedVideoCollectionItems(id, queryParams)`
+
+**Get the contents of featured video collections**
+
+This endpoint lists the IDs of videos in a featured collection and the date that each was added.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.VideosApi();
+
+const id = "136351027"; // String | Collection ID
+
+const queryParams = { 
+  'page': 1, // Number | Page number
+  'per_page': 100 // Number | Number of results per page
+};
+
+api.getFeaturedVideoCollectionItems(id, queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ id (required) | String| Collection ID 
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 100 
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[VideoCollectionItemDataList](VideoCollectionItemDataList.md)
+
+### Example response
+
+```
+{
+  "data" : [ {
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "76688182",
+    "media_type" : "video"
+  }, {
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "40005859",
+    "media_type" : "video"
+  } ],
+  "page" : 1,
+  "per_page" : 100
+}
+```
+
+<a name="getFeaturedVideoCollectionList"></a>
+# VideosApi.getFeaturedVideoCollectionList
+> `FeaturedCollectionDataList VideosApi.getFeaturedVideoCollectionList(queryParams)`
+
+**List featured video collections**
+
+This endpoint lists featured video collections and a name and cover video for each collection.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.VideosApi();
+
+const queryParams = { 
+  'embed': "share_url" // String | What information to include in the response, such as a URL to the collection
+};
+
+api.getFeaturedVideoCollectionList(queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ embed | String| What information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_url"
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[FeaturedCollectionDataList](FeaturedCollectionDataList.md)
+
+### Example response
+
+```
+{
+  "per_page" : 1,
+  "data" : [ {
+    "created_time" : "2000-01-23T04:56:07.000+00:00",
+    "updated_time" : "2000-01-23T04:56:07.000+00:00",
+    "share_url" : "share_url",
+    "hero_item" : {
+      "url" : "url"
+    },
+    "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "id" : "id",
+    "cover_item" : {
+      "url" : "url"
+    },
+    "total_item_count" : 0
+  }, {
+    "created_time" : "2000-01-23T04:56:07.000+00:00",
+    "updated_time" : "2000-01-23T04:56:07.000+00:00",
+    "share_url" : "share_url",
+    "hero_item" : {
+      "url" : "url"
+    },
+    "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
+    "name" : "name",
+    "id" : "id",
+    "cover_item" : {
+      "url" : "url"
+    },
+    "total_item_count" : 0
+  } ],
+  "total_count" : 5,
+  "page" : 6,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  }, {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
   } ]
 }
 ```
@@ -1196,8 +1469,8 @@ const queryParams = {
   'per_page': 20, // Number | Number of results per page
   'sort': "newest", // String | Sort by oldest or newest videos first
   'username': "username_example", // String | Filter licenses by username of licensee
-  'start_date': new Date("2020-02-02T13:00-05:00"), // Date | Show licenses created on or after the specified date
-  'end_date': new Date("2020-02-02T13:00-05:00") // Date | Show licenses created before the specified date
+  'start_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created on or after the specified date
+  'end_date': new Date("2021-03-29T13:25:13.521Z") // Date | Show licenses created before the specified date
 };
 
 api.getVideoLicenseList(queryParams)
