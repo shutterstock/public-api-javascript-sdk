@@ -5,20 +5,20 @@ All URIs are relative to `https://api.shutterstock.com`.
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [`getEditorialCategories`](EditorialImagesApi.md#getEditorialCategories) | `GET /v2/editorial/categories` | (Deprecated) List editorial categories
-[`getEditorialImage`](EditorialImagesApi.md#getEditorialImage) | `GET /v2/editorial/{id}` | (Deprecated) Get editorial content details
-[`getEditorialImageCategories`](EditorialImagesApi.md#getEditorialImageCategories) | `GET /v2/editorial/images/categories` | List editorial categories
-[`getEditorialImageDetails`](EditorialImagesApi.md#getEditorialImageDetails) | `GET /v2/editorial/images/{id}` | Get editorial content details
+[`getEditorialImage`](EditorialImagesApi.md#getEditorialImage) | `GET /v2/editorial/images/{id}` | Get editorial content details
 [`getEditorialImageLicenseList`](EditorialImagesApi.md#getEditorialImageLicenseList) | `GET /v2/editorial/images/licenses` | List editorial image licenses
 [`getEditorialImageLivefeed`](EditorialImagesApi.md#getEditorialImageLivefeed) | `GET /v2/editorial/images/livefeeds/{id}` | Get editorial livefeed
+[`getEditorialImageLivefeedItems`](EditorialImagesApi.md#getEditorialImageLivefeedItems) | `GET /v2/editorial/images/livefeeds/{id}/items` | Get editorial livefeed items
+[`getEditorialImageLivefeedList`](EditorialImagesApi.md#getEditorialImageLivefeedList) | `GET /v2/editorial/images/livefeeds` | Get editorial livefeed list
+[`getEditorialImage_0`](EditorialImagesApi.md#getEditorialImage_0) | `GET /v2/editorial/{id}` | (Deprecated) Get editorial content details
 [`getEditorialLivefeed`](EditorialImagesApi.md#getEditorialLivefeed) | `GET /v2/editorial/livefeeds/{id}` | (Deprecated) Get editorial livefeed
-[`getEditorialLivefeedImageItems`](EditorialImagesApi.md#getEditorialLivefeedImageItems) | `GET /v2/editorial/images/livefeeds/{id}/items` | Get editorial livefeed items
-[`getEditorialLivefeedImagesList`](EditorialImagesApi.md#getEditorialLivefeedImagesList) | `GET /v2/editorial/images/livefeeds` | Get editorial livefeed list
 [`getEditorialLivefeedItems`](EditorialImagesApi.md#getEditorialLivefeedItems) | `GET /v2/editorial/livefeeds/{id}/items` | (Deprecated) Get editorial livefeed items
 [`getEditorialLivefeedList`](EditorialImagesApi.md#getEditorialLivefeedList) | `GET /v2/editorial/livefeeds` | (Deprecated) Get editorial livefeed list
 [`getUpdatedEditorialImages`](EditorialImagesApi.md#getUpdatedEditorialImages) | `GET /v2/editorial/images/updated` | List updated content
 [`getUpdatedImages`](EditorialImagesApi.md#getUpdatedImages) | `GET /v2/editorial/updated` | (Deprecated) List updated content
 [`licenseEditorialImage`](EditorialImagesApi.md#licenseEditorialImage) | `POST /v2/editorial/licenses` | (Deprecated) License editorial content
 [`licenseEditorialImages`](EditorialImagesApi.md#licenseEditorialImages) | `POST /v2/editorial/images/licenses` | License editorial content
+[`listEditorialImageCategories`](EditorialImagesApi.md#listEditorialImageCategories) | `GET /v2/editorial/images/categories` | List editorial categories
 [`searchEditorial`](EditorialImagesApi.md#searchEditorial) | `GET /v2/editorial/search` | (Deprecated) Search editorial content
 [`searchEditorialImages`](EditorialImagesApi.md#searchEditorialImages) | `GET /v2/editorial/images/search` | Search editorial images
 
@@ -88,9 +88,9 @@ This endpoint does not accept any parameters.
 # EditorialImagesApi.getEditorialImage
 > `EditorialContent EditorialImagesApi.getEditorialImage(id, country)`
 
-**(Deprecated) Get editorial content details**
+**Get editorial content details**
 
-Deprecated; use `GET /v2/editorial/images/{id}` instead to show information about an editorial image, including a URL to a preview image and the sizes that it is available in.
+This endpoint shows information about an editorial image, including a URL to a preview image and the sizes that it is available in.
 
 ### Example
 
@@ -212,195 +212,6 @@ Name | Type | Description
 }
 ```
 
-<a name="getEditorialImageCategories"></a>
-# EditorialImagesApi.getEditorialImageCategories
-> `EditorialImageCategoryResults EditorialImagesApi.getEditorialImageCategories()`
-
-**List editorial categories**
-
-This endpoint lists the categories that editorial images can belong to, which are separate from the categories that other types of assets can belong to.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.EditorialImagesApi();
-api.getEditorialImageCategories()
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-This endpoint does not accept any parameters.
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[EditorialImageCategoryResults](EditorialImageCategoryResults.md)
-
-### Example response
-
-```
-{
-  "data" : [ {
-    "name" : "name"
-  }, {
-    "name" : "name"
-  } ]
-}
-```
-
-<a name="getEditorialImageDetails"></a>
-# EditorialImagesApi.getEditorialImageDetails
-> `EditorialContent EditorialImagesApi.getEditorialImageDetails(id, country)`
-
-**Get editorial content details**
-
-This endpoint shows information about an editorial image, including a URL to a preview image and the sizes that it is available in.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.EditorialImagesApi();
-
-const id = "9926131a"; // String | Editorial ID
-
-const country = "USA"; // String | Returns only if the content is available for distribution in a certain country
-
-
-api.getEditorialImageDetails(id, country)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- id (required) | String| Editorial ID 
- country (required) | String| Returns only if the content is available for distribution in a certain country 
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[EditorialContent](EditorialContent.md)
-
-### Example response
-
-```
-{
-  "assets" : {
-    "thumb_220" : {
-      "width" : 7,
-      "url" : "url",
-      "height" : 2
-    },
-    "original" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "width" : 5,
-      "display_name" : "display_name",
-      "dpi" : 6,
-      "file_size" : 1,
-      "height" : 5
-    },
-    "watermark_450" : {
-      "width" : 7,
-      "url" : "url",
-      "height" : 2
-    },
-    "thumb_170" : {
-      "width" : 7,
-      "url" : "url",
-      "height" : 2
-    },
-    "medium_jpg" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "width" : 5,
-      "display_name" : "display_name",
-      "dpi" : 6,
-      "file_size" : 1,
-      "height" : 5
-    },
-    "small_jpg" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "width" : 5,
-      "display_name" : "display_name",
-      "dpi" : 6,
-      "file_size" : 1,
-      "height" : 5
-    },
-    "watermark_1500" : {
-      "width" : 7,
-      "url" : "url",
-      "height" : 2
-    }
-  },
-  "keywords" : [ "keywords", "keywords" ],
-  "aspect" : 0.80082819046101150206595775671303272247314453125,
-  "caption" : "caption",
-  "description" : "description",
-  "categories" : [ {
-    "name" : "name"
-  }, {
-    "name" : "name"
-  } ],
-  "id" : "id",
-  "title" : "title",
-  "byline" : "byline",
-  "date_taken" : "2000-01-23"
-}
-```
-
 <a name="getEditorialImageLicenseList"></a>
 # EditorialImagesApi.getEditorialImageLicenseList
 > `DownloadHistoryDataList EditorialImagesApi.getEditorialImageLicenseList(queryParams)`
@@ -420,12 +231,12 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 const api = new sstk.EditorialImagesApi();
 
 const queryParams = { 
-  'image_id': "image_id_example", // String | Show licenses for the specified editorial image ID
-  'license': "license_example", // String | Show editorial images that are available with the specified license name
+  'image_id': "12345678", // String | Show licenses for the specified editorial image ID
+  'license': "premier_editorial_all_digital", // String | Show editorial images that are available with the specified license name
   'page': 1, // Number | Page number
   'per_page': 20, // Number | Number of results per page
   'sort': "newest", // String | Sort order
-  'username': "username_example", // String | Filter licenses by username of licensee
+  'username': "aUniqueUsername", // String | Filter licenses by username of licensee
   'start_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created on or after the specified date
   'end_date': new Date("2021-03-29T13:25:13.521Z") // Date | Show licenses created before the specified date
 };
@@ -632,85 +443,9 @@ Name | Type | Description
 }
 ```
 
-<a name="getEditorialLivefeed"></a>
-# EditorialImagesApi.getEditorialLivefeed
-> `EditorialLivefeed EditorialImagesApi.getEditorialLivefeed(id, country)`
-
-**(Deprecated) Get editorial livefeed**
-
-Deprecated: use `GET /v2/editorial/images/livefeeds/{id}` instead to get an editorial livefeed.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.EditorialImagesApi();
-
-const id = "2018%2F10%2F15%2FWomen%20of%20the%20Year%20Lunch%20%26%20Awards%2C%20London"; // String | Editorial livefeed ID; must be an URI encoded string
-
-const country = "USA"; // String | Returns only if the livefeed is available for distribution in a certain country
-
-
-api.getEditorialLivefeed(id, country)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- id (required) | String| Editorial livefeed ID; must be an URI encoded string 
- country (required) | String| Returns only if the livefeed is available for distribution in a certain country 
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[EditorialLivefeed](EditorialLivefeed.md)
-
-### Example response
-
-```
-{
-  "created_time" : "2000-01-23T04:56:07.000+00:00",
-  "name" : "name",
-  "id" : "id",
-  "cover_item" : {
-    "width" : 6,
-    "id" : "id",
-    "url" : "url",
-    "height" : 0
-  },
-  "total_item_count" : 1
-}
-```
-
-<a name="getEditorialLivefeedImageItems"></a>
-# EditorialImagesApi.getEditorialLivefeedImageItems
-> `EditorialImageContentDataList EditorialImagesApi.getEditorialLivefeedImageItems(id, country)`
+<a name="getEditorialImageLivefeedItems"></a>
+# EditorialImagesApi.getEditorialImageLivefeedItems
+> `EditorialImageContentDataList EditorialImagesApi.getEditorialImageLivefeedItems(id, country)`
 
 **Get editorial livefeed items**
 
@@ -732,7 +467,7 @@ const id = "2018%2F10%2F15%2FWomen%20of%20the%20Year%20Lunch%20%26%20Awards%2C%2
 const country = "USA"; // String | Returns only if the livefeed items are available for distribution in a certain country
 
 
-api.getEditorialLivefeedImageItems(id, country)
+api.getEditorialImageLivefeedItems(id, country)
   .then((data) => {
     console.log(data);
   })
@@ -916,9 +651,9 @@ Name | Type | Description
 }
 ```
 
-<a name="getEditorialLivefeedImagesList"></a>
-# EditorialImagesApi.getEditorialLivefeedImagesList
-> `EditorialImageLivefeedList EditorialImagesApi.getEditorialLivefeedImagesList(country, queryParams)`
+<a name="getEditorialImageLivefeedList"></a>
+# EditorialImagesApi.getEditorialImageLivefeedList
+> `EditorialImageLivefeedList EditorialImagesApi.getEditorialImageLivefeedList(country, queryParams)`
 
 **Get editorial livefeed list**
 
@@ -942,7 +677,7 @@ const queryParams = {
   'per_page': 20 // Number | Number of results per page
 };
 
-api.getEditorialLivefeedImagesList(country, queryParams)
+api.getEditorialImageLivefeedList(country, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1007,6 +742,210 @@ Name | Type | Description
   "total_count" : 2,
   "page" : 5,
   "message" : "message"
+}
+```
+
+<a name="getEditorialImage_0"></a>
+# EditorialImagesApi.getEditorialImage_0
+> `EditorialContent EditorialImagesApi.getEditorialImage_0(id, country)`
+
+**(Deprecated) Get editorial content details**
+
+Deprecated; use `GET /v2/editorial/images/{id}` instead to show information about an editorial image, including a URL to a preview image and the sizes that it is available in.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.EditorialImagesApi();
+
+const id = "9926131a"; // String | Editorial ID
+
+const country = "USA"; // String | Returns only if the content is available for distribution in a certain country
+
+
+api.getEditorialImage_0(id, country)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ id (required) | String| Editorial ID 
+ country (required) | String| Returns only if the content is available for distribution in a certain country 
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[EditorialContent](EditorialContent.md)
+
+### Example response
+
+```
+{
+  "assets" : {
+    "thumb_220" : {
+      "width" : 7,
+      "url" : "url",
+      "height" : 2
+    },
+    "original" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "width" : 5,
+      "display_name" : "display_name",
+      "dpi" : 6,
+      "file_size" : 1,
+      "height" : 5
+    },
+    "watermark_450" : {
+      "width" : 7,
+      "url" : "url",
+      "height" : 2
+    },
+    "thumb_170" : {
+      "width" : 7,
+      "url" : "url",
+      "height" : 2
+    },
+    "medium_jpg" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "width" : 5,
+      "display_name" : "display_name",
+      "dpi" : 6,
+      "file_size" : 1,
+      "height" : 5
+    },
+    "small_jpg" : {
+      "is_licensable" : true,
+      "format" : "format",
+      "width" : 5,
+      "display_name" : "display_name",
+      "dpi" : 6,
+      "file_size" : 1,
+      "height" : 5
+    },
+    "watermark_1500" : {
+      "width" : 7,
+      "url" : "url",
+      "height" : 2
+    }
+  },
+  "keywords" : [ "keywords", "keywords" ],
+  "aspect" : 0.80082819046101150206595775671303272247314453125,
+  "caption" : "caption",
+  "description" : "description",
+  "categories" : [ {
+    "name" : "name"
+  }, {
+    "name" : "name"
+  } ],
+  "id" : "id",
+  "title" : "title",
+  "byline" : "byline",
+  "date_taken" : "2000-01-23"
+}
+```
+
+<a name="getEditorialLivefeed"></a>
+# EditorialImagesApi.getEditorialLivefeed
+> `EditorialLivefeed EditorialImagesApi.getEditorialLivefeed(id, country)`
+
+**(Deprecated) Get editorial livefeed**
+
+Deprecated: use `GET /v2/editorial/images/livefeeds/{id}` instead to get an editorial livefeed.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.EditorialImagesApi();
+
+const id = "2018%2F10%2F15%2FWomen%20of%20the%20Year%20Lunch%20%26%20Awards%2C%20London"; // String | Editorial livefeed ID; must be an URI encoded string
+
+const country = "USA"; // String | Returns only if the livefeed is available for distribution in a certain country
+
+
+api.getEditorialLivefeed(id, country)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ id (required) | String| Editorial livefeed ID; must be an URI encoded string 
+ country (required) | String| Returns only if the livefeed is available for distribution in a certain country 
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[EditorialLivefeed](EditorialLivefeed.md)
+
+### Example response
+
+```
+{
+  "created_time" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "cover_item" : {
+    "width" : 6,
+    "id" : "id",
+    "url" : "url",
+    "height" : 0
+  },
+  "total_item_count" : 1
 }
 ```
 
@@ -1964,6 +1903,67 @@ Required scopes:
     "data" : "data",
     "message" : "message",
     "items" : [ "{}", "{}" ]
+  } ]
+}
+```
+
+<a name="listEditorialImageCategories"></a>
+# EditorialImagesApi.listEditorialImageCategories
+> `EditorialImageCategoryResults EditorialImagesApi.listEditorialImageCategories()`
+
+**List editorial categories**
+
+This endpoint lists the categories that editorial images can belong to, which are separate from the categories that other types of assets can belong to.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.EditorialImagesApi();
+api.listEditorialImageCategories()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+This endpoint does not accept any parameters.
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[EditorialImageCategoryResults](EditorialImageCategoryResults.md)
+
+### Example response
+
+```
+{
+  "data" : [ {
+    "name" : "name"
+  }, {
+    "name" : "name"
   } ]
 }
 ```

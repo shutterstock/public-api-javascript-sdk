@@ -4,32 +4,32 @@ All URIs are relative to `https://api.shutterstock.com`.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[`addClipboxItems`](VideosApi.md#addClipboxItems) | `POST /v2/videos/collections/{id}/items` | Add videos to collections
-[`createClipbox`](VideosApi.md#createClipbox) | `POST /v2/videos/collections` | Create video collections
-[`deleteClipbox`](VideosApi.md#deleteClipbox) | `DELETE /v2/videos/collections/{id}` | Delete video collections
-[`deleteClipboxItems`](VideosApi.md#deleteClipboxItems) | `DELETE /v2/videos/collections/{id}/items` | Remove videos from collections
+[`addVideoCollectionItems`](VideosApi.md#addVideoCollectionItems) | `POST /v2/videos/collections/{id}/items` | Add videos to collections
+[`createVideoCollection`](VideosApi.md#createVideoCollection) | `POST /v2/videos/collections` | Create video collections
+[`deleteVideoCollection`](VideosApi.md#deleteVideoCollection) | `DELETE /v2/videos/collections/{id}` | Delete video collections
+[`deleteVideoCollectionItems`](VideosApi.md#deleteVideoCollectionItems) | `DELETE /v2/videos/collections/{id}/items` | Remove videos from collections
 [`downloadVideos`](VideosApi.md#downloadVideos) | `POST /v2/videos/licenses/{id}/downloads` | Download videos
-[`getClipbox`](VideosApi.md#getClipbox) | `GET /v2/videos/collections/{id}` | Get the details of video collections
-[`getClipboxItems`](VideosApi.md#getClipboxItems) | `GET /v2/videos/collections/{id}/items` | Get the contents of video collections
-[`getClipboxList`](VideosApi.md#getClipboxList) | `GET /v2/videos/collections` | List video collections
 [`getFeaturedVideoCollection`](VideosApi.md#getFeaturedVideoCollection) | `GET /v2/videos/collections/featured/{id}` | Get the details of featured video collections
 [`getFeaturedVideoCollectionItems`](VideosApi.md#getFeaturedVideoCollectionItems) | `GET /v2/videos/collections/featured/{id}/items` | Get the contents of featured video collections
 [`getFeaturedVideoCollectionList`](VideosApi.md#getFeaturedVideoCollectionList) | `GET /v2/videos/collections/featured` | List featured video collections
 [`getSimilarVideos`](VideosApi.md#getSimilarVideos) | `GET /v2/videos/{id}/similar` | List similar videos
 [`getUpdatedVideos`](VideosApi.md#getUpdatedVideos) | `GET /v2/videos/updated` | List updated videos
 [`getVideo`](VideosApi.md#getVideo) | `GET /v2/videos/{id}` | Get details about videos
-[`getVideoCategories`](VideosApi.md#getVideoCategories) | `GET /v2/videos/categories` | List video categories
+[`getVideoCollection`](VideosApi.md#getVideoCollection) | `GET /v2/videos/collections/{id}` | Get the details of video collections
+[`getVideoCollectionItems`](VideosApi.md#getVideoCollectionItems) | `GET /v2/videos/collections/{id}/items` | Get the contents of video collections
+[`getVideoCollectionList`](VideosApi.md#getVideoCollectionList) | `GET /v2/videos/collections` | List video collections
 [`getVideoLicenseList`](VideosApi.md#getVideoLicenseList) | `GET /v2/videos/licenses` | List video licenses
 [`getVideoList`](VideosApi.md#getVideoList) | `GET /v2/videos` | List videos
 [`getVideoSuggestions`](VideosApi.md#getVideoSuggestions) | `GET /v2/videos/search/suggestions` | Get suggestions for a search term
 [`licenseVideos`](VideosApi.md#licenseVideos) | `POST /v2/videos/licenses` | License videos
-[`renameClipbox`](VideosApi.md#renameClipbox) | `POST /v2/videos/collections/{id}` | Rename video collections
+[`listVideoCategories`](VideosApi.md#listVideoCategories) | `GET /v2/videos/categories` | List video categories
+[`renameVideoCollection`](VideosApi.md#renameVideoCollection) | `POST /v2/videos/collections/{id}` | Rename video collections
 [`searchVideos`](VideosApi.md#searchVideos) | `GET /v2/videos/search` | Search for videos
 
 
-<a name="addClipboxItems"></a>
-# VideosApi.addClipboxItems
-> `VideosApi.addClipboxItems(id, body)`
+<a name="addVideoCollectionItems"></a>
+# VideosApi.addVideoCollectionItems
+> `VideosApi.addVideoCollectionItems(id, body)`
 
 **Add videos to collections**
 
@@ -56,7 +56,7 @@ const body = {
   ]
 };
 
-videosApi.addLightboxItems(collectionId, body)
+videosApi.addImageCollectionItems(collectionId, body)
   .catch((error) => {
     console.error(error);
   });
@@ -90,9 +90,9 @@ Name | Type | Description
 No response body.
 
 
-<a name="createClipbox"></a>
-# VideosApi.createClipbox
-> `CollectionCreateResponse VideosApi.createClipbox(body)`
+<a name="createVideoCollection"></a>
+# VideosApi.createVideoCollection
+> `CollectionCreateResponse VideosApi.createVideoCollection(body)`
 
 **Create video collections**
 
@@ -111,7 +111,7 @@ const body = {
   "name": "New collection name"
 };
 
-videosApi.createClipbox(body)
+videosApi.createVideoCollection(body)
   .catch((error) => {
     console.error(error);
   });
@@ -151,9 +151,9 @@ Name | Type | Description
 }
 ```
 
-<a name="deleteClipbox"></a>
-# VideosApi.deleteClipbox
-> `VideosApi.deleteClipbox(id)`
+<a name="deleteVideoCollection"></a>
+# VideosApi.deleteVideoCollection
+> `VideosApi.deleteVideoCollection(id)`
 
 **Delete video collections**
 
@@ -170,7 +170,7 @@ const videosApi = new sstk.VideosApi();
 
 const collectionId = "17555176";
 
-videosApi.deleteClipbox(collectionId)
+videosApi.deleteVideoCollection(collectionId)
   .catch((error) => {
     console.error(error);
   });
@@ -203,9 +203,9 @@ No request headers required.
 No response body.
 
 
-<a name="deleteClipboxItems"></a>
-# VideosApi.deleteClipboxItems
-> `VideosApi.deleteClipboxItems(id, queryParams)`
+<a name="deleteVideoCollectionItems"></a>
+# VideosApi.deleteVideoCollectionItems
+> `VideosApi.deleteVideoCollectionItems(id, queryParams)`
 
 **Remove videos from collections**
 
@@ -229,7 +229,7 @@ const videosToRemove = {
   ]
 };
 
-videosApi.deleteClipboxItems(collectionId, videosToRemove)
+videosApi.deleteVideoCollectionItems(collectionId, videosToRemove)
   .catch((error) => {
     console.error(error);
   });
@@ -325,258 +325,6 @@ Name | Type | Description
 ```
 {
   "url" : "url"
-}
-```
-
-<a name="getClipbox"></a>
-# VideosApi.getClipbox
-> `Collection VideosApi.getClipbox(id)`
-
-**Get the details of video collections**
-
-This endpoint gets more detailed information about a collection, including the timestamp for its creation and the number of videos in it. To get the videos in collections, use GET /v2/videos/collections/{id}/items.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.VideosApi();
-
-const id = "17555176"; // String | The ID of the collection to return
-
-
-api.getClipbox(id)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- id (required) | String| The ID of the collection to return 
-
-### Accepted authentication
-
-
-- [OAuth](../README.md#OAuth_authentication) Required scopes:
-  - collections.view
-
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[Collection](Collection.md)
-
-### Example response
-
-```
-{
-  "created_time" : "2000-01-23T04:56:07.000+00:00",
-  "updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "share_url" : "share_url",
-  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "name" : "name",
-  "id" : "id",
-  "share_code" : "share_code",
-  "cover_item" : {
-    "added_time" : "2000-01-23T04:56:07.000+00:00",
-    "media_type" : "media_type",
-    "id" : "id"
-  },
-  "total_item_count" : 0
-}
-```
-
-<a name="getClipboxItems"></a>
-# VideosApi.getClipboxItems
-> `CollectionItemDataList VideosApi.getClipboxItems(id, queryParams)`
-
-**Get the contents of video collections**
-
-This endpoint lists the IDs of videos in a collection and the date that each was added.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.VideosApi();
-
-const id = "17555176"; // String | The ID of the Collection whose items are to be returned
-
-const queryParams = { 
-  'page': 1, // Number | Page number
-  'per_page': 100, // Number | Number of results per page
-  'sort': "oldest" // String | Sort order
-};
-
-api.getClipboxItems(id, queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- id (required) | String| The ID of the Collection whose items are to be returned 
- page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 100 
- sort | String| Sort order, defaults to oldest <br/><br/>Valid values: "newest", "oldest"
-
-### Accepted authentication
-
-
-- [OAuth](../README.md#OAuth_authentication) Required scopes:
-  - collections.view
-
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[CollectionItemDataList](CollectionItemDataList.md)
-
-### Example response
-
-```
-{
-  "data" : [ {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "76688182",
-    "media_type" : "audio"
-  }, {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "40005859",
-    "media_type" : "audio"
-  } ],
-  "page" : 1,
-  "per_page" : 100
-}
-```
-
-<a name="getClipboxList"></a>
-# VideosApi.getClipboxList
-> `CollectionDataList VideosApi.getClipboxList(queryParams)`
-
-**List video collections**
-
-This endpoint lists your collections of videos and their basic attributes.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.VideosApi();
-
-const queryParams = { 
-  'page': 1, // Number | Page number
-  'per_page': 100 // Number | Number of results per page
-};
-
-api.getClipboxList(queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 100 
-
-### Accepted authentication
-
-
-- [OAuth](../README.md#OAuth_authentication) Required scopes:
-  - collections.view
-
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[CollectionDataList](CollectionDataList.md)
-
-### Example response
-
-```
-{
-  "data" : [ {
-    "created_time" : "2014-11-05T19:29:56-05:00",
-    "id" : "5747953",
-    "name" : "Test Collection cdad",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:56-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:29:56-05:00",
-    "id" : "5747955",
-    "name" : "Test Collection ff5f",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:56-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:29:58-05:00",
-    "id" : "5747957",
-    "name" : "Updated Collection ebc4",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:58-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:32:13-05:00",
-    "id" : "5747971",
-    "name" : "Test Collection 0072",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:32:13-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:32:13-05:00",
-    "id" : "5747973",
-    "name" : "Test Collection d332",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:32:13-05:00"
-  } ]
 }
 ```
 
@@ -1356,32 +1104,28 @@ Name | Type | Description
 }
 ```
 
-<a name="getVideoCategories"></a>
-# VideosApi.getVideoCategories
-> `CategoryDataList VideosApi.getVideoCategories(queryParams)`
+<a name="getVideoCollection"></a>
+# VideosApi.getVideoCollection
+> `Collection VideosApi.getVideoCollection(id)`
 
-**List video categories**
+**Get the details of video collections**
 
-This endpoint lists the categories (Shutterstock-assigned genres) that videos can belong to.
+This endpoint gets more detailed information about a collection, including the timestamp for its creation and the number of videos in it. To get the videos in collections, use GET /v2/videos/collections/{id}/items.
 
 ### Example
 
 ```javascript
 const sstk = require('shutterstock-api');
 
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
 // To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.VideosApi();
 
-const queryParams = { 
-  'language': "es" // String | Language for the keywords and categories in the response
-};
+const id = "17555176"; // String | The ID of the collection to return
 
-api.getVideoCategories(queryParams)
+
+api.getVideoCollection(id)
   .then((data) => {
     console.log(data);
   })
@@ -1396,12 +1140,14 @@ api.getVideoCategories(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "el", "en", "es", "fi", "fr", "hu", "id", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ro", "ru", "sv", "th", "tr", "vi", "zh", "zh-Hant"
+ id (required) | String| The ID of the collection to return 
 
 ### Accepted authentication
 
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+- [OAuth](../README.md#OAuth_authentication) Required scopes:
+  - collections.view
+
 
 ### HTTP request headers
 
@@ -1411,35 +1157,201 @@ Name | Type | Description
 
 ### Return type
 
-[CategoryDataList](CategoryDataList.md)
+[Collection](Collection.md)
 
 ### Example response
 
 ```
 {
-  "per_page" : 6,
+  "created_time" : "2000-01-23T04:56:07.000+00:00",
+  "updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "share_url" : "share_url",
+  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "share_code" : "share_code",
+  "cover_item" : {
+    "added_time" : "2000-01-23T04:56:07.000+00:00",
+    "media_type" : "media_type",
+    "id" : "id"
+  },
+  "total_item_count" : 0
+}
+```
+
+<a name="getVideoCollectionItems"></a>
+# VideosApi.getVideoCollectionItems
+> `CollectionItemDataList VideosApi.getVideoCollectionItems(id, queryParams)`
+
+**Get the contents of video collections**
+
+This endpoint lists the IDs of videos in a collection and the date that each was added.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.VideosApi();
+
+const id = "17555176"; // String | The ID of the Collection whose items are to be returned
+
+const queryParams = { 
+  'page': 1, // Number | Page number
+  'per_page': 100, // Number | Number of results per page
+  'sort': "oldest" // String | Sort order
+};
+
+api.getVideoCollectionItems(id, queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ id (required) | String| The ID of the Collection whose items are to be returned 
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 100 
+ sort | String| Sort order, defaults to oldest <br/><br/>Valid values: "newest", "oldest"
+
+### Accepted authentication
+
+
+- [OAuth](../README.md#OAuth_authentication) Required scopes:
+  - collections.view
+
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[CollectionItemDataList](CollectionItemDataList.md)
+
+### Example response
+
+```
+{
   "data" : [ {
-    "name" : "name",
-    "id" : "id"
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "76688182",
+    "media_type" : "audio"
   }, {
-    "name" : "name",
-    "id" : "id"
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "40005859",
+    "media_type" : "audio"
   } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
+  "page" : 1,
+  "per_page" : 100
+}
+```
+
+<a name="getVideoCollectionList"></a>
+# VideosApi.getVideoCollectionList
+> `CollectionDataList VideosApi.getVideoCollectionList(queryParams)`
+
+**List video collections**
+
+This endpoint lists your collections of videos and their basic attributes.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.VideosApi();
+
+const queryParams = { 
+  'page': 1, // Number | Page number
+  'per_page': 100 // Number | Number of results per page
+};
+
+api.getVideoCollectionList(queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 100 
+
+### Accepted authentication
+
+
+- [OAuth](../README.md#OAuth_authentication) Required scopes:
+  - collections.view
+
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[CollectionDataList](CollectionDataList.md)
+
+### Example response
+
+```
+{
+  "data" : [ {
+    "created_time" : "2014-11-05T19:29:56-05:00",
+    "id" : "5747953",
+    "name" : "Test Collection cdad",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:56-05:00"
   }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
+    "created_time" : "2014-11-05T19:29:56-05:00",
+    "id" : "5747955",
+    "name" : "Test Collection ff5f",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:56-05:00"
+  }, {
+    "created_time" : "2014-11-05T19:29:58-05:00",
+    "id" : "5747957",
+    "name" : "Updated Collection ebc4",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:58-05:00"
+  }, {
+    "created_time" : "2014-11-05T19:32:13-05:00",
+    "id" : "5747971",
+    "name" : "Test Collection 0072",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:32:13-05:00"
+  }, {
+    "created_time" : "2014-11-05T19:32:13-05:00",
+    "id" : "5747973",
+    "name" : "Test Collection d332",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:32:13-05:00"
   } ]
 }
 ```
@@ -1455,25 +1367,18 @@ This endpoint lists existing licenses.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk = require("shutterstock-api");
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.VideosApi();
+const videosApi = new sstk.VideosApi();
 
-const queryParams = { 
-  'video_id': "video_id_example", // String | Show licenses for the specified video ID
-  'license': "license_example", // String | Show videos that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license
-  'page': 1, // Number | Page number
-  'per_page': 20, // Number | Number of results per page
-  'sort': "newest", // String | Sort by oldest or newest videos first
-  'username': "username_example", // String | Filter licenses by username of licensee
-  'start_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created on or after the specified date
-  'end_date': new Date("2021-03-29T13:25:13.521Z") // Date | Show licenses created before the specified date
+const queryParams = {
+  "start_date": "2016-10-03T01:25:13.521Z",
+  "end_date": "2016-10-04T13:25:13.521Z"
 };
 
-api.getVideoLicenseList(queryParams)
+videosApi.getVideoLicenseList(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1482,6 +1387,7 @@ api.getVideoLicenseList(queryParams)
   });
 
 ```
+
 
 ### Parameters
 
@@ -2052,9 +1958,97 @@ Required scopes:
 }
 ```
 
-<a name="renameClipbox"></a>
-# VideosApi.renameClipbox
-> `VideosApi.renameClipbox(id, body)`
+<a name="listVideoCategories"></a>
+# VideosApi.listVideoCategories
+> `CategoryDataList VideosApi.listVideoCategories(queryParams)`
+
+**List video categories**
+
+This endpoint lists the categories (Shutterstock-assigned genres) that videos can belong to.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.VideosApi();
+
+const queryParams = { 
+  'language': "es" // String | Language for the keywords and categories in the response
+};
+
+api.listVideoCategories(queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "el", "en", "es", "fi", "fr", "hu", "id", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ro", "ru", "sv", "th", "tr", "vi", "zh", "zh-Hant"
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[CategoryDataList](CategoryDataList.md)
+
+### Example response
+
+```
+{
+  "per_page" : 6,
+  "data" : [ {
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  }, {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  } ]
+}
+```
+
+<a name="renameVideoCollection"></a>
+# VideosApi.renameVideoCollection
+> `VideosApi.renameVideoCollection(id, body)`
 
 **Rename video collections**
 
@@ -2075,7 +2069,7 @@ const body = {
   "name": "My new collection name"
 };
 
-videosApi.renameClipbox(collectionId, body)
+videosApi.renameVideoCollection(collectionId, body)
   .catch((error) => {
     console.error(error);
   });

@@ -4,34 +4,34 @@ All URIs are relative to `https://api.shutterstock.com`.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[`addLightboxItems`](ImagesApi.md#addLightboxItems) | `POST /v2/images/collections/{id}/items` | Add images to collections
-[`createLightbox`](ImagesApi.md#createLightbox) | `POST /v2/images/collections` | Create image collections
-[`deleteLightbox`](ImagesApi.md#deleteLightbox) | `DELETE /v2/images/collections/{id}` | Delete image collections
-[`deleteLightboxItems`](ImagesApi.md#deleteLightboxItems) | `DELETE /v2/images/collections/{id}/items` | Remove images from collections
+[`addImageCollectionItems`](ImagesApi.md#addImageCollectionItems) | `POST /v2/images/collections/{id}/items` | Add images to collections
+[`createImageCollection`](ImagesApi.md#createImageCollection) | `POST /v2/images/collections` | Create image collections
+[`deleteImageCollection`](ImagesApi.md#deleteImageCollection) | `DELETE /v2/images/collections/{id}` | Delete image collections
+[`deleteImageCollectionItems`](ImagesApi.md#deleteImageCollectionItems) | `DELETE /v2/images/collections/{id}/items` | Remove images from collections
 [`downloadImage`](ImagesApi.md#downloadImage) | `POST /v2/images/licenses/{id}/downloads` | Download images
-[`getFeaturedLightbox`](ImagesApi.md#getFeaturedLightbox) | `GET /v2/images/collections/featured/{id}` | Get the details of featured image collections
-[`getFeaturedLightboxItems`](ImagesApi.md#getFeaturedLightboxItems) | `GET /v2/images/collections/featured/{id}/items` | Get the contents of featured image collections
-[`getFeaturedLightboxList`](ImagesApi.md#getFeaturedLightboxList) | `GET /v2/images/collections/featured` | List featured image collections
+[`getFeaturedImageCollection`](ImagesApi.md#getFeaturedImageCollection) | `GET /v2/images/collections/featured/{id}` | Get the details of featured image collections
+[`getFeaturedImageCollectionItems`](ImagesApi.md#getFeaturedImageCollectionItems) | `GET /v2/images/collections/featured/{id}/items` | Get the contents of featured image collections
+[`getFeaturedImageCollectionList`](ImagesApi.md#getFeaturedImageCollectionList) | `GET /v2/images/collections/featured` | List featured image collections
 [`getImage`](ImagesApi.md#getImage) | `GET /v2/images/{id}` | Get details about images
-[`getImageCategories`](ImagesApi.md#getImageCategories) | `GET /v2/images/categories` | List image categories
+[`getImageCollection`](ImagesApi.md#getImageCollection) | `GET /v2/images/collections/{id}` | Get the details of image collections
+[`getImageCollectionItems`](ImagesApi.md#getImageCollectionItems) | `GET /v2/images/collections/{id}/items` | Get the contents of image collections
+[`getImageCollectionList`](ImagesApi.md#getImageCollectionList) | `GET /v2/images/collections` | List image collections
+[`getImageKeywordSuggestions`](ImagesApi.md#getImageKeywordSuggestions) | `POST /v2/images/search/suggestions` | Get keywords from text
 [`getImageLicenseList`](ImagesApi.md#getImageLicenseList) | `GET /v2/images/licenses` | List image licenses
 [`getImageList`](ImagesApi.md#getImageList) | `GET /v2/images` | List images
 [`getImageRecommendations`](ImagesApi.md#getImageRecommendations) | `GET /v2/images/recommendations` | List recommended images
 [`getImageSuggestions`](ImagesApi.md#getImageSuggestions) | `GET /v2/images/search/suggestions` | Get suggestions for a search term
-[`getLightbox`](ImagesApi.md#getLightbox) | `GET /v2/images/collections/{id}` | Get the details of image collections
-[`getLightboxItems`](ImagesApi.md#getLightboxItems) | `GET /v2/images/collections/{id}/items` | Get the contents of image collections
-[`getLightboxList`](ImagesApi.md#getLightboxList) | `GET /v2/images/collections` | List image collections
 [`getSimilarImages`](ImagesApi.md#getSimilarImages) | `GET /v2/images/{id}/similar` | List similar images
 [`getUpdatedImages`](ImagesApi.md#getUpdatedImages) | `GET /v2/images/updated` | List updated images
 [`licenseImages`](ImagesApi.md#licenseImages) | `POST /v2/images/licenses` | License images
-[`postImageEntities`](ImagesApi.md#postImageEntities) | `POST /v2/images/search/suggestions` | Get keywords from text
-[`renameLightbox`](ImagesApi.md#renameLightbox) | `POST /v2/images/collections/{id}` | Rename image collections
+[`listImageCategories`](ImagesApi.md#listImageCategories) | `GET /v2/images/categories` | List image categories
+[`renameImageCollection`](ImagesApi.md#renameImageCollection) | `POST /v2/images/collections/{id}` | Rename image collections
 [`searchImages`](ImagesApi.md#searchImages) | `GET /v2/images/search` | Search for images
 
 
-<a name="addLightboxItems"></a>
-# ImagesApi.addLightboxItems
-> `ImagesApi.addLightboxItems(id, body)`
+<a name="addImageCollectionItems"></a>
+# ImagesApi.addImageCollectionItems
+> `ImagesApi.addImageCollectionItems(id, body)`
 
 **Add images to collections**
 
@@ -57,7 +57,7 @@ const body = {
   ]
 };
 
-imagesApi.addLightboxItems(collectionId, body)
+imagesApi.addImageCollectionItems(collectionId, body)
   .catch((error) => {
     console.error(error);
   });
@@ -91,9 +91,9 @@ Name | Type | Description
 No response body.
 
 
-<a name="createLightbox"></a>
-# ImagesApi.createLightbox
-> `ImagesApi.createLightbox(body)`
+<a name="createImageCollection"></a>
+# ImagesApi.createImageCollection
+> `ImagesApi.createImageCollection(body)`
 
 **Create image collections**
 
@@ -112,7 +112,7 @@ const body = {
   "name": "My collection"
 };
 
-imagesApi.createLightbox(body)
+imagesApi.createImageCollection(body)
   .catch((error) => {
     console.error(error);
   });
@@ -145,9 +145,9 @@ Name | Type | Description
 No response body.
 
 
-<a name="deleteLightbox"></a>
-# ImagesApi.deleteLightbox
-> `ImagesApi.deleteLightbox(id)`
+<a name="deleteImageCollection"></a>
+# ImagesApi.deleteImageCollection
+> `ImagesApi.deleteImageCollection(id)`
 
 **Delete image collections**
 
@@ -164,7 +164,7 @@ const imagesApi = new sstk.ImagesApi();
 
 const collectionId = "136351027"; // Collection ID
 
-imagesApi.deleteLightbox(collectionId)
+imagesApi.deleteImageCollection(collectionId)
   .catch((error) => {
     console.error(error);
   });
@@ -197,9 +197,9 @@ No request headers required.
 No response body.
 
 
-<a name="deleteLightboxItems"></a>
-# ImagesApi.deleteLightboxItems
-> `ImagesApi.deleteLightboxItems(id, queryParams)`
+<a name="deleteImageCollectionItems"></a>
+# ImagesApi.deleteImageCollectionItems
+> `ImagesApi.deleteImageCollectionItems(id, queryParams)`
 
 **Remove images from collections**
 
@@ -223,7 +223,7 @@ const imagesToRemove = {
   ]
 };
 
-imagesApi.deleteLightboxItems(collectionId, imagesToRemove)
+imagesApi.deleteImageCollectionItems(collectionId, imagesToRemove)
   .catch((error) => {
     console.error(error);
   });
@@ -324,9 +324,9 @@ Name | Type | Description
 }
 ```
 
-<a name="getFeaturedLightbox"></a>
-# ImagesApi.getFeaturedLightbox
-> `FeaturedCollection ImagesApi.getFeaturedLightbox(id, queryParams)`
+<a name="getFeaturedImageCollection"></a>
+# ImagesApi.getFeaturedImageCollection
+> `FeaturedCollection ImagesApi.getFeaturedImageCollection(id, queryParams)`
 
 **Get the details of featured image collections**
 
@@ -352,7 +352,7 @@ const queryParams = {
   'asset_hint': "1x" // String | Cover image size
 };
 
-api.getFeaturedLightbox(id, queryParams)
+api.getFeaturedImageCollection(id, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -406,9 +406,9 @@ Name | Type | Description
 }
 ```
 
-<a name="getFeaturedLightboxItems"></a>
-# ImagesApi.getFeaturedLightboxItems
-> `CollectionItemDataList ImagesApi.getFeaturedLightboxItems(id, queryParams)`
+<a name="getFeaturedImageCollectionItems"></a>
+# ImagesApi.getFeaturedImageCollectionItems
+> `CollectionItemDataList ImagesApi.getFeaturedImageCollectionItems(id, queryParams)`
 
 **Get the contents of featured image collections**
 
@@ -434,7 +434,7 @@ const queryParams = {
   'per_page': 100 // Number | Number of results per page
 };
 
-api.getFeaturedLightboxItems(id, queryParams)
+api.getFeaturedImageCollectionItems(id, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -486,9 +486,9 @@ Name | Type | Description
 }
 ```
 
-<a name="getFeaturedLightboxList"></a>
-# ImagesApi.getFeaturedLightboxList
-> `FeaturedCollectionDataList ImagesApi.getFeaturedLightboxList(queryParams)`
+<a name="getFeaturedImageCollectionList"></a>
+# ImagesApi.getFeaturedImageCollectionList
+> `FeaturedCollectionDataList ImagesApi.getFeaturedImageCollectionList(queryParams)`
 
 **List featured image collections**
 
@@ -513,7 +513,7 @@ const queryParams = {
   'asset_hint': "1x" // String | Cover image size
 };
 
-api.getFeaturedLightboxList(queryParams)
+api.getFeaturedImageCollectionList(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -781,32 +781,32 @@ Name | Type | Description
 }
 ```
 
-<a name="getImageCategories"></a>
-# ImagesApi.getImageCategories
-> `CategoryDataList ImagesApi.getImageCategories(queryParams)`
+<a name="getImageCollection"></a>
+# ImagesApi.getImageCollection
+> `Collection ImagesApi.getImageCollection(id, queryParams)`
 
-**List image categories**
+**Get the details of image collections**
 
-This endpoint lists the categories (Shutterstock-assigned genres) that images can belong to.
+This endpoint gets more detailed information about a collection, including its cover image and timestamps for its creation and most recent update. To get the images in collections, use `GET /v2/images/collections/{id}/items`.
 
 ### Example
 
 ```javascript
 const sstk = require('shutterstock-api');
 
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
 // To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 
+const id = "126351027"; // String | Collection ID
+
 const queryParams = { 
-  'language': "es" // String | Language for the keywords and categories in the response
+  'embed': ["embed_example"], // [String] | Which sharing information to include in the response, such as a URL to the collection
+  'share_code': "share_code_example" // String | Code to retrieve a shared collection
 };
 
-api.getImageCategories(queryParams)
+api.getImageCollection(id, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -821,12 +821,16 @@ api.getImageCategories(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "el", "en", "es", "fi", "fr", "hu", "id", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ro", "ru", "sv", "th", "tr", "vi", "zh", "zh-Hant"
+ id (required) | String| Collection ID 
+ embed | [String]| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
+ share_code | String| Code to retrieve a shared collection 
 
 ### Accepted authentication
 
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+- [OAuth](../README.md#OAuth_authentication) Required scopes:
+  - collections.view
+
 
 ### HTTP request headers
 
@@ -836,36 +840,266 @@ Name | Type | Description
 
 ### Return type
 
-[CategoryDataList](CategoryDataList.md)
+[Collection](Collection.md)
 
 ### Example response
 
 ```
 {
-  "per_page" : 6,
+  "created_time" : "2000-01-23T04:56:07.000+00:00",
+  "updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "share_url" : "share_url",
+  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "share_code" : "share_code",
+  "cover_item" : {
+    "added_time" : "2000-01-23T04:56:07.000+00:00",
+    "media_type" : "media_type",
+    "id" : "id"
+  },
+  "total_item_count" : 0
+}
+```
+
+<a name="getImageCollectionItems"></a>
+# ImagesApi.getImageCollectionItems
+> `CollectionItemDataList ImagesApi.getImageCollectionItems(id, queryParams)`
+
+**Get the contents of image collections**
+
+This endpoint lists the IDs of images in a collection and the date that each was added.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.ImagesApi();
+
+const id = "126351027"; // String | Collection ID
+
+const queryParams = { 
+  'share_code': "share_code_example", // String | Code to retrieve the contents of a shared collection
+  'page': 1, // Number | Page number
+  'per_page': 100 // Number | Number of results per page
+};
+
+api.getImageCollectionItems(id, queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ id (required) | String| Collection ID 
+ share_code | String| Code to retrieve the contents of a shared collection 
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 100 
+
+### Accepted authentication
+
+
+- [OAuth](../README.md#OAuth_authentication) Required scopes:
+  - collections.view
+
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[CollectionItemDataList](CollectionItemDataList.md)
+
+### Example response
+
+```
+{
   "data" : [ {
-    "name" : "name",
-    "id" : "id"
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "76688182",
+    "media_type" : "audio"
   }, {
-    "name" : "name",
-    "id" : "id"
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "40005859",
+    "media_type" : "audio"
   } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
+  "page" : 1,
+  "per_page" : 100
+}
+```
+
+<a name="getImageCollectionList"></a>
+# ImagesApi.getImageCollectionList
+> `CollectionDataList ImagesApi.getImageCollectionList(queryParams)`
+
+**List image collections**
+
+This endpoint lists your collections of images and their basic attributes.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.ImagesApi();
+
+const queryParams = { 
+  'embed': ["share_code"], // [String] | Which sharing information to include in the response, such as a URL to the collection
+  'page': 1, // Number | Page number
+  'per_page': 100 // Number | Number of results per page
+};
+
+api.getImageCollectionList(queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ embed | [String]| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 100 
+
+### Accepted authentication
+
+
+- [OAuth](../README.md#OAuth_authentication) Required scopes:
+  - collections.view
+
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[CollectionDataList](CollectionDataList.md)
+
+### Example response
+
+```
+{
+  "data" : [ {
+    "created_time" : "2014-11-05T19:29:56-05:00",
+    "id" : "5747953",
+    "name" : "Test Collection cdad",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:56-05:00"
   }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
+    "created_time" : "2014-11-05T19:29:56-05:00",
+    "id" : "5747955",
+    "name" : "Test Collection ff5f",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:56-05:00"
+  }, {
+    "created_time" : "2014-11-05T19:29:58-05:00",
+    "id" : "5747957",
+    "name" : "Updated Collection ebc4",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:58-05:00"
+  }, {
+    "created_time" : "2014-11-05T19:32:13-05:00",
+    "id" : "5747971",
+    "name" : "Test Collection 0072",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:32:13-05:00"
+  }, {
+    "created_time" : "2014-11-05T19:32:13-05:00",
+    "id" : "5747973",
+    "name" : "Test Collection d332",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:32:13-05:00"
   } ]
+}
+```
+
+<a name="getImageKeywordSuggestions"></a>
+# ImagesApi.getImageKeywordSuggestions
+> `SearchEntitiesResponse ImagesApi.getImageKeywordSuggestions(body)`
+
+**Get keywords from text**
+
+This endpoint returns up to 10 important keywords from a block of plain text.
+
+### Example
+
+```javascript
+const sstk = require("shutterstock-api");
+
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const imagesApi = new sstk.ImagesApi();
+
+const body = {
+  "text": "The beach is a wonderful place to visit. It has beautiful sand and ocean waves."
+};
+
+imagesApi.getImageKeywordSuggestions(body)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ body (required) | [SearchEntitiesRequest](SearchEntitiesRequest.md)| Plain text to extract keywords from 
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+- Content-Type: application/json
+- Accept: application/json
+
+### Return type
+
+[SearchEntitiesResponse](SearchEntitiesResponse.md)
+
+### Example response
+
+```
+{
+  "keywords" : [ "beach", "place", "sand", "ocean" ]
 }
 ```
 
@@ -880,25 +1114,18 @@ This endpoint lists existing licenses.
 ### Example
 
 ```javascript
-const sstk = require('shutterstock-api');
+const sstk = require("shutterstock-api");
 
-// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const api = new sstk.ImagesApi();
+const imagesApi = new sstk.ImagesApi();
 
-const queryParams = { 
-  'image_id': "image_id_example", // String | Show licenses for the specified image ID
-  'license': "license_example", // String | Show images that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license
-  'page': 1, // Number | Page number
-  'per_page': 20, // Number | Number of results per page
-  'sort': "newest", // String | Sort order
-  'username': "username_example", // String | Filter licenses by username of licensee
-  'start_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created on or after the specified date
-  'end_date': new Date("2021-03-29T13:25:13.521Z") // Date | Show licenses created before the specified date
+const queryParams = {
+  "start_date": "2016-10-03T01:25:13.521Z",
+  "end_date": "2016-10-04T13:25:13.521Z"
 };
 
-api.getImageLicenseList(queryParams)
+imagesApi.getImageLicenseList(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -907,6 +1134,7 @@ api.getImageLicenseList(queryParams)
   });
 
 ```
+
 
 ### Parameters
 
@@ -1496,266 +1724,6 @@ Name | Type | Description
 }
 ```
 
-<a name="getLightbox"></a>
-# ImagesApi.getLightbox
-> `Collection ImagesApi.getLightbox(id, queryParams)`
-
-**Get the details of image collections**
-
-This endpoint gets more detailed information about a collection, including its cover image and timestamps for its creation and most recent update. To get the images in collections, use `GET /v2/images/collections/{id}/items`.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.ImagesApi();
-
-const id = "126351027"; // String | Collection ID
-
-const queryParams = { 
-  'embed': ["embed_example"], // [String] | Which sharing information to include in the response, such as a URL to the collection
-  'share_code': "share_code_example" // String | Code to retrieve a shared collection
-};
-
-api.getLightbox(id, queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- id (required) | String| Collection ID 
- embed | [String]| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
- share_code | String| Code to retrieve a shared collection 
-
-### Accepted authentication
-
-
-- [OAuth](../README.md#OAuth_authentication) Required scopes:
-  - collections.view
-
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[Collection](Collection.md)
-
-### Example response
-
-```
-{
-  "created_time" : "2000-01-23T04:56:07.000+00:00",
-  "updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "share_url" : "share_url",
-  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "name" : "name",
-  "id" : "id",
-  "share_code" : "share_code",
-  "cover_item" : {
-    "added_time" : "2000-01-23T04:56:07.000+00:00",
-    "media_type" : "media_type",
-    "id" : "id"
-  },
-  "total_item_count" : 0
-}
-```
-
-<a name="getLightboxItems"></a>
-# ImagesApi.getLightboxItems
-> `CollectionItemDataList ImagesApi.getLightboxItems(id, queryParams)`
-
-**Get the contents of image collections**
-
-This endpoint lists the IDs of images in a collection and the date that each was added.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.ImagesApi();
-
-const id = "126351027"; // String | Collection ID
-
-const queryParams = { 
-  'share_code': "share_code_example", // String | Code to retrieve the contents of a shared collection
-  'page': 1, // Number | Page number
-  'per_page': 100 // Number | Number of results per page
-};
-
-api.getLightboxItems(id, queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- id (required) | String| Collection ID 
- share_code | String| Code to retrieve the contents of a shared collection 
- page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 100 
-
-### Accepted authentication
-
-
-- [OAuth](../README.md#OAuth_authentication) Required scopes:
-  - collections.view
-
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[CollectionItemDataList](CollectionItemDataList.md)
-
-### Example response
-
-```
-{
-  "data" : [ {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "76688182",
-    "media_type" : "audio"
-  }, {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "40005859",
-    "media_type" : "audio"
-  } ],
-  "page" : 1,
-  "per_page" : 100
-}
-```
-
-<a name="getLightboxList"></a>
-# ImagesApi.getLightboxList
-> `CollectionDataList ImagesApi.getLightboxList(queryParams)`
-
-**List image collections**
-
-This endpoint lists your collections of images and their basic attributes.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.ImagesApi();
-
-const queryParams = { 
-  'embed': ["share_code"], // [String] | Which sharing information to include in the response, such as a URL to the collection
-  'page': 1, // Number | Page number
-  'per_page': 100 // Number | Number of results per page
-};
-
-api.getLightboxList(queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- embed | [String]| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
- page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 100 
-
-### Accepted authentication
-
-
-- [OAuth](../README.md#OAuth_authentication) Required scopes:
-  - collections.view
-
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[CollectionDataList](CollectionDataList.md)
-
-### Example response
-
-```
-{
-  "data" : [ {
-    "created_time" : "2014-11-05T19:29:56-05:00",
-    "id" : "5747953",
-    "name" : "Test Collection cdad",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:56-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:29:56-05:00",
-    "id" : "5747955",
-    "name" : "Test Collection ff5f",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:56-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:29:58-05:00",
-    "id" : "5747957",
-    "name" : "Updated Collection ebc4",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:58-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:32:13-05:00",
-    "id" : "5747971",
-    "name" : "Test Collection 0072",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:32:13-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:32:13-05:00",
-    "id" : "5747973",
-    "name" : "Test Collection d332",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:32:13-05:00"
-  } ]
-}
-```
-
 <a name="getSimilarImages"></a>
 # ImagesApi.getSimilarImages
 > `ImageSearchResults ImagesApi.getSimilarImages(id, queryParams)`
@@ -2278,28 +2246,32 @@ Required scopes:
 }
 ```
 
-<a name="postImageEntities"></a>
-# ImagesApi.postImageEntities
-> `SearchEntitiesResponse ImagesApi.postImageEntities(body)`
+<a name="listImageCategories"></a>
+# ImagesApi.listImageCategories
+> `CategoryDataList ImagesApi.listImageCategories(queryParams)`
 
-**Get keywords from text**
+**List image categories**
 
-This endpoint returns up to 10 important keywords from a block of plain text.
+This endpoint lists the categories (Shutterstock-assigned genres) that images can belong to.
 
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi = new sstk.ImagesApi();
+const api = new sstk.ImagesApi();
 
-const body = {
-  "text": "The beach is a wonderful place to visit. It has beautiful sand and ocean waves."
+const queryParams = { 
+  'language': "es" // String | Language for the keywords and categories in the response
 };
 
-imagesApi.postImageEntities(body)
+api.listImageCategories(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -2309,13 +2281,12 @@ imagesApi.postImageEntities(body)
 
 ```
 
-
 ### Parameters
 
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [SearchEntitiesRequest](SearchEntitiesRequest.md)| Plain text to extract keywords from 
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "el", "en", "es", "fi", "fr", "hu", "id", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ro", "ru", "sv", "th", "tr", "vi", "zh", "zh-Hant"
 
 ### Accepted authentication
 
@@ -2325,24 +2296,47 @@ Name | Type | Description
 ### HTTP request headers
 
 
-- Content-Type: application/json
+
 - Accept: application/json
 
 ### Return type
 
-[SearchEntitiesResponse](SearchEntitiesResponse.md)
+[CategoryDataList](CategoryDataList.md)
 
 ### Example response
 
 ```
 {
-  "keywords" : [ "beach", "place", "sand", "ocean" ]
+  "per_page" : 6,
+  "data" : [ {
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  }, {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  } ]
 }
 ```
 
-<a name="renameLightbox"></a>
-# ImagesApi.renameLightbox
-> `ImagesApi.renameLightbox(id, body)`
+<a name="renameImageCollection"></a>
+# ImagesApi.renameImageCollection
+> `ImagesApi.renameImageCollection(id, body)`
 
 **Rename image collections**
 
@@ -2363,7 +2357,7 @@ const body = {
   "name": "My new collection name"
 };
 
-imagesApi.renameLightbox(collectionId, body)
+imagesApi.renameImageCollection(collectionId, body)
   .catch((error) => {
     console.error(error);
   });

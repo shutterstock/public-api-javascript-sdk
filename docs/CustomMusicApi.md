@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [`createAudioRenders`](CustomMusicApi.md#createAudioRenders) | `POST /v2/ai/audio/renders` | Create rendered audio
 [`fetchRenders`](CustomMusicApi.md#fetchRenders) | `GET /v2/ai/audio/renders` | Get details about audio renders
-[`listDescriptors`](CustomMusicApi.md#listDescriptors) | `GET /v2/ai/audio/descriptors` | List computer audio descriptors
-[`listInstruments`](CustomMusicApi.md#listInstruments) | `GET /v2/ai/audio/instruments` | List computer audio instruments
+[`listCustomDescriptors`](CustomMusicApi.md#listCustomDescriptors) | `GET /v2/ai/audio/descriptors` | List computer audio descriptors
+[`listCustomInstruments`](CustomMusicApi.md#listCustomInstruments) | `GET /v2/ai/audio/instruments` | List computer audio instruments
 
 
 <a name="createAudioRenders"></a>
@@ -854,9 +854,9 @@ Name | Type | Description
 }
 ```
 
-<a name="listDescriptors"></a>
-# CustomMusicApi.listDescriptors
-> `DescriptorsListResult CustomMusicApi.listDescriptors(queryParams)`
+<a name="listCustomDescriptors"></a>
+# CustomMusicApi.listCustomDescriptors
+> `DescriptorsListResult CustomMusicApi.listCustomDescriptors(queryParams)`
 
 **List computer audio descriptors**
 
@@ -899,8 +899,8 @@ Name | Type | Description
  id | [String]| Show descriptors with the specified IDs (case-sensitive) 
  instrument_name | String| Show descriptors with the specified instrument name (case-sensitive) 
  instrument_id | String| Show descriptors with the specified instrument ID (case-sensitive) 
- tempo_to | Number| Show descriptors with a tempo that is less than or equal to the specified number 
  tempo | Number| Show descriptors whose tempo range includes the specified tempo in beats per minute 
+ tempo_to | Number| Show descriptors with a tempo that is less than or equal to the specified number 
  tempo_from | Number| Show descriptors that have a tempo range that includes the specified tempo in beats per minute 
  name | String| Show descriptors with the specified name (case-sensitive) 
  tag | String| Show descriptors with the specified tag, such as Cinematic or Roomy (case-sensitive) 
@@ -986,9 +986,9 @@ Name | Type | Description
 }
 ```
 
-<a name="listInstruments"></a>
-# CustomMusicApi.listInstruments
-> `InstrumentsListResult CustomMusicApi.listInstruments(queryParams)`
+<a name="listCustomInstruments"></a>
+# CustomMusicApi.listCustomInstruments
+> `InstrumentsListResult CustomMusicApi.listCustomInstruments(queryParams)`
 
 **List computer audio instruments**
 
@@ -1007,7 +1007,7 @@ const queryParams = {
   "tag": "Percussion"
 };
 
-customMusicApi.listInstruments(queryParams)
+customMusicApi.listCustomInstruments(queryParams)
   .then((data) => {
     console.log(data);
   })

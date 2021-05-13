@@ -4,15 +4,15 @@ All URIs are relative to `https://api.shutterstock.com`.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[`editorialVideosDetails`](EditorialVideoApi.md#editorialVideosDetails) | `GET /v2/editorial/videos/{id}` | Get editorial video content details
-[`editorialVideosSearch`](EditorialVideoApi.md#editorialVideosSearch) | `GET /v2/editorial/videos/search` | Search editorial video content
-[`getEditorialCategories`](EditorialVideoApi.md#getEditorialCategories) | `GET /v2/editorial/videos/categories` | List editorial video categories
+[`getEditorialVideo`](EditorialVideoApi.md#getEditorialVideo) | `GET /v2/editorial/videos/{id}` | Get editorial video content details
 [`licenseEditorialVideo`](EditorialVideoApi.md#licenseEditorialVideo) | `POST /v2/editorial/videos/licenses` | License editorial video content
+[`listEditorialVideoCategories`](EditorialVideoApi.md#listEditorialVideoCategories) | `GET /v2/editorial/videos/categories` | List editorial video categories
+[`searchEditorialVideos`](EditorialVideoApi.md#searchEditorialVideos) | `GET /v2/editorial/videos/search` | Search editorial video content
 
 
-<a name="editorialVideosDetails"></a>
-# EditorialVideoApi.editorialVideosDetails
-> `EditorialVideoContent EditorialVideoApi.editorialVideosDetails(id, country)`
+<a name="getEditorialVideo"></a>
+# EditorialVideoApi.getEditorialVideo
+> `EditorialVideoContent EditorialVideoApi.getEditorialVideo(id, country)`
 
 **Get editorial video content details**
 
@@ -36,7 +36,7 @@ const id = "9926131a"; // String | Editorial ID
 const country = "USA"; // String | Returns only if the content is available for distribution in a certain country
 
 
-api.editorialVideosDetails(id, country)
+api.getEditorialVideo(id, country)
   .then((data) => {
     console.log(data);
   })
@@ -109,9 +109,173 @@ Name | Type | Description
 }
 ```
 
-<a name="editorialVideosSearch"></a>
-# EditorialVideoApi.editorialVideosSearch
-> `EditorialVideoSearchResults EditorialVideoApi.editorialVideosSearch(country, queryParams)`
+<a name="licenseEditorialVideo"></a>
+# EditorialVideoApi.licenseEditorialVideo
+> `LicenseEditorialContentResults EditorialVideoApi.licenseEditorialVideo(body)`
+
+**License editorial video content**
+
+This endpoint gets licenses for one or more editorial videos. You must specify the country and one or more editorial videos to license.
+
+### Example
+
+```javascript
+const sstk = require("shutterstock-api");
+
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const editorialApi = new sstk.EditorialApi();
+
+const body = {
+  "editorial": [
+    {
+      "editorial_id": "10687492a",
+      "license": "premier_editorial_video_comp"
+    }
+  ],
+  "country": "USA"
+};
+
+editorialApi.licenseEditorialVideo(body)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ body (required) | [LicenseEditorialVideoContentRequest](LicenseEditorialVideoContentRequest.md)| License editorial video content 
+
+### Accepted authentication
+
+
+- [OAuth](../README.md#OAuth_authentication) Required scopes:
+  - licenses.create
+Required scopes:
+  - purchases.view
+
+
+### HTTP request headers
+
+
+- Content-Type: application/json
+- Accept: application/json
+
+### Return type
+
+[LicenseEditorialContentResults](LicenseEditorialContentResults.md)
+
+### Example response
+
+```
+{
+  "per_page" : 1,
+  "data" : [ {
+    "download" : {
+      "url" : "url"
+    },
+    "allotment_charge" : 0,
+    "error" : "error",
+    "editorial_id" : "editorial_id"
+  }, {
+    "download" : {
+      "url" : "url"
+    },
+    "allotment_charge" : 0,
+    "error" : "error",
+    "editorial_id" : "editorial_id"
+  } ],
+  "total_count" : 5,
+  "page" : 6,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  }, {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  } ]
+}
+```
+
+<a name="listEditorialVideoCategories"></a>
+# EditorialVideoApi.listEditorialVideoCategories
+> `EditorialVideoCategoryResults EditorialVideoApi.listEditorialVideoCategories()`
+
+**List editorial video categories**
+
+This endpoint lists the categories that editorial videos can belong to, which are separate from the categories that other types of assets can belong to.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.EditorialVideoApi();
+api.listEditorialVideoCategories()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+This endpoint does not accept any parameters.
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[EditorialVideoCategoryResults](EditorialVideoCategoryResults.md)
+
+### Example response
+
+```
+{
+  "data" : [ {
+    "name" : "name"
+  }, {
+    "name" : "name"
+  } ]
+}
+```
+
+<a name="searchEditorialVideos"></a>
+# EditorialVideoApi.searchEditorialVideos
+> `EditorialVideoSearchResults EditorialVideoApi.searchEditorialVideos(country, queryParams)`
 
 **Search editorial video content**
 
@@ -135,7 +299,7 @@ const queryParams = {
 
 const country = "USA";
 
-editorialApi.editorialVideosSearch(country, queryParams)
+editorialApi.searchEditorialVideos(country, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -258,170 +422,6 @@ Name | Type | Description
   "page" : 6,
   "message" : "message",
   "search_id" : "search_id"
-}
-```
-
-<a name="getEditorialCategories"></a>
-# EditorialVideoApi.getEditorialCategories
-> `EditorialVideoCategoryResults EditorialVideoApi.getEditorialCategories()`
-
-**List editorial video categories**
-
-This endpoint lists the categories that editorial videos can belong to, which are separate from the categories that other types of assets can belong to.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.EditorialVideoApi();
-api.getEditorialCategories()
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-This endpoint does not accept any parameters.
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[EditorialVideoCategoryResults](EditorialVideoCategoryResults.md)
-
-### Example response
-
-```
-{
-  "data" : [ {
-    "name" : "name"
-  }, {
-    "name" : "name"
-  } ]
-}
-```
-
-<a name="licenseEditorialVideo"></a>
-# EditorialVideoApi.licenseEditorialVideo
-> `LicenseEditorialContentResults EditorialVideoApi.licenseEditorialVideo(body)`
-
-**License editorial video content**
-
-This endpoint gets licenses for one or more editorial videos. You must specify the country and one or more editorial videos to license.
-
-### Example
-
-```javascript
-const sstk = require("shutterstock-api");
-
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const editorialApi = new sstk.EditorialApi();
-
-const body = {
-  "editorial": [
-    {
-      "editorial_id": "10687492a",
-      "license": "premier_editorial_video_comp"
-    }
-  ],
-  "country": "USA"
-};
-
-editorialApi.licenseEditorialVideo(body)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- body (required) | [LicenseEditorialVideoContentRequest](LicenseEditorialVideoContentRequest.md)| License editorial video content 
-
-### Accepted authentication
-
-
-- [OAuth](../README.md#OAuth_authentication) Required scopes:
-  - licenses.create
-Required scopes:
-  - purchases.view
-
-
-### HTTP request headers
-
-
-- Content-Type: application/json
-- Accept: application/json
-
-### Return type
-
-[LicenseEditorialContentResults](LicenseEditorialContentResults.md)
-
-### Example response
-
-```
-{
-  "per_page" : 1,
-  "data" : [ {
-    "download" : {
-      "url" : "url"
-    },
-    "allotment_charge" : 0,
-    "error" : "error",
-    "editorial_id" : "editorial_id"
-  }, {
-    "download" : {
-      "url" : "url"
-    },
-    "allotment_charge" : 0,
-    "error" : "error",
-    "editorial_id" : "editorial_id"
-  } ],
-  "total_count" : 5,
-  "page" : 6,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
 }
 ```
 

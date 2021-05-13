@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [`getAccessToken`](UsersApi.md#getAccessToken) | `GET /v2/user/access_token` | Get access token details
 [`getUser`](UsersApi.md#getUser) | `GET /v2/user` | Get user details
-[`getUserSubsciptionList`](UsersApi.md#getUserSubsciptionList) | `GET /v2/user/subscriptions` | List user subscriptions
+[`getUserSubscriptionList`](UsersApi.md#getUserSubscriptionList) | `GET /v2/user/subscriptions` | List user subscriptions
 
 
 <a name="getAccessToken"></a>
@@ -135,9 +135,9 @@ This endpoint does not accept any parameters.
 }
 ```
 
-<a name="getUserSubsciptionList"></a>
-# UsersApi.getUserSubsciptionList
-> `SubscriptionDataList UsersApi.getUserSubsciptionList()`
+<a name="getUserSubscriptionList"></a>
+# UsersApi.getUserSubscriptionList
+> `SubscriptionDataList UsersApi.getUserSubscriptionList()`
 
 **List user subscriptions**
 
@@ -150,7 +150,7 @@ const sstk = require('shutterstock-api');
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.UsersApi();
-api.getUserSubsciptionList()
+api.getUserSubscriptionList()
   .then((data) => {
     console.log(data);
   })

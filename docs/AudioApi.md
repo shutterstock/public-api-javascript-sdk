@@ -4,28 +4,28 @@ All URIs are relative to `https://api.shutterstock.com`.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[`addSoundboxItems`](AudioApi.md#addSoundboxItems) | `POST /v2/audio/collections/{id}/items` | Add audio tracks to collections
-[`createSoundbox`](AudioApi.md#createSoundbox) | `POST /v2/audio/collections` | Create audio collections
-[`deleteSoundbox`](AudioApi.md#deleteSoundbox) | `DELETE /v2/audio/collections/{id}` | Delete audio collections
-[`deleteSoundboxItems`](AudioApi.md#deleteSoundboxItems) | `DELETE /v2/audio/collections/{id}/items` | Remove audio tracks from collections
+[`addTrackCollectionItems`](AudioApi.md#addTrackCollectionItems) | `POST /v2/audio/collections/{id}/items` | Add audio tracks to collections
+[`createTrackCollection`](AudioApi.md#createTrackCollection) | `POST /v2/audio/collections` | Create audio collections
+[`deleteTrackCollection`](AudioApi.md#deleteTrackCollection) | `DELETE /v2/audio/collections/{id}` | Delete audio collections
+[`deleteTrackCollectionItems`](AudioApi.md#deleteTrackCollectionItems) | `DELETE /v2/audio/collections/{id}/items` | Remove audio tracks from collections
 [`downloadTracks`](AudioApi.md#downloadTracks) | `POST /v2/audio/licenses/{id}/downloads` | Download audio tracks
-[`getAudioLicenseList`](AudioApi.md#getAudioLicenseList) | `GET /v2/audio/licenses` | List audio licenses
-[`getGenres`](AudioApi.md#getGenres) | `GET /v2/audio/genres` | List audio genres
-[`getInstruments`](AudioApi.md#getInstruments) | `GET /v2/audio/instruments` | List audio instruments
-[`getMoods`](AudioApi.md#getMoods) | `GET /v2/audio/moods` | List audio moods
-[`getSoundbox`](AudioApi.md#getSoundbox) | `GET /v2/audio/collections/{id}` | Get the details of audio collections
-[`getSoundboxItems`](AudioApi.md#getSoundboxItems) | `GET /v2/audio/collections/{id}/items` | Get the contents of audio collections
-[`getSoundboxList`](AudioApi.md#getSoundboxList) | `GET /v2/audio/collections` | List audio collections
 [`getTrack`](AudioApi.md#getTrack) | `GET /v2/audio/{id}` | Get details about audio tracks
+[`getTrackCollection`](AudioApi.md#getTrackCollection) | `GET /v2/audio/collections/{id}` | Get the details of audio collections
+[`getTrackCollectionItems`](AudioApi.md#getTrackCollectionItems) | `GET /v2/audio/collections/{id}/items` | Get the contents of audio collections
+[`getTrackCollectionList`](AudioApi.md#getTrackCollectionList) | `GET /v2/audio/collections` | List audio collections
+[`getTrackLicenseList`](AudioApi.md#getTrackLicenseList) | `GET /v2/audio/licenses` | List audio licenses
 [`getTrackList`](AudioApi.md#getTrackList) | `GET /v2/audio` | List audio tracks
 [`licenseTrack`](AudioApi.md#licenseTrack) | `POST /v2/audio/licenses` | License audio tracks
-[`renameSoundbox`](AudioApi.md#renameSoundbox) | `POST /v2/audio/collections/{id}` | Rename audio collections
-[`searchAudio`](AudioApi.md#searchAudio) | `GET /v2/audio/search` | Search for tracks
+[`listGenres`](AudioApi.md#listGenres) | `GET /v2/audio/genres` | List audio genres
+[`listInstruments`](AudioApi.md#listInstruments) | `GET /v2/audio/instruments` | List audio instruments
+[`listMoods`](AudioApi.md#listMoods) | `GET /v2/audio/moods` | List audio moods
+[`renameTrackCollection`](AudioApi.md#renameTrackCollection) | `POST /v2/audio/collections/{id}` | Rename audio collections
+[`searchTracks`](AudioApi.md#searchTracks) | `GET /v2/audio/search` | Search for tracks
 
 
-<a name="addSoundboxItems"></a>
-# AudioApi.addSoundboxItems
-> `AudioApi.addSoundboxItems(id, body)`
+<a name="addTrackCollectionItems"></a>
+# AudioApi.addTrackCollectionItems
+> `AudioApi.addTrackCollectionItems(id, body)`
 
 **Add audio tracks to collections**
 
@@ -53,7 +53,7 @@ const body = {
   ]
 };
 
-audioApi.addSoundboxItems(collectionId, body)
+audioApi.addTrackCollectionItems(collectionId, body)
   .catch((error) => {
     console.error(error);
   });
@@ -87,9 +87,9 @@ Name | Type | Description
 No response body.
 
 
-<a name="createSoundbox"></a>
-# AudioApi.createSoundbox
-> `CollectionCreateResponse AudioApi.createSoundbox(body)`
+<a name="createTrackCollection"></a>
+# AudioApi.createTrackCollection
+> `CollectionCreateResponse AudioApi.createTrackCollection(body)`
 
 **Create audio collections**
 
@@ -108,7 +108,7 @@ const body = {
   "name": "Best rock music"
 };
 
-audioApi.createSoundbox(body)
+audioApi.createTrackCollection(body)
   .catch((error) => {
     console.error(error);
   });
@@ -148,9 +148,9 @@ Name | Type | Description
 }
 ```
 
-<a name="deleteSoundbox"></a>
-# AudioApi.deleteSoundbox
-> `AudioApi.deleteSoundbox(id)`
+<a name="deleteTrackCollection"></a>
+# AudioApi.deleteTrackCollection
+> `AudioApi.deleteTrackCollection(id)`
 
 **Delete audio collections**
 
@@ -167,7 +167,7 @@ const audioApi = new sstk.AudioApi();
 
 const collectionId = "48433107";
 
-audioApi.deleteSoundbox(collectionId)
+audioApi.deleteTrackCollection(collectionId)
   .catch((error) => {
     console.error(error);
   });
@@ -200,9 +200,9 @@ No request headers required.
 No response body.
 
 
-<a name="deleteSoundboxItems"></a>
-# AudioApi.deleteSoundboxItems
-> `AudioApi.deleteSoundboxItems(id, queryParams)`
+<a name="deleteTrackCollectionItems"></a>
+# AudioApi.deleteTrackCollectionItems
+> `AudioApi.deleteTrackCollectionItems(id, queryParams)`
 
 **Remove audio tracks from collections**
 
@@ -227,7 +227,7 @@ const tracksToRemove = {
   ]
 };
 
-audioApi.deleteSoundboxItems(collectionId, tracksToRemove)
+audioApi.deleteTrackCollectionItems(collectionId, tracksToRemove)
   .catch((error) => {
     console.error(error);
   });
@@ -320,586 +320,6 @@ Name | Type | Description
 ```
 {
   "url" : "url"
-}
-```
-
-<a name="getAudioLicenseList"></a>
-# AudioApi.getAudioLicenseList
-> `DownloadHistoryDataList AudioApi.getAudioLicenseList(queryParams)`
-
-**List audio licenses**
-
-This endpoint lists existing licenses. You can filter the results according to the track ID to see if you have an existing license for a specific track.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.AudioApi();
-
-const queryParams = { 
-  'audio_id': "1", // String | Show licenses for the specified track ID
-  'license': "48433107", // String | Restrict results by license. Prepending a `-` sign will exclude results by license
-  'page': 1, // Number | Page number
-  'per_page': 20, // Number | Number of results per page
-  'sort': "newest", // String | Sort order
-  'username': "username_example", // String | Filter licenses by username of licensee
-  'start_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created on or after the specified date
-  'end_date': new Date("2021-03-29T13:25:13.521Z") // Date | Show licenses created before the specified date
-};
-
-api.getAudioLicenseList(queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- audio_id | String| Show licenses for the specified track ID 
- license | String| Restrict results by license. Prepending a `-` sign will exclude results by license 
- page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 20 
- sort | String| Sort order, defaults to newest <br/><br/>Valid values: "newest", "oldest"
- username | String| Filter licenses by username of licensee 
- start_date | Date| Show licenses created on or after the specified date 
- end_date | Date| Show licenses created before the specified date 
-
-### Accepted authentication
-
-
-- [OAuth](../README.md#OAuth_authentication) Required scopes:
-  - licenses.view
-
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[DownloadHistoryDataList](DownloadHistoryDataList.md)
-
-### Example response
-
-```
-{
-  "per_page" : 6,
-  "data" : [ {
-    "subscription_id" : "subscription_id",
-    "image" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "license" : "license",
-    "download_time" : "2000-01-23T04:56:07.000+00:00",
-    "metadata" : "{}",
-    "is_downloadable" : true,
-    "audio" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "id" : "id",
-    "video" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "user" : {
-      "username" : "username"
-    }
-  }, {
-    "subscription_id" : "subscription_id",
-    "image" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "license" : "license",
-    "download_time" : "2000-01-23T04:56:07.000+00:00",
-    "metadata" : "{}",
-    "is_downloadable" : true,
-    "audio" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "id" : "id",
-    "video" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "user" : {
-      "username" : "username"
-    }
-  } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
-}
-```
-
-<a name="getGenres"></a>
-# AudioApi.getGenres
-> `GenreList AudioApi.getGenres()`
-
-**List audio genres**
-
-This endpoint returns a list of all audio genres.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.AudioApi();
-api.getGenres()
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-This endpoint does not accept any parameters.
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[GenreList](GenreList.md)
-
-### Example response
-
-```
-{
-  "data" : [ "Rock" ]
-}
-```
-
-<a name="getInstruments"></a>
-# AudioApi.getInstruments
-> `InstrumentList AudioApi.getInstruments()`
-
-**List audio instruments**
-
-This endpoint returns a list of all audio instruments.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.AudioApi();
-api.getInstruments()
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-This endpoint does not accept any parameters.
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[InstrumentList](InstrumentList.md)
-
-### Example response
-
-```
-{
-  "data" : [ "Electric Guitar" ]
-}
-```
-
-<a name="getMoods"></a>
-# AudioApi.getMoods
-> `MoodList AudioApi.getMoods()`
-
-**List audio moods**
-
-This endpoint returns a list of all audio moods.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.AudioApi();
-api.getMoods()
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-This endpoint does not accept any parameters.
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[MoodList](MoodList.md)
-
-### Example response
-
-```
-{
-  "data" : [ "Aggressive" ]
-}
-```
-
-<a name="getSoundbox"></a>
-# AudioApi.getSoundbox
-> `Collection AudioApi.getSoundbox(id)`
-
-**Get the details of audio collections**
-
-This endpoint gets more detailed information about a collection, including the number of items in it and when it was last updated. To get the tracks in collections, use `GET /v2/audio/collections/{id}/items`.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.AudioApi();
-
-const id = "48433107"; // String | Collection ID
-
-
-api.getSoundbox(id)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- id (required) | String| Collection ID 
-
-### Accepted authentication
-
-
-- [OAuth](../README.md#OAuth_authentication) Required scopes:
-  - collections.view
-
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[Collection](Collection.md)
-
-### Example response
-
-```
-{
-  "created_time" : "2000-01-23T04:56:07.000+00:00",
-  "updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "share_url" : "share_url",
-  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "name" : "name",
-  "id" : "id",
-  "share_code" : "share_code",
-  "cover_item" : {
-    "added_time" : "2000-01-23T04:56:07.000+00:00",
-    "media_type" : "media_type",
-    "id" : "id"
-  },
-  "total_item_count" : 0
-}
-```
-
-<a name="getSoundboxItems"></a>
-# AudioApi.getSoundboxItems
-> `CollectionItemDataList AudioApi.getSoundboxItems(id, queryParams)`
-
-**Get the contents of audio collections**
-
-This endpoint lists the IDs of tracks in a collection and the date that each was added.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.AudioApi();
-
-const id = "48433113"; // String | Collection ID
-
-const queryParams = { 
-  'page': 1, // Number | Page number
-  'per_page': 100, // Number | Number of results per page
-  'sort': "oldest" // String | Sort order
-};
-
-api.getSoundboxItems(id, queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- id (required) | String| Collection ID 
- page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 100 
- sort | String| Sort order, defaults to oldest <br/><br/>Valid values: "newest", "oldest"
-
-### Accepted authentication
-
-
-- [OAuth](../README.md#OAuth_authentication) Required scopes:
-  - collections.view
-
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[CollectionItemDataList](CollectionItemDataList.md)
-
-### Example response
-
-```
-{
-  "data" : [ {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "76688182",
-    "media_type" : "audio"
-  }, {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "40005859",
-    "media_type" : "audio"
-  } ],
-  "page" : 1,
-  "per_page" : 100
-}
-```
-
-<a name="getSoundboxList"></a>
-# AudioApi.getSoundboxList
-> `CollectionDataList AudioApi.getSoundboxList(queryParams)`
-
-**List audio collections**
-
-This endpoint lists your collections of audio tracks and their basic attributes.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.AudioApi();
-
-const queryParams = { 
-  'page': 1, // Number | Page number
-  'per_page': 100 // Number | Number of results per page
-};
-
-api.getSoundboxList(queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 100 
-
-### Accepted authentication
-
-
-- [OAuth](../README.md#OAuth_authentication) Required scopes:
-  - collections.view
-
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[CollectionDataList](CollectionDataList.md)
-
-### Example response
-
-```
-{
-  "data" : [ {
-    "created_time" : "2014-11-05T19:29:56-05:00",
-    "id" : "5747953",
-    "name" : "Test Collection cdad",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:56-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:29:56-05:00",
-    "id" : "5747955",
-    "name" : "Test Collection ff5f",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:56-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:29:58-05:00",
-    "id" : "5747957",
-    "name" : "Updated Collection ebc4",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:58-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:32:13-05:00",
-    "id" : "5747971",
-    "name" : "Test Collection 0072",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:32:13-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:32:13-05:00",
-    "id" : "5747973",
-    "name" : "Test Collection d332",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:32:13-05:00"
-  } ]
 }
 ```
 
@@ -1017,6 +437,409 @@ Name | Type | Description
   "updated_time" : "2016-08-18T17:59:33-04:00",
   "vocal_description" : "",
   "url" : ""
+}
+```
+
+<a name="getTrackCollection"></a>
+# AudioApi.getTrackCollection
+> `Collection AudioApi.getTrackCollection(id)`
+
+**Get the details of audio collections**
+
+This endpoint gets more detailed information about a collection, including the number of items in it and when it was last updated. To get the tracks in collections, use `GET /v2/audio/collections/{id}/items`.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.AudioApi();
+
+const id = "48433107"; // String | Collection ID
+
+
+api.getTrackCollection(id)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ id (required) | String| Collection ID 
+
+### Accepted authentication
+
+
+- [OAuth](../README.md#OAuth_authentication) Required scopes:
+  - collections.view
+
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[Collection](Collection.md)
+
+### Example response
+
+```
+{
+  "created_time" : "2000-01-23T04:56:07.000+00:00",
+  "updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "share_url" : "share_url",
+  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
+  "name" : "name",
+  "id" : "id",
+  "share_code" : "share_code",
+  "cover_item" : {
+    "added_time" : "2000-01-23T04:56:07.000+00:00",
+    "media_type" : "media_type",
+    "id" : "id"
+  },
+  "total_item_count" : 0
+}
+```
+
+<a name="getTrackCollectionItems"></a>
+# AudioApi.getTrackCollectionItems
+> `CollectionItemDataList AudioApi.getTrackCollectionItems(id, queryParams)`
+
+**Get the contents of audio collections**
+
+This endpoint lists the IDs of tracks in a collection and the date that each was added.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.AudioApi();
+
+const id = "48433113"; // String | Collection ID
+
+const queryParams = { 
+  'page': 1, // Number | Page number
+  'per_page': 100, // Number | Number of results per page
+  'sort': "oldest" // String | Sort order
+};
+
+api.getTrackCollectionItems(id, queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ id (required) | String| Collection ID 
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 100 
+ sort | String| Sort order, defaults to oldest <br/><br/>Valid values: "newest", "oldest"
+
+### Accepted authentication
+
+
+- [OAuth](../README.md#OAuth_authentication) Required scopes:
+  - collections.view
+
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[CollectionItemDataList](CollectionItemDataList.md)
+
+### Example response
+
+```
+{
+  "data" : [ {
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "76688182",
+    "media_type" : "audio"
+  }, {
+    "added_time" : "2016-08-18T18:52:59-04:00",
+    "id" : "40005859",
+    "media_type" : "audio"
+  } ],
+  "page" : 1,
+  "per_page" : 100
+}
+```
+
+<a name="getTrackCollectionList"></a>
+# AudioApi.getTrackCollectionList
+> `CollectionDataList AudioApi.getTrackCollectionList(queryParams)`
+
+**List audio collections**
+
+This endpoint lists your collections of audio tracks and their basic attributes.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.AudioApi();
+
+const queryParams = { 
+  'page': 1, // Number | Page number
+  'per_page': 100 // Number | Number of results per page
+};
+
+api.getTrackCollectionList(queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 100 
+
+### Accepted authentication
+
+
+- [OAuth](../README.md#OAuth_authentication) Required scopes:
+  - collections.view
+
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[CollectionDataList](CollectionDataList.md)
+
+### Example response
+
+```
+{
+  "data" : [ {
+    "created_time" : "2014-11-05T19:29:56-05:00",
+    "id" : "5747953",
+    "name" : "Test Collection cdad",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:56-05:00"
+  }, {
+    "created_time" : "2014-11-05T19:29:56-05:00",
+    "id" : "5747955",
+    "name" : "Test Collection ff5f",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:56-05:00"
+  }, {
+    "created_time" : "2014-11-05T19:29:58-05:00",
+    "id" : "5747957",
+    "name" : "Updated Collection ebc4",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:29:58-05:00"
+  }, {
+    "created_time" : "2014-11-05T19:32:13-05:00",
+    "id" : "5747971",
+    "name" : "Test Collection 0072",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:32:13-05:00"
+  }, {
+    "created_time" : "2014-11-05T19:32:13-05:00",
+    "id" : "5747973",
+    "name" : "Test Collection d332",
+    "total_item_count" : 0,
+    "updated_time" : "2014-11-05T19:32:13-05:00"
+  } ]
+}
+```
+
+<a name="getTrackLicenseList"></a>
+# AudioApi.getTrackLicenseList
+> `DownloadHistoryDataList AudioApi.getTrackLicenseList(queryParams)`
+
+**List audio licenses**
+
+This endpoint lists existing licenses. You can filter the results according to the track ID to see if you have an existing license for a specific track.
+
+### Example
+
+```javascript
+const sstk = require("shutterstock-api");
+
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const audioApi = new sstk.AudioApi();
+
+const queryParams = {
+  "start_date": "2016-10-03T01:25:13.521Z",
+  "end_date": "2016-10-04T13:25:13.521Z"
+};
+
+audioApi.getTrackLicenseList(queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ audio_id | String| Show licenses for the specified track ID 
+ license | String| Restrict results by license. Prepending a `-` sign will exclude results by license 
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 20 
+ sort | String| Sort order, defaults to newest <br/><br/>Valid values: "newest", "oldest"
+ username | String| Filter licenses by username of licensee 
+ start_date | Date| Show licenses created on or after the specified date 
+ end_date | Date| Show licenses created before the specified date 
+
+### Accepted authentication
+
+
+- [OAuth](../README.md#OAuth_authentication) Required scopes:
+  - licenses.view
+
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[DownloadHistoryDataList](DownloadHistoryDataList.md)
+
+### Example response
+
+```
+{
+  "per_page" : 6,
+  "data" : [ {
+    "subscription_id" : "subscription_id",
+    "image" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
+      },
+      "id" : "id"
+    },
+    "license" : "license",
+    "download_time" : "2000-01-23T04:56:07.000+00:00",
+    "metadata" : "{}",
+    "is_downloadable" : true,
+    "audio" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
+      },
+      "id" : "id"
+    },
+    "id" : "id",
+    "video" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
+      },
+      "id" : "id"
+    },
+    "user" : {
+      "username" : "username"
+    }
+  }, {
+    "subscription_id" : "subscription_id",
+    "image" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
+      },
+      "id" : "id"
+    },
+    "license" : "license",
+    "download_time" : "2000-01-23T04:56:07.000+00:00",
+    "metadata" : "{}",
+    "is_downloadable" : true,
+    "audio" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
+      },
+      "id" : "id"
+    },
+    "id" : "id",
+    "video" : {
+      "format" : {
+        "size" : "size",
+        "format" : "format"
+      },
+      "id" : "id"
+    },
+    "user" : {
+      "username" : "username"
+    }
+  } ],
+  "total_count" : 1,
+  "page" : 0,
+  "message" : "message",
+  "errors" : [ {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  }, {
+    "path" : "path",
+    "code" : "code",
+    "data" : "data",
+    "message" : "message",
+    "items" : [ "{}", "{}" ]
+  } ]
 }
 ```
 
@@ -1217,9 +1040,180 @@ Name | Type | Description
 }
 ```
 
-<a name="renameSoundbox"></a>
-# AudioApi.renameSoundbox
-> `AudioApi.renameSoundbox(id, body)`
+<a name="listGenres"></a>
+# AudioApi.listGenres
+> `GenreList AudioApi.listGenres()`
+
+**List audio genres**
+
+This endpoint returns a list of all audio genres.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.AudioApi();
+api.listGenres()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+This endpoint does not accept any parameters.
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[GenreList](GenreList.md)
+
+### Example response
+
+```
+{
+  "data" : [ "Rock" ]
+}
+```
+
+<a name="listInstruments"></a>
+# AudioApi.listInstruments
+> `InstrumentList AudioApi.listInstruments()`
+
+**List audio instruments**
+
+This endpoint returns a list of all audio instruments.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.AudioApi();
+api.listInstruments()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+This endpoint does not accept any parameters.
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[InstrumentList](InstrumentList.md)
+
+### Example response
+
+```
+{
+  "data" : [ "Electric Guitar" ]
+}
+```
+
+<a name="listMoods"></a>
+# AudioApi.listMoods
+> `MoodList AudioApi.listMoods()`
+
+**List audio moods**
+
+This endpoint returns a list of all audio moods.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.AudioApi();
+api.listMoods()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+This endpoint does not accept any parameters.
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[MoodList](MoodList.md)
+
+### Example response
+
+```
+{
+  "data" : [ "Aggressive" ]
+}
+```
+
+<a name="renameTrackCollection"></a>
+# AudioApi.renameTrackCollection
+> `AudioApi.renameTrackCollection(id, body)`
 
 **Rename audio collections**
 
@@ -1240,7 +1234,7 @@ const body = {
   "name": "Best rock music"
 };
 
-audioApi.renameSoundbox(collectionId, body)
+audioApi.renameTrackCollection(collectionId, body)
   .catch((error) => {
     console.error(error);
   });
@@ -1274,9 +1268,9 @@ Name | Type | Description
 No response body.
 
 
-<a name="searchAudio"></a>
-# AudioApi.searchAudio
-> `AudioSearchResults AudioApi.searchAudio(queryParams)`
+<a name="searchTracks"></a>
+# AudioApi.searchTracks
+> `AudioSearchResults AudioApi.searchTracks(queryParams)`
 
 **Search for tracks**
 
@@ -1297,7 +1291,7 @@ const queryParams = {
   "moods": ["uplifting"]
 };
 
-audioApi.searchAudio(queryParams)
+audioApi.searchTracks(queryParams)
   .then((data) => {
     console.log(data);
   })
