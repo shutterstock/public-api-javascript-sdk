@@ -80,7 +80,7 @@ describe('images api', () => {
 
     const uuidv4Regex = '[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$';
 
-    return imagesApi.getLightbox(collectionId, {})
+    return imagesApi.getImageCollection(collectionId, {})
       .then(function(res) {
         expect(res.id).to.equal('183608726');
         expect(res.name).to.match(new RegExp(`^Collection ${uuidv4Regex}`, 'i'));
@@ -88,7 +88,7 @@ describe('images api', () => {
   });
 
   it('should be able to get featured collections', () => {
-    return imagesApi.getFeaturedLightboxList()
+    return imagesApi.getFeaturedImageCollectionList()
       .then(function(res) {
         expect(res).to.have.keys('data');
         expect(res.data).to.be.an('array');
