@@ -69,7 +69,7 @@ describe('images api', () => {
       name: `Collection ${uuidv4()}`,
     };
 
-    return imagesApi.renameLightbox(collectionId, body)
+    return imagesApi.renameImageCollection(collectionId, body)
       .then(function(res) {
         expect(res).to.be.null;
       });
