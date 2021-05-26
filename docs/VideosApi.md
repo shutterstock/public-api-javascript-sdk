@@ -968,7 +968,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.VideosApi();
 
-const id = "30867073"; // String | Video ID
+const id = "639703"; // String | Video ID
 
 const queryParams = { 
   'language': "es", // String | Language for the keywords and categories in the response
