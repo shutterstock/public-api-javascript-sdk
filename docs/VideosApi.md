@@ -324,7 +324,7 @@ Name | Type | Description
 
 ```
 {
-  "url" : "url"
+  "url" : "https://download.shutterstock.com/gatekeeper/[random-characters]/shutterstock_59656357.jpg"
 }
 ```
 
@@ -392,19 +392,15 @@ Name | Type | Description
 
 ```
 {
-  "created_time" : "2000-01-23T04:56:07.000+00:00",
-  "updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "share_url" : "share_url",
-  "hero_item" : {
-    "url" : "url"
-  },
-  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "name" : "name",
-  "id" : "id",
+  "total_item_count" : 82,
+  "items_updated_time" : "2021-07-08T12:33:37.000Z",
+  "name" : "Exercise & Fitness",
+  "id" : "19853",
+  "created_time" : "2021-07-07T13:10:24.000Z",
+  "updated_time" : "2021-07-07T13:10:24.000Z",
   "cover_item" : {
-    "url" : "url"
-  },
-  "total_item_count" : 0
+    "url" : "https://ak.picdn.net/assets/cms/b467415246debdab45825d915a548f8f79b57882-Collection_1_Thumnail.jpg"
+  }
 }
 ```
 
@@ -549,52 +545,20 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 1,
   "data" : [ {
-    "created_time" : "2000-01-23T04:56:07.000+00:00",
-    "updated_time" : "2000-01-23T04:56:07.000+00:00",
-    "share_url" : "share_url",
-    "hero_item" : {
-      "url" : "url"
-    },
-    "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
-    "name" : "name",
-    "id" : "id",
+    "total_item_count" : 82,
+    "items_updated_time" : "2021-07-08T12:33:37.000Z",
+    "name" : "Exercise & Fitness",
+    "id" : "19853",
+    "created_time" : "2021-07-07T13:10:24.000Z",
+    "updated_time" : "2021-07-07T13:10:24.000Z",
     "cover_item" : {
-      "url" : "url"
-    },
-    "total_item_count" : 0
-  }, {
-    "created_time" : "2000-01-23T04:56:07.000+00:00",
-    "updated_time" : "2000-01-23T04:56:07.000+00:00",
-    "share_url" : "share_url",
-    "hero_item" : {
-      "url" : "url"
-    },
-    "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
-    "name" : "name",
-    "id" : "id",
-    "cover_item" : {
-      "url" : "url"
-    },
-    "total_item_count" : 0
+      "url" : "https://ak.picdn.net/assets/cms/b467415246debdab45825d915a548f8f79b57882-Collection_1_Thumnail.jpg"
+    }
   } ],
-  "total_count" : 5,
-  "page" : 6,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 123455
 }
 ```
 
@@ -668,190 +632,42 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 9,
   "data" : [ {
-    "has_property_release" : true,
-    "aspect_ratio" : "aspect_ratio",
-    "models" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "keywords" : [ "keywords", "keywords" ],
-    "added_date" : "2000-01-23",
-    "description" : "description",
-    "affiliate_url" : "http://example.com/aeiou",
-    "url" : "url",
-    "is_adult" : true,
-    "duration" : 2.3021358869347654518833223846741020679473876953125,
+    "id" : "1033184651",
+    "aspect" : 1.778,
+    "aspect_ratio" : "16:9",
     "assets" : {
       "thumb_webm" : {
-        "url" : "url"
-      },
-      "sd" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "preview_jpg" : {
-        "url" : "url"
-      },
-      "preview_mp4" : {
-        "url" : "url"
-      },
-      "web" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "4k" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "thumb_jpgs" : {
-        "urls" : [ "urls", "urls" ]
-      },
-      "preview_webm" : {
-        "url" : "url"
-      },
-      "hd" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "thumb_jpg" : {
-        "url" : "url"
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
       },
       "thumb_mp4" : {
-        "url" : "url"
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
+      },
+      "preview_webm" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
+      },
+      "preview_mp4" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
+      },
+      "thumb_jpg" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
+      },
+      "preview_jpg" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
       }
     },
     "contributor" : {
-      "id" : "id"
+      "id" : "4411978"
     },
-    "is_editorial" : true,
-    "media_type" : "media_type",
-    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "description" : "Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness",
+    "duration" : 14.081,
     "has_model_release" : true,
-    "categories" : [ {
-      "name" : "name",
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "id" : "id"
-    } ],
-    "id" : "id"
-  }, {
-    "has_property_release" : true,
-    "aspect_ratio" : "aspect_ratio",
-    "models" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "keywords" : [ "keywords", "keywords" ],
-    "added_date" : "2000-01-23",
-    "description" : "description",
-    "affiliate_url" : "http://example.com/aeiou",
-    "url" : "url",
-    "is_adult" : true,
-    "duration" : 2.3021358869347654518833223846741020679473876953125,
-    "assets" : {
-      "thumb_webm" : {
-        "url" : "url"
-      },
-      "sd" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "preview_jpg" : {
-        "url" : "url"
-      },
-      "preview_mp4" : {
-        "url" : "url"
-      },
-      "web" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "4k" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "thumb_jpgs" : {
-        "urls" : [ "urls", "urls" ]
-      },
-      "preview_webm" : {
-        "url" : "url"
-      },
-      "hd" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "thumb_jpg" : {
-        "url" : "url"
-      },
-      "thumb_mp4" : {
-        "url" : "url"
-      }
-    },
-    "contributor" : {
-      "id" : "id"
-    },
-    "is_editorial" : true,
-    "media_type" : "media_type",
-    "aspect" : 0.80082819046101150206595775671303272247314453125,
-    "has_model_release" : true,
-    "categories" : [ {
-      "name" : "name",
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "id" : "id"
-    } ],
-    "id" : "id"
+    "media_type" : "video"
   } ],
-  "total_count" : 3,
-  "page" : 7,
-  "message" : "message",
-  "search_id" : "search_id"
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 123,
+  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10"
 }
 ```
 
@@ -918,32 +734,14 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 6,
   "data" : [ {
-    "updated_time" : "2000-01-23T04:56:07.000+00:00",
-    "id" : "id",
-    "updates" : [ "updates", "updates" ]
-  }, {
-    "updated_time" : "2000-01-23T04:56:07.000+00:00",
-    "id" : "id",
-    "updates" : [ "updates", "updates" ]
+    "id" : "123456789",
+    "updated_time" : "2020-05-29T12:10:22-05:00",
+    "updates" : [ "addition", "edit" ]
   } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 13
 }
 ```
 
@@ -1013,100 +811,89 @@ Name | Type | Description
 
 ```
 {
-  "has_property_release" : true,
-  "aspect_ratio" : "aspect_ratio",
-  "models" : [ {
-    "id" : "id"
-  }, {
-    "id" : "id"
-  } ],
-  "keywords" : [ "keywords", "keywords" ],
-  "added_date" : "2000-01-23",
-  "description" : "description",
-  "affiliate_url" : "http://example.com/aeiou",
-  "url" : "url",
-  "is_adult" : true,
-  "duration" : 2.3021358869347654518833223846741020679473876953125,
+  "id" : "1033184651",
+  "added_date" : "2019-07-13",
+  "aspect" : 1.778,
+  "aspect_ratio" : "16:9",
   "assets" : {
     "thumb_webm" : {
-      "url" : "url"
-    },
-    "sd" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "fps" : 1.46581298050294517310021547018550336360931396484375,
-      "width" : 5,
-      "display_name" : "display_name",
-      "file_size" : 6,
-      "height" : 5
-    },
-    "preview_jpg" : {
-      "url" : "url"
-    },
-    "preview_mp4" : {
-      "url" : "url"
-    },
-    "web" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "fps" : 1.46581298050294517310021547018550336360931396484375,
-      "width" : 5,
-      "display_name" : "display_name",
-      "file_size" : 6,
-      "height" : 5
-    },
-    "4k" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "fps" : 1.46581298050294517310021547018550336360931396484375,
-      "width" : 5,
-      "display_name" : "display_name",
-      "file_size" : 6,
-      "height" : 5
-    },
-    "thumb_jpgs" : {
-      "urls" : [ "urls", "urls" ]
-    },
-    "preview_webm" : {
-      "url" : "url"
-    },
-    "hd" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "fps" : 1.46581298050294517310021547018550336360931396484375,
-      "width" : 5,
-      "display_name" : "display_name",
-      "file_size" : 6,
-      "height" : 5
-    },
-    "thumb_jpg" : {
-      "url" : "url"
+      "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
     },
     "thumb_mp4" : {
-      "url" : "url"
+      "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
+    },
+    "preview_webm" : {
+      "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
+    },
+    "preview_mp4" : {
+      "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
+    },
+    "thumb_jpgs" : {
+      "urls" : [ "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/1.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/2.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/3.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/4.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/5.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/6.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/7.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/8.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/9.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/10.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/11.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg" ]
+    },
+    "thumb_jpg" : {
+      "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
+    },
+    "preview_jpg" : {
+      "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
+    },
+    "sd" : {
+      "height" : 480,
+      "width" : 852,
+      "fps" : 29.97,
+      "format" : "mov",
+      "file_size" : 4577280,
+      "display_name" : "Standard Definition MPEG",
+      "is_licensable" : true
+    },
+    "web" : {
+      "height" : 240,
+      "width" : 426,
+      "fps" : 29.97,
+      "format" : "mov",
+      "file_size" : 1291264,
+      "display_name" : "Low Resolution MPEG",
+      "is_licensable" : true
+    },
+    "hd" : {
+      "height" : 1080,
+      "width" : 1920,
+      "fps" : 29.97,
+      "format" : "avc1",
+      "file_size" : 110359552,
+      "display_name" : "Original HD",
+      "is_licensable" : true
     }
   },
-  "contributor" : {
-    "id" : "id"
-  },
-  "is_editorial" : true,
-  "media_type" : "media_type",
-  "aspect" : 0.80082819046101150206595775671303272247314453125,
-  "has_model_release" : true,
   "categories" : [ {
-    "name" : "name",
-    "id" : "id"
+    "name" : "Nature",
+    "id" : "12"
   }, {
-    "name" : "name",
-    "id" : "id"
+    "name" : "People",
+    "id" : "13"
   } ],
-  "id" : "id"
+  "contributor" : {
+    "id" : "4411978"
+  },
+  "description" : "Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness",
+  "duration" : 14.081,
+  "has_model_release" : true,
+  "has_property_release" : false,
+  "is_adult" : false,
+  "is_editorial" : false,
+  "keywords" : [ "active", "activity", "adventure", "arms", "backpacker", "carefree", "celebrating", "cliff", "climate", "cloud", "discovery", "escape", "explore", "extreme", "free", "freedom", "girl", "happy", "high", "hiker", "hiking", "hill", "independent", "inspiration", "landscape", "leisure", "lifestyle", "mountain", "mountains", "nature", "outdoor", "peak", "person", "rock", "scenic", "sky", "sport", "success", "summer", "summit", "sun", "sunset", "top", "tourism", "travel", "trekking", "vacation", "view", "winning", "woman" ],
+  "media_type" : "video",
+  "models" : [ {
+    "id" : "33233810"
+  }, {
+    "id" : "25487168"
+  } ]
 }
 ```
 
 <a name="getVideoCollection"></a>
 # VideosApi.getVideoCollection
-> `Collection VideosApi.getVideoCollection(id)`
+> `Collection VideosApi.getVideoCollection(id, queryParams)`
 
 **Get the details of video collections**
 
@@ -1124,8 +911,12 @@ const api = new sstk.VideosApi();
 
 const id = "17555176"; // String | The ID of the collection to return
 
+const queryParams = { 
+  'embed': ["embed_example"], // [String] | Which sharing information to include in the response, such as a URL to the collection
+  'share_code': "share_code_example" // String | Code to retrieve a shared collection
+};
 
-api.getVideoCollection(id)
+api.getVideoCollection(id, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1141,6 +932,8 @@ api.getVideoCollection(id)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| The ID of the collection to return 
+ embed | [String]| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
+ share_code | String| Code to retrieve a shared collection 
 
 ### Accepted authentication
 
@@ -1163,19 +956,13 @@ Name | Type | Description
 
 ```
 {
-  "created_time" : "2000-01-23T04:56:07.000+00:00",
-  "updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "share_url" : "share_url",
-  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "name" : "name",
-  "id" : "id",
-  "share_code" : "share_code",
+  "id" : "293542904",
+  "name" : "My collection",
+  "total_item_count" : 85,
+  "items_updated_time" : "2021-05-20T16:15:22-04:00",
   "cover_item" : {
-    "added_time" : "2000-01-23T04:56:07.000+00:00",
-    "media_type" : "media_type",
-    "id" : "id"
-  },
-  "total_item_count" : 0
+    "id" : "297886754"
+  }
 }
 ```
 
@@ -1197,11 +984,12 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.VideosApi();
 
-const id = "17555176"; // String | The ID of the Collection whose items are to be returned
+const id = "17555176"; // String | Collection ID
 
 const queryParams = { 
   'page': 1, // Number | Page number
   'per_page': 100, // Number | Number of results per page
+  'share_code': "share_code_example", // String | Code to retrieve the contents of a shared collection
   'sort': "oldest" // String | Sort order
 };
 
@@ -1220,9 +1008,10 @@ api.getVideoCollectionItems(id, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | String| The ID of the Collection whose items are to be returned 
+ id (required) | String| Collection ID 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 100 
+ share_code | String| Code to retrieve the contents of a shared collection 
  sort | String| Sort order, defaults to oldest <br/><br/>Valid values: "newest", "oldest"
 
 ### Accepted authentication
@@ -1247,16 +1036,17 @@ Name | Type | Description
 ```
 {
   "data" : [ {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "76688182",
-    "media_type" : "audio"
+    "id" : "1690105108",
+    "added_time" : "2021-07-08T12:33:37.000Z",
+    "media_type" : "image"
   }, {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "40005859",
-    "media_type" : "audio"
+    "id" : "1468703072",
+    "added_time" : "2021-07-08T12:31:43.000Z",
+    "media_type" : "image"
   } ],
   "page" : 1,
-  "per_page" : 100
+  "per_page" : 2,
+  "total_count" : 82
 }
 ```
 
@@ -1280,7 +1070,8 @@ const api = new sstk.VideosApi();
 
 const queryParams = { 
   'page': 1, // Number | Page number
-  'per_page': 100 // Number | Number of results per page
+  'per_page': 100, // Number | Number of results per page
+  'embed': ["share_code"] // [String] | Which sharing information to include in the response, such as a URL to the collection
 };
 
 api.getVideoCollectionList(queryParams)
@@ -1300,6 +1091,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 100 
+ embed | [String]| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
 
 ### Accepted authentication
 
@@ -1323,36 +1115,17 @@ Name | Type | Description
 ```
 {
   "data" : [ {
-    "created_time" : "2014-11-05T19:29:56-05:00",
-    "id" : "5747953",
-    "name" : "Test Collection cdad",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:56-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:29:56-05:00",
-    "id" : "5747955",
-    "name" : "Test Collection ff5f",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:56-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:29:58-05:00",
-    "id" : "5747957",
-    "name" : "Updated Collection ebc4",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:58-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:32:13-05:00",
-    "id" : "5747971",
-    "name" : "Test Collection 0072",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:32:13-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:32:13-05:00",
-    "id" : "5747973",
-    "name" : "Test Collection d332",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:32:13-05:00"
-  } ]
+    "id" : "293542904",
+    "name" : "My collection",
+    "total_item_count" : 85,
+    "items_updated_time" : "2021-05-20T16:15:22-04:00",
+    "cover_item" : {
+      "id" : "297886754"
+    }
+  } ],
+  "page" : 1,
+  "per_page" : 100,
+  "total_count" : 1
 }
 ```
 
@@ -1424,85 +1197,30 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 6,
+  "total_count" : 2890,
+  "page" : 1,
+  "per_page" : 1,
   "data" : [ {
-    "subscription_id" : "subscription_id",
-    "image" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "license" : "license",
-    "download_time" : "2000-01-23T04:56:07.000+00:00",
-    "metadata" : "{}",
-    "is_downloadable" : true,
-    "audio" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "id" : "id",
-    "video" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
+    "id" : "e1eba3833793e77188d22caae8bac9f2cd",
     "user" : {
-      "username" : "username"
-    }
-  }, {
-    "subscription_id" : "subscription_id",
+      "username" : "jsmith"
+    },
+    "license" : "shutterstock_license",
+    "download_time" : "2021-07-15T15:46:34.000Z",
+    "is_downloadable" : false,
     "image" : {
+      "id" : "9763363ao",
       "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
+        "size" : "original"
+      }
     },
-    "license" : "license",
-    "download_time" : "2000-01-23T04:56:07.000+00:00",
-    "metadata" : "{}",
-    "is_downloadable" : true,
-    "audio" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "id" : "id",
-    "video" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "user" : {
-      "username" : "username"
+    "subscription_id" : "1df5d8cfe8394bbebb849a69943b9a7c",
+    "metadata" : {
+      "purchase_order" : "12345",
+      "job" : "Important project",
+      "client" : "Company A",
+      "other" : "Important media"
     }
-  } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
   } ]
 }
 ```
@@ -1571,202 +1289,88 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 6,
   "data" : [ {
-    "has_property_release" : true,
-    "aspect_ratio" : "aspect_ratio",
-    "models" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "keywords" : [ "keywords", "keywords" ],
-    "added_date" : "2000-01-23",
-    "description" : "description",
-    "affiliate_url" : "http://example.com/aeiou",
-    "url" : "url",
-    "is_adult" : true,
-    "duration" : 2.3021358869347654518833223846741020679473876953125,
+    "id" : "1033184651",
+    "added_date" : "2019-07-13",
+    "aspect" : 1.778,
+    "aspect_ratio" : "16:9",
     "assets" : {
       "thumb_webm" : {
-        "url" : "url"
-      },
-      "sd" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "preview_jpg" : {
-        "url" : "url"
-      },
-      "preview_mp4" : {
-        "url" : "url"
-      },
-      "web" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "4k" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "thumb_jpgs" : {
-        "urls" : [ "urls", "urls" ]
-      },
-      "preview_webm" : {
-        "url" : "url"
-      },
-      "hd" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "thumb_jpg" : {
-        "url" : "url"
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
       },
       "thumb_mp4" : {
-        "url" : "url"
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
+      },
+      "preview_webm" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
+      },
+      "preview_mp4" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
+      },
+      "thumb_jpgs" : {
+        "urls" : [ "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/1.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/2.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/3.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/4.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/5.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/6.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/7.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/8.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/9.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/10.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/11.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg" ]
+      },
+      "thumb_jpg" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
+      },
+      "preview_jpg" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
+      },
+      "sd" : {
+        "height" : 480,
+        "width" : 852,
+        "fps" : 29.97,
+        "format" : "mov",
+        "file_size" : 4577280,
+        "display_name" : "Standard Definition MPEG",
+        "is_licensable" : true
+      },
+      "web" : {
+        "height" : 240,
+        "width" : 426,
+        "fps" : 29.97,
+        "format" : "mov",
+        "file_size" : 1291264,
+        "display_name" : "Low Resolution MPEG",
+        "is_licensable" : true
+      },
+      "hd" : {
+        "height" : 1080,
+        "width" : 1920,
+        "fps" : 29.97,
+        "format" : "avc1",
+        "file_size" : 110359552,
+        "display_name" : "Original HD",
+        "is_licensable" : true
       }
     },
-    "contributor" : {
-      "id" : "id"
-    },
-    "is_editorial" : true,
-    "media_type" : "media_type",
-    "aspect" : 0.80082819046101150206595775671303272247314453125,
-    "has_model_release" : true,
     "categories" : [ {
-      "name" : "name",
-      "id" : "id"
+      "name" : "Nature",
+      "id" : "12"
     }, {
-      "name" : "name",
-      "id" : "id"
+      "name" : "People",
+      "id" : "13"
     } ],
-    "id" : "id"
-  }, {
-    "has_property_release" : true,
-    "aspect_ratio" : "aspect_ratio",
+    "contributor" : {
+      "id" : "4411978"
+    },
+    "description" : "Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness",
+    "duration" : 14.081,
+    "has_model_release" : true,
+    "has_property_release" : false,
+    "is_adult" : false,
+    "is_editorial" : false,
+    "keywords" : [ "active", "activity", "adventure", "arms", "backpacker", "carefree", "celebrating", "cliff", "climate", "cloud", "discovery", "escape", "explore", "extreme", "free", "freedom", "girl", "happy", "high", "hiker", "hiking", "hill", "independent", "inspiration", "landscape", "leisure", "lifestyle", "mountain", "mountains", "nature", "outdoor", "peak", "person", "rock", "scenic", "sky", "sport", "success", "summer", "summit", "sun", "sunset", "top", "tourism", "travel", "trekking", "vacation", "view", "winning", "woman" ],
+    "media_type" : "video",
     "models" : [ {
-      "id" : "id"
+      "id" : "33233810"
     }, {
-      "id" : "id"
-    } ],
-    "keywords" : [ "keywords", "keywords" ],
-    "added_date" : "2000-01-23",
-    "description" : "description",
-    "affiliate_url" : "http://example.com/aeiou",
-    "url" : "url",
-    "is_adult" : true,
-    "duration" : 2.3021358869347654518833223846741020679473876953125,
-    "assets" : {
-      "thumb_webm" : {
-        "url" : "url"
-      },
-      "sd" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "preview_jpg" : {
-        "url" : "url"
-      },
-      "preview_mp4" : {
-        "url" : "url"
-      },
-      "web" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "4k" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "thumb_jpgs" : {
-        "urls" : [ "urls", "urls" ]
-      },
-      "preview_webm" : {
-        "url" : "url"
-      },
-      "hd" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "thumb_jpg" : {
-        "url" : "url"
-      },
-      "thumb_mp4" : {
-        "url" : "url"
-      }
-    },
-    "contributor" : {
-      "id" : "id"
-    },
-    "is_editorial" : true,
-    "media_type" : "media_type",
-    "aspect" : 0.80082819046101150206595775671303272247314453125,
-    "has_model_release" : true,
-    "categories" : [ {
-      "name" : "name",
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "id" : "id"
-    } ],
-    "id" : "id"
+      "id" : "25487168"
+    } ]
   } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 25
 }
 ```
 
@@ -1834,7 +1438,7 @@ Name | Type | Description
 
 ```
 {
-  "data" : [ "data", "data" ]
+  "data" : [ "cat scan", "cats and dogs", "cats playing", "catsuit", "cat silhouette", "catskills", "cats eyes", "cat sitting", "cat sleeping", "cats eye" ]
 }
 ```
 
@@ -1871,7 +1475,7 @@ const queryParams = {
   "size": "web"
 };
 
-videosApi.searchVideos(body, queryParams)
+videosApi.licenseVideos(body, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1915,46 +1519,20 @@ Required scopes:
 
 ```
 {
-  "per_page" : 1,
   "data" : [ {
+    "allotment_charge" : 1,
     "download" : {
-      "url" : "url"
+      "url" : "https://download.shutterstock.com/gatekeeper/[random-characters]/shutterstock_59656357.mp4"
     },
     "price" : {
-      "local_amount" : 6.02745618307040320615897144307382404804229736328125,
-      "local_currency" : "local_currency"
+      "local_amount" : 12.34,
+      "local_currency" : "EUR"
     },
-    "allotment_charge" : 0,
-    "error" : "error",
-    "video_id" : "video_id"
-  }, {
-    "download" : {
-      "url" : "url"
-    },
-    "price" : {
-      "local_amount" : 6.02745618307040320615897144307382404804229736328125,
-      "local_currency" : "local_currency"
-    },
-    "allotment_charge" : 0,
-    "error" : "error",
-    "video_id" : "video_id"
+    "video_id" : "123456789"
   } ],
-  "total_count" : 5,
-  "page" : 6,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 123455
 }
 ```
 
@@ -2019,30 +1597,19 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 6,
   "data" : [ {
-    "name" : "name",
-    "id" : "id"
+    "id" : "1",
+    "name" : "Animals/Wildlife"
   }, {
-    "name" : "name",
-    "id" : "id"
+    "id" : "11",
+    "name" : "The Arts"
+  }, {
+    "id" : "15",
+    "name" : "Science"
   } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 13
 }
 ```
 
@@ -2191,190 +1758,42 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 9,
   "data" : [ {
-    "has_property_release" : true,
-    "aspect_ratio" : "aspect_ratio",
-    "models" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "keywords" : [ "keywords", "keywords" ],
-    "added_date" : "2000-01-23",
-    "description" : "description",
-    "affiliate_url" : "http://example.com/aeiou",
-    "url" : "url",
-    "is_adult" : true,
-    "duration" : 2.3021358869347654518833223846741020679473876953125,
+    "id" : "1033184651",
+    "aspect" : 1.778,
+    "aspect_ratio" : "16:9",
     "assets" : {
       "thumb_webm" : {
-        "url" : "url"
-      },
-      "sd" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "preview_jpg" : {
-        "url" : "url"
-      },
-      "preview_mp4" : {
-        "url" : "url"
-      },
-      "web" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "4k" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "thumb_jpgs" : {
-        "urls" : [ "urls", "urls" ]
-      },
-      "preview_webm" : {
-        "url" : "url"
-      },
-      "hd" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "thumb_jpg" : {
-        "url" : "url"
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
       },
       "thumb_mp4" : {
-        "url" : "url"
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
+      },
+      "preview_webm" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
+      },
+      "preview_mp4" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
+      },
+      "thumb_jpg" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
+      },
+      "preview_jpg" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
       }
     },
     "contributor" : {
-      "id" : "id"
+      "id" : "4411978"
     },
-    "is_editorial" : true,
-    "media_type" : "media_type",
-    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "description" : "Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness",
+    "duration" : 14.081,
     "has_model_release" : true,
-    "categories" : [ {
-      "name" : "name",
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "id" : "id"
-    } ],
-    "id" : "id"
-  }, {
-    "has_property_release" : true,
-    "aspect_ratio" : "aspect_ratio",
-    "models" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "keywords" : [ "keywords", "keywords" ],
-    "added_date" : "2000-01-23",
-    "description" : "description",
-    "affiliate_url" : "http://example.com/aeiou",
-    "url" : "url",
-    "is_adult" : true,
-    "duration" : 2.3021358869347654518833223846741020679473876953125,
-    "assets" : {
-      "thumb_webm" : {
-        "url" : "url"
-      },
-      "sd" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "preview_jpg" : {
-        "url" : "url"
-      },
-      "preview_mp4" : {
-        "url" : "url"
-      },
-      "web" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "4k" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "thumb_jpgs" : {
-        "urls" : [ "urls", "urls" ]
-      },
-      "preview_webm" : {
-        "url" : "url"
-      },
-      "hd" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "thumb_jpg" : {
-        "url" : "url"
-      },
-      "thumb_mp4" : {
-        "url" : "url"
-      }
-    },
-    "contributor" : {
-      "id" : "id"
-    },
-    "is_editorial" : true,
-    "media_type" : "media_type",
-    "aspect" : 0.80082819046101150206595775671303272247314453125,
-    "has_model_release" : true,
-    "categories" : [ {
-      "name" : "name",
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "id" : "id"
-    } ],
-    "id" : "id"
+    "media_type" : "video"
   } ],
-  "total_count" : 3,
-  "page" : 7,
-  "message" : "message",
-  "search_id" : "search_id"
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 123,
+  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10"
 }
 ```
 

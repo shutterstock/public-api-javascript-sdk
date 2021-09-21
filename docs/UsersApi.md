@@ -57,15 +57,13 @@ This endpoint does not accept any parameters.
 
 ```
 {
-  "user_id" : "user_id",
-  "organization_id" : "organization_id",
+  "client_id" : "c456b-26230-fa8ed-d19ab-05ce2-bf0aa",
+  "customer_id" : "123456789",
   "realm" : "customer",
-  "scopes" : [ "scopes", "scopes" ],
-  "customer_id" : "customer_id",
-  "expires_in" : 0,
-  "client_id" : "client_id",
-  "contributor_id" : "contributor_id",
-  "username" : "username"
+  "user_id" : "123456789",
+  "username" : "jdoe",
+  "expires_in" : 3600,
+  "scopes" : [ "user.view", "user.email", "user.address", "user.edit", "organization.view", "organization.address", "collections.view", "collections.edit", "licenses.view", "licenses.create", "media.upload", "media.submit", "media.edit", "purchases.view", "purchases.create" ]
 }
 ```
 
@@ -117,21 +115,13 @@ This endpoint does not accept any parameters.
 
 ```
 {
-  "only_enhanced_license" : true,
-  "is_premier_parent" : true,
-  "is_premier" : true,
-  "last_name" : "last_name",
-  "premier_permissions" : [ "premier_permissions", "premier_permissions" ],
-  "language" : "language",
-  "only_sensitive_use" : true,
-  "full_name" : "full_name",
-  "organization_id" : "organization_id",
-  "id" : "id",
-  "customer_id" : "customer_id",
-  "first_name" : "first_name",
-  "email" : "email",
-  "contributor_id" : "contributor_id",
-  "username" : "username"
+  "id" : "101782699",
+  "username" : "jdoe",
+  "full_name" : "John Doe",
+  "first_name" : "John",
+  "last_name" : "Doe",
+  "language" : "es",
+  "contributor_id" : "212"
 }
 ```
 
@@ -185,84 +175,41 @@ This endpoint does not accept any parameters.
 
 ```
 {
-  "per_page" : 5,
   "data" : [ {
-    "license" : "license",
-    "metadata" : { },
-    "formats" : [ {
-      "size" : "size",
-      "media_type" : "image",
-      "format" : "format",
-      "min_resolution" : 1,
-      "description" : "description"
-    }, {
-      "size" : "size",
-      "media_type" : "image",
-      "format" : "format",
-      "min_resolution" : 1,
-      "description" : "description"
-    } ],
-    "expiration_time" : "2000-01-23T04:56:07.000+00:00",
-    "asset_type" : "asset_type",
     "allotment" : {
-      "start_time" : "2000-01-23T04:56:07.000+00:00",
-      "downloads_left" : 0,
-      "downloads_limit" : 6,
-      "end_time" : "2000-01-23T04:56:07.000+00:00"
+      "downloads_left" : 5,
+      "downloads_limit" : 10,
+      "end_time" : "2020-05-29T12:10:22-05:00",
+      "start_time" : "2020-05-29T12:10:22-05:00"
     },
-    "description" : "description",
-    "id" : "id",
-    "price_per_download" : {
-      "local_amount" : 6.02745618307040320615897144307382404804229736328125,
-      "local_currency" : "local_currency"
-    }
-  }, {
-    "license" : "license",
-    "metadata" : { },
+    "description" : "Annual Subscription",
+    "expiration_time" : "2020-05-29T12:10:22-05:00",
     "formats" : [ {
-      "size" : "size",
       "media_type" : "image",
-      "format" : "format",
-      "min_resolution" : 1,
-      "description" : "description"
+      "description" : "Small",
+      "format" : "jpg",
+      "min_resolution" : 500,
+      "size" : "small"
     }, {
-      "size" : "size",
       "media_type" : "image",
-      "format" : "format",
-      "min_resolution" : 1,
-      "description" : "description"
+      "description" : "Med",
+      "format" : "jpg",
+      "min_resolution" : 1000,
+      "size" : "medium"
+    }, {
+      "media_type" : "image",
+      "description" : "Vector",
+      "format" : "eps",
+      "size" : "vector"
     } ],
-    "expiration_time" : "2000-01-23T04:56:07.000+00:00",
-    "asset_type" : "asset_type",
-    "allotment" : {
-      "start_time" : "2000-01-23T04:56:07.000+00:00",
-      "downloads_left" : 0,
-      "downloads_limit" : 6,
-      "end_time" : "2000-01-23T04:56:07.000+00:00"
-    },
-    "description" : "description",
-    "id" : "id",
-    "price_per_download" : {
-      "local_amount" : 6.02745618307040320615897144307382404804229736328125,
-      "local_currency" : "local_currency"
-    }
+    "id" : "s8906043",
+    "license" : "standard",
+    "asset_type" : "images",
+    "metadata" : { }
   } ],
-  "total_count" : 2,
-  "page" : 5,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 123455
 }
 ```
 

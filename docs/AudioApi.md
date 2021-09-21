@@ -319,7 +319,7 @@ Name | Type | Description
 
 ```
 {
-  "url" : "url"
+  "url" : "https://download.shutterstock.com/gatekeeper/[random-characters]/shutterstock_59656357.jpg"
 }
 ```
 
@@ -388,10 +388,6 @@ Name | Type | Description
 ```
 {
   "added_date" : "2016-08-16",
-  "album" : {
-    "id" : "",
-    "title" : ""
-  },
   "artists" : [ {
     "name" : "Klimenko Music"
   } ],
@@ -442,7 +438,7 @@ Name | Type | Description
 
 <a name="getTrackCollection"></a>
 # AudioApi.getTrackCollection
-> `Collection AudioApi.getTrackCollection(id)`
+> `Collection AudioApi.getTrackCollection(id, queryParams)`
 
 **Get the details of audio collections**
 
@@ -460,8 +456,12 @@ const api = new sstk.AudioApi();
 
 const id = "48433107"; // String | Collection ID
 
+const queryParams = { 
+  'embed': ["embed_example"], // [String] | Which sharing information to include in the response, such as a URL to the collection
+  'share_code': "share_code_example" // String | Code to retrieve a shared collection
+};
 
-api.getTrackCollection(id)
+api.getTrackCollection(id, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -477,6 +477,8 @@ api.getTrackCollection(id)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
+ embed | [String]| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
+ share_code | String| Code to retrieve a shared collection 
 
 ### Accepted authentication
 
@@ -499,19 +501,13 @@ Name | Type | Description
 
 ```
 {
-  "created_time" : "2000-01-23T04:56:07.000+00:00",
-  "updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "share_url" : "share_url",
-  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "name" : "name",
-  "id" : "id",
-  "share_code" : "share_code",
+  "id" : "293542904",
+  "name" : "My collection",
+  "total_item_count" : 85,
+  "items_updated_time" : "2021-05-20T16:15:22-04:00",
   "cover_item" : {
-    "added_time" : "2000-01-23T04:56:07.000+00:00",
-    "media_type" : "media_type",
-    "id" : "id"
-  },
-  "total_item_count" : 0
+    "id" : "297886754"
+  }
 }
 ```
 
@@ -533,11 +529,12 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.AudioApi();
 
-const id = "48433113"; // String | Collection ID
+const id = "126351027"; // String | Collection ID
 
 const queryParams = { 
   'page': 1, // Number | Page number
   'per_page': 100, // Number | Number of results per page
+  'share_code': "share_code_example", // String | Code to retrieve the contents of a shared collection
   'sort': "oldest" // String | Sort order
 };
 
@@ -559,6 +556,7 @@ Name | Type | Description
  id (required) | String| Collection ID 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 100 
+ share_code | String| Code to retrieve the contents of a shared collection 
  sort | String| Sort order, defaults to oldest <br/><br/>Valid values: "newest", "oldest"
 
 ### Accepted authentication
@@ -583,16 +581,17 @@ Name | Type | Description
 ```
 {
   "data" : [ {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "76688182",
-    "media_type" : "audio"
+    "id" : "1690105108",
+    "added_time" : "2021-07-08T12:33:37.000Z",
+    "media_type" : "image"
   }, {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "40005859",
-    "media_type" : "audio"
+    "id" : "1468703072",
+    "added_time" : "2021-07-08T12:31:43.000Z",
+    "media_type" : "image"
   } ],
   "page" : 1,
-  "per_page" : 100
+  "per_page" : 2,
+  "total_count" : 82
 }
 ```
 
@@ -616,7 +615,8 @@ const api = new sstk.AudioApi();
 
 const queryParams = { 
   'page': 1, // Number | Page number
-  'per_page': 100 // Number | Number of results per page
+  'per_page': 100, // Number | Number of results per page
+  'embed': ["share_code"] // [String] | Which sharing information to include in the response, such as a URL to the collection
 };
 
 api.getTrackCollectionList(queryParams)
@@ -636,6 +636,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 100 
+ embed | [String]| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_code", "share_url"
 
 ### Accepted authentication
 
@@ -659,36 +660,17 @@ Name | Type | Description
 ```
 {
   "data" : [ {
-    "created_time" : "2014-11-05T19:29:56-05:00",
-    "id" : "5747953",
-    "name" : "Test Collection cdad",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:56-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:29:56-05:00",
-    "id" : "5747955",
-    "name" : "Test Collection ff5f",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:56-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:29:58-05:00",
-    "id" : "5747957",
-    "name" : "Updated Collection ebc4",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:58-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:32:13-05:00",
-    "id" : "5747971",
-    "name" : "Test Collection 0072",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:32:13-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:32:13-05:00",
-    "id" : "5747973",
-    "name" : "Test Collection d332",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:32:13-05:00"
-  } ]
+    "id" : "293542904",
+    "name" : "My collection",
+    "total_item_count" : 85,
+    "items_updated_time" : "2021-05-20T16:15:22-04:00",
+    "cover_item" : {
+      "id" : "297886754"
+    }
+  } ],
+  "page" : 1,
+  "per_page" : 100,
+  "total_count" : 1
 }
 ```
 
@@ -760,85 +742,30 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 6,
+  "total_count" : 2890,
+  "page" : 1,
+  "per_page" : 1,
   "data" : [ {
-    "subscription_id" : "subscription_id",
-    "image" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "license" : "license",
-    "download_time" : "2000-01-23T04:56:07.000+00:00",
-    "metadata" : "{}",
-    "is_downloadable" : true,
-    "audio" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "id" : "id",
-    "video" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
+    "id" : "e1eba3833793e77188d22caae8bac9f2cd",
     "user" : {
-      "username" : "username"
-    }
-  }, {
-    "subscription_id" : "subscription_id",
+      "username" : "jsmith"
+    },
+    "license" : "shutterstock_license",
+    "download_time" : "2021-07-15T15:46:34.000Z",
+    "is_downloadable" : false,
     "image" : {
+      "id" : "9763363ao",
       "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
+        "size" : "original"
+      }
     },
-    "license" : "license",
-    "download_time" : "2000-01-23T04:56:07.000+00:00",
-    "metadata" : "{}",
-    "is_downloadable" : true,
-    "audio" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "id" : "id",
-    "video" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "user" : {
-      "username" : "username"
+    "subscription_id" : "1df5d8cfe8394bbebb849a69943b9a7c",
+    "metadata" : {
+      "purchase_order" : "12345",
+      "job" : "Important project",
+      "client" : "Company A",
+      "other" : "Important media"
     }
-  } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
   } ]
 }
 ```
@@ -909,10 +836,6 @@ Name | Type | Description
 {
   "data" : [ {
     "added_date" : "2016-04-12",
-    "album" : {
-      "id" : "",
-      "title" : ""
-    },
     "artists" : [ {
       "name" : "Fin Productions"
     } ],
@@ -1032,7 +955,7 @@ Name | Type | Description
 ```
 {
   "data" : [ {
-    "audio_id" : "1",
+    "audio_id" : "123456789",
     "download" : {
       "url" : "http://download2.dev.shutterstock.com/gatekeeper/abc/original.wav"
     }
@@ -1093,7 +1016,7 @@ This endpoint does not accept any parameters.
 
 ```
 {
-  "data" : [ "Rock" ]
+  "data" : [ "Rock", "Pop > Singer-Songwriter", "Pop > Synth Pop", "Production / Film Scores" ]
 }
 ```
 
@@ -1150,7 +1073,7 @@ This endpoint does not accept any parameters.
 
 ```
 {
-  "data" : [ "Electric Guitar" ]
+  "data" : [ "Orchestra", "Organ", "Oud", "Pads", "Electric Guitar" ]
 }
 ```
 
@@ -1207,7 +1130,7 @@ This endpoint does not accept any parameters.
 
 ```
 {
-  "data" : [ "Aggressive" ]
+  "data" : [ "Action / Sports", "Adventure / Discovery", "Aerobics / Workout", "Aggressive" ]
 }
 ```
 
@@ -1348,64 +1271,8 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 6,
   "data" : [ {
     "added_date" : "2016-08-16",
-    "album" : {
-      "id" : "",
-      "title" : ""
-    },
-    "artists" : [ {
-      "name" : "Klimenko Music"
-    } ],
-    "assets" : {
-      "clean_audio" : {
-        "file_size" : 35188408
-      },
-      "preview_mp3" : {
-        "file_size" : 4400203,
-        "url" : "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.mp3"
-      },
-      "preview_ogg" : {
-        "file_size" : 4453197,
-        "url" : "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.ogg"
-      },
-      "waveform" : {
-        "file_size" : 18778,
-        "url" : "https://ak.picdn.net/shutterstock/audio/442583/waveform/waveform.png"
-      }
-    },
-    "bpm" : 110,
-    "contributor" : {
-      "id" : "2847971"
-    },
-    "description" : "Pulsing and feel-good, featuring soaring synthesizer, groovy synth bass drums and synth drums that create a euphoric, upbeat mood.",
-    "duration" : 183,
-    "genres" : [ "Dance/Electronic", "Electro Pop", "Pop/Rock" ],
-    "id" : "442583",
-    "instruments" : [ "Piano", "Synth bass", "Synth drums", "Synthesizer" ],
-    "is_adult" : false,
-    "is_instrumental" : true,
-    "isrc" : "",
-    "keywords" : [ "celebratory", "chic", "euphoric", "good times", "hip", "optimistic", "party", "soaring", "upbeat" ],
-    "language" : "en",
-    "lyrics" : "",
-    "media_type" : "audio",
-    "moods" : [ "Bright", "Confident", "Fun", "Happy", "Inspiring", "Optimistic", "Playful", "Sophisticated", "Stylish", "Uplifting" ],
-    "published_time" : "2016-08-16T14:30:03-04:00",
-    "recording_version" : "",
-    "releases" : [ ],
-    "similar_artists" : [ ],
-    "title" : "Another Tomorrow",
-    "updated_time" : "2016-08-18T17:59:33-04:00",
-    "vocal_description" : "",
-    "url" : ""
-  }, {
-    "added_date" : "2016-08-16",
-    "album" : {
-      "id" : "",
-      "title" : ""
-    },
     "artists" : [ {
       "name" : "Klimenko Music"
     } ],
@@ -1452,10 +1319,10 @@ Name | Type | Description
     "vocal_description" : "",
     "url" : ""
   } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "search_id" : "search_id"
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 123455,
+  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10"
 }
 ```
 

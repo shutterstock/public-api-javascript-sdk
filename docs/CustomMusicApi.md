@@ -176,311 +176,41 @@ Name | Type | Description
 ```
 {
   "audio_renders" : [ {
-    "progress_percent" : 2,
-    "timeline" : {
-      "spans" : [ {
-        "tempo_changes" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ],
-        "regions" : [ {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        }, {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        } ],
-        "instrument_groups" : [ {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        }, {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        } ],
-        "tempo" : 1,
-        "id" : 0.80082819046101150206595775671303272247314453125,
-        "span_type" : "metered",
-        "time" : 6
-      }, {
-        "tempo_changes" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ],
-        "regions" : [ {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        }, {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        } ],
-        "instrument_groups" : [ {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        }, {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        } ],
-        "tempo" : 1,
-        "id" : 0.80082819046101150206595775671303272247314453125,
-        "span_type" : "metered",
-        "time" : 6
-      } ]
-    },
-    "files" : [ {
-      "kbits_second" : 1.231513536777255612975068288506008684635162353515625,
-      "filename" : "filename",
-      "size_bytes" : 1.024645700144157789424070870154537260532379150390625,
-      "content_type" : "content_type",
-      "download_url" : "download_url",
-      "frequency_hz" : 7.3862819483858839220147274318151175975799560546875,
-      "tracks" : [ "tracks", "tracks" ],
-      "bits_sample" : 4.1456080298839363962315474054776132106781005859375
-    }, {
-      "kbits_second" : 1.231513536777255612975068288506008684635162353515625,
-      "filename" : "filename",
-      "size_bytes" : 1.024645700144157789424070870154537260532379150390625,
-      "content_type" : "content_type",
-      "download_url" : "download_url",
-      "frequency_hz" : 7.3862819483858839220147274318151175975799560546875,
-      "tracks" : [ "tracks", "tracks" ],
-      "bits_sample" : 4.1456080298839363962315474054776132106781005859375
-    } ],
-    "id" : "id",
+    "id" : "2yZp13IhLqnjfh2KquDTOHUHzTiP",
+    "status" : "WAITING_COMPOSE",
     "preset" : "MASTER_MP3",
-    "created_date" : "2000-01-23T04:56:07.000+00:00",
-    "updated_date" : "2000-01-23T04:56:07.000+00:00",
-    "status" : "WAITING_COMPOSE"
+    "progress_percent" : 20,
+    "files" : [ ],
+    "created_date" : "2021-07-13T16:19:30-04:00",
+    "updated_date" : "2021-07-13T16:19:30-04:00",
+    "timeline" : { }
   }, {
-    "progress_percent" : 2,
-    "timeline" : {
-      "spans" : [ {
-        "tempo_changes" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ],
-        "regions" : [ {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        }, {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        } ],
-        "instrument_groups" : [ {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        }, {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        } ],
-        "tempo" : 1,
-        "id" : 0.80082819046101150206595775671303272247314453125,
-        "span_type" : "metered",
-        "time" : 6
-      }, {
-        "tempo_changes" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ],
-        "regions" : [ {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        }, {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        } ],
-        "instrument_groups" : [ {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        }, {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        } ],
-        "tempo" : 1,
-        "id" : 0.80082819046101150206595775671303272247314453125,
-        "span_type" : "metered",
-        "time" : 6
-      } ]
-    },
-    "files" : [ {
-      "kbits_second" : 1.231513536777255612975068288506008684635162353515625,
-      "filename" : "filename",
-      "size_bytes" : 1.024645700144157789424070870154537260532379150390625,
-      "content_type" : "content_type",
-      "download_url" : "download_url",
-      "frequency_hz" : 7.3862819483858839220147274318151175975799560546875,
-      "tracks" : [ "tracks", "tracks" ],
-      "bits_sample" : 4.1456080298839363962315474054776132106781005859375
-    }, {
-      "kbits_second" : 1.231513536777255612975068288506008684635162353515625,
-      "filename" : "filename",
-      "size_bytes" : 1.024645700144157789424070870154537260532379150390625,
-      "content_type" : "content_type",
-      "download_url" : "download_url",
-      "frequency_hz" : 7.3862819483858839220147274318151175975799560546875,
-      "tracks" : [ "tracks", "tracks" ],
-      "bits_sample" : 4.1456080298839363962315474054776132106781005859375
-    } ],
-    "id" : "id",
+    "id" : "QwAgKqXQAzr622KuXYZ25C9WRH3a",
+    "status" : "CREATED",
     "preset" : "MASTER_MP3",
-    "created_date" : "2000-01-23T04:56:07.000+00:00",
-    "updated_date" : "2000-01-23T04:56:07.000+00:00",
-    "status" : "WAITING_COMPOSE"
+    "progress_percent" : 100,
+    "files" : [ {
+      "bits_sample" : 16,
+      "content_type" : "audio/mp3",
+      "download_url" : "https://s3.amazonaws.com/prod-amper-inferno-ephemeral/renders/2021/07/13/amper-api-QwAgKqXQAzr622KuXYZ25C9WRH3a/0.mp3",
+      "frequency_hz" : 44100,
+      "kbits_second" : 192,
+      "size_bytes" : 481556,
+      "tracks" : [ "master" ],
+      "filename" : "My_audio_ai.mp3"
+    }, {
+      "bits_sample" : 0,
+      "content_type" : "application/vnd.amper.waveform+json",
+      "download_url" : "https://s3.amazonaws.com/prod-amper-inferno-ephemeral/renders/2021/07/13/amper-api-QwAgKqXQAzr622KuXYZ25C9WRH3a/1.json",
+      "frequency_hz" : 42,
+      "kbits_second" : 0,
+      "size_bytes" : 4420,
+      "tracks" : [ "master" ],
+      "filename" : "render.json"
+    } ],
+    "created_date" : "2021-07-12T16:39:59-04:00",
+    "updated_date" : "2021-07-12T16:46:26-04:00",
+    "timeline" : { }
   } ]
 }
 ```
@@ -545,311 +275,41 @@ Name | Type | Description
 ```
 {
   "audio_renders" : [ {
-    "progress_percent" : 2,
-    "timeline" : {
-      "spans" : [ {
-        "tempo_changes" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ],
-        "regions" : [ {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        }, {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        } ],
-        "instrument_groups" : [ {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        }, {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        } ],
-        "tempo" : 1,
-        "id" : 0.80082819046101150206595775671303272247314453125,
-        "span_type" : "metered",
-        "time" : 6
-      }, {
-        "tempo_changes" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ],
-        "regions" : [ {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        }, {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        } ],
-        "instrument_groups" : [ {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        }, {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        } ],
-        "tempo" : 1,
-        "id" : 0.80082819046101150206595775671303272247314453125,
-        "span_type" : "metered",
-        "time" : 6
-      } ]
-    },
-    "files" : [ {
-      "kbits_second" : 1.231513536777255612975068288506008684635162353515625,
-      "filename" : "filename",
-      "size_bytes" : 1.024645700144157789424070870154537260532379150390625,
-      "content_type" : "content_type",
-      "download_url" : "download_url",
-      "frequency_hz" : 7.3862819483858839220147274318151175975799560546875,
-      "tracks" : [ "tracks", "tracks" ],
-      "bits_sample" : 4.1456080298839363962315474054776132106781005859375
-    }, {
-      "kbits_second" : 1.231513536777255612975068288506008684635162353515625,
-      "filename" : "filename",
-      "size_bytes" : 1.024645700144157789424070870154537260532379150390625,
-      "content_type" : "content_type",
-      "download_url" : "download_url",
-      "frequency_hz" : 7.3862819483858839220147274318151175975799560546875,
-      "tracks" : [ "tracks", "tracks" ],
-      "bits_sample" : 4.1456080298839363962315474054776132106781005859375
-    } ],
-    "id" : "id",
+    "id" : "2yZp13IhLqnjfh2KquDTOHUHzTiP",
+    "status" : "WAITING_COMPOSE",
     "preset" : "MASTER_MP3",
-    "created_date" : "2000-01-23T04:56:07.000+00:00",
-    "updated_date" : "2000-01-23T04:56:07.000+00:00",
-    "status" : "WAITING_COMPOSE"
+    "progress_percent" : 20,
+    "files" : [ ],
+    "created_date" : "2021-07-13T16:19:30-04:00",
+    "updated_date" : "2021-07-13T16:19:30-04:00",
+    "timeline" : { }
   }, {
-    "progress_percent" : 2,
-    "timeline" : {
-      "spans" : [ {
-        "tempo_changes" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ],
-        "regions" : [ {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        }, {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        } ],
-        "instrument_groups" : [ {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        }, {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        } ],
-        "tempo" : 1,
-        "id" : 0.80082819046101150206595775671303272247314453125,
-        "span_type" : "metered",
-        "time" : 6
-      }, {
-        "tempo_changes" : [ {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        }, {
-          "tempo" : 3.61607674925191080461672754609026014804840087890625,
-          "time" : 9.301444243932575517419536481611430644989013671875
-        } ],
-        "regions" : [ {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        }, {
-          "end_type" : {
-            "beat" : 2.3021358869347654518833223846741020679473876953125,
-            "event" : "ending",
-            "type" : "ringout"
-          },
-          "beat" : 5,
-          "id" : 5.962133916683182377482808078639209270477294921875,
-          "descriptor" : "descriptor",
-          "region" : "music",
-          "key" : {
-            "tonic_accidental" : "double flat",
-            "tonic_note" : "c",
-            "tonic_quality" : "major"
-          }
-        } ],
-        "instrument_groups" : [ {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        }, {
-          "instrument_group" : "instrument_group",
-          "statuses" : [ {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          }, {
-            "beat" : 7.061401241503109105224211816675961017608642578125,
-            "status" : "active"
-          } ]
-        } ],
-        "tempo" : 1,
-        "id" : 0.80082819046101150206595775671303272247314453125,
-        "span_type" : "metered",
-        "time" : 6
-      } ]
-    },
-    "files" : [ {
-      "kbits_second" : 1.231513536777255612975068288506008684635162353515625,
-      "filename" : "filename",
-      "size_bytes" : 1.024645700144157789424070870154537260532379150390625,
-      "content_type" : "content_type",
-      "download_url" : "download_url",
-      "frequency_hz" : 7.3862819483858839220147274318151175975799560546875,
-      "tracks" : [ "tracks", "tracks" ],
-      "bits_sample" : 4.1456080298839363962315474054776132106781005859375
-    }, {
-      "kbits_second" : 1.231513536777255612975068288506008684635162353515625,
-      "filename" : "filename",
-      "size_bytes" : 1.024645700144157789424070870154537260532379150390625,
-      "content_type" : "content_type",
-      "download_url" : "download_url",
-      "frequency_hz" : 7.3862819483858839220147274318151175975799560546875,
-      "tracks" : [ "tracks", "tracks" ],
-      "bits_sample" : 4.1456080298839363962315474054776132106781005859375
-    } ],
-    "id" : "id",
+    "id" : "QwAgKqXQAzr622KuXYZ25C9WRH3a",
+    "status" : "CREATED",
     "preset" : "MASTER_MP3",
-    "created_date" : "2000-01-23T04:56:07.000+00:00",
-    "updated_date" : "2000-01-23T04:56:07.000+00:00",
-    "status" : "WAITING_COMPOSE"
+    "progress_percent" : 100,
+    "files" : [ {
+      "bits_sample" : 16,
+      "content_type" : "audio/mp3",
+      "download_url" : "https://s3.amazonaws.com/prod-amper-inferno-ephemeral/renders/2021/07/13/amper-api-QwAgKqXQAzr622KuXYZ25C9WRH3a/0.mp3",
+      "frequency_hz" : 44100,
+      "kbits_second" : 192,
+      "size_bytes" : 481556,
+      "tracks" : [ "master" ],
+      "filename" : "My_audio_ai.mp3"
+    }, {
+      "bits_sample" : 0,
+      "content_type" : "application/vnd.amper.waveform+json",
+      "download_url" : "https://s3.amazonaws.com/prod-amper-inferno-ephemeral/renders/2021/07/13/amper-api-QwAgKqXQAzr622KuXYZ25C9WRH3a/1.json",
+      "frequency_hz" : 42,
+      "kbits_second" : 0,
+      "size_bytes" : 4420,
+      "tracks" : [ "master" ],
+      "filename" : "render.json"
+    } ],
+    "created_date" : "2021-07-12T16:39:59-04:00",
+    "updated_date" : "2021-07-12T16:46:26-04:00",
+    "timeline" : { }
   } ]
 }
 ```
@@ -924,65 +384,40 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 5,
   "data" : [ {
-    "instruments" : [ {
-      "name" : "name",
-      "id" : "id"
+    "id" : "cinematic_minimal_tense",
+    "average_render_speed" : 8.242664029014177,
+    "bands" : [ {
+      "id" : "cinematic_minimal_tense_band_1",
+      "name" : "Cinematic Minimal Tense Band 1"
     }, {
-      "name" : "name",
-      "id" : "id"
+      "id" : "cinematic_minimal_tense_band_2",
+      "name" : "Cinematic Minimal Tense Band 2"
     } ],
-    "min_tempo" : 1.46581298050294517310021547018550336360931396484375,
-    "name" : "name",
+    "instruments" : [ {
+      "id" : "blue_synth_pad",
+      "name" : "Warm Pad - Lush"
+    }, {
+      "id" : "direct_round_1_synth_bass",
+      "name" : "Direct Round 1 Synth Bass"
+    }, {
+      "id" : "direct_crystal_breath_mid_pad",
+      "name" : "Direct Crystal Breath Mid Pad"
+    } ],
+    "max_tempo" : 76,
+    "min_tempo" : 58,
     "previews" : [ {
       "content_type" : "audio/mp3",
-      "url" : "url"
+      "url" : "https://public-cdn.ampermusic.com/bands/previews/cinematic_minimal_tense_band_1_v1.mp3"
     }, {
       "content_type" : "audio/mp3",
-      "url" : "url"
+      "url" : "https://public-cdn.ampermusic.com/bands/previews/cinematic_minimal_tense_band_2_v1.mp3"
     } ],
-    "id" : "id",
-    "bands" : [ {
-      "name" : "name",
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "id" : "id"
-    } ],
-    "average_render_speed" : 0.80082819046101150206595775671303272247314453125,
-    "max_tempo" : 6.02745618307040320615897144307382404804229736328125,
-    "tags" : [ "tags", "tags" ]
-  }, {
-    "instruments" : [ {
-      "name" : "name",
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "id" : "id"
-    } ],
-    "min_tempo" : 1.46581298050294517310021547018550336360931396484375,
-    "name" : "name",
-    "previews" : [ {
-      "content_type" : "audio/mp3",
-      "url" : "url"
-    }, {
-      "content_type" : "audio/mp3",
-      "url" : "url"
-    } ],
-    "id" : "id",
-    "bands" : [ {
-      "name" : "name",
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "id" : "id"
-    } ],
-    "average_render_speed" : 0.80082819046101150206595775671303272247314453125,
-    "max_tempo" : 6.02745618307040320615897144307382404804229736328125,
-    "tags" : [ "tags", "tags" ]
+    "name" : "Cinematic Minimal Tense",
+    "tags" : [ "Tense", "Cinematic", "Negative", "Simple Meter", "4/4", "Natural Minor", "Dorian", "Minimal", "Adagio", "Single Region", "Main", "Entertainment", "Politics", "Keys", "Mid Pads", "Fast", "Slow", "Slow", "Voice", "Medium Bright", "Non Noisy", "Medium Thick", "Angelic", "Direct", "Percussion", "Perc FX", "Misc", "Acoustic Pianos", "Grand", "Nice", "Roomy", "Pop", "Upright", "Clean", "Classic", "Keyboards", "Digital Keyboard", "Strings", "Synth Basses", "Fast", "Dark", "Thick", "Sub", "Synth Mallets", "Dull", "Mid Synth Beds", "Slow", "None", "Medium Noisy", "Harsh", "Fast", "Airy", "Long Textures", "Ambience", "Synth Texture", "Ethereal", "Set Kicks", "Processed", "Hubcap Mallet", "Wide", "Tickie", "Airy", "Chamber", "Thin", "Organ", "Cello Ensemble", "Sweet", "Big", "Di", "Raw", "Bright", "Tight", "Chorus", "Buzzy", "Huge", "Warm", "Jazz", "Brass", "String", "Hollow", "Woodwind", "Breathy", "Crystal", "Rhodes", "Synth Piano", "Noisy", "Woody", "Metallic", "Reverse Piano", "Full", "Foley", "Piano", "Clean", "Delayed", "Reverb", "Low Passed", "Large", "Medium", "Small" ]
   } ],
-  "page" : 5
+  "page" : 1,
+  "per_page" : 5
 }
 ```
 
@@ -1048,31 +483,17 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 6,
   "data" : [ {
-    "name" : "name",
+    "id" : "bright_roomy_kit",
+    "name" : "Bright Roomy Kit",
     "previews" : [ {
       "content_type" : "audio/mp3",
-      "url" : "url"
-    }, {
-      "content_type" : "audio/mp3",
-      "url" : "url"
+      "url" : "https://public-cdn.ampermusic.com/instruments/previews/bright_roomy_kit_v1.mp3"
     } ],
-    "id" : "id",
-    "tags" : [ "tags", "tags" ]
-  }, {
-    "name" : "name",
-    "previews" : [ {
-      "content_type" : "audio/mp3",
-      "url" : "url"
-    }, {
-      "content_type" : "audio/mp3",
-      "url" : "url"
-    } ],
-    "id" : "id",
-    "tags" : [ "tags", "tags" ]
+    "tags" : [ "Percussion", "Aux Percs", "Set Cymbals", "Crash", "Open", "Ride", "Set Hi-Hat", "Set Kicks", "Stick Snare", "Quad Toms", "Roto Toms" ]
   } ],
-  "page" : 0
+  "page" : 1,
+  "per_page" : 5
 }
 ```
 

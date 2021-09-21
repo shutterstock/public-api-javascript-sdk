@@ -60,7 +60,7 @@ No authentication required.
 
 ```
 {
-  "text" : "text"
+  "text" : "Test string"
 }
 ```
 
@@ -121,12 +121,12 @@ No authentication required.
 
 ```
 {
-  "query" : {
-    "id" : 0,
-    "tag" : [ "tag", "tag" ]
-  },
   "header" : {
-    "user-agent" : "user-agent"
+    "user-agent" : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
+  },
+  "query" : {
+    "id" : 123456,
+    "tag" : [ "Test string" ]
   }
 }
 ```

@@ -93,7 +93,7 @@ No response body.
 
 <a name="createImageCollection"></a>
 # ImagesApi.createImageCollection
-> `ImagesApi.createImageCollection(body)`
+> `CollectionCreateResponse ImagesApi.createImageCollection(body)`
 
 **Create image collections**
 
@@ -142,8 +142,15 @@ Name | Type | Description
 
 ### Return type
 
-No response body.
+[CollectionCreateResponse](CollectionCreateResponse.md)
 
+### Example response
+
+```
+{
+  "id" : "48433105"
+}
+```
 
 <a name="deleteImageCollection"></a>
 # ImagesApi.deleteImageCollection
@@ -320,7 +327,7 @@ Name | Type | Description
 
 ```
 {
-  "url" : "url"
+  "url" : "https://download.shutterstock.com/gatekeeper/[random-characters]/shutterstock_59656357.jpg"
 }
 ```
 
@@ -390,19 +397,15 @@ Name | Type | Description
 
 ```
 {
-  "created_time" : "2000-01-23T04:56:07.000+00:00",
-  "updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "share_url" : "share_url",
-  "hero_item" : {
-    "url" : "url"
-  },
-  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "name" : "name",
-  "id" : "id",
+  "total_item_count" : 82,
+  "items_updated_time" : "2021-07-08T12:33:37.000Z",
+  "name" : "Exercise & Fitness",
+  "id" : "19853",
+  "created_time" : "2021-07-07T13:10:24.000Z",
+  "updated_time" : "2021-07-07T13:10:24.000Z",
   "cover_item" : {
-    "url" : "url"
-  },
-  "total_item_count" : 0
+    "url" : "https://ak.picdn.net/assets/cms/b467415246debdab45825d915a548f8f79b57882-Collection_1_Thumnail.jpg"
+  }
 }
 ```
 
@@ -473,16 +476,17 @@ Name | Type | Description
 ```
 {
   "data" : [ {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "76688182",
-    "media_type" : "audio"
+    "id" : "1690105108",
+    "added_time" : "2021-07-08T12:33:37.000Z",
+    "media_type" : "image"
   }, {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "40005859",
-    "media_type" : "audio"
+    "id" : "1468703072",
+    "added_time" : "2021-07-08T12:31:43.000Z",
+    "media_type" : "image"
   } ],
   "page" : 1,
-  "per_page" : 100
+  "per_page" : 2,
+  "total_count" : 82
 }
 ```
 
@@ -551,52 +555,20 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 1,
   "data" : [ {
-    "created_time" : "2000-01-23T04:56:07.000+00:00",
-    "updated_time" : "2000-01-23T04:56:07.000+00:00",
-    "share_url" : "share_url",
-    "hero_item" : {
-      "url" : "url"
-    },
-    "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
-    "name" : "name",
-    "id" : "id",
+    "total_item_count" : 82,
+    "items_updated_time" : "2021-07-08T12:33:37.000Z",
+    "name" : "Exercise & Fitness",
+    "id" : "19853",
+    "created_time" : "2021-07-07T13:10:24.000Z",
+    "updated_time" : "2021-07-07T13:10:24.000Z",
     "cover_item" : {
-      "url" : "url"
-    },
-    "total_item_count" : 0
-  }, {
-    "created_time" : "2000-01-23T04:56:07.000+00:00",
-    "updated_time" : "2000-01-23T04:56:07.000+00:00",
-    "share_url" : "share_url",
-    "hero_item" : {
-      "url" : "url"
-    },
-    "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
-    "name" : "name",
-    "id" : "id",
-    "cover_item" : {
-      "url" : "url"
-    },
-    "total_item_count" : 0
+      "url" : "https://ak.picdn.net/assets/cms/b467415246debdab45825d915a548f8f79b57882-Collection_1_Thumnail.jpg"
+    }
   } ],
-  "total_count" : 5,
-  "page" : 6,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 123455
 }
 ```
 
@@ -666,118 +638,47 @@ Name | Type | Description
 
 ```
 {
-  "has_property_release" : true,
-  "model_releases" : [ {
-    "id" : "id"
-  }, {
-    "id" : "id"
-  } ],
-  "models" : [ {
-    "id" : "id"
-  }, {
-    "id" : "id"
-  } ],
-  "keywords" : [ "keywords", "keywords" ],
-  "added_date" : "2000-01-23",
-  "description" : "description",
-  "affiliate_url" : "http://example.com/aeiou",
-  "is_illustration" : true,
-  "url" : "url",
-  "is_adult" : true,
-  "releases" : [ "releases", "releases" ],
+  "id" : "1572478477",
+  "aspect" : 1.5,
   "assets" : {
     "preview" : {
-      "width" : 7,
-      "url" : "url",
-      "height" : 2
-    },
-    "supersize_jpg" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "width" : 5,
-      "display_name" : "display_name",
-      "dpi" : 6,
-      "file_size" : 1,
-      "height" : 5
-    },
-    "preview_1000" : {
-      "width" : 7,
-      "url" : "url",
-      "height" : 2
+      "height" : 300,
+      "url" : "https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+      "width" : 450
     },
     "small_thumb" : {
-      "width" : 7,
-      "url" : "url",
-      "height" : 2
-    },
-    "vector_eps" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "width" : 5,
-      "display_name" : "display_name",
-      "dpi" : 6,
-      "file_size" : 1,
-      "height" : 5
-    },
-    "preview_1500" : {
-      "width" : 7,
-      "url" : "url",
-      "height" : 2
+      "height" : 67,
+      "url" : "https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+      "width" : 100
     },
     "large_thumb" : {
-      "width" : 7,
-      "url" : "url",
-      "height" : 2
+      "height" : 100,
+      "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+      "width" : 150
     },
     "huge_thumb" : {
-      "width" : 7,
-      "url" : "url",
-      "height" : 2
+      "height" : 260,
+      "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
+      "width" : 390
     },
-    "medium_jpg" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "width" : 5,
-      "display_name" : "display_name",
-      "dpi" : 6,
-      "file_size" : 1,
-      "height" : 5
+    "preview_1000" : {
+      "url" : "https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg",
+      "width" : 1000,
+      "height" : 667
     },
-    "small_jpg" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "width" : 5,
-      "display_name" : "display_name",
-      "dpi" : 6,
-      "file_size" : 1,
-      "height" : 5
-    },
-    "huge_jpg" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "width" : 5,
-      "display_name" : "display_name",
-      "dpi" : 6,
-      "file_size" : 1,
-      "height" : 5
+    "preview_1500" : {
+      "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+      "width" : 1500,
+      "height" : 1000
     }
   },
   "contributor" : {
-    "id" : "id"
+    "id" : "250738318"
   },
-  "is_editorial" : true,
-  "media_type" : "media_type",
-  "aspect" : 0.80082819046101150206595775671303272247314453125,
+  "description" : "cropped image of woman gardening",
+  "image_type" : "photo",
   "has_model_release" : true,
-  "categories" : [ {
-    "name" : "name",
-    "id" : "id"
-  }, {
-    "name" : "name",
-    "id" : "id"
-  } ],
-  "id" : "id",
-  "image_type" : "image_type"
+  "media_type" : "image"
 }
 ```
 
@@ -846,19 +747,13 @@ Name | Type | Description
 
 ```
 {
-  "created_time" : "2000-01-23T04:56:07.000+00:00",
-  "updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "share_url" : "share_url",
-  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "name" : "name",
-  "id" : "id",
-  "share_code" : "share_code",
+  "id" : "293542904",
+  "name" : "My collection",
+  "total_item_count" : 85,
+  "items_updated_time" : "2021-05-20T16:15:22-04:00",
   "cover_item" : {
-    "added_time" : "2000-01-23T04:56:07.000+00:00",
-    "media_type" : "media_type",
-    "id" : "id"
-  },
-  "total_item_count" : 0
+    "id" : "297886754"
+  }
 }
 ```
 
@@ -883,9 +778,10 @@ const api = new sstk.ImagesApi();
 const id = "126351027"; // String | Collection ID
 
 const queryParams = { 
-  'share_code': "share_code_example", // String | Code to retrieve the contents of a shared collection
   'page': 1, // Number | Page number
-  'per_page': 100 // Number | Number of results per page
+  'per_page': 100, // Number | Number of results per page
+  'share_code': "share_code_example", // String | Code to retrieve the contents of a shared collection
+  'sort': "oldest" // String | Sort order
 };
 
 api.getImageCollectionItems(id, queryParams)
@@ -904,9 +800,10 @@ api.getImageCollectionItems(id, queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
- share_code | String| Code to retrieve the contents of a shared collection 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 100 
+ share_code | String| Code to retrieve the contents of a shared collection 
+ sort | String| Sort order, defaults to oldest <br/><br/>Valid values: "newest", "oldest"
 
 ### Accepted authentication
 
@@ -930,16 +827,17 @@ Name | Type | Description
 ```
 {
   "data" : [ {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "76688182",
-    "media_type" : "audio"
+    "id" : "1690105108",
+    "added_time" : "2021-07-08T12:33:37.000Z",
+    "media_type" : "image"
   }, {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "40005859",
-    "media_type" : "audio"
+    "id" : "1468703072",
+    "added_time" : "2021-07-08T12:31:43.000Z",
+    "media_type" : "image"
   } ],
   "page" : 1,
-  "per_page" : 100
+  "per_page" : 2,
+  "total_count" : 82
 }
 ```
 
@@ -1008,36 +906,17 @@ Name | Type | Description
 ```
 {
   "data" : [ {
-    "created_time" : "2014-11-05T19:29:56-05:00",
-    "id" : "5747953",
-    "name" : "Test Collection cdad",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:56-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:29:56-05:00",
-    "id" : "5747955",
-    "name" : "Test Collection ff5f",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:56-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:29:58-05:00",
-    "id" : "5747957",
-    "name" : "Updated Collection ebc4",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:58-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:32:13-05:00",
-    "id" : "5747971",
-    "name" : "Test Collection 0072",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:32:13-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:32:13-05:00",
-    "id" : "5747973",
-    "name" : "Test Collection d332",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:32:13-05:00"
-  } ]
+    "id" : "293542904",
+    "name" : "My collection",
+    "total_item_count" : 85,
+    "items_updated_time" : "2021-05-20T16:15:22-04:00",
+    "cover_item" : {
+      "id" : "297886754"
+    }
+  } ],
+  "page" : 1,
+  "per_page" : 100,
+  "total_count" : 1
 }
 ```
 
@@ -1099,7 +978,7 @@ Name | Type | Description
 
 ```
 {
-  "keywords" : [ "beach", "place", "sand", "ocean" ]
+  "keywords" : [ "planting", "flowers", "springtime", "beautiful" ]
 }
 ```
 
@@ -1171,85 +1050,30 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 6,
+  "total_count" : 2890,
+  "page" : 1,
+  "per_page" : 1,
   "data" : [ {
-    "subscription_id" : "subscription_id",
-    "image" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "license" : "license",
-    "download_time" : "2000-01-23T04:56:07.000+00:00",
-    "metadata" : "{}",
-    "is_downloadable" : true,
-    "audio" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "id" : "id",
-    "video" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
+    "id" : "e1eba3833793e77188d22caae8bac9f2cd",
     "user" : {
-      "username" : "username"
-    }
-  }, {
-    "subscription_id" : "subscription_id",
+      "username" : "jsmith"
+    },
+    "license" : "shutterstock_license",
+    "download_time" : "2021-07-15T15:46:34.000Z",
+    "is_downloadable" : false,
     "image" : {
+      "id" : "9763363ao",
       "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
+        "size" : "original"
+      }
     },
-    "license" : "license",
-    "download_time" : "2000-01-23T04:56:07.000+00:00",
-    "metadata" : "{}",
-    "is_downloadable" : true,
-    "audio" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "id" : "id",
-    "video" : {
-      "format" : {
-        "size" : "size",
-        "format" : "format"
-      },
-      "id" : "id"
-    },
-    "user" : {
-      "username" : "username"
+    "subscription_id" : "1df5d8cfe8394bbebb849a69943b9a7c",
+    "metadata" : {
+      "purchase_order" : "12345",
+      "job" : "Important project",
+      "client" : "Company A",
+      "other" : "Important media"
     }
-  } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
   } ]
 }
 ```
@@ -1318,250 +1142,52 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 6,
   "data" : [ {
-    "has_property_release" : true,
-    "model_releases" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "models" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "keywords" : [ "keywords", "keywords" ],
-    "added_date" : "2000-01-23",
-    "description" : "description",
-    "affiliate_url" : "http://example.com/aeiou",
-    "is_illustration" : true,
-    "url" : "url",
-    "is_adult" : true,
-    "releases" : [ "releases", "releases" ],
+    "id" : "1572478477",
+    "aspect" : 1.5,
     "assets" : {
       "preview" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "supersize_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "preview_1000" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
+        "height" : 300,
+        "url" : "https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 450
       },
       "small_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "vector_eps" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "preview_1500" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
+        "height" : 67,
+        "url" : "https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 100
       },
       "large_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
+        "height" : 100,
+        "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 150
       },
       "huge_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
+        "height" : 260,
+        "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
+        "width" : 390
       },
-      "medium_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
+      "preview_1000" : {
+        "url" : "https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg",
+        "width" : 1000,
+        "height" : 667
       },
-      "small_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "huge_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
+      "preview_1500" : {
+        "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 1500,
+        "height" : 1000
       }
     },
     "contributor" : {
-      "id" : "id"
+      "id" : "250738318"
     },
-    "is_editorial" : true,
-    "media_type" : "media_type",
-    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "description" : "cropped image of woman gardening",
+    "image_type" : "photo",
     "has_model_release" : true,
-    "categories" : [ {
-      "name" : "name",
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "id" : "id"
-    } ],
-    "id" : "id",
-    "image_type" : "image_type"
-  }, {
-    "has_property_release" : true,
-    "model_releases" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "models" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "keywords" : [ "keywords", "keywords" ],
-    "added_date" : "2000-01-23",
-    "description" : "description",
-    "affiliate_url" : "http://example.com/aeiou",
-    "is_illustration" : true,
-    "url" : "url",
-    "is_adult" : true,
-    "releases" : [ "releases", "releases" ],
-    "assets" : {
-      "preview" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "supersize_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "preview_1000" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "small_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "vector_eps" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "preview_1500" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "large_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "huge_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "medium_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "small_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "huge_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      }
-    },
-    "contributor" : {
-      "id" : "id"
-    },
-    "is_editorial" : true,
-    "media_type" : "media_type",
-    "aspect" : 0.80082819046101150206595775671303272247314453125,
-    "has_model_release" : true,
-    "categories" : [ {
-      "name" : "name",
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "id" : "id"
-    } ],
-    "id" : "id",
-    "image_type" : "image_type"
+    "media_type" : "image"
   } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 123455
 }
 ```
 
@@ -1631,28 +1257,16 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 6,
   "data" : [ {
-    "id" : "id"
+    "id" : "123456789"
   }, {
-    "id" : "id"
+    "id" : "99379946"
+  }, {
+    "id" : "133918412"
   } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 12
 }
 ```
 
@@ -1720,7 +1334,7 @@ Name | Type | Description
 
 ```
 {
-  "data" : [ "data", "data" ]
+  "data" : [ "cat scan", "cats and dogs", "cats playing", "catsuit", "cat silhouette", "catskills", "cats eyes", "cat sitting", "cat sleeping", "cats eye" ]
 }
 ```
 
@@ -1794,239 +1408,54 @@ Name | Type | Description
 
 ```
 {
-  "spellcheck_info" : "{}",
-  "per_page" : 3,
   "data" : [ {
-    "has_property_release" : true,
-    "model_releases" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "models" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "keywords" : [ "keywords", "keywords" ],
-    "added_date" : "2000-01-23",
-    "description" : "description",
-    "affiliate_url" : "http://example.com/aeiou",
-    "is_illustration" : true,
-    "url" : "url",
-    "is_adult" : true,
-    "releases" : [ "releases", "releases" ],
+    "id" : "1572478477",
+    "aspect" : 1.5,
     "assets" : {
       "preview" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "supersize_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "preview_1000" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
+        "height" : 300,
+        "url" : "https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 450
       },
       "small_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "vector_eps" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "preview_1500" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
+        "height" : 67,
+        "url" : "https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 100
       },
       "large_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
+        "height" : 100,
+        "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 150
       },
       "huge_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
+        "height" : 260,
+        "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
+        "width" : 390
       },
-      "medium_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
+      "preview_1000" : {
+        "url" : "https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg",
+        "width" : 1000,
+        "height" : 667
       },
-      "small_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "huge_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
+      "preview_1500" : {
+        "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 1500,
+        "height" : 1000
       }
     },
     "contributor" : {
-      "id" : "id"
+      "id" : "250738318"
     },
-    "is_editorial" : true,
-    "media_type" : "media_type",
-    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "description" : "cropped image of woman gardening",
+    "image_type" : "photo",
     "has_model_release" : true,
-    "categories" : [ {
-      "name" : "name",
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "id" : "id"
-    } ],
-    "id" : "id",
-    "image_type" : "image_type"
-  }, {
-    "has_property_release" : true,
-    "model_releases" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "models" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "keywords" : [ "keywords", "keywords" ],
-    "added_date" : "2000-01-23",
-    "description" : "description",
-    "affiliate_url" : "http://example.com/aeiou",
-    "is_illustration" : true,
-    "url" : "url",
-    "is_adult" : true,
-    "releases" : [ "releases", "releases" ],
-    "assets" : {
-      "preview" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "supersize_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "preview_1000" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "small_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "vector_eps" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "preview_1500" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "large_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "huge_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "medium_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "small_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "huge_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      }
-    },
-    "contributor" : {
-      "id" : "id"
-    },
-    "is_editorial" : true,
-    "media_type" : "media_type",
-    "aspect" : 0.80082819046101150206595775671303272247314453125,
-    "has_model_release" : true,
-    "categories" : [ {
-      "name" : "name",
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "id" : "id"
-    } ],
-    "id" : "id",
-    "image_type" : "image_type"
+    "media_type" : "image"
   } ],
-  "total_count" : 2,
-  "page" : 9,
-  "message" : "message",
-  "search_id" : "search_id"
+  "page" : 1,
+  "per_page" : 5,
+  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10",
+  "spellcheck_info" : { },
+  "total_count" : 45
 }
 ```
 
@@ -2094,32 +1523,14 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 6,
   "data" : [ {
-    "updated_time" : "2000-01-23T04:56:07.000+00:00",
-    "id" : "id",
-    "updates" : [ "updates", "updates" ]
-  }, {
-    "updated_time" : "2000-01-23T04:56:07.000+00:00",
-    "id" : "id",
-    "updates" : [ "updates", "updates" ]
+    "id" : "123456789",
+    "updated_time" : "2020-05-29T12:10:22-05:00",
+    "updates" : [ "addition", "edit" ]
   } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 13
 }
 ```
 
@@ -2203,46 +1614,16 @@ Required scopes:
 
 ```
 {
-  "per_page" : 5,
   "data" : [ {
+    "image_id" : "59656357",
     "download" : {
-      "url" : "url"
+      "url" : "https://download.shutterstock.com/gatekeeper/[random-characters]/shutterstock_59656357.jpg"
     },
-    "price" : {
-      "local_amount" : 6.02745618307040320615897144307382404804229736328125,
-      "local_currency" : "local_currency"
-    },
-    "allotment_charge" : 0,
-    "error" : "error",
-    "image_id" : "image_id"
-  }, {
-    "download" : {
-      "url" : "url"
-    },
-    "price" : {
-      "local_amount" : 6.02745618307040320615897144307382404804229736328125,
-      "local_currency" : "local_currency"
-    },
-    "allotment_charge" : 0,
-    "error" : "error",
-    "image_id" : "image_id"
+    "allotment_charge" : 1
   } ],
-  "total_count" : 5,
   "page" : 1,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
+  "per_page" : 5,
+  "total_count" : 23
 }
 ```
 
@@ -2307,30 +1688,19 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 6,
   "data" : [ {
-    "name" : "name",
-    "id" : "id"
+    "id" : "1",
+    "name" : "Animals/Wildlife"
   }, {
-    "name" : "name",
-    "id" : "id"
+    "id" : "11",
+    "name" : "The Arts"
+  }, {
+    "id" : "15",
+    "name" : "Science"
   } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 13
 }
 ```
 
@@ -2437,7 +1807,7 @@ Name | Type | Description
  aspect_ratio | Number| Show images with the specified aspect ratio, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
  added_date_end | Date| Show images added before the specified date 
  category | String| Show images with the specified Shutterstock-defined category; specify a category name or ID 
- color | String| Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API groups it into one of 15 color categories and returns images that primarily use that color category 
+ color | String| Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API returns images that use similar colors 
  contributor | [String]| Show images with the specified contributor names or IDs, allows multiple 
  contributor_country | [Object](.md)| Show images from contributors in one or more specified countries, or start with NOT to exclude a country from the search 
  fields | String| Fields to display in the response; see the documentation for the fields parameter in the overview section 
@@ -2454,7 +1824,7 @@ Name | Type | Description
  per_page | Number| Number of results per page, defaults to 20 
  people_model_released | Boolean| Show images of people with a signed model release 
  people_age | String| Show images that feature people of the specified age category <br/><br/>Valid values: "infants", "children", "teenagers", "20s", "30s", "40s", "50s", "60s", "older"
- people_ethnicity | [String]| Show images with people of the specified ethnicities <br/><br/>Valid values: "african", "african_american", "black", "brazilian", "chinese", "caucasian", "east_asian", "hispanic", "japanese", "middle_eastern", "native_american", "pacific_islander", "south_asian", "southeast_asian", "other"
+ people_ethnicity | [String]| Show images with people of the specified ethnicities, or start with NOT to show images without those ethnicities <br/><br/>Valid values: "african", "african_american", "black", "brazilian", "chinese", "caucasian", "east_asian", "hispanic", "japanese", "middle_eastern", "native_american", "pacific_islander", "south_asian", "southeast_asian", "other", "NOT african", "NOT african_american", "NOT black", "NOT brazilian", "NOT chinese", "NOT caucasian", "NOT east_asian", "NOT hispanic", "NOT japanese", "NOT middle_eastern", "NOT native_american", "NOT pacific_islander", "NOT south_asian", "NOT southeast_asian", "NOT other"
  people_gender | String| Show images with people of the specified gender <br/><br/>Valid values: "male", "female", "both"
  people_number | Number| Show images with the specified number of people 
  query | String| One or more search terms separated by spaces; you can use NOT to filter out images that match a term 
@@ -2486,239 +1856,54 @@ Name | Type | Description
 
 ```
 {
-  "spellcheck_info" : "{}",
-  "per_page" : 3,
   "data" : [ {
-    "has_property_release" : true,
-    "model_releases" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "models" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "keywords" : [ "keywords", "keywords" ],
-    "added_date" : "2000-01-23",
-    "description" : "description",
-    "affiliate_url" : "http://example.com/aeiou",
-    "is_illustration" : true,
-    "url" : "url",
-    "is_adult" : true,
-    "releases" : [ "releases", "releases" ],
+    "id" : "1572478477",
+    "aspect" : 1.5,
     "assets" : {
       "preview" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "supersize_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "preview_1000" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
+        "height" : 300,
+        "url" : "https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 450
       },
       "small_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "vector_eps" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "preview_1500" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
+        "height" : 67,
+        "url" : "https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 100
       },
       "large_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
+        "height" : 100,
+        "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 150
       },
       "huge_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
+        "height" : 260,
+        "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
+        "width" : 390
       },
-      "medium_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
+      "preview_1000" : {
+        "url" : "https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg",
+        "width" : 1000,
+        "height" : 667
       },
-      "small_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "huge_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
+      "preview_1500" : {
+        "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 1500,
+        "height" : 1000
       }
     },
     "contributor" : {
-      "id" : "id"
+      "id" : "250738318"
     },
-    "is_editorial" : true,
-    "media_type" : "media_type",
-    "aspect" : 0.80082819046101150206595775671303272247314453125,
+    "description" : "cropped image of woman gardening",
+    "image_type" : "photo",
     "has_model_release" : true,
-    "categories" : [ {
-      "name" : "name",
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "id" : "id"
-    } ],
-    "id" : "id",
-    "image_type" : "image_type"
-  }, {
-    "has_property_release" : true,
-    "model_releases" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "models" : [ {
-      "id" : "id"
-    }, {
-      "id" : "id"
-    } ],
-    "keywords" : [ "keywords", "keywords" ],
-    "added_date" : "2000-01-23",
-    "description" : "description",
-    "affiliate_url" : "http://example.com/aeiou",
-    "is_illustration" : true,
-    "url" : "url",
-    "is_adult" : true,
-    "releases" : [ "releases", "releases" ],
-    "assets" : {
-      "preview" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "supersize_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "preview_1000" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "small_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "vector_eps" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "preview_1500" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "large_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "huge_thumb" : {
-        "width" : 7,
-        "url" : "url",
-        "height" : 2
-      },
-      "medium_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "small_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      },
-      "huge_jpg" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "width" : 5,
-        "display_name" : "display_name",
-        "dpi" : 6,
-        "file_size" : 1,
-        "height" : 5
-      }
-    },
-    "contributor" : {
-      "id" : "id"
-    },
-    "is_editorial" : true,
-    "media_type" : "media_type",
-    "aspect" : 0.80082819046101150206595775671303272247314453125,
-    "has_model_release" : true,
-    "categories" : [ {
-      "name" : "name",
-      "id" : "id"
-    }, {
-      "name" : "name",
-      "id" : "id"
-    } ],
-    "id" : "id",
-    "image_type" : "image_type"
+    "media_type" : "image"
   } ],
-  "total_count" : 2,
-  "page" : 9,
-  "message" : "message",
-  "search_id" : "search_id"
+  "page" : 1,
+  "per_page" : 5,
+  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10",
+  "spellcheck_info" : { },
+  "total_count" : 45
 }
 ```
 

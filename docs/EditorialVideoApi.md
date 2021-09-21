@@ -5,6 +5,7 @@ All URIs are relative to `https://api.shutterstock.com`.
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [`getEditorialVideo`](EditorialVideoApi.md#getEditorialVideo) | `GET /v2/editorial/videos/{id}` | Get editorial video content details
+[`getEditorialVideoLicenseList`](EditorialVideoApi.md#getEditorialVideoLicenseList) | `GET /v2/editorial/videos/licenses` | List editorial video licenses
 [`licenseEditorialVideo`](EditorialVideoApi.md#licenseEditorialVideo) | `POST /v2/editorial/videos/licenses` | License editorial video content
 [`listEditorialVideoCategories`](EditorialVideoApi.md#listEditorialVideoCategories) | `GET /v2/editorial/videos/categories` | List editorial video categories
 [`searchEditorialVideos`](EditorialVideoApi.md#searchEditorialVideos) | `GET /v2/editorial/videos/search` | Search editorial video content
@@ -73,39 +74,137 @@ Name | Type | Description
 
 ```
 {
+  "id" : "10679854a",
+  "title" : "Peeps the Goose Has a Blast on a Jet Ski, Prior Lake, Minnesota, USA - 13 Nov 2020",
+  "caption" : "",
+  "description" : "Info from Licensor: \"Peeps the Canadian Goose has been raised with our family since a gosling. Peeps has made appearances on our local news channels, TV shows, and local newspapers. He has been trained to fly next to four wheelers, jet ski's, and boats. He has brought joy to many people during the pandemic including those with cancer.\"",
+  "byline" : "ViralHog/Shutterstock",
+  "keywords" : [ "2020", "adorable", "birds", "bizarre", "canadian goose", "cute", "domesticated animals", "entertainment", "feel good", "flew", "flies", "fly", "flying", "fun", "goose", "jet skis", "nature", "odd", "pets", "played", "playing", "plays", "prior lake", "sports", "strange", "sweet", "usa", "viralhog", "virals", "water sports", "weird" ],
+  "date_taken" : "2020-11-13",
+  "categories" : [ ],
+  "aspect" : 1,
   "assets" : {
-    "original" : {
-      "is_licensable" : true,
-      "format" : "format",
-      "fps" : 1.46581298050294517310021547018550336360931396484375,
-      "width" : 5,
-      "display_name" : "display_name",
-      "file_size" : 6,
-      "height" : 5
-    },
     "preview_mp4" : {
-      "url" : "url"
+      "url" : "https://qa.editorial-cdn.shuttercorp.net/wm-preview-mp4/10679854a/M0T7A13aNej2g82bMTI4NjY=/Shutterstock_10679854a.mp4"
     },
     "preview_webm" : {
-      "url" : "url"
+      "url" : "https://qa.editorial-cdn.shuttercorp.net/wm-preview-webm/10679854a/M4T6A63fN2j5g929MTI4NjY=/Shutterstock_10679854a.webm"
     },
     "thumb_jpg" : {
-      "url" : "url"
+      "url" : "https://qa.editorial-cdn.shuttercorp.net/thumb-1/10679854a/M5TcAf30Ncjcge2eMTI4NjY=/Shutterstock_10679854a.jpg"
+    },
+    "original" : {
+      "height" : 1080,
+      "width" : 1080,
+      "fps" : 30,
+      "format" : "avc1",
+      "file_size" : 82233387,
+      "display_name" : "HD",
+      "is_licensable" : true
     }
-  },
-  "keywords" : [ "keywords", "keywords" ],
-  "aspect" : 0.80082819046101150206595775671303272247314453125,
-  "caption" : "caption",
-  "description" : "description",
-  "categories" : [ {
-    "name" : "name"
-  }, {
-    "name" : "name"
-  } ],
-  "id" : "id",
-  "title" : "title",
-  "byline" : "byline",
-  "date_taken" : "2000-01-23"
+  }
+}
+```
+
+<a name="getEditorialVideoLicenseList"></a>
+# EditorialVideoApi.getEditorialVideoLicenseList
+> `DownloadHistoryDataList EditorialVideoApi.getEditorialVideoLicenseList(queryParams)`
+
+**List editorial video licenses**
+
+This endpoint lists existing editorial video licenses.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.EditorialVideoApi();
+
+const queryParams = { 
+  'video_id': "12345678", // String | Show licenses for the specified editorial video ID
+  'license': "premier_editorial_all_media", // String | Show editorial videos that are available with the specified license name
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'sort': "newest", // String | Sort order
+  'username': "aUniqueUsername", // String | Filter licenses by username of licensee
+  'start_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created on or after the specified date
+  'end_date': new Date("2021-03-29T13:25:13.521Z") // Date | Show licenses created before the specified date
+};
+
+api.getEditorialVideoLicenseList(queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ video_id | String| Show licenses for the specified editorial video ID 
+ license | String| Show editorial videos that are available with the specified license name 
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 20 
+ sort | String| Sort order, defaults to newest <br/><br/>Valid values: "newest", "oldest"
+ username | String| Filter licenses by username of licensee 
+ start_date | Date| Show licenses created on or after the specified date 
+ end_date | Date| Show licenses created before the specified date 
+
+### Accepted authentication
+
+
+- [OAuth](../README.md#OAuth_authentication) Required scopes:
+  - licenses.view
+
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[DownloadHistoryDataList](DownloadHistoryDataList.md)
+
+### Example response
+
+```
+{
+  "total_count" : 2890,
+  "page" : 1,
+  "per_page" : 1,
+  "data" : [ {
+    "id" : "e1eba3833793e77188d22caae8bac9f2cd",
+    "user" : {
+      "username" : "jsmith"
+    },
+    "license" : "shutterstock_license",
+    "download_time" : "2021-07-15T15:46:34.000Z",
+    "is_downloadable" : false,
+    "image" : {
+      "id" : "9763363ao",
+      "format" : {
+        "size" : "original"
+      }
+    },
+    "subscription_id" : "1df5d8cfe8394bbebb849a69943b9a7c",
+    "metadata" : {
+      "purchase_order" : "12345",
+      "job" : "Important project",
+      "client" : "Company A",
+      "other" : "Important media"
+    }
+  } ]
 }
 ```
 
@@ -177,38 +276,16 @@ Required scopes:
 
 ```
 {
-  "per_page" : 1,
   "data" : [ {
+    "allotment_charge" : 1,
+    "editorial_id" : "69656358",
     "download" : {
-      "url" : "url"
-    },
-    "allotment_charge" : 0,
-    "error" : "error",
-    "editorial_id" : "editorial_id"
-  }, {
-    "download" : {
-      "url" : "url"
-    },
-    "allotment_charge" : 0,
-    "error" : "error",
-    "editorial_id" : "editorial_id"
+      "url" : "https://s3-eu-west-1.amazonaws.com/api-downloads.rexfeatures.com/[random-characters].jpg?Expires=1524717323"
+    }
   } ],
-  "total_count" : 5,
-  "page" : 6,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
+  "page" : 1,
+  "per_page" : 1,
+  "total_count" : 12
 }
 ```
 
@@ -266,9 +343,13 @@ This endpoint does not accept any parameters.
 ```
 {
   "data" : [ {
-    "name" : "name"
+    "name" : "Animal"
   }, {
-    "name" : "name"
+    "name" : "Awards"
+  }, {
+    "name" : "Art"
+  }, {
+    "name" : "Film Stills"
   } ]
 }
 ```
@@ -346,82 +427,42 @@ Name | Type | Description
 
 ```
 {
-  "next" : "next",
-  "per_page" : 1,
   "data" : [ {
+    "id" : "10679854a",
+    "title" : "Peeps the Goose Has a Blast on a Jet Ski, Prior Lake, Minnesota, USA - 13 Nov 2020",
+    "caption" : "",
+    "description" : "Info from Licensor: \"Peeps the Canadian Goose has been raised with our family since a gosling. Peeps has made appearances on our local news channels, TV shows, and local newspapers. He has been trained to fly next to four wheelers, jet ski's, and boats. He has brought joy to many people during the pandemic including those with cancer.\"",
+    "byline" : "ViralHog/Shutterstock",
+    "keywords" : [ "2020", "adorable", "birds", "bizarre", "canadian goose", "cute", "domesticated animals", "entertainment", "feel good", "flew", "flies", "fly", "flying", "fun", "goose", "jet skis", "nature", "odd", "pets", "played", "playing", "plays", "prior lake", "sports", "strange", "sweet", "usa", "viralhog", "virals", "water sports", "weird" ],
+    "date_taken" : "2020-11-13",
+    "categories" : [ ],
+    "aspect" : 1,
     "assets" : {
-      "original" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
       "preview_mp4" : {
-        "url" : "url"
+        "url" : "https://qa.editorial-cdn.shuttercorp.net/wm-preview-mp4/10679854a/M0T7A13aNej2g82bMTI4NjY=/Shutterstock_10679854a.mp4"
       },
       "preview_webm" : {
-        "url" : "url"
+        "url" : "https://qa.editorial-cdn.shuttercorp.net/wm-preview-webm/10679854a/M4T6A63fN2j5g929MTI4NjY=/Shutterstock_10679854a.webm"
       },
       "thumb_jpg" : {
-        "url" : "url"
-      }
-    },
-    "keywords" : [ "keywords", "keywords" ],
-    "aspect" : 0.80082819046101150206595775671303272247314453125,
-    "caption" : "caption",
-    "description" : "description",
-    "categories" : [ {
-      "name" : "name"
-    }, {
-      "name" : "name"
-    } ],
-    "id" : "id",
-    "title" : "title",
-    "byline" : "byline",
-    "date_taken" : "2000-01-23"
-  }, {
-    "assets" : {
+        "url" : "https://qa.editorial-cdn.shuttercorp.net/thumb-1/10679854a/M5TcAf30Ncjcge2eMTI4NjY=/Shutterstock_10679854a.jpg"
+      },
       "original" : {
-        "is_licensable" : true,
-        "format" : "format",
-        "fps" : 1.46581298050294517310021547018550336360931396484375,
-        "width" : 5,
-        "display_name" : "display_name",
-        "file_size" : 6,
-        "height" : 5
-      },
-      "preview_mp4" : {
-        "url" : "url"
-      },
-      "preview_webm" : {
-        "url" : "url"
-      },
-      "thumb_jpg" : {
-        "url" : "url"
+        "height" : 1080,
+        "width" : 1080,
+        "fps" : 30,
+        "format" : "avc1",
+        "file_size" : 82233387,
+        "display_name" : "HD",
+        "is_licensable" : true
       }
-    },
-    "keywords" : [ "keywords", "keywords" ],
-    "aspect" : 0.80082819046101150206595775671303272247314453125,
-    "caption" : "caption",
-    "description" : "description",
-    "categories" : [ {
-      "name" : "name"
-    }, {
-      "name" : "name"
-    } ],
-    "id" : "id",
-    "title" : "title",
-    "byline" : "byline",
-    "date_taken" : "2000-01-23"
+    }
   } ],
-  "total_count" : 5,
-  "prev" : "prev",
-  "page" : 6,
-  "message" : "message",
-  "search_id" : "search_id"
+  "per_page" : 1,
+  "total_count" : 331,
+  "search_id" : "zhmz9zLmpQehdTPvg8cacQ",
+  "next" : "eyJ2IjoyLCJzIjoyMCwicCI6WzBdfQ==",
+  "prev" : ""
 }
 ```
 

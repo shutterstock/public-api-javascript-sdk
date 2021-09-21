@@ -71,24 +71,24 @@ Name | Type | Description
 
 ```
 {
-  "website" : "website",
-  "contributor_type" : [ "contributor_type", "contributor_type" ],
-  "subjects" : [ "subjects", "subjects" ],
-  "about" : "about",
-  "equipment" : [ "equipment", "equipment" ],
-  "location" : "location",
-  "styles" : [ "styles", "styles" ],
-  "id" : "id",
-  "display_name" : "display_name",
-  "portfolio_url" : "portfolio_url",
+  "about" : "John Doe's photographs",
+  "contributor_type" : [ "photographer" ],
+  "display_name" : "John Doe",
+  "equipment" : [ "Nikon", "Fuji" ],
+  "id" : "12345678",
+  "location" : "US",
+  "portfolio_url" : "https://www.shutterstock.com/g/jdoe",
   "social_media" : {
-    "twitter" : "twitter",
-    "facebook" : "facebook",
-    "tumblr" : "tumblr",
-    "google_plus" : "google_plus",
-    "pinterest" : "pinterest",
-    "linkedin" : "linkedin"
-  }
+    "facebook" : "http://example.com/jdoe",
+    "google_plus" : "http://example.com/jdoe",
+    "linkedin" : "http://example.com/jdoe",
+    "pinterest" : "http://example.com/jdoe",
+    "tumblr" : "http://example.com/jdoe",
+    "twitter" : "http://example.com/jdoe"
+  },
+  "styles" : [ "landscape", "nature", "footage_travel" ],
+  "subjects" : [ "animals", "landmarks", "nature", "objects", "recreation" ],
+  "website" : "http://example.com/profiles/jdoe"
 }
 ```
 
@@ -164,16 +164,17 @@ Name | Type | Description
 ```
 {
   "data" : [ {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "76688182",
-    "media_type" : "audio"
+    "id" : "1690105108",
+    "added_time" : "2021-07-08T12:33:37.000Z",
+    "media_type" : "image"
   }, {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "40005859",
-    "media_type" : "audio"
+    "id" : "1468703072",
+    "added_time" : "2021-07-08T12:31:43.000Z",
+    "media_type" : "image"
   } ],
   "page" : 1,
-  "per_page" : 100
+  "per_page" : 2,
+  "total_count" : 82
 }
 ```
 
@@ -240,19 +241,13 @@ Name | Type | Description
 
 ```
 {
-  "created_time" : "2000-01-23T04:56:07.000+00:00",
-  "updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "share_url" : "share_url",
-  "items_updated_time" : "2000-01-23T04:56:07.000+00:00",
-  "name" : "name",
-  "id" : "id",
-  "share_code" : "share_code",
+  "id" : "293542904",
+  "name" : "My collection",
+  "total_item_count" : 85,
+  "items_updated_time" : "2021-05-20T16:15:22-04:00",
   "cover_item" : {
-    "added_time" : "2000-01-23T04:56:07.000+00:00",
-    "media_type" : "media_type",
-    "id" : "id"
-  },
-  "total_item_count" : 0
+    "id" : "297886754"
+  }
 }
 ```
 
@@ -321,36 +316,17 @@ Name | Type | Description
 ```
 {
   "data" : [ {
-    "created_time" : "2014-11-05T19:29:56-05:00",
-    "id" : "5747953",
-    "name" : "Test Collection cdad",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:56-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:29:56-05:00",
-    "id" : "5747955",
-    "name" : "Test Collection ff5f",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:56-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:29:58-05:00",
-    "id" : "5747957",
-    "name" : "Updated Collection ebc4",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:29:58-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:32:13-05:00",
-    "id" : "5747971",
-    "name" : "Test Collection 0072",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:32:13-05:00"
-  }, {
-    "created_time" : "2014-11-05T19:32:13-05:00",
-    "id" : "5747973",
-    "name" : "Test Collection d332",
-    "total_item_count" : 0,
-    "updated_time" : "2014-11-05T19:32:13-05:00"
-  } ]
+    "id" : "293542904",
+    "name" : "My collection",
+    "total_item_count" : 85,
+    "items_updated_time" : "2021-05-20T16:15:22-04:00",
+    "cover_item" : {
+      "id" : "297886754"
+    }
+  } ],
+  "page" : 1,
+  "per_page" : 100,
+  "total_count" : 1
 }
 ```
 
@@ -414,62 +390,29 @@ Name | Type | Description
 
 ```
 {
-  "per_page" : 6,
   "data" : [ {
-    "website" : "website",
-    "contributor_type" : [ "contributor_type", "contributor_type" ],
-    "subjects" : [ "subjects", "subjects" ],
-    "about" : "about",
-    "equipment" : [ "equipment", "equipment" ],
-    "location" : "location",
-    "styles" : [ "styles", "styles" ],
-    "id" : "id",
-    "display_name" : "display_name",
-    "portfolio_url" : "portfolio_url",
+    "about" : "John Doe's photographs",
+    "contributor_type" : [ "photographer" ],
+    "display_name" : "John Doe",
+    "equipment" : [ "Nikon", "Fuji" ],
+    "id" : "12345678",
+    "location" : "US",
+    "portfolio_url" : "https://www.shutterstock.com/g/jdoe",
     "social_media" : {
-      "twitter" : "twitter",
-      "facebook" : "facebook",
-      "tumblr" : "tumblr",
-      "google_plus" : "google_plus",
-      "pinterest" : "pinterest",
-      "linkedin" : "linkedin"
-    }
-  }, {
-    "website" : "website",
-    "contributor_type" : [ "contributor_type", "contributor_type" ],
-    "subjects" : [ "subjects", "subjects" ],
-    "about" : "about",
-    "equipment" : [ "equipment", "equipment" ],
-    "location" : "location",
-    "styles" : [ "styles", "styles" ],
-    "id" : "id",
-    "display_name" : "display_name",
-    "portfolio_url" : "portfolio_url",
-    "social_media" : {
-      "twitter" : "twitter",
-      "facebook" : "facebook",
-      "tumblr" : "tumblr",
-      "google_plus" : "google_plus",
-      "pinterest" : "pinterest",
-      "linkedin" : "linkedin"
-    }
+      "facebook" : "http://example.com/jdoe",
+      "google_plus" : "http://example.com/jdoe",
+      "linkedin" : "http://example.com/jdoe",
+      "pinterest" : "http://example.com/jdoe",
+      "tumblr" : "http://example.com/jdoe",
+      "twitter" : "http://example.com/jdoe"
+    },
+    "styles" : [ "landscape", "nature", "footage_travel" ],
+    "subjects" : [ "animals", "landmarks", "nature", "objects", "recreation" ],
+    "website" : "http://example.com/profiles/jdoe"
   } ],
-  "total_count" : 1,
-  "page" : 0,
-  "message" : "message",
-  "errors" : [ {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  }, {
-    "path" : "path",
-    "code" : "code",
-    "data" : "data",
-    "message" : "message",
-    "items" : [ "{}", "{}" ]
-  } ]
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 15
 }
 ```
 

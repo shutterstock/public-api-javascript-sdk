@@ -19,5 +19,6 @@ Name | Type | Description | Notes
 **rights** | [**EditorialUpdatedContentRights**](EditorialUpdatedContentRights.md) |  | [optional] 
 **updates** | **[String]** |  | [optional] 
 **supplier_code** | **String** |  | [optional] 
+**special_instructions** | **String** |  | [optional] 
 
 

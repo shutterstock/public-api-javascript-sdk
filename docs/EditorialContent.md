@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **id** | **String** |  | 
 **keywords** | **[String]** |  | [optional] 
+**special_instructions** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 
 
