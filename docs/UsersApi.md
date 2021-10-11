@@ -63,7 +63,7 @@ This endpoint does not accept any parameters.
   "user_id" : "123456789",
   "username" : "jdoe",
   "expires_in" : 3600,
-  "scopes" : [ "user.view", "user.email", "user.address", "user.edit", "organization.view", "organization.address", "collections.view", "collections.edit", "licenses.view", "licenses.create", "media.upload", "media.submit", "media.edit", "purchases.view", "purchases.create" ]
+  "scopes" : [ "collections.edit", "collections.view", "licenses.create", "licenses.view", "purchases.view", "user.view" ]
 }
 ```
 

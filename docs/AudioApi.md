@@ -748,9 +748,9 @@ Name | Type | Description
   "data" : [ {
     "id" : "e1eba3833793e77188d22caae8bac9f2cd",
     "user" : {
-      "username" : "jsmith"
+      "username" : "editorial_test_account_002"
     },
-    "license" : "shutterstock_license",
+    "license" : "premier_editorial_all_digital",
     "download_time" : "2021-07-15T15:46:34.000Z",
     "is_downloadable" : false,
     "image" : {

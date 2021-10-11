@@ -417,7 +417,7 @@ Name | Type | Description
     "tags" : [ "Tense", "Cinematic", "Negative", "Simple Meter", "4/4", "Natural Minor", "Dorian", "Minimal", "Adagio", "Single Region", "Main", "Entertainment", "Politics", "Keys", "Mid Pads", "Fast", "Slow", "Slow", "Voice", "Medium Bright", "Non Noisy", "Medium Thick", "Angelic", "Direct", "Percussion", "Perc FX", "Misc", "Acoustic Pianos", "Grand", "Nice", "Roomy", "Pop", "Upright", "Clean", "Classic", "Keyboards", "Digital Keyboard", "Strings", "Synth Basses", "Fast", "Dark", "Thick", "Sub", "Synth Mallets", "Dull", "Mid Synth Beds", "Slow", "None", "Medium Noisy", "Harsh", "Fast", "Airy", "Long Textures", "Ambience", "Synth Texture", "Ethereal", "Set Kicks", "Processed", "Hubcap Mallet", "Wide", "Tickie", "Airy", "Chamber", "Thin", "Organ", "Cello Ensemble", "Sweet", "Big", "Di", "Raw", "Bright", "Tight", "Chorus", "Buzzy", "Huge", "Warm", "Jazz", "Brass", "String", "Hollow", "Woodwind", "Breathy", "Crystal", "Rhodes", "Synth Piano", "Noisy", "Woody", "Metallic", "Reverse Piano", "Full", "Foley", "Piano", "Clean", "Delayed", "Reverb", "Low Passed", "Large", "Medium", "Small" ]
   } ],
   "page" : 1,
-  "per_page" : 5
+  "per_page" : 1
 }
 ```
 
