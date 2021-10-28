@@ -3,6 +3,12 @@
 ## Enum
 
 
+* `ar` (value: `"ar"`)
+
+* `bg` (value: `"bg"`)
+
+* `bn` (value: `"bn"`)
+
 * `cs` (value: `"cs"`)
 
 * `da` (value: `"da"`)
@@ -19,6 +25,14 @@
 
 * `fr` (value: `"fr"`)
 
+* `gu` (value: `"gu"`)
+
+* `he` (value: `"he"`)
+
+* `hi` (value: `"hi"`)
+
+* `hr` (value: `"hr"`)
+
 * `hu` (value: `"hu"`)
 
 * `id` (value: `"id"`)
@@ -27,11 +41,19 @@
 
 * `ja` (value: `"ja"`)
 
+* `kn` (value: `"kn"`)
+
 * `ko` (value: `"ko"`)
+
+* `ml` (value: `"ml"`)
+
+* `mr` (value: `"mr"`)
 
 * `nb` (value: `"nb"`)
 
 * `nl` (value: `"nl"`)
+
+* `or` (value: `"or"`)
 
 * `pl` (value: `"pl"`)
 
@@ -41,11 +63,23 @@
 
 * `ru` (value: `"ru"`)
 
+* `sk` (value: `"sk"`)
+
+* `sl` (value: `"sl"`)
+
 * `sv` (value: `"sv"`)
+
+* `ta` (value: `"ta"`)
+
+* `te` (value: `"te"`)
 
 * `th` (value: `"th"`)
 
 * `tr` (value: `"tr"`)
+
+* `uk` (value: `"uk"`)
+
+* `ur` (value: `"ur"`)
 
 * `vi` (value: `"vi"`)
 

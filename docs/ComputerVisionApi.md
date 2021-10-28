@@ -124,7 +124,7 @@ Name | Type | Description
  asset_id (required) | String| The asset ID or upload ID to find similar images for 
  license | [String]| Show only images with the specified license <br/><br/>Valid values: "commercial", "editorial"
  safe | Boolean| Enable or disable safe search, defaults to true 
- language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "el", "en", "es", "fi", "fr", "hu", "id", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ro", "ru", "sv", "th", "tr", "vi", "zh", "zh-Hant"
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "ar", "bg", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "ml", "mr", "nb", "nl", "or", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zh", "zh-Hant"
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
@@ -244,7 +244,7 @@ Name | Type | Description
  asset_id (required) | String| The asset ID or upload ID to find similar videos for 
  license | [String]| Show only videos with the specified license <br/><br/>Valid values: "commercial", "editorial"
  safe | Boolean| Enable or disable safe search, defaults to true 
- language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "cs", "da", "de", "el", "en", "es", "fi", "fr", "hu", "id", "it", "ja", "ko", "nb", "nl", "pl", "pt", "ro", "ru", "sv", "th", "tr", "vi", "zh", "zh-Hant"
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "ar", "bg", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "ml", "mr", "nb", "nl", "or", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zh", "zh-Hant"
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
