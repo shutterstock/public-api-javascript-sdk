@@ -1214,11 +1214,11 @@ Name | Type | Description
         "size" : "original"
       }
     },
-    "subscription_id" : "1df5d8cfe8394bbebb849a69943b9a7c",
+    "subscription_id" : "s12345678",
     "metadata" : {
-      "purchase_order" : "12345",
-      "job" : "Important project",
+      "purchase_order" : "123456",
       "client" : "Company A",
+      "job" : "Important project",
       "other" : "Important media"
     }
   } ]
@@ -1462,20 +1462,17 @@ const videosApi = new sstk.VideosApi();
 const body = {
   "videos": [
     {
+      "subscription_id": "s12345678",
       "video_id": "419235589"
     },
     {
+      "subscription_id": "s12345678",
       "video_id": "1079756147"
     }
   ]
 };
 
-const queryParams = {
-  "subscription_id": SHUTTERSTOCK_SUBSCRIPTION_ID,
-  "size": "web"
-};
-
-videosApi.licenseVideos(body, queryParams)
+videosApi.licenseVideos(body)
   .then((data) => {
     console.log(data);
   })

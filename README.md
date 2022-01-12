@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.1.9
+- API version: 1.1.11
 
 ## References
 
@@ -346,6 +346,13 @@ Class | Method | HTTP request | Description
 *shutterstock-api.AudioApi* | [**listMoods**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#listMoods) | **GET** /v2/audio/moods | List audio moods
 *shutterstock-api.AudioApi* | [**renameTrackCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#renameTrackCollection) | **POST** /v2/audio/collections/{id} | Rename audio collections
 *shutterstock-api.AudioApi* | [**searchTracks**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/AudioApi.md#searchTracks) | **GET** /v2/audio/search | Search for tracks
+*shutterstock-api.CatalogApi* | [**addToCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/CatalogApi.md#addToCollection) | **POST** /v2/catalog/collections/{collection_id}/items | Add items to catalog collections
+*shutterstock-api.CatalogApi* | [**createCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/CatalogApi.md#createCollection) | **POST** /v2/catalog/collections | Create catalog collections
+*shutterstock-api.CatalogApi* | [**deleteCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/CatalogApi.md#deleteCollection) | **DELETE** /v2/catalog/collections/{collection_id} | Delete catalog collections
+*shutterstock-api.CatalogApi* | [**deleteFromCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/CatalogApi.md#deleteFromCollection) | **DELETE** /v2/catalog/collections/{collection_id}/items | Remove items from catalog collection
+*shutterstock-api.CatalogApi* | [**getCollections**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/CatalogApi.md#getCollections) | **GET** /v2/catalog/collections | List catalog collections
+*shutterstock-api.CatalogApi* | [**searchCatalog**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/CatalogApi.md#searchCatalog) | **GET** /v2/catalog/search | Search catalogs for assets
+*shutterstock-api.CatalogApi* | [**updateCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/CatalogApi.md#updateCollection) | **PATCH** /v2/catalog/collections/{collection_id} | Update collection metadata
 *shutterstock-api.ComputerVisionApi* | [**getKeywords**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#getKeywords) | **GET** /v2/cv/keywords | List suggested keywords
 *shutterstock-api.ComputerVisionApi* | [**getSimilarImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#getSimilarImages) | **GET** /v2/cv/similar/images | List similar images
 *shutterstock-api.ComputerVisionApi* | [**getSimilarVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#getSimilarVideos) | **GET** /v2/cv/similar/videos | List similar videos

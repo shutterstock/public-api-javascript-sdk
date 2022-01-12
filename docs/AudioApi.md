@@ -759,11 +759,11 @@ Name | Type | Description
         "size" : "original"
       }
     },
-    "subscription_id" : "1df5d8cfe8394bbebb849a69943b9a7c",
+    "subscription_id" : "s12345678",
     "metadata" : {
-      "purchase_order" : "12345",
-      "job" : "Important project",
+      "purchase_order" : "123456",
       "client" : "Company A",
+      "job" : "Important project",
       "other" : "Important media"
     }
   } ]
@@ -965,7 +965,7 @@ Name | Type | Description
 
 <a name="listGenres"></a>
 # AudioApi.listGenres
-> `GenreList AudioApi.listGenres()`
+> `GenreList AudioApi.listGenres(queryParams)`
 
 **List audio genres**
 
@@ -983,7 +983,12 @@ sstk.setBasicAuth(client_id, client_secret);
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.AudioApi();
-api.listGenres()
+
+const queryParams = { 
+  'language': "language_example" // String | Which language the genres will be returned
+};
+
+api.listGenres(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -995,7 +1000,10 @@ api.listGenres()
 
 ### Parameters
 
-This endpoint does not accept any parameters.
+
+Name | Type | Description
+------------- | ------------- | -------------
+ language | String| Which language the genres will be returned 
 
 ### Accepted authentication
 

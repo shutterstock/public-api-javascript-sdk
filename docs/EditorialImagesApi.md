@@ -294,11 +294,11 @@ Name | Type | Description
         "size" : "original"
       }
     },
-    "subscription_id" : "1df5d8cfe8394bbebb849a69943b9a7c",
+    "subscription_id" : "s12345678",
     "metadata" : {
-      "purchase_order" : "12345",
-      "job" : "Important project",
+      "purchase_order" : "123456",
       "client" : "Company A",
+      "job" : "Important project",
       "other" : "Important media"
     }
   } ]
@@ -1022,8 +1022,8 @@ Name | Type | Description
  date_updated_start (required) | Date| Show images images added, edited, or deleted after the specified date. Acceptable range is 1970-01-01T00:00:01 to 2038-01-19T00:00:00. 
  date_updated_end (required) | Date| Show images images added, edited, or deleted before the specified date. Acceptable range is 1970-01-01T00:00:01 to 2038-01-19T00:00:00. 
  country (required) | String| Show only editorial content that is available for distribution in a certain country 
- date_taken_start | String| Show images that were taken on or after the specified date; use this parameter if you want recently created images from the collection instead of updated older assets 
- date_taken_end | String| Show images that were taken before the specified date 
+ date_taken_start | Date| Show images that were taken on or after the specified date; use this parameter if you want recently created images from the collection instead of updated older assets 
+ date_taken_end | Date| Show images that were taken before the specified date 
  cursor | String| The cursor of the page with which to start fetching results; this cursor is returned from previous requests 
  sort | String| Sort by, defaults to newest <br/><br/>Valid values: "newest", "oldest"
  supplier_code | [String]| Show only editorial content from certain suppliers 
@@ -1156,8 +1156,8 @@ Name | Type | Description
  date_updated_start (required) | Date| Show images images added, edited, or deleted after the specified date. Acceptable range is 1970-01-01T00:00:01 to 2038-01-19T00:00:00. 
  date_updated_end (required) | Date| Show images images added, edited, or deleted before the specified date. Acceptable range is 1970-01-01T00:00:01 to 2038-01-19T00:00:00. 
  country (required) | String| Show only editorial content that is available for distribution in a certain country 
- date_taken_start | String| Show images that were taken on or after the specified date; use this parameter if you want recently created images from the collection instead of updated older assets 
- date_taken_end | String| Show images that were taken before the specified date 
+ date_taken_start | Date| Show images that were taken on or after the specified date; use this parameter if you want recently created images from the collection instead of updated older assets 
+ date_taken_end | Date| Show images that were taken before the specified date 
  cursor | String| The cursor of the page with which to start fetching results; this cursor is returned from previous requests 
  sort | String| Sort by, defaults to newest <br/><br/>Valid values: "newest", "oldest"
  supplier_code | [String]| Show only editorial content from certain suppliers 
