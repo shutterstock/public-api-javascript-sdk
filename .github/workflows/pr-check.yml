@@ -19,8 +19,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn install
-    - run: yarn run lint
-    - run: yarn run test
+    - run: NPM_TOKEN=foobar yarn install
+    - run: NPM_TOKEN=foobar yarn run lint
+    - run: NPM_TOKEN=foobar yarn run test
       env:
         SHUTTERSTOCK_API_TOKEN: ${{secrets.shutterstock_api_token}}
