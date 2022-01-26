@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.1.12
+- API version: 1.1.13
 
 ## References
 
@@ -417,9 +417,6 @@ Class | Method | HTTP request | Description
 *shutterstock-api.UsersApi* | [**getAccessToken**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/UsersApi.md#getAccessToken) | **GET** /v2/user/access_token | Get access token details
 *shutterstock-api.UsersApi* | [**getUser**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/UsersApi.md#getUser) | **GET** /v2/user | Get user details
 *shutterstock-api.UsersApi* | [**getUserSubscriptionList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/UsersApi.md#getUserSubscriptionList) | **GET** /v2/user/subscriptions | List user subscriptions
-*shutterstock-api.VideoEditorApi* | [**authVideoEditor**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideoEditorApi.md#authVideoEditor) | **POST** /v2/editor/auth | Get video editor access tokens
-*shutterstock-api.VideoEditorApi* | [**registerEditorInstance**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideoEditorApi.md#registerEditorInstance) | **POST** /v2/editor/customers | Register instances of the video editor
-*shutterstock-api.VideoEditorApi* | [**updateEditorInstance**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideoEditorApi.md#updateEditorInstance) | **PATCH** /v2/editor/customers | Update instances of the video editor
 *shutterstock-api.VideosApi* | [**addVideoCollectionItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#addVideoCollectionItems) | **POST** /v2/videos/collections/{id}/items | Add videos to collections
 *shutterstock-api.VideosApi* | [**createVideoCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#createVideoCollection) | **POST** /v2/videos/collections | Create video collections
 *shutterstock-api.VideosApi* | [**deleteVideoCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#deleteVideoCollection) | **DELETE** /v2/videos/collections/{id} | Delete video collections

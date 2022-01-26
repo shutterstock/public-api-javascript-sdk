@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 **Add items to catalog collections**
 
-This endpoint adds assets to a catalog collection.
+This endpoint adds assets to a catalog collection. It also automatically adds the assets to the user's account's catalog.
 
 ### Example
 
@@ -31,7 +31,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.CatalogApi();
 
-const collection_id = "126351028"; // String | ID of collection that will get assets added to it
+const collection_id = "126351028"; // String | The ID of the collection to add assets to
 
 const body = new ShutterstockApiReference.CreateCatalogCollectionItems(); // CreateCatalogCollectionItems | Collection item attributes to add to collection
 
@@ -51,7 +51,7 @@ api.addToCollection(collection_id, body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- collection_id (required) | String| ID of collection that will get assets added to it 
+ collection_id (required) | String| The ID of the collection to add assets to 
  body (required) | [CreateCatalogCollectionItems](CreateCatalogCollectionItems.md)| Collection item attributes to add to collection 
 
 ### Accepted authentication
@@ -101,7 +101,7 @@ Required scopes:
 
 **Create catalog collections**
 
-This endpoint creates a catalog collection. To add assets to the collection, use `PATCH /v2/catalog/collections/{collection_id}/items`.
+This endpoint creates a catalog collection and optionally adds assets. To add assets to the collection later, use `PATCH /v2/catalog/collections/{collection_id}/items`.
 
 ### Example
 
@@ -180,7 +180,7 @@ Required scopes:
 
 **Delete catalog collections**
 
-This endpoint deletes a catalog collection.
+This endpoint deletes a catalog collection. It does not remove the assets from the user's account's catalog.
 
 ### Example
 
@@ -192,7 +192,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.CatalogApi();
 
-const collection_id = "126351028"; // String | ID of collection that needs to be deleted
+const collection_id = "126351028"; // String | The ID of the collection to delete
 
 
 api.deleteCollection(collection_id)
@@ -207,7 +207,7 @@ api.deleteCollection(collection_id)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- collection_id (required) | String| ID of collection that needs to be deleted 
+ collection_id (required) | String| The ID of the collection to delete 
 
 ### Accepted authentication
 
@@ -233,7 +233,7 @@ No response body.
 
 **Remove items from catalog collection**
 
-This endpoint removes assets from a catalog collection.
+This endpoint removes assets from a catalog collection. It does not remove the assets from the user's account's catalog.
 
 ### Example
 
@@ -402,7 +402,7 @@ Name | Type | Description
 
 **Search catalogs for assets**
 
-This endpoint searches for assets in a catalog. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
+This endpoint searches for assets in the account's catalog. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
 
 ### Example
 
