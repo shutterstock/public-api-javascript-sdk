@@ -22,6 +22,8 @@ Name | Type | Description | Notes
 
 * `premier_music_comp` (value: `"premier_music_comp"`)
 
+* `asset_all_music` (value: `"asset_all_music"`)
+
 
 
 

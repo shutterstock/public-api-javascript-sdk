@@ -930,7 +930,7 @@ audioApi.licenseTrack(body)
 Name | Type | Description
 ------------- | ------------- | -------------
  body (required) | [LicenseAudioRequest](LicenseAudioRequest.md)| Tracks to license 
- license | String| License type <br/><br/>Valid values: "audio_platform", "premier_music_basic", "premier_music_extended", "premier_music_pro", "premier_music_comp"
+ license | String| License type <br/><br/>Valid values: "audio_platform", "premier_music_basic", "premier_music_extended", "premier_music_pro", "premier_music_comp", "asset_all_music"
  search_id | String| The ID of the search that led to licensing this track 
 
 ### Accepted authentication
