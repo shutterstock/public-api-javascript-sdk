@@ -416,7 +416,7 @@ const catalogApi = new sstk.CatalogApi();
 const queryParams = {
   "page": 1,
   "per_page": 50,
-  "collection_id": "126351028",
+  "collection_id": ["126351028", "126371055"],
   "query": "dogs on the beach",
 };
 
@@ -440,7 +440,7 @@ Name | Type | Description
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  query | String| One or more search terms separated by spaces 
- collection_id | String| Filter by collection id 
+ collection_id | [String]| Filter by collection id 
  asset_type | [String]| Filter by asset type <br/><br/>Valid values: "image", "video", "audio", "elements", "editorial-image", "editorial-video"
 
 ### Accepted authentication
