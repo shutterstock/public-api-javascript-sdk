@@ -474,7 +474,8 @@ Name | Type | Description
       "type" : "image",
       "name" : "Young couple playing tennis at the court"
     },
-    "created_time" : "2021-06-10T13:26:09-04:00"
+    "created_time" : "2021-06-10T13:26:09-04:00",
+    "collection_ids" : [ "126351028" ]
   } ]
 }
 ```

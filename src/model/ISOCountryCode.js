@@ -25,7 +25,7 @@
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.Preview = factory(root.ShutterstockApiReference.ApiClient);
+    root.ShutterstockApiReference.ISOCountryCode = factory(root.ShutterstockApiReference.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,68 +34,38 @@
 
 
   /**
-   * The Preview model module.
-   * @module model/Preview
+   * The ISOCountryCode model module.
+   * @module model/ISOCountryCode
    * @version 1.1.16
    */
 
   /**
-   * Constructs a new <code>Preview</code>.
-   * Preview information
-   * @alias module:model/Preview
+   * Constructs a new <code>ISOCountryCode</code>.
+   * A valid ISO 3166-1 Alpha-2 or ISO 3166-1 Alpha-3 code.
+   * @alias module:model/ISOCountryCode
    * @class
    */
   var exports = function() {
     var _this = this;
 
-
-
   };
 
   /**
-   * Constructs a <code>Preview</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ISOCountryCode</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/Preview} obj Optional instance to populate.
-   * @return {module:model/Preview} The populated <code>Preview</code> instance.
+   * @param {module:model/ISOCountryCode} obj Optional instance to populate.
+   * @return {module:model/ISOCountryCode} The populated <code>ISOCountryCode</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('content_type')) {
-        obj['content_type'] = ApiClient.convertToType(data['content_type'], 'String');
-      }
-      if (data.hasOwnProperty('url')) {
-        obj['url'] = ApiClient.convertToType(data['url'], 'String');
-      }
     }
     return obj;
   }
 
-  /**
-   * Content type of the preview, currently audio/mp3
-   * @member {module:model/Preview.ContentTypeEnum} content_type
-   */
-  exports.prototype['content_type'] = undefined;
-  /**
-   * Url of the instrument's preview file
-   * @member {String} url
-   */
-  exports.prototype['url'] = undefined;
 
-
-  /**
-   * Allowed values for the <code>content_type</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.ContentTypeEnum = {
-    /**
-     * value: "audio/mp3"
-     * @const
-     */
-    "audiomp3": "audio/mp3"  };
 
 
   return exports;
