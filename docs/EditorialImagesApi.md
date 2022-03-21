@@ -229,7 +229,8 @@ const queryParams = {
   'sort': "newest", // String | Sort order
   'username': "aUniqueUsername", // String | Filter licenses by username of licensee
   'start_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created on or after the specified date
-  'end_date': new Date("2021-03-29T13:25:13.521Z") // Date | Show licenses created before the specified date
+  'end_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created before the specified date
+  'download_availability': "all" // String | Filter licenses by download availability
 };
 
 api.getEditorialImageLicenseList(queryParams)
@@ -255,6 +256,7 @@ Name | Type | Description
  username | String| Filter licenses by username of licensee 
  start_date | Date| Show licenses created on or after the specified date 
  end_date | Date| Show licenses created before the specified date 
+ download_availability | String| Filter licenses by download availability, defaults to all <br/><br/>Valid values: "all", "downloadable", "non_downloadable"
 
 ### Accepted authentication
 

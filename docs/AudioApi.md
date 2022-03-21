@@ -720,6 +720,7 @@ Name | Type | Description
  username | String| Filter licenses by username of licensee 
  start_date | Date| Show licenses created on or after the specified date 
  end_date | Date| Show licenses created before the specified date 
+ download_availability | String| Filter licenses by download availability, defaults to all <br/><br/>Valid values: "all", "downloadable", "non_downloadable"
 
 ### Accepted authentication
 
