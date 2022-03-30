@@ -91,7 +91,23 @@ Required scopes:
   "total_item_count" : 2,
   "created_time" : "2021-05-20T16:15:22-04:00",
   "updated_time" : "2021-06-10T13:26:09-04:00",
-  "visibility" : "public"
+  "visibility" : "public",
+  "role_assignments" : {
+    "collection_id" : "126351028",
+    "roles" : {
+      "owners" : [ {
+        "id" : "321",
+        "type" : "USER",
+        "email" : "userOne@org.com"
+      } ],
+      "editors" : [ {
+        "id" : "987",
+        "type" : "USER",
+        "email" : "userTwo@org.com"
+      } ],
+      "viewers" : [ ]
+    }
+  }
 }
 ```
 
@@ -170,7 +186,23 @@ Required scopes:
   "total_item_count" : 2,
   "created_time" : "2021-05-20T16:15:22-04:00",
   "updated_time" : "2021-06-10T13:26:09-04:00",
-  "visibility" : "public"
+  "visibility" : "public",
+  "role_assignments" : {
+    "collection_id" : "126351028",
+    "roles" : {
+      "owners" : [ {
+        "id" : "321",
+        "type" : "USER",
+        "email" : "userOne@org.com"
+      } ],
+      "editors" : [ {
+        "id" : "987",
+        "type" : "USER",
+        "email" : "userTwo@org.com"
+      } ],
+      "viewers" : [ ]
+    }
+  }
 }
 ```
 
@@ -305,7 +337,23 @@ Required scopes:
   "total_item_count" : 2,
   "created_time" : "2021-05-20T16:15:22-04:00",
   "updated_time" : "2021-06-10T13:26:09-04:00",
-  "visibility" : "public"
+  "visibility" : "public",
+  "role_assignments" : {
+    "collection_id" : "126351028",
+    "roles" : {
+      "owners" : [ {
+        "id" : "321",
+        "type" : "USER",
+        "email" : "userOne@org.com"
+      } ],
+      "editors" : [ {
+        "id" : "987",
+        "type" : "USER",
+        "email" : "userTwo@org.com"
+      } ],
+      "viewers" : [ ]
+    }
+  }
 }
 ```
 
@@ -391,7 +439,23 @@ Name | Type | Description
     "total_item_count" : 2,
     "created_time" : "2021-05-20T16:15:22-04:00",
     "updated_time" : "2021-06-10T13:26:09-04:00",
-    "visibility" : "public"
+    "visibility" : "public",
+    "role_assignments" : {
+      "collection_id" : "126351028",
+      "roles" : {
+        "owners" : [ {
+          "id" : "321",
+          "type" : "USER",
+          "email" : "userOne@org.com"
+        } ],
+        "editors" : [ {
+          "id" : "987",
+          "type" : "USER",
+          "email" : "userTwo@org.com"
+        } ],
+        "viewers" : [ ]
+      }
+    }
   } ]
 }
 ```
@@ -558,7 +622,23 @@ Required scopes:
   "total_item_count" : 2,
   "created_time" : "2021-05-20T16:15:22-04:00",
   "updated_time" : "2021-06-10T13:26:09-04:00",
-  "visibility" : "public"
+  "visibility" : "public",
+  "role_assignments" : {
+    "collection_id" : "126351028",
+    "roles" : {
+      "owners" : [ {
+        "id" : "321",
+        "type" : "USER",
+        "email" : "userOne@org.com"
+      } ],
+      "editors" : [ {
+        "id" : "987",
+        "type" : "USER",
+        "email" : "userTwo@org.com"
+      } ],
+      "viewers" : [ ]
+    }
+  }
 }
 ```
 

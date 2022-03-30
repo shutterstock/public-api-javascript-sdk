@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **subscription_id** | **String** | ID of the subscription used to perform this download | [optional] 
 **user** | [**DownloadHistoryUserDetails**](DownloadHistoryUserDetails.md) |  | [optional] 
 **video** | [**DownloadHistoryMediaDetails**](DownloadHistoryMediaDetails.md) |  | [optional] 
+**revshare** | [**DownloadHistoryRevshareDetails**](DownloadHistoryRevshareDetails.md) |  | [optional] 
 
 

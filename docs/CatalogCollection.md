@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **created_time** | **Date** |  | 
 **updated_time** | **Date** |  | 
 **visibility** | **String** |  | 
+**role_assignments** | [**CatalogCollectionRoleAssignments**](CatalogCollectionRoleAssignments.md) |  | 
 
 
 <a name="VisibilityEnum"></a>
