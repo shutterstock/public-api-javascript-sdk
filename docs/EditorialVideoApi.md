@@ -216,7 +216,7 @@ Name | Type | Description
 
 **License editorial video content**
 
-This endpoint gets licenses for one or more editorial videos. You must specify the country and one or more editorial videos to license.
+This endpoint gets licenses for one or more editorial videos. You must specify the country and one or more editorial videos to license. The download links in the response are valid for 8 hours.
 
 ### Example
 

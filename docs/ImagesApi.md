@@ -270,7 +270,7 @@ No response body.
 
 **Download images**
 
-This endpoint redownloads images that you have already received a license for.
+This endpoint redownloads images that you have already received a license for. The download links in the response are valid for 8 hours.
 
 ### Example
 
@@ -1541,7 +1541,7 @@ Name | Type | Description
 
 **License images**
 
-This endpoint gets licenses for one or more images. You must specify the image IDs in the body parameter and other details like the format, size, and subscription ID either in the query parameter or with each image ID in the body parameter. Values in the body parameter override values in the query parameters.
+This endpoint gets licenses for one or more images. You must specify the image IDs in the body parameter and other details like the format, size, and subscription ID either in the query parameter or with each image ID in the body parameter. Values in the body parameter override values in the query parameters. The download links in the response are valid for 8 hours.
 
 ### Example
 

@@ -1256,7 +1256,7 @@ Name | Type | Description
 
 **(Deprecated) License editorial content**
 
-Deprecated; use `POST /v2/editorial/images/licenses` instead to get licenses for one or more editorial images. You must specify the country and one or more editorial images to license.
+Deprecated; use `POST /v2/editorial/images/licenses` instead to get licenses for one or more editorial images. You must specify the country and one or more editorial images to license. The download links in the response are valid for 8 hours.
 
 ### Example
 
@@ -1335,7 +1335,7 @@ Name | Type | Description
 
 **License editorial content**
 
-This endpoint gets licenses for one or more editorial images. You must specify the country and one or more editorial images to license.
+This endpoint gets licenses for one or more editorial images. You must specify the country and one or more editorial images to license. The download links in the response are valid for 8 hours.
 
 ### Example
 

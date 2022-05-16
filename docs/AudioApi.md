@@ -267,7 +267,7 @@ No response body.
 
 **Download audio tracks**
 
-This endpoint redownloads tracks that you have already received a license for.
+This endpoint redownloads tracks that you have already received a license for. The download links in the response are valid for 8 hours.
 
 ### Example
 
@@ -891,7 +891,7 @@ Name | Type | Description
 
 **License audio tracks**
 
-This endpoint gets licenses for one or more tracks.
+This endpoint gets licenses for one or more tracks. The download links in the response are valid for 8 hours.
 
 ### Example
 

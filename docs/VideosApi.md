@@ -9,10 +9,10 @@ Method | HTTP request | Description
 [`deleteVideoCollection`](VideosApi.md#deleteVideoCollection) | `DELETE /v2/videos/collections/{id}` | Delete video collections
 [`deleteVideoCollectionItems`](VideosApi.md#deleteVideoCollectionItems) | `DELETE /v2/videos/collections/{id}/items` | Remove videos from collections
 [`downloadVideos`](VideosApi.md#downloadVideos) | `POST /v2/videos/licenses/{id}/downloads` | Download videos
+[`findSimilarVideos`](VideosApi.md#findSimilarVideos) | `GET /v2/videos/{id}/similar` | List similar videos
 [`getFeaturedVideoCollection`](VideosApi.md#getFeaturedVideoCollection) | `GET /v2/videos/collections/featured/{id}` | Get the details of featured video collections
 [`getFeaturedVideoCollectionItems`](VideosApi.md#getFeaturedVideoCollectionItems) | `GET /v2/videos/collections/featured/{id}/items` | Get the contents of featured video collections
 [`getFeaturedVideoCollectionList`](VideosApi.md#getFeaturedVideoCollectionList) | `GET /v2/videos/collections/featured` | List featured video collections
-[`getSimilarVideos`](VideosApi.md#getSimilarVideos) | `GET /v2/videos/{id}/similar` | List similar videos
 [`getUpdatedVideos`](VideosApi.md#getUpdatedVideos) | `GET /v2/videos/updated` | List updated videos
 [`getVideo`](VideosApi.md#getVideo) | `GET /v2/videos/{id}` | Get details about videos
 [`getVideoCollection`](VideosApi.md#getVideoCollection) | `GET /v2/videos/collections/{id}` | Get the details of video collections
@@ -300,7 +300,7 @@ videosApi.downloadVideos(licenseId, body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | String| The license ID of the item to (re)download 
+ id (required) | String| The license ID of the item to (re)download. The download links in the response are valid for 8 hours. 
  body (required) | [RedownloadVideo](RedownloadVideo.md)| Information about the videos to redownload 
 
 ### Accepted authentication
@@ -325,6 +325,115 @@ Name | Type | Description
 ```
 {
   "url" : "https://download.shutterstock.com/gatekeeper/[random-characters]/shutterstock_59656357.jpg"
+}
+```
+
+<a name="findSimilarVideos"></a>
+# VideosApi.findSimilarVideos
+> `VideoSearchResults VideosApi.findSimilarVideos(id, queryParams)`
+
+**List similar videos**
+
+This endpoint searches for videos that are similar to a video that you specify.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.VideosApi();
+
+const id = "2140697"; // String | The ID of a video for which similar videos should be returned
+
+const queryParams = { 
+  'language': "es", // String | Language for the keywords and categories in the response
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'view': "minimal" // String | Amount of detail to render in the response
+};
+
+api.findSimilarVideos(id, queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ id (required) | String| The ID of a video for which similar videos should be returned 
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "ar", "bg", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "ml", "mr", "nb", "nl", "or", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zh", "zh-Hant"
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 20 
+ view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[VideoSearchResults](VideoSearchResults.md)
+
+### Example response
+
+```
+{
+  "data" : [ {
+    "id" : "1033184651",
+    "aspect" : 1.778,
+    "aspect_ratio" : "16:9",
+    "assets" : {
+      "thumb_webm" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
+      },
+      "thumb_mp4" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
+      },
+      "preview_webm" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
+      },
+      "preview_mp4" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
+      },
+      "thumb_jpg" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
+      },
+      "preview_jpg" : {
+        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
+      }
+    },
+    "contributor" : {
+      "id" : "4411978"
+    },
+    "description" : "Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness",
+    "duration" : 14.081,
+    "has_model_release" : true,
+    "media_type" : "video"
+  } ],
+  "page" : 1,
+  "per_page" : 5,
+  "total_count" : 123,
+  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10"
 }
 ```
 
@@ -559,115 +668,6 @@ Name | Type | Description
   "page" : 1,
   "per_page" : 5,
   "total_count" : 123455
-}
-```
-
-<a name="getSimilarVideos"></a>
-# VideosApi.getSimilarVideos
-> `VideoSearchResults VideosApi.getSimilarVideos(id, queryParams)`
-
-**List similar videos**
-
-This endpoint searches for videos that are similar to a video that you specify.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.VideosApi();
-
-const id = "2140697"; // String | The ID of a video for which similar videos should be returned
-
-const queryParams = { 
-  'language': "es", // String | Language for the keywords and categories in the response
-  'page': 1, // Number | Page number
-  'per_page': 20, // Number | Number of results per page
-  'view': "minimal" // String | Amount of detail to render in the response
-};
-
-api.getSimilarVideos(id, queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- id (required) | String| The ID of a video for which similar videos should be returned 
- language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "ar", "bg", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "ml", "mr", "nb", "nl", "or", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zh", "zh-Hant"
- page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 20 
- view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[VideoSearchResults](VideoSearchResults.md)
-
-### Example response
-
-```
-{
-  "data" : [ {
-    "id" : "1033184651",
-    "aspect" : 1.778,
-    "aspect_ratio" : "16:9",
-    "assets" : {
-      "thumb_webm" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
-      },
-      "thumb_mp4" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
-      },
-      "preview_webm" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
-      },
-      "preview_mp4" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
-      },
-      "thumb_jpg" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
-      },
-      "preview_jpg" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
-      }
-    },
-    "contributor" : {
-      "id" : "4411978"
-    },
-    "description" : "Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness",
-    "duration" : 14.081,
-    "has_model_release" : true,
-    "media_type" : "video"
-  } ],
-  "page" : 1,
-  "per_page" : 5,
-  "total_count" : 123,
-  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10"
 }
 ```
 
@@ -1449,7 +1449,7 @@ Name | Type | Description
 
 **License videos**
 
-This endpoint gets licenses for one or more videos. You must specify the video IDs in the body parameter and the size and subscription ID either in the query parameter or with each video ID in the body parameter. Values in the body parameter override values in the query parameters.
+This endpoint gets licenses for one or more videos. You must specify the video IDs in the body parameter and the size and subscription ID either in the query parameter or with each video ID in the body parameter. Values in the body parameter override values in the query parameters. The download links in the response are valid for 8 hours.
 
 ### Example
 
