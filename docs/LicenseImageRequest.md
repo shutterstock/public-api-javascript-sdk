@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**images** | [**[LicenseImage]**](LicenseImage.md) | Images to create licenses for | 
+**images** | **[Object]** | Images to create licenses for | 
 
 

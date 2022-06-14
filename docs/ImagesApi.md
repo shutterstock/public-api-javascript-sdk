@@ -1583,7 +1583,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  body (required) | [LicenseImageRequest](LicenseImageRequest.md)| List of images to request licenses for and information about each license transaction; these values override the defaults in the query parameters 
  subscription_id | String| Subscription ID to use to license the image 
- format | String| Image format, defaults to jpg <br/><br/>Valid values: "eps", "jpg"
+ format | String| (Deprecated) Image format <br/><br/>Valid values: "eps", "jpg"
  size | String| Image size, defaults to huge <br/><br/>Valid values: "small", "medium", "huge", "vector", "custom"
  search_id | String| Search ID that was provided in the results of an image search 
 

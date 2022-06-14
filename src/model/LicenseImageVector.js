@@ -25,7 +25,7 @@
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.LicenseVideo = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.Cookie, root.ShutterstockApiReference.LicenseRequestMetadata);
+    root.ShutterstockApiReference.LicenseImageVector = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.Cookie, root.ShutterstockApiReference.LicenseRequestMetadata);
   }
 }(this, function(ApiClient, Cookie, LicenseRequestMetadata) {
   'use strict';
@@ -34,38 +34,40 @@
 
 
   /**
-   * The LicenseVideo model module.
-   * @module model/LicenseVideo
+   * The LicenseImageVector model module.
+   * @module model/LicenseImageVector
    * @version 1.1.22
    */
 
   /**
-   * Constructs a new <code>LicenseVideo</code>.
-   * Data required to license a video
-   * @alias module:model/LicenseVideo
+   * Constructs a new <code>LicenseImageVector</code>.
+   * Data required to license an image
+   * @alias module:model/LicenseImageVector
    * @class
-   * @param video_id {String} ID of the video being licensed
+   * @param image_id {String} Image ID
    */
-  var exports = function(video_id) {
+  var exports = function(image_id) {
     var _this = this;
 
 
 
 
+    _this['image_id'] = image_id;
 
 
 
 
 
-    _this['video_id'] = video_id;
+
+
   };
 
   /**
-   * Constructs a <code>LicenseVideo</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>LicenseImageVector</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/LicenseVideo} obj Optional instance to populate.
-   * @return {module:model/LicenseVideo} The populated <code>LicenseVideo</code> instance.
+   * @param {module:model/LicenseImageVector} obj Optional instance to populate.
+   * @return {module:model/LicenseImageVector} The populated <code>LicenseImageVector</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -76,6 +78,12 @@
       }
       if (data.hasOwnProperty('editorial_acknowledgement')) {
         obj['editorial_acknowledgement'] = ApiClient.convertToType(data['editorial_acknowledgement'], 'Boolean');
+      }
+      if (data.hasOwnProperty('format')) {
+        obj['format'] = ApiClient.convertToType(data['format'], 'String');
+      }
+      if (data.hasOwnProperty('image_id')) {
+        obj['image_id'] = ApiClient.convertToType(data['image_id'], 'String');
       }
       if (data.hasOwnProperty('metadata')) {
         obj['metadata'] = LicenseRequestMetadata.constructFromObject(data['metadata']);
@@ -95,33 +103,45 @@
       if (data.hasOwnProperty('subscription_id')) {
         obj['subscription_id'] = ApiClient.convertToType(data['subscription_id'], 'String');
       }
-      if (data.hasOwnProperty('video_id')) {
-        obj['video_id'] = ApiClient.convertToType(data['video_id'], 'String');
+      if (data.hasOwnProperty('verification_code')) {
+        obj['verification_code'] = ApiClient.convertToType(data['verification_code'], 'String');
       }
     }
     return obj;
   }
 
   /**
+   * Cookie object
    * @member {module:model/Cookie} auth_cookie
    */
   exports.prototype['auth_cookie'] = undefined;
   /**
-   * Whether or not this item is editorial content
+   * Set to true to acknowledge the editorial agreement
    * @member {Boolean} editorial_acknowledgement
    */
   exports.prototype['editorial_acknowledgement'] = undefined;
+  /**
+   * (Deprecated) Image format to download
+   * @member {module:model/LicenseImageVector.FormatEnum} format
+   * @default 'eps'
+   */
+  exports.prototype['format'] = 'eps';
+  /**
+   * Image ID
+   * @member {String} image_id
+   */
+  exports.prototype['image_id'] = undefined;
   /**
    * @member {module:model/LicenseRequestMetadata} metadata
    */
   exports.prototype['metadata'] = undefined;
   /**
-   * Retail price amount as a floating-point number in the transaction currency, such as 12.34; only for rev-share partners
+   * For revenue-sharing transactions, the final cost to the end customer as a floating-point number in the transaction currency, such as 12.34
    * @member {Number} price
    */
   exports.prototype['price'] = undefined;
   /**
-   * ID of the search that led to this licensing event
+   * ID of the search that led to this licensing transaction
    * @member {String} search_id
    */
   exports.prototype['search_id'] = undefined;
@@ -131,21 +151,33 @@
    */
   exports.prototype['show_modal'] = undefined;
   /**
-   * Size of the video being licensed
-   * @member {module:model/LicenseVideo.SizeEnum} size
+   * Image size to download
+   * @member {module:model/LicenseImageVector.SizeEnum} size
    */
   exports.prototype['size'] = undefined;
   /**
-   * ID of the subscription used for this license
+   * ID of the subscription to use for the download.
    * @member {String} subscription_id
    */
   exports.prototype['subscription_id'] = undefined;
   /**
-   * ID of the video being licensed
-   * @member {String} video_id
+   * (Deprecated)
+   * @member {String} verification_code
    */
-  exports.prototype['video_id'] = undefined;
+  exports.prototype['verification_code'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>format</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.FormatEnum = {
+    /**
+     * value: "eps"
+     * @const
+     */
+    "eps": "eps"  };
 
   /**
    * Allowed values for the <code>size</code> property.
@@ -154,25 +186,10 @@
    */
   exports.SizeEnum = {
     /**
-     * value: "web"
+     * value: "vector"
      * @const
      */
-    "web": "web",
-    /**
-     * value: "sd"
-     * @const
-     */
-    "sd": "sd",
-    /**
-     * value: "hd"
-     * @const
-     */
-    "hd": "hd",
-    /**
-     * value: "4k"
-     * @const
-     */
-    "_4k": "4k"  };
+    "vector": "vector"  };
 
 
   return exports;
