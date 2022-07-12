@@ -959,7 +959,9 @@ Name | Type | Description
     "audio_id" : "123456789",
     "download" : {
       "url" : "http://download2.dev.shutterstock.com/gatekeeper/abc/original.wav"
-    }
+    },
+    "license_id" : "abcdef123456789ghijklmn",
+    "allotment_charge" : 1
   } ]
 }
 ```

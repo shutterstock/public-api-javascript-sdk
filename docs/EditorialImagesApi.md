@@ -1613,7 +1613,7 @@ Name | Type | Description
 
 **Search editorial images**
 
-This endpoint searches for editorial images. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
+This endpoint searches for editorial images. If you specify more than one search parameter, the API uses an AND condition. For example, if you set the `category` parameter to \"Alone,Performing\" and also specify a `query` parameter, the results include only images that match the query and are in both the Alone and Performing categories. You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
 
 ### Example
 
@@ -1625,8 +1625,9 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 const editorialApi = new sstk.EditorialApi();
 
 const queryParams = {
-  "query": "football",
+  "query": "musician",
   "country": "USA",
+  "category": "Alone,Performing",
   "sort": "newest",
   "date_start": "2018-10-23"
 };
@@ -1652,7 +1653,7 @@ Name | Type | Description
  country (required) | String| Show only editorial content that is available for distribution in a certain country 
  query | String| One or more search terms separated by spaces 
  sort | String| Sort by, defaults to relevant <br/><br/>Valid values: "relevant", "newest", "oldest"
- category | String| Show editorial content within a certain editorial category; specify by category name 
+ category | String| Show editorial content with each of the specified editorial categories; specify category names in a comma-separated list 
  supplier_code | [String]| Show only editorial content from certain suppliers 
  date_start | Date| Show only editorial content generated on or after a specific date 
  date_end | Date| Show only editorial content generated on or before a specific date 

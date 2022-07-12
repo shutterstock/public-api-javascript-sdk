@@ -91,6 +91,7 @@ This endpoint returns images that are visually similar to an image that you spec
 
 ```javascript
 const sstk = require("shutterstock-api");
+const fs = require("fs");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -122,7 +123,7 @@ computerVisionApi.uploadImage(body)
 Name | Type | Description
 ------------- | ------------- | -------------
  asset_id (required) | String| The asset ID or upload ID to find similar images for 
- license | [String]| Show only images with the specified license <br/><br/>Valid values: "commercial", "editorial"
+ license | [String]| Show only images with the specified license, defaults to ["commercial"] <br/><br/>Valid values: "commercial", "editorial"
  safe | Boolean| Enable or disable safe search, defaults to true 
  language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "ar", "bg", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "ml", "mr", "nb", "nl", "or", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zh", "zh-Hant"
  page | Number| Page number, defaults to 1 
@@ -211,6 +212,7 @@ This endpoint returns videos that are visually similar to an image that you spec
 
 ```javascript
 const sstk = require("shutterstock-api");
+const fs = require("fs");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -242,7 +244,7 @@ computerVisionApi.uploadImage(body)
 Name | Type | Description
 ------------- | ------------- | -------------
  asset_id (required) | String| The asset ID or upload ID to find similar videos for 
- license | [String]| Show only videos with the specified license <br/><br/>Valid values: "commercial", "editorial"
+ license | [String]| Show only videos with the specified license, defaults to ["commercial"] <br/><br/>Valid values: "commercial", "editorial"
  safe | Boolean| Enable or disable safe search, defaults to true 
  language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "ar", "bg", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "ml", "mr", "nb", "nl", "or", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zh", "zh-Hant"
  page | Number| Page number, defaults to 1 
@@ -319,6 +321,7 @@ Deprecated; use `POST /v2/cv/images` instead. This endpoint uploads an image for
 
 ```javascript
 const sstk = require("shutterstock-api");
+const fs = require("fs");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
@@ -392,6 +395,7 @@ This endpoint uploads an image for reverse image or video search. Images must be
 
 ```javascript
 const sstk = require("shutterstock-api");
+const fs = require("fs");
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 

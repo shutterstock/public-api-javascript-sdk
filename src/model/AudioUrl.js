@@ -25,7 +25,7 @@
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.ComputerVisionImageCreateResponse = factory(root.ShutterstockApiReference.ApiClient);
+    root.ShutterstockApiReference.AudioUrl = factory(root.ShutterstockApiReference.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,46 +34,47 @@
 
 
   /**
-   * The ComputerVisionImageCreateResponse model module.
-   * @module model/ComputerVisionImageCreateResponse
+   * The AudioUrl model module.
+   * @module model/AudioUrl
    * @version 1.1.23
    */
 
   /**
-   * Constructs a new <code>ComputerVisionImageCreateResponse</code>.
-   * Asset upload information
-   * @alias module:model/ComputerVisionImageCreateResponse
+   * Constructs a new <code>AudioUrl</code>.
+   * Audio License URL object
+   * @alias module:model/AudioUrl
    * @class
-   * @param upload_id {String} 
+   * @param url {String} URL that can be used to download the unwatermarked, licensed asset
    */
-  var exports = function(upload_id) {
+  var exports = function(url) {
     var _this = this;
 
-    _this['upload_id'] = upload_id;
+    _this['url'] = url;
   };
 
   /**
-   * Constructs a <code>ComputerVisionImageCreateResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>AudioUrl</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ComputerVisionImageCreateResponse} obj Optional instance to populate.
-   * @return {module:model/ComputerVisionImageCreateResponse} The populated <code>ComputerVisionImageCreateResponse</code> instance.
+   * @param {module:model/AudioUrl} obj Optional instance to populate.
+   * @return {module:model/AudioUrl} The populated <code>AudioUrl</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('upload_id')) {
-        obj['upload_id'] = ApiClient.convertToType(data['upload_id'], 'String');
+      if (data.hasOwnProperty('url')) {
+        obj['url'] = ApiClient.convertToType(data['url'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} upload_id
+   * URL that can be used to download the unwatermarked, licensed asset
+   * @member {String} url
    */
-  exports.prototype['upload_id'] = undefined;
+  exports.prototype['url'] = undefined;
 
 
 
