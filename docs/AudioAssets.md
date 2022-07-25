@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **preview_mp3** | [**AudioAssetDetails**](AudioAssetDetails.md) |  | [optional] 
 **preview_ogg** | [**AudioAssetDetails**](AudioAssetDetails.md) |  | [optional] 
 **waveform** | [**AudioAssetDetails**](AudioAssetDetails.md) |  | [optional] 
+**shorts_loops_stems** | [**ShortsLoopsStems**](ShortsLoopsStems.md) |  | [optional] 
 
 

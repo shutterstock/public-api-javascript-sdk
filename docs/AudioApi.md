@@ -263,7 +263,7 @@ No response body.
 
 <a name="downloadTracks"></a>
 # AudioApi.downloadTracks
-> `Url AudioApi.downloadTracks(id)`
+> `AudioUrl AudioApi.downloadTracks(id)`
 
 **Download audio tracks**
 
@@ -313,13 +313,13 @@ Name | Type | Description
 
 ### Return type
 
-[Url](Url.md)
+[AudioUrl](AudioUrl.md)
 
 ### Example response
 
 ```
 {
-  "url" : "https://download.shutterstock.com/gatekeeper/[random-characters]/shutterstock_59656357.jpg"
+  "$ref" : "#/definitions/Url/example"
 }
 ```
 

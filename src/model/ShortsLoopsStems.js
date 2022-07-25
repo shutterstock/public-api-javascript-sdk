@@ -16,64 +16,79 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/AudioRenderTimelineSpan'], factory);
+    define(['../ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AudioRenderTimelineSpan'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.AudioRenderTimeline = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.AudioRenderTimelineSpan);
+    root.ShutterstockApiReference.ShortsLoopsStems = factory(root.ShutterstockApiReference.ApiClient);
   }
-}(this, function(ApiClient, AudioRenderTimelineSpan) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
 
   /**
-   * The AudioRenderTimeline model module.
-   * @module model/AudioRenderTimeline
+   * The ShortsLoopsStems model module.
+   * @module model/ShortsLoopsStems
    * @version 1.1.26
    */
 
   /**
-   * Constructs a new <code>AudioRenderTimeline</code>.
-   * A timeline object that represents either a request for music to be created or an entire music composition
-   * @alias module:model/AudioRenderTimeline
+   * Constructs a new <code>ShortsLoopsStems</code>.
+   * Links for Shorts, Loops and Stems previews
+   * @alias module:model/ShortsLoopsStems
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
+
+
   };
 
   /**
-   * Constructs a <code>AudioRenderTimeline</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ShortsLoopsStems</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/AudioRenderTimeline} obj Optional instance to populate.
-   * @return {module:model/AudioRenderTimeline} The populated <code>AudioRenderTimeline</code> instance.
+   * @param {module:model/ShortsLoopsStems} obj Optional instance to populate.
+   * @return {module:model/ShortsLoopsStems} The populated <code>ShortsLoopsStems</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('spans')) {
-        obj['spans'] = ApiClient.convertToType(data['spans'], [AudioRenderTimelineSpan]);
+      if (data.hasOwnProperty('shorts')) {
+        obj['shorts'] = ApiClient.convertToType(data['shorts'], Object);
+      }
+      if (data.hasOwnProperty('loops')) {
+        obj['loops'] = ApiClient.convertToType(data['loops'], Object);
+      }
+      if (data.hasOwnProperty('stems')) {
+        obj['stems'] = ApiClient.convertToType(data['stems'], Object);
       }
     }
     return obj;
   }
 
   /**
-   * A span object that represents the beginning of a period of absolute time
-   * @member {Array.<module:model/AudioRenderTimelineSpan>} spans
+   * @member {Object} shorts
    */
-  exports.prototype['spans'] = undefined;
+  exports.prototype['shorts'] = undefined;
+  /**
+   * @member {Object} loops
+   */
+  exports.prototype['loops'] = undefined;
+  /**
+   * @member {Object} stems
+   */
+  exports.prototype['stems'] = undefined;
 
 
 
