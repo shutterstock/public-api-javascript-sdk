@@ -993,18 +993,34 @@ This endpoint lists editorial images that have been updated in the specified tim
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const editorialApi = new sstk.EditorialApi();
+const api = new sstk.EditorialImagesApi();
 
-const type = "edit";
-const dateUpdatedStart = "2020-02-02T13:00:00Z";
-const dateUpdatedEnd = "2020-02-02T15:00:00Z";
-const country = "USA";
+const type = "edit"; // String | Specify `addition` to return only images that were added or `edit` to return only images that were edited or deleted
 
-editorialApi.getUpdatedImages(type, dateUpdatedStart, dateUpdatedEnd, country)
+const date_updated_start = new Date("2021-03-29T13:25:13.521Z"); // Date | Show images images added, edited, or deleted after the specified date. Acceptable range is 1970-01-01T00:00:01 to 2038-01-19T00:00:00.
+
+const date_updated_end = new Date("2021-03-29T13:25:13.521Z"); // Date | Show images images added, edited, or deleted before the specified date. Acceptable range is 1970-01-01T00:00:01 to 2038-01-19T00:00:00.
+
+const country = "USA"; // String | Show only editorial content that is available for distribution in a certain country
+
+const queryParams = { 
+  'date_taken_start': new Date("2020-02-04"), // Date | Show images that were taken on or after the specified date; use this parameter if you want recently created images from the collection instead of updated older assets
+  'date_taken_end': new Date("2020-02-05"), // Date | Show images that were taken before the specified date
+  'cursor': "eyJ2IjoxLCJzIjoyfQ==", // String | The cursor of the page with which to start fetching results; this cursor is returned from previous requests
+  'sort': "newest", // String | Sort by
+  'supplier_code': ["ABC"], // [String] | Show only editorial content from certain suppliers
+  'per_page': 500 // Number | Number of results per page
+};
+
+api.getUpdatedEditorialImages(type, date_updated_start, date_updated_end, country, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1013,7 +1029,6 @@ editorialApi.getUpdatedImages(type, dateUpdatedStart, dateUpdatedEnd, country)
   });
 
 ```
-
 
 ### Parameters
 
@@ -1127,18 +1142,34 @@ Deprecated; use `GET /v2/editorial/images/updated` instead to get recently updat
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const editorialApi = new sstk.EditorialApi();
+const api = new sstk.EditorialImagesApi();
 
-const type = "edit";
-const dateUpdatedStart = "2020-02-02T13:00:00Z";
-const dateUpdatedEnd = "2020-02-02T15:00:00Z";
-const country = "USA";
+const type = "edit"; // String | Specify `addition` to return only images that were added or `edit` to return only images that were edited or deleted
 
-editorialApi.getUpdatedImages(type, dateUpdatedStart, dateUpdatedEnd, country)
+const date_updated_start = new Date("2021-03-29T13:25:13.521Z"); // Date | Show images images added, edited, or deleted after the specified date. Acceptable range is 1970-01-01T00:00:01 to 2038-01-19T00:00:00.
+
+const date_updated_end = new Date("2021-03-29T13:25:13.521Z"); // Date | Show images images added, edited, or deleted before the specified date. Acceptable range is 1970-01-01T00:00:01 to 2038-01-19T00:00:00.
+
+const country = "USA"; // String | Show only editorial content that is available for distribution in a certain country
+
+const queryParams = { 
+  'date_taken_start': new Date("2020-02-04"), // Date | Show images that were taken on or after the specified date; use this parameter if you want recently created images from the collection instead of updated older assets
+  'date_taken_end': new Date("2020-02-05"), // Date | Show images that were taken before the specified date
+  'cursor': "eyJ2IjoxLCJzIjoyfQ==", // String | The cursor of the page with which to start fetching results; this cursor is returned from previous requests
+  'sort': "newest", // String | Sort by
+  'supplier_code': ["ABC"], // [String] | Show only editorial content from certain suppliers
+  'per_page': 500 // Number | Number of results per page
+};
+
+api.getUpdatedImages(type, date_updated_start, date_updated_end, country, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1147,7 +1178,6 @@ editorialApi.getUpdatedImages(type, dateUpdatedStart, dateUpdatedEnd, country)
   });
 
 ```
-
 
 ### Parameters
 
@@ -1261,23 +1291,17 @@ Deprecated; use `POST /v2/editorial/images/licenses` instead to get licenses for
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const editorialApi = new sstk.EditorialApi();
+const api = new sstk.EditorialImagesApi();
 
-const body = {
-  "editorial": [
-    {
-      "editorial_id": "8594090h",
-      "license": "premier_editorial_comp"
-    }
-  ],
-  "country": "USA"
-};
+const body = new ShutterstockApiReference.LicenseEditorialContentRequest(); // LicenseEditorialContentRequest | License editorial content
 
-editorialApi.licenseEditorialImage(body)
+
+api.licenseEditorialImage(body)
   .then((data) => {
     console.log(data);
   })
@@ -1286,7 +1310,6 @@ editorialApi.licenseEditorialImage(body)
   });
 
 ```
-
 
 ### Parameters
 
@@ -1340,23 +1363,17 @@ This endpoint gets licenses for one or more editorial images. You must specify t
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const editorialApi = new sstk.EditorialApi();
+const api = new sstk.EditorialImagesApi();
 
-const body = {
-  "editorial": [
-    {
-      "editorial_id": "8594090h",
-      "license": "premier_editorial_comp"
-    }
-  ],
-  "country": "USA"
-};
+const body = new ShutterstockApiReference.LicenseEditorialContentRequest(); // LicenseEditorialContentRequest | License editorial content
 
-editorialApi.licenseEditorialImage(body)
+
+api.licenseEditorialImages(body)
   .then((data) => {
     console.log(data);
   })
@@ -1365,7 +1382,6 @@ editorialApi.licenseEditorialImage(body)
   });
 
 ```
-
 
 ### Parameters
 
@@ -1486,22 +1502,30 @@ Deprecated; use `GET /v2/editorial/images/search` instead to search for editoria
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const editorialApi = new sstk.EditorialApi();
+const api = new sstk.EditorialImagesApi();
 
-const queryParams = {
-  "query": "football",
-  "country": "USA",
-  "sort": "newest",
-  "date_start": "2018-10-23"
+const country = "USA"; // String | Show only editorial content that is available for distribution in a certain country
+
+const queryParams = { 
+  'query': "query_example", // String | One or more search terms separated by spaces
+  'sort': "relevant", // String | Sort by
+  'category': "category_example", // String | Show editorial content within a certain editorial category; specify by category name
+  'supplier_code': ["supplier_code_example"], // [String] | Show only editorial content from certain suppliers
+  'date_start': new Date("2013-10-20"), // Date | Show only editorial content generated on or after a specific date
+  'date_end': new Date("2013-10-20"), // Date | Show only editorial content generated on or before a specific date
+  'per_page': 20, // Number | Number of results per page
+  'cursor': "cursor_example" // String | The cursor of the page with which to start fetching results; this cursor is returned from previous requests
 };
 
-const country = "USA";
-
-editorialApi.searchEditorial(country, queryParams)
+api.searchEditorial(country, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1510,7 +1534,6 @@ editorialApi.searchEditorial(country, queryParams)
   });
 
 ```
-
 
 ### Parameters
 
@@ -1618,23 +1641,30 @@ This endpoint searches for editorial images. If you specify more than one search
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const editorialApi = new sstk.EditorialApi();
+const api = new sstk.EditorialImagesApi();
 
-const queryParams = {
-  "query": "musician",
-  "country": "USA",
-  "category": "Alone,Performing",
-  "sort": "newest",
-  "date_start": "2018-10-23"
+const country = "USA"; // String | Show only editorial content that is available for distribution in a certain country
+
+const queryParams = { 
+  'query': "The Academy Awards", // String | One or more search terms separated by spaces
+  'sort': "relevant", // String | Sort by
+  'category': "Alone,Performing", // String | Show editorial content with each of the specified editorial categories; specify category names in a comma-separated list
+  'supplier_code': ["supplier_code_example"], // [String] | Show only editorial content from certain suppliers
+  'date_start': new Date("2020-05-29"), // Date | Show only editorial content generated on or after a specific date
+  'date_end': new Date("2021-05-29"), // Date | Show only editorial content generated on or before a specific date
+  'per_page': 20, // Number | Number of results per page
+  'cursor': "eyJ2IjoxLCJzIjoxfQ==" // String | The cursor of the page with which to start fetching results; this cursor is returned from previous requests
 };
 
-const country = "USA";
-
-editorialApi.editorialImagesSearch(country, queryParams)
+api.searchEditorialImages(country, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1643,7 +1673,6 @@ editorialApi.editorialImagesSearch(country, queryParams)
   });
 
 ```
-
 
 ### Parameters
 

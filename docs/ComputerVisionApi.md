@@ -22,23 +22,20 @@ This endpoint returns a list of suggested keywords for a media item that you spe
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
-const fs = require("fs");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const computerVisionApi = new sstk.ComputerVisionApi();
+const api = new sstk.ComputerVisionApi();
 
-const imageFile = fs.readFileSync("./myImage.jpg");
-const base64File = Buffer.from(imageFile).toString("base64");
+const asset_id = "U6ba16262e3bc2db470b8e3cfa8aaab25"; // Object | The asset ID or upload ID to suggest keywords for
 
-const body = new sstk.ImageCreateRequest(base64File);
 
-computerVisionApi.uploadImage(body)
-  .then((data) => {
-    console.log(data.upload_id);
-    return computerVisionApi.getKeywords(data.upload_id);
-  })
+api.getKeywords(asset_id)
   .then((data) => {
     console.log(data);
   })
@@ -47,7 +44,6 @@ computerVisionApi.uploadImage(body)
   });
 
 ```
-
 
 ### Parameters
 
@@ -90,23 +86,28 @@ This endpoint returns images that are visually similar to an image that you spec
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
-const fs = require("fs");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const computerVisionApi = new sstk.ComputerVisionApi();
+const api = new sstk.ComputerVisionApi();
 
-const imageFile = fs.readFileSync("./myImage.jpg");
-const base64File = Buffer.from(imageFile).toString("base64");
+const asset_id = "U6ba16262e3bc2db470b8e3cfa8aaab25"; // String | The asset ID or upload ID to find similar images for
 
-const body = new sstk.ImageCreateRequest(base64File);
+const queryParams = { 
+  'license': ["[\"commercial\"]"], // [String] | Show only images with the specified license
+  'safe': true, // Boolean | Enable or disable safe search
+  'language': "es", // String | Language for the keywords and categories in the response
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'view': "minimal" // String | Amount of detail to render in the response
+};
 
-computerVisionApi.uploadImage(body)
-  .then((data) => {
-    console.log(data.upload_id);
-    return computerVisionApi.getSimilarImages(data.upload_id);
-  })
+api.getSimilarImages(asset_id, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -115,7 +116,6 @@ computerVisionApi.uploadImage(body)
   });
 
 ```
-
 
 ### Parameters
 
@@ -211,23 +211,28 @@ This endpoint returns videos that are visually similar to an image that you spec
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
-const fs = require("fs");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const computerVisionApi = new sstk.ComputerVisionApi();
+const api = new sstk.ComputerVisionApi();
 
-const imageFile = fs.readFileSync("./myImage.jpg");
-const base64File = Buffer.from(imageFile).toString("base64");
+const asset_id = "U6ba16262e3bc2db470b8e3cfa8aaab25"; // String | The asset ID or upload ID to find similar videos for
 
-const body = new sstk.ImageCreateRequest(base64File);
+const queryParams = { 
+  'license': ["[\"commercial\"]"], // [String] | Show only videos with the specified license
+  'safe': true, // Boolean | Enable or disable safe search
+  'language': "es", // String | Language for the keywords and categories in the response
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'view': "minimal" // String | Amount of detail to render in the response
+};
 
-computerVisionApi.uploadImage(body)
-  .then((data) => {
-    console.log(data.upload_id);
-    return computerVisionApi.getSimilarVideos(data.upload_id);
-  })
+api.getSimilarVideos(asset_id, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -236,7 +241,6 @@ computerVisionApi.uploadImage(body)
   });
 
 ```
-
 
 ### Parameters
 
@@ -320,38 +324,28 @@ Deprecated; use `POST /v2/cv/images` instead. This endpoint uploads an image for
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
-const fs = require("fs");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi = new sstk.ImagesApi();
+const api = new sstk.ComputerVisionApi();
 
-const imageFile = fs.readFileSync("./myImage.jpg");
-const base64File = Buffer.from(imageFile).toString("base64");
+const body = new ShutterstockApiReference.ImageCreateRequest(); // ImageCreateRequest | The image data in JPEG or PNG format
 
-const body = new sstk.ImageCreateRequest(base64File);
 
-const queryParams = {
-  "page": 1,
-  "per_page": 20,
-  "view": "minimal"
-};
-
-imagesApi.uploadEphemeralImage(body)
+api.uploadEphemeralImage(body)
   .then((data) => {
-    console.log(data.id);
-    return imagesApi.getSimilarImages(data.id, queryParams);
-  })
-  .then((similarImageData) => {
-    console.log(similarImageData);
+    console.log(data);
   })
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -394,25 +388,28 @@ This endpoint uploads an image for reverse image or video search. Images must be
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
-const fs = require("fs");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const computerVisionApi = new sstk.ComputerVisionApi();
+const api = new sstk.ComputerVisionApi();
 
-const imageFile = fs.readFileSync("./myImage.jpg");
-const base64File = Buffer.from(imageFile).toString("base64");
+const body = new ShutterstockApiReference.ImageCreateRequest(); // ImageCreateRequest | A Base 64 encoded jpeg or png; images can be no larger than 10mb and can be no larger than 10,000 pixels in width or height
 
-const body = new sstk.ImageCreateRequest(base64File);
 
-computerVisionApi.uploadImage(body)
+api.uploadImage(body)
   .then((data) => {
-    console.log(data.upload_id);
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
   });
 
 ```
-
 
 ### Parameters
 

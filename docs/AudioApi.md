@@ -34,32 +34,24 @@ This endpoint adds one or more tracks to a collection by track IDs.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi = new sstk.AudioApi();
+const api = new sstk.AudioApi();
 
-const collectionId = "48433115";
+const id = "48433115"; // String | Collection ID
 
-const body = {
-  "items": [
-    {
-      "id": "442583"
-    },
-    {
-      "id": "7491192"
-    }
-  ]
-};
+const body = new ShutterstockApiReference.CollectionItemRequest(); // CollectionItemRequest | List of items to add to collection
 
-audioApi.addTrackCollectionItems(collectionId, body)
+
+api.addTrackCollectionItems(id, body)
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -98,23 +90,25 @@ This endpoint creates one or more collections (soundboxes). To add tracks, use `
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi = new sstk.AudioApi();
+const api = new sstk.AudioApi();
 
-const body = {
-  "name": "Best rock music"
-};
+const body = new ShutterstockApiReference.CollectionCreateRequest(); // CollectionCreateRequest | Collection metadata
 
-audioApi.createTrackCollection(body)
+
+api.createTrackCollection(body)
+  .then((data) => {
+    console.log(data);
+  })
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -159,21 +153,22 @@ This endpoint deletes a collection.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi = new sstk.AudioApi();
+const api = new sstk.AudioApi();
 
-const collectionId = "48433107";
+const id = "48433111"; // String | Collection ID
 
-audioApi.deleteTrackCollection(collectionId)
+
+api.deleteTrackCollection(id)
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -211,29 +206,25 @@ This endpoint removes one or more tracks from a collection.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi = new sstk.AudioApi();
+const api = new sstk.AudioApi();
 
-const collectionId = "48433119";
+const id = "48433119"; // String | Collection ID
 
-// Array of tracks to remove
-const tracksToRemove = {
-  "item_id": [
-    "76688182",
-    "40005859"
-  ]
+const queryParams = { 
+  'item_id': ["[76688182, 40005859]"] // [String] | One or more item IDs to remove from the collection
 };
 
-audioApi.deleteTrackCollectionItems(collectionId, tracksToRemove)
+api.deleteTrackCollectionItems(id, queryParams)
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -272,15 +263,17 @@ This endpoint redownloads tracks that you have already received a license for. T
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi = new sstk.AudioApi();
+const api = new sstk.AudioApi();
 
-const licenseId = "e123"; // license ID, not track ID
+const id = "e123"; // String | License ID
 
-audioApi.downloadTracks(licenseId)
+
+api.downloadTracks(id)
   .then((data) => {
     console.log(data);
   })
@@ -289,7 +282,6 @@ audioApi.downloadTracks(licenseId)
   });
 
 ```
-
 
 ### Parameters
 
@@ -685,18 +677,26 @@ This endpoint lists existing licenses. You can filter the results according to t
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi = new sstk.AudioApi();
+const api = new sstk.AudioApi();
 
-const queryParams = {
-  "start_date": "2016-10-03T01:25:13.521Z",
-  "end_date": "2016-10-04T13:25:13.521Z"
+const queryParams = { 
+  'audio_id': "1", // String | Show licenses for the specified track ID
+  'license': "48433107", // String | Restrict results by license. Prepending a `-` sign will exclude results by license
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'sort': "newest", // String | Sort order
+  'username': "aUniqueUsername", // String | Filter licenses by username of licensee
+  'start_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created on or after the specified date
+  'end_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created before the specified date
+  'download_availability': "all" // String | Filter licenses by download availability
 };
 
-audioApi.getTrackLicenseList(queryParams)
+api.getTrackLicenseList(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -705,7 +705,6 @@ audioApi.getTrackLicenseList(queryParams)
   });
 
 ```
-
 
 ### Parameters
 
@@ -896,25 +895,21 @@ This endpoint gets licenses for one or more tracks. The download links in the re
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi = new sstk.AudioApi();
+const api = new sstk.AudioApi();
 
-const body = {
-  "audio": [
-    {
-      "audio_id": "446348",
-      "license": "audio_platform",
-      "metadata": {
-        "customer_id": "12345"
-      }
-    }
-  ]
+const body = new ShutterstockApiReference.LicenseAudioRequest(); // LicenseAudioRequest | Tracks to license
+
+const queryParams = { 
+  'license': "audio_platform", // String | License type
+  'search_id': "p5S6QwRikdFJTHXwsoiqTg" // String | The ID of the search that led to licensing this track
 };
 
-audioApi.licenseTrack(body)
+api.licenseTrack(body, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -923,7 +918,6 @@ audioApi.licenseTrack(body)
   });
 
 ```
-
 
 ### Parameters
 
@@ -1156,25 +1150,24 @@ This endpoint sets a new name for a collection.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi = new sstk.AudioApi();
+const api = new sstk.AudioApi();
 
-const collectionId = "48433107";
+const id = "48433107"; // String | Collection ID
 
-const body = {
-  "name": "Best rock music"
-};
+const body = new ShutterstockApiReference.CollectionUpdateRequest(); // CollectionUpdateRequest | Collection changes
 
-audioApi.renameTrackCollection(collectionId, body)
+
+api.renameTrackCollection(id, body)
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -1213,19 +1206,41 @@ This endpoint searches for tracks. If you specify more than one search parameter
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const audioApi = new sstk.AudioApi();
+const api = new sstk.AudioApi();
 
-const queryParams = {
-  "query": "bluegrass",
-  "duration_from": 60,
-  "moods": ["uplifting"]
+const queryParams = { 
+  'artists': ["artists_example"], // [String] | Show tracks with one of the specified artist names or IDs
+  'bpm': 56, // Number | (Deprecated; use bpm_from and bpm_to instead) Show tracks with the specified beats per minute
+  'bpm_from': 80, // Number | Show tracks with the specified beats per minute or faster
+  'bpm_to': 120, // Number | Show tracks with the specified beats per minute or slower
+  'duration': 180, // Number | Show tracks with the specified duration in seconds
+  'duration_from': 30, // Number | Show tracks with the specified duration or longer in seconds
+  'duration_to': 180, // Number | Show tracks with the specified duration or shorter in seconds
+  'genre': ["[Classical, Holiday]"], // [String] | Show tracks with each of the specified genres; to get the list of genres, use `GET /v2/audio/genres`
+  'is_instrumental': true, // Boolean | Show instrumental music only
+  'instruments': ["[Trumpet, Percussion]"], // [String] | Show tracks with each of the specified instruments; to get the list of instruments, use `GET /v2/audio/instruments`
+  'moods': ["[Confident, Playful]"], // [String] | Show tracks with each of the specified moods; to get the list of moods, use `GET /v2/audio/moods`
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'query': "drum", // String | One or more search terms separated by spaces
+  'sort': "score", // String | Sort by
+  'sort_order': "desc", // String | Sort order
+  'vocal_description': "female", // String | Show tracks with the specified vocal description (male, female)
+  'view': "minimal", // String | Amount of detail to render in the response
+  'fields': "fields_example", // String | Fields to display in the response; see the documentation for the fields parameter in the overview section
+  'library': "premier", // String | Which library to search
+  'language': "language_example" // String | Which language to search in
 };
 
-audioApi.searchTracks(queryParams)
+api.searchTracks(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1234,7 +1249,6 @@ audioApi.searchTracks(queryParams)
   });
 
 ```
-
 
 ### Parameters
 

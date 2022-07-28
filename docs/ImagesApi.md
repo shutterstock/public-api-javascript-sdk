@@ -5,6 +5,7 @@ All URIs are relative to `https://api.shutterstock.com`.
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [`addImageCollectionItems`](ImagesApi.md#addImageCollectionItems) | `POST /v2/images/collections/{id}/items` | Add images to collections
+[`bulkSearchImages`](ImagesApi.md#bulkSearchImages) | `POST /v2/bulk_search/images` | Run multiple image searches
 [`createImageCollection`](ImagesApi.md#createImageCollection) | `POST /v2/images/collections` | Create image collections
 [`deleteImageCollection`](ImagesApi.md#deleteImageCollection) | `DELETE /v2/images/collections/{id}` | Delete image collections
 [`deleteImageCollectionItems`](ImagesApi.md#deleteImageCollectionItems) | `DELETE /v2/images/collections/{id}/items` | Remove images from collections
@@ -40,30 +41,24 @@ This endpoint adds one or more images to a collection by image IDs.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi = new sstk.ImagesApi();
+const api = new sstk.ImagesApi();
 
-const collectionId = "126351027"; // Collection ID
+const id = "126351027"; // String | Collection ID
 
-const body = {
-  "items": [
-    {
-      "id": "495863218",
-      "media_type": "image"
-    }
-  ]
-};
+const body = new ShutterstockApiReference.CollectionItemRequest(); // CollectionItemRequest | Array of image IDs to add to the collection
 
-imagesApi.addImageCollectionItems(collectionId, body)
+
+api.addImageCollectionItems(id, body)
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -91,6 +86,200 @@ Name | Type | Description
 No response body.
 
 
+<a name="bulkSearchImages"></a>
+# ImagesApi.bulkSearchImages
+> `BulkImageSearchResults ImagesApi.bulkSearchImages(body, queryParams)`
+
+**Run multiple image searches**
+
+This endpoint runs up to 5 image searches in a single request. You can provide global search parameters in the query parameters and override them for each search in the body parameter. The query and body parameters are the same as in the `GET /v2/images/search` endpoint.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.ImagesApi();
+
+const body = new ShutterstockApiReference.BulkImageSearchRequest(); // BulkImageSearchRequest | List of queries to request results for and filters to apply per query; these values override the defaults in the query parameters
+
+const queryParams = { 
+  'per_query': 8.14, // Number | The number of assets to return per query
+  'added_date': new Date("2021-03-29"), // Date | Show images added on the specified date
+  'added_date_start': new Date("2021-03-29"), // Date | Show images added on or after the specified date
+  'aspect_ratio_min': 1.7778, // Number | Show images with the specified aspect ratio or higher, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image
+  'aspect_ratio_max': 1.7778, // Number | Show images with the specified aspect ratio or lower, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image
+  'aspect_ratio': 1.7778, // Number | Show images with the specified aspect ratio, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image
+  'added_date_end': new Date("2021-03-29"), // Date | Show images added before the specified date
+  'category': "category_example", // String | Show images with the specified Shutterstock-defined category; specify a category name or ID
+  'color': "4F21EA", // String | Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API returns images that use similar colors
+  'contributor': ["[123456]"], // [String] | Show images with the specified contributor names or IDs, allows multiple
+  'contributor_country': "US", // Object | Show images from contributors in one or more specified countries, or start with NOT to exclude a country from the search
+  'fields': "fields_example", // String | Fields to display in the response; see the documentation for the fields parameter in the overview section
+  'height': 56, // Number | (Deprecated; use height_from and height_to instead) Show images with the specified height
+  'height_from': 1080, // Number | Show images with the specified height or larger, in pixels
+  'height_to': 1080, // Number | Show images with the specified height or smaller, in pixels
+  'image_type': ["photo"], // [String] | Show images of the specified type
+  'keyword_safe_search': true, // Boolean | Hide results with potentially unsafe keywords
+  'language': "fr", // String | Set query and result language (uses Accept-Language header if not set)
+  'license': ["license_example"], // [String] | Show only images with the specified license
+  'model': ["[12345, 67890]"], // [String] | Show image results with the specified model IDs
+  'orientation': "vertical", // String | Show image results with horizontal or vertical orientation
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'people_model_released': true, // Boolean | Show images of people with a signed model release
+  'people_age': "20s", // String | Show images that feature people of the specified age category
+  'people_ethnicity': ["hispanic"], // [String] | Show images with people of the specified ethnicities, or start with NOT to show images without those ethnicities
+  'people_gender': "both", // String | Show images with people of the specified gender
+  'people_number': 2, // Number | Show images with the specified number of people
+  'region': "US", // Object | Raise or lower search result rankings based on the result's relevance to a specified region; you can provide a country code or an IP address from which the API infers a country
+  'safe': true, // Boolean | Enable or disable safe search
+  'sort': "popular", // String | Sort by
+  'spellcheck_query': true, // Boolean | Spellcheck the search query and return results on suggested spellings
+  'view': "minimal", // String | Amount of detail to render in the response
+  'width': 56, // Number | (Deprecated; use width_from and width_to instead) Show images with the specified width
+  'width_from': 1920, // Number | Show images with the specified width or larger, in pixels
+  'width_to': 1920 // Number | Show images with the specified width or smaller, in pixels
+};
+
+api.bulkSearchImages(body, queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ body (required) | [BulkImageSearchRequest](BulkImageSearchRequest.md)| List of queries to request results for and filters to apply per query; these values override the defaults in the query parameters 
+ per_query | Number| The number of assets to return per query 
+ added_date | Date| Show images added on the specified date 
+ added_date_start | Date| Show images added on or after the specified date 
+ aspect_ratio_min | Number| Show images with the specified aspect ratio or higher, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
+ aspect_ratio_max | Number| Show images with the specified aspect ratio or lower, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
+ aspect_ratio | Number| Show images with the specified aspect ratio, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
+ added_date_end | Date| Show images added before the specified date 
+ category | String| Show images with the specified Shutterstock-defined category; specify a category name or ID 
+ color | String| Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API returns images that use similar colors 
+ contributor | [String]| Show images with the specified contributor names or IDs, allows multiple 
+ contributor_country | [Object](.md)| Show images from contributors in one or more specified countries, or start with NOT to exclude a country from the search 
+ fields | String| Fields to display in the response; see the documentation for the fields parameter in the overview section 
+ height | Number| (Deprecated; use height_from and height_to instead) Show images with the specified height 
+ height_from | Number| Show images with the specified height or larger, in pixels 
+ height_to | Number| Show images with the specified height or smaller, in pixels 
+ image_type | [String]| Show images of the specified type <br/><br/>Valid values: "photo", "illustration", "vector"
+ keyword_safe_search | Boolean| Hide results with potentially unsafe keywords, defaults to true 
+ language | String| Set query and result language (uses Accept-Language header if not set) <br/><br/>Valid values: "ar", "bg", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "ml", "mr", "nb", "nl", "or", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zh", "zh-Hant"
+ license | [String]| Show only images with the specified license <br/><br/>Valid values: "commercial", "editorial", "enhanced"
+ model | [String]| Show image results with the specified model IDs 
+ orientation | String| Show image results with horizontal or vertical orientation <br/><br/>Valid values: "horizontal", "vertical"
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 20 
+ people_model_released | Boolean| Show images of people with a signed model release 
+ people_age | String| Show images that feature people of the specified age category <br/><br/>Valid values: "infants", "children", "teenagers", "20s", "30s", "40s", "50s", "60s", "older"
+ people_ethnicity | [String]| Show images with people of the specified ethnicities, or start with NOT to show images without those ethnicities <br/><br/>Valid values: "african", "african_american", "black", "brazilian", "chinese", "caucasian", "east_asian", "hispanic", "japanese", "middle_eastern", "native_american", "pacific_islander", "south_asian", "southeast_asian", "other", "NOT african", "NOT african_american", "NOT black", "NOT brazilian", "NOT chinese", "NOT caucasian", "NOT east_asian", "NOT hispanic", "NOT japanese", "NOT middle_eastern", "NOT native_american", "NOT pacific_islander", "NOT south_asian", "NOT southeast_asian", "NOT other"
+ people_gender | String| Show images with people of the specified gender <br/><br/>Valid values: "male", "female", "both"
+ people_number | Number| Show images with the specified number of people 
+ region | [Object](.md)| Raise or lower search result rankings based on the result's relevance to a specified region; you can provide a country code or an IP address from which the API infers a country 
+ safe | Boolean| Enable or disable safe search, defaults to true 
+ sort | String| Sort by, defaults to popular <br/><br/>Valid values: "newest", "popular", "relevance", "random"
+ spellcheck_query | Boolean| Spellcheck the search query and return results on suggested spellings, defaults to true 
+ view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
+ width | Number| (Deprecated; use width_from and width_to instead) Show images with the specified width 
+ width_from | Number| Show images with the specified width or larger, in pixels 
+ width_to | Number| Show images with the specified width or smaller, in pixels 
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+- Content-Type: application/json
+- Accept: application/json
+
+### Return type
+
+[BulkImageSearchResults](BulkImageSearchResults.md)
+
+### Example response
+
+```
+{
+  "results" : [ {
+    "data" : [ {
+      "id" : "1572478477",
+      "aspect" : 1.5,
+      "assets" : {
+        "preview" : {
+          "height" : 300,
+          "url" : "https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+          "width" : 450
+        },
+        "small_thumb" : {
+          "height" : 67,
+          "url" : "https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+          "width" : 100
+        },
+        "large_thumb" : {
+          "height" : 100,
+          "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+          "width" : 150
+        },
+        "huge_thumb" : {
+          "height" : 260,
+          "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
+          "width" : 390
+        },
+        "preview_1000" : {
+          "url" : "https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg",
+          "width" : 1000,
+          "height" : 667
+        },
+        "preview_1500" : {
+          "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+          "width" : 1500,
+          "height" : 1000
+        }
+      },
+      "contributor" : {
+        "id" : "250738318"
+      },
+      "description" : "cropped image of woman gardening",
+      "image_type" : "photo",
+      "has_model_release" : true,
+      "media_type" : "image"
+    } ],
+    "page" : 1,
+    "per_page" : 5,
+    "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10",
+    "spellcheck_info" : { },
+    "total_count" : 45
+  }, {
+    "data" : [ ],
+    "page" : 1,
+    "per_page" : 5,
+    "search_id" : "749090bb-2967-4a20-b22e-c800dc845e11",
+    "spellcheck_info" : { },
+    "total_count" : 0
+  } ]
+}
+```
+
 <a name="createImageCollection"></a>
 # ImagesApi.createImageCollection
 > `CollectionCreateResponse ImagesApi.createImageCollection(body)`
@@ -102,23 +291,25 @@ This endpoint creates one or more image collections (lightboxes). To add images 
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi = new sstk.ImagesApi();
+const api = new sstk.ImagesApi();
 
-const body = {
-  "name": "My collection"
-};
+const body = new ShutterstockApiReference.CollectionCreateRequest(); // CollectionCreateRequest | The names of the new collections
 
-imagesApi.createImageCollection(body)
+
+api.createImageCollection(body)
+  .then((data) => {
+    console.log(data);
+  })
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -163,21 +354,22 @@ This endpoint deletes an image collection.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi = new sstk.ImagesApi();
+const api = new sstk.ImagesApi();
 
-const collectionId = "136351027"; // Collection ID
+const id = "136351027"; // String | Collection ID
 
-imagesApi.deleteImageCollection(collectionId)
+
+api.deleteImageCollection(id)
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -215,28 +407,25 @@ This endpoint removes one or more images from a collection.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi = new sstk.ImagesApi();
+const api = new sstk.ImagesApi();
 
-const collectionId = "126351027"; // Collection ID
+const id = "126351027"; // String | Collection ID
 
-// Array of images to remove
-const imagesToRemove = {
-  "item_id": [
-    "495863218"
-  ]
+const queryParams = { 
+  'item_id': ["item_id_example"] // [String] | One or more image IDs to remove from the collection
 };
 
-imagesApi.deleteImageCollectionItems(collectionId, imagesToRemove)
+api.deleteImageCollectionItems(id, queryParams)
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -275,19 +464,19 @@ This endpoint redownloads images that you have already received a license for. T
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi = new sstk.ImagesApi();
+const api = new sstk.ImagesApi();
 
-const licenseId = "e123"; // license ID, not image ID
+const id = "e123"; // String | License ID
 
-const body = {
-  "size": "huge"
-};
+const body = new ShutterstockApiReference.RedownloadImage(); // RedownloadImage | Information about the images to redownload
 
-imagesApi.downloadImage(licenseId, body)
+
+api.downloadImage(id, body)
   .then((data) => {
     console.log(data);
   })
@@ -296,7 +485,6 @@ imagesApi.downloadImage(licenseId, body)
   });
 
 ```
-
 
 ### Parameters
 
@@ -931,17 +1119,20 @@ This endpoint returns up to 10 important keywords from a block of plain text.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi = new sstk.ImagesApi();
+const api = new sstk.ImagesApi();
 
-const body = {
-  "text": "The beach is a wonderful place to visit. It has beautiful sand and ocean waves."
-};
+const body = new ShutterstockApiReference.SearchEntitiesRequest(); // SearchEntitiesRequest | Plain text to extract keywords from
 
-imagesApi.getImageKeywordSuggestions(body)
+
+api.getImageKeywordSuggestions(body)
   .then((data) => {
     console.log(data);
   })
@@ -950,7 +1141,6 @@ imagesApi.getImageKeywordSuggestions(body)
   });
 
 ```
-
 
 ### Parameters
 
@@ -993,18 +1183,26 @@ This endpoint lists existing licenses.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi = new sstk.ImagesApi();
+const api = new sstk.ImagesApi();
 
-const queryParams = {
-  "start_date": "2016-10-03T01:25:13.521Z",
-  "end_date": "2016-10-04T13:25:13.521Z"
+const queryParams = { 
+  'image_id': "12345678", // String | Show licenses for the specified image ID
+  'license': "standard", // String | Show images that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'sort': "newest", // String | Sort order
+  'username': "aUniqueUsername", // String | Filter licenses by username of licensee
+  'start_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created on or after the specified date
+  'end_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created before the specified date
+  'download_availability': "all" // String | Filter licenses by download availability
 };
 
-imagesApi.getImageLicenseList(queryParams)
+api.getImageLicenseList(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1013,7 +1211,6 @@ imagesApi.getImageLicenseList(queryParams)
   });
 
 ```
-
 
 ### Parameters
 
@@ -1471,17 +1668,27 @@ This endpoint lists images that have been updated in the specified time period t
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi = new sstk.ImagesApi();
+const api = new sstk.ImagesApi();
 
-const queryParams = {
-  "interval": "30 MINUTE"
+const queryParams = { 
+  'type': ["addition"], // [String] | Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways
+  'start_date': new Date("2021-03-29"), // Date | Show images updated on or after the specified date
+  'end_date': new Date("2021-03-29"), // Date | Show images updated before the specified date
+  'interval': "1 HOUR", // String | Show images updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows images that were updated in the hour preceding the request
+  'page': 1, // Number | Page number
+  'per_page': 100, // Number | Number of results per page
+  'sort': "newest" // String | Sort order
 };
 
-imagesApi.getUpdatedImages(queryParams)
+api.getUpdatedImages(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1490,7 +1697,6 @@ imagesApi.getUpdatedImages(queryParams)
   });
 
 ```
-
 
 ### Parameters
 
@@ -1546,26 +1752,23 @@ This endpoint gets licenses for one or more images. You must specify the image I
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi = new sstk.ImagesApi();
+const api = new sstk.ImagesApi();
 
-const body = {
-  "images": [
-    {
-      "image_id": "419235589",
-      "subscription_id": "s12345678",
-      "price": 12.50,
-      "metadata": {
-        "customer_id": "12345"
-      }
-    }
-  ]
+const body = new ShutterstockApiReference.LicenseImageRequest(); // LicenseImageRequest | List of images to request licenses for and information about each license transaction; these values override the defaults in the query parameters
+
+const queryParams = { 
+  'subscription_id': "subscription_id_example", // String | Subscription ID to use to license the image
+  'format': "format_example", // String | (Deprecated) Image format
+  'size': "huge", // String | Image size
+  'search_id': "search_id_example" // String | Search ID that was provided in the results of an image search
 };
 
-imagesApi.licenseImages(body)
+api.licenseImages(body, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1574,7 +1777,6 @@ imagesApi.licenseImages(body)
   });
 
 ```
-
 
 ### Parameters
 
@@ -1708,25 +1910,24 @@ This endpoint sets a new name for an image collection.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi = new sstk.ImagesApi();
+const api = new sstk.ImagesApi();
 
-const collectionId = "126351027"; // Collection ID
+const id = "126351027"; // String | Collection ID
 
-const body = {
-  "name": "My new collection name"
-};
+const body = new ShutterstockApiReference.CollectionUpdateRequest(); // CollectionUpdateRequest | The new name for the collection
 
-imagesApi.renameImageCollection(collectionId, body)
+
+api.renameImageCollection(id, body)
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -1765,19 +1966,56 @@ This endpoint searches for images. If you specify more than one search parameter
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const imagesApi = new sstk.ImagesApi();
+const api = new sstk.ImagesApi();
 
-const queryParams = {
-  "query": "New York",
-  "sort": "popular",
-  "orientation": "horizontal"
+const queryParams = { 
+  'added_date': new Date("2021-03-29"), // Date | Show images added on the specified date
+  'added_date_start': new Date("2021-03-29"), // Date | Show images added on or after the specified date
+  'aspect_ratio_min': 1.7778, // Number | Show images with the specified aspect ratio or higher, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image
+  'aspect_ratio_max': 1.7778, // Number | Show images with the specified aspect ratio or lower, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image
+  'aspect_ratio': 1.7778, // Number | Show images with the specified aspect ratio, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image
+  'added_date_end': new Date("2021-03-29"), // Date | Show images added before the specified date
+  'category': "category_example", // String | Show images with the specified Shutterstock-defined category; specify a category name or ID
+  'color': "4F21EA", // String | Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API returns images that use similar colors
+  'contributor': ["[123456]"], // [String] | Show images with the specified contributor names or IDs, allows multiple
+  'contributor_country': "US", // Object | Show images from contributors in one or more specified countries, or start with NOT to exclude a country from the search
+  'fields': "fields_example", // String | Fields to display in the response; see the documentation for the fields parameter in the overview section
+  'height': 56, // Number | (Deprecated; use height_from and height_to instead) Show images with the specified height
+  'height_from': 1080, // Number | Show images with the specified height or larger, in pixels
+  'height_to': 1080, // Number | Show images with the specified height or smaller, in pixels
+  'image_type': ["photo"], // [String] | Show images of the specified type
+  'keyword_safe_search': true, // Boolean | Hide results with potentially unsafe keywords
+  'language': "fr", // String | Set query and result language (uses Accept-Language header if not set)
+  'license': ["license_example"], // [String] | Show only images with the specified license
+  'model': ["[12345, 67890]"], // [String] | Show image results with the specified model IDs
+  'orientation': "vertical", // String | Show image results with horizontal or vertical orientation
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'people_model_released': true, // Boolean | Show images of people with a signed model release
+  'people_age': "20s", // String | Show images that feature people of the specified age category
+  'people_ethnicity': ["hispanic"], // [String] | Show images with people of the specified ethnicities, or start with NOT to show images without those ethnicities
+  'people_gender': "both", // String | Show images with people of the specified gender
+  'people_number': 2, // Number | Show images with the specified number of people
+  'query': "dogs on the beach", // String | One or more search terms separated by spaces; you can use NOT to filter out images that match a term
+  'region': "US", // Object | Raise or lower search result rankings based on the result's relevance to a specified region; you can provide a country code or an IP address from which the API infers a country
+  'safe': true, // Boolean | Enable or disable safe search
+  'sort': "popular", // String | Sort by
+  'spellcheck_query': true, // Boolean | Spellcheck the search query and return results on suggested spellings
+  'view': "minimal", // String | Amount of detail to render in the response
+  'width': 56, // Number | (Deprecated; use width_from and width_to instead) Show images with the specified width
+  'width_from': 1920, // Number | Show images with the specified width or larger, in pixels
+  'width_to': 1920 // Number | Show images with the specified width or smaller, in pixels
 };
 
-imagesApi.searchImages(queryParams)
+api.searchImages(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1786,7 +2024,6 @@ imagesApi.searchImages(queryParams)
   });
 
 ```
-
 
 ### Parameters
 

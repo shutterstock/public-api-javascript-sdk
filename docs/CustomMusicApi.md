@@ -21,133 +21,28 @@ This endpoint creates rendered audio from timeline data. It returns a render ID 
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const customMusicApi = new sstk.CustomMusicApi();
+const api = new sstk.CustomMusicApi();
 
-const body = {
-  "audio_renders": [
-    {
-      "preset": "MASTER_MP3",
-      "filename": "My_audio_ai.mp3",
-      "timeline": {
-        "spans": [
-          {
-            "id": 111,
-            "span_type": "metered",
-            "time": 0,
-            "tempo": 80,
-            "regions": [
-              {
-                "id": 222,
-                "descriptor": "documentary_underscore_heartfelt",
-                "beat": 0,
-                "end_type": {
-                  "beat": 17,
-                  "event": "ending",
-                  "type": "ringout"
-                },
-                "region": "music"
-              }
-            ],
-            "instrument_groups": [
-              {
-                "instrument_group": "full_aw_nylon_acoustic_lead_guitar",
-                "statuses": [
-                  {
-                    "beat": 0,
-                    "status": "active"
-                  }
-                ]
-              },
-              {
-                "instrument_group": "nice_scoring_viola_ensemble",
-                "statuses": [
-                  {
-                    "beat": 0,
-                    "status": "active"
-                  }
-                ]
-              },
-              {
-                "instrument_group": "warm_devonshire_upright_acoustic_piano",
-                "statuses": [
-                  {
-                    "beat": 0,
-                    "status": "active"
-                  }
-                ]
-              },
-              {
-                "instrument_group": "nice_scoring_first_violin_ensemble",
-                "statuses": [
-                  {
-                    "beat": 0,
-                    "status": "active"
-                  }
-                ]
-              },
-              {
-                "instrument_group": "nice_scoring_second_violin_ensemble",
-                "statuses": [
-                  {
-                    "beat": 0,
-                    "status": "active"
-                  }
-                ]
-              },
-              {
-                "instrument_group": "warm_kawai_grand_acoustic_piano_dreamy",
-                "statuses": [
-                  {
-                    "beat": 0,
-                    "status": "active"
-                  }
-                ]
-              },
-              {
-                "instrument_group": "sweet_kawai_grand_acoustic_piano",
-                "statuses": [
-                  {
-                    "beat": 0,
-                    "status": "active"
-                  }
-                ]
-              },
-              {
-                "instrument_group": "nice_scoring_cello_ensemble",
-                "statuses": [
-                  {
-                    "beat": 0,
-                    "status": "active"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "span_type": "unmetered",
-            "time": 15
-          }
-        ]
-      }
-    }
-  ]
-};
+const body = new ShutterstockApiReference.CreateAudioRendersRequest(); // CreateAudioRendersRequest | Parameters for the audio, including the timeline and information about the output file
 
-customMusicApi.createAudioRenders(body)
-  .then(async (data) => {
-    const { id } = data.audio_renders[0];
-    console.log(id);
+
+api.createAudioRenders(body)
+  .then((data) => {
+    console.log(data);
   })
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -226,18 +121,20 @@ This endpoint shows the status of one or more audio renders, including download 
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const customMusicApi = new sstk.CustomMusicApi();
+const api = new sstk.CustomMusicApi();
 
-const renders = [
-  "L2w7h9VNFlkzpllSUunSYayenKjN",
-  "BeHx3UNXzMBB4dGsC9aa6VxnpcWl"
-];
+const id = ["[L2w7h9VNFlkzpllSUunSYayenKjN, BeHx3UNXzMBB4dGsC9aa6VxnpcWl]"]; // [String] | One or more render IDs
 
-customMusicApi.fetchRenders(renders)
+
+api.fetchRenders(id)
   .then((data) => {
     console.log(data);
   })
@@ -246,7 +143,6 @@ customMusicApi.fetchRenders(renders)
   });
 
 ```
-
 
 ### Parameters
 
@@ -325,17 +221,33 @@ This endpoint lists the descriptors that you can use in the audio regions in an 
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const customMusicApi = new sstk.CustomMusicApi();
+const api = new sstk.CustomMusicApi();
 
-const queryParams = {
-  "tag": "Cinematic"
+const queryParams = { 
+  'render_speed_over': 5, // Number | Show descriptors with an average render speed that is greater than or equal to the specified value
+  'band_id': "Corporate Folk Bonfire Band 1", // String | Show descriptors that contain the specified band (case-sentsitive)
+  'band_name': "Documentary Underscore Heartfelt Band 1", // String | Show descriptors with the specified band name (case-sensitive)
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'id': ["documentary_underscore_heartfelt"], // [String] | Show descriptors with the specified IDs (case-sensitive)
+  'instrument_name': "Precision Bass - Full", // String | Show descriptors with the specified instrument name (case-sensitive)
+  'instrument_id': "direct_fluorescent_synth_lead", // String | Show descriptors with the specified instrument ID (case-sensitive)
+  'tempo': 90, // Number | Show descriptors whose tempo range includes the specified tempo in beats per minute
+  'tempo_to': 120, // Number | Show descriptors with a tempo that is less than or equal to the specified number
+  'tempo_from': 60, // Number | Show descriptors that have a tempo range that includes the specified tempo in beats per minute
+  'name': "Corporate Pop Inspirational High Energy", // String | Show descriptors with the specified name (case-sensitive)
+  'tag': "Cinematic" // String | Show descriptors with the specified tag, such as Cinematic or Roomy (case-sensitive)
 };
 
-customMusicApi.listDescriptors(queryParams)
+api.listCustomDescriptors(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -344,7 +256,6 @@ customMusicApi.listDescriptors(queryParams)
   });
 
 ```
-
 
 ### Parameters
 
@@ -432,17 +343,25 @@ This endpoint lists the instruments that you can include in computer audio. If y
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const customMusicApi = new sstk.CustomMusicApi();
+const api = new sstk.CustomMusicApi();
 
-const queryParams = {
-  "tag": "Percussion"
+const queryParams = { 
+  'id': ["wood_blocks"], // [String] | Show instruments with the specified ID
+  'per_page': 20, // Number | Number of results per page
+  'page': 1, // Number | Page number
+  'name': "Precision Bass - Full", // String | Show instruments with the specified name (case-sensitive)
+  'tag': "Percussion" // String | Show instruments with the specified tag, such as Percussion or Strings (case-sensitive)
 };
 
-customMusicApi.listCustomInstruments(queryParams)
+api.listCustomInstruments(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -451,7 +370,6 @@ customMusicApi.listCustomInstruments(queryParams)
   });
 
 ```
-
 
 ### Parameters
 

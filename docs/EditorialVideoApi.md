@@ -221,23 +221,17 @@ This endpoint gets licenses for one or more editorial videos. You must specify t
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const editorialApi = new sstk.EditorialApi();
+const api = new sstk.EditorialVideoApi();
 
-const body = {
-  "editorial": [
-    {
-      "editorial_id": "10687492a",
-      "license": "premier_editorial_video_comp"
-    }
-  ],
-  "country": "USA"
-};
+const body = new ShutterstockApiReference.LicenseEditorialVideoContentRequest(); // LicenseEditorialVideoContentRequest | License editorial video content
 
-editorialApi.licenseEditorialVideo(body)
+
+api.licenseEditorialVideo(body)
   .then((data) => {
     console.log(data);
   })
@@ -246,7 +240,6 @@ editorialApi.licenseEditorialVideo(body)
   });
 
 ```
-
 
 ### Parameters
 
@@ -367,23 +360,32 @@ This endpoint searches for editorial videos. If you specify more than one search
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const editorialApi = new sstk.EditorialVideoApi();
+const api = new sstk.EditorialVideoApi();
 
-const queryParams = {
-  "query": "musician",
-  "country": "USA",
-  "category": "Alone,Performing",
-  "sort": "newest",
-  "date_start": "2018-10-23"
+const country = "USA"; // String | Show only editorial video content that is available for distribution in a certain country
+
+const queryParams = { 
+  'query': "The Academy Awards", // String | One or more search terms separated by spaces
+  'sort': "relevant", // String | Sort by
+  'category': "Alone,Performing", // String | Show editorial content with each of the specified editorial categories; specify category names in a comma-separated list
+  'supplier_code': ["supplier_code_example"], // [String] | Show only editorial video content from certain suppliers
+  'date_start': new Date("2020-05-29"), // Date | Show only editorial video content generated on or after a specific date
+  'date_end': new Date("2021-05-29"), // Date | Show only editorial video content generated on or before a specific date
+  'resolution': "4k", // String | Show only editorial video content with specific resolution
+  'fps': 24, // Number | Show only editorial video content generated with specific frames per second
+  'per_page': 20, // Number | Number of results per page
+  'cursor': "eyJ2IjoxLCJzIjoxfQ==" // String | The cursor of the page with which to start fetching results; this cursor is returned from previous requests
 };
 
-const country = "USA";
-
-editorialApi.searchEditorialVideos(country, queryParams)
+api.searchEditorialVideos(country, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -392,7 +394,6 @@ editorialApi.searchEditorialVideos(country, queryParams)
   });
 
 ```
-
 
 ### Parameters
 

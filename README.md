@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.1.26
+- API version: 1.1.27
 
 ## References
 
@@ -390,6 +390,7 @@ Class | Method | HTTP request | Description
 *shutterstock-api.EditorialVideoApi* | [**listEditorialVideoCategories**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialVideoApi.md#listEditorialVideoCategories) | **GET** /v2/editorial/videos/categories | List editorial video categories
 *shutterstock-api.EditorialVideoApi* | [**searchEditorialVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialVideoApi.md#searchEditorialVideos) | **GET** /v2/editorial/videos/search | Search editorial video content
 *shutterstock-api.ImagesApi* | [**addImageCollectionItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#addImageCollectionItems) | **POST** /v2/images/collections/{id}/items | Add images to collections
+*shutterstock-api.ImagesApi* | [**bulkSearchImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#bulkSearchImages) | **POST** /v2/bulk_search/images | Run multiple image searches
 *shutterstock-api.ImagesApi* | [**createImageCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#createImageCollection) | **POST** /v2/images/collections | Create image collections
 *shutterstock-api.ImagesApi* | [**deleteImageCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#deleteImageCollection) | **DELETE** /v2/images/collections/{id} | Delete image collections
 *shutterstock-api.ImagesApi* | [**deleteImageCollectionItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#deleteImageCollectionItems) | **DELETE** /v2/images/collections/{id}/items | Remove images from collections

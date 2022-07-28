@@ -471,20 +471,23 @@ This endpoint searches for assets in the account's catalog. If you specify more 
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const catalogApi = new sstk.CatalogApi();
+const api = new sstk.CatalogApi();
 
-const queryParams = {
-  "page": 1,
-  "per_page": 50,
-  "collection_id": ["126351028", "126371055"],
-  "query": "dogs on the beach",
+const queryParams = { 
+  'sort': "newest", // String | Sort by
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'query': "dogs on the beach", // String | One or more search terms separated by spaces
+  'collection_id': ["collection_id_example"], // [String] | Filter by collection id
+  'asset_type': ["asset_type_example"] // [String] | Filter by asset type
 };
 
-catalogApi.searchCatalog(queryParams)
+api.searchCatalog(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -493,7 +496,6 @@ catalogApi.searchCatalog(queryParams)
   });
 
 ```
-
 
 ### Parameters
 

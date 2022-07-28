@@ -38,31 +38,24 @@ This endpoint adds one or more videos to a collection by video IDs.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi = new sstk.VideosApi();
+const api = new sstk.VideosApi();
 
-const collectionId = "17555176"; // Collection ID
+const id = "17555176"; // String | The ID of the collection to which items should be added
 
-// Array of videos to add
-const body = {
-  "items": [
-    {
-      "id": "10120264",
-      "media_type": "video"
-    }
-  ]
-};
+const body = new ShutterstockApiReference.CollectionItemRequest(); // CollectionItemRequest | Array of video IDs to add to the collection
 
-videosApi.addImageCollectionItems(collectionId, body)
+
+api.addVideoCollectionItems(id, body)
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -101,23 +94,25 @@ This endpoint creates one or more collections (clipboxes). To add videos to coll
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi = new sstk.VideosApi();
+const api = new sstk.VideosApi();
 
-const body = {
-  "name": "New collection name"
-};
+const body = new ShutterstockApiReference.CollectionCreateRequest(); // CollectionCreateRequest | Collection metadata
 
-videosApi.createVideoCollection(body)
+
+api.createVideoCollection(body)
+  .then((data) => {
+    console.log(data);
+  })
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -162,21 +157,22 @@ This endpoint deletes a collection.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi = new sstk.VideosApi();
+const api = new sstk.VideosApi();
 
-const collectionId = "17555176";
+const id = "17555176"; // String | The ID of the collection to delete
 
-videosApi.deleteVideoCollection(collectionId)
+
+api.deleteVideoCollection(id)
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -214,28 +210,25 @@ This endpoint removes one or more videos from a collection.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi = new sstk.VideosApi();
+const api = new sstk.VideosApi();
 
-const collectionId = "17555176";
+const id = "17555176"; // String | The ID of the Collection from which items will be deleted
 
-// Array of videos to remove
-const videosToRemove = {
-  "item_id": [
-    "10120264"
-  ]
+const queryParams = { 
+  'item_id': ["item_id_example"] // [String] | One or more video IDs to remove from the collection
 };
 
-videosApi.deleteVideoCollectionItems(collectionId, videosToRemove)
+api.deleteVideoCollectionItems(id, queryParams)
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -274,17 +267,19 @@ This endpoint redownloads videos that you have already received a license for.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi = new sstk.VideosApi();
+const api = new sstk.VideosApi();
 
-const licenseId = "e123";
+const id = "e123"; // String | The license ID of the item to (re)download. The download links in the response are valid for 8 hours.
 
-const body = {};
+const body = new ShutterstockApiReference.RedownloadVideo(); // RedownloadVideo | Information about the videos to redownload
 
-videosApi.downloadVideos(licenseId, body)
+
+api.downloadVideos(id, body)
   .then((data) => {
     console.log(data);
   })
@@ -293,7 +288,6 @@ videosApi.downloadVideos(licenseId, body)
   });
 
 ```
-
 
 ### Parameters
 
@@ -682,17 +676,26 @@ This endpoint lists videos that have been updated in the specified time period t
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi = new sstk.VideosApi();
+const api = new sstk.VideosApi();
 
-const queryParams = {
-  "interval": "30 MINUTE"
+const queryParams = { 
+  'start_date': new Date("2020-05-29"), // Date | Show videos updated on or after the specified date
+  'end_date': new Date("2021-05-29"), // Date | Show videos updated before the specified date
+  'interval': "1 HOUR", // String | Show videos updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows videos that were updated in the hour preceding the request
+  'page': 1, // Number | Page number
+  'per_page': 100, // Number | Number of results per page
+  'sort': "newest" // String | Sort by oldest or newest videos first
 };
 
-videosApi.getUpdatedVideos(queryParams)
+api.getUpdatedVideos(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -701,7 +704,6 @@ videosApi.getUpdatedVideos(queryParams)
   });
 
 ```
-
 
 ### Parameters
 
@@ -1140,18 +1142,26 @@ This endpoint lists existing licenses.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi = new sstk.VideosApi();
+const api = new sstk.VideosApi();
 
-const queryParams = {
-  "start_date": "2016-10-03T01:25:13.521Z",
-  "end_date": "2016-10-04T13:25:13.521Z"
+const queryParams = { 
+  'video_id': "12345678", // String | Show licenses for the specified video ID
+  'license': "standard", // String | Show videos that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'sort': "newest", // String | Sort by oldest or newest videos first
+  'username': "aUniqueUsername", // String | Filter licenses by username of licensee
+  'start_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created on or after the specified date
+  'end_date': new Date("2021-03-29T13:25:13.521Z"), // Date | Show licenses created before the specified date
+  'download_availability': "all" // String | Filter licenses by download availability
 };
 
-videosApi.getVideoLicenseList(queryParams)
+api.getVideoLicenseList(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1160,7 +1170,6 @@ videosApi.getVideoLicenseList(queryParams)
   });
 
 ```
-
 
 ### Parameters
 
@@ -1454,26 +1463,22 @@ This endpoint gets licenses for one or more videos. You must specify the video I
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi = new sstk.VideosApi();
+const api = new sstk.VideosApi();
 
-const body = {
-  "videos": [
-    {
-      "subscription_id": "s12345678",
-      "video_id": "419235589"
-    },
-    {
-      "subscription_id": "s12345678",
-      "video_id": "1079756147"
-    }
-  ]
+const body = new ShutterstockApiReference.LicenseVideoRequest(); // LicenseVideoRequest | List of videos to request licenses for and information about each license transaction; these values override the defaults in the query parameters
+
+const queryParams = { 
+  'subscription_id': "s12345678", // String | The subscription ID to use for licensing
+  'size': "web", // String | The size of the video to license
+  'search_id': "search_id_example" // String | The Search ID that led to this licensing event
 };
 
-videosApi.licenseVideos(body)
+api.licenseVideos(body, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1482,7 +1487,6 @@ videosApi.licenseVideos(body)
   });
 
 ```
-
 
 ### Parameters
 
@@ -1619,25 +1623,24 @@ This endpoint sets a new name for a collection.
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi = new sstk.VideosApi();
+const api = new sstk.VideosApi();
 
-const collectionId = "186765119";
+const id = "17555176"; // String | The ID of the collection to rename
 
-const body = {
-  "name": "My new collection name"
-};
+const body = new ShutterstockApiReference.CollectionUpdateRequest(); // CollectionUpdateRequest | The new name for the collection
 
-videosApi.renameVideoCollection(collectionId, body)
+
+api.renameVideoCollection(id, body)
   .catch((error) => {
     console.error(error);
   });
 
 ```
-
 
 ### Parameters
 
@@ -1676,19 +1679,49 @@ This endpoint searches for videos. If you specify more than one search parameter
 ### Example
 
 ```javascript
-const sstk = require("shutterstock-api");
+const sstk = require('shutterstock-api');
 
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
-const videosApi = new sstk.VideosApi();
+const api = new sstk.VideosApi();
 
-const queryParams = {
-  "query": "hot air balloon",
-  "duration_from": 30,
-  "sort": "popular"
+const queryParams = { 
+  'added_date': new Date("2020-05-29"), // Date | Show videos added on the specified date
+  'added_date_start': new Date("2020-05-29"), // Date | Show videos added on or after the specified date
+  'added_date_end': new Date("2020-05-29"), // Date | Show videos added before the specified date
+  'aspect_ratio': "4_3", // String | Show videos with the specified aspect ratio
+  'category': "category_example", // String | Show videos with the specified Shutterstock-defined category; specify a category name or ID
+  'contributor': ["[12345678]"], // [String] | Show videos with the specified artist names or IDs
+  'contributor_country': ["US"], // [String] | Show videos from contributors in one or more specified countries
+  'duration': 56, // Number | (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration in seconds
+  'duration_from': 60, // Number | Show videos with the specified duration or longer in seconds
+  'duration_to': 180, // Number | Show videos with the specified duration or shorter in seconds
+  'fps': 8.14, // Number | (Deprecated; use fps_from and fps_to instead) Show videos with the specified frames per second
+  'fps_from': 24, // Number | Show videos with the specified frames per second or more
+  'fps_to': 60, // Number | Show videos with the specified frames per second or fewer
+  'keyword_safe_search': true, // Boolean | Hide results with potentially unsafe keywords
+  'language': "language_example", // String | Set query and result language (uses Accept-Language header if not set)
+  'license': ["[commercial, editorial]"], // [String] | Show only videos with the specified license or licenses
+  'model': ["[442583, 434750]"], // [String] | Show videos with each of the specified models
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'people_age': "20s", // String | Show videos that feature people of the specified age range
+  'people_ethnicity': ["hispanic"], // [String] | Show videos with people of the specified ethnicities
+  'people_gender': "female", // String | Show videos with people with the specified gender
+  'people_number': 2, // Number | Show videos with the specified number of people
+  'people_model_released': true, // Boolean | Show only videos of people with a signed model release
+  'query': "dogs running on the beach", // String | One or more search terms separated by spaces; you can use NOT to filter out videos that match a term
+  'resolution': "4k", // String | Show videos with the specified resolution
+  'safe': true, // Boolean | Enable or disable safe search
+  'sort': "popular", // String | Sort by one of these categories
+  'view': "minimal" // String | Amount of detail to render in the response
 };
 
-videosApi.searchVideos(queryParams)
+api.searchVideos(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1697,7 +1730,6 @@ videosApi.searchVideos(queryParams)
   });
 
 ```
-
 
 ### Parameters
 
