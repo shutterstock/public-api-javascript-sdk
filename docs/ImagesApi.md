@@ -110,7 +110,6 @@ const api = new sstk.ImagesApi();
 const body = new ShutterstockApiReference.BulkImageSearchRequest(); // BulkImageSearchRequest | List of queries to request results for and filters to apply per query; these values override the defaults in the query parameters
 
 const queryParams = { 
-  'per_query': 8.14, // Number | The number of assets to return per query
   'added_date': new Date("2021-03-29"), // Date | Show images added on the specified date
   'added_date_start': new Date("2021-03-29"), // Date | Show images added on or after the specified date
   'aspect_ratio_min': 1.7778, // Number | Show images with the specified aspect ratio or higher, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image
@@ -164,7 +163,6 @@ api.bulkSearchImages(body, queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  body (required) | [BulkImageSearchRequest](BulkImageSearchRequest.md)| List of queries to request results for and filters to apply per query; these values override the defaults in the query parameters 
- per_query | Number| The number of assets to return per query 
  added_date | Date| Show images added on the specified date 
  added_date_start | Date| Show images added on or after the specified date 
  aspect_ratio_min | Number| Show images with the specified aspect ratio or higher, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
