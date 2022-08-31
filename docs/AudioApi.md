@@ -1027,7 +1027,7 @@ Name | Type | Description
 
 <a name="listInstruments"></a>
 # AudioApi.listInstruments
-> `InstrumentList AudioApi.listInstruments()`
+> `InstrumentList AudioApi.listInstruments(queryParams)`
 
 **List audio instruments**
 
@@ -1045,7 +1045,12 @@ sstk.setBasicAuth(client_id, client_secret);
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.AudioApi();
-api.listInstruments()
+
+const queryParams = { 
+  'language': "language_example" // String | Which language the moods will be returned in
+};
+
+api.listInstruments(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1057,7 +1062,10 @@ api.listInstruments()
 
 ### Parameters
 
-This endpoint does not accept any parameters.
+
+Name | Type | Description
+------------- | ------------- | -------------
+ language | String| Which language the moods will be returned in 
 
 ### Accepted authentication
 
@@ -1084,7 +1092,7 @@ This endpoint does not accept any parameters.
 
 <a name="listMoods"></a>
 # AudioApi.listMoods
-> `MoodList AudioApi.listMoods()`
+> `MoodList AudioApi.listMoods(queryParams)`
 
 **List audio moods**
 
@@ -1102,7 +1110,12 @@ sstk.setBasicAuth(client_id, client_secret);
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.AudioApi();
-api.listMoods()
+
+const queryParams = { 
+  'language': "language_example" // String | Which language the moods will be returned in
+};
+
+api.listMoods(queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1114,7 +1127,10 @@ api.listMoods()
 
 ### Parameters
 
-This endpoint does not accept any parameters.
+
+Name | Type | Description
+------------- | ------------- | -------------
+ language | String| Which language the moods will be returned in 
 
 ### Accepted authentication
 

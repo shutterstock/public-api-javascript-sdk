@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.1.28
+- API version: 1.1.29
 
 ## References
 
@@ -407,10 +407,10 @@ Class | Method | HTTP request | Description
 *shutterstock-api.ImagesApi* | [**getImageList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getImageList) | **GET** /v2/images | List images
 *shutterstock-api.ImagesApi* | [**getImageRecommendations**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getImageRecommendations) | **GET** /v2/images/recommendations | List recommended images
 *shutterstock-api.ImagesApi* | [**getImageSuggestions**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getImageSuggestions) | **GET** /v2/images/search/suggestions | Get suggestions for a search term
-*shutterstock-api.ImagesApi* | [**getSimilarImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getSimilarImages) | **GET** /v2/images/{id}/similar | List similar images
 *shutterstock-api.ImagesApi* | [**getUpdatedImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getUpdatedImages) | **GET** /v2/images/updated | List updated images
 *shutterstock-api.ImagesApi* | [**licenseImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#licenseImages) | **POST** /v2/images/licenses | License images
 *shutterstock-api.ImagesApi* | [**listImageCategories**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#listImageCategories) | **GET** /v2/images/categories | List image categories
+*shutterstock-api.ImagesApi* | [**listSimilarImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#listSimilarImages) | **GET** /v2/images/{id}/similar | List similar images
 *shutterstock-api.ImagesApi* | [**renameImageCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#renameImageCollection) | **POST** /v2/images/collections/{id} | Rename image collections
 *shutterstock-api.ImagesApi* | [**searchImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#searchImages) | **GET** /v2/images/search | Search for images
 *shutterstock-api.TestApi* | [**echo**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/TestApi.md#echo) | **GET** /v2/test | Echo text

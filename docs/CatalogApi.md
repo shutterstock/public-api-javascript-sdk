@@ -378,7 +378,8 @@ const api = new sstk.CatalogApi();
 const queryParams = { 
   'page': 1, // Number | Page number
   'per_page': 20, // Number | Number of results per page
-  'sort': "newest" // String | Sort by
+  'sort': "newest", // String | Sort by
+  'shared': false // Boolean | Set to true to omit collections that you own and return only collections  that are shared with you
 };
 
 api.getCollections(queryParams)
@@ -399,6 +400,7 @@ Name | Type | Description
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  sort | String| Sort by, defaults to newest <br/><br/>Valid values: "newest", "oldest"
+ shared | Boolean| Set to true to omit collections that you own and return only collections  that are shared with you, defaults to false 
 
 ### Accepted authentication
 

@@ -22,10 +22,10 @@ Method | HTTP request | Description
 [`getImageList`](ImagesApi.md#getImageList) | `GET /v2/images` | List images
 [`getImageRecommendations`](ImagesApi.md#getImageRecommendations) | `GET /v2/images/recommendations` | List recommended images
 [`getImageSuggestions`](ImagesApi.md#getImageSuggestions) | `GET /v2/images/search/suggestions` | Get suggestions for a search term
-[`getSimilarImages`](ImagesApi.md#getSimilarImages) | `GET /v2/images/{id}/similar` | List similar images
 [`getUpdatedImages`](ImagesApi.md#getUpdatedImages) | `GET /v2/images/updated` | List updated images
 [`licenseImages`](ImagesApi.md#licenseImages) | `POST /v2/images/licenses` | License images
 [`listImageCategories`](ImagesApi.md#listImageCategories) | `GET /v2/images/categories` | List image categories
+[`listSimilarImages`](ImagesApi.md#listSimilarImages) | `GET /v2/images/{id}/similar` | List similar images
 [`renameImageCollection`](ImagesApi.md#renameImageCollection) | `POST /v2/images/collections/{id}` | Rename image collections
 [`searchImages`](ImagesApi.md#searchImages) | `GET /v2/images/search` | Search for images
 
@@ -92,7 +92,7 @@ No response body.
 
 **Run multiple image searches**
 
-This endpoint runs up to 5 image searches in a single request. You can provide global search parameters in the query parameters and override them for each search in the body parameter. The query and body parameters are the same as in the `GET /v2/images/search` endpoint.
+This endpoint runs up to 5 image searches in a single request and returns up to 20 results per search. You can provide global search parameters in the query parameters and override them for each search in the body parameter. The query and body parameters are the same as in the `GET /v2/images/search` endpoint.
 
 ### Example
 
@@ -699,7 +699,7 @@ const api = new sstk.ImagesApi();
 
 const queryParams = { 
   'embed': "share_url", // String | Which sharing information to include in the response, such as a URL to the collection
-  'type': ["photo"], // [String] | The types of collections to return
+  'type': ["[photo]"], // [String] | The types of collections to return
   'asset_hint': "1x" // String | Cover image size
 };
 
@@ -1534,127 +1534,6 @@ Name | Type | Description
 }
 ```
 
-<a name="getSimilarImages"></a>
-# ImagesApi.getSimilarImages
-> `ImageSearchResults ImagesApi.getSimilarImages(id, queryParams)`
-
-**List similar images**
-
-This endpoint returns images that are visually similar to an image that you specify.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.ImagesApi();
-
-const id = "465011609"; // String | Image ID
-
-const queryParams = { 
-  'language': "es", // String | Language for the keywords and categories in the response
-  'page': 1, // Number | Page number
-  'per_page': 20, // Number | Number of results per page
-  'view': "minimal" // String | Amount of detail to render in the response
-};
-
-api.getSimilarImages(id, queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- id (required) | String| Image ID 
- language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "ar", "bg", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "ml", "mr", "nb", "nl", "or", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zh", "zh-Hant"
- page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 20 
- view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[ImageSearchResults](ImageSearchResults.md)
-
-### Example response
-
-```
-{
-  "data" : [ {
-    "id" : "1572478477",
-    "aspect" : 1.5,
-    "assets" : {
-      "preview" : {
-        "height" : 300,
-        "url" : "https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 450
-      },
-      "small_thumb" : {
-        "height" : 67,
-        "url" : "https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 100
-      },
-      "large_thumb" : {
-        "height" : 100,
-        "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 150
-      },
-      "huge_thumb" : {
-        "height" : 260,
-        "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
-        "width" : 390
-      },
-      "preview_1000" : {
-        "url" : "https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg",
-        "width" : 1000,
-        "height" : 667
-      },
-      "preview_1500" : {
-        "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 1500,
-        "height" : 1000
-      }
-    },
-    "contributor" : {
-      "id" : "250738318"
-    },
-    "description" : "cropped image of woman gardening",
-    "image_type" : "photo",
-    "has_model_release" : true,
-    "media_type" : "image"
-  } ],
-  "page" : 1,
-  "per_page" : 5,
-  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10",
-  "spellcheck_info" : { },
-  "total_count" : 45
-}
-```
-
 <a name="getUpdatedImages"></a>
 # ImagesApi.getUpdatedImages
 > `UpdatedMediaDataList ImagesApi.getUpdatedImages(queryParams)`
@@ -1894,6 +1773,127 @@ Name | Type | Description
   "page" : 1,
   "per_page" : 2,
   "total_count" : 13
+}
+```
+
+<a name="listSimilarImages"></a>
+# ImagesApi.listSimilarImages
+> `ImageSearchResults ImagesApi.listSimilarImages(id, queryParams)`
+
+**List similar images**
+
+This endpoint returns images that are visually similar to an image that you specify.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.ImagesApi();
+
+const id = "465011609"; // String | Image ID
+
+const queryParams = { 
+  'language': "es", // String | Language for the keywords and categories in the response
+  'page': 1, // Number | Page number
+  'per_page': 20, // Number | Number of results per page
+  'view': "minimal" // String | Amount of detail to render in the response
+};
+
+api.listSimilarImages(id, queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ id (required) | String| Image ID 
+ language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "ar", "bg", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "ml", "mr", "nb", "nl", "or", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zh", "zh-Hant"
+ page | Number| Page number, defaults to 1 
+ per_page | Number| Number of results per page, defaults to 20 
+ view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[ImageSearchResults](ImageSearchResults.md)
+
+### Example response
+
+```
+{
+  "data" : [ {
+    "id" : "1572478477",
+    "aspect" : 1.5,
+    "assets" : {
+      "preview" : {
+        "height" : 300,
+        "url" : "https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 450
+      },
+      "small_thumb" : {
+        "height" : 67,
+        "url" : "https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 100
+      },
+      "large_thumb" : {
+        "height" : 100,
+        "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 150
+      },
+      "huge_thumb" : {
+        "height" : 260,
+        "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
+        "width" : 390
+      },
+      "preview_1000" : {
+        "url" : "https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg",
+        "width" : 1000,
+        "height" : 667
+      },
+      "preview_1500" : {
+        "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
+        "width" : 1500,
+        "height" : 1000
+      }
+    },
+    "contributor" : {
+      "id" : "250738318"
+    },
+    "description" : "cropped image of woman gardening",
+    "image_type" : "photo",
+    "has_model_release" : true,
+    "media_type" : "image"
+  } ],
+  "page" : 1,
+  "per_page" : 5,
+  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10",
+  "spellcheck_info" : { },
+  "total_count" : 45
 }
 ```
 
