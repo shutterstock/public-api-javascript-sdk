@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **has_property_release** | **Boolean** | Indicates whether there are property releases for the image | [optional] 
 **id** | **String** | Image ID | 
 **image_type** | **String** | Type of image | [optional] 
+**insights** | [**ImageInsights**](ImageInsights.md) |  | [optional] 
 **is_adult** | **Boolean** | Whether or not this image contains adult content | [optional] 
 **is_editorial** | **Boolean** | Whether or not this image is editorial content | [optional] 
 **is_illustration** | **Boolean** | Whether or not this image is an illustration | [optional] 

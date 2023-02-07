@@ -783,7 +783,8 @@ const id = "465011609"; // String | Image ID
 
 const queryParams = { 
   'language': "es", // String | Language for the keywords and categories in the response
-  'view': "full" // String | Amount of detail to render in the response
+  'view': "full", // String | Amount of detail to render in the response
+  'search_id': "00000000-0000-0000-0000-000000000000" // String | The ID of the search that is related to this request
 };
 
 api.getImage(id, queryParams)
@@ -804,6 +805,7 @@ Name | Type | Description
  id (required) | String| Image ID 
  language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "ar", "bg", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "ml", "mr", "nb", "nl", "or", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zh", "zh-Hant"
  view | String| Amount of detail to render in the response, defaults to full <br/><br/>Valid values: "minimal", "full"
+ search_id | String| The ID of the search that is related to this request 
 
 ### Accepted authentication
 
@@ -864,7 +866,8 @@ Name | Type | Description
   "description" : "cropped image of woman gardening",
   "image_type" : "photo",
   "has_model_release" : true,
-  "media_type" : "image"
+  "media_type" : "image",
+  "original_filename" : "123.jpg"
 }
 ```
 
@@ -1300,7 +1303,8 @@ const api = new sstk.ImagesApi();
 const id = ["[1110335168, 465011609]"]; // [String] | One or more image IDs
 
 const queryParams = { 
-  'view': "minimal" // String | Amount of detail to render in the response
+  'view': "minimal", // String | Amount of detail to render in the response
+  'search_id': "00000000-0000-0000-0000-000000000000" // String | The ID of the search that is related to this request
 };
 
 api.getImageList(id, queryParams)
@@ -1320,6 +1324,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | [String]| One or more image IDs 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
+ search_id | String| The ID of the search that is related to this request 
 
 ### Accepted authentication
 
@@ -1982,6 +1987,10 @@ const queryParams = {
   'aspect_ratio_min': 1.7778, // Number | Show images with the specified aspect ratio or higher, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image
   'aspect_ratio_max': 1.7778, // Number | Show images with the specified aspect ratio or lower, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image
   'aspect_ratio': 1.7778, // Number | Show images with the specified aspect ratio, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image
+  'ai_search': true, // Boolean | Set to true and specify the `ai_objective` and `ai_industry` parameters to use AI-powered search; the API returns information about how well images meet the objective for the industry 
+  'ai_labels_limit': 20, // Number | For AI-powered search, specify the maximum number of labels to return
+  'ai_industry': "ai_industry_example", // String | For AI-powered search, specify the industry to target; requires that the `ai_search` parameter is set to true
+  'ai_objective': "ai_objective_example", // String | For AI-powered search, specify the goal of the media; requires that the `ai_search` parameter is set to true
   'added_date_end': new Date("2021-03-29"), // Date | Show images added before the specified date
   'category': "category_example", // String | Show images with the specified Shutterstock-defined category; specify a category name or ID
   'color': "4F21EA", // String | Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API returns images that use similar colors
@@ -2035,6 +2044,10 @@ Name | Type | Description
  aspect_ratio_min | Number| Show images with the specified aspect ratio or higher, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
  aspect_ratio_max | Number| Show images with the specified aspect ratio or lower, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
  aspect_ratio | Number| Show images with the specified aspect ratio, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
+ ai_search | Boolean| Set to true and specify the `ai_objective` and `ai_industry` parameters to use AI-powered search; the API returns information about how well images meet the objective for the industry  
+ ai_labels_limit | Number| For AI-powered search, specify the maximum number of labels to return, defaults to 20 
+ ai_industry | String| For AI-powered search, specify the industry to target; requires that the `ai_search` parameter is set to true <br/><br/>Valid values: "automotive", "cpg", "finance", "healthcare", "retail", "technology"
+ ai_objective | String| For AI-powered search, specify the goal of the media; requires that the `ai_search` parameter is set to true <br/><br/>Valid values: "awareness", "traffic", "conversions"
  added_date_end | Date| Show images added before the specified date 
  category | String| Show images with the specified Shutterstock-defined category; specify a category name or ID 
  color | String| Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API returns images that use similar colors 

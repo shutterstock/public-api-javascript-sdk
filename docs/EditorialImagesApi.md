@@ -14,8 +14,8 @@ Method | HTTP request | Description
 [`getEditorialLivefeed`](EditorialImagesApi.md#getEditorialLivefeed) | `GET /v2/editorial/livefeeds/{id}` | (Deprecated) Get editorial livefeed
 [`getEditorialLivefeedItems`](EditorialImagesApi.md#getEditorialLivefeedItems) | `GET /v2/editorial/livefeeds/{id}/items` | (Deprecated) Get editorial livefeed items
 [`getEditorialLivefeedList`](EditorialImagesApi.md#getEditorialLivefeedList) | `GET /v2/editorial/livefeeds` | (Deprecated) Get editorial livefeed list
+[`getUpdatedEditorialImage`](EditorialImagesApi.md#getUpdatedEditorialImage) | `GET /v2/editorial/updated` | (Deprecated) List updated content
 [`getUpdatedEditorialImages`](EditorialImagesApi.md#getUpdatedEditorialImages) | `GET /v2/editorial/images/updated` | List updated content
-[`getUpdatedImages`](EditorialImagesApi.md#getUpdatedImages) | `GET /v2/editorial/updated` | (Deprecated) List updated content
 [`licenseEditorialImage`](EditorialImagesApi.md#licenseEditorialImage) | `POST /v2/editorial/licenses` | (Deprecated) License editorial content
 [`licenseEditorialImages`](EditorialImagesApi.md#licenseEditorialImages) | `POST /v2/editorial/images/licenses` | License editorial content
 [`listEditorialImageCategories`](EditorialImagesApi.md#listEditorialImageCategories) | `GET /v2/editorial/images/categories` | List editorial categories
@@ -587,7 +587,7 @@ Name | Type | Description
 
 <a name="getEditorialImage_0"></a>
 # EditorialImagesApi.getEditorialImage_0
-> `EditorialContent EditorialImagesApi.getEditorialImage_0(id, country)`
+> `EditorialContent EditorialImagesApi.getEditorialImage_0(id, country, queryParams)`
 
 **(Deprecated) Get editorial content details**
 
@@ -610,8 +610,11 @@ const id = "9926131a"; // String | Editorial ID
 
 const country = "USA"; // String | Returns only if the content is available for distribution in a certain country
 
+const queryParams = { 
+  'search_id': "00000000-0000-0000-0000-000000000000" // String | The ID of the search that is related to this request
+};
 
-api.getEditorialImage_0(id, country)
+api.getEditorialImage_0(id, country, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -628,6 +631,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Editorial ID 
  country (required) | String| Returns only if the content is available for distribution in a certain country 
+ search_id | String| The ID of the search that is related to this request 
 
 ### Accepted authentication
 
@@ -984,13 +988,13 @@ Name | Type | Description
 }
 ```
 
-<a name="getUpdatedEditorialImages"></a>
-# EditorialImagesApi.getUpdatedEditorialImages
-> `EditorialUpdatedResults EditorialImagesApi.getUpdatedEditorialImages(type, date_updated_start, date_updated_end, country, queryParams)`
+<a name="getUpdatedEditorialImage"></a>
+# EditorialImagesApi.getUpdatedEditorialImage
+> `EditorialUpdatedResults EditorialImagesApi.getUpdatedEditorialImage(type, date_updated_start, date_updated_end, country, queryParams)`
 
-**List updated content**
+**(Deprecated) List updated content**
 
-This endpoint lists editorial images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the date_updated_start and date_updated_end parameters to specify a range updates based on when the updates happened. You can also use the date_taken_start and date_taken_end parameters to specify a range of updates based on when the image was taken.
+Deprecated; use `GET /v2/editorial/images/updated` instead to get recently updated items.
 
 ### Example
 
@@ -1022,7 +1026,7 @@ const queryParams = {
   'per_page': 500 // Number | Number of results per page
 };
 
-api.getUpdatedEditorialImages(type, date_updated_start, date_updated_end, country, queryParams)
+api.getUpdatedEditorialImage(type, date_updated_start, date_updated_end, country, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -1133,13 +1137,13 @@ Name | Type | Description
 }
 ```
 
-<a name="getUpdatedImages"></a>
-# EditorialImagesApi.getUpdatedImages
-> `EditorialUpdatedResults EditorialImagesApi.getUpdatedImages(type, date_updated_start, date_updated_end, country, queryParams)`
+<a name="getUpdatedEditorialImages"></a>
+# EditorialImagesApi.getUpdatedEditorialImages
+> `EditorialUpdatedResults EditorialImagesApi.getUpdatedEditorialImages(type, date_updated_start, date_updated_end, country, queryParams)`
 
-**(Deprecated) List updated content**
+**List updated content**
 
-Deprecated; use `GET /v2/editorial/images/updated` instead to get recently updated items.
+This endpoint lists editorial images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the date_updated_start and date_updated_end parameters to specify a range updates based on when the updates happened. You can also use the date_taken_start and date_taken_end parameters to specify a range of updates based on when the image was taken.
 
 ### Example
 
@@ -1171,7 +1175,7 @@ const queryParams = {
   'per_page': 500 // Number | Number of results per page
 };
 
-api.getUpdatedImages(type, date_updated_start, date_updated_end, country, queryParams)
+api.getUpdatedEditorialImages(type, date_updated_start, date_updated_end, country, queryParams)
   .then((data) => {
     console.log(data);
   })

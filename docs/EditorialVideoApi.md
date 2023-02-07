@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="getEditorialVideo"></a>
 # EditorialVideoApi.getEditorialVideo
-> `EditorialVideoContent EditorialVideoApi.getEditorialVideo(id, country)`
+> `EditorialVideoContent EditorialVideoApi.getEditorialVideo(id, country, queryParams)`
 
 **Get editorial video content details**
 
@@ -36,8 +36,11 @@ const id = "9926131a"; // String | Editorial ID
 
 const country = "USA"; // String | Returns only if the content is available for distribution in a certain country
 
+const queryParams = { 
+  'search_id': "00000000-0000-0000-0000-000000000000" // String | The ID of the search that is related to this request
+};
 
-api.getEditorialVideo(id, country)
+api.getEditorialVideo(id, country, queryParams)
   .then((data) => {
     console.log(data);
   })
@@ -54,6 +57,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Editorial ID 
  country (required) | String| Returns only if the content is available for distribution in a certain country 
+ search_id | String| The ID of the search that is related to this request 
 
 ### Accepted authentication
 

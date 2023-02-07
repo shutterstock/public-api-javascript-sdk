@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.1.30
+- API version: 1.1.31
 
 ## References
 
@@ -377,8 +377,8 @@ Class | Method | HTTP request | Description
 *shutterstock-api.EditorialImagesApi* | [**getEditorialLivefeed**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#getEditorialLivefeed) | **GET** /v2/editorial/livefeeds/{id} | (Deprecated) Get editorial livefeed
 *shutterstock-api.EditorialImagesApi* | [**getEditorialLivefeedItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#getEditorialLivefeedItems) | **GET** /v2/editorial/livefeeds/{id}/items | (Deprecated) Get editorial livefeed items
 *shutterstock-api.EditorialImagesApi* | [**getEditorialLivefeedList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#getEditorialLivefeedList) | **GET** /v2/editorial/livefeeds | (Deprecated) Get editorial livefeed list
+*shutterstock-api.EditorialImagesApi* | [**getUpdatedEditorialImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#getUpdatedEditorialImage) | **GET** /v2/editorial/updated | (Deprecated) List updated content
 *shutterstock-api.EditorialImagesApi* | [**getUpdatedEditorialImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#getUpdatedEditorialImages) | **GET** /v2/editorial/images/updated | List updated content
-*shutterstock-api.EditorialImagesApi* | [**getUpdatedImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#getUpdatedImages) | **GET** /v2/editorial/updated | (Deprecated) List updated content
 *shutterstock-api.EditorialImagesApi* | [**licenseEditorialImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#licenseEditorialImage) | **POST** /v2/editorial/licenses | (Deprecated) License editorial content
 *shutterstock-api.EditorialImagesApi* | [**licenseEditorialImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#licenseEditorialImages) | **POST** /v2/editorial/images/licenses | License editorial content
 *shutterstock-api.EditorialImagesApi* | [**listEditorialImageCategories**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#listEditorialImageCategories) | **GET** /v2/editorial/images/categories | List editorial categories
@@ -413,6 +413,11 @@ Class | Method | HTTP request | Description
 *shutterstock-api.ImagesApi* | [**listSimilarImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#listSimilarImages) | **GET** /v2/images/{id}/similar | List similar images
 *shutterstock-api.ImagesApi* | [**renameImageCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#renameImageCollection) | **POST** /v2/images/collections/{id} | Rename image collections
 *shutterstock-api.ImagesApi* | [**searchImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#searchImages) | **GET** /v2/images/search | Search for images
+*shutterstock-api.SoundEffectsApi* | [**getSfxDetails**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/SoundEffectsApi.md#getSfxDetails) | **GET** /v2/sfx/{id} | Get details about sound effects
+*shutterstock-api.SoundEffectsApi* | [**getSfxLicenseList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/SoundEffectsApi.md#getSfxLicenseList) | **GET** /v2/sfx/licenses | List sound effects licenses
+*shutterstock-api.SoundEffectsApi* | [**getSfxListDetails**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/SoundEffectsApi.md#getSfxListDetails) | **GET** /v2/sfx | List details about sound effects
+*shutterstock-api.SoundEffectsApi* | [**licensesSFX**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/SoundEffectsApi.md#licensesSFX) | **POST** /v2/sfx/licenses | License sound effects
+*shutterstock-api.SoundEffectsApi* | [**searchSFX**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/SoundEffectsApi.md#searchSFX) | **GET** /v2/sfx/search | Search for sound effects
 *shutterstock-api.TestApi* | [**echo**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/TestApi.md#echo) | **GET** /v2/test | Echo text
 *shutterstock-api.TestApi* | [**validate**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/TestApi.md#validate) | **GET** /v2/test/validate | Validate input
 *shutterstock-api.UsersApi* | [**getAccessToken**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/UsersApi.md#getAccessToken) | **GET** /v2/user/access_token | Get access token details

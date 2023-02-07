@@ -772,7 +772,8 @@ const id = "639703"; // String | Video ID
 
 const queryParams = { 
   'language': "es", // String | Language for the keywords and categories in the response
-  'view': "full" // String | Amount of detail to render in the response
+  'view': "full", // String | Amount of detail to render in the response
+  'search_id': "00000000-0000-0000-0000-000000000000" // String | The ID of the search that is related to this request
 };
 
 api.getVideo(id, queryParams)
@@ -793,6 +794,7 @@ Name | Type | Description
  id (required) | String| Video ID 
  language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "ar", "bg", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "ml", "mr", "nb", "nl", "or", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zh", "zh-Hant"
  view | String| Amount of detail to render in the response, defaults to full <br/><br/>Valid values: "minimal", "full"
+ search_id | String| The ID of the search that is related to this request 
 
 ### Accepted authentication
 
@@ -1261,7 +1263,8 @@ const api = new sstk.VideosApi();
 const id = ["[639703, 993721]"]; // [String] | One or more video IDs
 
 const queryParams = { 
-  'view': "minimal" // String | Amount of detail to render in the response
+  'view': "minimal", // String | Amount of detail to render in the response
+  'search_id': "00000000-0000-0000-0000-000000000000" // String | The ID of the search that is related to this request
 };
 
 api.getVideoList(id, queryParams)
@@ -1281,6 +1284,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | [String]| One or more video IDs 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
+ search_id | String| The ID of the search that is related to this request 
 
 ### Accepted authentication
 

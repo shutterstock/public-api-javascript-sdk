@@ -339,7 +339,8 @@ const api = new sstk.AudioApi();
 const id = 442583; // Number | Audio track ID
 
 const queryParams = { 
-  'view': "full" // String | Amount of detail to render in the response
+  'view': "full", // String | Amount of detail to render in the response
+  'search_id': "00000000-0000-0000-0000-000000000000" // String | The ID of the search that is related to this request
 };
 
 api.getTrack(id, queryParams)
@@ -359,6 +360,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | Number| Audio track ID 
  view | String| Amount of detail to render in the response, defaults to full <br/><br/>Valid values: "minimal", "full"
+ search_id | String| The ID of the search that is related to this request 
 
 ### Accepted authentication
 
@@ -796,7 +798,8 @@ const api = new sstk.AudioApi();
 const id = ["[442583, 434750]"]; // [String] | One or more audio IDs
 
 const queryParams = { 
-  'view': "minimal" // String | Amount of detail to render in the response
+  'view': "minimal", // String | Amount of detail to render in the response
+  'search_id': "00000000-0000-0000-0000-000000000000" // String | The ID of the search that is related to this request
 };
 
 api.getTrackList(id, queryParams)
@@ -816,6 +819,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | [String]| One or more audio IDs 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
+ search_id | String| The ID of the search that is related to this request 
 
 ### Accepted authentication
 
@@ -1049,7 +1053,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 const api = new sstk.AudioApi();
 
 const queryParams = { 
-  'language': "language_example" // String | Which language the moods will be returned in
+  'language': "language_example" // String | Which language the instruments will be returned in
 };
 
 api.listInstruments(queryParams)
@@ -1067,7 +1071,7 @@ api.listInstruments(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- language | String| Which language the moods will be returned in 
+ language | String| Which language the instruments will be returned in 
 
 ### Accepted authentication
 
