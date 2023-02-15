@@ -4,12 +4,76 @@ All URIs are relative to `https://api.shutterstock.com`.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[`downloadSfx`](SoundEffectsApi.md#downloadSfx) | `POST /v2/sfx/licenses/{id}/downloads` | Download sound effects
 [`getSfxDetails`](SoundEffectsApi.md#getSfxDetails) | `GET /v2/sfx/{id}` | Get details about sound effects
 [`getSfxLicenseList`](SoundEffectsApi.md#getSfxLicenseList) | `GET /v2/sfx/licenses` | List sound effects licenses
 [`getSfxListDetails`](SoundEffectsApi.md#getSfxListDetails) | `GET /v2/sfx` | List details about sound effects
 [`licensesSFX`](SoundEffectsApi.md#licensesSFX) | `POST /v2/sfx/licenses` | License sound effects
 [`searchSFX`](SoundEffectsApi.md#searchSFX) | `GET /v2/sfx/search` | Search for sound effects
 
+
+<a name="downloadSfx"></a>
+# SoundEffectsApi.downloadSfx
+> `SfxUrl SoundEffectsApi.downloadSfx(id)`
+
+**Download sound effects**
+
+This endpoint redownloads sound effects that you have already received a license for. The download links in the response are valid for 8 hours.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.SoundEffectsApi();
+
+const id = "123"; // String | License ID
+
+
+api.downloadSfx(id)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ id (required) | String| License ID 
+
+### Accepted authentication
+
+
+- [OAuth](../README.md#OAuth_authentication) Required scopes:
+  - licenses.view
+
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[SfxUrl](SfxUrl.md)
+
+### Example response
+
+```
+{
+  "$ref" : "#/definitions/Url/example"
+}
+```
 
 <a name="getSfxDetails"></a>
 # SoundEffectsApi.getSfxDetails

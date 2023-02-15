@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.1.31
+- API version: 1.1.32
 
 ## References
 
@@ -413,6 +413,7 @@ Class | Method | HTTP request | Description
 *shutterstock-api.ImagesApi* | [**listSimilarImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#listSimilarImages) | **GET** /v2/images/{id}/similar | List similar images
 *shutterstock-api.ImagesApi* | [**renameImageCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#renameImageCollection) | **POST** /v2/images/collections/{id} | Rename image collections
 *shutterstock-api.ImagesApi* | [**searchImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#searchImages) | **GET** /v2/images/search | Search for images
+*shutterstock-api.SoundEffectsApi* | [**downloadSfx**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/SoundEffectsApi.md#downloadSfx) | **POST** /v2/sfx/licenses/{id}/downloads | Download sound effects
 *shutterstock-api.SoundEffectsApi* | [**getSfxDetails**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/SoundEffectsApi.md#getSfxDetails) | **GET** /v2/sfx/{id} | Get details about sound effects
 *shutterstock-api.SoundEffectsApi* | [**getSfxLicenseList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/SoundEffectsApi.md#getSfxLicenseList) | **GET** /v2/sfx/licenses | List sound effects licenses
 *shutterstock-api.SoundEffectsApi* | [**getSfxListDetails**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/SoundEffectsApi.md#getSfxListDetails) | **GET** /v2/sfx | List details about sound effects

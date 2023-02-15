@@ -25,7 +25,7 @@
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.DownloadHistoryUserDetails = factory(root.ShutterstockApiReference.ApiClient);
+    root.ShutterstockApiReference.SfxUrl = factory(root.ShutterstockApiReference.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,47 +34,47 @@
 
 
   /**
-   * The DownloadHistoryUserDetails model module.
-   * @module model/DownloadHistoryUserDetails
+   * The SfxUrl model module.
+   * @module model/SfxUrl
    * @version 1.1.32
    */
 
   /**
-   * Constructs a new <code>DownloadHistoryUserDetails</code>.
-   * Information about a user
-   * @alias module:model/DownloadHistoryUserDetails
+   * Constructs a new <code>SfxUrl</code>.
+   * Sound effect license URL object
+   * @alias module:model/SfxUrl
    * @class
-   * @param username {String} The name of the user who downloaded the item
+   * @param url {String} URL that can be used to download the unwatermarked, licensed asset
    */
-  var exports = function(username) {
+  var exports = function(url) {
     var _this = this;
 
-    _this['username'] = username;
+    _this['url'] = url;
   };
 
   /**
-   * Constructs a <code>DownloadHistoryUserDetails</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>SfxUrl</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/DownloadHistoryUserDetails} obj Optional instance to populate.
-   * @return {module:model/DownloadHistoryUserDetails} The populated <code>DownloadHistoryUserDetails</code> instance.
+   * @param {module:model/SfxUrl} obj Optional instance to populate.
+   * @return {module:model/SfxUrl} The populated <code>SfxUrl</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('username')) {
-        obj['username'] = ApiClient.convertToType(data['username'], 'String');
+      if (data.hasOwnProperty('url')) {
+        obj['url'] = ApiClient.convertToType(data['url'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * The name of the user who downloaded the item
-   * @member {String} username
+   * URL that can be used to download the unwatermarked, licensed asset
+   * @member {String} url
    */
-  exports.prototype['username'] = undefined;
+  exports.prototype['url'] = undefined;
 
 
 
