@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.1.32
+- API version: 1.1.34
 
 ## References
 
@@ -363,10 +363,6 @@ Class | Method | HTTP request | Description
 *shutterstock-api.ContributorsApi* | [**getContributorCollections**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorCollections) | **GET** /v2/contributors/{contributor_id}/collections/{id} | Get details about contributors' collections
 *shutterstock-api.ContributorsApi* | [**getContributorCollectionsList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorCollectionsList) | **GET** /v2/contributors/{contributor_id}/collections | List contributors' collections
 *shutterstock-api.ContributorsApi* | [**getContributorList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorList) | **GET** /v2/contributors | Get details about multiple contributors
-*shutterstock-api.CustomMusicApi* | [**createAudioRenders**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/CustomMusicApi.md#createAudioRenders) | **POST** /v2/ai/audio/renders | Create rendered audio
-*shutterstock-api.CustomMusicApi* | [**fetchRenders**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/CustomMusicApi.md#fetchRenders) | **GET** /v2/ai/audio/renders | Get details about audio renders
-*shutterstock-api.CustomMusicApi* | [**listCustomDescriptors**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/CustomMusicApi.md#listCustomDescriptors) | **GET** /v2/ai/audio/descriptors | List computer audio descriptors
-*shutterstock-api.CustomMusicApi* | [**listCustomInstruments**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/CustomMusicApi.md#listCustomInstruments) | **GET** /v2/ai/audio/instruments | List computer audio instruments
 *shutterstock-api.EditorialImagesApi* | [**getEditorialCategories**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#getEditorialCategories) | **GET** /v2/editorial/categories | (Deprecated) List editorial categories
 *shutterstock-api.EditorialImagesApi* | [**getEditorialImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#getEditorialImage) | **GET** /v2/editorial/images/{id} | Get editorial content details
 *shutterstock-api.EditorialImagesApi* | [**getEditorialImageLicenseList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#getEditorialImageLicenseList) | **GET** /v2/editorial/images/licenses | List editorial image licenses

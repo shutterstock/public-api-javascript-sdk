@@ -182,6 +182,11 @@ Name | Type | Description
         "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
         "width" : 1500,
         "height" : 1000
+      },
+      "mosaic" : {
+        "url" : "https://image.shutterstock.com/image-photo/stock-photo-cropped-image-of-woman-gardening-250nw-1572478477.jpg",
+        "width" : 250,
+        "height" : 167
       }
     },
     "contributor" : {
