@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **small_thumb** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
 **supersize_jpg** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
 **vector_eps** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
+**mosaic** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
 
 

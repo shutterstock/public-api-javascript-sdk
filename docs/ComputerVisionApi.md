@@ -168,6 +168,11 @@ Name | Type | Description
         "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
         "width" : 150
       },
+      "mosaic" : {
+        "height" : 167,
+        "url" : "https://image.shutterstock.com/image-photo/stock-photo-cropped-image-of-woman-gardening-250nw-1572478477.jpg",
+        "width" : 250
+      },
       "huge_thumb" : {
         "height" : 260,
         "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
@@ -182,11 +187,6 @@ Name | Type | Description
         "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
         "width" : 1500,
         "height" : 1000
-      },
-      "mosaic" : {
-        "url" : "https://image.shutterstock.com/image-photo/stock-photo-cropped-image-of-woman-gardening-250nw-1572478477.jpg",
-        "width" : 250,
-        "height" : 167
       }
     },
     "contributor" : {

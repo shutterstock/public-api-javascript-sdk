@@ -173,7 +173,7 @@ const api = new sstk.SoundEffectsApi();
 
 const queryParams = { 
   'sfx_id': "12345678", // String | Show licenses for the specified sound effects ID
-  'license': "standard", // String | Show sound effects that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license
+  'license': "standard", // String | Show sound effects that are available with the specified license, such as `standard` or `enhanced`
   'page': 1, // Number | Page number
   'per_page': 20, // Number | Number of results per page
   'sort': "newest", // String | Sort order
@@ -201,7 +201,7 @@ api.getSfxLicenseList(queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  sfx_id | String| Show licenses for the specified sound effects ID 
- license | String| Show sound effects that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license 
+ license | String| Show sound effects that are available with the specified license, such as `standard` or `enhanced` 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  sort | String| Sort order, defaults to newest <br/><br/>Valid values: "newest", "oldest"

@@ -238,6 +238,11 @@ Name | Type | Description
           "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
           "width" : 150
         },
+        "mosaic" : {
+          "height" : 167,
+          "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-250nw-1572478477.jpg",
+          "width" : 250
+        },
         "huge_thumb" : {
           "height" : 260,
           "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
@@ -844,6 +849,11 @@ Name | Type | Description
       "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
       "width" : 150
     },
+    "mosaic" : {
+      "height" : 167,
+      "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-250nw-1572478477.jpg",
+      "width" : 250
+    },
     "huge_thumb" : {
       "height" : 260,
       "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
@@ -858,11 +868,6 @@ Name | Type | Description
       "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
       "width" : 1500,
       "height" : 1000
-    },
-    "mosaic" : {
-      "url" : "https://image.shutterstock.com/image-photo/stock-photo-cropped-image-of-woman-gardening-250nw-1572478477.jpg",
-      "width" : 250,
-      "height" : 167
     }
   },
   "contributor" : {
@@ -1198,7 +1203,7 @@ const api = new sstk.ImagesApi();
 
 const queryParams = { 
   'image_id': "12345678", // String | Show licenses for the specified image ID
-  'license': "standard", // String | Show images that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license
+  'license': "standard", // String | Show images that are available with the specified license, such as `standard` or `enhanced`
   'page': 1, // Number | Page number
   'per_page': 20, // Number | Number of results per page
   'sort': "newest", // String | Sort order
@@ -1225,7 +1230,7 @@ api.getImageLicenseList(queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  image_id | String| Show licenses for the specified image ID 
- license | String| Show images that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license 
+ license | String| Show images that are available with the specified license, such as `standard` or `enhanced` 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  sort | String| Sort order, defaults to newest <br/><br/>Valid values: "newest", "oldest"
@@ -1368,6 +1373,11 @@ Name | Type | Description
         "height" : 100,
         "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
         "width" : 150
+      },
+      "mosaic" : {
+        "height" : 167,
+        "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-250nw-1572478477.jpg",
+        "width" : 250
       },
       "huge_thumb" : {
         "height" : 260,
@@ -1877,6 +1887,11 @@ Name | Type | Description
         "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
         "width" : 150
       },
+      "mosaic" : {
+        "height" : 167,
+        "url" : "https://image.shutterstock.com/image-photo/stock-photo-cropped-image-of-woman-gardening-250nw-1572478477.jpg",
+        "width" : 250
+      },
       "huge_thumb" : {
         "height" : 260,
         "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
@@ -1891,11 +1906,6 @@ Name | Type | Description
         "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
         "width" : 1500,
         "height" : 1000
-      },
-      "mosaic" : {
-        "url" : "https://image.shutterstock.com/image-photo/stock-photo-cropped-image-of-woman-gardening-250nw-1572478477.jpg",
-        "width" : 250,
-        "height" : 167
       }
     },
     "contributor" : {
@@ -2128,6 +2138,11 @@ Name | Type | Description
         "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
         "width" : 150
       },
+      "mosaic" : {
+        "height" : 167,
+        "url" : "https://image.shutterstock.com/image-photo/stock-photo-cropped-image-of-woman-gardening-250nw-1572478477.jpg",
+        "width" : 250
+      },
       "huge_thumb" : {
         "height" : 260,
         "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
@@ -2142,11 +2157,6 @@ Name | Type | Description
         "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
         "width" : 1500,
         "height" : 1000
-      },
-      "mosaic" : {
-        "url" : "https://image.shutterstock.com/image-photo/stock-photo-cropped-image-of-woman-gardening-250nw-1572478477.jpg",
-        "width" : 250,
-        "height" : 167
       }
     },
     "contributor" : {

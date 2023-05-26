@@ -688,7 +688,7 @@ const api = new sstk.AudioApi();
 
 const queryParams = { 
   'audio_id': "1", // String | Show licenses for the specified track ID
-  'license': "48433107", // String | Restrict results by license. Prepending a `-` sign will exclude results by license
+  'license': "48433107", // String | Restrict results by license.
   'page': 1, // Number | Page number
   'per_page': 20, // Number | Number of results per page
   'sort': "newest", // String | Sort order
@@ -715,7 +715,7 @@ api.getTrackLicenseList(queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  audio_id | String| Show licenses for the specified track ID 
- license | String| Restrict results by license. Prepending a `-` sign will exclude results by license 
+ license | String| Restrict results by license. 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  sort | String| Sort order, defaults to newest <br/><br/>Valid values: "newest", "oldest"
