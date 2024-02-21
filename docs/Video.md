@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **keywords** | **[String]** | Keywords associated with the content of this video | [optional] 
 **media_type** | **String** | Media type of this video, should always be \"video\" | 
 **models** | [**[Model]**](Model.md) | List of models in this video | [optional] 
+**releases** | [**[ModelRelease]**](ModelRelease.md) | List of all releases of this video | [optional] 
 **url** | **String** | Link to video information page; included only for certain accounts | [optional] 
 
 
