@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [`getEditorialVideoLicenseList`](EditorialVideoApi.md#getEditorialVideoLicenseList) | `GET /v2/editorial/videos/licenses` | List editorial video licenses
 [`licenseEditorialVideo`](EditorialVideoApi.md#licenseEditorialVideo) | `POST /v2/editorial/videos/licenses` | License editorial video content
 [`listEditorialVideoCategories`](EditorialVideoApi.md#listEditorialVideoCategories) | `GET /v2/editorial/videos/categories` | List editorial video categories
+[`listEditorialVideos`](EditorialVideoApi.md#listEditorialVideos) | `GET /v2/editorial/videos` | List editorial videos details by ID list
 [`searchEditorialVideos`](EditorialVideoApi.md#searchEditorialVideos) | `GET /v2/editorial/videos/search` | Search editorial video content
 
 
@@ -89,13 +90,13 @@ Name | Type | Description
   "aspect" : 1,
   "assets" : {
     "preview_mp4" : {
-      "url" : "https://qa.editorial-cdn.shuttercorp.net/wm-preview-mp4/10679854a/M0T7A13aNej2g82bMTI4NjY=/Shutterstock_10679854a.mp4"
+      "url" : "https://editorial-cdn.shuttercorp.net/wm-preview-mp4/10679854a/M0T7A13aNej2g82bMTI4NjY=/Shutterstock_10679854a.mp4"
     },
     "preview_webm" : {
-      "url" : "https://qa.editorial-cdn.shuttercorp.net/wm-preview-webm/10679854a/M4T6A63fN2j5g929MTI4NjY=/Shutterstock_10679854a.webm"
+      "url" : "https://editorial-cdn.shuttercorp.net/wm-preview-webm/10679854a/M4T6A63fN2j5g929MTI4NjY=/Shutterstock_10679854a.webm"
     },
     "thumb_jpg" : {
-      "url" : "https://qa.editorial-cdn.shuttercorp.net/thumb-1/10679854a/M5TcAf30Ncjcge2eMTI4NjY=/Shutterstock_10679854a.jpg"
+      "url" : "https://editorial-cdn.shuttercorp.net/thumb-1/10679854a/M5TcAf30Ncjcge2eMTI4NjY=/Shutterstock_10679854a.jpg"
     },
     "original" : {
       "height" : 1080,
@@ -355,6 +356,107 @@ This endpoint does not accept any parameters.
 }
 ```
 
+<a name="listEditorialVideos"></a>
+# EditorialVideoApi.listEditorialVideos
+> `EditorialVideoResults EditorialVideoApi.listEditorialVideos(id, country, queryParams)`
+
+**List editorial videos details by ID list**
+
+This endpoint lists the details of editorial videos by ID list.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.EditorialVideoApi();
+
+const id = ["id_example"]; // [String] | ID of the editorial video to list details for
+
+const country = "USA"; // String | Show only editorial video content that is available for distribution in a certain country
+
+const queryParams = { 
+  'search_id': "00000000-0000-0000-0000-000000000000" // String | The ID of the search that is related to this request
+};
+
+api.listEditorialVideos(id, country, queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ id (required) | [String]| ID of the editorial video to list details for 
+ country (required) | String| Show only editorial video content that is available for distribution in a certain country 
+ search_id | String| The ID of the search that is related to this request 
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[EditorialVideoResults](EditorialVideoResults.md)
+
+### Example response
+
+```
+{
+  "data" : [ {
+    "id" : "10679854a",
+    "title" : "Peeps the Goose Has a Blast on a Jet Ski, Prior Lake, Minnesota, USA - 13 Nov 2020",
+    "caption" : "",
+    "description" : "Info from Licensor: \"Peeps the Canadian Goose has been raised with our family since a gosling. Peeps has made appearances on our local news channels, TV shows, and local newspapers. He has been trained to fly next to four wheelers, jet ski's, and boats. He has brought joy to many people during the pandemic including those with cancer.\"",
+    "byline" : "ViralHog/Shutterstock",
+    "keywords" : [ "adorable", "birds", "goose" ],
+    "date_taken" : "2020-11-13",
+    "categories" : [ ],
+    "aspect" : 1,
+    "assets" : {
+      "preview_mp4" : {
+        "url" : "https://editorial-cdn.shuttercorp.net/wm-preview-mp4/10679854a/M0T7A13aNej2g82bMTI4NjY=/Shutterstock_10679854a.mp4"
+      },
+      "preview_webm" : {
+        "url" : "https://editorial-cdn.shuttercorp.net/wm-preview-webm/10679854a/M4T6A63fN2j5g929MTI4NjY=/Shutterstock_10679854a.webm"
+      },
+      "thumb_jpg" : {
+        "url" : "https://editorial-cdn.shuttercorp.net/thumb-1/10679854a/M5TcAf30Ncjcge2eMTI4NjY=/Shutterstock_10679854a.jpg"
+      },
+      "original" : {
+        "height" : 1080,
+        "width" : 1080,
+        "fps" : 30,
+        "format" : "avc1",
+        "file_size" : 82233387,
+        "display_name" : "HD",
+        "is_licensable" : true
+      }
+    }
+  } ]
+}
+```
+
 <a name="searchEditorialVideos"></a>
 # EditorialVideoApi.searchEditorialVideos
 > `EditorialVideoSearchResults EditorialVideoApi.searchEditorialVideos(country, queryParams)`
@@ -449,13 +551,13 @@ Name | Type | Description
     "aspect" : 1,
     "assets" : {
       "preview_mp4" : {
-        "url" : "https://qa.editorial-cdn.shuttercorp.net/wm-preview-mp4/10679854a/M0T7A13aNej2g82bMTI4NjY=/Shutterstock_10679854a.mp4"
+        "url" : "https://editorial-cdn.shuttercorp.net/wm-preview-mp4/10679854a/M0T7A13aNej2g82bMTI4NjY=/Shutterstock_10679854a.mp4"
       },
       "preview_webm" : {
-        "url" : "https://qa.editorial-cdn.shuttercorp.net/wm-preview-webm/10679854a/M4T6A63fN2j5g929MTI4NjY=/Shutterstock_10679854a.webm"
+        "url" : "https://editorial-cdn.shuttercorp.net/wm-preview-webm/10679854a/M4T6A63fN2j5g929MTI4NjY=/Shutterstock_10679854a.webm"
       },
       "thumb_jpg" : {
-        "url" : "https://qa.editorial-cdn.shuttercorp.net/thumb-1/10679854a/M5TcAf30Ncjcge2eMTI4NjY=/Shutterstock_10679854a.jpg"
+        "url" : "https://editorial-cdn.shuttercorp.net/thumb-1/10679854a/M5TcAf30Ncjcge2eMTI4NjY=/Shutterstock_10679854a.jpg"
       },
       "original" : {
         "height" : 1080,

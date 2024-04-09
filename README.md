@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.1.38
+- API version: 1.1.39
 
 ## References
 
@@ -384,6 +384,7 @@ Class | Method | HTTP request | Description
 *shutterstock-api.EditorialVideoApi* | [**getEditorialVideoLicenseList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialVideoApi.md#getEditorialVideoLicenseList) | **GET** /v2/editorial/videos/licenses | List editorial video licenses
 *shutterstock-api.EditorialVideoApi* | [**licenseEditorialVideo**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialVideoApi.md#licenseEditorialVideo) | **POST** /v2/editorial/videos/licenses | License editorial video content
 *shutterstock-api.EditorialVideoApi* | [**listEditorialVideoCategories**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialVideoApi.md#listEditorialVideoCategories) | **GET** /v2/editorial/videos/categories | List editorial video categories
+*shutterstock-api.EditorialVideoApi* | [**listEditorialVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialVideoApi.md#listEditorialVideos) | **GET** /v2/editorial/videos | List editorial videos details by ID list
 *shutterstock-api.EditorialVideoApi* | [**searchEditorialVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialVideoApi.md#searchEditorialVideos) | **GET** /v2/editorial/videos/search | Search editorial video content
 *shutterstock-api.ImagesApi* | [**addImageCollectionItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#addImageCollectionItems) | **POST** /v2/images/collections/{id}/items | Add images to collections
 *shutterstock-api.ImagesApi* | [**bulkSearchImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#bulkSearchImages) | **POST** /v2/bulk_search/images | Run multiple image searches

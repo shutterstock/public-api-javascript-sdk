@@ -164,22 +164,22 @@ Name | Type | Description
     "thumb_170" : {
       "height" : 105,
       "width" : 170,
-      "url" : "https://editorial01.qa.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
+      "url" : "https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
     },
     "thumb_220" : {
       "height" : 136,
       "width" : 220,
-      "url" : "https://editorial01.qa.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
+      "url" : "https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
     },
     "watermark_450" : {
       "height" : 278,
       "width" : 450,
-      "url" : "https://editorial01.qa.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
+      "url" : "https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
     },
     "watermark_1500" : {
       "height" : 926,
       "width" : 1500,
-      "url" : "https://editorial01.qa.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
+      "url" : "https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
     },
     "small_jpg" : {
       "display_name" : "Small",
@@ -377,7 +377,7 @@ Name | Type | Description
   "cover_item" : {
     "height" : 117,
     "width" : 170,
-    "url" : "https://editorial01.qa.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg",
+    "url" : "https://editorial01.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg",
     "id" : "9763363q"
   }
 }
@@ -460,22 +460,22 @@ Name | Type | Description
       "thumb_170" : {
         "height" : 105,
         "width" : 170,
-        "url" : "https://editorial01.qa.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
       },
       "thumb_220" : {
         "height" : 136,
         "width" : 220,
-        "url" : "https://editorial01.qa.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
       },
       "watermark_450" : {
         "height" : 278,
         "width" : 450,
-        "url" : "https://editorial01.qa.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
       },
       "watermark_1500" : {
         "height" : 926,
         "width" : 1500,
-        "url" : "https://editorial01.qa.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
       },
       "small_jpg" : {
         "display_name" : "Small",
@@ -578,7 +578,7 @@ Name | Type | Description
     "cover_item" : {
       "height" : 117,
       "width" : 170,
-      "url" : "https://editorial01.qa.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg",
+      "url" : "https://editorial01.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg",
       "id" : "9763363q"
     }
   } ]
@@ -667,22 +667,22 @@ Name | Type | Description
     "thumb_170" : {
       "height" : 105,
       "width" : 170,
-      "url" : "https://editorial01.qa.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
+      "url" : "https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
     },
     "thumb_220" : {
       "height" : 136,
       "width" : 220,
-      "url" : "https://editorial01.qa.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
+      "url" : "https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
     },
     "watermark_450" : {
       "height" : 278,
       "width" : 450,
-      "url" : "https://editorial01.qa.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
+      "url" : "https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
     },
     "watermark_1500" : {
       "height" : 926,
       "width" : 1500,
-      "url" : "https://editorial01.qa.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
+      "url" : "https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
     },
     "small_jpg" : {
       "display_name" : "Small",
@@ -776,7 +776,7 @@ Name | Type | Description
   "cover_item" : {
     "height" : 117,
     "width" : 170,
-    "url" : "https://editorial01.qa.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg",
+    "url" : "https://editorial01.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg",
     "id" : "9763363q"
   }
 }
@@ -861,22 +861,22 @@ Name | Type | Description
       "thumb_170" : {
         "height" : 105,
         "width" : 170,
-        "url" : "https://editorial01.qa.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
       },
       "thumb_220" : {
         "height" : 136,
         "width" : 220,
-        "url" : "https://editorial01.qa.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
       },
       "watermark_450" : {
         "height" : 278,
         "width" : 450,
-        "url" : "https://editorial01.qa.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
       },
       "watermark_1500" : {
         "height" : 926,
         "width" : 1500,
-        "url" : "https://editorial01.qa.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
       },
       "small_jpg" : {
         "display_name" : "Small",
@@ -978,7 +978,7 @@ Name | Type | Description
     "cover_item" : {
       "height" : 117,
       "width" : 170,
-      "url" : "https://editorial01.qa.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg",
+      "url" : "https://editorial01.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg",
       "id" : "9763363q"
     }
   } ],
@@ -1596,22 +1596,22 @@ Name | Type | Description
       "thumb_170" : {
         "height" : 105,
         "width" : 170,
-        "url" : "https://editorial01.qa.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
       },
       "thumb_220" : {
         "height" : 136,
         "width" : 220,
-        "url" : "https://editorial01.qa.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
       },
       "watermark_450" : {
         "height" : 278,
         "width" : 450,
-        "url" : "https://editorial01.qa.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
       },
       "watermark_1500" : {
         "height" : 926,
         "width" : 1500,
-        "url" : "https://editorial01.qa.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
       },
       "small_jpg" : {
         "display_name" : "Small",
@@ -1735,22 +1735,22 @@ Name | Type | Description
       "thumb_170" : {
         "height" : 105,
         "width" : 170,
-        "url" : "https://editorial01.qa.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
       },
       "thumb_220" : {
         "height" : 136,
         "width" : 220,
-        "url" : "https://editorial01.qa.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
       },
       "watermark_450" : {
         "height" : 278,
         "width" : 450,
-        "url" : "https://editorial01.qa.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
       },
       "watermark_1500" : {
         "height" : 926,
         "width" : 1500,
-        "url" : "https://editorial01.qa.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
+        "url" : "https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
       },
       "small_jpg" : {
         "display_name" : "Small",
