@@ -19,6 +19,7 @@ Method | HTTP request | Description
 [`licenseEditorialImage`](EditorialImagesApi.md#licenseEditorialImage) | `POST /v2/editorial/licenses` | (Deprecated) License editorial content
 [`licenseEditorialImages`](EditorialImagesApi.md#licenseEditorialImages) | `POST /v2/editorial/images/licenses` | License editorial content
 [`listEditorialImageCategories`](EditorialImagesApi.md#listEditorialImageCategories) | `GET /v2/editorial/images/categories` | List editorial categories
+[`listEditorialImages`](EditorialImagesApi.md#listEditorialImages) | `GET /v2/editorial/images` | list editorial image details
 [`searchEditorial`](EditorialImagesApi.md#searchEditorial) | `GET /v2/editorial/search` | (Deprecated) Search editorial content
 [`searchEditorialImages`](EditorialImagesApi.md#searchEditorialImages) | `GET /v2/editorial/images/search` | Search editorial images
 
@@ -1493,6 +1494,129 @@ This endpoint does not accept any parameters.
     "name" : "Art"
   }, {
     "name" : "Film Stills"
+  } ]
+}
+```
+
+<a name="listEditorialImages"></a>
+# EditorialImagesApi.listEditorialImages
+> `EditorialImageResults EditorialImagesApi.listEditorialImages(id, country, queryParams)`
+
+**list editorial image details**
+
+This endpoint lists the details of editorial images.
+
+### Example
+
+```javascript
+const sstk = require('shutterstock-api');
+
+// To use HTTP basic authorization:
+sstk.setBasicAuth(client_id, client_secret);
+
+// To use OAuth access token authorization:
+sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
+
+const api = new sstk.EditorialImagesApi();
+
+const id = ["id_example"]; // [String] | ID of the editorial image to list details for
+
+const country = "USA"; // String | Show only editorial image content that is available for distribution in a certain country
+
+const queryParams = { 
+  'search_id': "00000000-0000-0000-0000-000000000000" // String | The ID of the search that is related to this request
+};
+
+api.listEditorialImages(id, country, queryParams)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+```
+
+### Parameters
+
+
+Name | Type | Description
+------------- | ------------- | -------------
+ id (required) | [String]| ID of the editorial image to list details for 
+ country (required) | String| Show only editorial image content that is available for distribution in a certain country 
+ search_id | String| The ID of the search that is related to this request 
+
+### Accepted authentication
+
+- [Basic](../README.md#Basic_authentication)
+- [OAuth](../README.md#OAuth_authentication) (No scope required.)
+
+### HTTP request headers
+
+
+
+- Accept: application/json
+
+### Return type
+
+[EditorialImageResults](EditorialImageResults.md)
+
+### Example response
+
+```
+{
+  "data" : [ {
+    "id" : "10687730b",
+    "title" : "Soccer Premier League, Manchester, United Kingdom - 11 May 2021",
+    "caption" : "",
+    "description" : "Security and stewards stand outside the Old Trafford stadium in Manchester, England, ahead of the English Premier League soccer match between Manchester United and Leicester City. This is the first Manchester United home match since fans protested against American owner Joel Glazer, forcing the postponement of the team's Premier League game against Liverpool. The protests prompted Glazer to publish a letter in which he pledged to accelerate discussions with fans about supporters being able to have a greater say at the club",
+    "byline" : "Jon Super/AP/Shutterstock",
+    "keywords" : [ "england", "europe", "leicester city fc", "manchester", "manchester united fc", "men's soccer", "men's sports", "premier league", "professional soccer", "soccer", "sports", "united kingdom", "western europe", "wsoc" ],
+    "date_taken" : "2021-05-11",
+    "categories" : [ {
+      "name" : "Sport"
+    } ],
+    "aspect" : 1.621,
+    "assets" : {
+      "thumb_170" : {
+        "height" : 105,
+        "width" : 170,
+        "url" : "https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
+      },
+      "thumb_220" : {
+        "height" : 136,
+        "width" : 220,
+        "url" : "https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
+      },
+      "watermark_450" : {
+        "height" : 278,
+        "width" : 450,
+        "url" : "https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
+      },
+      "watermark_1500" : {
+        "height" : 926,
+        "width" : 1500,
+        "url" : "https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
+      },
+      "small_jpg" : {
+        "display_name" : "Small",
+        "width" : 500,
+        "height" : 309,
+        "is_licensable" : true
+      },
+      "medium_jpg" : {
+        "display_name" : "Med",
+        "width" : 1000,
+        "height" : 617,
+        "is_licensable" : true
+      },
+      "original" : {
+        "display_name" : "Original",
+        "height" : 3693,
+        "width" : 5985,
+        "is_licensable" : true
+      }
+    }
   } ]
 }
 ```

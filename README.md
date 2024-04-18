@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.1.39
+- API version: 1.1.40
 
 ## References
 
@@ -378,6 +378,7 @@ Class | Method | HTTP request | Description
 *shutterstock-api.EditorialImagesApi* | [**licenseEditorialImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#licenseEditorialImage) | **POST** /v2/editorial/licenses | (Deprecated) License editorial content
 *shutterstock-api.EditorialImagesApi* | [**licenseEditorialImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#licenseEditorialImages) | **POST** /v2/editorial/images/licenses | License editorial content
 *shutterstock-api.EditorialImagesApi* | [**listEditorialImageCategories**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#listEditorialImageCategories) | **GET** /v2/editorial/images/categories | List editorial categories
+*shutterstock-api.EditorialImagesApi* | [**listEditorialImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#listEditorialImages) | **GET** /v2/editorial/images | list editorial image details
 *shutterstock-api.EditorialImagesApi* | [**searchEditorial**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#searchEditorial) | **GET** /v2/editorial/search | (Deprecated) Search editorial content
 *shutterstock-api.EditorialImagesApi* | [**searchEditorialImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialImagesApi.md#searchEditorialImages) | **GET** /v2/editorial/images/search | Search editorial images
 *shutterstock-api.EditorialVideoApi* | [**getEditorialVideo**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialVideoApi.md#getEditorialVideo) | **GET** /v2/editorial/videos/{id} | Get editorial video content details

@@ -16,33 +16,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['../ApiClient', '../model/EditorialVideoContent'], factory);
+    define(['../ApiClient', '../model/EditorialContent'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EditorialVideoContent'));
+    module.exports = factory(require('../ApiClient'), require('./EditorialContent'));
   } else {
     // Browser globals (root is window)
     if (!root.ShutterstockApiReference) {
       root.ShutterstockApiReference = {};
     }
-    root.ShutterstockApiReference.EditorialVideoResults = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.EditorialVideoContent);
+    root.ShutterstockApiReference.EditorialImageResults = factory(root.ShutterstockApiReference.ApiClient, root.ShutterstockApiReference.EditorialContent);
   }
-}(this, function(ApiClient, EditorialVideoContent) {
+}(this, function(ApiClient, EditorialContent) {
   'use strict';
 
 
 
 
   /**
-   * The EditorialVideoResults model module.
-   * @module model/EditorialVideoResults
+   * The EditorialImageResults model module.
+   * @module model/EditorialImageResults
    * @version 1.1.40
    */
 
   /**
-   * Constructs a new <code>EditorialVideoResults</code>.
-   * List of editorial videos
-   * @alias module:model/EditorialVideoResults
+   * Constructs a new <code>EditorialImageResults</code>.
+   * List of editorial images
+   * @alias module:model/EditorialImageResults
    * @class
    */
   var exports = function() {
@@ -54,18 +54,18 @@
   };
 
   /**
-   * Constructs a <code>EditorialVideoResults</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>EditorialImageResults</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/EditorialVideoResults} obj Optional instance to populate.
-   * @return {module:model/EditorialVideoResults} The populated <code>EditorialVideoResults</code> instance.
+   * @param {module:model/EditorialImageResults} obj Optional instance to populate.
+   * @return {module:model/EditorialImageResults} The populated <code>EditorialImageResults</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
       if (data.hasOwnProperty('data')) {
-        obj['data'] = ApiClient.convertToType(data['data'], [EditorialVideoContent]);
+        obj['data'] = ApiClient.convertToType(data['data'], [EditorialContent]);
       }
       if (data.hasOwnProperty('search_id')) {
         obj['search_id'] = ApiClient.convertToType(data['search_id'], 'String');
@@ -78,7 +78,7 @@
   }
 
   /**
-   * @member {Array.<module:model/EditorialVideoContent>} data
+   * @member {Array.<module:model/EditorialContent>} data
    */
   exports.prototype['data'] = undefined;
   /**
