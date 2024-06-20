@@ -1713,6 +1713,7 @@ const queryParams = {
   'language': "language_example", // String | Set query and result language (uses Accept-Language header if not set)
   'license': ["[commercial, editorial]"], // [String] | Show only videos with the specified license or licenses
   'model': ["[442583, 434750]"], // [String] | Show videos with each of the specified models
+  'orientation': "orientation_example", // String | Search for videos in a specific orientation
   'page': 1, // Number | Page number
   'per_page': 20, // Number | Number of results per page
   'people_age': "20s", // String | Show videos that feature people of the specified age range
@@ -1759,6 +1760,7 @@ Name | Type | Description
  language | String| Set query and result language (uses Accept-Language header if not set) <br/><br/>Valid values: "ar", "bg", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "ml", "mr", "nb", "nl", "or", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zh", "zh-Hant"
  license | [String]| Show only videos with the specified license or licenses <br/><br/>Valid values: "commercial", "editorial"
  model | [String]| Show videos with each of the specified models 
+ orientation | String| Search for videos in a specific orientation <br/><br/>Valid values: "vertical", "horizontal"
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 20 
  people_age | String| Show videos that feature people of the specified age range <br/><br/>Valid values: "infants", "children", "teenagers", "20s", "30s", "40s", "50s", "60s", "older"
