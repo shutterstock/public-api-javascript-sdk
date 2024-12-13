@@ -5,12 +5,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
 **name** | **String** |  | 
-**cover_asset** | [**CatalogCollectionItem**](CatalogCollectionItem.md) |  | [optional] 
+**cover_asset** | [**InlineResponse20026Data**](InlineResponse20026Data.md) |  | [optional] 
 **total_item_count** | **Number** |  | 
 **created_time** | **Date** |  | 
 **updated_time** | **Date** |  | 
 **visibility** | **String** |  | 
-**role_assignments** | [**CatalogCollectionRoleAssignments**](CatalogCollectionRoleAssignments.md) |  | 
+**role_assignments** | [**InlineResponse20027RoleAssignments**](InlineResponse20027RoleAssignments.md) |  | 
 
 
 <a name="VisibilityEnum"></a>

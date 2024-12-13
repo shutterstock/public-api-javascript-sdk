@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**asset** | [**CreateCatalogCollectionItemAsset**](CreateCatalogCollectionItemAsset.md) |  | 
+**asset** | [**V2catalogcollectionsAsset**](V2catalogcollectionsAsset.md) |  | 
 
 

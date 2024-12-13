@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  | [optional] 
 **visibility** | **String** |  | [optional] 
-**cover_asset** | [**UpdateCatalogCollectionCoverAsset**](UpdateCatalogCollectionCoverAsset.md) |  | [optional] 
+**cover_asset** | [**V2catalogcollectionscollectionIdCoverAsset**](V2catalogcollectionscollectionIdCoverAsset.md) |  | [optional] 
 
 
 <a name="VisibilityEnum"></a>

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**country** | [**ISOCountryCode**](ISOCountryCode.md) | Mandatory country code for where the editorial content will be distributed; this value is used for rights checks | 
-**editorial** | [**[LicenseEditorialContent]**](LicenseEditorialContent.md) | Editorial content to license | 
+**country** | **Object** | Mandatory country code for where the editorial content will be distributed; this value is used for rights checks | 
+**editorial** | [**[V2editorialimageslicensesEditorial]**](V2editorialimageslicensesEditorial.md) | Editorial content to license | 
 
 

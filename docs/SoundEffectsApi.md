@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="downloadSfx"></a>
 # SoundEffectsApi.downloadSfx
-> `SfxUrl SoundEffectsApi.downloadSfx(id)`
+> `InlineResponse20014 SoundEffectsApi.downloadSfx(id)`
 
 **Download sound effects**
 
@@ -65,19 +65,17 @@ Name | Type | Description
 
 ### Return type
 
-[SfxUrl](SfxUrl.md)
+[InlineResponse20014](InlineResponse20014.md)
 
 ### Example response
 
 ```
-{
-  "$ref" : "#/definitions/Url/example"
-}
+"{url=https://download.shutterstock.com/gatekeeper/[random-characters]/shutterstock_59656357.jpg}"
 ```
 
 <a name="getSfxDetails"></a>
 # SoundEffectsApi.getSfxDetails
-> `SFX SoundEffectsApi.getSfxDetails(id, queryParams)`
+> `InlineResponse20013 SoundEffectsApi.getSfxDetails(id, queryParams)`
 
 **Get details about sound effects**
 
@@ -139,23 +137,17 @@ Name | Type | Description
 
 ### Return type
 
-[SFX](SFX.md)
+[InlineResponse20013](InlineResponse20013.md)
 
 ### Example response
 
 ```
-{
-  "id" : "123",
-  "media_type" : "sfx",
-  "contributor" : {
-    "id" : "1234"
-  }
-}
+"{id=123, media_type=sfx, contributor={id=1234}}"
 ```
 
 <a name="getSfxLicenseList"></a>
 # SoundEffectsApi.getSfxLicenseList
-> `DownloadHistoryDataList SoundEffectsApi.getSfxLicenseList(queryParams)`
+> `Object SoundEffectsApi.getSfxLicenseList(queryParams)`
 
 **List sound effects licenses**
 
@@ -227,7 +219,7 @@ Name | Type | Description
 
 ### Return type
 
-[DownloadHistoryDataList](DownloadHistoryDataList.md)
+Object
 
 ### Example response
 
@@ -263,7 +255,7 @@ Name | Type | Description
 
 <a name="getSfxListDetails"></a>
 # SoundEffectsApi.getSfxListDetails
-> `SFXDataList SoundEffectsApi.getSfxListDetails(id, queryParams)`
+> `Object SoundEffectsApi.getSfxListDetails(id, queryParams)`
 
 **List details about sound effects**
 
@@ -325,7 +317,7 @@ Name | Type | Description
 
 ### Return type
 
-[SFXDataList](SFXDataList.md)
+Object
 
 ### Example response
 
@@ -343,7 +335,7 @@ Name | Type | Description
 
 <a name="licensesSFX"></a>
 # SoundEffectsApi.licensesSFX
-> `LicenseSFXResultDataList SoundEffectsApi.licensesSFX(body)`
+> `Object SoundEffectsApi.licensesSFX(body)`
 
 **License sound effects**
 
@@ -362,7 +354,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.SoundEffectsApi();
 
-const body = new ShutterstockApiReference.LicenseSFXRequest(); // LicenseSFXRequest | 
+const body = new ShutterstockApiReference.Body16(); // Body16 | 
 
 
 api.licensesSFX(body)
@@ -380,7 +372,7 @@ api.licensesSFX(body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [LicenseSFXRequest](LicenseSFXRequest.md)|  
+ body (required) | [Body16](Body16.md)|  
 
 ### Accepted authentication
 
@@ -395,7 +387,7 @@ Name | Type | Description
 
 ### Return type
 
-[LicenseSFXResultDataList](LicenseSFXResultDataList.md)
+Object
 
 ### Example response
 
@@ -416,7 +408,7 @@ Name | Type | Description
 
 <a name="searchSFX"></a>
 # SoundEffectsApi.searchSFX
-> `SFXSearchResults SoundEffectsApi.searchSFX(queryParams)`
+> `InlineResponse20012 SoundEffectsApi.searchSFX(queryParams)`
 
 **Search for sound effects**
 
@@ -493,33 +485,11 @@ Name | Type | Description
 
 ### Return type
 
-[SFXSearchResults](SFXSearchResults.md)
+[InlineResponse20012](InlineResponse20012.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "id" : "123",
-    "description" : "User interface calculations, scanning, thinking, text displayed on screen. Screen gak or garble.",
-    "assets" : {
-      "preview_mp3" : {
-        "url" : "https://cdn.shutterstock.com/shutterstock/sfx/21230/preview_ecom_ster/heavy-duty-interface-feedback.mp3"
-      },
-      "waveform" : {
-        "url" : "https://cdn.shutterstock.com/shutterstock/sfx/21230/wvfm_img/heavy-duty-interface-feedback.png"
-      }
-    },
-    "contributor" : {
-      "id" : "321402911"
-    },
-    "title" : "Heavy Duty Interface Feedback",
-    "media_type" : "sfx",
-    "updated_time" : "2022-08-04T15:11:15.711Z",
-    "added_date" : "2022-07-29"
-  } ],
-  "total_count" : 14881,
-  "search_id" : "e6f84c4c-ffdd-499b-ad89-72c65a896ead"
-}
+"{data=[{id=123, description=User interface calculations, scanning, thinking, text displayed on screen. Screen gak or garble., assets={preview_mp3={url=https://cdn.shutterstock.com/shutterstock/sfx/21230/preview_ecom_ster/heavy-duty-interface-feedback.mp3}, waveform={url=https://cdn.shutterstock.com/shutterstock/sfx/21230/wvfm_img/heavy-duty-interface-feedback.png}}, contributor={id=321402911}, title=Heavy Duty Interface Feedback, media_type=sfx, updated_time=2022-08-04T15:11:15.711Z, added_date=2022-07-29}], total_count=14881, search_id=e6f84c4c-ffdd-499b-ad89-72c65a896ead}"
 ```
 

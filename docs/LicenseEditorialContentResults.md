@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**[LicenseEditorialContentResult]**](LicenseEditorialContentResult.md) | License results | [optional] 
-**errors** | [**[Error]**](Error.md) | Error list; appears only if there was an error | [optional] 
+**data** | [**[LicenseEditorialContentResultsData]**](LicenseEditorialContentResultsData.md) | License results | [optional] 
+**errors** | [**[AudioDataListErrors]**](AudioDataListErrors.md) | Error list; appears only if there was an error | [optional] 
 **message** | **String** | Optional error message | [optional] 
 **page** | **Number** | Current page of the response | [optional] 
 **per_page** | **Number** | Number of results per page | [optional] 

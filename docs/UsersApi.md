@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getAccessToken"></a>
 # UsersApi.getAccessToken
-> `AccessTokenDetails UsersApi.getAccessToken()`
+> `InlineResponse20030 UsersApi.getAccessToken()`
 
 **Get access token details**
 
@@ -51,25 +51,17 @@ This endpoint does not accept any parameters.
 
 ### Return type
 
-[AccessTokenDetails](AccessTokenDetails.md)
+[InlineResponse20030](InlineResponse20030.md)
 
 ### Example response
 
 ```
-{
-  "client_id" : "c456b-26230-fa8ed-d19ab-05ce2-bf0aa",
-  "customer_id" : "123456789",
-  "realm" : "customer",
-  "user_id" : "123456789",
-  "username" : "jdoe",
-  "expires_in" : 3600,
-  "scopes" : [ "collections.edit", "collections.view", "licenses.create", "licenses.view", "purchases.view", "user.view" ]
-}
+"{client_id=c456b-26230-fa8ed-d19ab-05ce2-bf0aa, customer_id=123456789, realm=customer, user_id=123456789, username=jdoe, expires_in=3600, scopes=[collections.edit, collections.view, licenses.create, licenses.view, purchases.view, user.view]}"
 ```
 
 <a name="getUser"></a>
 # UsersApi.getUser
-> `UserDetails UsersApi.getUser()`
+> `InlineResponse20029 UsersApi.getUser()`
 
 **Get user details**
 
@@ -109,25 +101,17 @@ This endpoint does not accept any parameters.
 
 ### Return type
 
-[UserDetails](UserDetails.md)
+[InlineResponse20029](InlineResponse20029.md)
 
 ### Example response
 
 ```
-{
-  "id" : "101782699",
-  "username" : "jdoe",
-  "full_name" : "John Doe",
-  "first_name" : "John",
-  "last_name" : "Doe",
-  "language" : "es",
-  "contributor_id" : "212"
-}
+"{id=101782699, username=jdoe, full_name=John Doe, first_name=John, last_name=Doe, language=es, contributor_id=212}"
 ```
 
 <a name="getUserSubscriptionList"></a>
 # UsersApi.getUserSubscriptionList
-> `SubscriptionDataList UsersApi.getUserSubscriptionList()`
+> `Object UsersApi.getUserSubscriptionList()`
 
 **List user subscriptions**
 
@@ -169,7 +153,7 @@ This endpoint does not accept any parameters.
 
 ### Return type
 
-[SubscriptionDataList](SubscriptionDataList.md)
+Object
 
 ### Example response
 

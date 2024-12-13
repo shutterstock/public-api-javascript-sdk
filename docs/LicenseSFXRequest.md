@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sound_effects** | [**[LicenseSFX]**](LicenseSFX.md) | Sound effects to license for | 
+**sound_effects** | [**[V2sfxlicensesSoundEffects]**](V2sfxlicensesSoundEffects.md) | Sound effects to license for | 
 
 

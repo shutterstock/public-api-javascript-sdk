@@ -50,7 +50,7 @@ const api = new sstk.ImagesApi();
 
 const id = "126351027"; // String | Collection ID
 
-const body = new ShutterstockApiReference.CollectionItemRequest(); // CollectionItemRequest | Array of image IDs to add to the collection
+const body = new ShutterstockApiReference.Body6(); // Body6 | Array of image IDs to add to the collection
 
 
 api.addImageCollectionItems(id, body)
@@ -66,7 +66,7 @@ api.addImageCollectionItems(id, body)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
- body (required) | [CollectionItemRequest](CollectionItemRequest.md)| Array of image IDs to add to the collection 
+ body (required) | [Body6](Body6.md)| Array of image IDs to add to the collection 
 
 ### Accepted authentication
 
@@ -88,7 +88,7 @@ No response body.
 
 <a name="bulkSearchImages"></a>
 # ImagesApi.bulkSearchImages
-> `BulkImageSearchResults ImagesApi.bulkSearchImages(body, queryParams)`
+> `InlineResponse2001 ImagesApi.bulkSearchImages(body, queryParams)`
 
 **Run multiple image searches**
 
@@ -107,7 +107,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 
-const body = new ShutterstockApiReference.BulkImageSearchRequest(); // BulkImageSearchRequest | List of queries to request results for and filters to apply per query; these values override the defaults in the query parameters
+const body = [new ShutterstockApiReference.Body()]; // [Body] | List of queries to request results for and filters to apply per query; these values override the defaults in the query parameters
 
 const queryParams = { 
   'added_date': new Date("2021-03-29"), // Date | Show images added on the specified date
@@ -162,7 +162,7 @@ api.bulkSearchImages(body, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [BulkImageSearchRequest](BulkImageSearchRequest.md)| List of queries to request results for and filters to apply per query; these values override the defaults in the query parameters 
+ body (required) | [[Body]](Body.md)| List of queries to request results for and filters to apply per query; these values override the defaults in the query parameters 
  added_date | Date| Show images added on the specified date 
  added_date_start | Date| Show images added on or after the specified date 
  aspect_ratio_min | Number| Show images with the specified aspect ratio or higher, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
@@ -212,80 +212,17 @@ Name | Type | Description
 
 ### Return type
 
-[BulkImageSearchResults](BulkImageSearchResults.md)
+[InlineResponse2001](InlineResponse2001.md)
 
 ### Example response
 
 ```
-{
-  "results" : [ {
-    "data" : [ {
-      "id" : "1572478477",
-      "aspect" : 1.5,
-      "assets" : {
-        "preview" : {
-          "height" : 300,
-          "url" : "https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-          "width" : 450
-        },
-        "small_thumb" : {
-          "height" : 67,
-          "url" : "https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-          "width" : 100
-        },
-        "large_thumb" : {
-          "height" : 100,
-          "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-          "width" : 150
-        },
-        "mosaic" : {
-          "height" : 167,
-          "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-250nw-1572478477.jpg",
-          "width" : 250
-        },
-        "huge_thumb" : {
-          "height" : 260,
-          "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
-          "width" : 390
-        },
-        "preview_1000" : {
-          "url" : "https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg",
-          "width" : 1000,
-          "height" : 667
-        },
-        "preview_1500" : {
-          "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-          "width" : 1500,
-          "height" : 1000
-        }
-      },
-      "contributor" : {
-        "id" : "250738318"
-      },
-      "description" : "cropped image of woman gardening",
-      "image_type" : "photo",
-      "has_model_release" : true,
-      "media_type" : "image"
-    } ],
-    "page" : 1,
-    "per_page" : 5,
-    "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10",
-    "spellcheck_info" : { },
-    "total_count" : 45
-  }, {
-    "data" : [ ],
-    "page" : 1,
-    "per_page" : 5,
-    "search_id" : "749090bb-2967-4a20-b22e-c800dc845e11",
-    "spellcheck_info" : { },
-    "total_count" : 0
-  } ]
-}
+"{results=[{data=[{id=1572478477, aspect=1.5, assets={preview={height=300, url=https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=450}, small_thumb={height=67, url=https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=100}, large_thumb={height=100, url=https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=150}, mosaic={height=167, url=https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-250nw-1572478477.jpg, width=250}, huge_thumb={height=260, url=https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg, width=390}, preview_1000={url=https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg, width=1000, height=667}, preview_1500={url=https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=1500, height=1000}}, contributor={id=250738318}, description=cropped image of woman gardening, image_type=photo, has_model_release=true, media_type=image}], page=1, per_page=5, search_id=749090bb-2967-4a20-b22e-c800dc845e10, spellcheck_info={}, total_count=45}, {data=[], page=1, per_page=5, search_id=749090bb-2967-4a20-b22e-c800dc845e11, spellcheck_info={}, total_count=0}]}"
 ```
 
 <a name="createImageCollection"></a>
 # ImagesApi.createImageCollection
-> `CollectionCreateResponse ImagesApi.createImageCollection(body)`
+> `InlineResponse201 ImagesApi.createImageCollection(body)`
 
 **Create image collections**
 
@@ -301,7 +238,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 
-const body = new ShutterstockApiReference.CollectionCreateRequest(); // CollectionCreateRequest | The names of the new collections
+const body = new ShutterstockApiReference.Body4(); // Body4 | The names of the new collections
 
 
 api.createImageCollection(body)
@@ -319,7 +256,7 @@ api.createImageCollection(body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [CollectionCreateRequest](CollectionCreateRequest.md)| The names of the new collections 
+ body (required) | [Body4](Body4.md)| The names of the new collections 
 
 ### Accepted authentication
 
@@ -336,14 +273,12 @@ Name | Type | Description
 
 ### Return type
 
-[CollectionCreateResponse](CollectionCreateResponse.md)
+[InlineResponse201](InlineResponse201.md)
 
 ### Example response
 
 ```
-{
-  "id" : "48433105"
-}
+"{id=48433105}"
 ```
 
 <a name="deleteImageCollection"></a>
@@ -458,7 +393,7 @@ No response body.
 
 <a name="downloadImage"></a>
 # ImagesApi.downloadImage
-> `Url ImagesApi.downloadImage(id, body)`
+> `InlineResponse2004 ImagesApi.downloadImage(id, body)`
 
 **Download images**
 
@@ -476,7 +411,7 @@ const api = new sstk.ImagesApi();
 
 const id = "e123"; // String | License ID
 
-const body = new ShutterstockApiReference.RedownloadImage(); // RedownloadImage | Information about the images to redownload
+const body = new ShutterstockApiReference.Body3(); // Body3 | Information about the images to redownload
 
 
 api.downloadImage(id, body)
@@ -495,7 +430,7 @@ api.downloadImage(id, body)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| License ID 
- body (required) | [RedownloadImage](RedownloadImage.md)| Information about the images to redownload 
+ body (required) | [Body3](Body3.md)| Information about the images to redownload 
 
 ### Accepted authentication
 
@@ -512,19 +447,17 @@ Name | Type | Description
 
 ### Return type
 
-[Url](Url.md)
+[InlineResponse2004](InlineResponse2004.md)
 
 ### Example response
 
 ```
-{
-  "url" : "https://download.shutterstock.com/gatekeeper/[random-characters]/shutterstock_59656357.jpg"
-}
+"{url=https://download.shutterstock.com/gatekeeper/[random-characters]/shutterstock_59656357.jpg}"
 ```
 
 <a name="getFeaturedImageCollection"></a>
 # ImagesApi.getFeaturedImageCollection
-> `FeaturedCollection ImagesApi.getFeaturedImageCollection(id, queryParams)`
+> `InlineResponse2006 ImagesApi.getFeaturedImageCollection(id, queryParams)`
 
 **Get the details of featured image collections**
 
@@ -582,27 +515,17 @@ Name | Type | Description
 
 ### Return type
 
-[FeaturedCollection](FeaturedCollection.md)
+[InlineResponse2006](InlineResponse2006.md)
 
 ### Example response
 
 ```
-{
-  "total_item_count" : 82,
-  "items_updated_time" : "2021-07-08T12:33:37.000Z",
-  "name" : "Exercise & Fitness",
-  "id" : "19853",
-  "created_time" : "2021-07-07T13:10:24.000Z",
-  "updated_time" : "2021-07-07T13:10:24.000Z",
-  "cover_item" : {
-    "url" : "https://ak.picdn.net/assets/cms/b467415246debdab45825d915a548f8f79b57882-Collection_1_Thumnail.jpg"
-  }
-}
+"{total_item_count=82, items_updated_time=2021-07-08T12:33:37.000Z, name=Exercise & Fitness, id=19853, created_time=2021-07-07T13:10:24.000Z, updated_time=2021-07-07T13:10:24.000Z, cover_item={url=https://ak.picdn.net/assets/cms/b467415246debdab45825d915a548f8f79b57882-Collection_1_Thumnail.jpg}}"
 ```
 
 <a name="getFeaturedImageCollectionItems"></a>
 # ImagesApi.getFeaturedImageCollectionItems
-> `CollectionItemDataList ImagesApi.getFeaturedImageCollectionItems(id, queryParams)`
+> `Object ImagesApi.getFeaturedImageCollectionItems(id, queryParams)`
 
 **Get the contents of featured image collections**
 
@@ -660,7 +583,7 @@ Name | Type | Description
 
 ### Return type
 
-[CollectionItemDataList](CollectionItemDataList.md)
+Object
 
 ### Example response
 
@@ -683,7 +606,7 @@ Name | Type | Description
 
 <a name="getFeaturedImageCollectionList"></a>
 # ImagesApi.getFeaturedImageCollectionList
-> `FeaturedCollectionDataList ImagesApi.getFeaturedImageCollectionList(queryParams)`
+> `Object ImagesApi.getFeaturedImageCollectionList(queryParams)`
 
 **List featured image collections**
 
@@ -740,7 +663,7 @@ Name | Type | Description
 
 ### Return type
 
-[FeaturedCollectionDataList](FeaturedCollectionDataList.md)
+Object
 
 ### Example response
 
@@ -765,7 +688,7 @@ Name | Type | Description
 
 <a name="getImage"></a>
 # ImagesApi.getImage
-> `Image ImagesApi.getImage(id, queryParams)`
+> `InlineResponse2003 ImagesApi.getImage(id, queryParams)`
 
 **Get details about images**
 
@@ -825,65 +748,17 @@ Name | Type | Description
 
 ### Return type
 
-[Image](Image.md)
+[InlineResponse2003](InlineResponse2003.md)
 
 ### Example response
 
 ```
-{
-  "id" : "1572478477",
-  "aspect" : 1.5,
-  "assets" : {
-    "preview" : {
-      "height" : 300,
-      "url" : "https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-      "width" : 450
-    },
-    "small_thumb" : {
-      "height" : 67,
-      "url" : "https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-      "width" : 100
-    },
-    "large_thumb" : {
-      "height" : 100,
-      "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-      "width" : 150
-    },
-    "mosaic" : {
-      "height" : 167,
-      "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-250nw-1572478477.jpg",
-      "width" : 250
-    },
-    "huge_thumb" : {
-      "height" : 260,
-      "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
-      "width" : 390
-    },
-    "preview_1000" : {
-      "url" : "https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg",
-      "width" : 1000,
-      "height" : 667
-    },
-    "preview_1500" : {
-      "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-      "width" : 1500,
-      "height" : 1000
-    }
-  },
-  "contributor" : {
-    "id" : "250738318"
-  },
-  "description" : "cropped image of woman gardening",
-  "image_type" : "photo",
-  "has_model_release" : true,
-  "media_type" : "image",
-  "original_filename" : "123.jpg"
-}
+"{id=1572478477, aspect=1.5, assets={preview={height=300, url=https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=450}, small_thumb={height=67, url=https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=100}, large_thumb={height=100, url=https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=150}, mosaic={height=167, url=https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-250nw-1572478477.jpg, width=250}, huge_thumb={height=260, url=https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg, width=390}, preview_1000={url=https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg, width=1000, height=667}, preview_1500={url=https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=1500, height=1000}}, contributor={id=250738318}, description=cropped image of woman gardening, image_type=photo, has_model_release=true, media_type=image, original_filename=123.jpg}"
 ```
 
 <a name="getImageCollection"></a>
 # ImagesApi.getImageCollection
-> `Collection ImagesApi.getImageCollection(id, queryParams)`
+> `InlineResponse2005 ImagesApi.getImageCollection(id, queryParams)`
 
 **Get the details of image collections**
 
@@ -940,25 +815,17 @@ Name | Type | Description
 
 ### Return type
 
-[Collection](Collection.md)
+[InlineResponse2005](InlineResponse2005.md)
 
 ### Example response
 
 ```
-{
-  "id" : "293542904",
-  "name" : "My collection",
-  "total_item_count" : 85,
-  "items_updated_time" : "2021-05-20T16:15:22-04:00",
-  "cover_item" : {
-    "id" : "297886754"
-  }
-}
+"{id=293542904, name=My collection, total_item_count=85, items_updated_time=2021-05-20T16:15:22-04:00, cover_item={id=297886754}}"
 ```
 
 <a name="getImageCollectionItems"></a>
 # ImagesApi.getImageCollectionItems
-> `CollectionItemDataList ImagesApi.getImageCollectionItems(id, queryParams)`
+> `Object ImagesApi.getImageCollectionItems(id, queryParams)`
 
 **Get the contents of image collections**
 
@@ -1019,7 +886,7 @@ Name | Type | Description
 
 ### Return type
 
-[CollectionItemDataList](CollectionItemDataList.md)
+Object
 
 ### Example response
 
@@ -1042,7 +909,7 @@ Name | Type | Description
 
 <a name="getImageCollectionList"></a>
 # ImagesApi.getImageCollectionList
-> `CollectionDataList ImagesApi.getImageCollectionList(queryParams)`
+> `Object ImagesApi.getImageCollectionList(queryParams)`
 
 **List image collections**
 
@@ -1098,7 +965,7 @@ Name | Type | Description
 
 ### Return type
 
-[CollectionDataList](CollectionDataList.md)
+Object
 
 ### Example response
 
@@ -1121,7 +988,7 @@ Name | Type | Description
 
 <a name="getImageKeywordSuggestions"></a>
 # ImagesApi.getImageKeywordSuggestions
-> `SearchEntitiesResponse ImagesApi.getImageKeywordSuggestions(body)`
+> `Object ImagesApi.getImageKeywordSuggestions(body)`
 
 **Get keywords from text**
 
@@ -1140,7 +1007,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 
-const body = new ShutterstockApiReference.SearchEntitiesRequest(); // SearchEntitiesRequest | Plain text to extract keywords from
+const body = new ShutterstockApiReference.Body1(); // Body1 | Plain text to extract keywords from
 
 
 api.getImageKeywordSuggestions(body)
@@ -1158,7 +1025,7 @@ api.getImageKeywordSuggestions(body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [SearchEntitiesRequest](SearchEntitiesRequest.md)| Plain text to extract keywords from 
+ body (required) | [Body1](Body1.md)| Plain text to extract keywords from 
 
 ### Accepted authentication
 
@@ -1173,7 +1040,7 @@ Name | Type | Description
 
 ### Return type
 
-[SearchEntitiesResponse](SearchEntitiesResponse.md)
+Object
 
 ### Example response
 
@@ -1185,7 +1052,7 @@ Name | Type | Description
 
 <a name="getImageLicenseList"></a>
 # ImagesApi.getImageLicenseList
-> `DownloadHistoryDataList ImagesApi.getImageLicenseList(queryParams)`
+> `Object ImagesApi.getImageLicenseList(queryParams)`
 
 **List image licenses**
 
@@ -1255,7 +1122,7 @@ Name | Type | Description
 
 ### Return type
 
-[DownloadHistoryDataList](DownloadHistoryDataList.md)
+Object
 
 ### Example response
 
@@ -1291,7 +1158,7 @@ Name | Type | Description
 
 <a name="getImageList"></a>
 # ImagesApi.getImageList
-> `ImageDataList ImagesApi.getImageList(id, queryParams)`
+> `Object ImagesApi.getImageList(id, queryParams)`
 
 **List images**
 
@@ -1349,7 +1216,7 @@ Name | Type | Description
 
 ### Return type
 
-[ImageDataList](ImageDataList.md)
+Object
 
 ### Example response
 
@@ -1411,7 +1278,7 @@ Name | Type | Description
 
 <a name="getImageRecommendations"></a>
 # ImagesApi.getImageRecommendations
-> `RecommendationDataList ImagesApi.getImageRecommendations(id, queryParams)`
+> `Object ImagesApi.getImageRecommendations(id, queryParams)`
 
 **List recommended images**
 
@@ -1469,7 +1336,7 @@ Name | Type | Description
 
 ### Return type
 
-[RecommendationDataList](RecommendationDataList.md)
+Object
 
 ### Example response
 
@@ -1490,7 +1357,7 @@ Name | Type | Description
 
 <a name="getImageSuggestions"></a>
 # ImagesApi.getImageSuggestions
-> `Suggestions ImagesApi.getImageSuggestions(query, queryParams)`
+> `InlineResponse2002 ImagesApi.getImageSuggestions(query, queryParams)`
 
 **Get suggestions for a search term**
 
@@ -1546,19 +1413,17 @@ Name | Type | Description
 
 ### Return type
 
-[Suggestions](Suggestions.md)
+[InlineResponse2002](InlineResponse2002.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ "cat scan", "cats and dogs", "cats playing", "catsuit", "cat silhouette", "catskills", "cats eyes", "cat sitting", "cat sleeping", "cats eye" ]
-}
+"{data=[cat scan, cats and dogs, cats playing, catsuit, cat silhouette, catskills, cats eyes, cat sitting, cat sleeping, cats eye]}"
 ```
 
 <a name="getUpdatedImages"></a>
 # ImagesApi.getUpdatedImages
-> `UpdatedMediaDataList ImagesApi.getUpdatedImages(queryParams)`
+> `Object ImagesApi.getUpdatedImages(queryParams)`
 
 **List updated images**
 
@@ -1579,8 +1444,8 @@ const api = new sstk.ImagesApi();
 
 const queryParams = { 
   'type': ["addition"], // [String] | Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways
-  'start_date': new Date("2021-03-29"), // Date | Show images updated on or after the specified date
-  'end_date': new Date("2021-03-29"), // Date | Show images updated before the specified date
+  'start_date': "2021-03-29T00:00:00Z OR 2021-03-29", // String | Show images updated on or after the specified date. The API will default to UTC (00:00:00) if no specific time is provided, ensuring consistency.
+  'end_date': "2021-03-29T23:59:59Z OR 2021-03-30", // String | Show images updated before the specified date. The API will default to UTC (00:00:00) if no specific time is provided, ensuring consistency. Please note that the end date must be at least 5 minutes after the start date.
   'interval': "1 HOUR", // String | Show images updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows images that were updated in the hour preceding the request
   'page': 1, // Number | Page number
   'per_page': 100, // Number | Number of results per page
@@ -1603,8 +1468,8 @@ api.getUpdatedImages(queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  type | [String]| Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways <br/><br/>Valid values: "addition", "deletion", "edit"
- start_date | Date| Show images updated on or after the specified date 
- end_date | Date| Show images updated before the specified date 
+ start_date | String| Show images updated on or after the specified date. The API will default to UTC (00:00:00) if no specific time is provided, ensuring consistency. 
+ end_date | String| Show images updated before the specified date. The API will default to UTC (00:00:00) if no specific time is provided, ensuring consistency. Please note that the end date must be at least 5 minutes after the start date. 
  interval | String| Show images updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows images that were updated in the hour preceding the request, defaults to 1 HOUR 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 100 
@@ -1623,7 +1488,7 @@ Name | Type | Description
 
 ### Return type
 
-[UpdatedMediaDataList](UpdatedMediaDataList.md)
+Object
 
 ### Example response
 
@@ -1642,7 +1507,7 @@ Name | Type | Description
 
 <a name="licenseImages"></a>
 # ImagesApi.licenseImages
-> `LicenseImageResultDataList ImagesApi.licenseImages(body, queryParams)`
+> `Object ImagesApi.licenseImages(body, queryParams)`
 
 **License images**
 
@@ -1658,7 +1523,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ImagesApi();
 
-const body = new ShutterstockApiReference.LicenseImageRequest(); // LicenseImageRequest | List of images to request licenses for and information about each license transaction; these values override the defaults in the query parameters
+const body = new ShutterstockApiReference.Body2(); // Body2 | List of images to request licenses for and information about each license transaction; these values override the defaults in the query parameters
 
 const queryParams = { 
   'subscription_id': "subscription_id_example", // String | Subscription ID to use to license the image
@@ -1682,7 +1547,7 @@ api.licenseImages(body, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [LicenseImageRequest](LicenseImageRequest.md)| List of images to request licenses for and information about each license transaction; these values override the defaults in the query parameters 
+ body (required) | [Body2](Body2.md)| List of images to request licenses for and information about each license transaction; these values override the defaults in the query parameters 
  subscription_id | String| Subscription ID to use to license the image 
  format | String| (Deprecated) Image format <br/><br/>Valid values: "eps", "jpg"
  size | String| Image size, defaults to huge <br/><br/>Valid values: "small", "medium", "huge", "vector", "custom"
@@ -1705,7 +1570,7 @@ Required scopes:
 
 ### Return type
 
-[LicenseImageResultDataList](LicenseImageResultDataList.md)
+Object
 
 ### Example response
 
@@ -1726,7 +1591,7 @@ Required scopes:
 
 <a name="listImageCategories"></a>
 # ImagesApi.listImageCategories
-> `CategoryDataList ImagesApi.listImageCategories(queryParams)`
+> `Object ImagesApi.listImageCategories(queryParams)`
 
 **List image categories**
 
@@ -1779,7 +1644,7 @@ Name | Type | Description
 
 ### Return type
 
-[CategoryDataList](CategoryDataList.md)
+Object
 
 ### Example response
 
@@ -1800,7 +1665,7 @@ Name | Type | Description
 
 <a name="listSimilarImages"></a>
 # ImagesApi.listSimilarImages
-> `ImageSearchResults ImagesApi.listSimilarImages(id, queryParams)`
+> `InlineResponse200 ImagesApi.listSimilarImages(id, queryParams)`
 
 **List similar images**
 
@@ -1862,66 +1727,12 @@ Name | Type | Description
 
 ### Return type
 
-[ImageSearchResults](ImageSearchResults.md)
+[InlineResponse200](InlineResponse200.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "id" : "1572478477",
-    "aspect" : 1.5,
-    "assets" : {
-      "preview" : {
-        "height" : 300,
-        "url" : "https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 450
-      },
-      "small_thumb" : {
-        "height" : 67,
-        "url" : "https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 100
-      },
-      "large_thumb" : {
-        "height" : 100,
-        "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 150
-      },
-      "mosaic" : {
-        "height" : 167,
-        "url" : "https://image.shutterstock.com/image-photo/stock-photo-cropped-image-of-woman-gardening-250nw-1572478477.jpg",
-        "width" : 250
-      },
-      "huge_thumb" : {
-        "height" : 260,
-        "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
-        "width" : 390
-      },
-      "preview_1000" : {
-        "url" : "https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg",
-        "width" : 1000,
-        "height" : 667
-      },
-      "preview_1500" : {
-        "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 1500,
-        "height" : 1000
-      }
-    },
-    "contributor" : {
-      "id" : "250738318"
-    },
-    "description" : "cropped image of woman gardening",
-    "image_type" : "photo",
-    "has_model_release" : true,
-    "media_type" : "image"
-  } ],
-  "page" : 1,
-  "per_page" : 5,
-  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10",
-  "spellcheck_info" : { },
-  "total_count" : 45
-}
+"{data=[{id=1572478477, aspect=1.5, assets={preview={height=300, url=https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=450}, small_thumb={height=67, url=https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=100}, large_thumb={height=100, url=https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=150}, mosaic={height=167, url=https://image.shutterstock.com/image-photo/stock-photo-cropped-image-of-woman-gardening-250nw-1572478477.jpg, width=250}, huge_thumb={height=260, url=https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg, width=390}, preview_1000={url=https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg, width=1000, height=667}, preview_1500={url=https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=1500, height=1000}}, contributor={id=250738318}, description=cropped image of woman gardening, image_type=photo, has_model_release=true, media_type=image}], page=1, per_page=5, search_id=749090bb-2967-4a20-b22e-c800dc845e10, spellcheck_info={}, total_count=45}"
 ```
 
 <a name="renameImageCollection"></a>
@@ -1944,7 +1755,7 @@ const api = new sstk.ImagesApi();
 
 const id = "126351027"; // String | Collection ID
 
-const body = new ShutterstockApiReference.CollectionUpdateRequest(); // CollectionUpdateRequest | The new name for the collection
+const body = new ShutterstockApiReference.Body5(); // Body5 | The new name for the collection
 
 
 api.renameImageCollection(id, body)
@@ -1960,7 +1771,7 @@ api.renameImageCollection(id, body)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
- body (required) | [CollectionUpdateRequest](CollectionUpdateRequest.md)| The new name for the collection 
+ body (required) | [Body5](Body5.md)| The new name for the collection 
 
 ### Accepted authentication
 
@@ -1982,7 +1793,7 @@ No response body.
 
 <a name="searchImages"></a>
 # ImagesApi.searchImages
-> `ImageSearchResults ImagesApi.searchImages(queryParams)`
+> `InlineResponse200 ImagesApi.searchImages(queryParams)`
 
 **Search for images**
 
@@ -2007,10 +1818,6 @@ const queryParams = {
   'aspect_ratio_min': 1.7778, // Number | Show images with the specified aspect ratio or higher, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image
   'aspect_ratio_max': 1.7778, // Number | Show images with the specified aspect ratio or lower, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image
   'aspect_ratio': 1.7778, // Number | Show images with the specified aspect ratio, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image
-  'ai_search': true, // Boolean | Set to true and specify the `ai_objective` and `ai_industry` parameters to use AI-powered search; the API returns information about how well images meet the objective for the industry 
-  'ai_labels_limit': 20, // Number | For AI-powered search, specify the maximum number of labels to return
-  'ai_industry': "ai_industry_example", // String | For AI-powered search, specify the industry to target; requires that the `ai_search` parameter is set to true
-  'ai_objective': "ai_objective_example", // String | For AI-powered search, specify the goal of the media; requires that the `ai_search` parameter is set to true
   'added_date_end': new Date("2021-03-29"), // Date | Show images added before the specified date
   'category': "category_example", // String | Show images with the specified Shutterstock-defined category; specify a category name or ID
   'color': "4F21EA", // String | Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API returns images that use similar colors
@@ -2064,10 +1871,6 @@ Name | Type | Description
  aspect_ratio_min | Number| Show images with the specified aspect ratio or higher, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
  aspect_ratio_max | Number| Show images with the specified aspect ratio or lower, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
  aspect_ratio | Number| Show images with the specified aspect ratio, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 
- ai_search | Boolean| Set to true and specify the `ai_objective` and `ai_industry` parameters to use AI-powered search; the API returns information about how well images meet the objective for the industry  
- ai_labels_limit | Number| For AI-powered search, specify the maximum number of labels to return, defaults to 20 
- ai_industry | String| For AI-powered search, specify the industry to target; requires that the `ai_search` parameter is set to true <br/><br/>Valid values: "automotive", "cpg", "finance", "healthcare", "retail", "technology"
- ai_objective | String| For AI-powered search, specify the goal of the media; requires that the `ai_search` parameter is set to true <br/><br/>Valid values: "awareness", "traffic", "conversions"
  added_date_end | Date| Show images added before the specified date 
  category | String| Show images with the specified Shutterstock-defined category; specify a category name or ID 
  color | String| Specify either a hexadecimal color in the format '4F21EA' or 'grayscale'; the API returns images that use similar colors 
@@ -2113,65 +1916,11 @@ Name | Type | Description
 
 ### Return type
 
-[ImageSearchResults](ImageSearchResults.md)
+[InlineResponse200](InlineResponse200.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "id" : "1572478477",
-    "aspect" : 1.5,
-    "assets" : {
-      "preview" : {
-        "height" : 300,
-        "url" : "https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 450
-      },
-      "small_thumb" : {
-        "height" : 67,
-        "url" : "https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 100
-      },
-      "large_thumb" : {
-        "height" : 100,
-        "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 150
-      },
-      "mosaic" : {
-        "height" : 167,
-        "url" : "https://image.shutterstock.com/image-photo/stock-photo-cropped-image-of-woman-gardening-250nw-1572478477.jpg",
-        "width" : 250
-      },
-      "huge_thumb" : {
-        "height" : 260,
-        "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
-        "width" : 390
-      },
-      "preview_1000" : {
-        "url" : "https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg",
-        "width" : 1000,
-        "height" : 667
-      },
-      "preview_1500" : {
-        "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 1500,
-        "height" : 1000
-      }
-    },
-    "contributor" : {
-      "id" : "250738318"
-    },
-    "description" : "cropped image of woman gardening",
-    "image_type" : "photo",
-    "has_model_release" : true,
-    "media_type" : "image"
-  } ],
-  "page" : 1,
-  "per_page" : 5,
-  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10",
-  "spellcheck_info" : { },
-  "total_count" : 45
-}
+"{data=[{id=1572478477, aspect=1.5, assets={preview={height=300, url=https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=450}, small_thumb={height=67, url=https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=100}, large_thumb={height=100, url=https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=150}, mosaic={height=167, url=https://image.shutterstock.com/image-photo/stock-photo-cropped-image-of-woman-gardening-250nw-1572478477.jpg, width=250}, huge_thumb={height=260, url=https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg, width=390}, preview_1000={url=https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg, width=1000, height=667}, preview_1500={url=https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=1500, height=1000}}, contributor={id=250738318}, description=cropped image of woman gardening, image_type=photo, has_model_release=true, media_type=image}], page=1, per_page=5, search_id=749090bb-2967-4a20-b22e-c800dc845e10, spellcheck_info={}, total_count=45}"
 ```
 

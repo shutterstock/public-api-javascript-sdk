@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **id** | **String** | Contributor ID | 
 **location** | **String** | Country code representing the contributor's locale | [optional] 
 **portfolio_url** | **String** | Web URL for the contributors' profile | [optional] 
-**social_media** | [**ContributorProfileSocialMedia**](ContributorProfileSocialMedia.md) |  | [optional] 
+**social_media** | [**InlineResponse20028SocialMedia**](InlineResponse20028SocialMedia.md) |  | [optional] 
 **styles** | **[String]** | List of styles that the contributor specializes in (lifestyle, mixed media, etc) | [optional] 
 **subjects** | **[String]** | Generic list of subjects for contributors' work (food_and_drink, holiday, people, etc) | [optional] 
 **website** | **String** | Personal website for the contributor | [optional] 

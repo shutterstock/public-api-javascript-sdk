@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  | 
 **visibility** | **String** |  | [optional] [default to 'private']
-**items** | [**[CreateCatalogCollectionItem]**](CreateCatalogCollectionItem.md) |  | [optional] 
+**items** | [**[V2catalogcollectionsItems]**](V2catalogcollectionsItems.md) |  | [optional] 
 
 
 <a name="VisibilityEnum"></a>

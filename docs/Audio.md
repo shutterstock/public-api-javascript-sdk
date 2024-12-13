@@ -5,11 +5,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **added_date** | **Date** | Date this track was added to the Shutterstock library | [optional] 
 **affiliate_url** | **String** | Affiliate referral link; appears only for registered affiliate partners | [optional] 
-**album** | [**Album**](Album.md) |  | [optional] 
-**artists** | [**[Artist]**](Artist.md) | List of artists | [optional] 
-**assets** | [**AudioAssets**](AudioAssets.md) |  | [optional] 
+**album** | [**InlineResponse2009Album**](InlineResponse2009Album.md) |  | [optional] 
+**artists** | [**[InlineResponse2009Artists]**](InlineResponse2009Artists.md) | List of artists | [optional] 
+**assets** | [**InlineResponse2009Assets**](InlineResponse2009Assets.md) |  | [optional] 
 **bpm** | **Number** | BPM (beats per minute) of this track | [optional] 
-**contributor** | [**Contributor**](Contributor.md) |  | 
+**contributor** | [**InlineResponse200Contributor**](InlineResponse200Contributor.md) |  | 
 **deleted_time** | **Date** |  | [optional] 
 **description** | **String** | Description of this track | [optional] 
 **duration** | **Number** | Duration of this track in seconds | [optional] 
@@ -23,12 +23,12 @@ Name | Type | Description | Notes
 **language** | **String** | Language of this track's lyrics | [optional] 
 **lyrics** | **String** | Lyrics of this track | [optional] 
 **media_type** | **String** | Media type of this track; should always be \"audio\" | 
-**model_releases** | [**[ModelRelease]**](ModelRelease.md) | List of all model releases for this track | [optional] 
+**model_releases** | [**[InlineResponse200ModelReleases]**](InlineResponse200ModelReleases.md) | List of all model releases for this track | [optional] 
 **moods** | **[String]** | List of all moods of this track | [optional] 
 **published_time** | **Date** | Time this track was published | [optional] 
 **recording_version** | **String** | Recording version of this track | [optional] 
 **releases** | **[String]** | List of all releases of this track | [optional] 
-**similar_artists** | [**[Artist]**](Artist.md) | List of all similar artists of this track | [optional] 
+**similar_artists** | [**[InlineResponse2009Artists]**](InlineResponse2009Artists.md) | List of all similar artists of this track | [optional] 
 **submitted_time** | **Date** | Time this track was submitted | [optional] 
 **title** | **String** | Title of this track | [optional] 
 **updated_time** | **Date** | Time this track was last updated | [optional] 

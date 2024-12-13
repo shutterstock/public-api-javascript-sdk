@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**original** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
-**thumb_170** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
-**thumb_220** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
-**watermark_450** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
-**watermark_1500** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
-**small_jpg** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
-**medium_jpg** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
+**original** | [**InlineResponse200AssetsHugeJpg**](InlineResponse200AssetsHugeJpg.md) |  | [optional] 
+**thumb_170** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
+**thumb_220** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
+**watermark_450** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
+**watermark_1500** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
+**small_jpg** | [**InlineResponse200AssetsHugeJpg**](InlineResponse200AssetsHugeJpg.md) |  | [optional] 
+**medium_jpg** | [**InlineResponse200AssetsHugeJpg**](InlineResponse200AssetsHugeJpg.md) |  | [optional] 
 
 

@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 <a name="getEditorialCategories"></a>
 # EditorialImagesApi.getEditorialCategories
-> `EditorialCategoryResults EditorialImagesApi.getEditorialCategories()`
+> `InlineResponse20034 EditorialImagesApi.getEditorialCategories()`
 
 **(Deprecated) List editorial categories**
 
@@ -71,25 +71,17 @@ This endpoint does not accept any parameters.
 
 ### Return type
 
-[EditorialCategoryResults](EditorialCategoryResults.md)
+[InlineResponse20034](InlineResponse20034.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "name" : "Animal"
-  }, {
-    "name" : "Awards"
-  }, {
-    "name" : "Art"
-  } ]
-}
+"{data=[{name=Animal}, {name=Awards}, {name=Art}]}"
 ```
 
 <a name="getEditorialImage"></a>
 # EditorialImagesApi.getEditorialImage
-> `EditorialContent EditorialImagesApi.getEditorialImage(id, country)`
+> `InlineResponse20018 EditorialImagesApi.getEditorialImage(id, country)`
 
 **Get editorial content details**
 
@@ -144,69 +136,17 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialContent](EditorialContent.md)
+[InlineResponse20018](InlineResponse20018.md)
 
 ### Example response
 
 ```
-{
-  "id" : "10687730b",
-  "title" : "Soccer Premier League, Manchester, United Kingdom - 11 May 2021",
-  "caption" : "",
-  "description" : "Security and stewards stand outside the Old Trafford stadium in Manchester, England, ahead of the English Premier League soccer match between Manchester United and Leicester City. This is the first Manchester United home match since fans protested against American owner Joel Glazer, forcing the postponement of the team's Premier League game against Liverpool. The protests prompted Glazer to publish a letter in which he pledged to accelerate discussions with fans about supporters being able to have a greater say at the club",
-  "byline" : "Jon Super/AP/Shutterstock",
-  "keywords" : [ "england", "europe", "leicester city fc", "manchester", "manchester united fc", "men's soccer", "men's sports", "premier league", "professional soccer", "soccer", "sports", "united kingdom", "western europe", "wsoc" ],
-  "date_taken" : "2021-05-11",
-  "categories" : [ {
-    "name" : "Sport"
-  } ],
-  "aspect" : 1.621,
-  "assets" : {
-    "thumb_170" : {
-      "height" : 105,
-      "width" : 170,
-      "url" : "https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
-    },
-    "thumb_220" : {
-      "height" : 136,
-      "width" : 220,
-      "url" : "https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
-    },
-    "watermark_450" : {
-      "height" : 278,
-      "width" : 450,
-      "url" : "https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
-    },
-    "watermark_1500" : {
-      "height" : 926,
-      "width" : 1500,
-      "url" : "https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
-    },
-    "small_jpg" : {
-      "display_name" : "Small",
-      "width" : 500,
-      "height" : 309,
-      "is_licensable" : true
-    },
-    "medium_jpg" : {
-      "display_name" : "Med",
-      "width" : 1000,
-      "height" : 617,
-      "is_licensable" : true
-    },
-    "original" : {
-      "display_name" : "Original",
-      "height" : 3693,
-      "width" : 5985,
-      "is_licensable" : true
-    }
-  }
-}
+"{id=10687730b, title=Soccer Premier League, Manchester, United Kingdom - 11 May 2021, caption=, description=Security and stewards stand outside the Old Trafford stadium in Manchester, England, ahead of the English Premier League soccer match between Manchester United and Leicester City. This is the first Manchester United home match since fans protested against American owner Joel Glazer, forcing the postponement of the team's Premier League game against Liverpool. The protests prompted Glazer to publish a letter in which he pledged to accelerate discussions with fans about supporters being able to have a greater say at the club, byline=Jon Super/AP/Shutterstock, keywords=[england, europe, leicester city fc, manchester, manchester united fc, men's soccer, men's sports, premier league, professional soccer, soccer, sports, united kingdom, western europe, wsoc], date_taken=2021-05-11, categories=[{name=Sport}], aspect=1.621, assets={thumb_170={height=105, width=170, url=https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg}, thumb_220={height=136, width=220, url=https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg}, watermark_450={height=278, width=450, url=https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg}, watermark_1500={height=926, width=1500, url=https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg}, small_jpg={display_name=Small, width=500, height=309, is_licensable=true}, medium_jpg={display_name=Med, width=1000, height=617, is_licensable=true}, original={display_name=Original, height=3693, width=5985, is_licensable=true}}}"
 ```
 
 <a name="getEditorialImageLicenseList"></a>
 # EditorialImagesApi.getEditorialImageLicenseList
-> `DownloadHistoryDataList EditorialImagesApi.getEditorialImageLicenseList(queryParams)`
+> `Object EditorialImagesApi.getEditorialImageLicenseList(queryParams)`
 
 **List editorial image licenses**
 
@@ -276,7 +216,7 @@ Name | Type | Description
 
 ### Return type
 
-[DownloadHistoryDataList](DownloadHistoryDataList.md)
+Object
 
 ### Example response
 
@@ -312,7 +252,7 @@ Name | Type | Description
 
 <a name="getEditorialImageLivefeed"></a>
 # EditorialImagesApi.getEditorialImageLivefeed
-> `EditorialImageLivefeed EditorialImagesApi.getEditorialImageLivefeed(id, country)`
+> `InlineResponse20021 EditorialImagesApi.getEditorialImageLivefeed(id, country)`
 
 **Get editorial livefeed**
 
@@ -365,28 +305,17 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialImageLivefeed](EditorialImageLivefeed.md)
+[InlineResponse20021](InlineResponse20021.md)
 
 ### Example response
 
 ```
-{
-  "id" : "2018%2F07%2F17%2FPrince%20Charles%20and%20Camilla%20Duchess%20of%20Cornwall%20visit%20to%20Cornwall%2C%20Day%202",
-  "name" : "Prince Charles and Camilla Duchess of Cornwall visit to Cornwall, Day 2",
-  "total_item_count" : 38,
-  "created_time" : "2018-07-17T12:42:03+00:00",
-  "cover_item" : {
-    "height" : 117,
-    "width" : 170,
-    "url" : "https://editorial01.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg",
-    "id" : "9763363q"
-  }
-}
+"{id=2018%2F07%2F17%2FPrince%20Charles%20and%20Camilla%20Duchess%20of%20Cornwall%20visit%20to%20Cornwall%2C%20Day%202, name=Prince Charles and Camilla Duchess of Cornwall visit to Cornwall, Day 2, total_item_count=38, created_time=2018-07-17T12:42:03+00:00, cover_item={height=117, width=170, url=https://editorial01.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg, id=9763363q}}"
 ```
 
 <a name="getEditorialImageLivefeedItems"></a>
 # EditorialImagesApi.getEditorialImageLivefeedItems
-> `EditorialImageContentDataList EditorialImagesApi.getEditorialImageLivefeedItems(id, country)`
+> `Object EditorialImagesApi.getEditorialImageLivefeedItems(id, country)`
 
 **Get editorial livefeed items**
 
@@ -439,7 +368,7 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialImageContentDataList](EditorialImageContentDataList.md)
+Object
 
 ### Example response
 
@@ -506,7 +435,7 @@ Name | Type | Description
 
 <a name="getEditorialImageLivefeedList"></a>
 # EditorialImagesApi.getEditorialImageLivefeedList
-> `EditorialImageLivefeedList EditorialImagesApi.getEditorialImageLivefeedList(country, queryParams)`
+> `InlineResponse20020 EditorialImagesApi.getEditorialImageLivefeedList(country, queryParams)`
 
 **Get editorial livefeed list**
 
@@ -562,33 +491,17 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialImageLivefeedList](EditorialImageLivefeedList.md)
+[InlineResponse20020](InlineResponse20020.md)
 
 ### Example response
 
 ```
-{
-  "page" : 1,
-  "per_page" : 1,
-  "total_count" : 5300,
-  "data" : [ {
-    "id" : "2018%2F07%2F17%2FPrince%20Charles%20and%20Camilla%20Duchess%20of%20Cornwall%20visit%20to%20Cornwall%2C%20Day%202",
-    "name" : "Prince Charles and Camilla Duchess of Cornwall visit to Cornwall, Day 2",
-    "total_item_count" : 38,
-    "created_time" : "2018-07-17T12:42:03+00:00",
-    "cover_item" : {
-      "height" : 117,
-      "width" : 170,
-      "url" : "https://editorial01.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg",
-      "id" : "9763363q"
-    }
-  } ]
-}
+"{page=1, per_page=1, total_count=5300, data=[{id=2018%2F07%2F17%2FPrince%20Charles%20and%20Camilla%20Duchess%20of%20Cornwall%20visit%20to%20Cornwall%2C%20Day%202, name=Prince Charles and Camilla Duchess of Cornwall visit to Cornwall, Day 2, total_item_count=38, created_time=2018-07-17T12:42:03+00:00, cover_item={height=117, width=170, url=https://editorial01.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg, id=9763363q}}]}"
 ```
 
 <a name="getEditorialImage_0"></a>
 # EditorialImagesApi.getEditorialImage_0
-> `EditorialContent EditorialImagesApi.getEditorialImage_0(id, country, queryParams)`
+> `InlineResponse20018 EditorialImagesApi.getEditorialImage_0(id, country, queryParams)`
 
 **(Deprecated) Get editorial content details**
 
@@ -647,69 +560,17 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialContent](EditorialContent.md)
+[InlineResponse20018](InlineResponse20018.md)
 
 ### Example response
 
 ```
-{
-  "id" : "10687730b",
-  "title" : "Soccer Premier League, Manchester, United Kingdom - 11 May 2021",
-  "caption" : "",
-  "description" : "Security and stewards stand outside the Old Trafford stadium in Manchester, England, ahead of the English Premier League soccer match between Manchester United and Leicester City. This is the first Manchester United home match since fans protested against American owner Joel Glazer, forcing the postponement of the team's Premier League game against Liverpool. The protests prompted Glazer to publish a letter in which he pledged to accelerate discussions with fans about supporters being able to have a greater say at the club",
-  "byline" : "Jon Super/AP/Shutterstock",
-  "keywords" : [ "england", "europe", "leicester city fc", "manchester", "manchester united fc", "men's soccer", "men's sports", "premier league", "professional soccer", "soccer", "sports", "united kingdom", "western europe", "wsoc" ],
-  "date_taken" : "2021-05-11",
-  "categories" : [ {
-    "name" : "Sport"
-  } ],
-  "aspect" : 1.621,
-  "assets" : {
-    "thumb_170" : {
-      "height" : 105,
-      "width" : 170,
-      "url" : "https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
-    },
-    "thumb_220" : {
-      "height" : 136,
-      "width" : 220,
-      "url" : "https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
-    },
-    "watermark_450" : {
-      "height" : 278,
-      "width" : 450,
-      "url" : "https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
-    },
-    "watermark_1500" : {
-      "height" : 926,
-      "width" : 1500,
-      "url" : "https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
-    },
-    "small_jpg" : {
-      "display_name" : "Small",
-      "width" : 500,
-      "height" : 309,
-      "is_licensable" : true
-    },
-    "medium_jpg" : {
-      "display_name" : "Med",
-      "width" : 1000,
-      "height" : 617,
-      "is_licensable" : true
-    },
-    "original" : {
-      "display_name" : "Original",
-      "height" : 3693,
-      "width" : 5985,
-      "is_licensable" : true
-    }
-  }
-}
+"{id=10687730b, title=Soccer Premier League, Manchester, United Kingdom - 11 May 2021, caption=, description=Security and stewards stand outside the Old Trafford stadium in Manchester, England, ahead of the English Premier League soccer match between Manchester United and Leicester City. This is the first Manchester United home match since fans protested against American owner Joel Glazer, forcing the postponement of the team's Premier League game against Liverpool. The protests prompted Glazer to publish a letter in which he pledged to accelerate discussions with fans about supporters being able to have a greater say at the club, byline=Jon Super/AP/Shutterstock, keywords=[england, europe, leicester city fc, manchester, manchester united fc, men's soccer, men's sports, premier league, professional soccer, soccer, sports, united kingdom, western europe, wsoc], date_taken=2021-05-11, categories=[{name=Sport}], aspect=1.621, assets={thumb_170={height=105, width=170, url=https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg}, thumb_220={height=136, width=220, url=https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg}, watermark_450={height=278, width=450, url=https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg}, watermark_1500={height=926, width=1500, url=https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg}, small_jpg={display_name=Small, width=500, height=309, is_licensable=true}, medium_jpg={display_name=Med, width=1000, height=617, is_licensable=true}, original={display_name=Original, height=3693, width=5985, is_licensable=true}}}"
 ```
 
 <a name="getEditorialLivefeed"></a>
 # EditorialImagesApi.getEditorialLivefeed
-> `EditorialLivefeed EditorialImagesApi.getEditorialLivefeed(id, country)`
+> `InlineResponse20021 EditorialImagesApi.getEditorialLivefeed(id, country)`
 
 **(Deprecated) Get editorial livefeed**
 
@@ -764,28 +625,17 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialLivefeed](EditorialLivefeed.md)
+[InlineResponse20021](InlineResponse20021.md)
 
 ### Example response
 
 ```
-{
-  "id" : "2018%2F07%2F17%2FPrince%20Charles%20and%20Camilla%20Duchess%20of%20Cornwall%20visit%20to%20Cornwall%2C%20Day%202",
-  "name" : "Prince Charles and Camilla Duchess of Cornwall visit to Cornwall, Day 2",
-  "total_item_count" : 38,
-  "created_time" : "2018-07-17T12:42:03+00:00",
-  "cover_item" : {
-    "height" : 117,
-    "width" : 170,
-    "url" : "https://editorial01.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg",
-    "id" : "9763363q"
-  }
-}
+"{id=2018%2F07%2F17%2FPrince%20Charles%20and%20Camilla%20Duchess%20of%20Cornwall%20visit%20to%20Cornwall%2C%20Day%202, name=Prince Charles and Camilla Duchess of Cornwall visit to Cornwall, Day 2, total_item_count=38, created_time=2018-07-17T12:42:03+00:00, cover_item={height=117, width=170, url=https://editorial01.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg, id=9763363q}}"
 ```
 
 <a name="getEditorialLivefeedItems"></a>
 # EditorialImagesApi.getEditorialLivefeedItems
-> `EditorialContentDataList EditorialImagesApi.getEditorialLivefeedItems(id, country)`
+> `Object EditorialImagesApi.getEditorialLivefeedItems(id, country)`
 
 **(Deprecated) Get editorial livefeed items**
 
@@ -840,7 +690,7 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialContentDataList](EditorialContentDataList.md)
+Object
 
 ### Example response
 
@@ -907,7 +757,7 @@ Name | Type | Description
 
 <a name="getEditorialLivefeedList"></a>
 # EditorialImagesApi.getEditorialLivefeedList
-> `EditorialLivefeedList EditorialImagesApi.getEditorialLivefeedList(country, queryParams)`
+> `InlineResponse20033 EditorialImagesApi.getEditorialLivefeedList(country, queryParams)`
 
 **(Deprecated) Get editorial livefeed list**
 
@@ -965,33 +815,17 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialLivefeedList](EditorialLivefeedList.md)
+[InlineResponse20033](InlineResponse20033.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "id" : "2018%2F07%2F17%2FPrince%20Charles%20and%20Camilla%20Duchess%20of%20Cornwall%20visit%20to%20Cornwall%2C%20Day%202",
-    "name" : "Prince Charles and Camilla Duchess of Cornwall visit to Cornwall, Day 2",
-    "total_item_count" : 38,
-    "created_time" : "2018-07-17T12:42:03+00:00",
-    "cover_item" : {
-      "height" : 117,
-      "width" : 170,
-      "url" : "https://editorial01.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg",
-      "id" : "9763363q"
-    }
-  } ],
-  "page" : 1,
-  "per_page" : 1,
-  "total_count" : 56
-}
+"{data=[{id=2018%2F07%2F17%2FPrince%20Charles%20and%20Camilla%20Duchess%20of%20Cornwall%20visit%20to%20Cornwall%2C%20Day%202, name=Prince Charles and Camilla Duchess of Cornwall visit to Cornwall, Day 2, total_item_count=38, created_time=2018-07-17T12:42:03+00:00, cover_item={height=117, width=170, url=https://editorial01.shuttercorp.net/thumb/9763363q/51e28f39/Shutterstock_9763363q.jpg, id=9763363q}}], page=1, per_page=1, total_count=56}"
 ```
 
 <a name="getUpdatedEditorialImage"></a>
 # EditorialImagesApi.getUpdatedEditorialImage
-> `EditorialUpdatedResults EditorialImagesApi.getUpdatedEditorialImage(type, date_updated_start, date_updated_end, country, queryParams)`
+> `InlineResponse20017 EditorialImagesApi.getUpdatedEditorialImage(type, date_updated_start, date_updated_end, country, queryParams)`
 
 **(Deprecated) List updated content**
 
@@ -1066,81 +900,17 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialUpdatedResults](EditorialUpdatedResults.md)
+[InlineResponse20017](InlineResponse20017.md)
 
 ### Example response
 
 ```
-{
-  "per_page" : 1,
-  "next" : "eyJ2IjoxLCJzIjoxfQ==",
-  "prev" : "",
-  "data" : [ {
-    "id" : "9804979n",
-    "title" : "Hong Kong kicks off international e-Sports competition, China - 24 Aug 2018",
-    "caption" : "",
-    "description" : "Members of the TyLoo e-Sports team from China prepare to face off against the Kinguin e-Sports team from Poland at the ICBC (Asia) e-Sports and Music Festival Hong Kong 2018, Hong Kong, China, 24 August 2018. The festival runs from 24 to 26 August with professional gamers from around the world competing in international e-sports tournaments.",
-    "byline" : "ALEX HOFFORD/EPA-EFE/Shutterstock",
-    "supplier_code" : "EPA",
-    "keywords" : [ ],
-    "date_taken" : "2018-08-24",
-    "categories" : [ ],
-    "aspect" : 1.481,
-    "assets" : {
-      "thumb_170" : {
-        "height" : 115,
-        "width" : 170,
-        "url" : "https://editorial01.shutterstock.com/thumb/9804979n/c4377a53/Shutterstock_9804979n.jpg"
-      },
-      "thumb_220" : {
-        "height" : 149,
-        "width" : 220,
-        "url" : "https://editorial01.shutterstock.com/thumb-220/9804979n/c57a68c7/Shutterstock_9804979n.jpg"
-      },
-      "watermark_450" : {
-        "height" : 304,
-        "width" : 450,
-        "url" : "https://editorial01.shutterstock.com/wm-preview-450/9804979n/37d19dce/Shutterstock_9804979n.jpg"
-      },
-      "watermark_1500" : {
-        "height" : 1500,
-        "width" : 1040,
-        "url" : "https://editorial01.shutterstock.com/wm-preview-1500/9933285a/ab82fea4/Shutterstock_9933285a.jpg"
-      },
-      "original" : {
-        "display_name" : "Original",
-        "height" : 3263,
-        "width" : 4831,
-        "is_licensable" : true
-      },
-      "small_jpg" : {
-        "display_name" : "Small",
-        "height" : 337,
-        "width" : 500,
-        "is_licensable" : true
-      },
-      "medium_jpg" : {
-        "display_name" : "Med",
-        "height" : 675,
-        "width" : 1000,
-        "is_licensable" : true
-      }
-    },
-    "updated_time" : "2019-07-15T20:04:44-04:00",
-    "updates" : [ "addition" ],
-    "commercial_status" : {
-      "status" : "available"
-    },
-    "rights" : {
-      "countries" : "CAN,+DEU,+GBR,+USA,-*"
-    }
-  } ]
-}
+"{per_page=1, next=eyJ2IjoxLCJzIjoxfQ==, prev=, data=[{id=9804979n, title=Hong Kong kicks off international e-Sports competition, China - 24 Aug 2018, caption=, description=Members of the TyLoo e-Sports team from China prepare to face off against the Kinguin e-Sports team from Poland at the ICBC (Asia) e-Sports and Music Festival Hong Kong 2018, Hong Kong, China, 24 August 2018. The festival runs from 24 to 26 August with professional gamers from around the world competing in international e-sports tournaments., byline=ALEX HOFFORD/EPA-EFE/Shutterstock, supplier_code=EPA, keywords=[], date_taken=2018-08-24, categories=[], aspect=1.481, assets={thumb_170={height=115, width=170, url=https://editorial01.shutterstock.com/thumb/9804979n/c4377a53/Shutterstock_9804979n.jpg}, thumb_220={height=149, width=220, url=https://editorial01.shutterstock.com/thumb-220/9804979n/c57a68c7/Shutterstock_9804979n.jpg}, watermark_450={height=304, width=450, url=https://editorial01.shutterstock.com/wm-preview-450/9804979n/37d19dce/Shutterstock_9804979n.jpg}, watermark_1500={height=1500, width=1040, url=https://editorial01.shutterstock.com/wm-preview-1500/9933285a/ab82fea4/Shutterstock_9933285a.jpg}, original={display_name=Original, height=3263, width=4831, is_licensable=true}, small_jpg={display_name=Small, height=337, width=500, is_licensable=true}, medium_jpg={display_name=Med, height=675, width=1000, is_licensable=true}}, updated_time=2019-07-15T20:04:44-04:00, updates=[addition], commercial_status={status=available}, rights={countries=CAN,+DEU,+GBR,+USA,-*}}]}"
 ```
 
 <a name="getUpdatedEditorialImages"></a>
 # EditorialImagesApi.getUpdatedEditorialImages
-> `EditorialUpdatedResults EditorialImagesApi.getUpdatedEditorialImages(type, date_updated_start, date_updated_end, country, queryParams)`
+> `InlineResponse20017 EditorialImagesApi.getUpdatedEditorialImages(type, date_updated_start, date_updated_end, country, queryParams)`
 
 **List updated content**
 
@@ -1215,81 +985,17 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialUpdatedResults](EditorialUpdatedResults.md)
+[InlineResponse20017](InlineResponse20017.md)
 
 ### Example response
 
 ```
-{
-  "per_page" : 1,
-  "next" : "eyJ2IjoxLCJzIjoxfQ==",
-  "prev" : "",
-  "data" : [ {
-    "id" : "9804979n",
-    "title" : "Hong Kong kicks off international e-Sports competition, China - 24 Aug 2018",
-    "caption" : "",
-    "description" : "Members of the TyLoo e-Sports team from China prepare to face off against the Kinguin e-Sports team from Poland at the ICBC (Asia) e-Sports and Music Festival Hong Kong 2018, Hong Kong, China, 24 August 2018. The festival runs from 24 to 26 August with professional gamers from around the world competing in international e-sports tournaments.",
-    "byline" : "ALEX HOFFORD/EPA-EFE/Shutterstock",
-    "supplier_code" : "EPA",
-    "keywords" : [ ],
-    "date_taken" : "2018-08-24",
-    "categories" : [ ],
-    "aspect" : 1.481,
-    "assets" : {
-      "thumb_170" : {
-        "height" : 115,
-        "width" : 170,
-        "url" : "https://editorial01.shutterstock.com/thumb/9804979n/c4377a53/Shutterstock_9804979n.jpg"
-      },
-      "thumb_220" : {
-        "height" : 149,
-        "width" : 220,
-        "url" : "https://editorial01.shutterstock.com/thumb-220/9804979n/c57a68c7/Shutterstock_9804979n.jpg"
-      },
-      "watermark_450" : {
-        "height" : 304,
-        "width" : 450,
-        "url" : "https://editorial01.shutterstock.com/wm-preview-450/9804979n/37d19dce/Shutterstock_9804979n.jpg"
-      },
-      "watermark_1500" : {
-        "height" : 1500,
-        "width" : 1040,
-        "url" : "https://editorial01.shutterstock.com/wm-preview-1500/9933285a/ab82fea4/Shutterstock_9933285a.jpg"
-      },
-      "original" : {
-        "display_name" : "Original",
-        "height" : 3263,
-        "width" : 4831,
-        "is_licensable" : true
-      },
-      "small_jpg" : {
-        "display_name" : "Small",
-        "height" : 337,
-        "width" : 500,
-        "is_licensable" : true
-      },
-      "medium_jpg" : {
-        "display_name" : "Med",
-        "height" : 675,
-        "width" : 1000,
-        "is_licensable" : true
-      }
-    },
-    "updated_time" : "2019-07-15T20:04:44-04:00",
-    "updates" : [ "addition" ],
-    "commercial_status" : {
-      "status" : "available"
-    },
-    "rights" : {
-      "countries" : "CAN,+DEU,+GBR,+USA,-*"
-    }
-  } ]
-}
+"{per_page=1, next=eyJ2IjoxLCJzIjoxfQ==, prev=, data=[{id=9804979n, title=Hong Kong kicks off international e-Sports competition, China - 24 Aug 2018, caption=, description=Members of the TyLoo e-Sports team from China prepare to face off against the Kinguin e-Sports team from Poland at the ICBC (Asia) e-Sports and Music Festival Hong Kong 2018, Hong Kong, China, 24 August 2018. The festival runs from 24 to 26 August with professional gamers from around the world competing in international e-sports tournaments., byline=ALEX HOFFORD/EPA-EFE/Shutterstock, supplier_code=EPA, keywords=[], date_taken=2018-08-24, categories=[], aspect=1.481, assets={thumb_170={height=115, width=170, url=https://editorial01.shutterstock.com/thumb/9804979n/c4377a53/Shutterstock_9804979n.jpg}, thumb_220={height=149, width=220, url=https://editorial01.shutterstock.com/thumb-220/9804979n/c57a68c7/Shutterstock_9804979n.jpg}, watermark_450={height=304, width=450, url=https://editorial01.shutterstock.com/wm-preview-450/9804979n/37d19dce/Shutterstock_9804979n.jpg}, watermark_1500={height=1500, width=1040, url=https://editorial01.shutterstock.com/wm-preview-1500/9933285a/ab82fea4/Shutterstock_9933285a.jpg}, original={display_name=Original, height=3263, width=4831, is_licensable=true}, small_jpg={display_name=Small, height=337, width=500, is_licensable=true}, medium_jpg={display_name=Med, height=675, width=1000, is_licensable=true}}, updated_time=2019-07-15T20:04:44-04:00, updates=[addition], commercial_status={status=available}, rights={countries=CAN,+DEU,+GBR,+USA,-*}}]}"
 ```
 
 <a name="licenseEditorialImage"></a>
 # EditorialImagesApi.licenseEditorialImage
-> `LicenseEditorialContentResults EditorialImagesApi.licenseEditorialImage(body)`
+> `Object EditorialImagesApi.licenseEditorialImage(body)`
 
 **(Deprecated) License editorial content**
 
@@ -1305,7 +1011,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.EditorialImagesApi();
 
-const body = new ShutterstockApiReference.LicenseEditorialContentRequest(); // LicenseEditorialContentRequest | License editorial content
+const body = new ShutterstockApiReference.Body24(); // Body24 | License editorial content
 
 
 api.licenseEditorialImage(body)
@@ -1323,7 +1029,7 @@ api.licenseEditorialImage(body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [LicenseEditorialContentRequest](LicenseEditorialContentRequest.md)| License editorial content 
+ body (required) | [Body24](Body24.md)| License editorial content 
 
 ### Accepted authentication
 
@@ -1340,7 +1046,7 @@ Name | Type | Description
 
 ### Return type
 
-[LicenseEditorialContentResults](LicenseEditorialContentResults.md)
+Object
 
 ### Example response
 
@@ -1361,7 +1067,7 @@ Name | Type | Description
 
 <a name="licenseEditorialImages"></a>
 # EditorialImagesApi.licenseEditorialImages
-> `LicenseEditorialContentResults EditorialImagesApi.licenseEditorialImages(body)`
+> `Object EditorialImagesApi.licenseEditorialImages(body)`
 
 **License editorial content**
 
@@ -1377,7 +1083,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.EditorialImagesApi();
 
-const body = new ShutterstockApiReference.LicenseEditorialContentRequest(); // LicenseEditorialContentRequest | License editorial content
+const body = new ShutterstockApiReference.Body17(); // Body17 | License editorial content
 
 
 api.licenseEditorialImages(body)
@@ -1395,7 +1101,7 @@ api.licenseEditorialImages(body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [LicenseEditorialContentRequest](LicenseEditorialContentRequest.md)| License editorial content 
+ body (required) | [Body17](Body17.md)| License editorial content 
 
 ### Accepted authentication
 
@@ -1414,7 +1120,7 @@ Required scopes:
 
 ### Return type
 
-[LicenseEditorialContentResults](LicenseEditorialContentResults.md)
+Object
 
 ### Example response
 
@@ -1435,7 +1141,7 @@ Required scopes:
 
 <a name="listEditorialImageCategories"></a>
 # EditorialImagesApi.listEditorialImageCategories
-> `EditorialImageCategoryResults EditorialImagesApi.listEditorialImageCategories()`
+> `InlineResponse20016 EditorialImagesApi.listEditorialImageCategories()`
 
 **List editorial categories**
 
@@ -1480,27 +1186,17 @@ This endpoint does not accept any parameters.
 
 ### Return type
 
-[EditorialImageCategoryResults](EditorialImageCategoryResults.md)
+[InlineResponse20016](InlineResponse20016.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "name" : "Animal"
-  }, {
-    "name" : "Awards"
-  }, {
-    "name" : "Art"
-  }, {
-    "name" : "Film Stills"
-  } ]
-}
+"{data=[{name=Animal}, {name=Awards}, {name=Art}, {name=Film Stills}]}"
 ```
 
 <a name="listEditorialImages"></a>
 # EditorialImagesApi.listEditorialImages
-> `EditorialImageResults EditorialImagesApi.listEditorialImages(id, country, queryParams)`
+> `InlineResponse20019 EditorialImagesApi.listEditorialImages(id, country, queryParams)`
 
 **list editorial image details**
 
@@ -1559,71 +1255,17 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialImageResults](EditorialImageResults.md)
+[InlineResponse20019](InlineResponse20019.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "id" : "10687730b",
-    "title" : "Soccer Premier League, Manchester, United Kingdom - 11 May 2021",
-    "caption" : "",
-    "description" : "Security and stewards stand outside the Old Trafford stadium in Manchester, England, ahead of the English Premier League soccer match between Manchester United and Leicester City. This is the first Manchester United home match since fans protested against American owner Joel Glazer, forcing the postponement of the team's Premier League game against Liverpool. The protests prompted Glazer to publish a letter in which he pledged to accelerate discussions with fans about supporters being able to have a greater say at the club",
-    "byline" : "Jon Super/AP/Shutterstock",
-    "keywords" : [ "england", "europe", "leicester city fc", "manchester", "manchester united fc", "men's soccer", "men's sports", "premier league", "professional soccer", "soccer", "sports", "united kingdom", "western europe", "wsoc" ],
-    "date_taken" : "2021-05-11",
-    "categories" : [ {
-      "name" : "Sport"
-    } ],
-    "aspect" : 1.621,
-    "assets" : {
-      "thumb_170" : {
-        "height" : 105,
-        "width" : 170,
-        "url" : "https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
-      },
-      "thumb_220" : {
-        "height" : 136,
-        "width" : 220,
-        "url" : "https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
-      },
-      "watermark_450" : {
-        "height" : 278,
-        "width" : 450,
-        "url" : "https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
-      },
-      "watermark_1500" : {
-        "height" : 926,
-        "width" : 1500,
-        "url" : "https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
-      },
-      "small_jpg" : {
-        "display_name" : "Small",
-        "width" : 500,
-        "height" : 309,
-        "is_licensable" : true
-      },
-      "medium_jpg" : {
-        "display_name" : "Med",
-        "width" : 1000,
-        "height" : 617,
-        "is_licensable" : true
-      },
-      "original" : {
-        "display_name" : "Original",
-        "height" : 3693,
-        "width" : 5985,
-        "is_licensable" : true
-      }
-    }
-  } ]
-}
+"{data=[{id=10687730b, title=Soccer Premier League, Manchester, United Kingdom - 11 May 2021, caption=, description=Security and stewards stand outside the Old Trafford stadium in Manchester, England, ahead of the English Premier League soccer match between Manchester United and Leicester City. This is the first Manchester United home match since fans protested against American owner Joel Glazer, forcing the postponement of the team's Premier League game against Liverpool. The protests prompted Glazer to publish a letter in which he pledged to accelerate discussions with fans about supporters being able to have a greater say at the club, byline=Jon Super/AP/Shutterstock, keywords=[england, europe, leicester city fc, manchester, manchester united fc, men's soccer, men's sports, premier league, professional soccer, soccer, sports, united kingdom, western europe, wsoc], date_taken=2021-05-11, categories=[{name=Sport}], aspect=1.621, assets={thumb_170={height=105, width=170, url=https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg}, thumb_220={height=136, width=220, url=https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg}, watermark_450={height=278, width=450, url=https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg}, watermark_1500={height=926, width=1500, url=https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg}, small_jpg={display_name=Small, width=500, height=309, is_licensable=true}, medium_jpg={display_name=Med, width=1000, height=617, is_licensable=true}, original={display_name=Original, height=3693, width=5985, is_licensable=true}}}]}"
 ```
 
 <a name="searchEditorial"></a>
 # EditorialImagesApi.searchEditorial
-> `EditorialSearchResults EditorialImagesApi.searchEditorial(country, queryParams)`
+> `InlineResponse20015 EditorialImagesApi.searchEditorial(country, queryParams)`
 
 **(Deprecated) Search editorial content**
 
@@ -1693,76 +1335,17 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialSearchResults](EditorialSearchResults.md)
+[InlineResponse20015](InlineResponse20015.md)
 
 ### Example response
 
 ```
-{
-  "per_page" : 1,
-  "total_count" : 46845,
-  "search_id" : "BaMzOAkpHIvfnuWVRFs1ag",
-  "next" : "eyJ2IjoyLCJzIjoxLCJwIjpbMF19",
-  "prev" : "",
-  "data" : [ {
-    "id" : "10687730b",
-    "title" : "Soccer Premier League, Manchester, United Kingdom - 11 May 2021",
-    "caption" : "",
-    "description" : "Security and stewards stand outside the Old Trafford stadium in Manchester, England, ahead of the English Premier League soccer match between Manchester United and Leicester City. This is the first Manchester United home match since fans protested against American owner Joel Glazer, forcing the postponement of the team's Premier League game against Liverpool. The protests prompted Glazer to publish a letter in which he pledged to accelerate discussions with fans about supporters being able to have a greater say at the club",
-    "byline" : "Jon Super/AP/Shutterstock",
-    "keywords" : [ "england", "europe", "leicester city fc", "manchester", "manchester united fc", "men's soccer", "men's sports", "premier league", "professional soccer", "soccer", "sports", "united kingdom", "western europe", "wsoc" ],
-    "date_taken" : "2021-05-11",
-    "categories" : [ {
-      "name" : "Sport"
-    } ],
-    "aspect" : 1.621,
-    "assets" : {
-      "thumb_170" : {
-        "height" : 105,
-        "width" : 170,
-        "url" : "https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
-      },
-      "thumb_220" : {
-        "height" : 136,
-        "width" : 220,
-        "url" : "https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
-      },
-      "watermark_450" : {
-        "height" : 278,
-        "width" : 450,
-        "url" : "https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
-      },
-      "watermark_1500" : {
-        "height" : 926,
-        "width" : 1500,
-        "url" : "https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
-      },
-      "small_jpg" : {
-        "display_name" : "Small",
-        "width" : 500,
-        "height" : 309,
-        "is_licensable" : true
-      },
-      "medium_jpg" : {
-        "display_name" : "Med",
-        "width" : 1000,
-        "height" : 617,
-        "is_licensable" : true
-      },
-      "original" : {
-        "display_name" : "Original",
-        "height" : 3693,
-        "width" : 5985,
-        "is_licensable" : true
-      }
-    }
-  } ]
-}
+"{per_page=1, total_count=46845, search_id=BaMzOAkpHIvfnuWVRFs1ag, next=eyJ2IjoyLCJzIjoxLCJwIjpbMF19, prev=, data=[{id=10687730b, title=Soccer Premier League, Manchester, United Kingdom - 11 May 2021, caption=, description=Security and stewards stand outside the Old Trafford stadium in Manchester, England, ahead of the English Premier League soccer match between Manchester United and Leicester City. This is the first Manchester United home match since fans protested against American owner Joel Glazer, forcing the postponement of the team's Premier League game against Liverpool. The protests prompted Glazer to publish a letter in which he pledged to accelerate discussions with fans about supporters being able to have a greater say at the club, byline=Jon Super/AP/Shutterstock, keywords=[england, europe, leicester city fc, manchester, manchester united fc, men's soccer, men's sports, premier league, professional soccer, soccer, sports, united kingdom, western europe, wsoc], date_taken=2021-05-11, categories=[{name=Sport}], aspect=1.621, assets={thumb_170={height=105, width=170, url=https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg}, thumb_220={height=136, width=220, url=https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg}, watermark_450={height=278, width=450, url=https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg}, watermark_1500={height=926, width=1500, url=https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg}, small_jpg={display_name=Small, width=500, height=309, is_licensable=true}, medium_jpg={display_name=Med, width=1000, height=617, is_licensable=true}, original={display_name=Original, height=3693, width=5985, is_licensable=true}}}]}"
 ```
 
 <a name="searchEditorialImages"></a>
 # EditorialImagesApi.searchEditorialImages
-> `EditorialSearchResults EditorialImagesApi.searchEditorialImages(country, queryParams)`
+> `InlineResponse20015 EditorialImagesApi.searchEditorialImages(country, queryParams)`
 
 **Search editorial images**
 
@@ -1832,70 +1415,11 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialSearchResults](EditorialSearchResults.md)
+[InlineResponse20015](InlineResponse20015.md)
 
 ### Example response
 
 ```
-{
-  "per_page" : 1,
-  "total_count" : 46845,
-  "search_id" : "BaMzOAkpHIvfnuWVRFs1ag",
-  "next" : "eyJ2IjoyLCJzIjoxLCJwIjpbMF19",
-  "prev" : "",
-  "data" : [ {
-    "id" : "10687730b",
-    "title" : "Soccer Premier League, Manchester, United Kingdom - 11 May 2021",
-    "caption" : "",
-    "description" : "Security and stewards stand outside the Old Trafford stadium in Manchester, England, ahead of the English Premier League soccer match between Manchester United and Leicester City. This is the first Manchester United home match since fans protested against American owner Joel Glazer, forcing the postponement of the team's Premier League game against Liverpool. The protests prompted Glazer to publish a letter in which he pledged to accelerate discussions with fans about supporters being able to have a greater say at the club",
-    "byline" : "Jon Super/AP/Shutterstock",
-    "keywords" : [ "england", "europe", "leicester city fc", "manchester", "manchester united fc", "men's soccer", "men's sports", "premier league", "professional soccer", "soccer", "sports", "united kingdom", "western europe", "wsoc" ],
-    "date_taken" : "2021-05-11",
-    "categories" : [ {
-      "name" : "Sport"
-    } ],
-    "aspect" : 1.621,
-    "assets" : {
-      "thumb_170" : {
-        "height" : 105,
-        "width" : 170,
-        "url" : "https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg"
-      },
-      "thumb_220" : {
-        "height" : 136,
-        "width" : 220,
-        "url" : "https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg"
-      },
-      "watermark_450" : {
-        "height" : 278,
-        "width" : 450,
-        "url" : "https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg"
-      },
-      "watermark_1500" : {
-        "height" : 926,
-        "width" : 1500,
-        "url" : "https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg"
-      },
-      "small_jpg" : {
-        "display_name" : "Small",
-        "width" : 500,
-        "height" : 309,
-        "is_licensable" : true
-      },
-      "medium_jpg" : {
-        "display_name" : "Med",
-        "width" : 1000,
-        "height" : 617,
-        "is_licensable" : true
-      },
-      "original" : {
-        "display_name" : "Original",
-        "height" : 3693,
-        "width" : 5985,
-        "is_licensable" : true
-      }
-    }
-  } ]
-}
+"{per_page=1, total_count=46845, search_id=BaMzOAkpHIvfnuWVRFs1ag, next=eyJ2IjoyLCJzIjoxLCJwIjpbMF19, prev=, data=[{id=10687730b, title=Soccer Premier League, Manchester, United Kingdom - 11 May 2021, caption=, description=Security and stewards stand outside the Old Trafford stadium in Manchester, England, ahead of the English Premier League soccer match between Manchester United and Leicester City. This is the first Manchester United home match since fans protested against American owner Joel Glazer, forcing the postponement of the team's Premier League game against Liverpool. The protests prompted Glazer to publish a letter in which he pledged to accelerate discussions with fans about supporters being able to have a greater say at the club, byline=Jon Super/AP/Shutterstock, keywords=[england, europe, leicester city fc, manchester, manchester united fc, men's soccer, men's sports, premier league, professional soccer, soccer, sports, united kingdom, western europe, wsoc], date_taken=2021-05-11, categories=[{name=Sport}], aspect=1.621, assets={thumb_170={height=105, width=170, url=https://editorial01.shuttercorp.net/thumb/10687730b/272a999e/Shutterstock_10687730b.jpg}, thumb_220={height=136, width=220, url=https://editorial01.shuttercorp.net/thumb-220/10687730b/927a6ebe/Shutterstock_10687730b.jpg}, watermark_450={height=278, width=450, url=https://editorial01.shuttercorp.net/wm-preview-450/10687730b/ff2443ad/Shutterstock_10687730b.jpg}, watermark_1500={height=926, width=1500, url=https://editorial01.shuttercorp.net/wm-preview-1500/10687730b/ee2d7ae1/Shutterstock_10687730b.jpg}, small_jpg={display_name=Small, width=500, height=309, is_licensable=true}, medium_jpg={display_name=Med, width=1000, height=617, is_licensable=true}, original={display_name=Original, height=3693, width=5985, is_licensable=true}}}]}"
 ```
 

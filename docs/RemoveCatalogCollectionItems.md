@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**[RemoveCatalogCollectionItem]**](RemoveCatalogCollectionItem.md) |  | 
+**items** | [**[V2catalogcollectionscollectionIditemsItems]**](V2catalogcollectionscollectionIditemsItems.md) |  | 
 
 

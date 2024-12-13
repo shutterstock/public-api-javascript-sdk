@@ -3,17 +3,17 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**huge_jpg** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
-**huge_thumb** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
-**large_thumb** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
-**medium_jpg** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
-**preview** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
-**preview_1000** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
-**preview_1500** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
-**small_jpg** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
-**small_thumb** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
-**supersize_jpg** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
-**vector_eps** | [**ImageSizeDetails**](ImageSizeDetails.md) |  | [optional] 
-**mosaic** | [**Thumbnail**](Thumbnail.md) |  | [optional] 
+**huge_jpg** | [**InlineResponse200AssetsHugeJpg**](InlineResponse200AssetsHugeJpg.md) |  | [optional] 
+**huge_thumb** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
+**large_thumb** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
+**medium_jpg** | [**InlineResponse200AssetsHugeJpg**](InlineResponse200AssetsHugeJpg.md) |  | [optional] 
+**preview** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
+**preview_1000** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
+**preview_1500** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
+**small_jpg** | [**InlineResponse200AssetsHugeJpg**](InlineResponse200AssetsHugeJpg.md) |  | [optional] 
+**small_thumb** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
+**supersize_jpg** | [**InlineResponse200AssetsHugeJpg**](InlineResponse200AssetsHugeJpg.md) |  | [optional] 
+**vector_eps** | [**InlineResponse200AssetsHugeJpg**](InlineResponse200AssetsHugeJpg.md) |  | [optional] 
+**mosaic** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
 
 

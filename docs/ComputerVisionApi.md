@@ -7,13 +7,12 @@ Method | HTTP request | Description
 [`getKeywords`](ComputerVisionApi.md#getKeywords) | `GET /v2/cv/keywords` | List suggested keywords
 [`getSimilarImages`](ComputerVisionApi.md#getSimilarImages) | `GET /v2/cv/similar/images` | List similar images
 [`getSimilarVideos`](ComputerVisionApi.md#getSimilarVideos) | `GET /v2/cv/similar/videos` | List similar videos
-[`uploadEphemeralImage`](ComputerVisionApi.md#uploadEphemeralImage) | `POST /v2/images` | Upload ephemeral images
 [`uploadImage`](ComputerVisionApi.md#uploadImage) | `POST /v2/cv/images` | Upload images
 
 
 <a name="getKeywords"></a>
 # ComputerVisionApi.getKeywords
-> `KeywordDataList ComputerVisionApi.getKeywords(asset_id)`
+> `Object ComputerVisionApi.getKeywords(asset_id)`
 
 **List suggested keywords**
 
@@ -65,7 +64,7 @@ Name | Type | Description
 
 ### Return type
 
-[KeywordDataList](KeywordDataList.md)
+Object
 
 ### Example response
 
@@ -77,7 +76,7 @@ Name | Type | Description
 
 <a name="getSimilarImages"></a>
 # ComputerVisionApi.getSimilarImages
-> `ImageSearchResults ComputerVisionApi.getSimilarImages(asset_id, queryParams)`
+> `InlineResponse200 ComputerVisionApi.getSimilarImages(asset_id, queryParams)`
 
 **List similar images**
 
@@ -143,71 +142,17 @@ Name | Type | Description
 
 ### Return type
 
-[ImageSearchResults](ImageSearchResults.md)
+[InlineResponse200](InlineResponse200.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "id" : "1572478477",
-    "aspect" : 1.5,
-    "assets" : {
-      "preview" : {
-        "height" : 300,
-        "url" : "https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 450
-      },
-      "small_thumb" : {
-        "height" : 67,
-        "url" : "https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 100
-      },
-      "large_thumb" : {
-        "height" : 100,
-        "url" : "https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 150
-      },
-      "mosaic" : {
-        "height" : 167,
-        "url" : "https://image.shutterstock.com/image-photo/stock-photo-cropped-image-of-woman-gardening-250nw-1572478477.jpg",
-        "width" : 250
-      },
-      "huge_thumb" : {
-        "height" : 260,
-        "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg",
-        "width" : 390
-      },
-      "preview_1000" : {
-        "url" : "https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg",
-        "width" : 1000,
-        "height" : 667
-      },
-      "preview_1500" : {
-        "url" : "https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg",
-        "width" : 1500,
-        "height" : 1000
-      }
-    },
-    "contributor" : {
-      "id" : "250738318"
-    },
-    "description" : "cropped image of woman gardening",
-    "image_type" : "photo",
-    "has_model_release" : true,
-    "media_type" : "image"
-  } ],
-  "page" : 1,
-  "per_page" : 5,
-  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10",
-  "spellcheck_info" : { },
-  "total_count" : 45
-}
+"{data=[{id=1572478477, aspect=1.5, assets={preview={height=300, url=https://image.shutterstock.com/display_pic_with_logo/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=450}, small_thumb={height=67, url=https://thumb7.shutterstock.com/thumb_small/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=100}, large_thumb={height=100, url=https://thumb7.shutterstock.com/thumb_large/250738318/1572478477/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=150}, mosaic={height=167, url=https://image.shutterstock.com/image-photo/stock-photo-cropped-image-of-woman-gardening-250nw-1572478477.jpg, width=250}, huge_thumb={height=260, url=https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-260nw-1572478477.jpg, width=390}, preview_1000={url=https://ak.picdn.net/shutterstock/photos/1572478477/watermark_1000/1706028c641ea2f443057287c67d9b91/preview_1000-1572478477.jpg, width=1000, height=667}, preview_1500={url=https://image.shutterstock.com/z/stock-photo-cropped-image-of-woman-gardening-1572478477.jpg, width=1500, height=1000}}, contributor={id=250738318}, description=cropped image of woman gardening, image_type=photo, has_model_release=true, media_type=image}], page=1, per_page=5, search_id=749090bb-2967-4a20-b22e-c800dc845e10, spellcheck_info={}, total_count=45}"
 ```
 
 <a name="getSimilarVideos"></a>
 # ComputerVisionApi.getSimilarVideos
-> `VideoSearchResults ComputerVisionApi.getSimilarVideos(asset_id, queryParams)`
+> `InlineResponse2007 ComputerVisionApi.getSimilarVideos(asset_id, queryParams)`
 
 **List similar videos**
 
@@ -273,118 +218,17 @@ Name | Type | Description
 
 ### Return type
 
-[VideoSearchResults](VideoSearchResults.md)
+[InlineResponse2007](InlineResponse2007.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "id" : "1033184651",
-    "aspect" : 1.778,
-    "aspect_ratio" : "16:9",
-    "assets" : {
-      "thumb_webm" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
-      },
-      "thumb_mp4" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
-      },
-      "preview_webm" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
-      },
-      "preview_mp4" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
-      },
-      "thumb_jpg" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
-      },
-      "preview_jpg" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
-      }
-    },
-    "contributor" : {
-      "id" : "4411978"
-    },
-    "description" : "Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness",
-    "duration" : 14.081,
-    "has_model_release" : true,
-    "media_type" : "video"
-  } ],
-  "page" : 1,
-  "per_page" : 5,
-  "total_count" : 123,
-  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10"
-}
-```
-
-<a name="uploadEphemeralImage"></a>
-# ComputerVisionApi.uploadEphemeralImage
-> `ImageCreateResponse ComputerVisionApi.uploadEphemeralImage(body)`
-
-**Upload ephemeral images**
-
-Deprecated; use `POST /v2/cv/images` instead. This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format. To get the search results, pass the ID that this endpoint returns to the `GET /v2/images/{id}/similar` endpoint.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.ComputerVisionApi();
-
-const body = new ShutterstockApiReference.ImageCreateRequest(); // ImageCreateRequest | The image data in JPEG or PNG format
-
-
-api.uploadEphemeralImage(body)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- body (required) | [ImageCreateRequest](ImageCreateRequest.md)| The image data in JPEG or PNG format 
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-- Content-Type: application/json
-- Accept: application/json
-
-### Return type
-
-[ImageCreateResponse](ImageCreateResponse.md)
-
-### Example response
-
-```
-{
-  "id" : "Udb14e1c3540bdbf82b4b3fe12d3a44f2"
-}
+"{data=[{id=1033184651, aspect=1.778, aspect_ratio=16:9, assets={thumb_webm={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm}, thumb_mp4={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4}, preview_webm={url=https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm}, preview_mp4={url=https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4}, thumb_jpg={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg}, preview_jpg={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg}}, contributor={id=4411978}, description=Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness, duration=14.081, has_model_release=true, media_type=video}], page=1, per_page=5, total_count=123, search_id=749090bb-2967-4a20-b22e-c800dc845e10}"
 ```
 
 <a name="uploadImage"></a>
 # ComputerVisionApi.uploadImage
-> `ComputerVisionImageCreateResponse ComputerVisionApi.uploadImage(body)`
+> `InlineResponse2011 ComputerVisionApi.uploadImage(body)`
 
 **Upload images**
 
@@ -403,7 +247,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ComputerVisionApi();
 
-const body = new ShutterstockApiReference.ImageCreateRequest(); // ImageCreateRequest | A Base 64 encoded jpeg or png; images can be no larger than 10mb and can be no larger than 10,000 pixels in width or height
+const body = new ShutterstockApiReference.Body19(); // Body19 | A Base 64 encoded jpeg or png; images can be no larger than 10mb and can be no larger than 10,000 pixels in width or height
 
 
 api.uploadImage(body)
@@ -421,7 +265,7 @@ api.uploadImage(body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [ImageCreateRequest](ImageCreateRequest.md)| A Base 64 encoded jpeg or png; images can be no larger than 10mb and can be no larger than 10,000 pixels in width or height 
+ body (required) | [Body19](Body19.md)| A Base 64 encoded jpeg or png; images can be no larger than 10mb and can be no larger than 10,000 pixels in width or height 
 
 ### Accepted authentication
 
@@ -436,13 +280,11 @@ Name | Type | Description
 
 ### Return type
 
-[ComputerVisionImageCreateResponse](ComputerVisionImageCreateResponse.md)
+[InlineResponse2011](InlineResponse2011.md)
 
 ### Example response
 
 ```
-{
-  "upload_id" : "Udb14e1c3540bdbf82b4b3fe12d3a44f2"
-}
+"{upload_id=Udb14e1c3540bdbf82b4b3fe12d3a44f2}"
 ```
 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**[Image]**](Image.md) | Images | [optional] 
-**errors** | [**[Error]**](Error.md) | Error list; appears only if there was an error | [optional] 
+**data** | [**[InlineResponse200Data]**](InlineResponse200Data.md) | Images | [optional] 
+**errors** | [**[AudioDataListErrors]**](AudioDataListErrors.md) | Error list; appears only if there was an error | [optional] 
 **message** | **String** | Server-generated message, if any | [optional] 
 **page** | **Number** | Current page that is returned | [optional] 
 **per_page** | **Number** | Number of results per page | [optional] 

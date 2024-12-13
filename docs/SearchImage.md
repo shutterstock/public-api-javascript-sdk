@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **height_to** | **Number** | Show images with the specified height or smaller, in pixels | [optional] 
 **image_type** | **[String]** | Show images of the specified type | [optional] 
 **keyword_safe_search** | **Boolean** | Hide results with potentially unsafe keywords | [optional] [default to true]
-**language** | [**Language**](Language.md) | Set query and result language (uses Accept-Language header if not set) | [optional] 
+**language** | **String** | Set query and result language (uses Accept-Language header if not set) | [optional] 
 **license** | **[String]** | Show only images with the specified license | [optional] 
 **model** | **[String]** | Show image results with the specified model IDs | [optional] 
 **orientation** | **String** | Show image results with horizontal or vertical orientation | [optional] 
@@ -51,6 +51,97 @@ Name | Type | Description | Notes
 * `illustration` (value: `"illustration"`)
 
 * `vector` (value: `"vector"`)
+
+
+
+
+<a name="LanguageEnum"></a>
+## Enum: LanguageEnum
+
+
+* `ar` (value: `"ar"`)
+
+* `bg` (value: `"bg"`)
+
+* `bn` (value: `"bn"`)
+
+* `cs` (value: `"cs"`)
+
+* `da` (value: `"da"`)
+
+* `de` (value: `"de"`)
+
+* `el` (value: `"el"`)
+
+* `en` (value: `"en"`)
+
+* `es` (value: `"es"`)
+
+* `fi` (value: `"fi"`)
+
+* `fr` (value: `"fr"`)
+
+* `gu` (value: `"gu"`)
+
+* `he` (value: `"he"`)
+
+* `hi` (value: `"hi"`)
+
+* `hr` (value: `"hr"`)
+
+* `hu` (value: `"hu"`)
+
+* `id` (value: `"id"`)
+
+* `it` (value: `"it"`)
+
+* `ja` (value: `"ja"`)
+
+* `kn` (value: `"kn"`)
+
+* `ko` (value: `"ko"`)
+
+* `ml` (value: `"ml"`)
+
+* `mr` (value: `"mr"`)
+
+* `nb` (value: `"nb"`)
+
+* `nl` (value: `"nl"`)
+
+* `or` (value: `"or"`)
+
+* `pl` (value: `"pl"`)
+
+* `pt` (value: `"pt"`)
+
+* `ro` (value: `"ro"`)
+
+* `ru` (value: `"ru"`)
+
+* `sk` (value: `"sk"`)
+
+* `sl` (value: `"sl"`)
+
+* `sv` (value: `"sv"`)
+
+* `ta` (value: `"ta"`)
+
+* `te` (value: `"te"`)
+
+* `th` (value: `"th"`)
+
+* `tr` (value: `"tr"`)
+
+* `uk` (value: `"uk"`)
+
+* `ur` (value: `"ur"`)
+
+* `vi` (value: `"vi"`)
+
+* `zh` (value: `"zh"`)
+
+* `zh_hant` (value: `"zh-Hant"`)
 
 
 

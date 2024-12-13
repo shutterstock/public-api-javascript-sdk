@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**[EditorialContent]**](EditorialContent.md) | Editorial items | 
+**data** | [**[InlineResponse20015Data]**](InlineResponse20015Data.md) | Editorial items | 
 **message** | **String** | Optional error message | [optional] 
 **next** | **String** | Cursor value that represents the next page of results | [optional] 
 **page** | **Number** | Current page of the response | [optional] 

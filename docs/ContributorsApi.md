@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="getContributor"></a>
 # ContributorsApi.getContributor
-> `ContributorProfile ContributorsApi.getContributor(contributor_id)`
+> `InlineResponse20028 ContributorsApi.getContributor(contributor_id)`
 
 **Get details about a single contributor**
 
@@ -65,36 +65,17 @@ Name | Type | Description
 
 ### Return type
 
-[ContributorProfile](ContributorProfile.md)
+[InlineResponse20028](InlineResponse20028.md)
 
 ### Example response
 
 ```
-{
-  "about" : "John Doe's photographs",
-  "contributor_type" : [ "photographer" ],
-  "display_name" : "John Doe",
-  "equipment" : [ "Nikon", "Fuji" ],
-  "id" : "12345678",
-  "location" : "US",
-  "portfolio_url" : "https://www.shutterstock.com/g/jdoe",
-  "social_media" : {
-    "facebook" : "http://example.com/jdoe",
-    "google_plus" : "http://example.com/jdoe",
-    "linkedin" : "http://example.com/jdoe",
-    "pinterest" : "http://example.com/jdoe",
-    "tumblr" : "http://example.com/jdoe",
-    "twitter" : "http://example.com/jdoe"
-  },
-  "styles" : [ "landscape", "nature", "footage_travel" ],
-  "subjects" : [ "animals", "landmarks", "nature", "objects", "recreation" ],
-  "website" : "http://example.com/profiles/jdoe"
-}
+"{about=John Doe's photographs, contributor_type=[photographer], display_name=John Doe, equipment=[Nikon, Fuji], id=12345678, location=US, portfolio_url=https://www.shutterstock.com/g/jdoe, social_media={facebook=http://example.com/jdoe, google_plus=http://example.com/jdoe, linkedin=http://example.com/jdoe, pinterest=http://example.com/jdoe, tumblr=http://example.com/jdoe, twitter=http://example.com/jdoe}, styles=[landscape, nature, footage_travel], subjects=[animals, landmarks, nature, objects, recreation], website=http://example.com/profiles/jdoe}"
 ```
 
 <a name="getContributorCollectionItems"></a>
 # ContributorsApi.getContributorCollectionItems
-> `CollectionItemDataList ContributorsApi.getContributorCollectionItems(contributor_id, id, queryParams)`
+> `Object ContributorsApi.getContributorCollectionItems(contributor_id, id, queryParams)`
 
 **Get the items in contributors' collections**
 
@@ -157,7 +138,7 @@ Name | Type | Description
 
 ### Return type
 
-[CollectionItemDataList](CollectionItemDataList.md)
+Object
 
 ### Example response
 
@@ -180,7 +161,7 @@ Name | Type | Description
 
 <a name="getContributorCollections"></a>
 # ContributorsApi.getContributorCollections
-> `Collection ContributorsApi.getContributorCollections(contributor_id, id)`
+> `InlineResponse2005 ContributorsApi.getContributorCollections(contributor_id, id)`
 
 **Get details about contributors' collections**
 
@@ -235,25 +216,17 @@ Name | Type | Description
 
 ### Return type
 
-[Collection](Collection.md)
+[InlineResponse2005](InlineResponse2005.md)
 
 ### Example response
 
 ```
-{
-  "id" : "293542904",
-  "name" : "My collection",
-  "total_item_count" : 85,
-  "items_updated_time" : "2021-05-20T16:15:22-04:00",
-  "cover_item" : {
-    "id" : "297886754"
-  }
-}
+"{id=293542904, name=My collection, total_item_count=85, items_updated_time=2021-05-20T16:15:22-04:00, cover_item={id=297886754}}"
 ```
 
 <a name="getContributorCollectionsList"></a>
 # ContributorsApi.getContributorCollectionsList
-> `CollectionDataList ContributorsApi.getContributorCollectionsList(contributor_id, queryParams)`
+> `Object ContributorsApi.getContributorCollectionsList(contributor_id, queryParams)`
 
 **List contributors' collections**
 
@@ -309,7 +282,7 @@ Name | Type | Description
 
 ### Return type
 
-[CollectionDataList](CollectionDataList.md)
+Object
 
 ### Example response
 
@@ -332,7 +305,7 @@ Name | Type | Description
 
 <a name="getContributorList"></a>
 # ContributorsApi.getContributorList
-> `ContributorProfileDataList ContributorsApi.getContributorList(id)`
+> `Object ContributorsApi.getContributorList(id)`
 
 **Get details about multiple contributors**
 
@@ -384,7 +357,7 @@ Name | Type | Description
 
 ### Return type
 
-[ContributorProfileDataList](ContributorProfileDataList.md)
+Object
 
 ### Example response
 

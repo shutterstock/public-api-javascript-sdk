@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**upload_id** | **String** |  | 
+**id** | **String** | ID of the new collection | 
 
 

@@ -6,13 +6,12 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.1.41
+- API version: 1.1.42
 
 ## References
 
 - For more information about the Shutterstock public API, see https://www.shutterstock.com/developers/documentation.
 - For reference information about the endpoints that this SDK calls, see the [API reference](http://api-reference.shutterstock.com).
-- To provide feedback or bug reports about the API and this SDK, see https://api-feedback.shutterstock.com.
 - For the status of the API, see [API status](https://status.developers.shutterstock.com/).
 - For the source code, see https://github.com/shutterstock/public-api-javascript-sdk.
 
@@ -356,7 +355,6 @@ Class | Method | HTTP request | Description
 *shutterstock-api.ComputerVisionApi* | [**getKeywords**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#getKeywords) | **GET** /v2/cv/keywords | List suggested keywords
 *shutterstock-api.ComputerVisionApi* | [**getSimilarImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#getSimilarImages) | **GET** /v2/cv/similar/images | List similar images
 *shutterstock-api.ComputerVisionApi* | [**getSimilarVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#getSimilarVideos) | **GET** /v2/cv/similar/videos | List similar videos
-*shutterstock-api.ComputerVisionApi* | [**uploadEphemeralImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#uploadEphemeralImage) | **POST** /v2/images | Upload ephemeral images
 *shutterstock-api.ComputerVisionApi* | [**uploadImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ComputerVisionApi.md#uploadImage) | **POST** /v2/cv/images | Upload images
 *shutterstock-api.ContributorsApi* | [**getContributor**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributor) | **GET** /v2/contributors/{contributor_id} | Get details about a single contributor
 *shutterstock-api.ContributorsApi* | [**getContributorCollectionItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ContributorsApi.md#getContributorCollectionItems) | **GET** /v2/contributors/{contributor_id}/collections/{id}/items | Get the items in contributors' collections

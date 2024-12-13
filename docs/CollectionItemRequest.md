@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**[CollectionItem]**](CollectionItem.md) | List of items | 
+**items** | [**[InlineResponse2005CoverItem]**](InlineResponse2005CoverItem.md) | List of items | 
 
 

@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**original** | [**VideoSizeDetails**](VideoSizeDetails.md) |  | [optional] 
-**preview_mp4** | [**VideoPreviewUrl**](VideoPreviewUrl.md) |  | [optional] 
-**preview_webm** | [**VideoPreviewUrl**](VideoPreviewUrl.md) |  | [optional] 
-**thumb_jpg** | [**VideoPreviewUrl**](VideoPreviewUrl.md) |  | [optional] 
+**original** | [**InlineResponse2007Assets4k**](InlineResponse2007Assets4k.md) |  | [optional] 
+**preview_mp4** | [**InlineResponse20022AssetsPreviewMp4**](InlineResponse20022AssetsPreviewMp4.md) |  | [optional] 
+**preview_webm** | [**InlineResponse20022AssetsPreviewMp4**](InlineResponse20022AssetsPreviewMp4.md) |  | [optional] 
+**thumb_jpg** | [**InlineResponse20022AssetsPreviewMp4**](InlineResponse20022AssetsPreviewMp4.md) |  | [optional] 
 
 

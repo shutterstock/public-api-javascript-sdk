@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**videos** | [**[LicenseVideo]**](LicenseVideo.md) | Videos to license | 
+**videos** | [**[V2videoslicensesVideos]**](V2videoslicensesVideos.md) | Videos to license | 
 
 

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="getEditorialVideo"></a>
 # EditorialVideoApi.getEditorialVideo
-> `EditorialVideoContent EditorialVideoApi.getEditorialVideo(id, country, queryParams)`
+> `InlineResponse20024 EditorialVideoApi.getEditorialVideo(id, country, queryParams)`
 
 **Get editorial video content details**
 
@@ -73,47 +73,17 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialVideoContent](EditorialVideoContent.md)
+[InlineResponse20024](InlineResponse20024.md)
 
 ### Example response
 
 ```
-{
-  "id" : "10679854a",
-  "title" : "Peeps the Goose Has a Blast on a Jet Ski, Prior Lake, Minnesota, USA - 13 Nov 2020",
-  "caption" : "",
-  "description" : "Info from Licensor: \"Peeps the Canadian Goose has been raised with our family since a gosling. Peeps has made appearances on our local news channels, TV shows, and local newspapers. He has been trained to fly next to four wheelers, jet ski's, and boats. He has brought joy to many people during the pandemic including those with cancer.\"",
-  "byline" : "ViralHog/Shutterstock",
-  "keywords" : [ "2020", "adorable", "birds", "bizarre", "canadian goose", "cute", "domesticated animals", "entertainment", "feel good", "flew", "flies", "fly", "flying", "fun", "goose", "jet skis", "nature", "odd", "pets", "played", "playing", "plays", "prior lake", "sports", "strange", "sweet", "usa", "viralhog", "virals", "water sports", "weird" ],
-  "date_taken" : "2020-11-13",
-  "categories" : [ ],
-  "aspect" : 1,
-  "assets" : {
-    "preview_mp4" : {
-      "url" : "https://editorial-cdn.shuttercorp.net/wm-preview-mp4/10679854a/M0T7A13aNej2g82bMTI4NjY=/Shutterstock_10679854a.mp4"
-    },
-    "preview_webm" : {
-      "url" : "https://editorial-cdn.shuttercorp.net/wm-preview-webm/10679854a/M4T6A63fN2j5g929MTI4NjY=/Shutterstock_10679854a.webm"
-    },
-    "thumb_jpg" : {
-      "url" : "https://editorial-cdn.shuttercorp.net/thumb-1/10679854a/M5TcAf30Ncjcge2eMTI4NjY=/Shutterstock_10679854a.jpg"
-    },
-    "original" : {
-      "height" : 1080,
-      "width" : 1080,
-      "fps" : 30,
-      "format" : "avc1",
-      "file_size" : 82233387,
-      "display_name" : "HD",
-      "is_licensable" : true
-    }
-  }
-}
+"{id=10679854a, title=Peeps the Goose Has a Blast on a Jet Ski, Prior Lake, Minnesota, USA - 13 Nov 2020, caption=, description=Info from Licensor: \"Peeps the Canadian Goose has been raised with our family since a gosling. Peeps has made appearances on our local news channels, TV shows, and local newspapers. He has been trained to fly next to four wheelers, jet ski's, and boats. He has brought joy to many people during the pandemic including those with cancer.\", byline=ViralHog/Shutterstock, keywords=[2020, adorable, birds, bizarre, canadian goose, cute, domesticated animals, entertainment, feel good, flew, flies, fly, flying, fun, goose, jet skis, nature, odd, pets, played, playing, plays, prior lake, sports, strange, sweet, usa, viralhog, virals, water sports, weird], date_taken=2020-11-13, categories=[], aspect=1, assets={preview_mp4={url=https://editorial-cdn.shuttercorp.net/wm-preview-mp4/10679854a/M0T7A13aNej2g82bMTI4NjY=/Shutterstock_10679854a.mp4}, preview_webm={url=https://editorial-cdn.shuttercorp.net/wm-preview-webm/10679854a/M4T6A63fN2j5g929MTI4NjY=/Shutterstock_10679854a.webm}, thumb_jpg={url=https://editorial-cdn.shuttercorp.net/thumb-1/10679854a/M5TcAf30Ncjcge2eMTI4NjY=/Shutterstock_10679854a.jpg}, original={height=1080, width=1080, fps=30, format=avc1, file_size=82233387, display_name=HD, is_licensable=true}}}"
 ```
 
 <a name="getEditorialVideoLicenseList"></a>
 # EditorialVideoApi.getEditorialVideoLicenseList
-> `DownloadHistoryDataList EditorialVideoApi.getEditorialVideoLicenseList(queryParams)`
+> `Object EditorialVideoApi.getEditorialVideoLicenseList(queryParams)`
 
 **List editorial video licenses**
 
@@ -183,7 +153,7 @@ Name | Type | Description
 
 ### Return type
 
-[DownloadHistoryDataList](DownloadHistoryDataList.md)
+Object
 
 ### Example response
 
@@ -219,7 +189,7 @@ Name | Type | Description
 
 <a name="licenseEditorialVideo"></a>
 # EditorialVideoApi.licenseEditorialVideo
-> `LicenseEditorialContentResults EditorialVideoApi.licenseEditorialVideo(body)`
+> `Object EditorialVideoApi.licenseEditorialVideo(body)`
 
 **License editorial video content**
 
@@ -235,7 +205,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.EditorialVideoApi();
 
-const body = new ShutterstockApiReference.LicenseEditorialVideoContentRequest(); // LicenseEditorialVideoContentRequest | License editorial video content
+const body = new ShutterstockApiReference.Body18(); // Body18 | License editorial video content
 
 
 api.licenseEditorialVideo(body)
@@ -253,7 +223,7 @@ api.licenseEditorialVideo(body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [LicenseEditorialVideoContentRequest](LicenseEditorialVideoContentRequest.md)| License editorial video content 
+ body (required) | [Body18](Body18.md)| License editorial video content 
 
 ### Accepted authentication
 
@@ -272,7 +242,7 @@ Required scopes:
 
 ### Return type
 
-[LicenseEditorialContentResults](LicenseEditorialContentResults.md)
+Object
 
 ### Example response
 
@@ -293,7 +263,7 @@ Required scopes:
 
 <a name="listEditorialVideoCategories"></a>
 # EditorialVideoApi.listEditorialVideoCategories
-> `EditorialVideoCategoryResults EditorialVideoApi.listEditorialVideoCategories()`
+> `InlineResponse20023 EditorialVideoApi.listEditorialVideoCategories()`
 
 **List editorial video categories**
 
@@ -338,27 +308,17 @@ This endpoint does not accept any parameters.
 
 ### Return type
 
-[EditorialVideoCategoryResults](EditorialVideoCategoryResults.md)
+[InlineResponse20023](InlineResponse20023.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "name" : "Animal"
-  }, {
-    "name" : "Awards"
-  }, {
-    "name" : "Art"
-  }, {
-    "name" : "Film Stills"
-  } ]
-}
+"{data=[{name=Animal}, {name=Awards}, {name=Art}, {name=Film Stills}]}"
 ```
 
 <a name="listEditorialVideos"></a>
 # EditorialVideoApi.listEditorialVideos
-> `EditorialVideoResults EditorialVideoApi.listEditorialVideos(id, country, queryParams)`
+> `InlineResponse20025 EditorialVideoApi.listEditorialVideos(id, country, queryParams)`
 
 **List editorial videos details by ID list**
 
@@ -417,49 +377,17 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialVideoResults](EditorialVideoResults.md)
+[InlineResponse20025](InlineResponse20025.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "id" : "10679854a",
-    "title" : "Peeps the Goose Has a Blast on a Jet Ski, Prior Lake, Minnesota, USA - 13 Nov 2020",
-    "caption" : "",
-    "description" : "Info from Licensor: \"Peeps the Canadian Goose has been raised with our family since a gosling. Peeps has made appearances on our local news channels, TV shows, and local newspapers. He has been trained to fly next to four wheelers, jet ski's, and boats. He has brought joy to many people during the pandemic including those with cancer.\"",
-    "byline" : "ViralHog/Shutterstock",
-    "keywords" : [ "adorable", "birds", "goose" ],
-    "date_taken" : "2020-11-13",
-    "categories" : [ ],
-    "aspect" : 1,
-    "assets" : {
-      "preview_mp4" : {
-        "url" : "https://editorial-cdn.shuttercorp.net/wm-preview-mp4/10679854a/M0T7A13aNej2g82bMTI4NjY=/Shutterstock_10679854a.mp4"
-      },
-      "preview_webm" : {
-        "url" : "https://editorial-cdn.shuttercorp.net/wm-preview-webm/10679854a/M4T6A63fN2j5g929MTI4NjY=/Shutterstock_10679854a.webm"
-      },
-      "thumb_jpg" : {
-        "url" : "https://editorial-cdn.shuttercorp.net/thumb-1/10679854a/M5TcAf30Ncjcge2eMTI4NjY=/Shutterstock_10679854a.jpg"
-      },
-      "original" : {
-        "height" : 1080,
-        "width" : 1080,
-        "fps" : 30,
-        "format" : "avc1",
-        "file_size" : 82233387,
-        "display_name" : "HD",
-        "is_licensable" : true
-      }
-    }
-  } ]
-}
+"{data=[{id=10679854a, title=Peeps the Goose Has a Blast on a Jet Ski, Prior Lake, Minnesota, USA - 13 Nov 2020, caption=, description=Info from Licensor: \"Peeps the Canadian Goose has been raised with our family since a gosling. Peeps has made appearances on our local news channels, TV shows, and local newspapers. He has been trained to fly next to four wheelers, jet ski's, and boats. He has brought joy to many people during the pandemic including those with cancer.\", byline=ViralHog/Shutterstock, keywords=[adorable, birds, goose], date_taken=2020-11-13, categories=[], aspect=1, assets={preview_mp4={url=https://editorial-cdn.shuttercorp.net/wm-preview-mp4/10679854a/M0T7A13aNej2g82bMTI4NjY=/Shutterstock_10679854a.mp4}, preview_webm={url=https://editorial-cdn.shuttercorp.net/wm-preview-webm/10679854a/M4T6A63fN2j5g929MTI4NjY=/Shutterstock_10679854a.webm}, thumb_jpg={url=https://editorial-cdn.shuttercorp.net/thumb-1/10679854a/M5TcAf30Ncjcge2eMTI4NjY=/Shutterstock_10679854a.jpg}, original={height=1080, width=1080, fps=30, format=avc1, file_size=82233387, display_name=HD, is_licensable=true}}}]}"
 ```
 
 <a name="searchEditorialVideos"></a>
 # EditorialVideoApi.searchEditorialVideos
-> `EditorialVideoSearchResults EditorialVideoApi.searchEditorialVideos(country, queryParams)`
+> `InlineResponse20022 EditorialVideoApi.searchEditorialVideos(country, queryParams)`
 
 **Search editorial video content**
 
@@ -533,48 +461,11 @@ Name | Type | Description
 
 ### Return type
 
-[EditorialVideoSearchResults](EditorialVideoSearchResults.md)
+[InlineResponse20022](InlineResponse20022.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "id" : "10679854a",
-    "title" : "Peeps the Goose Has a Blast on a Jet Ski, Prior Lake, Minnesota, USA - 13 Nov 2020",
-    "caption" : "",
-    "description" : "Info from Licensor: \"Peeps the Canadian Goose has been raised with our family since a gosling. Peeps has made appearances on our local news channels, TV shows, and local newspapers. He has been trained to fly next to four wheelers, jet ski's, and boats. He has brought joy to many people during the pandemic including those with cancer.\"",
-    "byline" : "ViralHog/Shutterstock",
-    "keywords" : [ "2020", "adorable", "birds", "bizarre", "canadian goose", "cute", "domesticated animals", "entertainment", "feel good", "flew", "flies", "fly", "flying", "fun", "goose", "jet skis", "nature", "odd", "pets", "played", "playing", "plays", "prior lake", "sports", "strange", "sweet", "usa", "viralhog", "virals", "water sports", "weird" ],
-    "date_taken" : "2020-11-13",
-    "categories" : [ ],
-    "aspect" : 1,
-    "assets" : {
-      "preview_mp4" : {
-        "url" : "https://editorial-cdn.shuttercorp.net/wm-preview-mp4/10679854a/M0T7A13aNej2g82bMTI4NjY=/Shutterstock_10679854a.mp4"
-      },
-      "preview_webm" : {
-        "url" : "https://editorial-cdn.shuttercorp.net/wm-preview-webm/10679854a/M4T6A63fN2j5g929MTI4NjY=/Shutterstock_10679854a.webm"
-      },
-      "thumb_jpg" : {
-        "url" : "https://editorial-cdn.shuttercorp.net/thumb-1/10679854a/M5TcAf30Ncjcge2eMTI4NjY=/Shutterstock_10679854a.jpg"
-      },
-      "original" : {
-        "height" : 1080,
-        "width" : 1080,
-        "fps" : 30,
-        "format" : "avc1",
-        "file_size" : 82233387,
-        "display_name" : "HD",
-        "is_licensable" : true
-      }
-    }
-  } ],
-  "per_page" : 1,
-  "total_count" : 331,
-  "search_id" : "zhmz9zLmpQehdTPvg8cacQ",
-  "next" : "eyJ2IjoyLCJzIjoyMCwicCI6WzBdfQ==",
-  "prev" : ""
-}
+"{data=[{id=10679854a, title=Peeps the Goose Has a Blast on a Jet Ski, Prior Lake, Minnesota, USA - 13 Nov 2020, caption=, description=Info from Licensor: \"Peeps the Canadian Goose has been raised with our family since a gosling. Peeps has made appearances on our local news channels, TV shows, and local newspapers. He has been trained to fly next to four wheelers, jet ski's, and boats. He has brought joy to many people during the pandemic including those with cancer.\", byline=ViralHog/Shutterstock, keywords=[2020, adorable, birds, bizarre, canadian goose, cute, domesticated animals, entertainment, feel good, flew, flies, fly, flying, fun, goose, jet skis, nature, odd, pets, played, playing, plays, prior lake, sports, strange, sweet, usa, viralhog, virals, water sports, weird], date_taken=2020-11-13, categories=[], aspect=1, assets={preview_mp4={url=https://editorial-cdn.shuttercorp.net/wm-preview-mp4/10679854a/M0T7A13aNej2g82bMTI4NjY=/Shutterstock_10679854a.mp4}, preview_webm={url=https://editorial-cdn.shuttercorp.net/wm-preview-webm/10679854a/M4T6A63fN2j5g929MTI4NjY=/Shutterstock_10679854a.webm}, thumb_jpg={url=https://editorial-cdn.shuttercorp.net/thumb-1/10679854a/M5TcAf30Ncjcge2eMTI4NjY=/Shutterstock_10679854a.jpg}, original={height=1080, width=1080, fps=30, format=avc1, file_size=82233387, display_name=HD, is_licensable=true}}}], per_page=1, total_count=331, search_id=zhmz9zLmpQehdTPvg8cacQ, next=eyJ2IjoyLCJzIjoyMCwicCI6WzBdfQ==, prev=}"
 ```
 

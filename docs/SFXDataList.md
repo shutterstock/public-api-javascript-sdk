@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**[SFX]**](SFX.md) | Sound Effects | [optional] 
+**data** | [**[InlineResponse20012Data]**](InlineResponse20012Data.md) | Sound Effects | [optional] 
 
 

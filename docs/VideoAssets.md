@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_4k** | [**VideoSizeDetails**](VideoSizeDetails.md) |  | [optional] 
-**hd** | [**VideoSizeDetails**](VideoSizeDetails.md) |  | [optional] 
-**preview_jpg** | [**Url**](Url.md) |  | [optional] 
-**preview_mp4** | [**Url**](Url.md) |  | [optional] 
-**preview_webm** | [**Url**](Url.md) |  | [optional] 
-**sd** | [**VideoSizeDetails**](VideoSizeDetails.md) |  | [optional] 
-**thumb_jpg** | [**Url**](Url.md) |  | [optional] 
-**thumb_jpgs** | [**Urls**](Urls.md) |  | [optional] 
-**thumb_mp4** | [**Url**](Url.md) |  | [optional] 
-**thumb_webm** | [**Url**](Url.md) |  | [optional] 
-**web** | [**VideoSizeDetails**](VideoSizeDetails.md) |  | [optional] 
+**_4k** | [**InlineResponse2007Assets4k**](InlineResponse2007Assets4k.md) |  | [optional] 
+**hd** | [**InlineResponse2007Assets4k**](InlineResponse2007Assets4k.md) |  | [optional] 
+**preview_jpg** | [**InlineResponse2007AssetsPreviewJpg**](InlineResponse2007AssetsPreviewJpg.md) |  | [optional] 
+**preview_mp4** | [**InlineResponse2007AssetsPreviewJpg**](InlineResponse2007AssetsPreviewJpg.md) |  | [optional] 
+**preview_webm** | [**InlineResponse2007AssetsPreviewJpg**](InlineResponse2007AssetsPreviewJpg.md) |  | [optional] 
+**sd** | [**InlineResponse2007Assets4k**](InlineResponse2007Assets4k.md) |  | [optional] 
+**thumb_jpg** | [**InlineResponse2007AssetsPreviewJpg**](InlineResponse2007AssetsPreviewJpg.md) |  | [optional] 
+**thumb_jpgs** | [**InlineResponse2007AssetsThumbJpgs**](InlineResponse2007AssetsThumbJpgs.md) |  | [optional] 
+**thumb_mp4** | [**InlineResponse2007AssetsPreviewJpg**](InlineResponse2007AssetsPreviewJpg.md) |  | [optional] 
+**thumb_webm** | [**InlineResponse2007AssetsPreviewJpg**](InlineResponse2007AssetsPreviewJpg.md) |  | [optional] 
+**web** | [**InlineResponse2007Assets4k**](InlineResponse2007Assets4k.md) |  | [optional] 
 
 

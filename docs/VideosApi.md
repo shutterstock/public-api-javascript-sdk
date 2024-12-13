@@ -47,7 +47,7 @@ const api = new sstk.VideosApi();
 
 const id = "17555176"; // String | The ID of the collection to which items should be added
 
-const body = new ShutterstockApiReference.CollectionItemRequest(); // CollectionItemRequest | Array of video IDs to add to the collection
+const body = new ShutterstockApiReference.Body11(); // Body11 | Array of video IDs to add to the collection
 
 
 api.addVideoCollectionItems(id, body)
@@ -63,7 +63,7 @@ api.addVideoCollectionItems(id, body)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| The ID of the collection to which items should be added 
- body (required) | [CollectionItemRequest](CollectionItemRequest.md)| Array of video IDs to add to the collection 
+ body (required) | [Body11](Body11.md)| Array of video IDs to add to the collection 
 
 ### Accepted authentication
 
@@ -85,7 +85,7 @@ No response body.
 
 <a name="createVideoCollection"></a>
 # VideosApi.createVideoCollection
-> `CollectionCreateResponse VideosApi.createVideoCollection(body)`
+> `InlineResponse201 VideosApi.createVideoCollection(body)`
 
 **Create video collections**
 
@@ -101,7 +101,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.VideosApi();
 
-const body = new ShutterstockApiReference.CollectionCreateRequest(); // CollectionCreateRequest | Collection metadata
+const body = new ShutterstockApiReference.Body9(); // Body9 | Collection metadata
 
 
 api.createVideoCollection(body)
@@ -119,7 +119,7 @@ api.createVideoCollection(body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [CollectionCreateRequest](CollectionCreateRequest.md)| Collection metadata 
+ body (required) | [Body9](Body9.md)| Collection metadata 
 
 ### Accepted authentication
 
@@ -136,14 +136,12 @@ Name | Type | Description
 
 ### Return type
 
-[CollectionCreateResponse](CollectionCreateResponse.md)
+[InlineResponse201](InlineResponse201.md)
 
 ### Example response
 
 ```
-{
-  "id" : "48433105"
-}
+"{id=48433105}"
 ```
 
 <a name="deleteVideoCollection"></a>
@@ -258,7 +256,7 @@ No response body.
 
 <a name="downloadVideos"></a>
 # VideosApi.downloadVideos
-> `Url VideosApi.downloadVideos(id, body)`
+> `InlineResponse2004 VideosApi.downloadVideos(id, body)`
 
 **Download videos**
 
@@ -276,7 +274,7 @@ const api = new sstk.VideosApi();
 
 const id = "e123"; // String | The license ID of the item to (re)download. The download links in the response are valid for 8 hours.
 
-const body = new ShutterstockApiReference.RedownloadVideo(); // RedownloadVideo | Information about the videos to redownload
+const body = new ShutterstockApiReference.Body8(); // Body8 | Information about the videos to redownload
 
 
 api.downloadVideos(id, body)
@@ -295,7 +293,7 @@ api.downloadVideos(id, body)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| The license ID of the item to (re)download. The download links in the response are valid for 8 hours. 
- body (required) | [RedownloadVideo](RedownloadVideo.md)| Information about the videos to redownload 
+ body (required) | [Body8](Body8.md)| Information about the videos to redownload 
 
 ### Accepted authentication
 
@@ -312,19 +310,17 @@ Name | Type | Description
 
 ### Return type
 
-[Url](Url.md)
+[InlineResponse2004](InlineResponse2004.md)
 
 ### Example response
 
 ```
-{
-  "url" : "https://download.shutterstock.com/gatekeeper/[random-characters]/shutterstock_59656357.jpg"
-}
+"{url=https://download.shutterstock.com/gatekeeper/[random-characters]/shutterstock_59656357.jpg}"
 ```
 
 <a name="findSimilarVideos"></a>
 # VideosApi.findSimilarVideos
-> `VideoSearchResults VideosApi.findSimilarVideos(id, queryParams)`
+> `InlineResponse2007 VideosApi.findSimilarVideos(id, queryParams)`
 
 **List similar videos**
 
@@ -386,54 +382,17 @@ Name | Type | Description
 
 ### Return type
 
-[VideoSearchResults](VideoSearchResults.md)
+[InlineResponse2007](InlineResponse2007.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "id" : "1033184651",
-    "aspect" : 1.778,
-    "aspect_ratio" : "16:9",
-    "assets" : {
-      "thumb_webm" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
-      },
-      "thumb_mp4" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
-      },
-      "preview_webm" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
-      },
-      "preview_mp4" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
-      },
-      "thumb_jpg" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
-      },
-      "preview_jpg" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
-      }
-    },
-    "contributor" : {
-      "id" : "4411978"
-    },
-    "description" : "Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness",
-    "duration" : 14.081,
-    "has_model_release" : true,
-    "media_type" : "video"
-  } ],
-  "page" : 1,
-  "per_page" : 5,
-  "total_count" : 123,
-  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10"
-}
+"{data=[{id=1033184651, aspect=1.778, aspect_ratio=16:9, assets={thumb_webm={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm}, thumb_mp4={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4}, preview_webm={url=https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm}, preview_mp4={url=https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4}, thumb_jpg={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg}, preview_jpg={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg}}, contributor={id=4411978}, description=Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness, duration=14.081, has_model_release=true, media_type=video}], page=1, per_page=5, total_count=123, search_id=749090bb-2967-4a20-b22e-c800dc845e10}"
 ```
 
 <a name="getFeaturedVideoCollection"></a>
 # VideosApi.getFeaturedVideoCollection
-> `FeaturedCollection VideosApi.getFeaturedVideoCollection(id, queryParams)`
+> `InlineResponse2006 VideosApi.getFeaturedVideoCollection(id, queryParams)`
 
 **Get the details of featured video collections**
 
@@ -489,27 +448,17 @@ Name | Type | Description
 
 ### Return type
 
-[FeaturedCollection](FeaturedCollection.md)
+[InlineResponse2006](InlineResponse2006.md)
 
 ### Example response
 
 ```
-{
-  "total_item_count" : 82,
-  "items_updated_time" : "2021-07-08T12:33:37.000Z",
-  "name" : "Exercise & Fitness",
-  "id" : "19853",
-  "created_time" : "2021-07-07T13:10:24.000Z",
-  "updated_time" : "2021-07-07T13:10:24.000Z",
-  "cover_item" : {
-    "url" : "https://ak.picdn.net/assets/cms/b467415246debdab45825d915a548f8f79b57882-Collection_1_Thumnail.jpg"
-  }
-}
+"{total_item_count=82, items_updated_time=2021-07-08T12:33:37.000Z, name=Exercise & Fitness, id=19853, created_time=2021-07-07T13:10:24.000Z, updated_time=2021-07-07T13:10:24.000Z, cover_item={url=https://ak.picdn.net/assets/cms/b467415246debdab45825d915a548f8f79b57882-Collection_1_Thumnail.jpg}}"
 ```
 
 <a name="getFeaturedVideoCollectionItems"></a>
 # VideosApi.getFeaturedVideoCollectionItems
-> `VideoCollectionItemDataList VideosApi.getFeaturedVideoCollectionItems(id, queryParams)`
+> `Object VideosApi.getFeaturedVideoCollectionItems(id, queryParams)`
 
 **Get the contents of featured video collections**
 
@@ -567,7 +516,7 @@ Name | Type | Description
 
 ### Return type
 
-[VideoCollectionItemDataList](VideoCollectionItemDataList.md)
+Object
 
 ### Example response
 
@@ -589,7 +538,7 @@ Name | Type | Description
 
 <a name="getFeaturedVideoCollectionList"></a>
 # VideosApi.getFeaturedVideoCollectionList
-> `FeaturedCollectionDataList VideosApi.getFeaturedVideoCollectionList(queryParams)`
+> `Object VideosApi.getFeaturedVideoCollectionList(queryParams)`
 
 **List featured video collections**
 
@@ -642,7 +591,7 @@ Name | Type | Description
 
 ### Return type
 
-[FeaturedCollectionDataList](FeaturedCollectionDataList.md)
+Object
 
 ### Example response
 
@@ -667,7 +616,7 @@ Name | Type | Description
 
 <a name="getUpdatedVideos"></a>
 # VideosApi.getUpdatedVideos
-> `UpdatedMediaDataList VideosApi.getUpdatedVideos(queryParams)`
+> `Object VideosApi.getUpdatedVideos(queryParams)`
 
 **List updated videos**
 
@@ -687,8 +636,8 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 const api = new sstk.VideosApi();
 
 const queryParams = { 
-  'start_date': new Date("2020-05-29"), // Date | Show videos updated on or after the specified date
-  'end_date': new Date("2021-05-29"), // Date | Show videos updated before the specified date
+  'start_date': "2021-03-29T00:00:00Z OR 2021-03-29", // String | Show videos updated on or after the specified date. The API will default to UTC (00:00:00) if no specific time is provided, ensuring consistency.
+  'end_date': "2021-03-29T23:59:59Z OR 2021-03-29", // String | Show videos updated before the specified date. The API will default to UTC (00:00:00) if no specific time is provided, ensuring consistency. Please note that the end date must be at least 5 minutes after the start date.
   'interval': "1 HOUR", // String | Show videos updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows videos that were updated in the hour preceding the request
   'page': 1, // Number | Page number
   'per_page': 100, // Number | Number of results per page
@@ -710,8 +659,8 @@ api.getUpdatedVideos(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- start_date | Date| Show videos updated on or after the specified date 
- end_date | Date| Show videos updated before the specified date 
+ start_date | String| Show videos updated on or after the specified date. The API will default to UTC (00:00:00) if no specific time is provided, ensuring consistency. 
+ end_date | String| Show videos updated before the specified date. The API will default to UTC (00:00:00) if no specific time is provided, ensuring consistency. Please note that the end date must be at least 5 minutes after the start date. 
  interval | String| Show videos updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows videos that were updated in the hour preceding the request, defaults to 1 HOUR 
  page | Number| Page number, defaults to 1 
  per_page | Number| Number of results per page, defaults to 100 
@@ -730,7 +679,7 @@ Name | Type | Description
 
 ### Return type
 
-[UpdatedMediaDataList](UpdatedMediaDataList.md)
+Object
 
 ### Example response
 
@@ -749,7 +698,7 @@ Name | Type | Description
 
 <a name="getVideo"></a>
 # VideosApi.getVideo
-> `Video VideosApi.getVideo(id, queryParams)`
+> `InlineResponse2008 VideosApi.getVideo(id, queryParams)`
 
 **Get details about videos**
 
@@ -809,95 +758,17 @@ Name | Type | Description
 
 ### Return type
 
-[Video](Video.md)
+[InlineResponse2008](InlineResponse2008.md)
 
 ### Example response
 
 ```
-{
-  "id" : "1033184651",
-  "added_date" : "2019-07-13",
-  "aspect" : 1.778,
-  "aspect_ratio" : "16:9",
-  "assets" : {
-    "thumb_webm" : {
-      "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
-    },
-    "thumb_mp4" : {
-      "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
-    },
-    "preview_webm" : {
-      "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
-    },
-    "preview_mp4" : {
-      "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
-    },
-    "thumb_jpgs" : {
-      "urls" : [ "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/1.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/2.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/3.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/4.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/5.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/6.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/7.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/8.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/9.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/10.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/11.jpg", "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg" ]
-    },
-    "thumb_jpg" : {
-      "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
-    },
-    "preview_jpg" : {
-      "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
-    },
-    "sd" : {
-      "height" : 480,
-      "width" : 852,
-      "fps" : 29.97,
-      "format" : "mov",
-      "file_size" : 4577280,
-      "display_name" : "Standard Definition MPEG",
-      "is_licensable" : true
-    },
-    "web" : {
-      "height" : 240,
-      "width" : 426,
-      "fps" : 29.97,
-      "format" : "mov",
-      "file_size" : 1291264,
-      "display_name" : "Low Resolution MPEG",
-      "is_licensable" : true
-    },
-    "hd" : {
-      "height" : 1080,
-      "width" : 1920,
-      "fps" : 29.97,
-      "format" : "avc1",
-      "file_size" : 110359552,
-      "display_name" : "Original HD",
-      "is_licensable" : true
-    }
-  },
-  "categories" : [ {
-    "name" : "Nature",
-    "id" : "12"
-  }, {
-    "name" : "People",
-    "id" : "13"
-  } ],
-  "contributor" : {
-    "id" : "4411978"
-  },
-  "description" : "Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness",
-  "duration" : 14.081,
-  "has_model_release" : true,
-  "has_property_release" : false,
-  "is_adult" : false,
-  "is_editorial" : false,
-  "keywords" : [ "active", "activity", "adventure", "arms", "backpacker", "carefree", "celebrating", "cliff", "climate", "cloud", "discovery", "escape", "explore", "extreme", "free", "freedom", "girl", "happy", "high", "hiker", "hiking", "hill", "independent", "inspiration", "landscape", "leisure", "lifestyle", "mountain", "mountains", "nature", "outdoor", "peak", "person", "rock", "scenic", "sky", "sport", "success", "summer", "summit", "sun", "sunset", "top", "tourism", "travel", "trekking", "vacation", "view", "winning", "woman" ],
-  "media_type" : "video",
-  "models" : [ {
-    "id" : "33233810"
-  }, {
-    "id" : "25487168"
-  } ]
-}
+"{id=1033184651, added_date=2019-07-13, aspect=1.778, aspect_ratio=16:9, assets={thumb_webm={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm}, thumb_mp4={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4}, preview_webm={url=https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm}, preview_mp4={url=https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4}, thumb_jpgs={urls=[https://ak.picdn.net/shutterstock/videos/1033184651/thumb/1.jpg, https://ak.picdn.net/shutterstock/videos/1033184651/thumb/2.jpg, https://ak.picdn.net/shutterstock/videos/1033184651/thumb/3.jpg, https://ak.picdn.net/shutterstock/videos/1033184651/thumb/4.jpg, https://ak.picdn.net/shutterstock/videos/1033184651/thumb/5.jpg, https://ak.picdn.net/shutterstock/videos/1033184651/thumb/6.jpg, https://ak.picdn.net/shutterstock/videos/1033184651/thumb/7.jpg, https://ak.picdn.net/shutterstock/videos/1033184651/thumb/8.jpg, https://ak.picdn.net/shutterstock/videos/1033184651/thumb/9.jpg, https://ak.picdn.net/shutterstock/videos/1033184651/thumb/10.jpg, https://ak.picdn.net/shutterstock/videos/1033184651/thumb/11.jpg, https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg]}, thumb_jpg={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg}, preview_jpg={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg}, sd={height=480, width=852, fps=29.97, format=mov, file_size=4577280, display_name=Standard Definition MPEG, is_licensable=true}, web={height=240, width=426, fps=29.97, format=mov, file_size=1291264, display_name=Low Resolution MPEG, is_licensable=true}, hd={height=1080, width=1920, fps=29.97, format=avc1, file_size=110359552, display_name=Original HD, is_licensable=true}}, categories=[{name=Nature, id=12}, {name=People, id=13}], contributor={id=4411978}, description=Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness, duration=14.081, has_model_release=true, has_property_release=false, is_adult=false, is_editorial=false, keywords=[active, activity, adventure, arms, backpacker, carefree, celebrating, cliff, climate, cloud, discovery, escape, explore, extreme, free, freedom, girl, happy, high, hiker, hiking, hill, independent, inspiration, landscape, leisure, lifestyle, mountain, mountains, nature, outdoor, peak, person, rock, scenic, sky, sport, success, summer, summit, sun, sunset, top, tourism, travel, trekking, vacation, view, winning, woman], media_type=video, models=[{id=33233810}, {id=25487168}]}"
 ```
 
 <a name="getVideoCollection"></a>
 # VideosApi.getVideoCollection
-> `Collection VideosApi.getVideoCollection(id, queryParams)`
+> `InlineResponse2005 VideosApi.getVideoCollection(id, queryParams)`
 
 **Get the details of video collections**
 
@@ -954,25 +825,17 @@ Name | Type | Description
 
 ### Return type
 
-[Collection](Collection.md)
+[InlineResponse2005](InlineResponse2005.md)
 
 ### Example response
 
 ```
-{
-  "id" : "293542904",
-  "name" : "My collection",
-  "total_item_count" : 85,
-  "items_updated_time" : "2021-05-20T16:15:22-04:00",
-  "cover_item" : {
-    "id" : "297886754"
-  }
-}
+"{id=293542904, name=My collection, total_item_count=85, items_updated_time=2021-05-20T16:15:22-04:00, cover_item={id=297886754}}"
 ```
 
 <a name="getVideoCollectionItems"></a>
 # VideosApi.getVideoCollectionItems
-> `CollectionItemDataList VideosApi.getVideoCollectionItems(id, queryParams)`
+> `Object VideosApi.getVideoCollectionItems(id, queryParams)`
 
 **Get the contents of video collections**
 
@@ -1033,7 +896,7 @@ Name | Type | Description
 
 ### Return type
 
-[CollectionItemDataList](CollectionItemDataList.md)
+Object
 
 ### Example response
 
@@ -1056,7 +919,7 @@ Name | Type | Description
 
 <a name="getVideoCollectionList"></a>
 # VideosApi.getVideoCollectionList
-> `CollectionDataList VideosApi.getVideoCollectionList(queryParams)`
+> `Object VideosApi.getVideoCollectionList(queryParams)`
 
 **List video collections**
 
@@ -1112,7 +975,7 @@ Name | Type | Description
 
 ### Return type
 
-[CollectionDataList](CollectionDataList.md)
+Object
 
 ### Example response
 
@@ -1135,7 +998,7 @@ Name | Type | Description
 
 <a name="getVideoLicenseList"></a>
 # VideosApi.getVideoLicenseList
-> `DownloadHistoryDataList VideosApi.getVideoLicenseList(queryParams)`
+> `Object VideosApi.getVideoLicenseList(queryParams)`
 
 **List video licenses**
 
@@ -1205,7 +1068,7 @@ Name | Type | Description
 
 ### Return type
 
-[DownloadHistoryDataList](DownloadHistoryDataList.md)
+Object
 
 ### Example response
 
@@ -1241,7 +1104,7 @@ Name | Type | Description
 
 <a name="getVideoList"></a>
 # VideosApi.getVideoList
-> `VideoDataList VideosApi.getVideoList(id, queryParams)`
+> `Object VideosApi.getVideoList(id, queryParams)`
 
 **List videos**
 
@@ -1299,7 +1162,7 @@ Name | Type | Description
 
 ### Return type
 
-[VideoDataList](VideoDataList.md)
+Object
 
 ### Example response
 
@@ -1392,7 +1255,7 @@ Name | Type | Description
 
 <a name="getVideoSuggestions"></a>
 # VideosApi.getVideoSuggestions
-> `Suggestions VideosApi.getVideoSuggestions(query, queryParams)`
+> `InlineResponse2002 VideosApi.getVideoSuggestions(query, queryParams)`
 
 **Get suggestions for a search term**
 
@@ -1448,19 +1311,17 @@ Name | Type | Description
 
 ### Return type
 
-[Suggestions](Suggestions.md)
+[InlineResponse2002](InlineResponse2002.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ "cat scan", "cats and dogs", "cats playing", "catsuit", "cat silhouette", "catskills", "cats eyes", "cat sitting", "cat sleeping", "cats eye" ]
-}
+"{data=[cat scan, cats and dogs, cats playing, catsuit, cat silhouette, catskills, cats eyes, cat sitting, cat sleeping, cats eye]}"
 ```
 
 <a name="licenseVideos"></a>
 # VideosApi.licenseVideos
-> `LicenseVideoResultDataList VideosApi.licenseVideos(body, queryParams)`
+> `Object VideosApi.licenseVideos(body, queryParams)`
 
 **License videos**
 
@@ -1476,7 +1337,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.VideosApi();
 
-const body = new ShutterstockApiReference.LicenseVideoRequest(); // LicenseVideoRequest | List of videos to request licenses for and information about each license transaction; these values override the defaults in the query parameters
+const body = new ShutterstockApiReference.Body7(); // Body7 | List of videos to request licenses for and information about each license transaction; these values override the defaults in the query parameters
 
 const queryParams = { 
   'subscription_id': "s12345678", // String | The subscription ID to use for licensing
@@ -1499,7 +1360,7 @@ api.licenseVideos(body, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [LicenseVideoRequest](LicenseVideoRequest.md)| List of videos to request licenses for and information about each license transaction; these values override the defaults in the query parameters 
+ body (required) | [Body7](Body7.md)| List of videos to request licenses for and information about each license transaction; these values override the defaults in the query parameters 
  subscription_id | String| The subscription ID to use for licensing 
  size | String| The size of the video to license, defaults to web <br/><br/>Valid values: "web", "sd", "hd", "4k"
  search_id | String| The Search ID that led to this licensing event 
@@ -1521,7 +1382,7 @@ Required scopes:
 
 ### Return type
 
-[LicenseVideoResultDataList](LicenseVideoResultDataList.md)
+Object
 
 ### Example response
 
@@ -1546,7 +1407,7 @@ Required scopes:
 
 <a name="listVideoCategories"></a>
 # VideosApi.listVideoCategories
-> `CategoryDataList VideosApi.listVideoCategories(queryParams)`
+> `Object VideosApi.listVideoCategories(queryParams)`
 
 **List video categories**
 
@@ -1599,7 +1460,7 @@ Name | Type | Description
 
 ### Return type
 
-[CategoryDataList](CategoryDataList.md)
+Object
 
 ### Example response
 
@@ -1638,7 +1499,7 @@ const api = new sstk.VideosApi();
 
 const id = "17555176"; // String | The ID of the collection to rename
 
-const body = new ShutterstockApiReference.CollectionUpdateRequest(); // CollectionUpdateRequest | The new name for the collection
+const body = new ShutterstockApiReference.Body10(); // Body10 | The new name for the collection
 
 
 api.renameVideoCollection(id, body)
@@ -1654,7 +1515,7 @@ api.renameVideoCollection(id, body)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| The ID of the collection to rename 
- body (required) | [CollectionUpdateRequest](CollectionUpdateRequest.md)| The new name for the collection 
+ body (required) | [Body10](Body10.md)| The new name for the collection 
 
 ### Accepted authentication
 
@@ -1676,7 +1537,7 @@ No response body.
 
 <a name="searchVideos"></a>
 # VideosApi.searchVideos
-> `VideoSearchResults VideosApi.searchVideos(queryParams)`
+> `InlineResponse2007 VideosApi.searchVideos(queryParams)`
 
 **Search for videos**
 
@@ -1787,48 +1648,11 @@ Name | Type | Description
 
 ### Return type
 
-[VideoSearchResults](VideoSearchResults.md)
+[InlineResponse2007](InlineResponse2007.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "id" : "1033184651",
-    "aspect" : 1.778,
-    "aspect_ratio" : "16:9",
-    "assets" : {
-      "thumb_webm" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
-      },
-      "thumb_mp4" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
-      },
-      "preview_webm" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm"
-      },
-      "preview_mp4" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4"
-      },
-      "thumb_jpg" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
-      },
-      "preview_jpg" : {
-        "url" : "https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg"
-      }
-    },
-    "contributor" : {
-      "id" : "4411978"
-    },
-    "description" : "Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness",
-    "duration" : 14.081,
-    "has_model_release" : true,
-    "media_type" : "video"
-  } ],
-  "page" : 1,
-  "per_page" : 5,
-  "total_count" : 123,
-  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10"
-}
+"{data=[{id=1033184651, aspect=1.778, aspect_ratio=16:9, assets={thumb_webm={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm}, thumb_mp4={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4}, preview_webm={url=https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm}, preview_mp4={url=https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4}, thumb_jpg={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg}, preview_jpg={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg}}, contributor={id=4411978}, description=Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness, duration=14.081, has_model_release=true, media_type=video}], page=1, per_page=5, total_count=123, search_id=749090bb-2967-4a20-b22e-c800dc845e10}"
 ```
 

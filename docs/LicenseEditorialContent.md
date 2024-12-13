@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **editorial_id** | **String** | Editorial ID | 
 **license** | **String** | License agreement to use for licensing | 
-**metadata** | [**LicenseRequestMetadata**](LicenseRequestMetadata.md) |  | [optional] 
+**metadata** | **Object** | Additional information for license requests for enterprise accounts and API subscriptions, 4 fields maximum; which fields are required is set by the account holder | [optional] 
 **size** | **String** | Asset size to download | [optional] [default to 'original']
 
 

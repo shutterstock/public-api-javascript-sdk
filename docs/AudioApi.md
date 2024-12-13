@@ -43,7 +43,7 @@ const api = new sstk.AudioApi();
 
 const id = "48433115"; // String | Collection ID
 
-const body = new ShutterstockApiReference.CollectionItemRequest(); // CollectionItemRequest | List of items to add to collection
+const body = new ShutterstockApiReference.Body15(); // Body15 | List of items to add to collection
 
 
 api.addTrackCollectionItems(id, body)
@@ -59,7 +59,7 @@ api.addTrackCollectionItems(id, body)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
- body (required) | [CollectionItemRequest](CollectionItemRequest.md)| List of items to add to collection 
+ body (required) | [Body15](Body15.md)| List of items to add to collection 
 
 ### Accepted authentication
 
@@ -81,7 +81,7 @@ No response body.
 
 <a name="createTrackCollection"></a>
 # AudioApi.createTrackCollection
-> `CollectionCreateResponse AudioApi.createTrackCollection(body)`
+> `InlineResponse201 AudioApi.createTrackCollection(body)`
 
 **Create audio collections**
 
@@ -97,7 +97,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.AudioApi();
 
-const body = new ShutterstockApiReference.CollectionCreateRequest(); // CollectionCreateRequest | Collection metadata
+const body = new ShutterstockApiReference.Body13(); // Body13 | Collection metadata
 
 
 api.createTrackCollection(body)
@@ -115,7 +115,7 @@ api.createTrackCollection(body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [CollectionCreateRequest](CollectionCreateRequest.md)| Collection metadata 
+ body (required) | [Body13](Body13.md)| Collection metadata 
 
 ### Accepted authentication
 
@@ -132,14 +132,12 @@ Name | Type | Description
 
 ### Return type
 
-[CollectionCreateResponse](CollectionCreateResponse.md)
+[InlineResponse201](InlineResponse201.md)
 
 ### Example response
 
 ```
-{
-  "id" : "48433105"
-}
+"{id=48433105}"
 ```
 
 <a name="deleteTrackCollection"></a>
@@ -254,7 +252,7 @@ No response body.
 
 <a name="downloadTracks"></a>
 # AudioApi.downloadTracks
-> `AudioUrl AudioApi.downloadTracks(id)`
+> `InlineResponse20011 AudioApi.downloadTracks(id)`
 
 **Download audio tracks**
 
@@ -305,19 +303,17 @@ Name | Type | Description
 
 ### Return type
 
-[AudioUrl](AudioUrl.md)
+[InlineResponse20011](InlineResponse20011.md)
 
 ### Example response
 
 ```
-{
-  "$ref" : "#/definitions/Url/example"
-}
+"{url=https://download.shutterstock.com/gatekeeper/[random-characters]/shutterstock_59656357.jpg}"
 ```
 
 <a name="getTrack"></a>
 # AudioApi.getTrack
-> `Audio AudioApi.getTrack(id, queryParams)`
+> `InlineResponse20010 AudioApi.getTrack(id, queryParams)`
 
 **Get details about audio tracks**
 
@@ -375,64 +371,17 @@ Name | Type | Description
 
 ### Return type
 
-[Audio](Audio.md)
+[InlineResponse20010](InlineResponse20010.md)
 
 ### Example response
 
 ```
-{
-  "added_date" : "2016-08-16",
-  "artists" : [ {
-    "name" : "Klimenko Music"
-  } ],
-  "assets" : {
-    "clean_audio" : {
-      "file_size" : 35188408
-    },
-    "preview_mp3" : {
-      "file_size" : 4400203,
-      "url" : "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.mp3"
-    },
-    "preview_ogg" : {
-      "file_size" : 4453197,
-      "url" : "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.ogg"
-    },
-    "waveform" : {
-      "file_size" : 18778,
-      "url" : "https://ak.picdn.net/shutterstock/audio/442583/waveform/waveform.png"
-    }
-  },
-  "bpm" : 110,
-  "contributor" : {
-    "id" : "2847971"
-  },
-  "description" : "Pulsing and feel-good, featuring soaring synthesizer, groovy synth bass drums and synth drums that create a euphoric, upbeat mood.",
-  "duration" : 183,
-  "genres" : [ "Dance/Electronic", "Electro Pop", "Pop/Rock" ],
-  "id" : "442583",
-  "instruments" : [ "Piano", "Synth bass", "Synth drums", "Synthesizer" ],
-  "is_adult" : false,
-  "is_instrumental" : true,
-  "isrc" : "",
-  "keywords" : [ "celebratory", "chic", "euphoric", "good times", "hip", "optimistic", "party", "soaring", "upbeat" ],
-  "language" : "en",
-  "lyrics" : "",
-  "media_type" : "audio",
-  "moods" : [ "Bright", "Confident", "Fun", "Happy", "Inspiring", "Optimistic", "Playful", "Sophisticated", "Stylish", "Uplifting" ],
-  "published_time" : "2016-08-16T14:30:03-04:00",
-  "recording_version" : "",
-  "releases" : [ ],
-  "similar_artists" : [ ],
-  "title" : "Another Tomorrow",
-  "updated_time" : "2016-08-18T17:59:33-04:00",
-  "vocal_description" : "",
-  "url" : ""
-}
+"{added_date=2016-08-16, artists=[{name=Klimenko Music}], assets={clean_audio={file_size=35188408}, preview_mp3={file_size=4400203, url=https://ak.picdn.net/shutterstock/audio/442583/preview/preview.mp3}, preview_ogg={file_size=4453197, url=https://ak.picdn.net/shutterstock/audio/442583/preview/preview.ogg}, waveform={file_size=18778, url=https://ak.picdn.net/shutterstock/audio/442583/waveform/waveform.png}}, bpm=110, contributor={id=2847971}, description=Pulsing and feel-good, featuring soaring synthesizer, groovy synth bass drums and synth drums that create a euphoric, upbeat mood., duration=183, genres=[Dance/Electronic, Electro Pop, Pop/Rock], id=442583, instruments=[Piano, Synth bass, Synth drums, Synthesizer], is_adult=false, is_instrumental=true, isrc=, keywords=[celebratory, chic, euphoric, good times, hip, optimistic, party, soaring, upbeat], language=en, lyrics=, media_type=audio, moods=[Bright, Confident, Fun, Happy, Inspiring, Optimistic, Playful, Sophisticated, Stylish, Uplifting], published_time=2016-08-16T14:30:03-04:00, recording_version=, releases=[], similar_artists=[], title=Another Tomorrow, updated_time=2016-08-18T17:59:33-04:00, vocal_description=, url=}"
 ```
 
 <a name="getTrackCollection"></a>
 # AudioApi.getTrackCollection
-> `Collection AudioApi.getTrackCollection(id, queryParams)`
+> `InlineResponse2005 AudioApi.getTrackCollection(id, queryParams)`
 
 **Get the details of audio collections**
 
@@ -489,25 +438,17 @@ Name | Type | Description
 
 ### Return type
 
-[Collection](Collection.md)
+[InlineResponse2005](InlineResponse2005.md)
 
 ### Example response
 
 ```
-{
-  "id" : "293542904",
-  "name" : "My collection",
-  "total_item_count" : 85,
-  "items_updated_time" : "2021-05-20T16:15:22-04:00",
-  "cover_item" : {
-    "id" : "297886754"
-  }
-}
+"{id=293542904, name=My collection, total_item_count=85, items_updated_time=2021-05-20T16:15:22-04:00, cover_item={id=297886754}}"
 ```
 
 <a name="getTrackCollectionItems"></a>
 # AudioApi.getTrackCollectionItems
-> `CollectionItemDataList AudioApi.getTrackCollectionItems(id, queryParams)`
+> `Object AudioApi.getTrackCollectionItems(id, queryParams)`
 
 **Get the contents of audio collections**
 
@@ -568,7 +509,7 @@ Name | Type | Description
 
 ### Return type
 
-[CollectionItemDataList](CollectionItemDataList.md)
+Object
 
 ### Example response
 
@@ -591,7 +532,7 @@ Name | Type | Description
 
 <a name="getTrackCollectionList"></a>
 # AudioApi.getTrackCollectionList
-> `CollectionDataList AudioApi.getTrackCollectionList(queryParams)`
+> `Object AudioApi.getTrackCollectionList(queryParams)`
 
 **List audio collections**
 
@@ -647,7 +588,7 @@ Name | Type | Description
 
 ### Return type
 
-[CollectionDataList](CollectionDataList.md)
+Object
 
 ### Example response
 
@@ -670,7 +611,7 @@ Name | Type | Description
 
 <a name="getTrackLicenseList"></a>
 # AudioApi.getTrackLicenseList
-> `DownloadHistoryDataList AudioApi.getTrackLicenseList(queryParams)`
+> `Object AudioApi.getTrackLicenseList(queryParams)`
 
 **List audio licenses**
 
@@ -740,7 +681,7 @@ Name | Type | Description
 
 ### Return type
 
-[DownloadHistoryDataList](DownloadHistoryDataList.md)
+Object
 
 ### Example response
 
@@ -776,7 +717,7 @@ Name | Type | Description
 
 <a name="getTrackList"></a>
 # AudioApi.getTrackList
-> `AudioDataList AudioApi.getTrackList(id, queryParams)`
+> `Object AudioApi.getTrackList(id, queryParams)`
 
 **List audio tracks**
 
@@ -834,7 +775,7 @@ Name | Type | Description
 
 ### Return type
 
-[AudioDataList](AudioDataList.md)
+Object
 
 ### Example response
 
@@ -892,7 +833,7 @@ Name | Type | Description
 
 <a name="licenseTrack"></a>
 # AudioApi.licenseTrack
-> `LicenseAudioResultDataList AudioApi.licenseTrack(body, queryParams)`
+> `Object AudioApi.licenseTrack(body, queryParams)`
 
 **License audio tracks**
 
@@ -908,7 +849,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.AudioApi();
 
-const body = new ShutterstockApiReference.LicenseAudioRequest(); // LicenseAudioRequest | Tracks to license
+const body = new ShutterstockApiReference.Body12(); // Body12 | Tracks to license
 
 const queryParams = { 
   'license': "audio_platform", // String | License type
@@ -930,7 +871,7 @@ api.licenseTrack(body, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [LicenseAudioRequest](LicenseAudioRequest.md)| Tracks to license 
+ body (required) | [Body12](Body12.md)| Tracks to license 
  license | String| License type <br/><br/>Valid values: "audio_platform", "premier_music_basic", "premier_music_extended", "premier_music_pro", "premier_music_comp", "asset_all_music"
  search_id | String| The ID of the search that led to licensing this track 
 
@@ -949,7 +890,7 @@ Name | Type | Description
 
 ### Return type
 
-[LicenseAudioResultDataList](LicenseAudioResultDataList.md)
+Object
 
 ### Example response
 
@@ -968,7 +909,7 @@ Name | Type | Description
 
 <a name="listGenres"></a>
 # AudioApi.listGenres
-> `GenreList AudioApi.listGenres(queryParams)`
+> `{'String': Object} AudioApi.listGenres(queryParams)`
 
 **List audio genres**
 
@@ -1021,7 +962,7 @@ Name | Type | Description
 
 ### Return type
 
-[GenreList](GenreList.md)
+{'String': Object}
 
 ### Example response
 
@@ -1033,7 +974,7 @@ Name | Type | Description
 
 <a name="listInstruments"></a>
 # AudioApi.listInstruments
-> `InstrumentList AudioApi.listInstruments(queryParams)`
+> `{'String': Object} AudioApi.listInstruments(queryParams)`
 
 **List audio instruments**
 
@@ -1086,7 +1027,7 @@ Name | Type | Description
 
 ### Return type
 
-[InstrumentList](InstrumentList.md)
+{'String': Object}
 
 ### Example response
 
@@ -1098,7 +1039,7 @@ Name | Type | Description
 
 <a name="listMoods"></a>
 # AudioApi.listMoods
-> `MoodList AudioApi.listMoods(queryParams)`
+> `{'String': Object} AudioApi.listMoods(queryParams)`
 
 **List audio moods**
 
@@ -1151,7 +1092,7 @@ Name | Type | Description
 
 ### Return type
 
-[MoodList](MoodList.md)
+{'String': Object}
 
 ### Example response
 
@@ -1181,7 +1122,7 @@ const api = new sstk.AudioApi();
 
 const id = "48433107"; // String | Collection ID
 
-const body = new ShutterstockApiReference.CollectionUpdateRequest(); // CollectionUpdateRequest | Collection changes
+const body = new ShutterstockApiReference.Body14(); // Body14 | Collection changes
 
 
 api.renameTrackCollection(id, body)
@@ -1197,7 +1138,7 @@ api.renameTrackCollection(id, body)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | String| Collection ID 
- body (required) | [CollectionUpdateRequest](CollectionUpdateRequest.md)| Collection changes 
+ body (required) | [Body14](Body14.md)| Collection changes 
 
 ### Accepted authentication
 
@@ -1219,7 +1160,7 @@ No response body.
 
 <a name="searchTracks"></a>
 # AudioApi.searchTracks
-> `AudioSearchResults AudioApi.searchTracks(queryParams)`
+> `InlineResponse2009 AudioApi.searchTracks(queryParams)`
 
 **Search for tracks**
 
@@ -1312,64 +1253,11 @@ Name | Type | Description
 
 ### Return type
 
-[AudioSearchResults](AudioSearchResults.md)
+[InlineResponse2009](InlineResponse2009.md)
 
 ### Example response
 
 ```
-{
-  "data" : [ {
-    "added_date" : "2016-08-16",
-    "artists" : [ {
-      "name" : "Klimenko Music"
-    } ],
-    "assets" : {
-      "clean_audio" : {
-        "file_size" : 35188408
-      },
-      "preview_mp3" : {
-        "file_size" : 4400203,
-        "url" : "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.mp3"
-      },
-      "preview_ogg" : {
-        "file_size" : 4453197,
-        "url" : "https://ak.picdn.net/shutterstock/audio/442583/preview/preview.ogg"
-      },
-      "waveform" : {
-        "file_size" : 18778,
-        "url" : "https://ak.picdn.net/shutterstock/audio/442583/waveform/waveform.png"
-      }
-    },
-    "bpm" : 110,
-    "contributor" : {
-      "id" : "2847971"
-    },
-    "description" : "Pulsing and feel-good, featuring soaring synthesizer, groovy synth bass drums and synth drums that create a euphoric, upbeat mood.",
-    "duration" : 183,
-    "genres" : [ "Dance/Electronic", "Electro Pop", "Pop/Rock" ],
-    "id" : "442583",
-    "instruments" : [ "Piano", "Synth bass", "Synth drums", "Synthesizer" ],
-    "is_adult" : false,
-    "is_instrumental" : true,
-    "isrc" : "",
-    "keywords" : [ "celebratory", "chic", "euphoric", "good times", "hip", "optimistic", "party", "soaring", "upbeat" ],
-    "language" : "en",
-    "lyrics" : "",
-    "media_type" : "audio",
-    "moods" : [ "Bright", "Confident", "Fun", "Happy", "Inspiring", "Optimistic", "Playful", "Sophisticated", "Stylish", "Uplifting" ],
-    "published_time" : "2016-08-16T14:30:03-04:00",
-    "recording_version" : "",
-    "releases" : [ ],
-    "similar_artists" : [ ],
-    "title" : "Another Tomorrow",
-    "updated_time" : "2016-08-18T17:59:33-04:00",
-    "vocal_description" : "",
-    "url" : ""
-  } ],
-  "page" : 1,
-  "per_page" : 5,
-  "total_count" : 123455,
-  "search_id" : "749090bb-2967-4a20-b22e-c800dc845e10"
-}
+"{data=[{added_date=2016-08-16, artists=[{name=Klimenko Music}], assets={clean_audio={file_size=35188408}, preview_mp3={file_size=4400203, url=https://ak.picdn.net/shutterstock/audio/442583/preview/preview.mp3}, preview_ogg={file_size=4453197, url=https://ak.picdn.net/shutterstock/audio/442583/preview/preview.ogg}, waveform={file_size=18778, url=https://ak.picdn.net/shutterstock/audio/442583/waveform/waveform.png}}, bpm=110, contributor={id=2847971}, description=Pulsing and feel-good, featuring soaring synthesizer, groovy synth bass drums and synth drums that create a euphoric, upbeat mood., duration=183, genres=[Dance/Electronic, Electro Pop, Pop/Rock], id=442583, instruments=[Piano, Synth bass, Synth drums, Synthesizer], is_adult=false, is_instrumental=true, isrc=, keywords=[celebratory, chic, euphoric, good times, hip, optimistic, party, soaring, upbeat], language=en, lyrics=, media_type=audio, moods=[Bright, Confident, Fun, Happy, Inspiring, Optimistic, Playful, Sophisticated, Stylish, Uplifting], published_time=2016-08-16T14:30:03-04:00, recording_version=, releases=[], similar_artists=[], title=Another Tomorrow, updated_time=2016-08-18T17:59:33-04:00, vocal_description=, url=}], page=1, per_page=5, total_count=123455, search_id=749090bb-2967-4a20-b22e-c800dc845e10}"
 ```
 

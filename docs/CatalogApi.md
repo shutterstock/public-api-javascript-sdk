@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a name="addToCollection"></a>
 # CatalogApi.addToCollection
-> `CatalogCollection CatalogApi.addToCollection(collection_id, body)`
+> `InlineResponse2012 CatalogApi.addToCollection(collection_id, body)`
 
 **Add items to catalog collections**
 
@@ -33,7 +33,7 @@ const api = new sstk.CatalogApi();
 
 const collection_id = "126351028"; // String | The ID of the collection to add assets to
 
-const body = new ShutterstockApiReference.CreateCatalogCollectionItems(); // CreateCatalogCollectionItems | Collection item attributes to add to collection
+const body = new ShutterstockApiReference.Body22(); // Body22 | Collection item attributes to add to collection
 
 
 api.addToCollection(collection_id, body)
@@ -52,7 +52,7 @@ api.addToCollection(collection_id, body)
 Name | Type | Description
 ------------- | ------------- | -------------
  collection_id (required) | String| The ID of the collection to add assets to 
- body (required) | [CreateCatalogCollectionItems](CreateCatalogCollectionItems.md)| Collection item attributes to add to collection 
+ body (required) | [Body22](Body22.md)| Collection item attributes to add to collection 
 
 ### Accepted authentication
 
@@ -71,49 +71,17 @@ Required scopes:
 
 ### Return type
 
-[CatalogCollection](CatalogCollection.md)
+[InlineResponse2012](InlineResponse2012.md)
 
 ### Example response
 
 ```
-{
-  "id" : "126351028",
-  "name" : "My collection",
-  "cover_asset" : {
-    "id" : "123",
-    "asset" : {
-      "id" : "1690105108",
-      "type" : "image",
-      "name" : "Young couple playing tennis at the court"
-    },
-    "created_time" : "2021-06-10T13:26:09-04:00"
-  },
-  "total_item_count" : 2,
-  "created_time" : "2021-05-20T16:15:22-04:00",
-  "updated_time" : "2021-06-10T13:26:09-04:00",
-  "visibility" : "public",
-  "role_assignments" : {
-    "collection_id" : "126351028",
-    "roles" : {
-      "owners" : [ {
-        "id" : "321",
-        "type" : "USER",
-        "email" : "userOne@org.com"
-      } ],
-      "editors" : [ {
-        "id" : "987",
-        "type" : "USER",
-        "email" : "userTwo@org.com"
-      } ],
-      "viewers" : [ ]
-    }
-  }
-}
+"{id=126351028, name=My collection, cover_asset={id=123, asset={id=1690105108, type=image, name=Young couple playing tennis at the court}, created_time=2021-06-10T13:26:09-04:00}, total_item_count=2, created_time=2021-05-20T16:15:22-04:00, updated_time=2021-06-10T13:26:09-04:00, visibility=public, role_assignments={collection_id=126351028, roles={owners=[{id=321, type=USER, email=userOne@org.com}], editors=[{id=987, type=USER, email=userTwo@org.com}], viewers=[]}}}"
 ```
 
 <a name="createCollection"></a>
 # CatalogApi.createCollection
-> `CatalogCollection CatalogApi.createCollection(body)`
+> `InlineResponse2012 CatalogApi.createCollection(body)`
 
 **Create catalog collections**
 
@@ -129,7 +97,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.CatalogApi();
 
-const body = new ShutterstockApiReference.CreateCatalogCollection(); // CreateCatalogCollection | Create a catalog collection and, optionally, add items.
+const body = new ShutterstockApiReference.Body20(); // Body20 | Create a catalog collection and, optionally, add items.
 
 
 api.createCollection(body)
@@ -147,7 +115,7 @@ api.createCollection(body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [CreateCatalogCollection](CreateCatalogCollection.md)| Create a catalog collection and, optionally, add items. 
+ body (required) | [Body20](Body20.md)| Create a catalog collection and, optionally, add items. 
 
 ### Accepted authentication
 
@@ -166,44 +134,12 @@ Required scopes:
 
 ### Return type
 
-[CatalogCollection](CatalogCollection.md)
+[InlineResponse2012](InlineResponse2012.md)
 
 ### Example response
 
 ```
-{
-  "id" : "126351028",
-  "name" : "My collection",
-  "cover_asset" : {
-    "id" : "123",
-    "asset" : {
-      "id" : "1690105108",
-      "type" : "image",
-      "name" : "Young couple playing tennis at the court"
-    },
-    "created_time" : "2021-06-10T13:26:09-04:00"
-  },
-  "total_item_count" : 2,
-  "created_time" : "2021-05-20T16:15:22-04:00",
-  "updated_time" : "2021-06-10T13:26:09-04:00",
-  "visibility" : "public",
-  "role_assignments" : {
-    "collection_id" : "126351028",
-    "roles" : {
-      "owners" : [ {
-        "id" : "321",
-        "type" : "USER",
-        "email" : "userOne@org.com"
-      } ],
-      "editors" : [ {
-        "id" : "987",
-        "type" : "USER",
-        "email" : "userTwo@org.com"
-      } ],
-      "viewers" : [ ]
-    }
-  }
-}
+"{id=126351028, name=My collection, cover_asset={id=123, asset={id=1690105108, type=image, name=Young couple playing tennis at the court}, created_time=2021-06-10T13:26:09-04:00}, total_item_count=2, created_time=2021-05-20T16:15:22-04:00, updated_time=2021-06-10T13:26:09-04:00, visibility=public, role_assignments={collection_id=126351028, roles={owners=[{id=321, type=USER, email=userOne@org.com}], editors=[{id=987, type=USER, email=userTwo@org.com}], viewers=[]}}}"
 ```
 
 <a name="deleteCollection"></a>
@@ -261,7 +197,7 @@ No response body.
 
 <a name="deleteFromCollection"></a>
 # CatalogApi.deleteFromCollection
-> `CatalogCollection CatalogApi.deleteFromCollection(collection_id, body)`
+> `InlineResponse2012 CatalogApi.deleteFromCollection(collection_id, body)`
 
 **Remove items from catalog collection**
 
@@ -279,7 +215,7 @@ const api = new sstk.CatalogApi();
 
 const collection_id = "126351028"; // String | The ID of the collection to remove assets from
 
-const body = new ShutterstockApiReference.RemoveCatalogCollectionItems(); // RemoveCatalogCollectionItems | Items to remove from the collection
+const body = new ShutterstockApiReference.Body23(); // Body23 | Items to remove from the collection
 
 
 api.deleteFromCollection(collection_id, body)
@@ -298,7 +234,7 @@ api.deleteFromCollection(collection_id, body)
 Name | Type | Description
 ------------- | ------------- | -------------
  collection_id (required) | String| The ID of the collection to remove assets from 
- body (required) | [RemoveCatalogCollectionItems](RemoveCatalogCollectionItems.md)| Items to remove from the collection 
+ body (required) | [Body23](Body23.md)| Items to remove from the collection 
 
 ### Accepted authentication
 
@@ -317,49 +253,17 @@ Required scopes:
 
 ### Return type
 
-[CatalogCollection](CatalogCollection.md)
+[InlineResponse2012](InlineResponse2012.md)
 
 ### Example response
 
 ```
-{
-  "id" : "126351028",
-  "name" : "My collection",
-  "cover_asset" : {
-    "id" : "123",
-    "asset" : {
-      "id" : "1690105108",
-      "type" : "image",
-      "name" : "Young couple playing tennis at the court"
-    },
-    "created_time" : "2021-06-10T13:26:09-04:00"
-  },
-  "total_item_count" : 2,
-  "created_time" : "2021-05-20T16:15:22-04:00",
-  "updated_time" : "2021-06-10T13:26:09-04:00",
-  "visibility" : "public",
-  "role_assignments" : {
-    "collection_id" : "126351028",
-    "roles" : {
-      "owners" : [ {
-        "id" : "321",
-        "type" : "USER",
-        "email" : "userOne@org.com"
-      } ],
-      "editors" : [ {
-        "id" : "987",
-        "type" : "USER",
-        "email" : "userTwo@org.com"
-      } ],
-      "viewers" : [ ]
-    }
-  }
-}
+"{id=126351028, name=My collection, cover_asset={id=123, asset={id=1690105108, type=image, name=Young couple playing tennis at the court}, created_time=2021-06-10T13:26:09-04:00}, total_item_count=2, created_time=2021-05-20T16:15:22-04:00, updated_time=2021-06-10T13:26:09-04:00, visibility=public, role_assignments={collection_id=126351028, roles={owners=[{id=321, type=USER, email=userOne@org.com}], editors=[{id=987, type=USER, email=userTwo@org.com}], viewers=[]}}}"
 ```
 
 <a name="getCollections"></a>
 # CatalogApi.getCollections
-> `CatalogCollectionDataList CatalogApi.getCollections(queryParams)`
+> `InlineResponse20027 CatalogApi.getCollections(queryParams)`
 
 **List catalog collections**
 
@@ -417,54 +321,17 @@ Name | Type | Description
 
 ### Return type
 
-[CatalogCollectionDataList](CatalogCollectionDataList.md)
+[InlineResponse20027](InlineResponse20027.md)
 
 ### Example response
 
 ```
-{
-  "page" : 1,
-  "per_page" : 20,
-  "total_count" : 1,
-  "data" : [ {
-    "id" : "126351028",
-    "name" : "My collection",
-    "cover_asset" : {
-      "id" : "123",
-      "asset" : {
-        "id" : "1690105108",
-        "type" : "image",
-        "name" : "Young couple playing tennis at the court"
-      },
-      "created_time" : "2021-06-10T13:26:09-04:00"
-    },
-    "total_item_count" : 2,
-    "created_time" : "2021-05-20T16:15:22-04:00",
-    "updated_time" : "2021-06-10T13:26:09-04:00",
-    "visibility" : "public",
-    "role_assignments" : {
-      "collection_id" : "126351028",
-      "roles" : {
-        "owners" : [ {
-          "id" : "321",
-          "type" : "USER",
-          "email" : "userOne@org.com"
-        } ],
-        "editors" : [ {
-          "id" : "987",
-          "type" : "USER",
-          "email" : "userTwo@org.com"
-        } ],
-        "viewers" : [ ]
-      }
-    }
-  } ]
-}
+"{page=1, per_page=20, total_count=1, data=[{id=126351028, name=My collection, cover_asset={id=123, asset={id=1690105108, type=image, name=Young couple playing tennis at the court}, created_time=2021-06-10T13:26:09-04:00}, total_item_count=2, created_time=2021-05-20T16:15:22-04:00, updated_time=2021-06-10T13:26:09-04:00, visibility=public, role_assignments={collection_id=126351028, roles={owners=[{id=321, type=USER, email=userOne@org.com}], editors=[{id=987, type=USER, email=userTwo@org.com}], viewers=[]}}}]}"
 ```
 
 <a name="searchCatalog"></a>
 # CatalogApi.searchCatalog
-> `CatalogCollectionItemDataList CatalogApi.searchCatalog(queryParams)`
+> `InlineResponse20026 CatalogApi.searchCatalog(queryParams)`
 
 **Search catalogs for assets**
 
@@ -526,31 +393,17 @@ Name | Type | Description
 
 ### Return type
 
-[CatalogCollectionItemDataList](CatalogCollectionItemDataList.md)
+[InlineResponse20026](InlineResponse20026.md)
 
 ### Example response
 
 ```
-{
-  "page" : 1,
-  "per_page" : 1,
-  "total_count" : 82,
-  "data" : [ {
-    "id" : "123",
-    "asset" : {
-      "id" : "1690105108",
-      "type" : "image",
-      "name" : "Young couple playing tennis at the court"
-    },
-    "created_time" : "2021-06-10T13:26:09-04:00",
-    "collection_ids" : [ "126351028" ]
-  } ]
-}
+"{page=1, per_page=1, total_count=82, data=[{id=123, asset={id=1690105108, type=image, name=Young couple playing tennis at the court}, created_time=2021-06-10T13:26:09-04:00, collection_ids=[126351028]}]}"
 ```
 
 <a name="updateCollection"></a>
 # CatalogApi.updateCollection
-> `CatalogCollection CatalogApi.updateCollection(collection_id, body)`
+> `InlineResponse2012 CatalogApi.updateCollection(collection_id, body)`
 
 **Update collection metadata**
 
@@ -568,7 +421,7 @@ const api = new sstk.CatalogApi();
 
 const collection_id = "126351028"; // String | ID of collection that needs to be modified
 
-const body = new ShutterstockApiReference.UpdateCatalogCollection(); // UpdateCatalogCollection | Collections Metadata to update
+const body = new ShutterstockApiReference.Body21(); // Body21 | Collections Metadata to update
 
 
 api.updateCollection(collection_id, body)
@@ -587,7 +440,7 @@ api.updateCollection(collection_id, body)
 Name | Type | Description
 ------------- | ------------- | -------------
  collection_id (required) | String| ID of collection that needs to be modified 
- body (required) | [UpdateCatalogCollection](UpdateCatalogCollection.md)| Collections Metadata to update 
+ body (required) | [Body21](Body21.md)| Collections Metadata to update 
 
 ### Accepted authentication
 
@@ -606,43 +459,11 @@ Required scopes:
 
 ### Return type
 
-[CatalogCollection](CatalogCollection.md)
+[InlineResponse2012](InlineResponse2012.md)
 
 ### Example response
 
 ```
-{
-  "id" : "126351028",
-  "name" : "My collection",
-  "cover_asset" : {
-    "id" : "123",
-    "asset" : {
-      "id" : "1690105108",
-      "type" : "image",
-      "name" : "Young couple playing tennis at the court"
-    },
-    "created_time" : "2021-06-10T13:26:09-04:00"
-  },
-  "total_item_count" : 2,
-  "created_time" : "2021-05-20T16:15:22-04:00",
-  "updated_time" : "2021-06-10T13:26:09-04:00",
-  "visibility" : "public",
-  "role_assignments" : {
-    "collection_id" : "126351028",
-    "roles" : {
-      "owners" : [ {
-        "id" : "321",
-        "type" : "USER",
-        "email" : "userOne@org.com"
-      } ],
-      "editors" : [ {
-        "id" : "987",
-        "type" : "USER",
-        "email" : "userTwo@org.com"
-      } ],
-      "viewers" : [ ]
-    }
-  }
-}
+"{id=126351028, name=My collection, cover_asset={id=123, asset={id=1690105108, type=image, name=Young couple playing tennis at the court}, created_time=2021-06-10T13:26:09-04:00}, total_item_count=2, created_time=2021-05-20T16:15:22-04:00, updated_time=2021-06-10T13:26:09-04:00, visibility=public, role_assignments={collection_id=126351028, roles={owners=[{id=321, type=USER, email=userOne@org.com}], editors=[{id=987, type=USER, email=userTwo@org.com}], viewers=[]}}}"
 ```
 
