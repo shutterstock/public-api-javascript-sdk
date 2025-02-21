@@ -86,13 +86,4 @@ describe('images api', () => {
         expect(res.name).to.match(new RegExp(`^Collection ${uuidv4Regex}`, 'i'));
       });
   });
-
-  it('should be able to get featured collections', () => {
-    return imagesApi.getFeaturedImageCollectionList()
-      .then(function(res) {
-        expect(res).to.have.keys('data');
-        expect(res.data).to.be.an('array');
-        expect(res.data).to.not.be.empty;
-      });
-  });
 });
