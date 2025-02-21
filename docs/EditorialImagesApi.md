@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 <a name="getEditorialCategories"></a>
 # EditorialImagesApi.getEditorialCategories
-> `InlineResponse20034 EditorialImagesApi.getEditorialCategories()`
+> `InlineResponse20033 EditorialImagesApi.getEditorialCategories()`
 
 **(Deprecated) List editorial categories**
 
@@ -71,7 +71,7 @@ This endpoint does not accept any parameters.
 
 ### Return type
 
-[InlineResponse20034](InlineResponse20034.md)
+[InlineResponse20033](InlineResponse20033.md)
 
 ### Example response
 
@@ -81,7 +81,7 @@ This endpoint does not accept any parameters.
 
 <a name="getEditorialImage"></a>
 # EditorialImagesApi.getEditorialImage
-> `InlineResponse20018 EditorialImagesApi.getEditorialImage(id, country)`
+> `InlineResponse20017 EditorialImagesApi.getEditorialImage(id, country)`
 
 **Get editorial content details**
 
@@ -136,7 +136,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20018](InlineResponse20018.md)
+[InlineResponse20017](InlineResponse20017.md)
 
 ### Example response
 
@@ -252,7 +252,7 @@ Object
 
 <a name="getEditorialImageLivefeed"></a>
 # EditorialImagesApi.getEditorialImageLivefeed
-> `InlineResponse20021 EditorialImagesApi.getEditorialImageLivefeed(id, country)`
+> `InlineResponse20020 EditorialImagesApi.getEditorialImageLivefeed(id, country)`
 
 **Get editorial livefeed**
 
@@ -305,7 +305,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20021](InlineResponse20021.md)
+[InlineResponse20020](InlineResponse20020.md)
 
 ### Example response
 
@@ -435,7 +435,7 @@ Object
 
 <a name="getEditorialImageLivefeedList"></a>
 # EditorialImagesApi.getEditorialImageLivefeedList
-> `InlineResponse20020 EditorialImagesApi.getEditorialImageLivefeedList(country, queryParams)`
+> `InlineResponse20019 EditorialImagesApi.getEditorialImageLivefeedList(country, queryParams)`
 
 **Get editorial livefeed list**
 
@@ -491,7 +491,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20020](InlineResponse20020.md)
+[InlineResponse20019](InlineResponse20019.md)
 
 ### Example response
 
@@ -501,7 +501,7 @@ Name | Type | Description
 
 <a name="getEditorialImage_0"></a>
 # EditorialImagesApi.getEditorialImage_0
-> `InlineResponse20018 EditorialImagesApi.getEditorialImage_0(id, country, queryParams)`
+> `InlineResponse20017 EditorialImagesApi.getEditorialImage_0(id, country, queryParams)`
 
 **(Deprecated) Get editorial content details**
 
@@ -560,7 +560,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20018](InlineResponse20018.md)
+[InlineResponse20017](InlineResponse20017.md)
 
 ### Example response
 
@@ -570,7 +570,7 @@ Name | Type | Description
 
 <a name="getEditorialLivefeed"></a>
 # EditorialImagesApi.getEditorialLivefeed
-> `InlineResponse20021 EditorialImagesApi.getEditorialLivefeed(id, country)`
+> `InlineResponse20020 EditorialImagesApi.getEditorialLivefeed(id, country)`
 
 **(Deprecated) Get editorial livefeed**
 
@@ -625,7 +625,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20021](InlineResponse20021.md)
+[InlineResponse20020](InlineResponse20020.md)
 
 ### Example response
 
@@ -757,7 +757,7 @@ Object
 
 <a name="getEditorialLivefeedList"></a>
 # EditorialImagesApi.getEditorialLivefeedList
-> `InlineResponse20033 EditorialImagesApi.getEditorialLivefeedList(country, queryParams)`
+> `InlineResponse20032 EditorialImagesApi.getEditorialLivefeedList(country, queryParams)`
 
 **(Deprecated) Get editorial livefeed list**
 
@@ -815,7 +815,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20033](InlineResponse20033.md)
+[InlineResponse20032](InlineResponse20032.md)
 
 ### Example response
 
@@ -825,7 +825,7 @@ Name | Type | Description
 
 <a name="getUpdatedEditorialImage"></a>
 # EditorialImagesApi.getUpdatedEditorialImage
-> `InlineResponse20017 EditorialImagesApi.getUpdatedEditorialImage(type, date_updated_start, date_updated_end, country, queryParams)`
+> `InlineResponse20016 EditorialImagesApi.getUpdatedEditorialImage(type, date_updated_start, date_updated_end, country, queryParams)`
 
 **(Deprecated) List updated content**
 
@@ -900,7 +900,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20017](InlineResponse20017.md)
+[InlineResponse20016](InlineResponse20016.md)
 
 ### Example response
 
@@ -910,7 +910,7 @@ Name | Type | Description
 
 <a name="getUpdatedEditorialImages"></a>
 # EditorialImagesApi.getUpdatedEditorialImages
-> `InlineResponse20017 EditorialImagesApi.getUpdatedEditorialImages(type, date_updated_start, date_updated_end, country, queryParams)`
+> `InlineResponse20016 EditorialImagesApi.getUpdatedEditorialImages(type, date_updated_start, date_updated_end, country, queryParams)`
 
 **List updated content**
 
@@ -985,7 +985,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20017](InlineResponse20017.md)
+[InlineResponse20016](InlineResponse20016.md)
 
 ### Example response
 
@@ -1141,7 +1141,7 @@ Object
 
 <a name="listEditorialImageCategories"></a>
 # EditorialImagesApi.listEditorialImageCategories
-> `InlineResponse20016 EditorialImagesApi.listEditorialImageCategories()`
+> `InlineResponse20015 EditorialImagesApi.listEditorialImageCategories()`
 
 **List editorial categories**
 
@@ -1186,7 +1186,7 @@ This endpoint does not accept any parameters.
 
 ### Return type
 
-[InlineResponse20016](InlineResponse20016.md)
+[InlineResponse20015](InlineResponse20015.md)
 
 ### Example response
 
@@ -1196,7 +1196,7 @@ This endpoint does not accept any parameters.
 
 <a name="listEditorialImages"></a>
 # EditorialImagesApi.listEditorialImages
-> `InlineResponse20019 EditorialImagesApi.listEditorialImages(id, country, queryParams)`
+> `InlineResponse20018 EditorialImagesApi.listEditorialImages(id, country, queryParams)`
 
 **list editorial image details**
 
@@ -1255,7 +1255,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20019](InlineResponse20019.md)
+[InlineResponse20018](InlineResponse20018.md)
 
 ### Example response
 
@@ -1265,7 +1265,7 @@ Name | Type | Description
 
 <a name="searchEditorial"></a>
 # EditorialImagesApi.searchEditorial
-> `InlineResponse20015 EditorialImagesApi.searchEditorial(country, queryParams)`
+> `InlineResponse20014 EditorialImagesApi.searchEditorial(country, queryParams)`
 
 **(Deprecated) Search editorial content**
 
@@ -1335,7 +1335,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20015](InlineResponse20015.md)
+[InlineResponse20014](InlineResponse20014.md)
 
 ### Example response
 
@@ -1345,7 +1345,7 @@ Name | Type | Description
 
 <a name="searchEditorialImages"></a>
 # EditorialImagesApi.searchEditorialImages
-> `InlineResponse20015 EditorialImagesApi.searchEditorialImages(country, queryParams)`
+> `InlineResponse20014 EditorialImagesApi.searchEditorialImages(country, queryParams)`
 
 **Search editorial images**
 
@@ -1415,7 +1415,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20015](InlineResponse20015.md)
+[InlineResponse20014](InlineResponse20014.md)
 
 ### Example response
 

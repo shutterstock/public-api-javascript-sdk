@@ -6,6 +6,6 @@ Name | Type | Description | Notes
 **page** | **Number** |  | 
 **per_page** | **Number** |  | 
 **total_count** | **Number** |  | 
-**data** | [**[InlineResponse20027Data]**](InlineResponse20027Data.md) | List of catalog collections | 
+**data** | [**[InlineResponse20026Data]**](InlineResponse20026Data.md) | List of catalog collections | 
 
 

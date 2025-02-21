@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**[InlineResponse2009Data]**](InlineResponse2009Data.md) | Tracks | [optional] 
+**data** | [**[InlineResponse2008Data]**](InlineResponse2008Data.md) | Tracks | [optional] 
 **errors** | [**[AudioDataListErrors]**](AudioDataListErrors.md) | Error list; appears only if there was an error | [optional] 
 **message** | **String** | Server-generated message, if any | [optional] 
 **page** | **Number** | Current page that is returned | [optional] 

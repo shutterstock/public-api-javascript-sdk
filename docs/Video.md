@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **affiliate_url** | **String** | Affiliate referral link; appears only for registered affiliate partners | [optional] 
 **aspect** | **Number** | Aspect ratio of this video in decimal format, such as 0.6667 | [optional] 
 **aspect_ratio** | **String** | Aspect ratio of the video as a ratio, such as 16:9 | [optional] 
-**assets** | [**InlineResponse2007Assets**](InlineResponse2007Assets.md) |  | [optional] 
+**assets** | [**InlineResponse2006Assets**](InlineResponse2006Assets.md) |  | [optional] 
 **categories** | [**[InlineResponse200Categories]**](InlineResponse200Categories.md) | List of categories | [optional] 
 **contributor** | [**InlineResponse200Contributor**](InlineResponse200Contributor.md) |  | 
 **description** | **String** | Description of this video | [optional] 

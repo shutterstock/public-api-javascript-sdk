@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getAccessToken"></a>
 # UsersApi.getAccessToken
-> `InlineResponse20030 UsersApi.getAccessToken()`
+> `InlineResponse20029 UsersApi.getAccessToken()`
 
 **Get access token details**
 
@@ -51,7 +51,7 @@ This endpoint does not accept any parameters.
 
 ### Return type
 
-[InlineResponse20030](InlineResponse20030.md)
+[InlineResponse20029](InlineResponse20029.md)
 
 ### Example response
 
@@ -61,7 +61,7 @@ This endpoint does not accept any parameters.
 
 <a name="getUser"></a>
 # UsersApi.getUser
-> `InlineResponse20029 UsersApi.getUser()`
+> `InlineResponse20028 UsersApi.getUser()`
 
 **Get user details**
 
@@ -101,7 +101,7 @@ This endpoint does not accept any parameters.
 
 ### Return type
 
-[InlineResponse20029](InlineResponse20029.md)
+[InlineResponse20028](InlineResponse20028.md)
 
 ### Example response
 

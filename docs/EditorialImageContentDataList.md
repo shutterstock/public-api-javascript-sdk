@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**[InlineResponse20015Data]**](InlineResponse20015Data.md) | Editorial items | [optional] 
+**data** | [**[InlineResponse20014Data]**](InlineResponse20014Data.md) | Editorial items | [optional] 
 **errors** | [**[AudioDataListErrors]**](AudioDataListErrors.md) | Error list; appears only if there was an error | [optional] 
 **message** | **String** | Optional error message | [optional] 
 **page** | **Number** | Current page of the response | [optional] 

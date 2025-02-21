@@ -10,9 +10,6 @@ Method | HTTP request | Description
 [`deleteImageCollection`](ImagesApi.md#deleteImageCollection) | `DELETE /v2/images/collections/{id}` | Delete image collections
 [`deleteImageCollectionItems`](ImagesApi.md#deleteImageCollectionItems) | `DELETE /v2/images/collections/{id}/items` | Remove images from collections
 [`downloadImage`](ImagesApi.md#downloadImage) | `POST /v2/images/licenses/{id}/downloads` | Download images
-[`getFeaturedImageCollection`](ImagesApi.md#getFeaturedImageCollection) | `GET /v2/images/collections/featured/{id}` | Get the details of featured image collections
-[`getFeaturedImageCollectionItems`](ImagesApi.md#getFeaturedImageCollectionItems) | `GET /v2/images/collections/featured/{id}/items` | Get the contents of featured image collections
-[`getFeaturedImageCollectionList`](ImagesApi.md#getFeaturedImageCollectionList) | `GET /v2/images/collections/featured` | List featured image collections
 [`getImage`](ImagesApi.md#getImage) | `GET /v2/images/{id}` | Get details about images
 [`getImageCollection`](ImagesApi.md#getImageCollection) | `GET /v2/images/collections/{id}` | Get the details of image collections
 [`getImageCollectionItems`](ImagesApi.md#getImageCollectionItems) | `GET /v2/images/collections/{id}/items` | Get the contents of image collections
@@ -453,237 +450,6 @@ Name | Type | Description
 
 ```
 "{url=https://download.shutterstock.com/gatekeeper/[random-characters]/shutterstock_59656357.jpg}"
-```
-
-<a name="getFeaturedImageCollection"></a>
-# ImagesApi.getFeaturedImageCollection
-> `InlineResponse2006 ImagesApi.getFeaturedImageCollection(id, queryParams)`
-
-**Get the details of featured image collections**
-
-This endpoint gets more detailed information about a featured collection, including its cover image and timestamps for its creation and most recent update. To get the images, use `GET /v2/images/collections/featured/{id}/items`.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.ImagesApi();
-
-const id = "136351027"; // String | Collection ID
-
-const queryParams = { 
-  'embed': "embed_example", // String | Which sharing information to include in the response, such as a URL to the collection
-  'asset_hint': "1x" // String | Cover image size
-};
-
-api.getFeaturedImageCollection(id, queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- id (required) | String| Collection ID 
- embed | String| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_url"
- asset_hint | String| Cover image size, defaults to 1x <br/><br/>Valid values: "1x", "2x"
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-[InlineResponse2006](InlineResponse2006.md)
-
-### Example response
-
-```
-"{total_item_count=82, items_updated_time=2021-07-08T12:33:37.000Z, name=Exercise & Fitness, id=19853, created_time=2021-07-07T13:10:24.000Z, updated_time=2021-07-07T13:10:24.000Z, cover_item={url=https://ak.picdn.net/assets/cms/b467415246debdab45825d915a548f8f79b57882-Collection_1_Thumnail.jpg}}"
-```
-
-<a name="getFeaturedImageCollectionItems"></a>
-# ImagesApi.getFeaturedImageCollectionItems
-> `Object ImagesApi.getFeaturedImageCollectionItems(id, queryParams)`
-
-**Get the contents of featured image collections**
-
-This endpoint lists the IDs of images in a featured collection and the date that each was added.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.ImagesApi();
-
-const id = "136351027"; // String | Collection ID
-
-const queryParams = { 
-  'page': 1, // Number | Page number
-  'per_page': 100 // Number | Number of results per page
-};
-
-api.getFeaturedImageCollectionItems(id, queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- id (required) | String| Collection ID 
- page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 100 
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-Object
-
-### Example response
-
-```
-{
-  "data" : [ {
-    "id" : "1690105108",
-    "added_time" : "2021-07-08T12:33:37.000Z",
-    "media_type" : "image"
-  }, {
-    "id" : "1468703072",
-    "added_time" : "2021-07-08T12:31:43.000Z",
-    "media_type" : "image"
-  } ],
-  "page" : 1,
-  "per_page" : 2,
-  "total_count" : 82
-}
-```
-
-<a name="getFeaturedImageCollectionList"></a>
-# ImagesApi.getFeaturedImageCollectionList
-> `Object ImagesApi.getFeaturedImageCollectionList(queryParams)`
-
-**List featured image collections**
-
-This endpoint lists featured collections of specific types and a name and cover image for each collection.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.ImagesApi();
-
-const queryParams = { 
-  'embed': "share_url", // String | Which sharing information to include in the response, such as a URL to the collection
-  'type': ["[photo]"], // [String] | The types of collections to return
-  'asset_hint': "1x" // String | Cover image size
-};
-
-api.getFeaturedImageCollectionList(queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- embed | String| Which sharing information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_url"
- type | [String]| The types of collections to return <br/><br/>Valid values: "photo", "editorial", "vector"
- asset_hint | String| Cover image size, defaults to 1x <br/><br/>Valid values: "1x", "2x"
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-Object
-
-### Example response
-
-```
-{
-  "data" : [ {
-    "total_item_count" : 82,
-    "items_updated_time" : "2021-07-08T12:33:37.000Z",
-    "name" : "Exercise & Fitness",
-    "id" : "19853",
-    "created_time" : "2021-07-07T13:10:24.000Z",
-    "updated_time" : "2021-07-07T13:10:24.000Z",
-    "cover_item" : {
-      "url" : "https://ak.picdn.net/assets/cms/b467415246debdab45825d915a548f8f79b57882-Collection_1_Thumnail.jpg"
-    }
-  } ],
-  "page" : 1,
-  "per_page" : 5,
-  "total_count" : 123455
-}
 ```
 
 <a name="getImage"></a>
@@ -1813,6 +1579,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 const api = new sstk.ImagesApi();
 
 const queryParams = { 
+  'library': ["[\"shutterstock\"]"], // [String] | Search within different Shutterstock owned libraries
   'added_date': new Date("2021-03-29"), // Date | Show images added on the specified date
   'added_date_start': new Date("2021-03-29"), // Date | Show images added on or after the specified date
   'aspect_ratio_min': 1.7778, // Number | Show images with the specified aspect ratio or higher, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image
@@ -1866,6 +1633,7 @@ api.searchImages(queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
+ library | [String]| Search within different Shutterstock owned libraries, defaults to ["shutterstock"] <br/><br/>Valid values: "shutterstock", "offset"
  added_date | Date| Show images added on the specified date 
  added_date_start | Date| Show images added on or after the specified date 
  aspect_ratio_min | Number| Show images with the specified aspect ratio or higher, using a positive decimal of the width divided by the height, such as 1.7778 for a 16:9 image 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**preview_mp3** | [**InlineResponse20012AssetsPreviewMp3**](InlineResponse20012AssetsPreviewMp3.md) |  | [optional] 
-**waveform** | [**InlineResponse20012AssetsPreviewMp3**](InlineResponse20012AssetsPreviewMp3.md) |  | [optional] 
+**preview_mp3** | [**InlineResponse20011AssetsPreviewMp3**](InlineResponse20011AssetsPreviewMp3.md) |  | [optional] 
+**waveform** | [**InlineResponse20011AssetsPreviewMp3**](InlineResponse20011AssetsPreviewMp3.md) |  | [optional] 
 
 

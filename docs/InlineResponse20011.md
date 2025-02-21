@@ -3,7 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**url** | **String** | URL that can be used to download the unwatermarked, licensed asset | 
-**shorts_loops_stems** | **String** | URL that can be used to download the .zip file containing shorts, loops, and stems | [optional] 
+**data** | [**[InlineResponse20011Data]**](InlineResponse20011Data.md) | List of tracks | 
+**message** | **String** | Server-generated message, if any | [optional] 
+**page** | **Number** | Current page that is returned | [optional] 
+**per_page** | **Number** | Number of results per page | [optional] 
+**total_count** | **Number** | Total count of all results across all pages | 
+**search_id** | **String** | ID of the search | 
 
 

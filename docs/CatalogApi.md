@@ -263,7 +263,7 @@ Required scopes:
 
 <a name="getCollections"></a>
 # CatalogApi.getCollections
-> `InlineResponse20027 CatalogApi.getCollections(queryParams)`
+> `InlineResponse20026 CatalogApi.getCollections(queryParams)`
 
 **List catalog collections**
 
@@ -321,7 +321,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20027](InlineResponse20027.md)
+[InlineResponse20026](InlineResponse20026.md)
 
 ### Example response
 
@@ -331,7 +331,7 @@ Name | Type | Description
 
 <a name="searchCatalog"></a>
 # CatalogApi.searchCatalog
-> `InlineResponse20026 CatalogApi.searchCatalog(queryParams)`
+> `InlineResponse20025 CatalogApi.searchCatalog(queryParams)`
 
 **Search catalogs for assets**
 
@@ -393,7 +393,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20026](InlineResponse20026.md)
+[InlineResponse20025](InlineResponse20025.md)
 
 ### Example response
 

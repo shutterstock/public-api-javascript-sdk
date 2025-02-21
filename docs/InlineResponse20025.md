@@ -3,8 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**[InlineResponse20022Data]**](InlineResponse20022Data.md) |  | [optional] 
-**search_id** | **String** |  | [optional] 
-**total_count** | **Number** |  | [optional] 
+**page** | **Number** |  | 
+**per_page** | **Number** |  | 
+**total_count** | **Number** |  | 
+**data** | [**[InlineResponse20025Data]**](InlineResponse20025Data.md) | List of catalog collection items | 
 
 

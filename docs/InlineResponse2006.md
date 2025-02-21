@@ -3,14 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cover_item** | [**InlineResponse2006CoverItem**](InlineResponse2006CoverItem.md) |  | [optional] 
-**created_time** | **Date** | Date that the collection was created | [optional] 
-**hero_item** | [**InlineResponse2006HeroItem**](InlineResponse2006HeroItem.md) |  | [optional] 
-**id** | **String** | Collection ID | 
-**items_updated_time** | **Date** | Date that an item in the collection was last added or removed | [optional] 
-**name** | **String** | Name of the collection | 
-**share_url** | **String** | Unique share url for the collection | [optional] 
-**total_item_count** | **Number** | Total number of items in the collection | 
-**updated_time** | **Date** | Date that the collection was last modified | [optional] 
+**data** | [**[InlineResponse2006Data]**](InlineResponse2006Data.md) | List of videos | 
+**message** | **String** | Server-generated message, if any | [optional] 
+**page** | **Number** | Current page that is returned | [optional] 
+**per_page** | **Number** | Number of results per page | [optional] 
+**total_count** | **Number** | Total count of all results across all pages | 
+**search_id** | **String** | Unique identifier for the search request | 
 
 

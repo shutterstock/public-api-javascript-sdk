@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **added_date** | **Date** | Date this sound effect was added to the Shutterstock library | [optional] 
 **affiliate_url** | **String** | Affiliate referral link; appears only for registered affiliate partners | [optional] 
 **artist** | **String** | Artist of the sound effect | [optional] 
-**assets** | [**InlineResponse20012Assets**](InlineResponse20012Assets.md) |  | [optional] 
+**assets** | [**InlineResponse20011Assets**](InlineResponse20011Assets.md) |  | [optional] 
 **contributor** | [**InlineResponse200Contributor**](InlineResponse200Contributor.md) |  | 
 **description** | **String** | Description of this sound effect | [optional] 
 **duration** | **Number** | Duration of this sound effect in seconds | [optional] 

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="getEditorialVideo"></a>
 # EditorialVideoApi.getEditorialVideo
-> `InlineResponse20024 EditorialVideoApi.getEditorialVideo(id, country, queryParams)`
+> `InlineResponse20023 EditorialVideoApi.getEditorialVideo(id, country, queryParams)`
 
 **Get editorial video content details**
 
@@ -73,7 +73,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20024](InlineResponse20024.md)
+[InlineResponse20023](InlineResponse20023.md)
 
 ### Example response
 
@@ -263,7 +263,7 @@ Object
 
 <a name="listEditorialVideoCategories"></a>
 # EditorialVideoApi.listEditorialVideoCategories
-> `InlineResponse20023 EditorialVideoApi.listEditorialVideoCategories()`
+> `InlineResponse20022 EditorialVideoApi.listEditorialVideoCategories()`
 
 **List editorial video categories**
 
@@ -308,7 +308,7 @@ This endpoint does not accept any parameters.
 
 ### Return type
 
-[InlineResponse20023](InlineResponse20023.md)
+[InlineResponse20022](InlineResponse20022.md)
 
 ### Example response
 
@@ -318,7 +318,7 @@ This endpoint does not accept any parameters.
 
 <a name="listEditorialVideos"></a>
 # EditorialVideoApi.listEditorialVideos
-> `InlineResponse20025 EditorialVideoApi.listEditorialVideos(id, country, queryParams)`
+> `InlineResponse20024 EditorialVideoApi.listEditorialVideos(id, country, queryParams)`
 
 **List editorial videos details by ID list**
 
@@ -377,7 +377,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20025](InlineResponse20025.md)
+[InlineResponse20024](InlineResponse20024.md)
 
 ### Example response
 
@@ -387,7 +387,7 @@ Name | Type | Description
 
 <a name="searchEditorialVideos"></a>
 # EditorialVideoApi.searchEditorialVideos
-> `InlineResponse20022 EditorialVideoApi.searchEditorialVideos(country, queryParams)`
+> `InlineResponse20021 EditorialVideoApi.searchEditorialVideos(country, queryParams)`
 
 **Search editorial video content**
 
@@ -461,7 +461,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20022](InlineResponse20022.md)
+[InlineResponse20021](InlineResponse20021.md)
 
 ### Example response
 

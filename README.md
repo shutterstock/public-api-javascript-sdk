@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.1.42
+- API version: 1.2.0
 
 ## References
 
@@ -391,9 +391,6 @@ Class | Method | HTTP request | Description
 *shutterstock-api.ImagesApi* | [**deleteImageCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#deleteImageCollection) | **DELETE** /v2/images/collections/{id} | Delete image collections
 *shutterstock-api.ImagesApi* | [**deleteImageCollectionItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#deleteImageCollectionItems) | **DELETE** /v2/images/collections/{id}/items | Remove images from collections
 *shutterstock-api.ImagesApi* | [**downloadImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#downloadImage) | **POST** /v2/images/licenses/{id}/downloads | Download images
-*shutterstock-api.ImagesApi* | [**getFeaturedImageCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getFeaturedImageCollection) | **GET** /v2/images/collections/featured/{id} | Get the details of featured image collections
-*shutterstock-api.ImagesApi* | [**getFeaturedImageCollectionItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getFeaturedImageCollectionItems) | **GET** /v2/images/collections/featured/{id}/items | Get the contents of featured image collections
-*shutterstock-api.ImagesApi* | [**getFeaturedImageCollectionList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getFeaturedImageCollectionList) | **GET** /v2/images/collections/featured | List featured image collections
 *shutterstock-api.ImagesApi* | [**getImage**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getImage) | **GET** /v2/images/{id} | Get details about images
 *shutterstock-api.ImagesApi* | [**getImageCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getImageCollection) | **GET** /v2/images/collections/{id} | Get the details of image collections
 *shutterstock-api.ImagesApi* | [**getImageCollectionItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#getImageCollectionItems) | **GET** /v2/images/collections/{id}/items | Get the contents of image collections
@@ -426,9 +423,6 @@ Class | Method | HTTP request | Description
 *shutterstock-api.VideosApi* | [**deleteVideoCollectionItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#deleteVideoCollectionItems) | **DELETE** /v2/videos/collections/{id}/items | Remove videos from collections
 *shutterstock-api.VideosApi* | [**downloadVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#downloadVideos) | **POST** /v2/videos/licenses/{id}/downloads | Download videos
 *shutterstock-api.VideosApi* | [**findSimilarVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#findSimilarVideos) | **GET** /v2/videos/{id}/similar | List similar videos
-*shutterstock-api.VideosApi* | [**getFeaturedVideoCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getFeaturedVideoCollection) | **GET** /v2/videos/collections/featured/{id} | Get the details of featured video collections
-*shutterstock-api.VideosApi* | [**getFeaturedVideoCollectionItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getFeaturedVideoCollectionItems) | **GET** /v2/videos/collections/featured/{id}/items | Get the contents of featured video collections
-*shutterstock-api.VideosApi* | [**getFeaturedVideoCollectionList**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getFeaturedVideoCollectionList) | **GET** /v2/videos/collections/featured | List featured video collections
 *shutterstock-api.VideosApi* | [**getUpdatedVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getUpdatedVideos) | **GET** /v2/videos/updated | List updated videos
 *shutterstock-api.VideosApi* | [**getVideo**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getVideo) | **GET** /v2/videos/{id} | Get details about videos
 *shutterstock-api.VideosApi* | [**getVideoCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/VideosApi.md#getVideoCollection) | **GET** /v2/videos/collections/{id} | Get the details of video collections

@@ -3,16 +3,20 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**about** | **String** | Short description of the contributors' library | [optional] 
-**contributor_type** | **[String]** | Type of content that the contributor specializes in (photographer, illustrator, etc) | [optional] 
-**display_name** | **String** | Preferred name to be displayed for the contributor | [optional] 
-**equipment** | **[String]** | List of equipment used by the contributor (Canon EOS 5D Mark II, etc) | [optional] 
-**id** | **String** | Contributor ID | 
-**location** | **String** | Country code representing the contributor's locale | [optional] 
-**portfolio_url** | **String** | Web URL for the contributors' profile | [optional] 
-**social_media** | [**InlineResponse20028SocialMedia**](InlineResponse20028SocialMedia.md) |  | [optional] 
-**styles** | **[String]** | List of styles that the contributor specializes in (lifestyle, mixed media, etc) | [optional] 
-**subjects** | **[String]** | Generic list of subjects for contributors' work (food_and_drink, holiday, people, etc) | [optional] 
-**website** | **String** | Personal website for the contributor | [optional] 
+**contributor_id** | **String** | Unique internal identifier of the user, as a contributor | [optional] 
+**customer_id** | **String** | Unique internal identifier of the user, as a purchaser | [optional] 
+**email** | **String** | Email address of the user | [optional] 
+**first_name** | **String** | First name of the user | [optional] 
+**full_name** | **String** | Full name including first, middle, and last name of the user | [optional] 
+**id** | **String** | Unique internal identifier for the user, not tied to contributor or purchasing customer | [optional] 
+**is_premier** | **Boolean** | True if the user has access to the Premier collection, false otherwise | [optional] 
+**is_premier_parent** | **Boolean** | True if the user has access to the Premier collection and also has child users | [optional] 
+**language** | **String** | Main language of the user account | [optional] 
+**last_name** | **String** | Last name of the user | [optional] 
+**only_enhanced_license** | **Boolean** | True if the user has an enterprise license, false otherwise | [optional] 
+**only_sensitive_use** | **Boolean** | True if the user has access to sensitive use only, false otherwise | [optional] 
+**organization_id** | **String** | Unique internal identifier for the user's organization, specific to Premier users | [optional] 
+**premier_permissions** | **[String]** | List of permissions allowed through the Premier client | [optional] 
+**username** | **String** | User name associated to the user | [optional] 
 
 

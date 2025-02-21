@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **aspect** | **Number** |  | [optional] 
-**assets** | [**InlineResponse20015Assets**](InlineResponse20015Assets.md) |  | [optional] 
+**assets** | [**InlineResponse20014Assets**](InlineResponse20014Assets.md) |  | [optional] 
 **byline** | **String** |  | [optional] 
 **caption** | **String** |  | [optional] 
-**categories** | [**[InlineResponse20015Categories]**](InlineResponse20015Categories.md) | List of categories | [optional] 
+**categories** | [**[InlineResponse20014Categories]**](InlineResponse20014Categories.md) | List of categories | [optional] 
 **date_taken** | **Date** |  | [optional] 
 **description** | **String** |  | [optional] 
 **id** | **String** |  | 

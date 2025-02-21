@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="downloadSfx"></a>
 # SoundEffectsApi.downloadSfx
-> `InlineResponse20014 SoundEffectsApi.downloadSfx(id)`
+> `InlineResponse20013 SoundEffectsApi.downloadSfx(id)`
 
 **Download sound effects**
 
@@ -65,7 +65,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20014](InlineResponse20014.md)
+[InlineResponse20013](InlineResponse20013.md)
 
 ### Example response
 
@@ -75,7 +75,7 @@ Name | Type | Description
 
 <a name="getSfxDetails"></a>
 # SoundEffectsApi.getSfxDetails
-> `InlineResponse20013 SoundEffectsApi.getSfxDetails(id, queryParams)`
+> `InlineResponse20012 SoundEffectsApi.getSfxDetails(id, queryParams)`
 
 **Get details about sound effects**
 
@@ -137,7 +137,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20013](InlineResponse20013.md)
+[InlineResponse20012](InlineResponse20012.md)
 
 ### Example response
 
@@ -408,7 +408,7 @@ Object
 
 <a name="searchSFX"></a>
 # SoundEffectsApi.searchSFX
-> `InlineResponse20012 SoundEffectsApi.searchSFX(queryParams)`
+> `InlineResponse20011 SoundEffectsApi.searchSFX(queryParams)`
 
 **Search for sound effects**
 
@@ -485,7 +485,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20012](InlineResponse20012.md)
+[InlineResponse20011](InlineResponse20011.md)
 
 ### Example response
 

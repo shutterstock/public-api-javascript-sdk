@@ -252,7 +252,7 @@ No response body.
 
 <a name="downloadTracks"></a>
 # AudioApi.downloadTracks
-> `InlineResponse20011 AudioApi.downloadTracks(id)`
+> `InlineResponse20010 AudioApi.downloadTracks(id)`
 
 **Download audio tracks**
 
@@ -303,7 +303,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20011](InlineResponse20011.md)
+[InlineResponse20010](InlineResponse20010.md)
 
 ### Example response
 
@@ -313,7 +313,7 @@ Name | Type | Description
 
 <a name="getTrack"></a>
 # AudioApi.getTrack
-> `InlineResponse20010 AudioApi.getTrack(id, queryParams)`
+> `InlineResponse2009 AudioApi.getTrack(id, queryParams)`
 
 **Get details about audio tracks**
 
@@ -371,7 +371,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20010](InlineResponse20010.md)
+[InlineResponse2009](InlineResponse2009.md)
 
 ### Example response
 
@@ -1160,7 +1160,7 @@ No response body.
 
 <a name="searchTracks"></a>
 # AudioApi.searchTracks
-> `InlineResponse2009 AudioApi.searchTracks(queryParams)`
+> `InlineResponse2008 AudioApi.searchTracks(queryParams)`
 
 **Search for tracks**
 
@@ -1253,7 +1253,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse2009](InlineResponse2009.md)
+[InlineResponse2008](InlineResponse2008.md)
 
 ### Example response
 

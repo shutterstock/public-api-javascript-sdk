@@ -152,7 +152,7 @@ Name | Type | Description
 
 <a name="getSimilarVideos"></a>
 # ComputerVisionApi.getSimilarVideos
-> `InlineResponse2007 ComputerVisionApi.getSimilarVideos(asset_id, queryParams)`
+> `InlineResponse2006 ComputerVisionApi.getSimilarVideos(asset_id, queryParams)`
 
 **List similar videos**
 
@@ -218,7 +218,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse2007](InlineResponse2007.md)
+[InlineResponse2006](InlineResponse2006.md)
 
 ### Example response
 

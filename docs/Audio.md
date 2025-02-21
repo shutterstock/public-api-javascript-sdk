@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **added_date** | **Date** | Date this track was added to the Shutterstock library | [optional] 
 **affiliate_url** | **String** | Affiliate referral link; appears only for registered affiliate partners | [optional] 
-**album** | [**InlineResponse2009Album**](InlineResponse2009Album.md) |  | [optional] 
-**artists** | [**[InlineResponse2009Artists]**](InlineResponse2009Artists.md) | List of artists | [optional] 
-**assets** | [**InlineResponse2009Assets**](InlineResponse2009Assets.md) |  | [optional] 
+**album** | [**InlineResponse2008Album**](InlineResponse2008Album.md) |  | [optional] 
+**artists** | [**[InlineResponse2008Artists]**](InlineResponse2008Artists.md) | List of artists | [optional] 
+**assets** | [**InlineResponse2008Assets**](InlineResponse2008Assets.md) |  | [optional] 
 **bpm** | **Number** | BPM (beats per minute) of this track | [optional] 
 **contributor** | [**InlineResponse200Contributor**](InlineResponse200Contributor.md) |  | 
 **deleted_time** | **Date** |  | [optional] 
@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **published_time** | **Date** | Time this track was published | [optional] 
 **recording_version** | **String** | Recording version of this track | [optional] 
 **releases** | **[String]** | List of all releases of this track | [optional] 
-**similar_artists** | [**[InlineResponse2009Artists]**](InlineResponse2009Artists.md) | List of all similar artists of this track | [optional] 
+**similar_artists** | [**[InlineResponse2008Artists]**](InlineResponse2008Artists.md) | List of all similar artists of this track | [optional] 
 **submitted_time** | **Date** | Time this track was submitted | [optional] 
 **title** | **String** | Title of this track | [optional] 
 **updated_time** | **Date** | Time this track was last updated | [optional] 

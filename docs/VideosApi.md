@@ -10,9 +10,6 @@ Method | HTTP request | Description
 [`deleteVideoCollectionItems`](VideosApi.md#deleteVideoCollectionItems) | `DELETE /v2/videos/collections/{id}/items` | Remove videos from collections
 [`downloadVideos`](VideosApi.md#downloadVideos) | `POST /v2/videos/licenses/{id}/downloads` | Download videos
 [`findSimilarVideos`](VideosApi.md#findSimilarVideos) | `GET /v2/videos/{id}/similar` | List similar videos
-[`getFeaturedVideoCollection`](VideosApi.md#getFeaturedVideoCollection) | `GET /v2/videos/collections/featured/{id}` | Get the details of featured video collections
-[`getFeaturedVideoCollectionItems`](VideosApi.md#getFeaturedVideoCollectionItems) | `GET /v2/videos/collections/featured/{id}/items` | Get the contents of featured video collections
-[`getFeaturedVideoCollectionList`](VideosApi.md#getFeaturedVideoCollectionList) | `GET /v2/videos/collections/featured` | List featured video collections
 [`getUpdatedVideos`](VideosApi.md#getUpdatedVideos) | `GET /v2/videos/updated` | List updated videos
 [`getVideo`](VideosApi.md#getVideo) | `GET /v2/videos/{id}` | Get details about videos
 [`getVideoCollection`](VideosApi.md#getVideoCollection) | `GET /v2/videos/collections/{id}` | Get the details of video collections
@@ -320,7 +317,7 @@ Name | Type | Description
 
 <a name="findSimilarVideos"></a>
 # VideosApi.findSimilarVideos
-> `InlineResponse2007 VideosApi.findSimilarVideos(id, queryParams)`
+> `InlineResponse2006 VideosApi.findSimilarVideos(id, queryParams)`
 
 **List similar videos**
 
@@ -382,236 +379,12 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse2007](InlineResponse2007.md)
-
-### Example response
-
-```
-"{data=[{id=1033184651, aspect=1.778, aspect_ratio=16:9, assets={thumb_webm={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm}, thumb_mp4={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4}, preview_webm={url=https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm}, preview_mp4={url=https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4}, thumb_jpg={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg}, preview_jpg={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg}}, contributor={id=4411978}, description=Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness, duration=14.081, has_model_release=true, media_type=video}], page=1, per_page=5, total_count=123, search_id=749090bb-2967-4a20-b22e-c800dc845e10}"
-```
-
-<a name="getFeaturedVideoCollection"></a>
-# VideosApi.getFeaturedVideoCollection
-> `InlineResponse2006 VideosApi.getFeaturedVideoCollection(id, queryParams)`
-
-**Get the details of featured video collections**
-
-This endpoint gets more detailed information about a featured video collection, including its cover video and timestamps for its creation and most recent update. To get the videos, use `GET /v2/videos/collections/featured/{id}/items`.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.VideosApi();
-
-const id = "136351027"; // String | Collection ID
-
-const queryParams = { 
-  'embed': "embed_example" // String | What information to include in the response, such as a URL to the collection
-};
-
-api.getFeaturedVideoCollection(id, queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- id (required) | String| Collection ID 
- embed | String| What information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_url"
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
 [InlineResponse2006](InlineResponse2006.md)
 
 ### Example response
 
 ```
-"{total_item_count=82, items_updated_time=2021-07-08T12:33:37.000Z, name=Exercise & Fitness, id=19853, created_time=2021-07-07T13:10:24.000Z, updated_time=2021-07-07T13:10:24.000Z, cover_item={url=https://ak.picdn.net/assets/cms/b467415246debdab45825d915a548f8f79b57882-Collection_1_Thumnail.jpg}}"
-```
-
-<a name="getFeaturedVideoCollectionItems"></a>
-# VideosApi.getFeaturedVideoCollectionItems
-> `Object VideosApi.getFeaturedVideoCollectionItems(id, queryParams)`
-
-**Get the contents of featured video collections**
-
-This endpoint lists the IDs of videos in a featured collection and the date that each was added.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.VideosApi();
-
-const id = "136351027"; // String | Collection ID
-
-const queryParams = { 
-  'page': 1, // Number | Page number
-  'per_page': 100 // Number | Number of results per page
-};
-
-api.getFeaturedVideoCollectionItems(id, queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- id (required) | String| Collection ID 
- page | Number| Page number, defaults to 1 
- per_page | Number| Number of results per page, defaults to 100 
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-Object
-
-### Example response
-
-```
-{
-  "data" : [ {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "76688182",
-    "media_type" : "video"
-  }, {
-    "added_time" : "2016-08-18T18:52:59-04:00",
-    "id" : "40005859",
-    "media_type" : "video"
-  } ],
-  "page" : 1,
-  "per_page" : 100
-}
-```
-
-<a name="getFeaturedVideoCollectionList"></a>
-# VideosApi.getFeaturedVideoCollectionList
-> `Object VideosApi.getFeaturedVideoCollectionList(queryParams)`
-
-**List featured video collections**
-
-This endpoint lists featured video collections and a name and cover video for each collection.
-
-### Example
-
-```javascript
-const sstk = require('shutterstock-api');
-
-// To use HTTP basic authorization:
-sstk.setBasicAuth(client_id, client_secret);
-
-// To use OAuth access token authorization:
-sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
-
-const api = new sstk.VideosApi();
-
-const queryParams = { 
-  'embed': "share_url" // String | What information to include in the response, such as a URL to the collection
-};
-
-api.getFeaturedVideoCollectionList(queryParams)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-
-```
-
-### Parameters
-
-
-Name | Type | Description
-------------- | ------------- | -------------
- embed | String| What information to include in the response, such as a URL to the collection <br/><br/>Valid values: "share_url"
-
-### Accepted authentication
-
-- [Basic](../README.md#Basic_authentication)
-- [OAuth](../README.md#OAuth_authentication) (No scope required.)
-
-### HTTP request headers
-
-
-
-- Accept: application/json
-
-### Return type
-
-Object
-
-### Example response
-
-```
-{
-  "data" : [ {
-    "total_item_count" : 82,
-    "items_updated_time" : "2021-07-08T12:33:37.000Z",
-    "name" : "Exercise & Fitness",
-    "id" : "19853",
-    "created_time" : "2021-07-07T13:10:24.000Z",
-    "updated_time" : "2021-07-07T13:10:24.000Z",
-    "cover_item" : {
-      "url" : "https://ak.picdn.net/assets/cms/b467415246debdab45825d915a548f8f79b57882-Collection_1_Thumnail.jpg"
-    }
-  } ],
-  "page" : 1,
-  "per_page" : 5,
-  "total_count" : 123455
-}
+"{data=[{id=1033184651, aspect=1.778, aspect_ratio=16:9, assets={thumb_webm={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm}, thumb_mp4={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4}, preview_webm={url=https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.webm}, preview_mp4={url=https://ak.picdn.net/shutterstock/videos/1033184651/preview/stock-footage-camera-follows-hipster-millennial-young-woman-in-orange-jacket-running-up-on-top-of-mountain-summit.mp4}, thumb_jpg={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg}, preview_jpg={url=https://ak.picdn.net/shutterstock/videos/1033184651/thumb/12.jpg}}, contributor={id=4411978}, description=Camera follows hipster millennial young woman in orange jacket running up on top of mountain summit at sunset, jumps on top of rocks, raises arms into air, happy and drunk on life, youth and happiness, duration=14.081, has_model_release=true, media_type=video}], page=1, per_page=5, total_count=123, search_id=749090bb-2967-4a20-b22e-c800dc845e10}"
 ```
 
 <a name="getUpdatedVideos"></a>
@@ -698,7 +471,7 @@ Object
 
 <a name="getVideo"></a>
 # VideosApi.getVideo
-> `InlineResponse2008 VideosApi.getVideo(id, queryParams)`
+> `InlineResponse2007 VideosApi.getVideo(id, queryParams)`
 
 **Get details about videos**
 
@@ -758,7 +531,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse2008](InlineResponse2008.md)
+[InlineResponse2007](InlineResponse2007.md)
 
 ### Example response
 
@@ -1537,7 +1310,7 @@ No response body.
 
 <a name="searchVideos"></a>
 # VideosApi.searchVideos
-> `InlineResponse2007 VideosApi.searchVideos(queryParams)`
+> `InlineResponse2006 VideosApi.searchVideos(queryParams)`
 
 **Search for videos**
 
@@ -1648,7 +1421,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse2007](InlineResponse2007.md)
+[InlineResponse2006](InlineResponse2006.md)
 
 ### Example response
 

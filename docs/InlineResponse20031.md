@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**text** | **String** |  | [optional] 
+**header** | [**InlineResponse20031Header**](InlineResponse20031Header.md) |  | [optional] 
+**query** | [**InlineResponse20031Query**](InlineResponse20031Query.md) |  | [optional] 
 
 
