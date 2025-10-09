@@ -1337,10 +1337,8 @@ const queryParams = {
   'category': "category_example", // String | Show videos with the specified Shutterstock-defined category; specify a category name or ID
   'contributor': ["[12345678]"], // [String] | Show videos with the specified artist names or IDs
   'contributor_country': ["US"], // [String] | Show videos from contributors in one or more specified countries
-  'duration': 56, // Number | (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration in seconds
   'duration_from': 60, // Number | Show videos with the specified duration or longer in seconds
   'duration_to': 180, // Number | Show videos with the specified duration or shorter in seconds
-  'fps': 8.14, // Number | (Deprecated; use fps_from and fps_to instead) Show videos with the specified frames per second
   'fps_from': 24, // Number | Show videos with the specified frames per second or more
   'fps_to': 60, // Number | Show videos with the specified frames per second or fewer
   'keyword_safe_search': true, // Boolean | Hide results with potentially unsafe keywords
@@ -1384,10 +1382,8 @@ Name | Type | Description
  category | String| Show videos with the specified Shutterstock-defined category; specify a category name or ID 
  contributor | [String]| Show videos with the specified artist names or IDs 
  contributor_country | [String]| Show videos from contributors in one or more specified countries 
- duration | Number| (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration in seconds 
  duration_from | Number| Show videos with the specified duration or longer in seconds 
  duration_to | Number| Show videos with the specified duration or shorter in seconds 
- fps | Number| (Deprecated; use fps_from and fps_to instead) Show videos with the specified frames per second 
  fps_from | Number| Show videos with the specified frames per second or more 
  fps_to | Number| Show videos with the specified frames per second or fewer 
  keyword_safe_search | Boolean| Hide results with potentially unsafe keywords, defaults to true 

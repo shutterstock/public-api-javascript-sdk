@@ -94,7 +94,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.SoundEffectsApi();
 
-const id = 442583; // Number | Audio track ID
+const id = "442583"; // String | Audio track ID
 
 const queryParams = { 
   'language': "language_example", // String | Language for the keywords and categories in the response
@@ -118,7 +118,7 @@ api.getSfxDetails(id, queryParams)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- id (required) | Number| Audio track ID 
+ id (required) | String| Audio track ID 
  language | String| Language for the keywords and categories in the response <br/><br/>Valid values: "ar", "bg", "bn", "cs", "da", "de", "el", "en", "es", "fi", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "ml", "mr", "nb", "nl", "or", "pl", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zh", "zh-Hant"
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
  library | String| Which library to fetch from <br/><br/>Valid values: "shutterstock", "premier", "premiumbeat"
