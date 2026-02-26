@@ -1664,7 +1664,7 @@ Name | Type | Description
  query | String| One or more search terms separated by spaces; you can use NOT to filter out images that match a term 
  region | [Object](.md)| Raise or lower search result rankings based on the result's relevance to a specified region; you can provide a country code or an IP address from which the API infers a country 
  safe | Boolean| Enable or disable safe search, defaults to true 
- sort | String| Sort by, defaults to popular <br/><br/>Valid values: "newest", "popular", "relevance", "random"
+ sort | String| Sort by, defaults to popular <br/><br/>Valid values: "newest", "popular", "relevance", "random", "oldest"
  spellcheck_query | Boolean| Spellcheck the search query and return results on suggested spellings, defaults to true 
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
  width | Number| (Deprecated; use width_from and width_to instead) Show images with the specified width 

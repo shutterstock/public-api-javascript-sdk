@@ -1401,7 +1401,7 @@ Name | Type | Description
  query | String| One or more search terms separated by spaces; you can use NOT to filter out videos that match a term 
  resolution | String| Show videos with the specified resolution <br/><br/>Valid values: "4k", "standard_definition", "high_definition"
  safe | Boolean| Enable or disable safe search, defaults to true 
- sort | String| Sort by one of these categories, defaults to popular <br/><br/>Valid values: "newest", "popular", "relevance", "random"
+ sort | String| Sort by one of these categories, defaults to popular <br/><br/>Valid values: "newest", "oldest", "popular", "relevance", "random"
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
 
 ### Accepted authentication
