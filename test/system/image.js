@@ -57,6 +57,7 @@ describe('images api', () => {
           'keywords',
           'model_releases',
           'url',
+          'asset_collection',
         );
         expect(res.description).to.deep.equal('Happy New Year 2019. Chinese New Year. ' +
           'The year of the pig. Translation: Greetings from the golden pig.');
