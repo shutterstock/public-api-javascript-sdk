@@ -17,11 +17,27 @@ Name | Type | Description | Notes
 **is_adult** | **Boolean** | Whether or not this image contains adult content | [optional] 
 **is_editorial** | **Boolean** | Whether or not this image is editorial content | [optional] 
 **is_illustration** | **Boolean** | Whether or not this image is an illustration | [optional] 
+**asset_collection** | **String** | Asset collection for this image | [optional] 
 **keywords** | **[String]** | Keywords associated with the content of this image | [optional] 
 **media_type** | **String** | Media type of this image, should always be \"image\" | 
 **model_releases** | [**[InlineResponse200ModelReleases]**](InlineResponse200ModelReleases.md) | List of model releases | [optional] 
 **models** | [**[InlineResponse200Models]**](InlineResponse200Models.md) | List of models | [optional] 
 **releases** | **[String]** | List of all releases of this image | [optional] 
 **url** | **String** | Link to image information page; included only for certain accounts | [optional] 
+
+
+<a name="AssetCollectionEnum"></a>
+## Enum: AssetCollectionEnum
+
+
+* `starter` (value: `"Starter"`)
+
+* `essentials` (value: `"Essentials"`)
+
+* `choice` (value: `"Choice"`)
+
+* `offset` (value: `"Offset"`)
+
+
 
 

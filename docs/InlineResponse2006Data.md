@@ -18,10 +18,24 @@ Name | Type | Description | Notes
 **is_adult** | **Boolean** | Whether or not this video contains adult content | [optional] 
 **is_editorial** | **Boolean** | Whether or not this video is editorial content | [optional] 
 **is_select** | **Boolean** | Whether or not this video is part of the select collection | [optional] 
+**asset_collection** | **String** | Asset collection for this video | [optional] 
 **keywords** | **[String]** | Keywords associated with the content of this video | [optional] 
 **media_type** | **String** | Media type of this video, should always be \"video\" | 
 **models** | [**[InlineResponse200Models]**](InlineResponse200Models.md) | List of models in this video | [optional] 
 **releases** | [**[InlineResponse200ModelReleases]**](InlineResponse200ModelReleases.md) | List of all releases of this video | [optional] 
 **url** | **String** | Link to video information page; included only for certain accounts | [optional] 
+
+
+<a name="AssetCollectionEnum"></a>
+## Enum: AssetCollectionEnum
+
+
+* `empty` (value: `""`)
+
+* `essentials` (value: `"Essentials"`)
+
+* `select` (value: `"Select"`)
+
+
 
 
