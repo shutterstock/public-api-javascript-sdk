@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**[InlineResponse200Data]**](InlineResponse200Data.md) | List of images | 
+**errors** | [**[InlineResponse200Errors]**](InlineResponse200Errors.md) | List of errors if any | [optional] 
 **message** | **String** | Server-generated message, if any | [optional] 
 **page** | **Number** | Current page that is returned | [optional] 
 **per_page** | **Number** | Number of results per page | [optional] 

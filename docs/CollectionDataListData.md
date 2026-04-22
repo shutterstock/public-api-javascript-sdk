@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **share_code** | **String** | A code that can be used to share the collection (optional) | [optional] 
 **share_url** | **String** | The browser URL that can be used to share the collection (optional) | [optional] 
 **total_item_count** | **Number** | The number of items in the collection | 
-**updated_time** | **Date** | The last time the collection was update (other than changes to the items in it) | [optional] 
+**updated_time** | **Date** | The last time the collection was updated (other than changes to the items in it) | [optional] 
 
 

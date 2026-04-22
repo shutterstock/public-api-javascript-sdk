@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**status_code** | **Number** | HTTP Error code | [optional] 
 **code** | **String** | The error code of this error | [optional] 
 **data** | **String** | Debugging information about the error | [optional] 
 **items** | **[Object]** | A list of items that produced the error | [optional] 
