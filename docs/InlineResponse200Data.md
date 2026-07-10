@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **is_editorial** | **Boolean** | Whether or not this image is editorial content | [optional] 
 **is_illustration** | **Boolean** | Whether or not this image is an illustration | [optional] 
 **asset_collection** | **String** | Asset collection for this image | [optional] 
+**ai_ip_review** | [**InlineResponse200AiIpReview**](InlineResponse200AiIpReview.md) |  | [optional] 
 **keywords** | **[String]** | Keywords associated with the content of this image | [optional] 
 **media_type** | **String** | Media type of this image, should always be \"image\" | 
 **model_releases** | [**[InlineResponse200ModelReleases]**](InlineResponse200ModelReleases.md) | List of model releases | [optional] 

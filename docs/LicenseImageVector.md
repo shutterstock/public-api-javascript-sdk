@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **auth_cookie** | [**V2videoslicensesAuthCookie**](V2videoslicensesAuthCookie.md) |  | [optional] 
 **editorial_acknowledgement** | **Boolean** | Set to true to acknowledge the editorial agreement | [optional] 
+**ai_use_acknowledgement** | **Boolean** | This must be set to true to license an AI-generated asset. It confirms: I acknowledge that AI-generated content is not reviewed by Shutterstock's content compliance team for intellectual property compliance unless otherwise stated, and should not be used publicly if it contains the likeness of a brand, public personality, or other protected content. | [optional] 
 **format** | **String** | (Deprecated) Image format to download | [optional] [default to 'eps']
 **image_id** | **String** | Image ID | 
 **metadata** | **Object** | Additional information for license requests for enterprise accounts and API subscriptions, 4 fields maximum; which fields are required is set by the account holder | [optional] 

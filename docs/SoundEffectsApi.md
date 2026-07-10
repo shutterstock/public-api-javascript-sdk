@@ -238,6 +238,13 @@ Object
     "is_downloadable" : false,
     "image" : {
       "id" : "9763363ao",
+      "generation_id" : "0136648a-d739-4c00-8af9-92b1a31db567",
+      "generation_asset_id" : "asset-generation-0136648a-d739-4c00-8af9-92b1a31db567-0",
+      "generated_by_user" : 1234,
+      "ai_ip_review" : {
+        "status" : "pending",
+        "rejection_reasons" : [ ]
+      },
       "format" : {
         "size" : "original"
       }

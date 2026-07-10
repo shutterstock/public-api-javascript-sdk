@@ -907,6 +907,13 @@ Object
     "is_downloadable" : false,
     "image" : {
       "id" : "9763363ao",
+      "generation_id" : "0136648a-d739-4c00-8af9-92b1a31db567",
+      "generation_asset_id" : "asset-generation-0136648a-d739-4c00-8af9-92b1a31db567-0",
+      "generated_by_user" : 1234,
+      "ai_ip_review" : {
+        "status" : "pending",
+        "rejection_reasons" : [ ]
+      },
       "format" : {
         "size" : "original"
       }
@@ -1608,6 +1615,7 @@ const queryParams = {
   'people_gender': "both", // String | Show images with people of the specified gender
   'people_number': 2, // Number | Show images with the specified number of people
   'query': "dogs on the beach", // String | One or more search terms separated by spaces; you can use NOT to filter out images that match a term
+  'exact_match': true, // Boolean | Require exact keyword matching and disable enhanced search behavior
   'region': "US", // Object | Raise or lower search result rankings based on the result's relevance to a specified region; you can provide a country code or an IP address from which the API infers a country
   'safe': true, // Boolean | Enable or disable safe search
   'sort': "popular", // String | Sort by
@@ -1662,6 +1670,7 @@ Name | Type | Description
  people_gender | String| Show images with people of the specified gender <br/><br/>Valid values: "male", "female", "both"
  people_number | Number| Show images with the specified number of people 
  query | String| One or more search terms separated by spaces; you can use NOT to filter out images that match a term 
+ exact_match | Boolean| Require exact keyword matching and disable enhanced search behavior 
  region | [Object](.md)| Raise or lower search result rankings based on the result's relevance to a specified region; you can provide a country code or an IP address from which the API infers a country 
  safe | Boolean| Enable or disable safe search, defaults to true 
  sort | String| Sort by, defaults to popular <br/><br/>Valid values: "newest", "popular", "relevance", "random", "oldest"

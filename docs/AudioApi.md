@@ -700,6 +700,13 @@ Object
     "is_downloadable" : false,
     "image" : {
       "id" : "9763363ao",
+      "generation_id" : "0136648a-d739-4c00-8af9-92b1a31db567",
+      "generation_asset_id" : "asset-generation-0136648a-d739-4c00-8af9-92b1a31db567-0",
+      "generated_by_user" : 1234,
+      "ai_ip_review" : {
+        "status" : "pending",
+        "rejection_reasons" : [ ]
+      },
       "format" : {
         "size" : "original"
       }
@@ -1189,6 +1196,7 @@ const queryParams = {
   'duration_to': 180, // Number | Show tracks with the specified duration or shorter in seconds
   'genre': ["[Classical, Holiday]"], // [String] | Show tracks with each of the specified genres; to get the list of genres, use `GET /v2/audio/genres`
   'is_instrumental': true, // Boolean | Show instrumental music only
+  'is_pro_free': null, // Boolean | Show only pro-free tracks when true, only pro tracks when false, or all tracks when null
   'instruments': ["[Trumpet, Percussion]"], // [String] | Show tracks with each of the specified instruments; to get the list of instruments, use `GET /v2/audio/instruments`
   'moods': ["[Confident, Playful]"], // [String] | Show tracks with each of the specified moods; to get the list of moods, use `GET /v2/audio/moods`
   'page': 1, // Number | Page number
@@ -1227,6 +1235,7 @@ Name | Type | Description
  duration_to | Number| Show tracks with the specified duration or shorter in seconds 
  genre | [String]| Show tracks with each of the specified genres; to get the list of genres, use `GET /v2/audio/genres` 
  is_instrumental | Boolean| Show instrumental music only 
+ is_pro_free | Boolean| Show only pro-free tracks when true, only pro tracks when false, or all tracks when null, defaults to null 
  instruments | [String]| Show tracks with each of the specified instruments; to get the list of instruments, use `GET /v2/audio/instruments` 
  moods | [String]| Show tracks with each of the specified moods; to get the list of moods, use `GET /v2/audio/moods` 
  page | Number| Page number, defaults to 1 

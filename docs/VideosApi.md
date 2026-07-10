@@ -860,6 +860,13 @@ Object
     "is_downloadable" : false,
     "image" : {
       "id" : "9763363ao",
+      "generation_id" : "0136648a-d739-4c00-8af9-92b1a31db567",
+      "generation_asset_id" : "asset-generation-0136648a-d739-4c00-8af9-92b1a31db567-0",
+      "generated_by_user" : 1234,
+      "ai_ip_review" : {
+        "status" : "pending",
+        "rejection_reasons" : [ ]
+      },
       "format" : {
         "size" : "original"
       }
@@ -1354,10 +1361,12 @@ const queryParams = {
   'people_number': 2, // Number | Show videos with the specified number of people
   'people_model_released': true, // Boolean | Show only videos of people with a signed model release
   'query': "dogs running on the beach", // String | One or more search terms separated by spaces; you can use NOT to filter out videos that match a term
+  'exact_match': true, // Boolean | Require exact keyword matching and disable enhanced search behavior
   'resolution': "4k", // String | Show videos with the specified resolution
   'safe': true, // Boolean | Enable or disable safe search
   'sort': "popular", // String | Sort by one of these categories
-  'view': "minimal" // String | Amount of detail to render in the response
+  'view': "minimal", // String | Amount of detail to render in the response
+  'library': ["[shutterstock, footage_select]"] // [String] | Search within different Shutterstock owned libraries. Defaults to shutterstock.
 };
 
 api.searchVideos(queryParams)
@@ -1399,10 +1408,12 @@ Name | Type | Description
  people_number | Number| Show videos with the specified number of people 
  people_model_released | Boolean| Show only videos of people with a signed model release 
  query | String| One or more search terms separated by spaces; you can use NOT to filter out videos that match a term 
+ exact_match | Boolean| Require exact keyword matching and disable enhanced search behavior 
  resolution | String| Show videos with the specified resolution <br/><br/>Valid values: "4k", "standard_definition", "high_definition"
  safe | Boolean| Enable or disable safe search, defaults to true 
  sort | String| Sort by one of these categories, defaults to popular <br/><br/>Valid values: "newest", "oldest", "popular", "relevance", "random"
  view | String| Amount of detail to render in the response, defaults to minimal <br/><br/>Valid values: "minimal", "full"
+ library | [String]| Search within different Shutterstock owned libraries. Defaults to shutterstock. <br/><br/>Valid values: "shutterstock", "footage_select"
 
 ### Accepted authentication
 
