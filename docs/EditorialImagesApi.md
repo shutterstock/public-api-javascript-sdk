@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 <a name="getEditorialCategories"></a>
 # EditorialImagesApi.getEditorialCategories
-> `InlineResponse20033 EditorialImagesApi.getEditorialCategories()`
+> `InlineResponse20037 EditorialImagesApi.getEditorialCategories()`
 
 **(Deprecated) List editorial categories**
 
@@ -71,7 +71,7 @@ This endpoint does not accept any parameters.
 
 ### Return type
 
-[InlineResponse20033](InlineResponse20033.md)
+[InlineResponse20037](InlineResponse20037.md)
 
 ### Example response
 
@@ -764,7 +764,7 @@ Object
 
 <a name="getEditorialLivefeedList"></a>
 # EditorialImagesApi.getEditorialLivefeedList
-> `InlineResponse20032 EditorialImagesApi.getEditorialLivefeedList(country, queryParams)`
+> `InlineResponse20036 EditorialImagesApi.getEditorialLivefeedList(country, queryParams)`
 
 **(Deprecated) Get editorial livefeed list**
 
@@ -822,7 +822,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20032](InlineResponse20032.md)
+[InlineResponse20036](InlineResponse20036.md)
 
 ### Example response
 
@@ -1018,7 +1018,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.EditorialImagesApi();
 
-const body = new ShutterstockApiReference.Body24(); // Body24 | License editorial content
+const body = new ShutterstockApiReference.Body26(); // Body26 | License editorial content
 
 
 api.licenseEditorialImage(body)
@@ -1036,7 +1036,7 @@ api.licenseEditorialImage(body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [Body24](Body24.md)| License editorial content 
+ body (required) | [Body26](Body26.md)| License editorial content 
 
 ### Accepted authentication
 

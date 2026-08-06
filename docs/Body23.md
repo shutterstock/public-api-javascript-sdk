@@ -3,6 +3,19 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**[V2catalogcollectionscollectionIditemsItems]**](V2catalogcollectionscollectionIditemsItems.md) |  | 
+**name** | **String** |  | [optional] 
+**visibility** | **String** |  | [optional] 
+**cover_asset** | [**V2catalogcollectionscollectionIdCoverAsset**](V2catalogcollectionscollectionIdCoverAsset.md) |  | [optional] 
+
+
+<a name="VisibilityEnum"></a>
+## Enum: VisibilityEnum
+
+
+* `_private` (value: `"private"`)
+
+* `_public` (value: `"public"`)
+
+
 
 

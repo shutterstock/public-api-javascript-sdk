@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**upload_id** | **String** |  | 
+**id** | **String** | The UUID of the generation request. | 
 
 

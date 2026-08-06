@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **instruments** | **[String]** | List of all instruments that appear in this track | [optional] 
 **is_adult** | **Boolean** | Whether or not this track contains adult content | [optional] 
 **is_instrumental** | **Boolean** | Whether or not this track is purely instrumental (lacking lyrics) | [optional] 
-**isrc** | **String** |  | [optional] 
+**isrc** | **String** | The ISRC (International Standard Recording Code) is the international identification system for sound recordings and music video recordings. | [optional] 
 **keywords** | **[String]** | List of all keywords for this track | [optional] 
 **language** | **String** | Language of this track's lyrics | [optional] 
 **lyrics** | **String** | Lyrics of this track | [optional] 

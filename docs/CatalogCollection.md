@@ -5,12 +5,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
 **name** | **String** |  | 
-**cover_asset** | [**InlineResponse20025Data**](InlineResponse20025Data.md) |  | [optional] 
+**cover_asset** | [**InlineResponse20029Data**](InlineResponse20029Data.md) |  | [optional] 
 **total_item_count** | **Number** |  | 
 **created_time** | **Date** |  | 
 **updated_time** | **Date** |  | 
 **visibility** | **String** |  | 
-**role_assignments** | [**InlineResponse20026RoleAssignments**](InlineResponse20026RoleAssignments.md) |  | 
+**role_assignments** | [**InlineResponse20030RoleAssignments**](InlineResponse20030RoleAssignments.md) |  | 
 
 
 <a name="VisibilityEnum"></a>

@@ -3,6 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**text** | **String** |  | [optional] 
+**page** | **Number** |  | 
+**per_page** | **Number** |  | 
+**total_count** | **Number** |  | 
+**data** | [**[InlineResponse20030Data]**](InlineResponse20030Data.md) | List of catalog collections | 
 
 

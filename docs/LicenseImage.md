@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **search_id** | **String** | ID of the search that led to this licensing transaction | [optional] 
 **show_modal** | **Boolean** | (Deprecated) | [optional] 
 **size** | **String** | Image size to download | [optional] 
-**custom_dimensions** | [**LicenseImageCustomDimensions**](LicenseImageCustomDimensions.md) |  | [optional] 
+**custom_dimensions** | [**V2generativeimageslicensesCustomDimensions**](V2generativeimageslicensesCustomDimensions.md) |  | [optional] 
 **subscription_id** | **String** | ID of the subscription to use for the download. | [optional] 
 **verification_code** | **String** | (Deprecated) | [optional] 
 

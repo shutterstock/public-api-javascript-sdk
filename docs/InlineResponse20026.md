@@ -3,9 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**page** | **Number** |  | 
-**per_page** | **Number** |  | 
-**total_count** | **Number** |  | 
-**data** | [**[InlineResponse20026Data]**](InlineResponse20026Data.md) | List of catalog collections | 
+**data** | [**[InlineResponse20026Data]**](InlineResponse20026Data.md) | License results. | 
+**errors** | [**[InlineResponse200Errors]**](InlineResponse200Errors.md) | Error list; appears only if there was an error. | [optional] 
+**message** | **String** | Server-generated message about the licensing request. | 
 
 

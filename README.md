@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.5.5
+- API version: 1.6.0
 
 ## References
 
@@ -385,6 +385,12 @@ Class | Method | HTTP request | Description
 *shutterstock-api.EditorialVideoApi* | [**listEditorialVideoCategories**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialVideoApi.md#listEditorialVideoCategories) | **GET** /v2/editorial/videos/categories | List editorial video categories
 *shutterstock-api.EditorialVideoApi* | [**listEditorialVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialVideoApi.md#listEditorialVideos) | **GET** /v2/editorial/videos | List editorial videos details by ID list
 *shutterstock-api.EditorialVideoApi* | [**searchEditorialVideos**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/EditorialVideoApi.md#searchEditorialVideos) | **GET** /v2/editorial/videos/search | Search editorial video content
+*shutterstock-api.GenerativeApi* | [**getGenerativeImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/GenerativeApi.md#getGenerativeImages) | **GET** /v2/generative/images/{id} | Get generated image results
+*shutterstock-api.GenerativeApi* | [**getGenerativeImagesHistory**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/GenerativeApi.md#getGenerativeImagesHistory) | **GET** /v2/generative/images/history | List image generation history
+*shutterstock-api.GenerativeApi* | [**getGenerativeInputs**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/GenerativeApi.md#getGenerativeInputs) | **GET** /v2/generative/inputs | List generative inputs
+*shutterstock-api.GenerativeApi* | [**licenseGenerativeImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/GenerativeApi.md#licenseGenerativeImages) | **POST** /v2/generative/images/licenses | License generated images
+*shutterstock-api.GenerativeApi* | [**postGenerativeImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/GenerativeApi.md#postGenerativeImages) | **POST** /v2/generative/images | Generate images from a text prompt
+*shutterstock-api.GenerativeApi* | [**submitGenerativeImageForIpReview**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/GenerativeApi.md#submitGenerativeImageForIpReview) | **POST** /v2/generative/images/review/{id} | Submit a generated image for IP review
 *shutterstock-api.ImagesApi* | [**addImageCollectionItems**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#addImageCollectionItems) | **POST** /v2/images/collections/{id}/items | Add images to collections
 *shutterstock-api.ImagesApi* | [**bulkSearchImages**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#bulkSearchImages) | **POST** /v2/bulk_search/images | Run multiple image searches
 *shutterstock-api.ImagesApi* | [**createImageCollection**](https://github.com/shutterstock/public-api-javascript-sdk/blob/master/docs/ImagesApi.md#createImageCollection) | **POST** /v2/images/collections | Create image collections

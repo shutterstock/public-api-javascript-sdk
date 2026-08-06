@@ -3,24 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | 
-**name** | **String** |  | 
-**cover_asset** | [**InlineResponse20025Data**](InlineResponse20025Data.md) |  | [optional] 
-**total_item_count** | **Number** |  | 
-**created_time** | **Date** |  | 
-**updated_time** | **Date** |  | 
-**visibility** | **String** |  | 
-**role_assignments** | [**InlineResponse20026RoleAssignments**](InlineResponse20026RoleAssignments.md) |  | 
-
-
-<a name="VisibilityEnum"></a>
-## Enum: VisibilityEnum
-
-
-* `_private` (value: `"private"`)
-
-* `_public` (value: `"public"`)
-
-
+**asset_id** | **String** | Generated image asset ID requested for licensing. | 
+**image_id** | **String** | Registered Shutterstock image ID that was licensed, or that failed to license if registration succeeded before licensing failed. | [optional] 
+**allotment_charge** | **Number** | Number of credits that this licensing event used. | [optional] 
+**download** | [**InlineResponse20026Download**](InlineResponse20026Download.md) |  | [optional] 
+**error** | **String** | Error message, appears only if there was an error. | [optional] 
+**license_id** | **String** | ID of the license event. | [optional] 
+**price** | [**InlineResponse20026Price**](InlineResponse20026Price.md) |  | [optional] 
 
 

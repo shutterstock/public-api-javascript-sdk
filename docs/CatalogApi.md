@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a name="addToCollection"></a>
 # CatalogApi.addToCollection
-> `InlineResponse2012 CatalogApi.addToCollection(collection_id, body)`
+> `InlineResponse2013 CatalogApi.addToCollection(collection_id, body)`
 
 **Add items to catalog collections**
 
@@ -33,7 +33,7 @@ const api = new sstk.CatalogApi();
 
 const collection_id = "126351028"; // String | The ID of the collection to add assets to
 
-const body = new ShutterstockApiReference.Body22(); // Body22 | Collection item attributes to add to collection
+const body = new ShutterstockApiReference.Body24(); // Body24 | Collection item attributes to add to collection
 
 
 api.addToCollection(collection_id, body)
@@ -52,7 +52,7 @@ api.addToCollection(collection_id, body)
 Name | Type | Description
 ------------- | ------------- | -------------
  collection_id (required) | String| The ID of the collection to add assets to 
- body (required) | [Body22](Body22.md)| Collection item attributes to add to collection 
+ body (required) | [Body24](Body24.md)| Collection item attributes to add to collection 
 
 ### Accepted authentication
 
@@ -71,7 +71,7 @@ Required scopes:
 
 ### Return type
 
-[InlineResponse2012](InlineResponse2012.md)
+[InlineResponse2013](InlineResponse2013.md)
 
 ### Example response
 
@@ -81,7 +81,7 @@ Required scopes:
 
 <a name="createCollection"></a>
 # CatalogApi.createCollection
-> `InlineResponse2012 CatalogApi.createCollection(body)`
+> `InlineResponse2013 CatalogApi.createCollection(body)`
 
 **Create catalog collections**
 
@@ -97,7 +97,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.CatalogApi();
 
-const body = new ShutterstockApiReference.Body20(); // Body20 | Create a catalog collection and, optionally, add items.
+const body = new ShutterstockApiReference.Body22(); // Body22 | Create a catalog collection and, optionally, add items.
 
 
 api.createCollection(body)
@@ -115,7 +115,7 @@ api.createCollection(body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [Body20](Body20.md)| Create a catalog collection and, optionally, add items. 
+ body (required) | [Body22](Body22.md)| Create a catalog collection and, optionally, add items. 
 
 ### Accepted authentication
 
@@ -134,7 +134,7 @@ Required scopes:
 
 ### Return type
 
-[InlineResponse2012](InlineResponse2012.md)
+[InlineResponse2013](InlineResponse2013.md)
 
 ### Example response
 
@@ -197,7 +197,7 @@ No response body.
 
 <a name="deleteFromCollection"></a>
 # CatalogApi.deleteFromCollection
-> `InlineResponse2012 CatalogApi.deleteFromCollection(collection_id, body)`
+> `InlineResponse2013 CatalogApi.deleteFromCollection(collection_id, body)`
 
 **Remove items from catalog collection**
 
@@ -215,7 +215,7 @@ const api = new sstk.CatalogApi();
 
 const collection_id = "126351028"; // String | The ID of the collection to remove assets from
 
-const body = new ShutterstockApiReference.Body23(); // Body23 | Items to remove from the collection
+const body = new ShutterstockApiReference.Body25(); // Body25 | Items to remove from the collection
 
 
 api.deleteFromCollection(collection_id, body)
@@ -234,7 +234,7 @@ api.deleteFromCollection(collection_id, body)
 Name | Type | Description
 ------------- | ------------- | -------------
  collection_id (required) | String| The ID of the collection to remove assets from 
- body (required) | [Body23](Body23.md)| Items to remove from the collection 
+ body (required) | [Body25](Body25.md)| Items to remove from the collection 
 
 ### Accepted authentication
 
@@ -253,7 +253,7 @@ Required scopes:
 
 ### Return type
 
-[InlineResponse2012](InlineResponse2012.md)
+[InlineResponse2013](InlineResponse2013.md)
 
 ### Example response
 
@@ -263,7 +263,7 @@ Required scopes:
 
 <a name="getCollections"></a>
 # CatalogApi.getCollections
-> `InlineResponse20026 CatalogApi.getCollections(queryParams)`
+> `InlineResponse20030 CatalogApi.getCollections(queryParams)`
 
 **List catalog collections**
 
@@ -321,7 +321,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20026](InlineResponse20026.md)
+[InlineResponse20030](InlineResponse20030.md)
 
 ### Example response
 
@@ -331,7 +331,7 @@ Name | Type | Description
 
 <a name="searchCatalog"></a>
 # CatalogApi.searchCatalog
-> `InlineResponse20025 CatalogApi.searchCatalog(queryParams)`
+> `InlineResponse20029 CatalogApi.searchCatalog(queryParams)`
 
 **Search catalogs for assets**
 
@@ -393,7 +393,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20025](InlineResponse20025.md)
+[InlineResponse20029](InlineResponse20029.md)
 
 ### Example response
 
@@ -403,7 +403,7 @@ Name | Type | Description
 
 <a name="updateCollection"></a>
 # CatalogApi.updateCollection
-> `InlineResponse2012 CatalogApi.updateCollection(collection_id, body)`
+> `InlineResponse2013 CatalogApi.updateCollection(collection_id, body)`
 
 **Update collection metadata**
 
@@ -421,7 +421,7 @@ const api = new sstk.CatalogApi();
 
 const collection_id = "126351028"; // String | ID of collection that needs to be modified
 
-const body = new ShutterstockApiReference.Body21(); // Body21 | Collections Metadata to update
+const body = new ShutterstockApiReference.Body23(); // Body23 | Collections Metadata to update
 
 
 api.updateCollection(collection_id, body)
@@ -440,7 +440,7 @@ api.updateCollection(collection_id, body)
 Name | Type | Description
 ------------- | ------------- | -------------
  collection_id (required) | String| ID of collection that needs to be modified 
- body (required) | [Body21](Body21.md)| Collections Metadata to update 
+ body (required) | [Body23](Body23.md)| Collections Metadata to update 
 
 ### Accepted authentication
 
@@ -459,7 +459,7 @@ Required scopes:
 
 ### Return type
 
-[InlineResponse2012](InlineResponse2012.md)
+[InlineResponse2013](InlineResponse2013.md)
 
 ### Example response
 

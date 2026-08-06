@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="getContributor"></a>
 # ContributorsApi.getContributor
-> `InlineResponse20027 ContributorsApi.getContributor(contributor_id)`
+> `InlineResponse20031 ContributorsApi.getContributor(contributor_id)`
 
 **Get details about a single contributor**
 
@@ -65,7 +65,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse20027](InlineResponse20027.md)
+[InlineResponse20031](InlineResponse20031.md)
 
 ### Example response
 

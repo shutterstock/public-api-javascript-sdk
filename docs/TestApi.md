@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="echo"></a>
 # TestApi.echo
-> `InlineResponse20030 TestApi.echo(queryParams)`
+> `InlineResponse20034 TestApi.echo(queryParams)`
 
 **Echo text**
 
@@ -54,7 +54,7 @@ No authentication required.
 
 ### Return type
 
-[InlineResponse20030](InlineResponse20030.md)
+[InlineResponse20034](InlineResponse20034.md)
 
 ### Example response
 
@@ -64,7 +64,7 @@ No authentication required.
 
 <a name="validate"></a>
 # TestApi.validate
-> `InlineResponse20031 TestApi.validate(id, queryParams)`
+> `InlineResponse20035 TestApi.validate(id, queryParams)`
 
 **Validate input**
 
@@ -113,7 +113,7 @@ No authentication required.
 
 ### Return type
 
-[InlineResponse20031](InlineResponse20031.md)
+[InlineResponse20035](InlineResponse20035.md)
 
 ### Example response
 

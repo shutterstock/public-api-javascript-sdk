@@ -228,7 +228,7 @@ Name | Type | Description
 
 <a name="uploadImage"></a>
 # ComputerVisionApi.uploadImage
-> `InlineResponse2011 ComputerVisionApi.uploadImage(body)`
+> `InlineResponse2012 ComputerVisionApi.uploadImage(body)`
 
 **Upload images**
 
@@ -247,7 +247,7 @@ sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const api = new sstk.ComputerVisionApi();
 
-const body = new ShutterstockApiReference.Body19(); // Body19 | A Base 64 encoded jpeg or png; images can be no larger than 10mb and can be no larger than 10,000 pixels in width or height
+const body = new ShutterstockApiReference.Body21(); // Body21 | A Base 64 encoded jpeg or png; images can be no larger than 10mb and can be no larger than 10,000 pixels in width or height
 
 
 api.uploadImage(body)
@@ -265,7 +265,7 @@ api.uploadImage(body)
 
 Name | Type | Description
 ------------- | ------------- | -------------
- body (required) | [Body19](Body19.md)| A Base 64 encoded jpeg or png; images can be no larger than 10mb and can be no larger than 10,000 pixels in width or height 
+ body (required) | [Body21](Body21.md)| A Base 64 encoded jpeg or png; images can be no larger than 10mb and can be no larger than 10,000 pixels in width or height 
 
 ### Accepted authentication
 
@@ -280,7 +280,7 @@ Name | Type | Description
 
 ### Return type
 
-[InlineResponse2011](InlineResponse2011.md)
+[InlineResponse2012](InlineResponse2012.md)
 
 ### Example response
 

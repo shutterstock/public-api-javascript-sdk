@@ -3,19 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | 
-**visibility** | **String** |  | [optional] [default to 'private']
-**items** | [**[V2catalogcollectionsItems]**](V2catalogcollectionsItems.md) |  | [optional] 
-
-
-<a name="VisibilityEnum"></a>
-## Enum: VisibilityEnum
-
-
-* `_private` (value: `"private"`)
-
-* `_public` (value: `"public"`)
-
-
+**images** | [**[V2generativeimageslicensesImages]**](V2generativeimageslicensesImages.md) | Generated image assets to register and license. | 
 
 
