@@ -8,7 +8,7 @@ class Configuration {
         this.password = param?.consumerSecret;
         this.accessToken = param?.accessToken;
         this.sandbox = param?.sandbox || false;
-        this.userAgent = "public-api-sdk-generator/1.6.0";
+        this.userAgent = "public-api-sdk-generator/1.6.1";
         this.basePath = this.sandbox ? "https://api-sandbox.shutterstock.com" : undefined;
     }
 }

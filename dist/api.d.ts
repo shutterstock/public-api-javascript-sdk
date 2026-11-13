@@ -3557,6 +3557,67 @@ export interface EditorialCoverItem {
     width?: number;
 }
 /**
+ * Asset information, including size and thumbnail URLs
+ * @export
+ * @interface EditorialImageAssets
+ */
+export interface EditorialImageAssets {
+    /**
+     *
+     * @type {EditorialAssetsOriginal}
+     * @memberof EditorialImageAssets
+     */
+    original?: EditorialAssetsOriginal;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof EditorialImageAssets
+     */
+    thumb_170?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof EditorialImageAssets
+     */
+    thumb_220?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof EditorialImageAssets
+     */
+    preview_440?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof EditorialImageAssets
+     */
+    preview_550?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof EditorialImageAssets
+     */
+    watermark_450?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof EditorialImageAssets
+     */
+    watermark_1500?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsOriginal}
+     * @memberof EditorialImageAssets
+     */
+    small_jpg?: EditorialAssetsOriginal;
+    /**
+     *
+     * @type {EditorialAssetsOriginal}
+     * @memberof EditorialImageAssets
+     */
+    medium_jpg?: EditorialAssetsOriginal;
+}
+/**
  * List of editorial categories
  * @export
  * @interface EditorialImageCategoryResults
@@ -3570,6 +3631,140 @@ export interface EditorialImageCategoryResults {
     data?: Array<EditorialCategoryResultsData>;
 }
 /**
+ * Metadata about editorial content
+ * @export
+ * @interface EditorialImageContent
+ */
+export interface EditorialImageContent {
+    /**
+     *
+     * @type {number}
+     * @memberof EditorialImageContent
+     */
+    aspect?: number;
+    /**
+     *
+     * @type {EditorialImageContentAssets}
+     * @memberof EditorialImageContent
+     */
+    assets?: EditorialImageContentAssets;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageContent
+     */
+    byline?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageContent
+     */
+    caption?: string;
+    /**
+     * List of categories
+     * @type {Array<EditorialCategoryResultsData>}
+     * @memberof EditorialImageContent
+     */
+    categories?: Array<EditorialCategoryResultsData>;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageContent
+     */
+    date_taken?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageContent
+     */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageContent
+     */
+    id: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof EditorialImageContent
+     */
+    keywords?: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageContent
+     */
+    special_instructions?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageContent
+     */
+    title?: string;
+}
+/**
+ * Asset information, including size and thumbnail URLs
+ * @export
+ * @interface EditorialImageContentAssets
+ */
+export interface EditorialImageContentAssets {
+    /**
+     *
+     * @type {EditorialAssetsOriginal}
+     * @memberof EditorialImageContentAssets
+     */
+    original?: EditorialAssetsOriginal;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof EditorialImageContentAssets
+     */
+    thumb_170?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof EditorialImageContentAssets
+     */
+    thumb_220?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof EditorialImageContentAssets
+     */
+    preview_440?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof EditorialImageContentAssets
+     */
+    preview_550?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof EditorialImageContentAssets
+     */
+    watermark_450?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof EditorialImageContentAssets
+     */
+    watermark_1500?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsOriginal}
+     * @memberof EditorialImageContentAssets
+     */
+    small_jpg?: EditorialAssetsOriginal;
+    /**
+     *
+     * @type {EditorialAssetsOriginal}
+     * @memberof EditorialImageContentAssets
+     */
+    medium_jpg?: EditorialAssetsOriginal;
+}
+/**
  * List of editorial items
  * @export
  * @interface EditorialImageContentDataList
@@ -3577,10 +3772,10 @@ export interface EditorialImageCategoryResults {
 export interface EditorialImageContentDataList {
     /**
      * Editorial items
-     * @type {Array<EditorialContentDataListData>}
+     * @type {Array<EditorialImageContentDataListData>}
      * @memberof EditorialImageContentDataList
      */
-    data?: Array<EditorialContentDataListData>;
+    data?: Array<EditorialImageContentDataListData>;
     /**
      * Error list; appears only if there was an error
      * @type {Array<AudioDataListErrors>}
@@ -3611,6 +3806,79 @@ export interface EditorialImageContentDataList {
      * @memberof EditorialImageContentDataList
      */
     total_count?: number;
+}
+/**
+ * Metadata about editorial content
+ * @export
+ * @interface EditorialImageContentDataListData
+ */
+export interface EditorialImageContentDataListData {
+    /**
+     *
+     * @type {number}
+     * @memberof EditorialImageContentDataListData
+     */
+    aspect?: number;
+    /**
+     *
+     * @type {EditorialImageContentAssets}
+     * @memberof EditorialImageContentDataListData
+     */
+    assets?: EditorialImageContentAssets;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageContentDataListData
+     */
+    byline?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageContentDataListData
+     */
+    caption?: string;
+    /**
+     * List of categories
+     * @type {Array<EditorialCategoryResultsData>}
+     * @memberof EditorialImageContentDataListData
+     */
+    categories?: Array<EditorialCategoryResultsData>;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageContentDataListData
+     */
+    date_taken?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageContentDataListData
+     */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageContentDataListData
+     */
+    id: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof EditorialImageContentDataListData
+     */
+    keywords?: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageContentDataListData
+     */
+    special_instructions?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageContentDataListData
+     */
+    title?: string;
 }
 /**
  * Metadata about editorial livefeed
@@ -3762,10 +4030,10 @@ export interface EditorialImageLivefeedListData {
 export interface EditorialImageResults {
     /**
      *
-     * @type {Array<EditorialContentDataListData>}
+     * @type {Array<EditorialImageContentDataListData>}
      * @memberof EditorialImageResults
      */
-    data?: Array<EditorialContentDataListData>;
+    data?: Array<EditorialImageContentDataListData>;
     /**
      *
      * @type {string}
@@ -3778,6 +4046,348 @@ export interface EditorialImageResults {
      * @memberof EditorialImageResults
      */
     total_count?: number;
+}
+/**
+ * Editorial search results
+ * @export
+ * @interface EditorialImageSearchResults
+ */
+export interface EditorialImageSearchResults {
+    /**
+     * Editorial items
+     * @type {Array<EditorialImageContentDataListData>}
+     * @memberof EditorialImageSearchResults
+     */
+    data: Array<EditorialImageContentDataListData>;
+    /**
+     * Optional error message
+     * @type {string}
+     * @memberof EditorialImageSearchResults
+     */
+    message?: string;
+    /**
+     * Cursor value that represents the next page of results
+     * @type {string}
+     * @memberof EditorialImageSearchResults
+     */
+    next?: string;
+    /**
+     * Current page of the response
+     * @type {number}
+     * @memberof EditorialImageSearchResults
+     */
+    page?: number;
+    /**
+     * Number of results per page
+     * @type {number}
+     * @memberof EditorialImageSearchResults
+     */
+    per_page?: number;
+    /**
+     * Cursor value that represents the previous page of results
+     * @type {string}
+     * @memberof EditorialImageSearchResults
+     */
+    prev?: string;
+    /**
+     * Unique identifier for the search request
+     * @type {string}
+     * @memberof EditorialImageSearchResults
+     */
+    search_id?: string;
+    /**
+     * Total count of all results
+     * @type {number}
+     * @memberof EditorialImageSearchResults
+     */
+    total_count: number;
+}
+/**
+ * Metadata about updated editorial content
+ * @export
+ * @interface EditorialImageUpdatedContent
+ */
+export interface EditorialImageUpdatedContent {
+    /**
+     *
+     * @type {EditorialImageUpdatedContentCommercialStatus}
+     * @memberof EditorialImageUpdatedContent
+     */
+    commercial_status?: EditorialImageUpdatedContentCommercialStatus;
+    /**
+     *
+     * @type {number}
+     * @memberof EditorialImageUpdatedContent
+     */
+    aspect?: number;
+    /**
+     *
+     * @type {EditorialImageContentAssets}
+     * @memberof EditorialImageUpdatedContent
+     */
+    assets?: EditorialImageContentAssets;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedContent
+     */
+    byline?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedContent
+     */
+    caption?: string;
+    /**
+     * List of categories
+     * @type {Array<EditorialCategoryResultsData>}
+     * @memberof EditorialImageUpdatedContent
+     */
+    categories?: Array<EditorialCategoryResultsData>;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedContent
+     */
+    date_taken?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedContent
+     */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedContent
+     */
+    id: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof EditorialImageUpdatedContent
+     */
+    keywords?: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedContent
+     */
+    title?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof EditorialImageUpdatedContent
+     */
+    updated_time?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof EditorialImageUpdatedContent
+     */
+    created_time?: Date;
+    /**
+     *
+     * @type {EditorialImageUpdatedContentRights}
+     * @memberof EditorialImageUpdatedContent
+     */
+    rights?: EditorialImageUpdatedContentRights;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof EditorialImageUpdatedContent
+     */
+    updates?: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedContent
+     */
+    supplier_code?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedContent
+     */
+    special_instructions?: string;
+}
+/**
+ *
+ * @export
+ * @interface EditorialImageUpdatedContentCommercialStatus
+ */
+export interface EditorialImageUpdatedContentCommercialStatus {
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedContentCommercialStatus
+     */
+    status?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedContentCommercialStatus
+     */
+    reason?: string;
+}
+/**
+ *
+ * @export
+ * @interface EditorialImageUpdatedContentRights
+ */
+export interface EditorialImageUpdatedContentRights {
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedContentRights
+     */
+    countries?: string;
+}
+/**
+ * Editorial updated results
+ * @export
+ * @interface EditorialImageUpdatedResults
+ */
+export interface EditorialImageUpdatedResults {
+    /**
+     * Editorial updated items
+     * @type {Array<EditorialImageUpdatedResultsData>}
+     * @memberof EditorialImageUpdatedResults
+     */
+    data: Array<EditorialImageUpdatedResultsData>;
+    /**
+     * Optional error message
+     * @type {string}
+     * @memberof EditorialImageUpdatedResults
+     */
+    message?: string;
+    /**
+     * Cursor value that represents the next page of results
+     * @type {string}
+     * @memberof EditorialImageUpdatedResults
+     */
+    next?: string;
+    /**
+     * Number of results per page
+     * @type {number}
+     * @memberof EditorialImageUpdatedResults
+     */
+    per_page?: number;
+    /**
+     * Cursor value that represents the previous page of results
+     * @type {string}
+     * @memberof EditorialImageUpdatedResults
+     */
+    prev?: string;
+}
+/**
+ * Metadata about updated editorial content
+ * @export
+ * @interface EditorialImageUpdatedResultsData
+ */
+export interface EditorialImageUpdatedResultsData {
+    /**
+     *
+     * @type {EditorialImageUpdatedContentCommercialStatus}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    commercial_status?: EditorialImageUpdatedContentCommercialStatus;
+    /**
+     *
+     * @type {number}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    aspect?: number;
+    /**
+     *
+     * @type {EditorialImageContentAssets}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    assets?: EditorialImageContentAssets;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    byline?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    caption?: string;
+    /**
+     * List of categories
+     * @type {Array<EditorialCategoryResultsData>}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    categories?: Array<EditorialCategoryResultsData>;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    date_taken?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    id: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    keywords?: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    title?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    updated_time?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    created_time?: Date;
+    /**
+     *
+     * @type {EditorialImageUpdatedContentRights}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    rights?: EditorialImageUpdatedContentRights;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    updates?: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    supplier_code?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof EditorialImageUpdatedResultsData
+     */
+    special_instructions?: string;
 }
 /**
  * License editorial content request
@@ -3935,10 +4545,10 @@ export interface EditorialSearchResults {
 export interface EditorialUpdatedContent {
     /**
      *
-     * @type {EditorialUpdatedContentCommercialStatus}
+     * @type {EditorialImageUpdatedContentCommercialStatus}
      * @memberof EditorialUpdatedContent
      */
-    commercial_status?: EditorialUpdatedContentCommercialStatus;
+    commercial_status?: EditorialImageUpdatedContentCommercialStatus;
     /**
      *
      * @type {number}
@@ -4013,10 +4623,10 @@ export interface EditorialUpdatedContent {
     created_time?: Date;
     /**
      *
-     * @type {EditorialUpdatedContentRights}
+     * @type {EditorialImageUpdatedContentRights}
      * @memberof EditorialUpdatedContent
      */
-    rights?: EditorialUpdatedContentRights;
+    rights?: EditorialImageUpdatedContentRights;
     /**
      *
      * @type {Array<string>}
@@ -4035,38 +4645,6 @@ export interface EditorialUpdatedContent {
      * @memberof EditorialUpdatedContent
      */
     special_instructions?: string;
-}
-/**
- *
- * @export
- * @interface EditorialUpdatedContentCommercialStatus
- */
-export interface EditorialUpdatedContentCommercialStatus {
-    /**
-     *
-     * @type {string}
-     * @memberof EditorialUpdatedContentCommercialStatus
-     */
-    status?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof EditorialUpdatedContentCommercialStatus
-     */
-    reason?: string;
-}
-/**
- *
- * @export
- * @interface EditorialUpdatedContentRights
- */
-export interface EditorialUpdatedContentRights {
-    /**
-     *
-     * @type {string}
-     * @memberof EditorialUpdatedContentRights
-     */
-    countries?: string;
 }
 /**
  * Editorial updated results
@@ -4113,10 +4691,10 @@ export interface EditorialUpdatedResults {
 export interface EditorialUpdatedResultsData {
     /**
      *
-     * @type {EditorialUpdatedContentCommercialStatus}
+     * @type {EditorialImageUpdatedContentCommercialStatus}
      * @memberof EditorialUpdatedResultsData
      */
-    commercial_status?: EditorialUpdatedContentCommercialStatus;
+    commercial_status?: EditorialImageUpdatedContentCommercialStatus;
     /**
      *
      * @type {number}
@@ -4191,10 +4769,10 @@ export interface EditorialUpdatedResultsData {
     created_time?: Date;
     /**
      *
-     * @type {EditorialUpdatedContentRights}
+     * @type {EditorialImageUpdatedContentRights}
      * @memberof EditorialUpdatedResultsData
      */
-    rights?: EditorialUpdatedContentRights;
+    rights?: EditorialImageUpdatedContentRights;
     /**
      *
      * @type {Array<string>}
@@ -7712,10 +8290,10 @@ export interface InlineResponse20031 {
 export interface InlineResponse20032 {
     /**
      * Editorial items
-     * @type {Array<EditorialContentDataListData>}
+     * @type {Array<EditorialImageContentDataListData>}
      * @memberof InlineResponse20032
      */
-    data: Array<EditorialContentDataListData>;
+    data: Array<EditorialImageContentDataListData>;
     /**
      * Optional error message
      * @type {string}
@@ -7780,10 +8358,10 @@ export interface InlineResponse20033 {
 export interface InlineResponse20034 {
     /**
      * Editorial updated items
-     * @type {Array<EditorialUpdatedResultsData>}
+     * @type {Array<EditorialImageUpdatedResultsData>}
      * @memberof InlineResponse20034
      */
-    data: Array<EditorialUpdatedResultsData>;
+    data: Array<EditorialImageUpdatedResultsData>;
     /**
      * Optional error message
      * @type {string}
@@ -7823,10 +8401,10 @@ export interface InlineResponse20035 {
     aspect?: number;
     /**
      *
-     * @type {EditorialContentAssets}
+     * @type {EditorialImageContentAssets}
      * @memberof InlineResponse20035
      */
-    assets?: EditorialContentAssets;
+    assets?: EditorialImageContentAssets;
     /**
      *
      * @type {string}
@@ -7890,10 +8468,10 @@ export interface InlineResponse20035 {
 export interface InlineResponse20036 {
     /**
      *
-     * @type {Array<EditorialContentDataListData>}
+     * @type {Array<EditorialImageContentDataListData>}
      * @memberof InlineResponse20036
      */
-    data?: Array<EditorialContentDataListData>;
+    data?: Array<EditorialImageContentDataListData>;
     /**
      *
      * @type {string}
@@ -8075,10 +8653,10 @@ export interface InlineResponse2004 {
 export interface InlineResponse20040 {
     /**
      * Editorial items
-     * @type {Array<EditorialContentDataListData>}
+     * @type {Array<EditorialImageContentDataListData>}
      * @memberof InlineResponse20040
      */
-    data?: Array<EditorialContentDataListData>;
+    data?: Array<EditorialImageContentDataListData>;
     /**
      * Error list; appears only if there was an error
      * @type {Array<AudioDataListErrors>}
@@ -9132,97 +9710,262 @@ export interface InlineResponse20060 {
     user_token?: string;
 }
 /**
- * List of editorial livefeeds
+ * Metadata about editorial content
  * @export
  * @interface InlineResponse20061
  */
 export interface InlineResponse20061 {
     /**
+     *
+     * @type {number}
+     * @memberof InlineResponse20061
+     */
+    aspect?: number;
+    /**
+     *
+     * @type {EditorialContentAssets}
+     * @memberof InlineResponse20061
+     */
+    assets?: EditorialContentAssets;
+    /**
+     *
+     * @type {string}
+     * @memberof InlineResponse20061
+     */
+    byline?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof InlineResponse20061
+     */
+    caption?: string;
+    /**
+     * List of categories
+     * @type {Array<EditorialCategoryResultsData>}
+     * @memberof InlineResponse20061
+     */
+    categories?: Array<EditorialCategoryResultsData>;
+    /**
+     *
+     * @type {string}
+     * @memberof InlineResponse20061
+     */
+    date_taken?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof InlineResponse20061
+     */
+    description?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof InlineResponse20061
+     */
+    id: string;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof InlineResponse20061
+     */
+    keywords?: Array<string>;
+    /**
+     *
+     * @type {string}
+     * @memberof InlineResponse20061
+     */
+    special_instructions?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof InlineResponse20061
+     */
+    title?: string;
+}
+/**
+ * List of editorial livefeeds
+ * @export
+ * @interface InlineResponse20062
+ */
+export interface InlineResponse20062 {
+    /**
      * Editorial livefeeds
      * @type {Array<EditorialImageLivefeedListData>}
-     * @memberof InlineResponse20061
+     * @memberof InlineResponse20062
      */
     data: Array<EditorialImageLivefeedListData>;
     /**
      * Optional error message
      * @type {string}
-     * @memberof InlineResponse20061
+     * @memberof InlineResponse20062
      */
     message?: string;
     /**
      * Current page of the response
      * @type {number}
-     * @memberof InlineResponse20061
+     * @memberof InlineResponse20062
      */
     page?: number;
     /**
      * Number of results per page
      * @type {number}
-     * @memberof InlineResponse20061
+     * @memberof InlineResponse20062
      */
     per_page?: number;
     /**
      * Total count of all results
      * @type {number}
-     * @memberof InlineResponse20061
+     * @memberof InlineResponse20062
      */
     total_count: number;
 }
 /**
  * List of editorial items
  * @export
- * @interface InlineResponse20062
+ * @interface InlineResponse20063
  */
-export interface InlineResponse20062 {
+export interface InlineResponse20063 {
     /**
      * Editorial items
      * @type {Array<EditorialContentDataListData>}
-     * @memberof InlineResponse20062
+     * @memberof InlineResponse20063
      */
     data?: Array<EditorialContentDataListData>;
     /**
      * Error list; appears only if there was an error
      * @type {Array<AudioDataListErrors>}
-     * @memberof InlineResponse20062
+     * @memberof InlineResponse20063
      */
     errors?: Array<AudioDataListErrors>;
     /**
      * Optional error message
      * @type {string}
-     * @memberof InlineResponse20062
+     * @memberof InlineResponse20063
      */
     message?: string;
     /**
      * Current page of the response
      * @type {number}
-     * @memberof InlineResponse20062
+     * @memberof InlineResponse20063
      */
     page?: number;
     /**
      * Number of results per page
      * @type {number}
-     * @memberof InlineResponse20062
+     * @memberof InlineResponse20063
      */
     per_page?: number;
     /**
      * Total count of all results
      * @type {number}
-     * @memberof InlineResponse20062
+     * @memberof InlineResponse20063
      */
     total_count?: number;
 }
 /**
+ * Editorial search results
+ * @export
+ * @interface InlineResponse20064
+ */
+export interface InlineResponse20064 {
+    /**
+     * Editorial items
+     * @type {Array<EditorialContentDataListData>}
+     * @memberof InlineResponse20064
+     */
+    data: Array<EditorialContentDataListData>;
+    /**
+     * Optional error message
+     * @type {string}
+     * @memberof InlineResponse20064
+     */
+    message?: string;
+    /**
+     * Cursor value that represents the next page of results
+     * @type {string}
+     * @memberof InlineResponse20064
+     */
+    next?: string;
+    /**
+     * Current page of the response
+     * @type {number}
+     * @memberof InlineResponse20064
+     */
+    page?: number;
+    /**
+     * Number of results per page
+     * @type {number}
+     * @memberof InlineResponse20064
+     */
+    per_page?: number;
+    /**
+     * Cursor value that represents the previous page of results
+     * @type {string}
+     * @memberof InlineResponse20064
+     */
+    prev?: string;
+    /**
+     * Unique identifier for the search request
+     * @type {string}
+     * @memberof InlineResponse20064
+     */
+    search_id?: string;
+    /**
+     * Total count of all results
+     * @type {number}
+     * @memberof InlineResponse20064
+     */
+    total_count: number;
+}
+/**
  * List of editorial categories
  * @export
- * @interface InlineResponse20063
+ * @interface InlineResponse20065
  */
-export interface InlineResponse20063 {
+export interface InlineResponse20065 {
     /**
      * List of editorial categories
      * @type {Array<EditorialCategoryResultsData>}
-     * @memberof InlineResponse20063
+     * @memberof InlineResponse20065
      */
     data?: Array<EditorialCategoryResultsData>;
+}
+/**
+ * Editorial updated results
+ * @export
+ * @interface InlineResponse20066
+ */
+export interface InlineResponse20066 {
+    /**
+     * Editorial updated items
+     * @type {Array<EditorialUpdatedResultsData>}
+     * @memberof InlineResponse20066
+     */
+    data: Array<EditorialUpdatedResultsData>;
+    /**
+     * Optional error message
+     * @type {string}
+     * @memberof InlineResponse20066
+     */
+    message?: string;
+    /**
+     * Cursor value that represents the next page of results
+     * @type {string}
+     * @memberof InlineResponse20066
+     */
+    next?: string;
+    /**
+     * Number of results per page
+     * @type {number}
+     * @memberof InlineResponse20066
+     */
+    per_page?: number;
+    /**
+     * Cursor value that represents the previous page of results
+     * @type {string}
+     * @memberof InlineResponse20066
+     */
+    prev?: string;
 }
 /**
  * List of download events
@@ -11151,11 +11894,108 @@ export interface Price {
  */
 export interface Recommendation {
     /**
+     *
+     * @type {RecommendationAssets}
+     * @memberof Recommendation
+     */
+    assets?: RecommendationAssets;
+    /**
      * Media ID
      * @type {string}
      * @memberof Recommendation
      */
     id: string;
+}
+/**
+ * Information about the assets that are part of an image
+ * @export
+ * @interface RecommendationAssets
+ */
+export interface RecommendationAssets {
+    /**
+     *
+     * @type {EditorialAssetsOriginal}
+     * @memberof RecommendationAssets
+     */
+    huge_jpg?: EditorialAssetsOriginal;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof RecommendationAssets
+     */
+    huge_thumb?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof RecommendationAssets
+     */
+    large_thumb?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsOriginal}
+     * @memberof RecommendationAssets
+     */
+    medium_jpg?: EditorialAssetsOriginal;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof RecommendationAssets
+     */
+    preview?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof RecommendationAssets
+     */
+    preview_600?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof RecommendationAssets
+     */
+    preview_600_unwatermarked?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof RecommendationAssets
+     */
+    preview_1000?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof RecommendationAssets
+     */
+    preview_1500?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsOriginal}
+     * @memberof RecommendationAssets
+     */
+    small_jpg?: EditorialAssetsOriginal;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof RecommendationAssets
+     */
+    small_thumb?: EditorialAssetsThumb170;
+    /**
+     *
+     * @type {EditorialAssetsOriginal}
+     * @memberof RecommendationAssets
+     */
+    supersize_jpg?: EditorialAssetsOriginal;
+    /**
+     *
+     * @type {EditorialAssetsOriginal}
+     * @memberof RecommendationAssets
+     */
+    vector_eps?: EditorialAssetsOriginal;
+    /**
+     *
+     * @type {EditorialAssetsThumb170}
+     * @memberof RecommendationAssets
+     */
+    mosaic?: EditorialAssetsThumb170;
 }
 /**
  * List of recommended images
@@ -11206,6 +12046,12 @@ export interface RecommendationDataList {
  * @interface RecommendationDataListData
  */
 export interface RecommendationDataListData {
+    /**
+     *
+     * @type {RecommendationAssets}
+     * @memberof RecommendationDataListData
+     */
+    assets?: RecommendationAssets;
     /**
      * Media ID
      * @type {string}
@@ -15962,7 +16808,7 @@ export declare const EditorialImagesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getEditorialCategories(requestParameters?: EditorialImagesApiGetEditorialCategoriesRequest, options?: RequestInit): (fetch?: FetchAPI, basePath?: string) => Promise<InlineResponse20063>;
+    getEditorialCategories(requestParameters?: EditorialImagesApiGetEditorialCategoriesRequest, options?: RequestInit): (fetch?: FetchAPI, basePath?: string) => Promise<InlineResponse20065>;
     /**
      * This endpoint shows information about an editorial image, including a URL to a preview image and the sizes that it is available in.
      * @summary Get editorial content details
@@ -16010,7 +16856,7 @@ export declare const EditorialImagesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getEditorialImage_0(requestParameters: EditorialImagesApiGetEditorialImage0Request, options?: RequestInit): (fetch?: FetchAPI, basePath?: string) => Promise<InlineResponse20035>;
+    getEditorialImage_0(requestParameters: EditorialImagesApiGetEditorialImage0Request, options?: RequestInit): (fetch?: FetchAPI, basePath?: string) => Promise<InlineResponse20061>;
     /**
      * Deprecated: use `GET /v2/editorial/images/livefeeds/{id}` instead to get an editorial livefeed.
      * @summary (Deprecated) Get editorial livefeed
@@ -16026,7 +16872,7 @@ export declare const EditorialImagesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getEditorialLivefeedItems(requestParameters: EditorialImagesApiGetEditorialLivefeedItemsRequest, options?: RequestInit): (fetch?: FetchAPI, basePath?: string) => Promise<InlineResponse20062>;
+    getEditorialLivefeedItems(requestParameters: EditorialImagesApiGetEditorialLivefeedItemsRequest, options?: RequestInit): (fetch?: FetchAPI, basePath?: string) => Promise<InlineResponse20063>;
     /**
      * Deprecated; use `GET /v2/editorial/images/livefeeds` instead to get a list of editorial livefeeds.
      * @summary (Deprecated) Get editorial livefeed list
@@ -16034,7 +16880,7 @@ export declare const EditorialImagesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getEditorialLivefeedList(requestParameters: EditorialImagesApiGetEditorialLivefeedListRequest, options?: RequestInit): (fetch?: FetchAPI, basePath?: string) => Promise<InlineResponse20061>;
+    getEditorialLivefeedList(requestParameters: EditorialImagesApiGetEditorialLivefeedListRequest, options?: RequestInit): (fetch?: FetchAPI, basePath?: string) => Promise<InlineResponse20062>;
     /**
      * Deprecated; use `GET /v2/editorial/images/updated` instead to get recently updated items.
      * @summary (Deprecated) List updated content
@@ -16042,7 +16888,7 @@ export declare const EditorialImagesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getUpdatedEditorialImage(requestParameters: EditorialImagesApiGetUpdatedEditorialImageRequest, options?: RequestInit): (fetch?: FetchAPI, basePath?: string) => Promise<InlineResponse20034>;
+    getUpdatedEditorialImage(requestParameters: EditorialImagesApiGetUpdatedEditorialImageRequest, options?: RequestInit): (fetch?: FetchAPI, basePath?: string) => Promise<InlineResponse20066>;
     /**
      * This endpoint lists editorial images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the date_updated_start and date_updated_end parameters to specify a range updates based on when the updates happened. You can also use the date_taken_start and date_taken_end parameters to specify a range of updates based on when the image was taken.
      * @summary List updated content
@@ -16090,7 +16936,7 @@ export declare const EditorialImagesApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    searchEditorial(requestParameters: EditorialImagesApiSearchEditorialRequest, options?: RequestInit): (fetch?: FetchAPI, basePath?: string) => Promise<InlineResponse20032>;
+    searchEditorial(requestParameters: EditorialImagesApiSearchEditorialRequest, options?: RequestInit): (fetch?: FetchAPI, basePath?: string) => Promise<InlineResponse20064>;
     /**
      * This endpoint searches for editorial images. If you specify more than one search parameter, the API uses an AND condition. For example, if you set the `category` parameter to \"Alone,Performing\" and also specify a `query` parameter, the results include only images that match the query and are in both the Alone and Performing categories. You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
      * @summary Search editorial images
@@ -16112,7 +16958,7 @@ export declare const EditorialImagesApiFactory: (configuration?: Configuration, 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getEditorialCategories(requestParameters?: EditorialImagesApiGetEditorialCategoriesRequest, options?: RequestInit): Promise<InlineResponse20063>;
+    getEditorialCategories(requestParameters?: EditorialImagesApiGetEditorialCategoriesRequest, options?: RequestInit): Promise<InlineResponse20065>;
     /**
      * This endpoint shows information about an editorial image, including a URL to a preview image and the sizes that it is available in.
      * @summary Get editorial content details
@@ -16160,7 +17006,7 @@ export declare const EditorialImagesApiFactory: (configuration?: Configuration, 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getEditorialImage_0(requestParameters: EditorialImagesApiGetEditorialImage0Request, options?: RequestInit): Promise<InlineResponse20035>;
+    getEditorialImage_0(requestParameters: EditorialImagesApiGetEditorialImage0Request, options?: RequestInit): Promise<InlineResponse20061>;
     /**
      * Deprecated: use `GET /v2/editorial/images/livefeeds/{id}` instead to get an editorial livefeed.
      * @summary (Deprecated) Get editorial livefeed
@@ -16176,7 +17022,7 @@ export declare const EditorialImagesApiFactory: (configuration?: Configuration, 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getEditorialLivefeedItems(requestParameters: EditorialImagesApiGetEditorialLivefeedItemsRequest, options?: RequestInit): Promise<InlineResponse20062>;
+    getEditorialLivefeedItems(requestParameters: EditorialImagesApiGetEditorialLivefeedItemsRequest, options?: RequestInit): Promise<InlineResponse20063>;
     /**
      * Deprecated; use `GET /v2/editorial/images/livefeeds` instead to get a list of editorial livefeeds.
      * @summary (Deprecated) Get editorial livefeed list
@@ -16184,7 +17030,7 @@ export declare const EditorialImagesApiFactory: (configuration?: Configuration, 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getEditorialLivefeedList(requestParameters: EditorialImagesApiGetEditorialLivefeedListRequest, options?: RequestInit): Promise<InlineResponse20061>;
+    getEditorialLivefeedList(requestParameters: EditorialImagesApiGetEditorialLivefeedListRequest, options?: RequestInit): Promise<InlineResponse20062>;
     /**
      * Deprecated; use `GET /v2/editorial/images/updated` instead to get recently updated items.
      * @summary (Deprecated) List updated content
@@ -16192,7 +17038,7 @@ export declare const EditorialImagesApiFactory: (configuration?: Configuration, 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getUpdatedEditorialImage(requestParameters: EditorialImagesApiGetUpdatedEditorialImageRequest, options?: RequestInit): Promise<InlineResponse20034>;
+    getUpdatedEditorialImage(requestParameters: EditorialImagesApiGetUpdatedEditorialImageRequest, options?: RequestInit): Promise<InlineResponse20066>;
     /**
      * This endpoint lists editorial images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the date_updated_start and date_updated_end parameters to specify a range updates based on when the updates happened. You can also use the date_taken_start and date_taken_end parameters to specify a range of updates based on when the image was taken.
      * @summary List updated content
@@ -16240,7 +17086,7 @@ export declare const EditorialImagesApiFactory: (configuration?: Configuration, 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    searchEditorial(requestParameters: EditorialImagesApiSearchEditorialRequest, options?: RequestInit): Promise<InlineResponse20032>;
+    searchEditorial(requestParameters: EditorialImagesApiSearchEditorialRequest, options?: RequestInit): Promise<InlineResponse20064>;
     /**
      * This endpoint searches for editorial images. If you specify more than one search parameter, the API uses an AND condition. For example, if you set the `category` parameter to \"Alone,Performing\" and also specify a `query` parameter, the results include only images that match the query and are in both the Alone and Performing categories. You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
      * @summary Search editorial images
@@ -16265,7 +17111,7 @@ export declare class EditorialImagesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EditorialImagesApi
      */
-    getEditorialCategories(requestParameters?: EditorialImagesApiGetEditorialCategoriesRequest, options?: RequestInit): Promise<InlineResponse20063>;
+    getEditorialCategories(requestParameters?: EditorialImagesApiGetEditorialCategoriesRequest, options?: RequestInit): Promise<InlineResponse20065>;
     /**
      * This endpoint shows information about an editorial image, including a URL to a preview image and the sizes that it is available in.
      * @summary Get editorial content details
@@ -16319,7 +17165,7 @@ export declare class EditorialImagesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EditorialImagesApi
      */
-    getEditorialImage_0(requestParameters: EditorialImagesApiGetEditorialImage0Request, options?: RequestInit): Promise<InlineResponse20035>;
+    getEditorialImage_0(requestParameters: EditorialImagesApiGetEditorialImage0Request, options?: RequestInit): Promise<InlineResponse20061>;
     /**
      * Deprecated: use `GET /v2/editorial/images/livefeeds/{id}` instead to get an editorial livefeed.
      * @summary (Deprecated) Get editorial livefeed
@@ -16337,7 +17183,7 @@ export declare class EditorialImagesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EditorialImagesApi
      */
-    getEditorialLivefeedItems(requestParameters: EditorialImagesApiGetEditorialLivefeedItemsRequest, options?: RequestInit): Promise<InlineResponse20062>;
+    getEditorialLivefeedItems(requestParameters: EditorialImagesApiGetEditorialLivefeedItemsRequest, options?: RequestInit): Promise<InlineResponse20063>;
     /**
      * Deprecated; use `GET /v2/editorial/images/livefeeds` instead to get a list of editorial livefeeds.
      * @summary (Deprecated) Get editorial livefeed list
@@ -16346,7 +17192,7 @@ export declare class EditorialImagesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EditorialImagesApi
      */
-    getEditorialLivefeedList(requestParameters: EditorialImagesApiGetEditorialLivefeedListRequest, options?: RequestInit): Promise<InlineResponse20061>;
+    getEditorialLivefeedList(requestParameters: EditorialImagesApiGetEditorialLivefeedListRequest, options?: RequestInit): Promise<InlineResponse20062>;
     /**
      * Deprecated; use `GET /v2/editorial/images/updated` instead to get recently updated items.
      * @summary (Deprecated) List updated content
@@ -16355,7 +17201,7 @@ export declare class EditorialImagesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EditorialImagesApi
      */
-    getUpdatedEditorialImage(requestParameters: EditorialImagesApiGetUpdatedEditorialImageRequest, options?: RequestInit): Promise<InlineResponse20034>;
+    getUpdatedEditorialImage(requestParameters: EditorialImagesApiGetUpdatedEditorialImageRequest, options?: RequestInit): Promise<InlineResponse20066>;
     /**
      * This endpoint lists editorial images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the date_updated_start and date_updated_end parameters to specify a range updates based on when the updates happened. You can also use the date_taken_start and date_taken_end parameters to specify a range of updates based on when the image was taken.
      * @summary List updated content
@@ -16409,7 +17255,7 @@ export declare class EditorialImagesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EditorialImagesApi
      */
-    searchEditorial(requestParameters: EditorialImagesApiSearchEditorialRequest, options?: RequestInit): Promise<InlineResponse20032>;
+    searchEditorial(requestParameters: EditorialImagesApiSearchEditorialRequest, options?: RequestInit): Promise<InlineResponse20064>;
     /**
      * This endpoint searches for editorial images. If you specify more than one search parameter, the API uses an AND condition. For example, if you set the `category` parameter to \"Alone,Performing\" and also specify a `query` parameter, the results include only images that match the query and are in both the Alone and Performing categories. You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
      * @summary Search editorial images

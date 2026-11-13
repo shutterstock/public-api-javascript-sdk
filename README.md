@@ -1,4 +1,4 @@
-## Shutterstock API SDK 1.6.0
+## Shutterstock API SDK 1.6.1
 
 This generator creates a TypeScript/JavaScript client that uses the runtime's native [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch). The generated module can be used in the following environments:
 
