@@ -14,6 +14,10 @@ Name | Type | Description | Notes
 
 * `audio_platform` (value: `"audio_platform"`)
 
+* `audio_standard` (value: `"audio_standard"`)
+
+* `audio_enhanced` (value: `"audio_enhanced"`)
+
 * `premier_music_basic` (value: `"premier_music_basic"`)
 
 * `premier_music_extended` (value: `"premier_music_extended"`)

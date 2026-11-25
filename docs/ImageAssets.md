@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **large_thumb** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
 **medium_jpg** | [**InlineResponse200AssetsHugeJpg**](InlineResponse200AssetsHugeJpg.md) |  | [optional] 
 **preview** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
+**preview_600** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
+**preview_600_unwatermarked** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
 **preview_1000** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
 **preview_1500** | [**InlineResponse200AssetsHugeThumb**](InlineResponse200AssetsHugeThumb.md) |  | [optional] 
 **small_jpg** | [**InlineResponse200AssetsHugeJpg**](InlineResponse200AssetsHugeJpg.md) |  | [optional] 

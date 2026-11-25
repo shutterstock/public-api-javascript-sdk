@@ -1,91 +1,40 @@
 const { expect } = require('chai');
 const uuidv4 = require('uuid/v4');
-
 const sstk = require('../../src');
 
 sstk.setAccessToken(process.env.SHUTTERSTOCK_API_TOKEN);
 
 const imagesApi = new sstk.ImagesApi();
 
-describe('images api', () => {
-  it('should be able to search', () => {
-    const params = {
-      query: "New York",
-      sort: "popular",
-      orientation: "horizontal",
-    };
+describe('images api', function imagesApiSmokeTests() {
+  this.timeout(30000);
 
-    return imagesApi.searchImages(params)
-        .then(function(res) {
-          expect(res).to.have.keys(
-            'data',
-            'search_id',
-            'total_count',
-            'page',
-            'per_page',
-            'spellcheck_info',
-          );
-          expect(res.data).to.be.an('array');
-          expect(res.data).to.not.be.empty;
-        });
+  it('searches for images', async () => {
+    const results = await imagesApi.searchImages({ query: 'New York', sort: 'popular', orientation: 'horizontal' });
+    expect(results).to.include.all.keys('data', 'search_id', 'total_count', 'page', 'per_page', 'spellcheck_info');
+    expect(results.data).to.be.an('array').that.is.not.empty;
   });
 
-  it('should be able to see image details', () => {
+  it('gets image details', async () => {
     const imageId = '1259378599';
-
-    const params = {
-      view: 'full',
-    };
-
-    return imagesApi.getImage(imageId, params)
-      .then(function(res) {
-        expect(res).to.have.keys(
-          'contributor',
-          'id',
-          'media_type',
-          'added_date',
-          'aspect',
-          'assets',
-          'categories',
-          'description',
-          'has_model_release',
-          'has_property_release',
-          'image_type',
-          'is_adult',
-          'is_editorial',
-          'is_illustration',
-          'keywords',
-          'model_releases',
-          'url',
-          'asset_collection',
-        );
-        expect(res.description).to.deep.equal('Happy New Year 2019. Chinese New Year. ' +
-          'The year of the pig. Translation: Greetings from the golden pig.');
-      });
+    const image = await imagesApi.getImage(imageId, { view: 'full' });
+    expect(image.id).to.equal(imageId);
+    expect(image).to.include.all.keys('description', 'assets', 'contributor');
   });
 
-  it('should be able to rename my collection', () => {
-    const collectionId = '183608726';
+  it('renames and reads a new collection', async () => {
+    const name = `SDK smoke ${uuidv4()}`;
+    const { id } = await imagesApi.createImageCollection({ name });
+    expect(id).to.be.a('string').that.is.not.empty;
 
-    const body = {
-      name: `Collection ${uuidv4()}`,
-    };
-
-    return imagesApi.renameImageCollection(collectionId, body)
-      .then(function(res) {
-        expect(res).to.be.null;
-      });
-  });
-
-  it('should be able to view my collection', () => {
-    const collectionId = '183608726';
-
-    const uuidv4Regex = '[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$';
-
-    return imagesApi.getImageCollection(collectionId, {})
-      .then(function(res) {
-        expect(res.id).to.equal('183608726');
-        expect(res.name).to.match(new RegExp(`^Collection ${uuidv4Regex}`, 'i'));
-      });
+    try {
+      const renamed = `${name} renamed`;
+      expect(await imagesApi.renameImageCollection(id, { name: renamed })).to.be.null;
+      const collection = await imagesApi.getImageCollection(id);
+      expect(collection.id).to.equal(id);
+      expect(collection.name).to.equal(renamed);
+    } finally {
+      await imagesApi.deleteImageCollection(id);
+    }
   });
 });

@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **commercial_status** | [**InlineResponse20016CommercialStatus**](InlineResponse20016CommercialStatus.md) |  | [optional] 
 **aspect** | **Number** |  | [optional] 
-**assets** | [**InlineResponse20014Assets**](InlineResponse20014Assets.md) |  | [optional] 
+**assets** | [**InlineResponse20036Assets**](InlineResponse20036Assets.md) |  | [optional] 
 **byline** | **String** |  | [optional] 
 **caption** | **String** |  | [optional] 
 **categories** | [**[InlineResponse20014Categories]**](InlineResponse20014Categories.md) | List of categories | [optional] 

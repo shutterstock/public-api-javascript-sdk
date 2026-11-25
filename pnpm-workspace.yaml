@@ -1,0 +1,5 @@
+trustPolicy: no-downgrade
+trustPolicyIgnoreAfter: 10080
+blockExoticSubdeps: true
+minimumReleaseAgeStrict: true
+minimumReleaseAge: 10080

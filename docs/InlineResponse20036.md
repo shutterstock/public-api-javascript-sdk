@@ -3,10 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**[InlineResponse20019Data]**](InlineResponse20019Data.md) | Editorial livefeeds | 
-**message** | **String** | Optional error message | [optional] 
-**page** | **Number** | Current page of the response | [optional] 
-**per_page** | **Number** | Number of results per page | [optional] 
-**total_count** | **Number** | Total count of all results | 
+**aspect** | **Number** |  | [optional] 
+**assets** | [**InlineResponse20036Assets**](InlineResponse20036Assets.md) |  | [optional] 
+**byline** | **String** |  | [optional] 
+**caption** | **String** |  | [optional] 
+**categories** | [**[InlineResponse20014Categories]**](InlineResponse20014Categories.md) | List of categories | [optional] 
+**date_taken** | **Date** |  | [optional] 
+**description** | **String** |  | [optional] 
+**id** | **String** |  | 
+**keywords** | **[String]** |  | [optional] 
+**special_instructions** | **String** |  | [optional] 
+**title** | **String** |  | [optional] 
 
 

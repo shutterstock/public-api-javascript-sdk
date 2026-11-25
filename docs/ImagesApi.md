@@ -1116,7 +1116,14 @@ Object
 ```
 {
   "data" : [ {
-    "id" : "123456789"
+    "id" : "1572478477",
+    "assets" : {
+      "preview_600_unwatermarked" : {
+        "url" : "https://image.shutterstock.com/image-photo/cropped-image-woman-gardening-600nw-1572478477.jpg",
+        "width" : 600,
+        "height" : 400
+      }
+    }
   }, {
     "id" : "99379946"
   }, {

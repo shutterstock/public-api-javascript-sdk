@@ -5,6 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **allotment** | [**SubscriptionAllotment**](SubscriptionAllotment.md) |  | [optional] 
 **description** | **String** | Description of the subscription | [optional] 
+**product_description** | **String** | Description of the product associated with the subscription | [optional] 
+**portfolio** | **Boolean** | Whether the subscription uses portfolio pricing | [optional] 
 **expiration_time** | **Date** | Date the subscription ends | [optional] 
 **formats** | [**[SubscriptionFormats]**](SubscriptionFormats.md) | List of formats that are licensable for the subscription | [optional] 
 **features** | **[String]** | Product names for enabled features on an AI generated subscription. | [optional] 

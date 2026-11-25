@@ -79,6 +79,7 @@ const id = 123; // Number | Integer ID
 
 const queryParams = { 
   'tag': ["tag_example"], // [String] | List of tags
+  'enabled': true, // Boolean | Boolean flag
   'user_agent': "user_agent_example" // String | User agent
 };
 
@@ -98,7 +99,8 @@ api.validate(id, queryParams)
 Name | Type | Description
 ------------- | ------------- | -------------
  id (required) | Number| Integer ID 
- tag | [String]| List of tags 
+ tag | [String]| List of tags <br/><br/>Valid values: "one", "two"
+ enabled | Boolean| Boolean flag 
  user_agent | String| User agent 
 
 ### Accepted authentication

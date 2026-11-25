@@ -6,7 +6,7 @@ These classes call the API in the same way that direct REST calls do.
 You can use this SDK to search for media, get information about media and about collections, and (if your subscription permits) license and download media.
 This is the official SDK provided by Shutterstock for its API.
 
-- API version: 1.6.0
+- API version: 1.6.1
 
 ## References
 
@@ -73,16 +73,16 @@ To tell which API products your application is using, open [your applications](h
 
 ## Installation
 
-### npm or yarn
+### npm or pnpm
 
-To install the SDK as a module with npm or yarn, run one of the following commands:
+To install the SDK as a module with npm or pnpm, run one of the following commands:
 
 ```shell
 npm install shutterstock-api --save
 ```
 
 ```shell
-yarn add shutterstock-api
+pnpm add shutterstock-api
 ```
 
 ## Authentication
@@ -313,13 +313,13 @@ To run the tests, you must authenticate with the Shutterstock API, get a token, 
 
 ```
 $ SHUTTERSTOCK_API_TOKEN="Your API Key"
-$ yarn run test
+$ pnpm run test
 ```
 
 ## Linting
 
 ```
-$ yarn run lint
+$ pnpm run lint
 ```
 
 ## Documentation for methods
